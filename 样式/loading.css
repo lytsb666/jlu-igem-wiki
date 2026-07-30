@@ -1,0 +1,106 @@
+@import './cursor.css';
+
+body.loading-lock {
+  overflow: hidden !important;
+}
+
+.igem-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  overflow: hidden;
+  background: #071b25;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.65s ease, visibility 0.65s ease;
+}
+
+.igem-loader::before {
+  content: none;
+}
+
+.igem-loader.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.65s ease, opacity 0.65s ease;
+}
+
+.igem-loader.is-leaving .loading-video {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+.loading-overlay {
+  display: none;
+}
+
+.loading-content {
+  /* The supplied loading video is the complete visual. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.loading-kicker {
+  margin: 0 0 18px;
+  color: #d886e9;
+  font: 600 0.72rem/1.4 Inter, Arial, sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.loading-wordmark {
+  font: 700 clamp(2.8rem, 9vw, 5.8rem)/1 Inter, Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 34px rgba(224, 193, 166, 0.38);
+}
+
+.loading-progress {
+  height: 2px;
+  margin-top: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.loading-progress span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #f2e3c6, #9a6742, transparent);
+  animation: loading-scan 1.15s ease-in-out infinite;
+}
+
+.loading-message {
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.62);
+  font: 400 0.8rem/1.5 Inter, Arial, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+@keyframes loading-scan {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(330%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-progress span { animation-duration: 2.5s; }
+  .igem-loader { transition-duration: 0.2s; }
+}

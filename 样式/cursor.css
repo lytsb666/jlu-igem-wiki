@@ -1,0 +1,143 @@
+/* JLU-SPH cursor skin shared by every page. */
+:root {
+    --cursor-default: url('../a  图片/cursors/正常选择.png') 58 44, auto;
+    --cursor-link: url('../a  图片/cursors/链接选择.png') 52 33, pointer;
+    --cursor-text: url('../a  图片/cursors/文本选择.png') 42 42, text;
+    --cursor-busy: url('../a  图片/cursors/忙.png') 32 32, wait;
+    --cursor-move: url('../a  图片/cursors/移动.png') 32 32, move;
+    --cursor-disabled: url('../a  图片/cursors/不可用.png') 32 32, not-allowed;
+    --cursor-nwse: url('../a  图片/cursors/对角线调整.png') 32 32, nwse-resize;
+    --cursor-nesw: url('../a  图片/cursors/对角线调整2.png') 32 32, nesw-resize;
+}
+
+/*
+ * 强制覆盖各页面的内嵌 cursor 声明。伪元素也单独覆盖，避免鼠标移动到
+ * 导航箭头、装饰层或卡片遮罩时短暂恢复系统光标。
+ */
+html,
+body,
+body *,
+body *::before,
+body *::after {
+    cursor: var(--cursor-default) !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+dt,
+dd,
+label,
+td,
+th,
+blockquote,
+figcaption,
+input:not([type='button']):not([type='submit']):not([type='reset']):not([type='checkbox']):not([type='radio']),
+textarea,
+[contenteditable='true'],
+.cursor-text {
+    cursor: var(--cursor-text) !important;
+}
+
+a,
+a *,
+button,
+button *,
+summary,
+select,
+[role='button'],
+[role='button'] *,
+[role='link'],
+[role='link'] *,
+[type='button'],
+[type='submit'],
+[type='reset'],
+[type='checkbox'],
+[type='radio'],
+.scroll-hint,
+.survey-option,
+.cursor-pointer,
+.navbar a,
+.navbar a *,
+.dropdown-content a,
+.dropdown-content a * {
+    cursor: var(--cursor-link) !important;
+}
+
+body.loading-lock,
+body.loading-lock *,
+body.loading-lock *::before,
+body.loading-lock *::after {
+    cursor: var(--cursor-busy) !important;
+}
+
+[draggable='true'],
+.cursor-move {
+    cursor: var(--cursor-move) !important;
+}
+
+:disabled,
+[disabled],
+[aria-disabled='true'],
+.cursor-not-allowed {
+    cursor: var(--cursor-disabled) !important;
+}
+
+.cursor-nwse-resize,
+[style*='cursor: nwse-resize'],
+[style*='cursor:nwse-resize'] {
+    cursor: var(--cursor-nwse) !important;
+}
+
+.cursor-nesw-resize,
+[style*='cursor: nesw-resize'],
+[style*='cursor:nesw-resize'] {
+    cursor: var(--cursor-nesw) !important;
+}
+
+/*
+ * JavaScript 跟随层启用后彻底隐藏系统光标。该规则放在最后并提高优先级，
+ * 即使页面内还有 cursor: pointer !important 也无法重新显示系统光标。
+ */
+html.custom-cursor-active,
+html.custom-cursor-active body,
+html.custom-cursor-active body *,
+html.custom-cursor-active body *::before,
+html.custom-cursor-active body *::after {
+    cursor: none !important;
+}
+
+#igem-custom-cursor {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 2147483647 !important;
+    display: block !important;
+    width: 64px !important;
+    height: 64px !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none !important;
+    user-select: none !important;
+    object-fit: contain !important;
+    filter: none !important;
+    box-shadow: none !important;
+    transition: opacity 80ms ease !important;
+    will-change: transform;
+}
+
+#igem-custom-cursor.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
