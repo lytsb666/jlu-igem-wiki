@@ -1,4 +1,10 @@
-import { copyFileSync, mkdirSync, readdirSync, statSync } from 'node:fs'
+import {
+  copyFileSync,
+  mkdirSync,
+  readdirSync,
+  rmSync,
+  statSync,
+} from 'node:fs'
 import { resolve, relative, sep } from 'node:path'
 
 const root = resolve(import.meta.dirname)
@@ -30,6 +36,9 @@ const input = Object.fromEntries(
 function sitesOutput() {
   return {
     name: 'sites-output',
+    buildStart() {
+      rmSync(resolve(root, 'dist'), { recursive: true, force: true })
+    },
     closeBundle() {
       const serverDirectory = resolve(root, 'dist', 'server')
       const metadataDirectory = resolve(root, 'dist', '.openai')
