@@ -3,6 +3,7 @@ import './navigation.js'
 import './cursor-overlay.js'
 
 const MINIMUM_VISIBLE_TIME = 320
+const LOADING_VIDEO_TIMEOUT = 5000
 
 function createLoader() {
   const existingLoader = document.querySelector('#igem-loader')
@@ -39,6 +40,44 @@ function minimumVisibleTime() {
   return new Promise((resolve) => setTimeout(resolve, MINIMUM_VISIBLE_TIME))
 }
 
+function loadingVideoHasFinished(video) {
+  if (!video || video.ended || video.error) return Promise.resolve()
+
+  return new Promise((resolve) => {
+    let finished = false
+    const finish = () => {
+      if (finished) return
+      finished = true
+      window.clearTimeout(timeoutId)
+      video.removeEventListener('ended', finish)
+      video.removeEventListener('error', finish)
+      resolve()
+    }
+    const timeoutId = window.setTimeout(finish, LOADING_VIDEO_TIMEOUT)
+
+    video.addEventListener('ended', finish, { once: true })
+    video.addEventListener('error', finish, { once: true })
+  })
+}
+
+function pageOpeningIsReady() {
+  const images = [...document.querySelectorAll('.instrument-scene img')]
+
+  return Promise.all(images.map((image) => {
+    const loaded = image.complete
+      ? Promise.resolve()
+      : new Promise((resolve) => {
+          image.addEventListener('load', resolve, { once: true })
+          image.addEventListener('error', resolve, { once: true })
+        })
+
+    return loaded.then(() => {
+      if (!image.naturalWidth || typeof image.decode !== 'function') return
+      return image.decode().catch(() => undefined)
+    })
+  }))
+}
+
 function dismissLoader(loader) {
   if (!loader || loader.classList.contains('is-leaving')) return
   loader.classList.add('is-leaving')
@@ -51,4 +90,9 @@ const loader = createLoader()
 const loaderVideo = loader.querySelector('.loading-video')
 if (loaderVideo) loaderVideo.play().catch(() => loaderVideo.dispatchEvent(new Event('error')))
 
-Promise.all([pageHasLoaded(), minimumVisibleTime()]).then(() => dismissLoader(loader))
+Promise.all([
+  pageHasLoaded(),
+  minimumVisibleTime(),
+  loadingVideoHasFinished(loaderVideo),
+  pageOpeningIsReady(),
+]).then(() => dismissLoader(loader))

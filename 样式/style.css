@@ -80,7 +80,7 @@ body {
 
 /* Home scroll story */
 .story-home { background: #211713; }
-.scroll-story { position: relative; height: 2681.6vh; height: 2681.6svh; background: #211713; }
+.scroll-story { position: relative; height: 2870.6vh; height: 2870.6svh; background: #211713; }
 .story-stage { position: sticky; top: 0; height: 100vh; height: 100dvh; overflow: hidden; isolation: isolate; background: #000; }
 .world-scene,
 .instrument-scene,
@@ -121,96 +121,128 @@ body {
 .story-elderly { z-index: 8; width: calc(var(--story-world-width, 100vw) * 0.325181); }
 .story-vignette { position: absolute; inset: 0; z-index: 20; pointer-events: none; background: linear-gradient(90deg, rgba(24, 15, 11, 0.5), transparent 34%, rgba(24, 15, 11, 0.2)), linear-gradient(0deg, rgba(18, 11, 8, 0.44), transparent 36%, rgba(18, 11, 8, 0.2)); }
 
-/* Home cover: Xiaoze presents the instrument inside the botanical frame. */
+/* Home cover: the supplied artwork moves from the ByeGerm tableau into a magnified virus. */
 .instrument-scene {
     position: absolute;
     inset: 0;
     z-index: 30;
     overflow: hidden;
-    background: #3f4b3c;
+    background: #03151c;
     opacity: var(--instrument-scene-opacity, 1);
     pointer-events: none;
     user-select: none;
-}
-
-.instrument-scene::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 20;
-    pointer-events: none;
-    background: #000;
-    opacity: var(--cover-black-opacity, 0);
 }
 
 .instrument-canvas {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: max(100vw, 178.8889vh);
-    height: max(100vh, 55.9006vw);
+    width: max(100vw, 176.4706vh);
+    height: max(100vh, 56.6667vw);
     overflow: hidden;
-    background: #3f4b3c;
-    opacity: var(--instrument-canvas-opacity, 1);
-    border-radius: var(--instrument-canvas-radius, 0px);
-    box-shadow: 0 3vh 9vh rgba(0, 0, 0, 0.76), 0 0 0 1px rgba(244, 226, 189, 0.14);
-    filter: brightness(var(--instrument-canvas-brightness, 1));
-    transform: translate3d(-50%, -50%, 0) scale(var(--instrument-canvas-scale, 1));
+    background: #03151c;
+    transform: translate3d(-50%, -50%, 0);
     transform-origin: center;
 }
 
-.instrument-background {
+.cover-composite,
+.cover-layer,
+.magnify-frame,
+.cover-shade {
     position: absolute;
     inset: 0;
-    z-index: 1;
     display: block;
     width: 100%;
     height: 100%;
     max-width: none;
-    opacity: var(--instrument-background-opacity, 1);
-    object-fit: fill;
-    filter: brightness(var(--instrument-background-brightness, 1));
-    transform: scale(var(--instrument-background-scale, 1));
-    transform-origin: center;
 }
 
-.instrument-layer {
-    position: absolute;
-    z-index: 3;
-    display: block;
-    max-width: none;
-    opacity: var(--instrument-foreground-opacity, 1);
-    filter: blur(var(--instrument-foreground-blur, 0px));
-    transform: translate3d(0, var(--instrument-foreground-rise, 0px), 0) scale(var(--instrument-foreground-scale, 1));
+.cover-composite {
+    z-index: 1;
+    opacity: var(--cover-composite-opacity, 1);
+    filter: brightness(var(--cover-composite-brightness, 1));
+    transform: scale(var(--cover-composite-scale, 1));
+    transform-origin: 50% 52%;
     will-change: transform, opacity, filter;
 }
 
-.instrument-flower { transform-origin: 50% 90%; }
-.instrument-flower-art { display: block; width: 100%; height: 100%; max-width: none; animation-duration: 7.2s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-play-state: paused; }
+.cover-layer {
+    object-fit: fill;
+    pointer-events: none;
+}
 
-.instrument-flower-top-left { top: 0; left: 0; width: 36.6977%; height: 70%; transform-origin: left bottom; }
-.instrument-flower-bottom-left { top: 41.2963%; left: 0; width: 42.7536%; height: 58.7037%; transform-origin: left bottom; }
-.instrument-flower-top-right { top: 0; left: 63.0435%; width: 36.9565%; height: 70.5556%; transform-origin: right bottom; }
-.instrument-flower-bottom-right { top: 42.6852%; left: 57.0911%; width: 42.9089%; height: 57.3148%; transform-origin: right bottom; }
+.cover-background { z-index: 1; }
+.cover-wordmark { z-index: 2; }
+.cover-mascot { z-index: 3; }
 
-.instrument-flower-top-left .instrument-flower-art { animation-duration: 7.2s; }
-.instrument-flower-bottom-left .instrument-flower-art { animation-duration: 8.4s; }
-.instrument-flower-top-right .instrument-flower-art { animation-duration: 7.8s; }
-.instrument-flower-bottom-right .instrument-flower-art { animation-duration: 9.1s; }
-.instrument-flower-top-left .instrument-flower-art,
-.instrument-flower-bottom-left .instrument-flower-art { animation-name: instrument-flower-sway-left; }
-.instrument-flower-top-right .instrument-flower-art,
-.instrument-flower-bottom-right .instrument-flower-art { animation-name: instrument-flower-sway-right; }
-.instrument-scene.is-foreground-revealed .instrument-flower-art { animation-play-state: running; will-change: transform; }
+.magnify-frame {
+    z-index: 4;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    filter: brightness(var(--magnify-frame-brightness, 1));
+    transform: scale(1.015);
+    transform-origin: center;
+    will-change: transform, opacity, filter;
+}
 
-.instrument-xiaoze {
-    z-index: 5;
-    top: 18.2407%;
-    left: 38.4058%;
-    width: 29.5031%;
-    height: auto;
-    transform-origin: center bottom;
-    filter: blur(var(--instrument-foreground-blur, 0px)) drop-shadow(0 2.2vh 2.8vh rgba(16, 9, 5, 0.38));
+.magnify-frame-1 { z-index: 4; opacity: var(--magnify-frame-1-opacity, 0); transform: scale(var(--magnify-frame-1-scale, 1.015)); }
+.magnify-frame-2 { z-index: 5; opacity: var(--magnify-frame-2-opacity, 0); transform: scale(var(--magnify-frame-2-scale, 1.015)); }
+.magnify-frame-3 { z-index: 6; opacity: var(--magnify-frame-3-opacity, 0); transform: scale(var(--magnify-frame-3-scale, 1.015)); }
+.magnify-frame-4 { z-index: 7; opacity: var(--magnify-frame-4-opacity, 0); transform: scale(var(--magnify-frame-4-scale, 1.015)); }
+.magnify-frame-5 { z-index: 8; opacity: var(--magnify-frame-5-opacity, 0); transform: scale(var(--magnify-frame-5-scale, 1.015)); }
+.magnify-frame-6 { z-index: 9; opacity: var(--magnify-frame-6-opacity, 0); transform: scale(var(--magnify-frame-6-scale, 1.015)); }
+.magnify-frame-7 { z-index: 10; opacity: var(--magnify-frame-7-opacity, 0); transform: scale(var(--magnify-frame-7-scale, 1.015)); }
+.magnify-frame-8 { z-index: 11; opacity: var(--magnify-frame-8-opacity, 0); transform: scale(var(--magnify-frame-8-scale, 1.015)); }
+
+.cover-shade {
+    z-index: 12;
+    background:
+        radial-gradient(circle at 50% 50%, transparent 52%, rgba(0, 12, 18, 0.28) 100%),
+        #000;
+    opacity: var(--cover-shade-opacity, 0);
+    pointer-events: none;
+    will-change: opacity;
+}
+
+.cover-scroll-cue {
+    position: absolute;
+    right: clamp(20px, 3.2vw, 54px);
+    bottom: clamp(18px, 3.2vw, 48px);
+    z-index: 13;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 250, 230, 0.92);
+    font: 700 clamp(0.58rem, 0.72vw, 0.72rem)/1 Inter, Arial, sans-serif;
+    letter-spacing: 0.2em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.72);
+    opacity: var(--cover-cue-opacity, 1);
+    transform: translateY(var(--cover-cue-rise, 0px));
+    will-change: transform, opacity;
+}
+
+.cover-scroll-cue i {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 34px;
+    border: 1.5px solid rgba(255, 250, 230, 0.84);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.42);
+}
+
+.cover-scroll-cue i::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    width: 3px;
+    height: 7px;
+    border-radius: 2px;
+    background: #f5cc62;
+    transform: translateX(-50%);
+    animation: cover-scroll-wheel 1.65s ease-in-out infinite;
 }
 
 body.story-cinematic-active .navbar {
@@ -224,16 +256,9 @@ body.story-cinematic-active .navbar {
         visibility 0s linear 0.45s;
 }
 
-@keyframes instrument-flower-sway-left {
-    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scale(0.992); }
-    25% { transform: translate3d(-0.22%, 0, 0) rotate(-0.55deg) scale(0.992); }
-    75% { transform: translate3d(0.24%, 0, 0) rotate(0.68deg) scale(0.992); }
-}
-
-@keyframes instrument-flower-sway-right {
-    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scale(0.992); }
-    25% { transform: translate3d(0.22%, 0, 0) rotate(0.55deg) scale(0.992); }
-    75% { transform: translate3d(-0.24%, 0, 0) rotate(-0.68deg) scale(0.992); }
+@keyframes cover-scroll-wheel {
+    0%, 100% { opacity: 0.3; transform: translate3d(-50%, 0, 0); }
+    50% { opacity: 1; transform: translate3d(-50%, 9px, 0); }
 }
 
 /* Home story: the instrument starts its timed analysis. */
@@ -923,7 +948,7 @@ body.story-cinematic-active .navbar {
 }
 
 @media (max-width: 720px) {
-    .scroll-story { height: 2569.6vh; height: 2569.6svh; }
+    .scroll-story { height: 2758.6vh; height: 2758.6svh; }
     .story-world { width: max(132vw, 64dvh); }
     .story-crowd { width: calc(var(--story-world-width, 132vw) * 0.281703); }
     .story-bacteria { width: calc(var(--story-world-width, 132vw) * 0.495471); }
@@ -1020,9 +1045,8 @@ body.story-cinematic-active .navbar {
 @media (prefers-reduced-motion: reduce) {
     .story-world, .story-object { transition: none !important; }
     .world-scene { border-radius: 0 !important; transform: none !important; }
-    .instrument-background, .instrument-layer { filter: none !important; }
-    .instrument-background, .instrument-layer { transform: none !important; }
-    .instrument-flower-art { animation: none !important; }
+    .cover-composite, .magnify-frame { filter: none !important; transform: none !important; }
+    .cover-scroll-cue i::after { animation: none !important; }
     .detector-background, .detector-timer, .detector-virus { filter: none !important; }
     .detector-background { transform: none !important; }
     .detector-timer { --detector-timer-rise: 0px !important; --detector-timer-scale: 1 !important; }

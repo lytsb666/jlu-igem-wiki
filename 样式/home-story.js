@@ -173,35 +173,51 @@ if (story) {
   function setCoverScene(progress) {
     if (!instrumentScene) return
 
-    const coverDarken = smoothstep(range(progress, 0.14, 0.50))
-    const worldReveal = smoothstep(range(progress, 0.58, 0.92))
+    const frameWindows = [
+      [0.065, 0.18],
+      [0.16, 0.275],
+      [0.255, 0.37],
+      [0.35, 0.465],
+      [0.445, 0.56],
+      [0.54, 0.655],
+      [0.635, 0.75],
+      [0.73, 0.845],
+    ]
+    const frameReveals = frameWindows.map(([start, end]) => smoothstep(range(progress, start, end)))
+    const worldReveal = smoothstep(range(progress, 0.90, 0.98))
     const sceneOpacity = 1 - worldReveal
     const reduce = reducedMotion.matches
-    const canvasBrightness = reduce ? 1 : 1 - coverDarken * 0.28
+    // Each opaque frame stays beneath the next one. Fading only the incoming
+    // frame prevents a dark dip halfway through a crossfade.
+    const coverOpacity = 1
+    const openingShade = smoothstep(range(progress, 0.07, 0.15))
+      * (1 - smoothstep(range(progress, 0.16, 0.25)))
+    const exitShade = smoothstep(range(progress, 0.88, 0.96))
+    const shadeOpacity = reduce ? 0 : Math.max(openingShade * 0.24, exitShade * 0.28)
+    const cueExit = smoothstep(range(progress, 0.025, 0.12))
 
     instrumentScene.style.setProperty('--instrument-scene-opacity', sceneOpacity.toFixed(3))
-    instrumentScene.style.setProperty('--cover-black-opacity', coverDarken.toFixed(3))
-    instrumentScene.style.setProperty('--instrument-canvas-opacity', '1')
-    instrumentScene.style.setProperty('--instrument-canvas-scale', '1')
-    instrumentScene.style.setProperty('--instrument-canvas-brightness', canvasBrightness.toFixed(3))
-    instrumentScene.style.setProperty('--instrument-canvas-blur', '0px')
-    instrumentScene.style.setProperty('--instrument-canvas-radius', '0px')
-    instrumentScene.style.setProperty('--instrument-background-opacity', '1')
-    instrumentScene.style.setProperty('--instrument-background-brightness', '1')
-    instrumentScene.style.setProperty('--instrument-background-blur', '0px')
-    instrumentScene.style.setProperty('--instrument-background-scale', '1')
-    instrumentScene.style.setProperty('--instrument-foreground-opacity', '1')
-    instrumentScene.style.setProperty('--instrument-foreground-rise', '0px')
-    instrumentScene.style.setProperty('--instrument-foreground-scale', '1')
-    instrumentScene.style.setProperty('--instrument-foreground-blur', '0px')
+    instrumentScene.style.setProperty('--cover-composite-opacity', coverOpacity.toFixed(3))
+    instrumentScene.style.setProperty('--cover-composite-brightness', (1 - frameReveals[0] * 0.08).toFixed(3))
+    instrumentScene.style.setProperty('--cover-composite-scale', (reduce ? 1 : 1 + frameReveals[0] * 0.03).toFixed(4))
+    frameReveals.forEach((reveal, index) => {
+      const nextStart = frameWindows[index + 1]?.[0] ?? 0.845
+      const localPush = range(progress, frameWindows[index][0], nextStart)
+      const scale = reduce ? 1 : 1.008 + localPush * (index > 4 ? 0.018 : 0.012)
+      instrumentScene.style.setProperty(`--magnify-frame-${index + 1}-opacity`, reveal.toFixed(3))
+      instrumentScene.style.setProperty(`--magnify-frame-${index + 1}-scale`, scale.toFixed(4))
+    })
+    instrumentScene.style.setProperty('--magnify-frame-brightness', (1 - exitShade * 0.12).toFixed(3))
+    instrumentScene.style.setProperty('--cover-shade-opacity', shadeOpacity.toFixed(3))
+    instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
+    instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
-    setMotionState(instrumentScene, 'is-foreground-revealed', 1 - coverDarken, !reduce)
   }
 
   function setWorldScene(coverProgress, detectorProgress) {
     if (!worldScene) return
 
-    const worldReveal = smoothstep(range(coverProgress, 0.58, 0.92))
+    const worldReveal = smoothstep(range(coverProgress, 0.90, 0.98))
     const detectorReady = sceneReadiness.detector ? 1 : 0
     const detectorShrink = smoothstep(range(detectorProgress, 0, 0.16)) * detectorReady
     const detectorFade = smoothstep(range(detectorProgress, 0.08, 0.16)) * detectorReady
@@ -382,7 +398,7 @@ if (story) {
     const storyIsPinned = rect.top <= 0 && rect.bottom >= viewportHeight
     // Keep every chapter's internal choreography, but use 30% less wheel
     // distance across the complete story.
-    const coverScrollDistance = Math.min(scrollDistance, timelineHeight * 2.8 * storyPace)
+    const coverScrollDistance = Math.min(scrollDistance, timelineHeight * 5.5 * storyPace)
     const remainingAfterCover = Math.max(1, scrollDistance - coverScrollDistance)
     const firstSceneScrollDistance = Math.min(
       remainingAfterCover,
@@ -513,8 +529,7 @@ if (story) {
     setLegacyScene(legacySceneProgress, finaleSceneProgress)
     setFinaleScene(finaleSceneProgress, storyIsPinned)
 
-    const cinematicSceneIsActive = detectorSceneProgress > 0.005 || familySceneProgress > 0.005 || careSceneProgress > 0.005 || legacySceneProgress > 0.005 || finaleSceneProgress > 0.005
-    document.body.classList.toggle('story-cinematic-active', storyIsPinned && cinematicSceneIsActive)
+    document.body.classList.toggle('story-cinematic-active', storyIsPinned)
     ticking = false
   }
 
@@ -545,8 +560,9 @@ if (story) {
     })
   }
 
-  // Begin with the next scene; later scenes are warmed as the reader approaches
-  // them. Each one becomes renderable only after every layer has decoded.
+  // Warm the complete opening sequence immediately; the shared loader also
+  // waits for these same images to decode before it leaves.
+  Promise.all(instrumentImages.map(decodeImage)).catch(() => requestUpdate())
   ensureScenePrepared('detector', detectorScene, detectorImages).catch(() => requestUpdate())
 
   refreshTimelineViewport(true)
