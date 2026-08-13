@@ -147,8 +147,7 @@ body {
 
 .cover-composite,
 .cover-layer,
-.cover-frame-sequence,
-.cover-sequence-frame,
+.cover-optics,
 .cover-lens-shade {
     position: absolute;
     inset: 0;
@@ -177,20 +176,40 @@ body {
 .cover-wordmark { z-index: 2; }
 .cover-mascot { z-index: 3; }
 
-.cover-frame-sequence { z-index: 4; }
-
-.cover-sequence-frame {
-    z-index: var(--sequence-z, 1);
-    object-fit: cover;
-    object-position: center;
-    opacity: var(--sequence-opacity, 0);
-    transform:
-        translate3d(var(--sequence-x, 0%), var(--sequence-y, 0%), 0)
-        scale(var(--sequence-scale, 1));
-    transform-origin: var(--sequence-focus-x, 50%) var(--sequence-focus-y, 50%);
+.cover-optics {
+    z-index: 4;
     pointer-events: none;
-    visibility: var(--sequence-visibility, hidden);
-    will-change: var(--sequence-will-change, auto);
+    opacity: var(--cover-optics-opacity, 0);
+    mask-image: radial-gradient(
+        circle at var(--cover-optics-x, 50%) var(--cover-optics-y, 50%),
+        #000 0 calc(var(--cover-optics-radius, 0%) - 3%),
+        transparent var(--cover-optics-radius, 0%)
+    );
+    -webkit-mask-image: radial-gradient(
+        circle at var(--cover-optics-x, 50%) var(--cover-optics-y, 50%),
+        #000 0 calc(var(--cover-optics-radius, 0%) - 3%),
+        transparent var(--cover-optics-radius, 0%)
+    );
+    will-change: opacity, mask-image;
+}
+
+.cover-iris-shell {
+    position: absolute;
+    top: var(--cover-optics-y, 50%);
+    left: var(--cover-optics-x, 50%);
+    width: 100vmax;
+    height: 100vmax;
+    transform: translate3d(-50%, -50%, 0) scale(var(--cover-iris-scale, 1));
+    transform-origin: center;
+    will-change: transform;
+}
+
+.cover-iris-art {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
 }
 
 .cover-lens-shade {
@@ -1048,7 +1067,7 @@ body.story-cinematic-active .navbar {
     .story-world, .story-object { transition: none !important; }
     .world-scene { border-radius: 0 !important; transform: none !important; }
     .cover-composite { transform: none !important; }
-    .cover-sequence-frame { transform: none !important; }
+    .cover-optics { display: none !important; }
     .cover-lens-shade { display: none !important; }
     .cover-scroll-cue i::after { animation: none !important; }
     .detector-background, .detector-timer, .detector-virus { filter: none !important; }

@@ -23,10 +23,6 @@ if (story) {
   const instrumentImages = instrumentScene
     ? [...instrumentScene.querySelectorAll('img')]
     : []
-  const coverComposite = instrumentScene?.querySelector('.cover-composite')
-  const coverSequenceFrames = instrumentScene
-    ? [...instrumentScene.querySelectorAll('.cover-sequence-frame')]
-    : []
   const detectorImages = detectorScene
     ? [...detectorScene.querySelectorAll('img')]
     : []
@@ -62,19 +58,6 @@ if (story) {
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
   const storyPace = 0.7
-  // The MP4s are motion references only. The first half mirrors the slower
-  // full-cover push; the second half accelerates into the eye and virus. A few
-  // redundant stills are intentionally omitted so the camera motion leads the
-  // effect instead of reading as a slideshow.
-  const coverFrameTimeline = [
-    { stop: 0.500, blend: 0.050, focus: [45, 46], target: [49, 49], scale: [0.970, 1.055] },
-    { stop: 0.625, blend: 0.040, focus: [50, 50], target: [50, 49], scale: [0.990, 1.045] },
-    { stop: 0.710, blend: 0.036, focus: [50, 47], target: [50, 48.5], scale: [0.985, 1.055] },
-    { stop: 0.810, blend: 0.034, focus: [50, 48.5], target: [50, 49], scale: [0.990, 1.060] },
-    { stop: 0.895, blend: 0.032, focus: [50, 48.5], target: [50, 49], scale: [0.990, 1.055] },
-    { stop: 0.945, blend: 0.028, focus: [51, 47], target: [50.5, 49], scale: [0.995, 1.040] },
-    { stop: 0.985, blend: 0.028, focus: [52, 48], target: [51, 49], scale: [1.050, 1.075] },
-  ]
 
   const anchors = {
     // X values come directly from the WPS composition. Y values are mapped
@@ -98,11 +81,6 @@ if (story) {
   function smoothstep(value) {
     const progress = clamp(value)
     return progress * progress * (3 - 2 * progress)
-  }
-
-  function smootherstep(value) {
-    const progress = clamp(value)
-    return progress * progress * progress * (progress * (progress * 6 - 15) + 10)
   }
 
   function setSceneVisibility(scene, visible) {
@@ -200,16 +178,28 @@ if (story) {
     const worldReveal = smoothstep(range(progress, 0.90, 0.98))
     const sceneOpacity = 1 - worldReveal
     const cueExit = smoothstep(range(progress, 0.018, 0.08))
-    const motionProgress = range(progress, 0.02, 0.88)
-    const firstClipProgress = range(motionProgress, 0, 0.50)
-    const shadeIn = smoothstep(range(progress, 0.89, 0.96))
+    const slowPush = range(progress, 0.02, 0.50)
+    const lensDive = range(progress, 0.50, 0.90)
+    const lensEase = Math.pow(lensDive, 2.2)
+    const shadeIn = smoothstep(range(progress, 0.86, 0.96))
     const reduce = reducedMotion.matches
-    const coverScale = reduce ? 1 : 1 + 0.645 * Math.pow(firstClipProgress, 1.7)
-    const focusX = compactViewport.matches ? 46 : 45.5
-    const focusY = compactViewport.matches ? 55 : 55.5
-    const baseFocusTravel = smootherstep(firstClipProgress)
-    const coverTranslateX = reduce ? 0 : (49 - focusX) * baseFocusTravel
-    const coverTranslateY = reduce ? 0 : (50 - focusY) * baseFocusTravel
+    // The first reference clip is a continuous slow push (roughly 1 -> 1.65).
+    // The second accelerates into the magnifying lens. Both phases are applied
+    // to the original three-layer artwork as one camera, so nothing can jump.
+    const slowScale = 1 + 0.645 * Math.pow(slowPush, 1.7)
+    const coverScale = reduce ? 1 : slowScale * (1 + 11.6 * lensEase)
+    const focusX = compactViewport.matches ? 46 : 44.8
+    const focusY = compactViewport.matches ? 58 : 58.8
+    const focusTravel = smoothstep(range(progress, 0.08, 0.82))
+    const coverTranslateX = reduce ? 0 : (50 - focusX) * focusTravel
+    const coverTranslateY = reduce ? 0 : (50 - focusY) * focusTravel
+    const opticsReveal = reduce ? 0 : smoothstep(range(progress, 0.82, 0.87))
+    const opticsExpansion = smoothstep(range(progress, 0.82, 0.90))
+    const opticsTravel = smoothstep(range(progress, 0.86, 0.91))
+    const opticsRadius = 9 + opticsExpansion * 101
+    const irisScale = 1 + opticsTravel * 0.24
+    const opticsX = 50 - (1 - focusTravel) * 2.4
+    const opticsY = 50 + (1 - focusTravel) * 1.6
 
     instrumentScene.style.setProperty('--instrument-scene-opacity', sceneOpacity.toFixed(3))
     instrumentScene.style.setProperty('--cover-scale', coverScale.toFixed(4))
@@ -217,65 +207,14 @@ if (story) {
     instrumentScene.style.setProperty('--cover-focus-y', `${focusY}%`)
     instrumentScene.style.setProperty('--cover-translate-x', `${coverTranslateX.toFixed(3)}%`)
     instrumentScene.style.setProperty('--cover-translate-y', `${coverTranslateY.toFixed(3)}%`)
-    instrumentScene.style.setProperty('--cover-shade-opacity', (reduce ? 0 : shadeIn * 0.78).toFixed(3))
+    instrumentScene.style.setProperty('--cover-optics-opacity', opticsReveal.toFixed(3))
+    instrumentScene.style.setProperty('--cover-optics-radius', `${opticsRadius.toFixed(2)}%`)
+    instrumentScene.style.setProperty('--cover-optics-x', `${opticsX.toFixed(3)}%`)
+    instrumentScene.style.setProperty('--cover-optics-y', `${opticsY.toFixed(3)}%`)
+    instrumentScene.style.setProperty('--cover-iris-scale', irisScale.toFixed(4))
+    instrumentScene.style.setProperty('--cover-shade-opacity', (reduce ? 0 : shadeIn * 0.72).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
-    // Never fade the outgoing picture away. It remains fully opaque below the
-    // incoming picture, so the blend cannot expose the base layer or flash dark.
-    // Only those two pictures stay composited, which also keeps GPU use bounded.
-    let currentKey = 0
-    let incomingKey = -1
-    let incomingOpacity = 0
-
-    if (!reduce) {
-      for (let index = 0; index < coverFrameTimeline.length; index += 1) {
-        const frame = coverFrameTimeline[index]
-        const blendStart = Math.max(0, frame.stop - frame.blend * 0.5)
-        const blendEnd = Math.min(1, frame.stop + frame.blend * 0.5)
-        if (motionProgress < blendStart) break
-        if (motionProgress < blendEnd) {
-          incomingKey = index + 1
-          incomingOpacity = smootherstep(range(motionProgress, blendStart, blendEnd))
-          break
-        }
-        currentKey = index + 1
-      }
-    }
-
-    if (coverComposite) {
-      const baseIsVisible = reduce || currentKey === 0
-      coverComposite.style.opacity = baseIsVisible ? '1' : '0'
-      coverComposite.style.visibility = baseIsVisible ? 'visible' : 'hidden'
-    }
-
-    coverSequenceFrames.forEach((frame, index) => {
-      const timeline = coverFrameTimeline[index]
-      if (!timeline) return
-      const keyIndex = index + 1
-      const isCurrent = !reduce && keyIndex === currentKey
-      const isIncoming = !reduce && keyIndex === incomingKey
-      const opacity = isIncoming ? incomingOpacity : isCurrent ? 1 : 0
-      const nextStop = coverFrameTimeline[index + 1]?.stop ?? 1
-      const frameStart = Math.max(0, timeline.stop - timeline.blend * 0.5)
-      const localProgress = Math.pow(range(motionProgress, frameStart, nextStop), 1.45)
-      const scale = reduce
-        ? 1
-        : timeline.scale[0] + (timeline.scale[1] - timeline.scale[0]) * localProgress
-      const focus = timeline.focus
-      const shiftX = reduce ? 0 : timeline.target[0] - focus[0]
-      const shiftY = reduce ? 0 : timeline.target[1] - focus[1]
-      const shouldComposite = isCurrent || isIncoming
-
-      frame.style.setProperty('--sequence-z', `${index + 1}`)
-      frame.style.setProperty('--sequence-opacity', opacity.toFixed(3))
-      frame.style.setProperty('--sequence-scale', scale.toFixed(4))
-      frame.style.setProperty('--sequence-focus-x', `${focus[0]}%`)
-      frame.style.setProperty('--sequence-focus-y', `${focus[1]}%`)
-      frame.style.setProperty('--sequence-x', `${shiftX.toFixed(3)}%`)
-      frame.style.setProperty('--sequence-y', `${shiftY.toFixed(3)}%`)
-      frame.style.setProperty('--sequence-visibility', shouldComposite ? 'visible' : 'hidden')
-      frame.style.setProperty('--sequence-will-change', shouldComposite ? 'transform, opacity' : 'auto')
-    })
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
   }
 
