@@ -170,6 +170,11 @@ body {
         translate3d(var(--cover-frame-x, 0%), var(--cover-frame-y, 0%), 0)
         scale(var(--cover-frame-scale, 1));
     transform-origin: var(--cover-frame-focus-x, 50%) var(--cover-frame-focus-y, 50%);
+    filter:
+        brightness(var(--cover-frame-brightness, 1))
+        saturate(var(--cover-frame-saturation, 1));
+    mask-image: var(--cover-frame-mask, none);
+    -webkit-mask-image: var(--cover-frame-mask, none);
 }
 
 .cover-keyframe:first-child {
@@ -179,7 +184,7 @@ body {
 
 .cover-keyframe.is-cover-active {
     visibility: visible;
-    will-change: transform, opacity;
+    will-change: transform, opacity, filter, mask-image;
 }
 
 .cover-lens-shade {

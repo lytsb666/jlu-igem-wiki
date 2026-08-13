@@ -62,13 +62,13 @@ if (story) {
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
   const storyPace = 0.7
   const coverFrameMotion = [
-    { start: 0, end: 0.625, from: 1, to: 1.645, focus: [45, 66], target: [50, 50], exponent: 1.7 },
-    { start: 0.565, end: 0.765, from: 0.94, to: 1.18, focus: [50, 51], target: [50, 50], exponent: 1.35 },
-    { start: 0.70, end: 0.91, from: 0.96, to: 4.20, focus: [50, 45], target: [50, 50], exponent: 1.25 },
-    { start: 0.845, end: 0.985, from: 0.98, to: 1.12, focus: [50, 50], target: [50, 50], exponent: 1.35 },
-    { start: 0.945, end: 1, from: 1.29, to: 1.42, focus: [51, 49], target: [50, 49.5], exponent: 1.2 },
+    { start: 0, end: 0.53, from: 1, to: 2.48, focus: [45, 63.1], target: [50, 50], exponent: 1.7 },
+    { start: 0.59, end: 0.665, from: 1, to: 1.05, focus: [50, 46.5], target: [50, 50], exponent: 1.18 },
+    { start: 0.725, end: 0.82, from: 1, to: 3.30, focus: [50.3, 44.1], target: [50, 50], exponent: 1.35 },
+    { start: 0.88, end: 0.94, from: 1, to: 1.35, focus: [50.4, 48.2], target: [50, 50], exponent: 1.18 },
+    { start: 0.98, end: 1, from: 1, to: 1.12, focus: [51.9, 47.4], target: [50, 50], exponent: 1.12 },
   ]
-  const coverFrameBlends = [[0.565, 0.625], [0.70, 0.765], [0.845, 0.91], [0.945, 0.985]]
+  const coverFrameBlends = [[0.53, 0.59], [0.665, 0.725], [0.82, 0.88], [0.94, 0.98]]
   const coverFrameReady = coverKeyframes.map((frame) => frame.complete && frame.naturalWidth > 0)
 
   const anchors = {
@@ -205,6 +205,7 @@ if (story) {
     let currentFrame = 0
     let incomingFrame = -1
     let incomingMix = 0
+    let activeBlendProgress = 0
 
     if (!reduce) {
       for (let index = 0; index < coverFrameBlends.length; index += 1) {
@@ -212,7 +213,9 @@ if (story) {
         if (motionProgress < start) break
         if (motionProgress < end) {
           incomingFrame = index + 1
-          incomingMix = smootherstep(range(motionProgress, start, end))
+          const blendProgress = range(motionProgress, start, end)
+          activeBlendProgress = smootherstep(blendProgress)
+          incomingMix = smootherstep(range(blendProgress, 0.16, 0.92))
           break
         }
         currentFrame = index + 1
@@ -223,9 +226,16 @@ if (story) {
       const motion = coverFrameMotion[index]
       const rawMotion = range(motionProgress, motion.start, motion.end)
       const easedMotion = Math.pow(rawMotion, motion.exponent)
-      const scale = reduce ? 1 : motion.from + (motion.to - motion.from) * easedMotion
+      const sharedBlendScale = incomingFrame >= 0 && (index === currentFrame || index === incomingFrame)
+        ? 1 + activeBlendProgress * 0.045
+        : 1
+      const scale = reduce
+        ? 1
+        : (motion.from + (motion.to - motion.from) * easedMotion) * sharedBlendScale
       const travelStart = index === 0 ? 0.70 : 0
-      const travel = reduce ? 0 : smoothstep(range(rawMotion, travelStart, 1))
+      const travel = reduce ? 0 : index === 0
+        ? smoothstep(range(rawMotion, travelStart, 1))
+        : 1
       const translateX = (motion.target[0] - motion.focus[0]) * travel
       const translateY = (motion.target[1] - motion.focus[1]) * travel
       const currentIsReady = coverFrameReady[currentFrame] !== false
@@ -235,6 +245,12 @@ if (story) {
       const isIncoming = incomingIsReady && index === incomingFrame
       const isVisible = reduce ? index === 0 : isCurrent || isIncoming
       const opacity = reduce ? (index === 0 ? 1 : 0) : isCurrent ? 1 : isIncoming ? incomingMix : 0
+      const usesOpticalMask = isIncoming && incomingFrame >= 2
+      const maskInner = usesOpticalMask ? 12 + incomingMix * 94 : 100
+      const maskOuter = usesOpticalMask ? maskInner + 12 : 140
+      const irisToneDown = index === 2 ? smoothstep(range(rawMotion, 0.76, 1)) : 0
+      const brightness = reduce ? 1 : index === 3 ? 1.06 : 1 - irisToneDown * 0.12
+      const saturation = reduce ? 1 : 1 - irisToneDown * 0.05
 
       frame.style.setProperty('--cover-frame-opacity', opacity.toFixed(4))
       frame.style.setProperty('--cover-frame-scale', scale.toFixed(4))
@@ -242,6 +258,12 @@ if (story) {
       frame.style.setProperty('--cover-frame-y', `${translateY.toFixed(3)}%`)
       frame.style.setProperty('--cover-frame-focus-x', `${motion.focus[0]}%`)
       frame.style.setProperty('--cover-frame-focus-y', `${motion.focus[1]}%`)
+      frame.style.setProperty('--cover-frame-brightness', brightness.toFixed(3))
+      frame.style.setProperty('--cover-frame-saturation', saturation.toFixed(3))
+      const mask = usesOpticalMask
+        ? `radial-gradient(circle at 50% 50%, #000 0 ${maskInner.toFixed(2)}%, transparent ${maskOuter.toFixed(2)}%)`
+        : 'none'
+      frame.style.setProperty('--cover-frame-mask', mask)
       frame.style.visibility = isVisible ? 'visible' : 'hidden'
       frame.classList.toggle('is-cover-active', isVisible)
     })
