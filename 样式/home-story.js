@@ -63,10 +63,10 @@ if (story) {
   const storyPace = 0.7
   const coverFrameMotion = [
     { start: 0, end: 0.625, from: 1, to: 1.645, focus: [45, 66], target: [50, 50], exponent: 1.7 },
-    { start: 0.565, end: 0.765, from: 0.94, to: 1.18, focus: [50, 50], target: [50, 50], exponent: 1.35 },
-    { start: 0.70, end: 0.91, from: 0.96, to: 4.20, focus: [50, 44], target: [50, 50], exponent: 1.25 },
+    { start: 0.565, end: 0.765, from: 0.94, to: 1.18, focus: [50, 51], target: [50, 50], exponent: 1.35 },
+    { start: 0.70, end: 0.91, from: 0.96, to: 4.20, focus: [50, 45], target: [50, 50], exponent: 1.25 },
     { start: 0.845, end: 0.985, from: 0.98, to: 1.12, focus: [50, 50], target: [50, 50], exponent: 1.35 },
-    { start: 0.945, end: 1, from: 0.82, to: 1, focus: [51, 49], target: [50, 50], exponent: 1.2 },
+    { start: 0.945, end: 1, from: 1.29, to: 1.42, focus: [51, 49], target: [50, 49.5], exponent: 1.2 },
   ]
   const coverFrameBlends = [[0.565, 0.625], [0.70, 0.765], [0.845, 0.91], [0.945, 0.985]]
   const coverFrameReady = coverKeyframes.map((frame) => frame.complete && frame.naturalWidth > 0)
@@ -224,7 +224,8 @@ if (story) {
       const rawMotion = range(motionProgress, motion.start, motion.end)
       const easedMotion = Math.pow(rawMotion, motion.exponent)
       const scale = reduce ? 1 : motion.from + (motion.to - motion.from) * easedMotion
-      const travel = reduce ? 0 : smoothstep(rawMotion)
+      const travelStart = index === 0 ? 0.70 : 0
+      const travel = reduce ? 0 : smoothstep(range(rawMotion, travelStart, 1))
       const translateX = (motion.target[0] - motion.focus[0]) * travel
       const translateY = (motion.target[1] - motion.focus[1]) * travel
       const currentIsReady = coverFrameReady[currentFrame] !== false
