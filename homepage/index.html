@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JLU-SPH iGEM 2026</title>
-    <link rel="preload" as="image" href="../a  图片/home-story/cover-scroll/cover-poster.jpg" fetchpriority="high" />
-    <link rel="preload" as="video" href="../a  图片/home-story/cover-scroll/cover-scroll.mp4" type="video/mp4" />
+    <link rel="preload" as="image" href="../a  图片/home-story/cover-zoom/cover-background.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="../a  图片/home-story/cover-zoom/cover-wordmark.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="../a  图片/home-story/cover-zoom/cover-mascot.png" fetchpriority="high" />
     <link rel="stylesheet" href="../样式/style.css" />
       <link rel="stylesheet" href="../样式/loading.css" />
 </head>
@@ -85,7 +86,7 @@
 </nav>
 
     <main class="home-main story-home">
-  <section class="scroll-story" id="home-story" aria-label="From the ByeGerm cover through a magnifying glass to a close view of a virus, then into a vertical journey through disease, science, diagnosis, care, shared scientific legacy and the global sanitation challenge">
+  <section class="scroll-story" id="home-story" aria-label="From the ByeGerm cover through a magnifying glass into a vertical journey through disease, science, diagnosis, care, shared scientific legacy and the global sanitation challenge">
     <div class="story-stage">
       <div class="world-scene">
         <img class="story-world" src="../a  图片/home-story/world.jpg" width="2160" height="3618" fetchpriority="high" decoding="async" alt="A long illustrated world of forest, village, coast, stone road, tree and research house" />
@@ -100,11 +101,15 @@
         <div class="story-vignette"></div>
       </div>
 
-      <div class="instrument-scene is-visible" role="img" aria-label="The ByeGerm mascot raises a magnifying glass as the view moves closer to a virus">
+      <div class="instrument-scene is-visible" role="img" aria-label="The ByeGerm mascot raises a magnifying glass as the view moves closer through its lens">
         <div class="instrument-canvas">
-          <video class="cover-scroll-video" muted playsinline preload="auto" poster="../a  图片/home-story/cover-scroll/cover-poster.jpg" aria-hidden="true" tabindex="-1">
-            <source src="../a  图片/home-story/cover-scroll/cover-scroll.mp4" type="video/mp4" />
-          </video>
+          <div class="cover-composite" aria-hidden="true">
+            <img class="cover-layer cover-background" src="../a  图片/home-story/cover-zoom/cover-background.png" width="1920" height="1088" loading="eager" fetchpriority="high" decoding="async" alt="" />
+            <img class="cover-layer cover-wordmark" src="../a  图片/home-story/cover-zoom/cover-wordmark.png" width="1920" height="1088" loading="eager" fetchpriority="high" decoding="async" alt="" />
+            <img class="cover-layer cover-mascot" src="../a  图片/home-story/cover-zoom/cover-mascot.png" width="1920" height="1088" loading="eager" fetchpriority="high" decoding="async" alt="" />
+          </div>
+
+          <div class="cover-lens-shade" aria-hidden="true"></div>
 
           <div class="cover-scroll-cue" aria-hidden="true">
             <span>SCROLL TO MAGNIFY</span>

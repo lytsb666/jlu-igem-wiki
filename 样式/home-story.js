@@ -20,7 +20,9 @@ if (story) {
     graves: story.querySelector('.story-graves'),
     elderly: story.querySelector('.story-elderly'),
   }
-  const coverVideo = instrumentScene?.querySelector('.cover-scroll-video')
+  const instrumentImages = instrumentScene
+    ? [...instrumentScene.querySelectorAll('img')]
+    : []
   const detectorImages = detectorScene
     ? [...detectorScene.querySelectorAll('img')]
     : []
@@ -52,9 +54,6 @@ if (story) {
   let ticking = false
   let renderedCoverProgress = null
   let lastCoverFrameTime = null
-  let lastRequestedCoverTime = -1
-  let coverVideoReady = false
-  let pendingCoverTime = null
   let timelineViewportWidth = window.innerWidth
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
@@ -179,27 +178,35 @@ if (story) {
     const worldReveal = smoothstep(range(progress, 0.90, 0.98))
     const sceneOpacity = 1 - worldReveal
     const cueExit = smoothstep(range(progress, 0.018, 0.08))
+    const cameraProgress = smoothstep(range(progress, 0.06, 0.80))
+    const shadeIn = smoothstep(range(progress, 0.80, 0.94))
+    const reduce = reducedMotion.matches
+    let coverScale = 1
+    if (!reduce && progress > 0.06 && progress < 0.46) {
+      coverScale = 1 + 0.645 * Math.pow(range(progress, 0.06, 0.46), 1.7)
+    } else if (!reduce && progress >= 0.46 && progress < 0.72) {
+      coverScale = 1.645 + 2.155 * Math.pow(range(progress, 0.46, 0.72), 1.8)
+    } else if (!reduce && progress >= 0.72 && progress < 0.80) {
+      const finalPush = 1 - Math.pow(1 - range(progress, 0.72, 0.80), 2.4)
+      coverScale = 3.8 + 0.45 * finalPush
+    } else if (!reduce && progress >= 0.80) {
+      coverScale = 4.25
+    }
+    const focusX = 45.5
+    const focusY = 56
+    const coverTranslateX = reduce ? 0 : (50 - focusX) * cameraProgress
+    const coverTranslateY = reduce ? 0 : (50 - focusY) * cameraProgress
 
     instrumentScene.style.setProperty('--instrument-scene-opacity', sceneOpacity.toFixed(3))
+    instrumentScene.style.setProperty('--cover-scale', coverScale.toFixed(4))
+    instrumentScene.style.setProperty('--cover-focus-x', `${focusX}%`)
+    instrumentScene.style.setProperty('--cover-focus-y', `${focusY}%`)
+    instrumentScene.style.setProperty('--cover-translate-x', `${coverTranslateX.toFixed(3)}%`)
+    instrumentScene.style.setProperty('--cover-translate-y', `${coverTranslateY.toFixed(3)}%`)
+    instrumentScene.style.setProperty('--cover-shade-opacity', (reduce ? 0 : shadeIn * 0.78).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
-
-    if (!coverVideo || !coverVideoReady || reducedMotion.matches) return
-
-    // The reference footage already contains its own acceleration and easing,
-    // so scroll position maps linearly to the source timeline.
-    const videoProgress = range(progress, 0, 0.88)
-    const maximumTime = Math.max(0, coverVideo.duration - 1 / 24)
-    const targetTime = videoProgress * maximumTime
-    if (Math.abs(targetTime - lastRequestedCoverTime) < 1 / 24) return
-
-    lastRequestedCoverTime = targetTime
-    if (coverVideo.seeking) {
-      pendingCoverTime = targetTime
-    } else {
-      coverVideo.currentTime = targetTime
-    }
   }
 
   function setWorldScene(coverProgress, detectorProgress) {
@@ -213,7 +220,7 @@ if (story) {
     // The world is fully opaque underneath both fades. Only the foreground
     // scene fades, avoiding the 75%-opacity dip created by two crossfades.
     const worldIsPrimed = coverProgress >= 0.88 ? 1 : 0
-    const sceneOpacity = worldIsPrimed * (detectorCover >= 0.999 ? 0 : 1)
+    const sceneOpacity = worldIsPrimed * (1 - detectorCover)
 
     worldScene.style.setProperty('--world-scene-opacity', sceneOpacity.toFixed(3))
     worldScene.style.setProperty('--world-scene-scale', sceneScale.toFixed(4))
@@ -553,27 +560,7 @@ if (story) {
   window.addEventListener('pageshow', requestUpdate)
   world.addEventListener('load', requestUpdate, { once: true })
   Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
-  if (coverVideo) {
-    const markCoverVideoReady = () => {
-      coverVideoReady = coverVideo.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA
-      coverVideo.pause()
-      requestUpdate()
-    }
-
-    coverVideo.addEventListener('loadeddata', markCoverVideoReady, { once: true })
-    coverVideo.addEventListener('canplay', markCoverVideoReady, { once: true })
-    coverVideo.addEventListener('seeked', () => {
-      if (pendingCoverTime !== null && Math.abs(coverVideo.currentTime - pendingCoverTime) >= 1 / 48) {
-        const nextTime = pendingCoverTime
-        pendingCoverTime = null
-        coverVideo.currentTime = nextTime
-      } else {
-        pendingCoverTime = null
-      }
-      requestUpdate()
-    })
-    coverVideo.load()
-  }
+  instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
   if (typeof reducedMotion.addEventListener === 'function') {
     reducedMotion.addEventListener('change', requestUpdate)
   }
@@ -584,6 +571,7 @@ if (story) {
     })
   }
 
+  Promise.all(instrumentImages.map(decodeImage)).catch(() => requestUpdate())
   ensureScenePrepared('detector', detectorScene, detectorImages).catch(() => requestUpdate())
 
   refreshTimelineViewport(true)

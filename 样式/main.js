@@ -61,27 +61,21 @@ function loadingVideoHasFinished(video) {
 }
 
 function pageOpeningIsReady() {
-  const coverVideo = document.querySelector('.cover-scroll-video')
-  if (!coverVideo || coverVideo.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
-    return Promise.resolve()
-  }
+  const images = [...document.querySelectorAll('.instrument-scene img')]
 
-  return new Promise((resolve) => {
-    let finished = false
-    const finish = () => {
-      if (finished) return
-      finished = true
-      window.clearTimeout(timeoutId)
-      coverVideo.removeEventListener('loadeddata', finish)
-      coverVideo.removeEventListener('error', finish)
-      resolve()
-    }
-    const timeoutId = window.setTimeout(finish, LOADING_VIDEO_TIMEOUT)
+  return Promise.all(images.map((image) => {
+    const loaded = image.complete
+      ? Promise.resolve()
+      : new Promise((resolve) => {
+          image.addEventListener('load', resolve, { once: true })
+          image.addEventListener('error', resolve, { once: true })
+        })
 
-    coverVideo.addEventListener('loadeddata', finish, { once: true })
-    coverVideo.addEventListener('error', finish, { once: true })
-    coverVideo.load()
-  })
+    return loaded.then(() => {
+      if (!image.naturalWidth || typeof image.decode !== 'function') return
+      return image.decode().catch(() => undefined)
+    })
+  }))
 }
 
 function dismissLoader(loader) {
