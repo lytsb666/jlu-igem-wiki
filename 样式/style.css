@@ -145,9 +145,8 @@ body {
     transform-origin: center;
 }
 
-.cover-composite,
-.cover-layer,
-.cover-optics,
+.cover-keyframes,
+.cover-keyframe,
 .cover-lens-shade {
     position: absolute;
     inset: 0;
@@ -157,59 +156,30 @@ body {
     max-width: none;
 }
 
-.cover-composite {
+.cover-keyframes {
     z-index: 1;
-    opacity: 1;
-    transform:
-        translate3d(var(--cover-translate-x, 0%), var(--cover-translate-y, 0%), 0)
-        scale(var(--cover-scale, 1));
-    transform-origin: var(--cover-focus-x, 45.5%) var(--cover-focus-y, 56%);
-    will-change: transform;
 }
 
-.cover-layer {
-    object-fit: fill;
-    pointer-events: none;
-}
-
-.cover-background { z-index: 1; }
-.cover-wordmark { z-index: 2; }
-.cover-mascot { z-index: 3; }
-
-.cover-optics {
-    z-index: 4;
-    pointer-events: none;
-    opacity: var(--cover-optics-opacity, 0);
-    mask-image: radial-gradient(
-        circle at var(--cover-optics-x, 50%) var(--cover-optics-y, 50%),
-        #000 0 calc(var(--cover-optics-radius, 0%) - 3%),
-        transparent var(--cover-optics-radius, 0%)
-    );
-    -webkit-mask-image: radial-gradient(
-        circle at var(--cover-optics-x, 50%) var(--cover-optics-y, 50%),
-        #000 0 calc(var(--cover-optics-radius, 0%) - 3%),
-        transparent var(--cover-optics-radius, 0%)
-    );
-    will-change: opacity, mask-image;
-}
-
-.cover-iris-shell {
-    position: absolute;
-    top: var(--cover-optics-y, 50%);
-    left: var(--cover-optics-x, 50%);
-    width: 100vmax;
-    height: 100vmax;
-    transform: translate3d(-50%, -50%, 0) scale(var(--cover-iris-scale, 1));
-    transform-origin: center;
-    will-change: transform;
-}
-
-.cover-iris-art {
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: none;
+.cover-keyframe {
     object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    opacity: var(--cover-frame-opacity, 0);
+    visibility: hidden;
+    transform:
+        translate3d(var(--cover-frame-x, 0%), var(--cover-frame-y, 0%), 0)
+        scale(var(--cover-frame-scale, 1));
+    transform-origin: var(--cover-frame-focus-x, 50%) var(--cover-frame-focus-y, 50%);
+}
+
+.cover-keyframe:first-child {
+    opacity: var(--cover-frame-opacity, 1);
+    visibility: visible;
+}
+
+.cover-keyframe.is-cover-active {
+    visibility: visible;
+    will-change: transform, opacity;
 }
 
 .cover-lens-shade {
@@ -1066,8 +1036,8 @@ body.story-cinematic-active .navbar {
 @media (prefers-reduced-motion: reduce) {
     .story-world, .story-object { transition: none !important; }
     .world-scene { border-radius: 0 !important; transform: none !important; }
-    .cover-composite { transform: none !important; }
-    .cover-optics { display: none !important; }
+    .cover-keyframe { transform: none !important; }
+    .cover-keyframe:not(:first-child) { display: none !important; }
     .cover-lens-shade { display: none !important; }
     .cover-scroll-cue i::after { animation: none !important; }
     .detector-background, .detector-timer, .detector-virus { filter: none !important; }

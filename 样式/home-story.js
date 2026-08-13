@@ -23,6 +23,9 @@ if (story) {
   const instrumentImages = instrumentScene
     ? [...instrumentScene.querySelectorAll('img')]
     : []
+  const coverKeyframes = instrumentScene
+    ? [...instrumentScene.querySelectorAll('.cover-keyframe')]
+    : []
   const detectorImages = detectorScene
     ? [...detectorScene.querySelectorAll('img')]
     : []
@@ -58,6 +61,15 @@ if (story) {
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
   const storyPace = 0.7
+  const coverFrameMotion = [
+    { start: 0, end: 0.625, from: 1, to: 1.645, focus: [45, 66], target: [50, 50], exponent: 1.7 },
+    { start: 0.565, end: 0.765, from: 0.94, to: 1.18, focus: [50, 50], target: [50, 50], exponent: 1.35 },
+    { start: 0.70, end: 0.91, from: 0.96, to: 4.20, focus: [50, 44], target: [50, 50], exponent: 1.25 },
+    { start: 0.845, end: 0.985, from: 0.98, to: 1.12, focus: [50, 50], target: [50, 50], exponent: 1.35 },
+    { start: 0.945, end: 1, from: 0.82, to: 1, focus: [51, 49], target: [50, 50], exponent: 1.2 },
+  ]
+  const coverFrameBlends = [[0.565, 0.625], [0.70, 0.765], [0.845, 0.91], [0.945, 0.985]]
+  const coverFrameReady = coverKeyframes.map((frame) => frame.complete && frame.naturalWidth > 0)
 
   const anchors = {
     // X values come directly from the WPS composition. Y values are mapped
@@ -81,6 +93,11 @@ if (story) {
   function smoothstep(value) {
     const progress = clamp(value)
     return progress * progress * (3 - 2 * progress)
+  }
+
+  function smootherstep(value) {
+    const progress = clamp(value)
+    return progress * progress * progress * (progress * (progress * 6 - 15) + 10)
   }
 
   function setSceneVisibility(scene, visible) {
@@ -178,41 +195,58 @@ if (story) {
     const worldReveal = smoothstep(range(progress, 0.90, 0.98))
     const sceneOpacity = 1 - worldReveal
     const cueExit = smoothstep(range(progress, 0.018, 0.08))
-    const slowPush = range(progress, 0.02, 0.50)
-    const lensDive = range(progress, 0.50, 0.90)
-    const lensEase = Math.pow(lensDive, 2.2)
-    const shadeIn = smoothstep(range(progress, 0.86, 0.96))
+    const shadeIn = smoothstep(range(progress, 0.88, 0.96))
     const reduce = reducedMotion.matches
-    // The first reference clip is a continuous slow push (roughly 1 -> 1.65).
-    // The second accelerates into the magnifying lens. Both phases are applied
-    // to the original three-layer artwork as one camera, so nothing can jump.
-    const slowScale = 1 + 0.645 * Math.pow(slowPush, 1.7)
-    const coverScale = reduce ? 1 : slowScale * (1 + 11.6 * lensEase)
-    const focusX = compactViewport.matches ? 46 : 44.8
-    const focusY = compactViewport.matches ? 58 : 58.8
-    const focusTravel = smoothstep(range(progress, 0.08, 0.82))
-    const coverTranslateX = reduce ? 0 : (50 - focusX) * focusTravel
-    const coverTranslateY = reduce ? 0 : (50 - focusY) * focusTravel
-    const opticsReveal = reduce ? 0 : smoothstep(range(progress, 0.82, 0.87))
-    const opticsExpansion = smoothstep(range(progress, 0.82, 0.90))
-    const opticsTravel = smoothstep(range(progress, 0.86, 0.91))
-    const opticsRadius = 9 + opticsExpansion * 101
-    const irisScale = 1 + opticsTravel * 0.24
-    const opticsX = 50 - (1 - focusTravel) * 2.4
-    const opticsY = 50 + (1 - focusTravel) * 1.6
+    const motionProgress = range(progress, 0.02, 0.90)
+
+    // The two reference clips are one accelerating camera move. Each supplied
+    // key image keeps moving for its whole interval; blends happen only after
+    // the shared lens, iris or virus has been centred and matched in scale.
+    let currentFrame = 0
+    let incomingFrame = -1
+    let incomingMix = 0
+
+    if (!reduce) {
+      for (let index = 0; index < coverFrameBlends.length; index += 1) {
+        const [start, end] = coverFrameBlends[index]
+        if (motionProgress < start) break
+        if (motionProgress < end) {
+          incomingFrame = index + 1
+          incomingMix = smootherstep(range(motionProgress, start, end))
+          break
+        }
+        currentFrame = index + 1
+      }
+    }
+
+    coverKeyframes.forEach((frame, index) => {
+      const motion = coverFrameMotion[index]
+      const rawMotion = range(motionProgress, motion.start, motion.end)
+      const easedMotion = Math.pow(rawMotion, motion.exponent)
+      const scale = reduce ? 1 : motion.from + (motion.to - motion.from) * easedMotion
+      const travel = reduce ? 0 : smoothstep(rawMotion)
+      const translateX = (motion.target[0] - motion.focus[0]) * travel
+      const translateY = (motion.target[1] - motion.focus[1]) * travel
+      const currentIsReady = coverFrameReady[currentFrame] !== false
+      const incomingIsReady = incomingFrame >= 0 && coverFrameReady[incomingFrame] !== false
+      const safeCurrentFrame = currentIsReady ? currentFrame : Math.max(0, currentFrame - 1)
+      const isCurrent = index === safeCurrentFrame
+      const isIncoming = incomingIsReady && index === incomingFrame
+      const isVisible = reduce ? index === 0 : isCurrent || isIncoming
+      const opacity = reduce ? (index === 0 ? 1 : 0) : isCurrent ? 1 : isIncoming ? incomingMix : 0
+
+      frame.style.setProperty('--cover-frame-opacity', opacity.toFixed(4))
+      frame.style.setProperty('--cover-frame-scale', scale.toFixed(4))
+      frame.style.setProperty('--cover-frame-x', `${translateX.toFixed(3)}%`)
+      frame.style.setProperty('--cover-frame-y', `${translateY.toFixed(3)}%`)
+      frame.style.setProperty('--cover-frame-focus-x', `${motion.focus[0]}%`)
+      frame.style.setProperty('--cover-frame-focus-y', `${motion.focus[1]}%`)
+      frame.style.visibility = isVisible ? 'visible' : 'hidden'
+      frame.classList.toggle('is-cover-active', isVisible)
+    })
 
     instrumentScene.style.setProperty('--instrument-scene-opacity', sceneOpacity.toFixed(3))
-    instrumentScene.style.setProperty('--cover-scale', coverScale.toFixed(4))
-    instrumentScene.style.setProperty('--cover-focus-x', `${focusX}%`)
-    instrumentScene.style.setProperty('--cover-focus-y', `${focusY}%`)
-    instrumentScene.style.setProperty('--cover-translate-x', `${coverTranslateX.toFixed(3)}%`)
-    instrumentScene.style.setProperty('--cover-translate-y', `${coverTranslateY.toFixed(3)}%`)
-    instrumentScene.style.setProperty('--cover-optics-opacity', opticsReveal.toFixed(3))
-    instrumentScene.style.setProperty('--cover-optics-radius', `${opticsRadius.toFixed(2)}%`)
-    instrumentScene.style.setProperty('--cover-optics-x', `${opticsX.toFixed(3)}%`)
-    instrumentScene.style.setProperty('--cover-optics-y', `${opticsY.toFixed(3)}%`)
-    instrumentScene.style.setProperty('--cover-iris-scale', irisScale.toFixed(4))
-    instrumentScene.style.setProperty('--cover-shade-opacity', (reduce ? 0 : shadeIn * 0.72).toFixed(3))
+    instrumentScene.style.setProperty('--cover-shade-opacity', (reduce ? 0 : shadeIn * 0.42).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
@@ -570,6 +604,14 @@ if (story) {
   world.addEventListener('load', requestUpdate, { once: true })
   Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
   instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
+  coverKeyframes.forEach((image, index) => {
+    const updateFrameReadiness = () => {
+      coverFrameReady[index] = image.naturalWidth > 0
+      requestUpdate()
+    }
+    image.addEventListener('load', updateFrameReadiness, { once: true })
+    image.addEventListener('error', updateFrameReadiness, { once: true })
+  })
   if (typeof reducedMotion.addEventListener === 'function') {
     reducedMotion.addEventListener('change', requestUpdate)
   }
