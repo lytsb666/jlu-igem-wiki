@@ -147,6 +147,8 @@ body {
 
 .cover-composite,
 .cover-layer,
+.cover-frame-sequence,
+.cover-sequence-frame,
 .cover-lens-shade {
     position: absolute;
     inset: 0;
@@ -158,6 +160,7 @@ body {
 
 .cover-composite {
     z-index: 1;
+    opacity: 1;
     transform:
         translate3d(var(--cover-translate-x, 0%), var(--cover-translate-y, 0%), 0)
         scale(var(--cover-scale, 1));
@@ -174,8 +177,24 @@ body {
 .cover-wordmark { z-index: 2; }
 .cover-mascot { z-index: 3; }
 
+.cover-frame-sequence { z-index: 4; }
+
+.cover-sequence-frame {
+    z-index: var(--sequence-z, 1);
+    object-fit: cover;
+    object-position: center;
+    opacity: var(--sequence-opacity, 0);
+    transform:
+        translate3d(var(--sequence-x, 0%), var(--sequence-y, 0%), 0)
+        scale(var(--sequence-scale, 1));
+    transform-origin: var(--sequence-focus-x, 50%) var(--sequence-focus-y, 50%);
+    pointer-events: none;
+    visibility: var(--sequence-visibility, hidden);
+    will-change: var(--sequence-will-change, auto);
+}
+
 .cover-lens-shade {
-    z-index: 4;
+    z-index: 20;
     pointer-events: none;
     background:
         radial-gradient(
@@ -192,7 +211,7 @@ body {
     position: absolute;
     right: clamp(20px, 3.2vw, 54px);
     bottom: clamp(18px, 3.2vw, 48px);
-    z-index: 5;
+    z-index: 21;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1029,6 +1048,7 @@ body.story-cinematic-active .navbar {
     .story-world, .story-object { transition: none !important; }
     .world-scene { border-radius: 0 !important; transform: none !important; }
     .cover-composite { transform: none !important; }
+    .cover-sequence-frame { transform: none !important; }
     .cover-lens-shade { display: none !important; }
     .cover-scroll-cue i::after { animation: none !important; }
     .detector-background, .detector-timer, .detector-virus { filter: none !important; }
