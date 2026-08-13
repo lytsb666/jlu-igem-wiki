@@ -23,6 +23,13 @@ if (story) {
   const instrumentImages = instrumentScene
     ? [...instrumentScene.querySelectorAll('img')]
     : []
+  const magnifyFrames = instrumentScene
+    ? [...instrumentScene.querySelectorAll('.magnify-frame')]
+    : []
+  const coverComposite = instrumentScene?.querySelector('.cover-composite')
+  const coverBackground = instrumentScene?.querySelector('.cover-background')
+  const coverWordmark = instrumentScene?.querySelector('.cover-wordmark')
+  const coverMascot = instrumentScene?.querySelector('.cover-mascot')
   const detectorImages = detectorScene
     ? [...detectorScene.querySelectorAll('img')]
     : []
@@ -52,6 +59,8 @@ if (story) {
   const scenePreparation = {}
 
   let ticking = false
+  let renderedCoverProgress = null
+  let lastCoverFrameTime = null
   let timelineViewportWidth = window.innerWidth
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
@@ -174,41 +183,99 @@ if (story) {
     if (!instrumentScene) return
 
     const frameWindows = [
-      [0.065, 0.18],
-      [0.16, 0.275],
-      [0.255, 0.37],
-      [0.35, 0.465],
-      [0.445, 0.56],
-      [0.54, 0.655],
-      [0.635, 0.75],
-      [0.73, 0.845],
+      [0.04, 0.135],
+      [0.105, 0.20],
+      [0.17, 0.265],
+      [0.235, 0.33],
+      [0.30, 0.395],
+      [0.365, 0.46],
+      [0.43, 0.525],
+      [0.495, 0.59],
+      [0.56, 0.655],
+      [0.625, 0.72],
+      [0.69, 0.785],
+      [0.755, 0.87],
     ]
+    const frameFoci = [
+      [46, 54],
+      [47, 47],
+      [49, 45],
+      [51, 45],
+      [50, 46],
+      [51, 45],
+      [50, 49],
+      [50, 48],
+      [50, 50],
+      [50, 50],
+      [50, 50],
+      [50, 50],
+    ]
+    const frameEntryZoom = [1.00, 1.006, 1.012, 1.016, 1.018, 1.022, 1.018, 1.02, 1.015, 1.018, 1.012, 1.015]
     const frameReveals = frameWindows.map(([start, end]) => smoothstep(range(progress, start, end)))
     const worldReveal = smoothstep(range(progress, 0.90, 0.98))
     const sceneOpacity = 1 - worldReveal
     const reduce = reducedMotion.matches
-    // Each opaque frame stays beneath the next one. Fading only the incoming
-    // frame prevents a dark dip halfway through a crossfade.
     const coverOpacity = 1
-    const openingShade = smoothstep(range(progress, 0.07, 0.15))
-      * (1 - smoothstep(range(progress, 0.16, 0.25)))
-    const exitShade = smoothstep(range(progress, 0.88, 0.96))
-    const shadeOpacity = reduce ? 0 : Math.max(openingShade * 0.24, exitShade * 0.28)
     const cueExit = smoothstep(range(progress, 0.025, 0.12))
+    let settledFrameIndex = -1
+
+    frameReveals.forEach((reveal, index) => {
+      if (reveal >= 0.999) settledFrameIndex = index
+    })
 
     instrumentScene.style.setProperty('--instrument-scene-opacity', sceneOpacity.toFixed(3))
     instrumentScene.style.setProperty('--cover-composite-opacity', coverOpacity.toFixed(3))
     instrumentScene.style.setProperty('--cover-composite-brightness', (1 - frameReveals[0] * 0.08).toFixed(3))
-    instrumentScene.style.setProperty('--cover-composite-scale', (reduce ? 1 : 1 + frameReveals[0] * 0.03).toFixed(4))
+    // Begin the camera move before the first replacement frame appears. This
+    // closes the large size gap between the cover mascot and its close-up.
+    const coverPush = smoothstep(range(progress, 0.008, 0.09))
+    const coverScale = reduce ? 1 : 1 + coverPush * 0.18
+    instrumentScene.style.setProperty('--cover-composite-scale', coverScale.toFixed(4))
+    instrumentScene.style.setProperty('--cover-atmosphere-opacity', (reduce ? 0 : (1 - coverPush) * 0.46).toFixed(3))
+
+    if (coverComposite && coverBackground && coverWordmark && coverMascot) {
+      const focalX = compactViewport.matches ? 46 : 48.5
+      const focalY = compactViewport.matches ? 55 : 54
+      const backgroundScale = 1 + coverPush * 0.006
+      const wordmarkScale = 1 + coverPush * 0.012
+      const mascotScale = 1 + coverPush * 0.022
+      coverComposite.style.setProperty('--cover-focus-x', `${focalX}%`)
+      coverComposite.style.setProperty('--cover-focus-y', `${focalY}%`)
+      coverBackground.style.setProperty('--cover-layer-scale', (reduce ? 1 : backgroundScale).toFixed(4))
+      coverWordmark.style.setProperty('--cover-layer-scale', (reduce ? 1 : wordmarkScale).toFixed(4))
+      coverMascot.style.setProperty('--cover-layer-scale', (reduce ? 1 : mascotScale).toFixed(4))
+    }
     frameReveals.forEach((reveal, index) => {
-      const nextStart = frameWindows[index + 1]?.[0] ?? 0.845
-      const localPush = range(progress, frameWindows[index][0], nextStart)
-      const scale = reduce ? 1 : 1.008 + localPush * (index > 4 ? 0.018 : 0.012)
-      instrumentScene.style.setProperty(`--magnify-frame-${index + 1}-opacity`, reveal.toFixed(3))
-      instrumentScene.style.setProperty(`--magnify-frame-${index + 1}-scale`, scale.toFixed(4))
+      const frame = magnifyFrames[index]
+      if (!frame) return
+
+      const nextEnd = frameWindows[index + 1]?.[1] ?? 0.90
+      const localPush = smoothstep(range(progress, frameWindows[index][0], nextEnd))
+      const scale = reduce
+        ? 1
+        : frameEntryZoom[index] + localPush * (index > 4 ? 0.028 : 0.024)
+      const focus = frameFoci[index]
+      const radius = 2 + reveal * 116
+      const coreRadius = Math.max(0, radius - 21)
+      const midRadius = Math.max(0, radius - 9)
+      const opacity = reduce ? reveal : smoothstep(range(reveal, 0.12, 0.52))
+      const blur = reduce ? 0 : (1 - reveal) * 2.2
+      const shouldRender = reveal > 0.001 && index >= settledFrameIndex
+      const isSettled = reveal >= 0.999 && index === settledFrameIndex
+
+      frame.style.setProperty('--frame-opacity', opacity.toFixed(3))
+      frame.style.setProperty('--frame-scale', scale.toFixed(4))
+      frame.style.setProperty('--frame-focus-x', `${focus[0]}%`)
+      frame.style.setProperty('--frame-focus-y', `${focus[1]}%`)
+      frame.style.setProperty('--frame-core-radius', `${coreRadius.toFixed(2)}%`)
+      frame.style.setProperty('--frame-mid-radius', `${midRadius.toFixed(2)}%`)
+      frame.style.setProperty('--frame-radius', `${radius.toFixed(2)}%`)
+      frame.style.setProperty('--frame-blur', `${blur.toFixed(2)}px`)
+      frame.classList.toggle('is-dormant', !shouldRender)
+      frame.classList.toggle('is-settled', isSettled)
     })
-    instrumentScene.style.setProperty('--magnify-frame-brightness', (1 - exitShade * 0.12).toFixed(3))
-    instrumentScene.style.setProperty('--cover-shade-opacity', shadeOpacity.toFixed(3))
+    instrumentScene.style.setProperty('--magnify-frame-brightness', '1')
+    instrumentScene.style.setProperty('--cover-shade-opacity', '0')
     instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
@@ -219,23 +286,19 @@ if (story) {
 
     const worldReveal = smoothstep(range(coverProgress, 0.90, 0.98))
     const detectorReady = sceneReadiness.detector ? 1 : 0
-    const detectorShrink = smoothstep(range(detectorProgress, 0, 0.16)) * detectorReady
-    const detectorFade = smoothstep(range(detectorProgress, 0.08, 0.16)) * detectorReady
+    const detectorCover = smoothstep(range(detectorProgress, 0.22, 0.30)) * detectorReady
     const reduce = reducedMotion.matches
-    const entryScale = 1.025 - worldReveal * 0.025
-    const sceneScale = reduce ? 1 : entryScale * (1 - detectorShrink * 0.92)
-    const entryBrightness = 0.28 + worldReveal * 0.72
-    const exitBrightness = reduce ? 1 : 1 - detectorShrink * 0.48
-    const sceneBrightness = entryBrightness * exitBrightness
-    const sceneBlur = reduce ? 0 : detectorShrink * 4
-    const sceneRadius = reduce ? 0 : detectorShrink * 48
-    const sceneOpacity = worldReveal * (1 - detectorFade)
+    const sceneScale = reduce ? 1 : 1.018 - worldReveal * 0.018
+    // The world is fully opaque underneath both fades. Only the foreground
+    // scene fades, avoiding the 75%-opacity dip created by two crossfades.
+    const worldIsPrimed = coverProgress >= 0.88 ? 1 : 0
+    const sceneOpacity = worldIsPrimed * (detectorCover >= 0.999 ? 0 : 1)
 
     worldScene.style.setProperty('--world-scene-opacity', sceneOpacity.toFixed(3))
     worldScene.style.setProperty('--world-scene-scale', sceneScale.toFixed(4))
-    worldScene.style.setProperty('--world-scene-brightness', sceneBrightness.toFixed(3))
-    worldScene.style.setProperty('--world-scene-blur', `${sceneBlur.toFixed(2)}px`)
-    worldScene.style.setProperty('--world-scene-radius', `${sceneRadius.toFixed(2)}px`)
+    worldScene.style.setProperty('--world-scene-brightness', '1')
+    worldScene.style.setProperty('--world-scene-blur', '0px')
+    worldScene.style.setProperty('--world-scene-radius', '0px')
     setSceneVisibility(worldScene, sceneOpacity > 0.001)
   }
 
@@ -388,7 +451,7 @@ if (story) {
     setMotionState(finaleScene, 'is-continent-live', continentReveal, !reduce && storyIsPinned)
   }
 
-  function updateStory() {
+  function updateStory(frameTime = performance.now()) {
     const rect = story.getBoundingClientRect()
     const scrollDistance = Math.max(1, story.offsetHeight - window.innerHeight)
     const viewportWidth = window.innerWidth
@@ -398,7 +461,7 @@ if (story) {
     const storyIsPinned = rect.top <= 0 && rect.bottom >= viewportHeight
     // Keep every chapter's internal choreography, but use 30% less wheel
     // distance across the complete story.
-    const coverScrollDistance = Math.min(scrollDistance, timelineHeight * 5.5 * storyPace)
+    const coverScrollDistance = Math.min(scrollDistance, timelineHeight * 6.5 * storyPace)
     const remainingAfterCover = Math.max(1, scrollDistance - coverScrollDistance)
     const firstSceneScrollDistance = Math.min(
       remainingAfterCover,
@@ -521,8 +584,27 @@ if (story) {
     const elderlyReveal = revealFromViewportBottom(objects.elderly, elderlyAnchor.y, 0.96, stageTop, viewportHeight)
     setObject(objects.elderly, elderlyAnchor.x, elderlyAnchor.y, elderlyReveal, 0.96 + elderlyReveal * 0.04, (1 - elderlyReveal) * 48)
 
-    setCoverScene(coverProgress)
-    setWorldScene(coverProgress, detectorSceneProgress)
+    const elapsed = lastCoverFrameTime === null
+      ? 16
+      : clamp(frameTime - lastCoverFrameTime, 8, 32)
+    lastCoverFrameTime = frameTime
+
+    if (renderedCoverProgress === null || reducedMotion.matches || !storyIsPinned) {
+      renderedCoverProgress = coverProgress
+    } else {
+      const inertia = 1 - Math.exp(-elapsed / 125)
+      renderedCoverProgress += (coverProgress - renderedCoverProgress) * inertia
+      if (Math.abs(coverProgress - renderedCoverProgress) < 0.00025) {
+        renderedCoverProgress = coverProgress
+      }
+    }
+
+    const coverNeedsAnotherFrame = !reducedMotion.matches
+      && storyIsPinned
+      && Math.abs(coverProgress - renderedCoverProgress) >= 0.00025
+
+    setCoverScene(renderedCoverProgress)
+    setWorldScene(renderedCoverProgress, detectorSceneProgress)
     setDetectorScene(detectorSceneProgress, familySceneProgress)
     setFamilyScene(familySceneProgress, careSceneProgress)
     setCareScene(careSceneProgress, legacySceneProgress)
@@ -531,6 +613,7 @@ if (story) {
 
     document.body.classList.toggle('story-cinematic-active', storyIsPinned)
     ticking = false
+    if (coverNeedsAnotherFrame) requestUpdate()
   }
 
   function requestUpdate() {
