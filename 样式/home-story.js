@@ -20,16 +20,7 @@ if (story) {
     graves: story.querySelector('.story-graves'),
     elderly: story.querySelector('.story-elderly'),
   }
-  const instrumentImages = instrumentScene
-    ? [...instrumentScene.querySelectorAll('img')]
-    : []
-  const magnifyFrames = instrumentScene
-    ? [...instrumentScene.querySelectorAll('.magnify-frame')]
-    : []
-  const coverComposite = instrumentScene?.querySelector('.cover-composite')
-  const coverBackground = instrumentScene?.querySelector('.cover-background')
-  const coverWordmark = instrumentScene?.querySelector('.cover-wordmark')
-  const coverMascot = instrumentScene?.querySelector('.cover-mascot')
+  const coverVideo = instrumentScene?.querySelector('.cover-scroll-video')
   const detectorImages = detectorScene
     ? [...detectorScene.querySelectorAll('img')]
     : []
@@ -61,6 +52,9 @@ if (story) {
   let ticking = false
   let renderedCoverProgress = null
   let lastCoverFrameTime = null
+  let lastRequestedCoverTime = -1
+  let coverVideoReady = false
+  let pendingCoverTime = null
   let timelineViewportWidth = window.innerWidth
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
@@ -182,103 +176,30 @@ if (story) {
   function setCoverScene(progress) {
     if (!instrumentScene) return
 
-    const frameWindows = [
-      [0.04, 0.135],
-      [0.105, 0.20],
-      [0.17, 0.265],
-      [0.235, 0.33],
-      [0.30, 0.395],
-      [0.365, 0.46],
-      [0.43, 0.525],
-      [0.495, 0.59],
-      [0.56, 0.655],
-      [0.625, 0.72],
-      [0.69, 0.785],
-      [0.755, 0.87],
-    ]
-    const frameFoci = [
-      [46, 54],
-      [47, 47],
-      [49, 45],
-      [51, 45],
-      [50, 46],
-      [51, 45],
-      [50, 49],
-      [50, 48],
-      [50, 50],
-      [50, 50],
-      [50, 50],
-      [50, 50],
-    ]
-    const frameEntryZoom = [1.00, 1.006, 1.012, 1.016, 1.018, 1.022, 1.018, 1.02, 1.015, 1.018, 1.012, 1.015]
-    const frameReveals = frameWindows.map(([start, end]) => smoothstep(range(progress, start, end)))
     const worldReveal = smoothstep(range(progress, 0.90, 0.98))
     const sceneOpacity = 1 - worldReveal
-    const reduce = reducedMotion.matches
-    const coverOpacity = 1
-    const cueExit = smoothstep(range(progress, 0.025, 0.12))
-    let settledFrameIndex = -1
-
-    frameReveals.forEach((reveal, index) => {
-      if (reveal >= 0.999) settledFrameIndex = index
-    })
+    const cueExit = smoothstep(range(progress, 0.018, 0.08))
 
     instrumentScene.style.setProperty('--instrument-scene-opacity', sceneOpacity.toFixed(3))
-    instrumentScene.style.setProperty('--cover-composite-opacity', coverOpacity.toFixed(3))
-    instrumentScene.style.setProperty('--cover-composite-brightness', (1 - frameReveals[0] * 0.08).toFixed(3))
-    // Begin the camera move before the first replacement frame appears. This
-    // closes the large size gap between the cover mascot and its close-up.
-    const coverPush = smoothstep(range(progress, 0.008, 0.09))
-    const coverScale = reduce ? 1 : 1 + coverPush * 0.18
-    instrumentScene.style.setProperty('--cover-composite-scale', coverScale.toFixed(4))
-    instrumentScene.style.setProperty('--cover-atmosphere-opacity', (reduce ? 0 : (1 - coverPush) * 0.46).toFixed(3))
-
-    if (coverComposite && coverBackground && coverWordmark && coverMascot) {
-      const focalX = compactViewport.matches ? 46 : 48.5
-      const focalY = compactViewport.matches ? 55 : 54
-      const backgroundScale = 1 + coverPush * 0.006
-      const wordmarkScale = 1 + coverPush * 0.012
-      const mascotScale = 1 + coverPush * 0.022
-      coverComposite.style.setProperty('--cover-focus-x', `${focalX}%`)
-      coverComposite.style.setProperty('--cover-focus-y', `${focalY}%`)
-      coverBackground.style.setProperty('--cover-layer-scale', (reduce ? 1 : backgroundScale).toFixed(4))
-      coverWordmark.style.setProperty('--cover-layer-scale', (reduce ? 1 : wordmarkScale).toFixed(4))
-      coverMascot.style.setProperty('--cover-layer-scale', (reduce ? 1 : mascotScale).toFixed(4))
-    }
-    frameReveals.forEach((reveal, index) => {
-      const frame = magnifyFrames[index]
-      if (!frame) return
-
-      const nextEnd = frameWindows[index + 1]?.[1] ?? 0.90
-      const localPush = smoothstep(range(progress, frameWindows[index][0], nextEnd))
-      const scale = reduce
-        ? 1
-        : frameEntryZoom[index] + localPush * (index > 4 ? 0.028 : 0.024)
-      const focus = frameFoci[index]
-      const radius = 2 + reveal * 116
-      const coreRadius = Math.max(0, radius - 21)
-      const midRadius = Math.max(0, radius - 9)
-      const opacity = reduce ? reveal : smoothstep(range(reveal, 0.12, 0.52))
-      const blur = reduce ? 0 : (1 - reveal) * 2.2
-      const shouldRender = reveal > 0.001 && index >= settledFrameIndex
-      const isSettled = reveal >= 0.999 && index === settledFrameIndex
-
-      frame.style.setProperty('--frame-opacity', opacity.toFixed(3))
-      frame.style.setProperty('--frame-scale', scale.toFixed(4))
-      frame.style.setProperty('--frame-focus-x', `${focus[0]}%`)
-      frame.style.setProperty('--frame-focus-y', `${focus[1]}%`)
-      frame.style.setProperty('--frame-core-radius', `${coreRadius.toFixed(2)}%`)
-      frame.style.setProperty('--frame-mid-radius', `${midRadius.toFixed(2)}%`)
-      frame.style.setProperty('--frame-radius', `${radius.toFixed(2)}%`)
-      frame.style.setProperty('--frame-blur', `${blur.toFixed(2)}px`)
-      frame.classList.toggle('is-dormant', !shouldRender)
-      frame.classList.toggle('is-settled', isSettled)
-    })
-    instrumentScene.style.setProperty('--magnify-frame-brightness', '1')
-    instrumentScene.style.setProperty('--cover-shade-opacity', '0')
     instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
+
+    if (!coverVideo || !coverVideoReady || reducedMotion.matches) return
+
+    // The reference footage already contains its own acceleration and easing,
+    // so scroll position maps linearly to the source timeline.
+    const videoProgress = range(progress, 0, 0.88)
+    const maximumTime = Math.max(0, coverVideo.duration - 1 / 24)
+    const targetTime = videoProgress * maximumTime
+    if (Math.abs(targetTime - lastRequestedCoverTime) < 1 / 24) return
+
+    lastRequestedCoverTime = targetTime
+    if (coverVideo.seeking) {
+      pendingCoverTime = targetTime
+    } else {
+      coverVideo.currentTime = targetTime
+    }
   }
 
   function setWorldScene(coverProgress, detectorProgress) {
@@ -632,7 +553,27 @@ if (story) {
   window.addEventListener('pageshow', requestUpdate)
   world.addEventListener('load', requestUpdate, { once: true })
   Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
-  instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
+  if (coverVideo) {
+    const markCoverVideoReady = () => {
+      coverVideoReady = coverVideo.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA
+      coverVideo.pause()
+      requestUpdate()
+    }
+
+    coverVideo.addEventListener('loadeddata', markCoverVideoReady, { once: true })
+    coverVideo.addEventListener('canplay', markCoverVideoReady, { once: true })
+    coverVideo.addEventListener('seeked', () => {
+      if (pendingCoverTime !== null && Math.abs(coverVideo.currentTime - pendingCoverTime) >= 1 / 48) {
+        const nextTime = pendingCoverTime
+        pendingCoverTime = null
+        coverVideo.currentTime = nextTime
+      } else {
+        pendingCoverTime = null
+      }
+      requestUpdate()
+    })
+    coverVideo.load()
+  }
   if (typeof reducedMotion.addEventListener === 'function') {
     reducedMotion.addEventListener('change', requestUpdate)
   }
@@ -643,9 +584,6 @@ if (story) {
     })
   }
 
-  // Warm the complete opening sequence immediately; the shared loader also
-  // waits for these same images to decode before it leaves.
-  Promise.all(instrumentImages.map(decodeImage)).catch(() => requestUpdate())
   ensureScenePrepared('detector', detectorScene, detectorImages).catch(() => requestUpdate())
 
   refreshTimelineViewport(true)
