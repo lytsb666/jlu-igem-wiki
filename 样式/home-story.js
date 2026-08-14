@@ -41,10 +41,6 @@ if (story) {
   const finaleImages = finaleScene
     ? [...finaleScene.querySelectorAll('img')]
     : []
-  const detectorViruses = detectorScene
-    ? [...detectorScene.querySelectorAll('.detector-virus')]
-    : []
-
   const sceneReadiness = {
     detector: detectorImages.length === 0,
     family: familyImages.length === 0,
@@ -280,7 +276,7 @@ if (story) {
 
     const worldReveal = smoothstep(range(coverProgress, 0.90, 0.98))
     const detectorReady = sceneReadiness.detector ? 1 : 0
-    const detectorCover = smoothstep(range(detectorProgress, 0.22, 0.30)) * detectorReady
+    const detectorCover = smoothstep(range(detectorProgress, 0.002, 0.055)) * detectorReady
     const reduce = reducedMotion.matches
     const sceneScale = reduce ? 1 : 1.018 - worldReveal * 0.018
     // The world is fully opaque underneath both fades. Only the foreground
@@ -301,47 +297,54 @@ if (story) {
 
     const sceneReady = sceneReadiness.detector ? 1 : 0
     const nextSceneReady = sceneReadiness.family ? 1 : 0
-    const sceneReveal = smoothstep(range(progress, 0.22, 0.30)) * sceneReady
+    const sceneReveal = smoothstep(range(progress, 0.002, 0.045)) * sceneReady
     const familyExit = 1 - smoothstep(range(familyProgress, 0.18, 0.22)) * nextSceneReady
-    const backgroundArrival = smoothstep(range(progress, 0.22, 0.38)) * sceneReady
-    const timerReveal = smoothstep(range(progress, 0.38, 0.50)) * sceneReady
-    const virusReveal = smoothstep(range(progress, 0.50, 0.66)) * sceneReady
-    const impactRise = smoothstep(range(progress, 0.23, 0.28))
-    const impactFall = 1 - smoothstep(range(progress, 0.28, 0.38))
-    const impact = reducedMotion.matches ? 0 : impactRise * impactFall
-    const backgroundBlur = reducedMotion.matches ? 0 : (1 - backgroundArrival) * 12
-    const arrivalOvershoot = Math.sin(backgroundArrival * Math.PI) * backgroundArrival * 0.11
-    const backgroundScale = reducedMotion.matches
-      ? 1
-      : 1 + (1 - backgroundArrival) * 0.22 - arrivalOvershoot
-    const timerRise = reducedMotion.matches ? 0 : (1 - timerReveal) * 18
-    const timerScale = reducedMotion.matches ? 1 : 0.88 + timerReveal * 0.12
-    const timerBlur = reducedMotion.matches ? 0 : (1 - timerReveal) * 7
+    const backgroundArrival = smootherstep(range(progress, 0.055, 0.155)) * sceneReady
+    const walkProgress = smootherstep(range(progress, 0.145, 0.49))
+    const characterArrival = smootherstep(range(progress, 0.14, 0.19)) * sceneReady
+    const poseSwap = smootherstep(range(progress, 0.49, 0.56))
+    const doorOpen = smootherstep(range(progress, 0.50, 0.65))
+    const entryExit = smoothstep(range(progress, 0.76, 0.82))
+    const blackoutIn = smootherstep(range(progress, 0.70, 0.79))
+    const blackoutOut = 1 - smootherstep(range(progress, 0.82, 0.94))
+    const blackout = blackoutIn * blackoutOut
+    const instrumentPrepare = smootherstep(range(progress, 0.78, 0.82)) * sceneReady
+    const instrumentReveal = smootherstep(range(progress, 0.82, 0.94)) * sceneReady
+    const reduce = reducedMotion.matches
+    const characterTravel = reduce ? 0 : -180.451 * (1 - walkProgress)
+    const stepPhase = Math.sin(walkProgress * Math.PI * 10)
+    const stepEnvelope = Math.sin(walkProgress * Math.PI)
+    const characterBob = reduce ? 0 : -Math.abs(stepPhase) * stepEnvelope * 0.52
+    const characterRoll = reduce ? 0 : stepPhase * stepEnvelope * 1.2
+    const walkingOpacity = reduce
+      ? 0
+      : characterArrival * (1 - poseSwap) * (1 - entryExit)
+    const standingOpacity = (reduce ? backgroundArrival : poseSwap) * (1 - entryExit)
+    const entryScale = reduce ? 1 : 1.018 - backgroundArrival * 0.018
+    const entryBrightness = reduce ? 1 : 0.58 + backgroundArrival * 0.42
+    const instrumentScale = reduce ? 1 : 1.035 - instrumentReveal * 0.035
+    const instrumentBrightness = reduce ? 1 : 0.62 + instrumentReveal * 0.38
+    const instrumentBlur = reduce ? 0 : (1 - instrumentReveal) * 7
+    const doorClipLeft = 76.74 - doorOpen * 12.97
     const sceneOpacity = sceneReveal * familyExit
 
     detectorScene.style.setProperty('--detector-scene-opacity', sceneOpacity.toFixed(3))
-    detectorScene.style.setProperty('--detector-background-brightness', (0.62 + backgroundArrival * 0.38 + impact * 0.28).toFixed(3))
-    detectorScene.style.setProperty('--detector-background-blur', `${backgroundBlur.toFixed(2)}px`)
-    detectorScene.style.setProperty('--detector-background-scale', backgroundScale.toFixed(4))
-    detectorScene.style.setProperty('--detector-impact-opacity', (impact * 0.9).toFixed(3))
-    detectorScene.style.setProperty('--detector-impact-scale', (0.72 + backgroundArrival * 0.46).toFixed(4))
-    detectorScene.style.setProperty('--detector-timer-opacity', timerReveal.toFixed(3))
-    detectorScene.style.setProperty('--detector-timer-rise', `${timerRise.toFixed(2)}px`)
-    detectorScene.style.setProperty('--detector-timer-scale', timerScale.toFixed(4))
-    detectorScene.style.setProperty('--detector-timer-blur', `${timerBlur.toFixed(2)}px`)
+    detectorScene.style.setProperty('--detector-entry-opacity', (backgroundArrival * (1 - entryExit)).toFixed(3))
+    detectorScene.style.setProperty('--detector-entry-scale', entryScale.toFixed(4))
+    detectorScene.style.setProperty('--detector-entry-brightness', entryBrightness.toFixed(3))
+    detectorScene.style.setProperty('--detector-door-open-opacity', doorOpen.toFixed(3))
+    detectorScene.style.setProperty('--detector-door-clip-left', `${doorClipLeft.toFixed(3)}%`)
+    detectorScene.style.setProperty('--detector-character-travel', `${characterTravel.toFixed(3)}%`)
+    detectorScene.style.setProperty('--detector-character-bob', `${characterBob.toFixed(3)}%`)
+    detectorScene.style.setProperty('--detector-character-roll', `${characterRoll.toFixed(3)}deg`)
+    detectorScene.style.setProperty('--detector-walking-opacity', walkingOpacity.toFixed(3))
+    detectorScene.style.setProperty('--detector-standing-opacity', standingOpacity.toFixed(3))
+    detectorScene.style.setProperty('--detector-blackout-opacity', blackout.toFixed(3))
+    detectorScene.style.setProperty('--detector-instrument-opacity', instrumentPrepare.toFixed(3))
+    detectorScene.style.setProperty('--detector-instrument-scale', instrumentScale.toFixed(4))
+    detectorScene.style.setProperty('--detector-instrument-brightness', instrumentBrightness.toFixed(3))
+    detectorScene.style.setProperty('--detector-instrument-blur', `${instrumentBlur.toFixed(2)}px`)
     setSceneVisibility(detectorScene, sceneOpacity > 0.001)
-    setMotionState(detectorScene, 'is-motion-live', sceneOpacity, !reducedMotion.matches)
-
-    detectorViruses.forEach((virus) => {
-      const rise = reducedMotion.matches ? 0 : (1 - virusReveal) * 28
-      const scale = reducedMotion.matches ? 1 : 0.8 + virusReveal * 0.2
-      const blur = reducedMotion.matches ? 0 : (1 - virusReveal) * 8
-
-      virus.style.setProperty('--detector-virus-opacity', virusReveal.toFixed(3))
-      virus.style.setProperty('--detector-virus-rise', `${rise.toFixed(2)}px`)
-      virus.style.setProperty('--detector-virus-scale', scale.toFixed(4))
-      virus.style.setProperty('--detector-virus-blur', `${blur.toFixed(2)}px`)
-    })
   }
 
   function setFamilyScene(progress, careProgress) {
@@ -465,7 +468,7 @@ if (story) {
       1,
       scrollDistance - coverScrollDistance - firstSceneScrollDistance,
     )
-    const detectorSceneScrollDistance = Math.min(remainingAfterFirst, timelineHeight * 4.48 * storyPace)
+    const detectorSceneScrollDistance = Math.min(remainingAfterFirst, timelineHeight * 6 * storyPace)
     const remainingAfterDetector = Math.max(
       1,
       scrollDistance - coverScrollDistance - firstSceneScrollDistance - detectorSceneScrollDistance,
