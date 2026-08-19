@@ -80,10 +80,11 @@ body {
 
 /* Home scroll story */
 .story-home { background: #211713; }
-.scroll-story { position: relative; height: 3047vh; height: 3047svh; background: #211713; }
+.scroll-story { position: relative; height: 3411vh; height: 3411svh; background: #211713; }
 .story-stage { position: sticky; top: 0; height: 100vh; height: 100dvh; overflow: hidden; isolation: isolate; background: #000; }
 .world-scene,
 .instrument-scene,
+.procession-scene,
 .detector-scene,
 .family-scene,
 .care-scene,
@@ -91,6 +92,7 @@ body {
 .finale-scene { visibility: hidden; }
 .world-scene.is-visible,
 .instrument-scene.is-visible,
+.procession-scene.is-visible,
 .detector-scene.is-visible,
 .family-scene.is-visible,
 .care-scene.is-visible,
@@ -255,6 +257,66 @@ body.story-cinematic-active .navbar {
 @keyframes cover-scroll-wheel {
     0%, 100% { opacity: 0.3; transform: translate3d(-50%, 0, 0); }
     50% { opacity: 1; transform: translate3d(-50%, 9px, 0); }
+}
+
+/* Home story: the mascot crosses a panorama of pathogens and generations. */
+.procession-scene {
+    position: absolute;
+    inset: 0;
+    z-index: 35;
+    overflow: hidden;
+    background: #101613;
+    opacity: var(--procession-scene-opacity, 0);
+    pointer-events: none;
+    user-select: none;
+}
+
+.procession-canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100vw, 179.1667vh);
+    height: max(100vh, 55.814vw);
+    overflow: hidden;
+    background: #101613;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.procession-background {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: fill;
+    filter:
+        brightness(var(--procession-background-brightness, 0.72))
+        saturate(var(--procession-background-saturation, 0.88));
+    transform: scale(var(--procession-background-scale, 1.018));
+    transform-origin: center;
+}
+
+.procession-character {
+    position: absolute;
+    left: 91%;
+    bottom: 27.5%;
+    z-index: 2;
+    display: block;
+    width: 5.5%;
+    height: auto;
+    max-width: none;
+    opacity: var(--procession-character-opacity, 0);
+    filter: drop-shadow(0 8px 10px rgba(5, 10, 8, 0.3));
+    transform: translate3d(calc(-50% + var(--procession-character-travel, 0px)), 0, 0);
+    transform-origin: center bottom;
+}
+
+.procession-scene.is-visible,
+.procession-scene.is-visible .procession-canvas,
+.procession-scene.is-visible .procession-background,
+.procession-scene.is-visible .procession-character {
+    will-change: transform, opacity, filter;
 }
 
 /* Home story: the mascot crosses the moonlit threshold into the laboratory. */
@@ -905,7 +967,7 @@ body.story-cinematic-active .navbar {
 }
 
 @media (max-width: 720px) {
-    .scroll-story { height: 2935vh; height: 2935svh; }
+    .scroll-story { height: 3299vh; height: 3299svh; }
     .story-world { width: max(132vw, 64dvh); }
     .story-crowd { width: calc(var(--story-world-width, 132vw) * 0.281703); }
     .story-bacteria { width: calc(var(--story-world-width, 132vw) * 0.495471); }
@@ -1001,6 +1063,8 @@ body.story-cinematic-active .navbar {
     .cover-keyframe:not(:first-child) { display: none !important; }
     .cover-lens-shade { display: none !important; }
     .cover-scroll-cue i::after { animation: none !important; }
+    .procession-background { filter: none !important; transform: none !important; }
+    .procession-character { filter: none !important; }
     .detector-entry-world, .detector-instrument-page { transform: none !important; }
     .detector-door-open, .detector-character, .detector-instrument-page { filter: none !important; }
     .detector-door-open { clip-path: inset(29.43% 23.26% 10.67% 63.77%) !important; }

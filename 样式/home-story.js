@@ -5,6 +5,10 @@ if (story) {
   const worldScene = story.querySelector('.world-scene')
   const world = story.querySelector('.story-world')
   const instrumentScene = story.querySelector('.instrument-scene')
+  const processionScene = story.querySelector('.procession-scene')
+  const processionCanvas = story.querySelector('.procession-canvas')
+  const processionBackground = story.querySelector('.procession-background')
+  const processionCharacter = story.querySelector('.procession-character')
   const detectorScene = story.querySelector('.detector-scene')
   const familyScene = story.querySelector('.family-scene')
   const careScene = story.querySelector('.care-scene')
@@ -26,6 +30,11 @@ if (story) {
   const coverKeyframes = instrumentScene
     ? [...instrumentScene.querySelectorAll('.cover-keyframe')]
     : []
+  const processionImages = processionScene
+    ? [...processionScene.querySelectorAll('img')]
+    : []
+  const processionBackgroundImages = processionBackground ? [processionBackground] : []
+  const processionCharacterImages = processionCharacter ? [processionCharacter] : []
   const detectorImages = detectorScene
     ? [...detectorScene.querySelectorAll('img')]
     : []
@@ -42,6 +51,8 @@ if (story) {
     ? [...finaleScene.querySelectorAll('img')]
     : []
   const sceneReadiness = {
+    processionBackground: !processionBackground,
+    processionCharacter: !processionCharacter,
     detector: detectorImages.length === 0,
     family: familyImages.length === 0,
     care: careImages.length === 0,
@@ -271,18 +282,18 @@ if (story) {
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
   }
 
-  function setWorldScene(coverProgress, detectorProgress) {
+  function setWorldScene(coverProgress, processionProgress) {
     if (!worldScene) return
 
     const worldReveal = smoothstep(range(coverProgress, 0.90, 0.98))
-    const detectorReady = sceneReadiness.detector ? 1 : 0
-    const detectorCover = smoothstep(range(detectorProgress, 0.002, 0.055)) * detectorReady
+    const processionReady = sceneReadiness.processionBackground ? 1 : 0
+    const processionCover = smoothstep(range(processionProgress, 0.26, 0.30)) * processionReady
     const reduce = reducedMotion.matches
     const sceneScale = reduce ? 1 : 1.018 - worldReveal * 0.018
     // The world is fully opaque underneath both fades. Only the foreground
     // scene fades, avoiding the 75%-opacity dip created by two crossfades.
     const worldIsPrimed = coverProgress >= 0.88 ? 1 : 0
-    const sceneOpacity = worldIsPrimed * (1 - detectorCover)
+    const sceneOpacity = worldIsPrimed * (1 - processionCover)
 
     worldScene.style.setProperty('--world-scene-opacity', sceneOpacity.toFixed(3))
     worldScene.style.setProperty('--world-scene-scale', sceneScale.toFixed(4))
@@ -290,6 +301,29 @@ if (story) {
     worldScene.style.setProperty('--world-scene-blur', '0px')
     worldScene.style.setProperty('--world-scene-radius', '0px')
     setSceneVisibility(worldScene, sceneOpacity > 0.001)
+  }
+
+  function setProcessionScene(progress, detectorProgress, canvasWidth) {
+    if (!processionScene) return
+
+    const sceneReady = sceneReadiness.processionBackground ? 1 : 0
+    const characterReady = sceneReadiness.processionCharacter ? 1 : 0
+    const nextSceneReady = sceneReadiness.detector ? 1 : 0
+    const backgroundReveal = smootherstep(range(progress, 0.005, 0.30)) * sceneReady
+    const detectorExit = 1 - smoothstep(range(detectorProgress, 0.04, 0.08)) * nextSceneReady
+    const characterReveal = smoothstep(range(progress, 0.17, 0.25)) * sceneReady
+    const travel = smootherstep(range(progress, 0.18, 0.88))
+    const reduce = reducedMotion.matches
+    const characterTravel = reduce ? 0 : -0.81 * canvasWidth * travel
+    const sceneOpacity = backgroundReveal * detectorExit
+
+    processionScene.style.setProperty('--procession-scene-opacity', sceneOpacity.toFixed(3))
+    processionScene.style.setProperty('--procession-background-brightness', (0.72 + backgroundReveal * 0.28).toFixed(3))
+    processionScene.style.setProperty('--procession-background-saturation', (0.88 + backgroundReveal * 0.12).toFixed(3))
+    processionScene.style.setProperty('--procession-background-scale', (reduce ? 1 : 1.018 - backgroundReveal * 0.018).toFixed(4))
+    processionScene.style.setProperty('--procession-character-travel', `${characterTravel.toFixed(2)}px`)
+    processionScene.style.setProperty('--procession-character-opacity', (characterReveal * characterReady * detectorExit).toFixed(3))
+    setSceneVisibility(processionScene, sceneOpacity > 0.001)
   }
 
   function setDetectorScene(progress, familyProgress) {
@@ -468,10 +502,15 @@ if (story) {
       1,
       scrollDistance - coverScrollDistance - firstSceneScrollDistance,
     )
-    const detectorSceneScrollDistance = Math.min(remainingAfterFirst, timelineHeight * 6 * storyPace)
+    const processionSceneScrollDistance = Math.min(remainingAfterFirst, timelineHeight * 5.2 * storyPace)
+    const remainingAfterProcession = Math.max(
+      1,
+      remainingAfterFirst - processionSceneScrollDistance,
+    )
+    const detectorSceneScrollDistance = Math.min(remainingAfterProcession, timelineHeight * 6 * storyPace)
     const remainingAfterDetector = Math.max(
       1,
-      scrollDistance - coverScrollDistance - firstSceneScrollDistance - detectorSceneScrollDistance,
+      remainingAfterProcession - detectorSceneScrollDistance,
     )
     const familySceneScrollDistance = Math.min(remainingAfterDetector, timelineHeight * 5.2 * storyPace)
     const remainingAfterFamily = Math.max(1, remainingAfterDetector - familySceneScrollDistance)
@@ -479,49 +518,37 @@ if (story) {
     const remainingAfterCare = Math.max(1, remainingAfterFamily - careSceneScrollDistance)
     const legacySceneScrollDistance = Math.min(remainingAfterCare, timelineHeight * 5.2 * storyPace)
     const finaleSceneScrollDistance = Math.max(1, remainingAfterCare - legacySceneScrollDistance)
+    const firstSceneStart = coverScrollDistance
+    const processionSceneStart = firstSceneStart + firstSceneScrollDistance
+    const detectorSceneStart = processionSceneStart + processionSceneScrollDistance
+    const familySceneStart = detectorSceneStart + detectorSceneScrollDistance
+    const careSceneStart = familySceneStart + familySceneScrollDistance
+    const legacySceneStart = careSceneStart + careSceneScrollDistance
+    const finaleSceneStart = legacySceneStart + legacySceneScrollDistance
     const coverProgress = clamp(scrolled / Math.max(1, coverScrollDistance))
     const firstSceneProgress = clamp(
-      (scrolled - coverScrollDistance) / Math.max(1, firstSceneScrollDistance),
+      (scrolled - firstSceneStart) / Math.max(1, firstSceneScrollDistance),
+    )
+    const processionSceneProgress = clamp(
+      (scrolled - processionSceneStart) / processionSceneScrollDistance,
     )
     const detectorSceneProgress = clamp(
-      (scrolled - coverScrollDistance - firstSceneScrollDistance) / detectorSceneScrollDistance,
+      (scrolled - detectorSceneStart) / detectorSceneScrollDistance,
     )
     const familySceneProgress = clamp(
-      (scrolled - coverScrollDistance - firstSceneScrollDistance - detectorSceneScrollDistance)
-        / familySceneScrollDistance,
+      (scrolled - familySceneStart) / familySceneScrollDistance,
     )
     const careSceneProgress = clamp(
-      (
-        scrolled
-        - coverScrollDistance
-        - firstSceneScrollDistance
-        - detectorSceneScrollDistance
-        - familySceneScrollDistance
-      ) / careSceneScrollDistance,
+      (scrolled - careSceneStart) / careSceneScrollDistance,
     )
     const legacySceneProgress = clamp(
-      (
-        scrolled
-        - coverScrollDistance
-        - firstSceneScrollDistance
-        - detectorSceneScrollDistance
-        - familySceneScrollDistance
-        - careSceneScrollDistance
-      ) / legacySceneScrollDistance,
+      (scrolled - legacySceneStart) / legacySceneScrollDistance,
     )
     const finaleSceneProgress = clamp(
-      (
-        scrolled
-        - coverScrollDistance
-        - firstSceneScrollDistance
-        - detectorSceneScrollDistance
-        - familySceneScrollDistance
-        - careSceneScrollDistance
-        - legacySceneScrollDistance
-      ) / finaleSceneScrollDistance,
+      (scrolled - finaleSceneStart) / finaleSceneScrollDistance,
     )
 
-    if (firstSceneProgress > 0.65 || detectorSceneProgress > 0) {
+    if (processionSceneProgress > 0.50 || detectorSceneProgress > 0) {
       ensureScenePrepared('family', familyScene, familyImages)
     }
     if (detectorSceneProgress > 0.50 || familySceneProgress > 0) {
@@ -537,6 +564,7 @@ if (story) {
     const stageTop = stage.getBoundingClientRect().top
     const worldWidth = world.offsetWidth
     const worldHeight = world.offsetHeight
+    const processionCanvasWidth = processionCanvas ? processionCanvas.offsetWidth : viewportWidth
     const worldLeft = (viewportWidth - worldWidth) / 2
     const maximumPan = Math.max(0, worldHeight - viewportHeight)
     const worldTop = -maximumPan * firstSceneProgress
@@ -601,7 +629,8 @@ if (story) {
       && Math.abs(coverProgress - renderedCoverProgress) >= 0.00025
 
     setCoverScene(renderedCoverProgress)
-    setWorldScene(renderedCoverProgress, detectorSceneProgress)
+    setWorldScene(renderedCoverProgress, processionSceneProgress)
+    setProcessionScene(processionSceneProgress, detectorSceneProgress, processionCanvasWidth)
     setDetectorScene(detectorSceneProgress, familySceneProgress)
     setFamilyScene(familySceneProgress, careSceneProgress)
     setCareScene(careSceneProgress, legacySceneProgress)
@@ -630,6 +659,7 @@ if (story) {
   world.addEventListener('load', requestUpdate, { once: true })
   Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
   instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
+  processionImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
   coverKeyframes.forEach((image, index) => {
     const updateFrameReadiness = () => {
       coverFrameReady[index] = image.naturalWidth > 0
@@ -649,6 +679,8 @@ if (story) {
   }
 
   Promise.all(instrumentImages.map(decodeImage)).catch(() => requestUpdate())
+  ensureScenePrepared('processionBackground', processionScene, processionBackgroundImages).catch(() => requestUpdate())
+  ensureScenePrepared('processionCharacter', processionScene, processionCharacterImages).catch(() => requestUpdate())
   ensureScenePrepared('detector', detectorScene, detectorImages).catch(() => requestUpdate())
 
   refreshTimelineViewport(true)
