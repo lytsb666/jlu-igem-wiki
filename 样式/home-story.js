@@ -17,11 +17,7 @@ if (story) {
   const compactViewport = window.matchMedia('(max-width: 720px)')
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
   const objects = {
-    crowd: story.querySelector('.story-crowd'),
     bacteria: story.querySelector('.story-bacteria'),
-    lighthouse: story.querySelector('.story-lighthouse'),
-    tree: story.querySelector('.story-tree'),
-    graves: story.querySelector('.story-graves'),
     elderly: story.querySelector('.story-elderly'),
   }
   const instrumentImages = instrumentScene
@@ -81,11 +77,7 @@ if (story) {
   const anchors = {
     // X values come directly from the WPS composition. Y values are mapped
     // onto the taller source background using matched landscape landmarks.
-    crowd: [0.750170, 0.228310],
     bacteria: [0.528533, 0.087800],
-    lighthouse: [0.260017, 0.385360],
-    tree: [0.739438, 0.571760],
-    graves: [0.229167, 0.716220],
     elderly: [0.759547, 0.889220],
   }
 
@@ -577,33 +569,12 @@ if (story) {
       y: worldTop + anchors[name][1] * worldHeight,
     })
 
-    const crowdAnchor = anchorPosition('crowd')
-    const crowdReveal = revealFromViewportBottom(objects.crowd, crowdAnchor.y, 1.35, stageTop, viewportHeight)
-    const crowdOpacity = crowdReveal * (1 - range(firstSceneProgress, 0.24, 0.33))
-    setObject(objects.crowd, crowdAnchor.x, crowdAnchor.y, crowdOpacity, 1.35 + crowdOpacity * 0.12, (1 - crowdOpacity) * 48)
-
     const bacteriaAnchor = anchorPosition('bacteria')
     const bacteriaReveal = revealFromViewportBottom(objects.bacteria, bacteriaAnchor.y, 0.88, stageTop, viewportHeight)
     const bacteriaOpacity = bacteriaReveal * (1 - range(firstSceneProgress, 0.22, 0.31)) * 0.72
     const bacteriaSpread = Math.max(bacteriaReveal, range(firstSceneProgress, 0, 0.30))
     setObject(objects.bacteria, bacteriaAnchor.x, bacteriaAnchor.y, bacteriaOpacity, 0.88 + bacteriaSpread * 0.22, (1 - bacteriaSpread) * 92)
     objects.bacteria.style.setProperty('--bacteria-blur', `${12 - bacteriaSpread * 11}px`)
-
-    const lighthouseAnchor = anchorPosition('lighthouse')
-    const lighthouseEnter = range(firstSceneProgress, 0.31, 0.44)
-    // The final position is bound to the long illustration, not to the
-    // viewport. Once the rise finishes it behaves like part of the artwork.
-    const lighthouseY = lighthouseAnchor.y + (1 - lighthouseEnter) * viewportHeight * 0.58
-    setObject(objects.lighthouse, lighthouseAnchor.x, lighthouseY, lighthouseEnter, 1.0 + lighthouseEnter * 0.1)
-
-    const treeAnchor = anchorPosition('tree')
-    const treeEnter = range(firstSceneProgress, 0.56, 0.69)
-    const treeY = treeAnchor.y + (1 - treeEnter) * viewportHeight * 0.54
-    setObject(objects.tree, treeAnchor.x, treeY, treeEnter, 1.3 + treeEnter * 0.08)
-
-    const gravesAnchor = anchorPosition('graves')
-    const gravesReveal = revealFromViewportBottom(objects.graves, gravesAnchor.y, 0.96, stageTop, viewportHeight)
-    setObject(objects.graves, gravesAnchor.x, gravesAnchor.y, gravesReveal, 0.96 + gravesReveal * 0.04, (1 - gravesReveal) * 48)
 
     const elderlyAnchor = anchorPosition('elderly')
     const elderlyReveal = revealFromViewportBottom(objects.elderly, elderlyAnchor.y, 0.96, stageTop, viewportHeight)
