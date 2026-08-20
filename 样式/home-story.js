@@ -4,6 +4,10 @@ if (story) {
   const stage = story.querySelector('.story-stage')
   const worldScene = story.querySelector('.world-scene')
   const world = story.querySelector('.story-world')
+  const worldLightLayers = [
+    { element: story.querySelector('.story-world-light-lighthouse'), start: 0.06, end: 0.47 },
+    { element: story.querySelector('.story-world-light-houses'), start: 0.52, end: 0.94 },
+  ].filter(({ element }) => element)
   const worldIntro = story.querySelector('.world-intro')
   const instrumentScene = story.querySelector('.instrument-scene')
   const processionScene = story.querySelector('.procession-scene')
@@ -101,6 +105,20 @@ if (story) {
   function smootherstep(value) {
     const progress = clamp(value)
     return progress * progress * progress * (progress * (progress * 6 - 15) + 10)
+  }
+
+  function setWorldLights(progress) {
+    worldLightLayers.forEach(({ element, start, end }) => {
+      const reveal = reducedMotion.matches ? 1 : smootherstep(range(progress, start, end))
+      const maskEdge = clamp(reveal * 1.08)
+      const maskSolid = clamp(reveal * 1.08 - 0.08)
+      const opacity = reducedMotion.matches ? 1 : smoothstep(range(reveal, 0, 0.20))
+
+      element.style.setProperty('--world-light-opacity', opacity.toFixed(3))
+      element.style.setProperty('--world-light-clip-bottom', `${((1 - maskEdge) * 100).toFixed(2)}%`)
+      element.style.setProperty('--world-light-mask-solid', `${(maskSolid * 100).toFixed(2)}%`)
+      element.style.setProperty('--world-light-mask-edge', `${(maskEdge * 100).toFixed(2)}%`)
+    })
   }
 
   function setSceneVisibility(scene, visible) {
@@ -607,7 +625,9 @@ if (story) {
     const worldTop = -maximumPan * worldJourneyProgress
 
     world.style.setProperty('--world-y', `${worldTop}px`)
+    stage.style.setProperty('--world-y', `${worldTop}px`)
     stage.style.setProperty('--story-world-width', `${worldWidth}px`)
+    setWorldLights(worldJourneyProgress)
 
     const anchorPosition = (name) => ({
       x: worldLeft + anchors[name][0] * worldWidth,
@@ -670,6 +690,7 @@ if (story) {
   stage.addEventListener('pointerleave', clearWorldIntroPointer)
   window.addEventListener('blur', clearWorldIntroPointer)
   world.addEventListener('load', requestUpdate, { once: true })
+  worldLightLayers.forEach(({ element }) => element.addEventListener('load', requestUpdate, { once: true }))
   Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
   instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
   processionImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))

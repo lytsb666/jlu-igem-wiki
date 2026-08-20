@@ -110,10 +110,47 @@ body {
     transform: scale(var(--world-scene-scale, 1));
     transform-origin: center;
 }
-.story-world { position: absolute; z-index: 1; top: 0; left: 50%; width: max(100vw, 59.702dvh); max-width: none; height: auto; min-height: 0; aspect-ratio: 1080 / 1809; object-fit: contain; user-select: none; pointer-events: none; transform: translate3d(-50%, var(--world-y, 0px), 0); transform-origin: top center; }
+.story-world,
+.story-world-lights { position: absolute; top: 0; left: 50%; width: max(100vw, 59.702dvh); max-width: none; height: auto; min-height: 0; aspect-ratio: 1080 / 1809; user-select: none; pointer-events: none; transform: translate3d(-50%, var(--world-y, 0px), 0); transform-origin: top center; }
+.story-world { z-index: 1; object-fit: contain; }
+.story-world-lights { z-index: 2; overflow: hidden; }
+.story-world-light {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 33.333333%;
+    max-width: none;
+    object-fit: fill;
+    opacity: var(--world-light-opacity, 0);
+    pointer-events: none;
+    user-select: none;
+    clip-path: inset(0 0 var(--world-light-clip-bottom, 100%) 0);
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        #000 3%,
+        #000 var(--world-light-mask-solid, 0%),
+        transparent var(--world-light-mask-edge, 0%),
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        #000 3%,
+        #000 var(--world-light-mask-solid, 0%),
+        transparent var(--world-light-mask-edge, 0%),
+        transparent 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.story-world-light-lighthouse { top: 33.333333%; }
+.story-world-light-houses { top: 66.666667%; }
 .story-object { position: absolute; top: var(--object-y, 50%); left: var(--object-x, 50%); z-index: 5; max-width: none; height: auto; object-fit: contain; opacity: var(--object-opacity, 0); pointer-events: none; user-select: none; transform: translate(-50%, -50%) translateY(var(--object-rise, 0px)) scale(var(--object-scale, 1)); transform-origin: center; }
 .world-scene.is-visible { will-change: transform, opacity, filter, border-radius; }
-.world-scene.is-visible .story-world { will-change: transform; }
+.world-scene.is-visible .story-world,
+.world-scene.is-visible .story-world-lights { will-change: transform; }
+.world-scene.is-visible .story-world-light { will-change: opacity; }
 .world-scene.is-visible .story-object { will-change: transform, opacity, filter; }
 .story-elderly { z-index: 8; width: calc(var(--story-world-width, 100vw) * 0.325181); }
 .story-vignette { position: absolute; inset: 0; z-index: 20; pointer-events: none; background: linear-gradient(90deg, rgba(24, 15, 11, 0.5), transparent 34%, rgba(24, 15, 11, 0.2)), linear-gradient(0deg, rgba(18, 11, 8, 0.44), transparent 36%, rgba(18, 11, 8, 0.2)); }
@@ -1011,7 +1048,7 @@ body.story-cinematic-active .navbar {
 
 @media (max-width: 720px) {
     .scroll-story { height: 3299vh; height: 3299svh; }
-    .story-world { width: max(132vw, 64dvh); }
+    .story-world, .story-world-lights { width: max(132vw, 64dvh); }
     .story-elderly { width: calc(var(--story-world-width, 132vw) * 0.325181); }
 }
 
@@ -1095,7 +1132,8 @@ body.story-cinematic-active .navbar {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .story-world, .story-object { transition: none !important; }
+    .story-world, .story-world-lights, .story-world-light, .story-object { transition: none !important; }
+    .story-world-light { -webkit-mask-image: none !important; mask-image: none !important; }
     .world-scene { border-radius: 0 !important; transform: none !important; }
     .cover-keyframe { transform: none !important; }
     .cover-keyframe:not(:first-child) { display: none !important; }
