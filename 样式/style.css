@@ -154,6 +154,7 @@ body {
 .world-scene.is-visible .story-object { will-change: transform, opacity, filter; }
 .story-elderly { z-index: 8; width: calc(var(--story-world-width, 100vw) * 0.325181); }
 .story-vignette { position: absolute; inset: 0; z-index: 20; pointer-events: none; background: linear-gradient(90deg, rgba(24, 15, 11, 0.5), transparent 34%, rgba(24, 15, 11, 0.2)), linear-gradient(0deg, rgba(18, 11, 8, 0.44), transparent 36%, rgba(18, 11, 8, 0.2)); }
+.story-world-frame { position: absolute; inset: 0; z-index: 28; display: block; width: 100%; height: 100%; max-width: none; object-fit: fill; pointer-events: none; user-select: none; }
 
 .world-intro {
     position: absolute;
@@ -174,6 +175,7 @@ body {
     width: var(--story-world-width, 100vw);
     max-width: none;
     height: auto;
+    z-index: 0;
     /* Register the two illustrated fire centres while both assets share the world width. */
     transform: translate3d(
         calc(-50% + var(--world-intro-offset-x, 0.073%)),
@@ -181,6 +183,26 @@ body {
         0
     );
 }
+
+.campfire-people-source { display: none; }
+.campfire-people {
+    position: absolute;
+    z-index: 1;
+    top: var(--campfire-y, 96%);
+    left: var(--campfire-x, 78%);
+    display: block;
+    width: var(--campfire-people-width, 52vw);
+    max-width: none;
+    height: auto;
+    opacity: var(--campfire-people-opacity, 0);
+    visibility: hidden;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.64));
+    pointer-events: none;
+    user-select: none;
+    transform: translate3d(-50%, -100%, 0) scale(var(--campfire-people-scale, 0.965));
+    transform-origin: 50% 100%;
+}
+.campfire-people.is-ready { visibility: visible; }
 
 @media (hover: hover) and (pointer: fine) {
     .world-intro.is-pointer-lit {

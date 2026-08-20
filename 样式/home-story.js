@@ -9,6 +9,8 @@ if (story) {
     { element: story.querySelector('.story-world-light-houses'), start: 0.52, end: 0.94 },
   ].filter(({ element }) => element)
   const worldIntro = story.querySelector('.world-intro')
+  const campfirePeople = story.querySelector('.campfire-people')
+  const campfirePeopleSource = story.querySelector('.campfire-people-source')
   const instrumentScene = story.querySelector('.instrument-scene')
   const processionScene = story.querySelector('.procession-scene')
   const processionCanvas = story.querySelector('.procession-canvas')
@@ -105,6 +107,107 @@ if (story) {
   function smootherstep(value) {
     const progress = clamp(value)
     return progress * progress * progress * (progress * (progress * 6 - 15) + 10)
+  }
+
+  function prepareCampfirePeople() {
+    if (!campfirePeople || !campfirePeopleSource) return
+
+    const render = () => {
+      const width = campfirePeopleSource.naturalWidth
+      const height = campfirePeopleSource.naturalHeight
+      if (!width || !height) return
+
+      try {
+        const sourceCanvas = document.createElement('canvas')
+        sourceCanvas.width = width
+        sourceCanvas.height = height
+        const sourceContext = sourceCanvas.getContext('2d', { willReadFrequently: true })
+        const outputContext = campfirePeople.getContext('2d')
+        if (!sourceContext || !outputContext) return
+
+        sourceContext.drawImage(campfirePeopleSource, 0, 0)
+        const pixels = sourceContext.getImageData(0, 0, width, height)
+        const data = pixels.data
+        const visited = new Uint8Array(width * height)
+        const queue = new Int32Array(width * height)
+        let head = 0
+        let tail = 0
+
+        const enqueue = (index) => {
+          if (visited[index]) return
+          const offset = index * 4
+          const red = data[offset]
+          const green = data[offset + 1]
+          const blue = data[offset + 2]
+          const maximum = Math.max(red, green, blue)
+          const minimum = Math.min(red, green, blue)
+          if (minimum <= 205 || maximum - minimum >= 38) return
+          visited[index] = 1
+          queue[tail] = index
+          tail += 1
+        }
+
+        for (let x = 0; x < width; x += 1) {
+          enqueue(x)
+          enqueue((height - 1) * width + x)
+        }
+        for (let y = 1; y < height - 1; y += 1) {
+          enqueue(y * width)
+          enqueue(y * width + width - 1)
+        }
+
+        while (head < tail) {
+          const index = queue[head]
+          head += 1
+          const x = index % width
+          if (x > 0) enqueue(index - 1)
+          if (x < width - 1) enqueue(index + 1)
+          if (index >= width) enqueue(index - width)
+          if (index < width * (height - 1)) enqueue(index + width)
+        }
+
+        for (let index = 0; index < visited.length; index += 1) {
+          if (!visited[index]) continue
+          const offset = index * 4
+          const luminance = (data[offset] + data[offset + 1] + data[offset + 2]) / 3
+          data[offset + 3] = Math.round(clamp((250 - luminance) / 35) * 255)
+        }
+
+        sourceContext.putImageData(pixels, 0, 0)
+        const split = Math.round(width * 0.563)
+        const gap = Math.round(width * 0.348)
+        campfirePeople.width = width + gap
+        campfirePeople.height = height
+        outputContext.clearRect(0, 0, campfirePeople.width, height)
+        outputContext.drawImage(sourceCanvas, 0, 0, split, height, 0, 0, split, height)
+        outputContext.drawImage(
+          sourceCanvas,
+          split,
+          0,
+          width - split,
+          height,
+          split + gap,
+          0,
+          width - split,
+          height,
+        )
+        campfirePeople.classList.add('is-ready')
+        requestUpdate()
+      } catch {
+        campfirePeople.classList.remove('is-ready')
+      }
+    }
+
+    const scheduleRender = () => {
+      if (typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(render, { timeout: 800 })
+      } else {
+        window.setTimeout(render, 0)
+      }
+    }
+
+    if (campfirePeopleSource.complete && campfirePeopleSource.naturalWidth) scheduleRender()
+    else campfirePeopleSource.addEventListener('load', scheduleRender, { once: true })
   }
 
   function setWorldLights(progress) {
@@ -332,8 +435,11 @@ if (story) {
     const fadeEnd = reduce ? 0.07 : 0.16
     const fade = smootherstep(range(progress, reduce ? 0 : 0.015, fadeEnd))
     const opacity = 1 - fade
+    const peopleReveal = reduce ? 1 : smootherstep(range(coverProgress, 0.915, 0.985))
 
     worldIntro.style.setProperty('--world-intro-opacity', opacity.toFixed(3))
+    worldIntro.style.setProperty('--campfire-people-opacity', peopleReveal.toFixed(3))
+    worldIntro.style.setProperty('--campfire-people-scale', (0.965 + peopleReveal * 0.035).toFixed(4))
     worldIntro.style.visibility = opacity > 0.001 ? 'visible' : 'hidden'
     worldIntroInteractive = !reduce && coverProgress >= 0.88 && opacity > 0.08
     if (!worldIntroInteractive) clearWorldIntroPointer()
@@ -628,6 +734,15 @@ if (story) {
     stage.style.setProperty('--world-y', `${worldTop}px`)
     stage.style.setProperty('--story-world-width', `${worldWidth}px`)
     setWorldLights(worldJourneyProgress)
+    if (worldIntro) {
+      const introHeight = worldWidth * (1080 / 1935)
+      worldIntro.style.setProperty('--campfire-x', `${worldLeft + worldWidth * 0.780317}px`)
+      worldIntro.style.setProperty('--campfire-y', `${introHeight * 0.958}px`)
+      worldIntro.style.setProperty(
+        '--campfire-people-width',
+        `${worldWidth * (compactViewport.matches ? 0.44 : 0.52)}px`,
+      )
+    }
 
     const anchorPosition = (name) => ({
       x: worldLeft + anchors[name][0] * worldWidth,
@@ -716,6 +831,7 @@ if (story) {
   ensureScenePrepared('processionBackground', processionScene, processionBackgroundImages).catch(() => requestUpdate())
   ensureScenePrepared('processionCharacter', processionScene, processionCharacterImages).catch(() => requestUpdate())
   ensureScenePrepared('detector', detectorScene, detectorImages).catch(() => requestUpdate())
+  prepareCampfirePeople()
 
   refreshTimelineViewport(true)
   updateStory()
