@@ -187,7 +187,7 @@ body {
 .campfire-people-source { display: none; }
 .campfire-people {
     position: absolute;
-    z-index: 1;
+    z-index: 6;
     top: var(--campfire-y, 96%);
     left: var(--campfire-x, 78%);
     display: block;
@@ -196,7 +196,7 @@ body {
     height: auto;
     opacity: var(--campfire-people-opacity, 0);
     visibility: hidden;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.64));
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.48));
     pointer-events: none;
     user-select: none;
     transform: translate3d(-50%, -100%, 0) scale(var(--campfire-people-scale, 0.965));

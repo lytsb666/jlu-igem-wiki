@@ -438,8 +438,8 @@ if (story) {
     const peopleReveal = reduce ? 1 : smootherstep(range(coverProgress, 0.915, 0.985))
 
     worldIntro.style.setProperty('--world-intro-opacity', opacity.toFixed(3))
-    worldIntro.style.setProperty('--campfire-people-opacity', peopleReveal.toFixed(3))
-    worldIntro.style.setProperty('--campfire-people-scale', (0.965 + peopleReveal * 0.035).toFixed(4))
+    campfirePeople?.style.setProperty('--campfire-people-opacity', peopleReveal.toFixed(3))
+    campfirePeople?.style.setProperty('--campfire-people-scale', (0.965 + peopleReveal * 0.035).toFixed(4))
     worldIntro.style.visibility = opacity > 0.001 ? 'visible' : 'hidden'
     worldIntroInteractive = !reduce && coverProgress >= 0.88 && opacity > 0.08
     if (!worldIntroInteractive) clearWorldIntroPointer()
@@ -734,11 +734,11 @@ if (story) {
     stage.style.setProperty('--world-y', `${worldTop}px`)
     stage.style.setProperty('--story-world-width', `${worldWidth}px`)
     setWorldLights(worldJourneyProgress)
-    if (worldIntro) {
+    if (campfirePeople) {
       const introHeight = worldWidth * (1080 / 1935)
-      worldIntro.style.setProperty('--campfire-x', `${worldLeft + worldWidth * 0.780317}px`)
-      worldIntro.style.setProperty('--campfire-y', `${introHeight * 0.958}px`)
-      worldIntro.style.setProperty(
+      campfirePeople.style.setProperty('--campfire-x', `${worldLeft + worldWidth * 0.780317}px`)
+      campfirePeople.style.setProperty('--campfire-y', `${worldTop + introHeight * 0.958}px`)
+      campfirePeople.style.setProperty(
         '--campfire-people-width',
         `${worldWidth * (compactViewport.matches ? 0.44 : 0.52)}px`,
       )
