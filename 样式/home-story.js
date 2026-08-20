@@ -4,6 +4,7 @@ if (story) {
   const stage = story.querySelector('.story-stage')
   const worldScene = story.querySelector('.world-scene')
   const world = story.querySelector('.story-world')
+  const worldIntro = story.querySelector('.world-intro')
   const instrumentScene = story.querySelector('.instrument-scene')
   const processionScene = story.querySelector('.procession-scene')
   const processionCanvas = story.querySelector('.procession-canvas')
@@ -16,8 +17,8 @@ if (story) {
   const finaleScene = story.querySelector('.finale-scene')
   const compactViewport = window.matchMedia('(max-width: 720px)')
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+  const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
   const objects = {
-    bacteria: story.querySelector('.story-bacteria'),
     elderly: story.querySelector('.story-elderly'),
   }
   const instrumentImages = instrumentScene
@@ -60,6 +61,10 @@ if (story) {
   let ticking = false
   let renderedCoverProgress = null
   let lastCoverFrameTime = null
+  let worldIntroInteractive = false
+  let worldIntroPointerFrame = null
+  let worldIntroPointerX = 0
+  let worldIntroPointerY = 0
   let timelineViewportWidth = window.innerWidth
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
@@ -77,7 +82,6 @@ if (story) {
   const anchors = {
     // X values come directly from the WPS composition. Y values are mapped
     // onto the taller source background using matched landscape landmarks.
-    bacteria: [0.528533, 0.087800],
     elderly: [0.759547, 0.889220],
   }
 
@@ -293,6 +297,46 @@ if (story) {
     worldScene.style.setProperty('--world-scene-blur', '0px')
     worldScene.style.setProperty('--world-scene-radius', '0px')
     setSceneVisibility(worldScene, sceneOpacity > 0.001)
+  }
+
+  function clearWorldIntroPointer() {
+    if (worldIntroPointerFrame !== null) {
+      window.cancelAnimationFrame(worldIntroPointerFrame)
+      worldIntroPointerFrame = null
+    }
+    worldIntro?.classList.remove('is-pointer-lit')
+  }
+
+  function setWorldIntro(progress, coverProgress) {
+    if (!worldIntro) return
+
+    const reduce = reducedMotion.matches
+    const fadeEnd = reduce ? 0.07 : 0.16
+    const fade = smootherstep(range(progress, reduce ? 0 : 0.015, fadeEnd))
+    const opacity = 1 - fade
+
+    worldIntro.style.setProperty('--world-intro-opacity', opacity.toFixed(3))
+    worldIntro.style.visibility = opacity > 0.001 ? 'visible' : 'hidden'
+    worldIntroInteractive = !reduce && coverProgress >= 0.88 && opacity > 0.08
+    if (!worldIntroInteractive) clearWorldIntroPointer()
+  }
+
+  function handleWorldIntroPointer(event) {
+    if (!worldIntro || !worldIntroInteractive || !precisePointer.matches) return
+
+    const rect = stage.getBoundingClientRect()
+    worldIntroPointerX = clamp(event.clientX - rect.left, 0, rect.width)
+    worldIntroPointerY = clamp(event.clientY - rect.top, 0, rect.height)
+
+    if (worldIntroPointerFrame !== null) return
+    worldIntroPointerFrame = window.requestAnimationFrame(() => {
+      if (worldIntroInteractive && precisePointer.matches) {
+        worldIntro.style.setProperty('--world-intro-light-x', `${worldIntroPointerX.toFixed(1)}px`)
+        worldIntro.style.setProperty('--world-intro-light-y', `${worldIntroPointerY.toFixed(1)}px`)
+        worldIntro.classList.add('is-pointer-lit')
+      }
+      worldIntroPointerFrame = null
+    })
   }
 
   function setProcessionScene(progress, detectorProgress, canvasWidth) {
@@ -559,7 +603,8 @@ if (story) {
     const processionCanvasWidth = processionCanvas ? processionCanvas.offsetWidth : viewportWidth
     const worldLeft = (viewportWidth - worldWidth) / 2
     const maximumPan = Math.max(0, worldHeight - viewportHeight)
-    const worldTop = -maximumPan * firstSceneProgress
+    const worldJourneyProgress = range(firstSceneProgress, reducedMotion.matches ? 0.07 : 0.16, 1)
+    const worldTop = -maximumPan * worldJourneyProgress
 
     world.style.setProperty('--world-y', `${worldTop}px`)
     stage.style.setProperty('--story-world-width', `${worldWidth}px`)
@@ -568,13 +613,6 @@ if (story) {
       x: worldLeft + anchors[name][0] * worldWidth,
       y: worldTop + anchors[name][1] * worldHeight,
     })
-
-    const bacteriaAnchor = anchorPosition('bacteria')
-    const bacteriaReveal = revealFromViewportBottom(objects.bacteria, bacteriaAnchor.y, 0.88, stageTop, viewportHeight)
-    const bacteriaOpacity = bacteriaReveal * (1 - range(firstSceneProgress, 0.22, 0.31)) * 0.72
-    const bacteriaSpread = Math.max(bacteriaReveal, range(firstSceneProgress, 0, 0.30))
-    setObject(objects.bacteria, bacteriaAnchor.x, bacteriaAnchor.y, bacteriaOpacity, 0.88 + bacteriaSpread * 0.22, (1 - bacteriaSpread) * 92)
-    objects.bacteria.style.setProperty('--bacteria-blur', `${12 - bacteriaSpread * 11}px`)
 
     const elderlyAnchor = anchorPosition('elderly')
     const elderlyReveal = revealFromViewportBottom(objects.elderly, elderlyAnchor.y, 0.96, stageTop, viewportHeight)
@@ -600,6 +638,7 @@ if (story) {
       && Math.abs(coverProgress - renderedCoverProgress) >= 0.00025
 
     setCoverScene(renderedCoverProgress)
+    setWorldIntro(firstSceneProgress, renderedCoverProgress)
     setWorldScene(renderedCoverProgress, processionSceneProgress)
     setProcessionScene(processionSceneProgress, detectorSceneProgress, processionCanvasWidth)
     setDetectorScene(detectorSceneProgress, familySceneProgress)
@@ -627,6 +666,9 @@ if (story) {
   window.addEventListener('scroll', requestUpdate, { passive: true })
   window.addEventListener('resize', handleResize)
   window.addEventListener('pageshow', requestUpdate)
+  stage.addEventListener('pointermove', handleWorldIntroPointer, { passive: true })
+  stage.addEventListener('pointerleave', clearWorldIntroPointer)
+  window.addEventListener('blur', clearWorldIntroPointer)
   world.addEventListener('load', requestUpdate, { once: true })
   Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
   instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
