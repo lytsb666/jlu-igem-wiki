@@ -1,0 +1,179 @@
+const content = document.querySelector('#entrepreneurship-content')
+const toc = document.querySelector('.hp-toc')
+const tocLinks = Array.from(document.querySelectorAll('.toc-link'))
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+function enhanceCollapsibleSections() {
+  const headings = Array.from(document.querySelectorAll('[data-collapsible="true"]'))
+  headings.forEach((heading, index) => {
+    if (!heading.parentElement || heading.parentElement.classList.contains('collapsible-section')) return
+
+    const wrapper = document.createElement('section')
+    wrapper.className = 'collapsible-section'
+    const body = document.createElement('div')
+    body.className = 'collapsible-section__body'
+    const inner = document.createElement('div')
+    body.append(inner)
+
+    heading.before(wrapper)
+    wrapper.append(heading, body)
+
+    let cursor = wrapper.nextSibling
+    while (cursor) {
+      if (cursor.nodeType === Node.ELEMENT_NODE && cursor.matches('h2, h3, h4')) break
+      const next = cursor.nextSibling
+      inner.append(cursor)
+      cursor = next
+    }
+
+    const isOpen = index === 0 || /Phase I\b/.test(heading.textContent)
+    wrapper.classList.toggle('is-open', isOpen)
+    heading.tabIndex = 0
+    heading.setAttribute('role', 'button')
+    heading.setAttribute('aria-expanded', String(isOpen))
+    heading.setAttribute('aria-controls', `${heading.id}-panel`)
+    body.id = `${heading.id}-panel`
+
+    const toggle = () => {
+      const nextState = !wrapper.classList.contains('is-open')
+      wrapper.classList.toggle('is-open', nextState)
+      heading.setAttribute('aria-expanded', String(nextState))
+    }
+    heading.addEventListener('click', toggle)
+    heading.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return
+      event.preventDefault()
+      toggle()
+    })
+  })
+}
+
+function setupToc() {
+  const headings = Array.from(content?.querySelectorAll('h2[id], h3[id], h4[id]') || [])
+  if (!headings.length || !tocLinks.length) return
+
+  const linkById = new Map(tocLinks.map((link) => [link.hash.slice(1), link]))
+  const activate = (id) => {
+    tocLinks.forEach((link) => link.classList.toggle('active', link.hash === `#${id}`))
+    const active = linkById.get(id)
+    if (active && toc) active.scrollIntoView({ block: 'nearest', behavior: reducedMotion.matches ? 'auto' : 'smooth' })
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+      if (visible[0]) activate(visible[0].target.id)
+    },
+    { rootMargin: '-18% 0px -70% 0px', threshold: 0 },
+  )
+  headings.forEach((heading) => observer.observe(heading))
+
+  tocLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const target = document.querySelector(link.hash)
+      if (!target) return
+      event.preventDefault()
+      target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' })
+      history.replaceState(null, '', link.hash)
+      activate(target.id)
+    })
+  })
+}
+
+function setupReadingProgress() {
+  if (!content) return
+  let ticking = false
+  const update = () => {
+    const rect = content.getBoundingClientRect()
+    const start = window.scrollY + rect.top - window.innerHeight * 0.18
+    const distance = Math.max(content.offsetHeight - window.innerHeight * 0.64, 1)
+    const progress = Math.min(1, Math.max(0, (window.scrollY - start) / distance))
+    content.style.setProperty('--reading-progress', `${(progress * 100).toFixed(2)}%`)
+    ticking = false
+  }
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(update)
+    },
+    { passive: true },
+  )
+  window.addEventListener('resize', update, { passive: true })
+  update()
+}
+
+function setupReveal() {
+  const items = document.querySelectorAll('.interactive-table, .data-table, .doc-figure, .hp-h1')
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+    items.forEach((item) => item.classList.add('is-visible'))
+    return
+  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        entry.target.classList.add('is-visible')
+        observer.unobserve(entry.target)
+      })
+    },
+    { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
+  )
+  items.forEach((item) => {
+    item.classList.add('reveal-on-scroll')
+    observer.observe(item)
+  })
+}
+
+function setupInteractiveCards() {
+  document.querySelectorAll('.interactive-card-grid').forEach((grid) => {
+    grid.addEventListener('toggle', (event) => {
+      const opened = event.target
+      if (!(opened instanceof HTMLDetailsElement) || !opened.open) return
+      grid.querySelectorAll('details[open]').forEach((card) => {
+        if (card !== opened) card.open = false
+      })
+    }, true)
+  })
+}
+
+function setupFigureLightbox() {
+  const lightbox = document.querySelector('.figure-lightbox')
+  const lightboxImage = lightbox?.querySelector('img')
+  const closeButton = lightbox?.querySelector('.figure-lightbox__close')
+  if (!lightbox || !lightboxImage || !closeButton) return
+
+  const close = () => {
+    lightbox.hidden = true
+    lightboxImage.removeAttribute('src')
+    document.body.style.removeProperty('overflow')
+  }
+
+  document.querySelectorAll('.figure-zoom').forEach((button) => {
+    button.addEventListener('click', () => {
+      const image = button.querySelector('img')
+      lightboxImage.src = image?.currentSrc || image?.src || button.dataset.fullSrc
+      lightboxImage.alt = image?.alt || 'Expanded entrepreneurship figure'
+      lightbox.hidden = false
+      document.body.style.overflow = 'hidden'
+      closeButton.focus()
+    })
+  })
+  closeButton.addEventListener('click', close)
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) close()
+  })
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !lightbox.hidden) close()
+  })
+}
+
+enhanceCollapsibleSections()
+setupToc()
+setupReadingProgress()
+setupReveal()
+setupInteractiveCards()
+setupFigureLightbox()
