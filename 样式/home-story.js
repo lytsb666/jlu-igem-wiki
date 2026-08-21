@@ -782,7 +782,6 @@ if (story) {
     setLegacyScene(legacySceneProgress, finaleSceneProgress)
     setFinaleScene(finaleSceneProgress, storyIsPinned)
 
-    document.body.classList.toggle('story-cinematic-active', storyIsPinned)
     ticking = false
     if (coverNeedsAnotherFrame) requestUpdate()
   }

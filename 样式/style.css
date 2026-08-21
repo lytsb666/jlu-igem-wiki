@@ -345,17 +345,6 @@ body {
     animation: cover-scroll-wheel 1.65s ease-in-out infinite;
 }
 
-body.story-cinematic-active .navbar {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate3d(0, calc(-100% - 2px), 0);
-    transition:
-        transform 0.45s cubic-bezier(0.3, 0, 0.25, 1),
-        opacity 0.3s ease,
-        visibility 0s linear 0.45s;
-}
-
 @keyframes cover-scroll-wheel {
     0%, 100% { opacity: 0.3; transform: translate3d(-50%, 0, 0); }
     50% { opacity: 1; transform: translate3d(-50%, 9px, 0); }
