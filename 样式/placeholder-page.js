@@ -1,5 +1,18 @@
 const root = document.querySelector('#placeholder-root')
-const { section, title, description } = document.body.dataset
+const { section, title, description, cover } = document.body.dataset
+
+const coverAssets = {
+  collaboration: new URL('../a  图片/page-covers/collaboration.webp', import.meta.url).href,
+  contribution: new URL('../a  图片/page-covers/contribution.webp', import.meta.url).href,
+  inclusivity: new URL('../a  图片/page-covers/inclusivity.webp', import.meta.url).href,
+  model: new URL('../a  图片/page-covers/model.webp', import.meta.url).href,
+}
+
+const coverMarkup = coverAssets[cover]
+  ? `<section class="image-page-hero" aria-label="${title} cover">
+      <img src="${coverAssets[cover]}" width="2848" height="1600" alt="${title} illustrated cover" fetchpriority="high" decoding="async">
+    </section>`
+  : ''
 
 root.innerHTML = `
   <nav class="navbar" aria-label="Primary navigation">
@@ -46,6 +59,7 @@ root.innerHTML = `
       </div>
     </div>
   </nav>
+  ${coverMarkup}
   <main class="placeholder-main">
     <section class="placeholder-card">
       <p class="placeholder-kicker">${section}</p>

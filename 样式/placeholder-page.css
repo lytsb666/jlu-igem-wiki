@@ -7,6 +7,11 @@
         var(--bg);
 }
 
+body[data-cover] .placeholder-main {
+    min-height: auto;
+    padding-top: 40px;
+}
+
 .placeholder-card {
     width: min(820px, 100%);
     margin: 0 auto;
