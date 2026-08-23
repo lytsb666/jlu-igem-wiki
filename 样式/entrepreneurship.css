@@ -30,6 +30,49 @@ body.entrepreneurship-page {
   overflow-x: hidden;
 }
 
+.image-page-hero {
+  position: relative;
+  width: min(1440px, calc(100% - 40px));
+  margin: 84px auto 44px;
+  overflow: hidden;
+  border: 1px solid rgba(73, 45, 34, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(73, 45, 34, 0.18);
+}
+
+.image-page-hero img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.image-page-hero__label {
+  position: absolute;
+  left: clamp(20px, 5vw, 72px);
+  bottom: clamp(20px, 5vw, 64px);
+  padding: 18px 24px;
+  border-left: 5px solid #4e3d28;
+  border-radius: 0 16px 16px 0;
+  background: rgba(73, 45, 34, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.image-page-hero__label span {
+  color: #f2e3c6;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.image-page-hero__label h1 {
+  margin: 5px 0 0;
+  color: #f2e3c6;
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  line-height: 1;
+}
+
 .entre-hero {
   position: relative;
   width: min(1440px, calc(100% - 40px));
@@ -159,6 +202,43 @@ body.entrepreneurship-page {
   display: block;
   color: var(--entre-cream);
   font-size: 1.32rem;
+}
+
+.entre-summary {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto 44px;
+  padding: clamp(26px, 4vw, 44px);
+  border: 1px solid var(--entre-line);
+  border-radius: 22px;
+  background: rgba(248, 237, 216, 0.78);
+  box-shadow: var(--entre-shadow);
+}
+
+.entre-summary .entre-hero__eyebrow {
+  color: var(--entre-copper-dark);
+}
+
+.entre-summary .entre-hero__lead {
+  color: var(--entre-ink);
+}
+
+.entre-summary .entre-hero__sub,
+.entre-summary .entre-hero__metrics span {
+  color: var(--entre-ink-soft);
+}
+
+.entre-summary .entre-hero__metrics {
+  border-color: var(--entre-line);
+  background: rgba(234, 216, 183, 0.58);
+  backdrop-filter: none;
+}
+
+.entre-summary .entre-hero__metrics span + span {
+  border-left-color: var(--entre-line);
+}
+
+.entre-summary .entre-hero__metrics strong {
+  color: var(--entre-ink);
 }
 
 .main-content {
@@ -646,6 +726,18 @@ body.entrepreneurship-page {
 }
 
 @media (max-width: 760px) {
+  .image-page-hero {
+    width: calc(100% - 24px);
+    margin-top: 72px;
+    border-radius: 16px;
+  }
+
+  .image-page-hero__label {
+    left: 12px;
+    bottom: 12px;
+    padding: 12px 16px;
+  }
+
   .entre-hero {
     width: calc(100% - 24px);
     min-height: 620px;
@@ -664,6 +756,13 @@ body.entrepreneurship-page {
 
   .entre-hero__metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .entre-summary {
+    width: calc(100% - 24px);
+    margin-bottom: 28px;
+    padding: 24px 18px;
+    border-radius: 18px;
   }
 
   .entre-hero__metrics span:nth-child(3) {
