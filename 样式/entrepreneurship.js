@@ -107,7 +107,7 @@ function setupReadingProgress() {
 }
 
 function setupReveal() {
-  const items = document.querySelectorAll('.interactive-table, .data-table, .doc-figure, .hp-h1')
+  const items = document.querySelectorAll('.doc-figure, .hp-h1')
   if (reducedMotion.matches || !('IntersectionObserver' in window)) {
     items.forEach((item) => item.classList.add('is-visible'))
     return
@@ -125,18 +125,6 @@ function setupReveal() {
   items.forEach((item) => {
     item.classList.add('reveal-on-scroll')
     observer.observe(item)
-  })
-}
-
-function setupInteractiveCards() {
-  document.querySelectorAll('.interactive-card-grid').forEach((grid) => {
-    grid.addEventListener('toggle', (event) => {
-      const opened = event.target
-      if (!(opened instanceof HTMLDetailsElement) || !opened.open) return
-      grid.querySelectorAll('details[open]').forEach((card) => {
-        if (card !== opened) card.open = false
-      })
-    }, true)
   })
 }
 
@@ -175,5 +163,4 @@ enhanceCollapsibleSections()
 setupToc()
 setupReadingProgress()
 setupReveal()
-setupInteractiveCards()
 setupFigureLightbox()

@@ -364,7 +364,8 @@ body.entrepreneurship-page {
   padding: 24px 0 18px;
   border-top: 1px solid var(--entre-line);
   border-bottom: 1px solid var(--entre-line);
-  font-size: clamp(2.1rem, 5vw, 3.7rem);
+  font-size: clamp(2.1rem, 4.8vw, 3.55rem);
+  font-weight: 800;
   letter-spacing: -0.04em;
 }
 
@@ -375,19 +376,22 @@ body.entrepreneurship-page {
 
 .hp-h2 {
   margin: 58px 0 20px;
-  font-size: clamp(1.65rem, 3vw, 2.3rem);
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+  font-weight: 750;
   letter-spacing: -0.025em;
 }
 
 .hp-h3 {
   margin: 38px 0 16px;
   color: var(--entre-copper-dark);
-  font-size: 1.32rem;
+  font-size: clamp(1.14rem, 1.7vw, 1.32rem);
+  font-weight: 700;
 }
 
 .hp-h4 {
   margin: 28px 0 12px;
-  font-size: 1.08rem;
+  font-size: 1.02rem;
+  font-weight: 650;
 }
 
 .hp-p,
@@ -416,6 +420,13 @@ body.entrepreneurship-page {
   border-radius: 14px;
   background: rgba(248, 237, 216, 0.74);
   box-shadow: 0 8px 28px rgba(73, 45, 34, 0.07);
+}
+
+.static-table > .table-caption {
+  margin: 0;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--entre-line);
+  font-size: 0.9rem;
 }
 
 .data-table > summary {
@@ -483,11 +494,8 @@ body.entrepreneurship-page {
   background: rgba(234, 216, 183, 0.55);
 }
 
-.hp-table tbody tr:hover {
-  background: rgba(192, 138, 95, 0.18);
-}
-
-.interactive-table {
+.interactive-table,
+.static-card-table {
   margin: 30px 0 38px;
   padding: 24px;
   border: 1px solid var(--entre-line);
@@ -502,14 +510,16 @@ body.entrepreneurship-page {
   font-weight: 700;
 }
 
-.interactive-table__legend {
+.interactive-table__legend,
+.static-card-table__legend {
   display: flex;
   margin: -8px 0 18px;
   flex-wrap: wrap;
   gap: 7px;
 }
 
-.interactive-table__legend span {
+.interactive-table__legend span,
+.static-card-table__legend span {
   padding: 4px 8px;
   border-radius: 999px;
   color: var(--entre-ink-soft);
@@ -535,36 +545,16 @@ body.entrepreneurship-page {
   border: 1px solid rgba(73, 45, 34, 0.16);
   border-radius: 12px;
   background: rgba(248, 237, 216, 0.84);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition: none;
 }
 
-.interactive-card:hover,
-.interactive-card[open] {
-  border-color: var(--entre-copper);
-  box-shadow: 0 10px 28px rgba(73, 45, 34, 0.11);
-  transform: translateY(-2px);
-}
-
-.interactive-card summary {
+.interactive-card__title {
+  margin: 0;
   padding: 16px;
-  cursor: pointer;
   color: var(--entre-copper-dark);
   font-size: 0.9rem;
   font-weight: 700;
-  list-style: none;
-}
-
-.interactive-card summary::-webkit-details-marker {
-  display: none;
-}
-
-.interactive-card summary::after {
-  float: right;
-  content: "+";
-}
-
-.interactive-card[open] summary::after {
-  content: "−";
+  line-height: 1.4;
 }
 
 .interactive-card__body {
@@ -790,7 +780,8 @@ body.entrepreneurship-page {
     grid-template-columns: 1fr;
   }
 
-  .interactive-table {
+  .interactive-table,
+  .static-card-table {
     padding: 16px;
   }
 
