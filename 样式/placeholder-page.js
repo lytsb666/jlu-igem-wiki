@@ -11,8 +11,10 @@ const coverAssets = {
 const coverMarkup = coverAssets[cover]
   ? `<section class="image-page-hero" aria-label="${title} cover">
       <img src="${coverAssets[cover]}" width="2848" height="1600" alt="${title} illustrated cover" fetchpriority="high" decoding="async">
+      <div class="image-page-hero__label"><span>${section}</span><h1>${title}</h1></div>
     </section>`
   : ''
+const contentHeadingTag = coverAssets[cover] ? 'h2' : 'h1'
 
 root.innerHTML = `
   <nav class="navbar" aria-label="Primary navigation">
@@ -63,7 +65,7 @@ root.innerHTML = `
   <main class="placeholder-main">
     <section class="placeholder-card">
       <p class="placeholder-kicker">${section}</p>
-      <h1>${title}</h1>
+      <${contentHeadingTag}>${title}</${contentHeadingTag}>
       <p>${description}</p>
       <a class="placeholder-home" href="../homepage/index.html">Back to Home</a>
     </section>

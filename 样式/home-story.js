@@ -24,9 +24,6 @@ if (story) {
   const compactViewport = window.matchMedia('(max-width: 720px)')
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
   const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
-  const objects = {
-    elderly: story.querySelector('.story-elderly'),
-  }
   const instrumentImages = instrumentScene
     ? [...instrumentScene.querySelectorAll('img')]
     : []
@@ -84,12 +81,6 @@ if (story) {
   ]
   const coverFrameBlends = [[0.53, 0.59], [0.665, 0.725], [0.82, 0.88], [0.94, 0.98]]
   const coverFrameReady = coverKeyframes.map((frame) => frame.complete && frame.naturalWidth > 0)
-
-  const anchors = {
-    // X values come directly from the WPS composition. Y values are mapped
-    // onto the taller source background using matched landscape landmarks.
-    elderly: [0.759547, 0.889220],
-  }
 
   function clamp(value, min = 0, max = 1) {
     return Math.min(max, Math.max(min, value))
@@ -175,7 +166,9 @@ if (story) {
 
         sourceContext.putImageData(pixels, 0, 0)
         const split = Math.round(width * 0.563)
-        const gap = Math.round(width * 0.348)
+        // Keep the two illustrated groups close to the fire while preserving
+        // their original scale and left/right arrangement.
+        const gap = Math.round(width * 0.14)
         campfirePeople.width = width + gap
         campfirePeople.height = height
         outputContext.clearRect(0, 0, campfirePeople.width, height)
@@ -297,20 +290,6 @@ if (story) {
 
     scenePreparation[name] = prepareSceneImages(name, scene, images)
     return scenePreparation[name]
-  }
-
-  function revealFromViewportBottom(element, anchorY, scale, stageTop, viewportHeight) {
-    const objectTop = stageTop + anchorY - element.offsetHeight * scale * 0.5
-    const revealDistance = Math.max(240, viewportHeight * 0.52)
-    return smoothstep((viewportHeight - objectTop) / revealDistance)
-  }
-
-  function setObject(element, x, y, opacity, scale = 1, rise = 0) {
-    element.style.setProperty('--object-x', `${x}px`)
-    element.style.setProperty('--object-y', `${y}px`)
-    element.style.setProperty('--object-opacity', opacity.toFixed(3))
-    element.style.setProperty('--object-scale', scale.toFixed(3))
-    element.style.setProperty('--object-rise', `${rise}px`)
   }
 
   function setCoverScene(progress) {
@@ -721,7 +700,6 @@ if (story) {
       ensureScenePrepared('finale', finaleScene, finaleImages)
     }
 
-    const stageTop = stage.getBoundingClientRect().top
     const worldWidth = world.offsetWidth
     const worldHeight = world.offsetHeight
     const processionCanvasWidth = processionCanvas ? processionCanvas.offsetWidth : viewportWidth
@@ -740,18 +718,9 @@ if (story) {
       campfirePeople.style.setProperty('--campfire-y', `${worldTop + introHeight * 0.958}px`)
       campfirePeople.style.setProperty(
         '--campfire-people-width',
-        `${worldWidth * (compactViewport.matches ? 0.44 : 0.52)}px`,
+        `${worldWidth * (compactViewport.matches ? 0.37 : 0.44)}px`,
       )
     }
-
-    const anchorPosition = (name) => ({
-      x: worldLeft + anchors[name][0] * worldWidth,
-      y: worldTop + anchors[name][1] * worldHeight,
-    })
-
-    const elderlyAnchor = anchorPosition('elderly')
-    const elderlyReveal = revealFromViewportBottom(objects.elderly, elderlyAnchor.y, 0.96, stageTop, viewportHeight)
-    setObject(objects.elderly, elderlyAnchor.x, elderlyAnchor.y, elderlyReveal, 0.96 + elderlyReveal * 0.04, (1 - elderlyReveal) * 48)
 
     const elapsed = lastCoverFrameTime === null
       ? 16
@@ -805,7 +774,6 @@ if (story) {
   window.addEventListener('blur', clearWorldIntroPointer)
   world.addEventListener('load', requestUpdate, { once: true })
   worldLightLayers.forEach(({ element }) => element.addEventListener('load', requestUpdate, { once: true }))
-  Object.values(objects).forEach((object) => object.addEventListener('load', requestUpdate, { once: true }))
   instrumentImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
   processionImages.forEach((image) => image.addEventListener('load', requestUpdate, { once: true }))
   coverKeyframes.forEach((image, index) => {

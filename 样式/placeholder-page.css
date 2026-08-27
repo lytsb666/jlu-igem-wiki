@@ -31,7 +31,7 @@ body[data-cover] .placeholder-main {
     text-transform: uppercase;
 }
 
-.placeholder-card h1 {
+.placeholder-card :is(h1, h2) {
     margin-bottom: 20px;
     color: #492d22;
     font-size: clamp(2.6rem, 8vw, 5.6rem);

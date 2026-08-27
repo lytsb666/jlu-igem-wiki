@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,6 +77,7 @@
         ====================================== */
         .image-page-hero {
             position: relative;
+            isolation: isolate;
             width: min(1440px, calc(100% - 40px));
             margin: 84px auto 44px;
             overflow: hidden;
@@ -85,18 +86,33 @@
             box-shadow: 0 22px 55px rgba(73, 45, 34, 0.18);
         }
         .image-page-hero img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+        .image-page-hero::after {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            content: "";
+            pointer-events: none;
+            background: linear-gradient(90deg, rgba(10, 24, 31, 0.78), rgba(10, 24, 31, 0.3) 52%, rgba(10, 24, 31, 0.03) 76%);
+        }
         .image-page-hero__label {
             position: absolute;
-            left: clamp(20px, 5vw, 72px);
-            bottom: clamp(20px, 5vw, 64px);
-            padding: 18px 24px;
-            border-left: 5px solid #4e3d28;
-            border-radius: 0 16px 16px 0;
-            background: rgba(73, 45, 34, 0.9);
-            backdrop-filter: blur(10px);
+            left: clamp(24px, 6vw, 88px);
+            bottom: clamp(36px, 8vw, 100px);
+            z-index: 1;
+            max-width: min(760px, calc(100% - 48px));
+            color: #fff;
+            text-shadow: 0 3px 24px rgba(0, 0, 0, 0.52);
         }
-        .image-page-hero__label span { color: #f2e3c6; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
-        .image-page-hero__label h1 { margin-top: 5px; color: #f2e3c6; font-size: clamp(2rem, 5vw, 4.6rem); line-height: 1; }
+        .image-page-hero__label > span { display: block; margin-bottom: 16px; color: rgba(255,255,255,.92); font-family: Arial,sans-serif; font-size: .76rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; }
+        .image-page-hero__label h1 { margin: 0; color: #fff; font-family: Georgia,"Times New Roman",serif; font-size: clamp(3rem,7vw,7rem); font-weight: 500; line-height: .84; letter-spacing: -.055em; }
+        .image-page-hero__label h1 em { color: #f4ca83; font-weight: inherit; font-style: italic; }
+        @media (max-width: 680px) {
+            .image-page-hero { width: calc(100% - 24px); margin-top: 72px; border-radius: 16px; }
+            .image-page-hero img { aspect-ratio: 4 / 5; object-position: 62% center; }
+            .image-page-hero::after { background: linear-gradient(0deg, rgba(10,24,31,.86), rgba(10,24,31,.05) 76%); }
+            .image-page-hero__label { right: 24px; left: 24px; bottom: 48px; max-width: none; }
+            .image-page-hero__label h1 { font-size: clamp(2.7rem, 13vw, 5rem); }
+        }
 
         .main-content {
             margin-top: 60px;
@@ -434,7 +450,7 @@
     <p class="loading-kicker">JLU-SPH - iGEM 2026</p>
     <div class="loading-wordmark">LOADING</div>
     <div class="loading-progress" aria-hidden="true"><span></span></div>
-    <p class="loading-message">Preparing the experiment...</p>`r`n
+    <p class="loading-message">Preparing the experiment...</p>
   </div>
 </div>
 
@@ -500,8 +516,8 @@
   </div>
 </nav>
 <header class="image-page-hero">
-  <img src="../a  图片/ihp.png" alt="Integrated Human Practices page illustration" />
-  <div class="image-page-hero__label"><span>Engagement</span><h1>Integrated Human Practices</h1></div>
+  <img src="../a  图片/page-covers/ihp.png" width="1377" height="768" alt="ByeGerm mascot connecting science, health, and community perspectives" fetchpriority="high" decoding="async" />
+  <div class="image-page-hero__label"><span>Engagement</span><h1>Integrated<br><em>Human Practices</em></h1></div>
 </header>
 
 <!-- HP页面主体 - 飞书文档模式 -->
@@ -563,7 +579,7 @@
     <!-- 右侧正文区域 -->
     <article class="hp-content" id="hp">
         <!-- 页面标题 -->
-        <h1 class="hp-title">Human Practice</h1>
+        <h2 class="hp-title">Human Practice</h2>
         <p class="hp-subtitle">JLU-SPH iGEM 2026 | 呼吸道病原体快速检测平台</p>
 
         <!-- 概述 -->

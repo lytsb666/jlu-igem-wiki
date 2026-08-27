@@ -51,10 +51,15 @@ button { font: inherit; }
 
 .edu-hero {
   position: relative;
-  min-height: max(760px, 100svh);
+  width: min(1440px, calc(100% - 40px));
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  margin: 84px auto 44px;
   overflow: hidden;
   color: #fffaf1;
   background: #1c2625;
+  border-radius: 24px;
+  box-shadow: var(--edu-shadow);
   isolation: isolate;
 }
 .edu-hero::before {
@@ -81,8 +86,8 @@ button { font: inherit; }
   position: relative;
   z-index: 3;
   width: min(680px, calc(100% - 48px));
-  padding: clamp(128px, 18vh, 190px) 0 110px;
-  margin-left: max(24px, calc((100vw - 1280px) / 2));
+  padding: clamp(82px, 8vw, 132px) 0 clamp(52px, 5vw, 76px);
+  margin-left: clamp(34px, 6vw, 88px);
 }
 .edu-kicker,
 .mini-kicker,
@@ -98,7 +103,7 @@ button { font: inherit; }
   max-width: 8ch;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4.2rem, 9vw, 8.8rem);
+  font-size: clamp(3.3rem, 7vw, 7rem);
   font-weight: 600;
   line-height: 0.84;
   letter-spacing: -0.065em;
@@ -136,25 +141,14 @@ button { font: inherit; }
 .edu-stats dt { color: #f0c777; font-family: "Fraunces", Georgia, serif; font-size: 2rem; line-height: 1; }
 .edu-stats dd { margin: 7px 0 0; color: rgba(255,255,255,.62); font-size: .72rem; line-height: 1.4; text-transform: uppercase; letter-spacing: .1em; }
 
-.hero-collage { position: absolute; inset: 0; z-index: -2; margin: 0; }
-.hero-collage img {
+.edu-hero__cover {
   position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  filter: saturate(.82) contrast(1.02);
-  box-shadow: 0 28px 80px rgba(0,0,0,.38);
-}
-.hero-collage__care { top: 0; right: 0; width: 60%; height: 58%; object-position: 52% 46%; }
-.hero-collage__explore { right: 28%; bottom: 0; width: 42%; height: 51%; object-position: 50% 48%; clip-path: polygon(8% 0,100% 0,100% 100%,0 100%); }
-.hero-collage__include { right: 0; bottom: 0; width: 34%; height: 48%; object-position: 48% 45%; clip-path: polygon(12% 0,100% 0,100% 100%,0 100%); }
-.hero-collage figcaption {
-  position: absolute;
-  right: 34px;
-  bottom: 24px;
-  z-index: 4;
-  color: rgba(255,255,255,.68);
-  font-size: .68rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
+  object-position: center;
 }
 .edu-hero__scroll { position: absolute; left: 50%; bottom: 24px; z-index: 5; display: grid; justify-items: center; gap: 8px; color: rgba(255,255,255,.7); font-size: .7rem; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; transform: translateX(-50%); }
 .edu-hero__scroll span { width: 1px; height: 34px; background: linear-gradient(#f2cc7a, transparent); }
@@ -314,6 +308,7 @@ button { font: inherit; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (max-width: 1100px) {
+  .edu-hero { min-height: 720px; aspect-ratio: auto; }
   .edu-shell { grid-template-columns: 1fr; width: min(940px, calc(100% - 40px)); }
   .edu-toc { position: sticky; top: 70px; z-index: 20; display: flex; gap: 18px; overflow-x: auto; padding: 10px 16px; background: rgba(247,241,231,.94); border: 1px solid var(--edu-line); border-radius: 999px; backdrop-filter: blur(12px); }
   .edu-toc > p, .edu-toc__progress { display: none; }
@@ -328,16 +323,13 @@ button { font: inherit; }
 
 @media (max-width: 760px) {
   html { scroll-padding-top: 76px; }
-  .edu-hero { min-height: 900px; }
+  .edu-hero { width: calc(100% - 20px); min-height: 900px; margin-top: 70px; border-radius: 16px; }
   .edu-hero::before { background: linear-gradient(180deg, rgba(18,30,29,.88) 0%, rgba(18,30,29,.7) 43%, rgba(18,30,29,.96) 78%); }
   .edu-hero__copy { width: calc(100% - 36px); padding-top: 104px; margin: 0 18px; }
   .edu-hero h1 { font-size: clamp(3.8rem, 18vw, 6.2rem); }
+  .edu-hero__cover { object-position: 62% center; }
   .edu-stats { gap: 16px; }
   .edu-stats div { min-width: 0; }
-  .hero-collage__care { width: 100%; height: 50%; }
-  .hero-collage__explore { right: 45%; width: 62%; height: 43%; }
-  .hero-collage__include { width: 56%; height: 43%; }
-  .hero-collage figcaption { right: 18px; bottom: 18px; max-width: 58%; text-align: right; }
   .edu-shell { width: min(100% - 28px, 680px); padding-top: 70px; }
   .edu-section { padding-bottom: 86px; }
   .edu-section + .edu-section { padding-top: 78px; }
