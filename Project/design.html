@@ -1,128 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design | JLU-SPH</title>
-    <link rel="stylesheet" href="../样式/style.css" />
-      <link rel="stylesheet" href="../样式/loading.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Design requirements, biological modules, dry-lab models, and portable detector architecture for the JLU-SPH project." />
+  <title>Design | JLU-SPH iGEM 2026</title>
+  <link rel="stylesheet" href="../样式/style.css" />
+  <link rel="stylesheet" href="../样式/loading.css" />
+  <link rel="stylesheet" href="../样式/wetlab-pages.css" />
 </head>
+<body class="wetlab-page loading-lock" data-page="design">
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <body class="loading-lock">
 <div id="igem-loader" class="igem-loader" role="status" aria-live="polite" aria-label="Loading page">
   <video class="loading-video" autoplay muted playsinline preload="auto">
     <source src="../b%20%20%E8%A7%86%E9%A2%91/loading.mp4" type="video/mp4" />
   </video>
   <div class="loading-overlay"></div>
   <div class="loading-content">
-    <p class="loading-kicker">JLU-SPH - iGEM 2026</p>
-    <div class="loading-wordmark">LOADING</div>
-    <div class="loading-progress" aria-hidden="true"><span></span></div>
-    <p class="loading-message">Preparing the experiment...</p>
+    <p class="loading-kicker">JLU-SPH - iGEM 2026</p><div class="loading-wordmark">LOADING</div>
+    <div class="loading-progress" aria-hidden="true"><span></span></div><p class="loading-message">Preparing the experiment...</p>
   </div>
 </div>
+
 <nav class="navbar" aria-label="Primary navigation">
   <div class="nav-links">
-    <div class="dropdown nav-home">
-      <a href="../homepage/index.html" class="nav-link">Home</a>
-    </div>
+    <div class="dropdown nav-home"><a href="../homepage/index.html" class="nav-link">Home</a></div>
     <div class="dropdown">
       <a href="../Project/description.html" class="nav-link">Project</a>
       <div class="dropdown-content">
-        <a href="../Project/description.html">Description</a>
-        <a href="../Project/design.html">Design</a>
-        <a href="../Project/engineering.html">Engineering</a>
-        <a href="../Project/safety.html">Safety</a>
+        <a href="../Project/description.html">Description</a><a href="../Project/design.html">Design</a>
+        <a href="../Project/engineering.html">Engineering</a><a href="../Project/safety.html">Safety</a>
         <a href="../Project/contribution.html">Contribution</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="../Eagagement/iHP.html" class="nav-link">Engagement</a>
       <div class="dropdown-content">
-        <a href="../Eagagement/iHP.html">iHP</a>
-        <a href="../Eagagement/collaboration.html">Collaboration</a>
-        <a href="../Eagagement/inclusity.html">Inclusivity</a>
-        <a href="../Eagagement/education.html">Education</a>
+        <a href="../Eagagement/iHP.html">iHP</a><a href="../Eagagement/collaboration.html">Collaboration</a>
+        <a href="../Eagagement/inclusity.html">Inclusivity</a><a href="../Eagagement/education.html">Education</a>
         <a href="../Eagagement/entrepreneurship.html">Entrepreneurship</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="../Wet-lab/protocal.html" class="nav-link">Wetlab</a>
       <div class="dropdown-content">
-        <a href="../Wet-lab/protocal.html">Protocol</a>
-        <a href="../Wet-lab/notebook.html">Notebook</a>
-        <a href="../Wet-lab/measurement.html">Measurement</a>
-        <a href="../Wet-lab/part.html">Part</a>
-        <a href="../Wet-lab/result.html">Result</a>
+        <a href="../Wet-lab/protocal.html">Protocol</a><a href="../Wet-lab/notebook.html">Notebook</a>
+        <a href="../Wet-lab/measurement.html">Measurement</a><a href="../Wet-lab/part.html">Parts</a>
+        <a href="../Wet-lab/result.html">Results</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="../Instrument/hardware.html" class="nav-link">Instrument</a>
       <div class="dropdown-content">
-        <a href="../Instrument/hardware.html">Hardware</a>
-        <a href="../Instrument/software.html">Software</a>
+        <a href="../Instrument/hardware.html">Hardware</a><a href="../Instrument/software.html">Software</a>
         <a href="../Instrument/model.html">Model</a>
       </div>
     </div>
     <div class="dropdown">
       <a href="../Team/member.html" class="nav-link">Team</a>
-      <div class="dropdown-content">
-        <a href="../Team/member.html">Member</a>
-        <a href="../Team/attribution.html">Attribution</a>
-      </div>
+      <div class="dropdown-content"><a href="../Team/member.html">Member</a><a href="../Team/attribution.html">Attribution</a></div>
     </div>
     <div class="dropdown">
       <a href="../Judging/iHP.html" class="nav-link">Judging</a>
-      <div class="dropdown-content">
-        <a href="../Judging/iHP.html">iHP</a>
-        <a href="../Judging/model.html">Model</a>
-        <a href="../Judging/hardware.html">Hardware</a>
-      </div>
+      <div class="dropdown-content"><a href="../Judging/iHP.html">iHP</a><a href="../Judging/model.html">Model</a><a href="../Judging/hardware.html">Hardware</a></div>
     </div>
   </div>
 </nav>
 
-
-    <main>
-      <header class="image-page-hero">
-  <img src="../a  图片/page-covers/design.png" width="1376" height="768" alt="ByeGerm mascot reflecting on project design beneath a starry sky" fetchpriority="high" decoding="async" />
+<section class="image-page-hero" aria-label="Design cover">
+  <img src="../a  图片/page-covers/design.png" alt="ByeGerm mascot reflecting on project design beneath a starry sky" fetchpriority="high" decoding="async" />
   <div class="image-page-hero__label"><span>Project</span><h1>Design</h1></div>
-</header>
+  <div class="lab-cover-note" aria-label="Page highlights"><span>Model-assisted</span><span>Modular biology</span><span>Field-ready</span></div>
+</section>
+<main class="lab-main" id="main-content" tabindex="-1"><div class="lab-layout"><aside class="page-toc" aria-label="On this page"><p class="toc-kicker">On this page</p><nav><div><a data-section-link href="#design-overview">Design Overview</a></div><div><a data-section-link href="#design-requirements">Design Requirements</a></div><div><a data-section-link href="#biological-module">Biological Module Design</a><ul><li><a data-section-link href="#target-selection">Target Selection</a></li><li><a data-section-link href="#dnabert-6-guided-co-screening-of-rpa-primers-and-crrnas">DNABERT-6-Guided Co-screening of RPA Primers and crRNAs</a></li><li><a data-section-link href="#fluorescence-reporting-module">Fluorescence Reporting Module</a></li></ul></div><div><a data-section-link href="#dry-lab-model">Dry-Lab Model Design</a><ul><li><a data-section-link href="#dnabert-6-assisted-candidate-prioritization">DNABERT-6-Assisted Candidate Prioritization</a></li><li><a data-section-link href="#enzyme-kinetic-modeling">Enzyme-Kinetic Modeling</a></li></ul></div><div><a data-section-link href="#portable-device">Portable Detection Device Design</a><ul><li><a data-section-link href="#modular-hardware-architecture">Modular Hardware Architecture</a></li><li><a data-section-link href="#optical-design">Optical Design</a></li><li><a data-section-link href="#temperature-control-design">Temperature-Control Design</a></li><li><a data-section-link href="#mobile-interface-and-user-workflow">Mobile Interface and User Workflow</a></li></ul></div><div><a data-section-link href="#planned-evaluation">Planned Evaluation</a></div><div><a data-section-link href="#scope-limitations">Design Scope and Limitations</a></div><div><a data-section-link href="#references">References</a></div></nav></aside><div class="article-flow">
+<section class="lab-intro">
+  <p class="section-kicker">Design premise</p><h2>Specific biology. Reusable architecture.</h2>
+  <p>Target-specific primer–crRNA modules plug into a common RPA–Cas12a reaction, fluorescence readout, portable hardware stack, and model-guided DBTL workflow.</p>
+  <div class="feature-grid">
+    <div class="feature-card"><strong>Sequence layer</strong><p>DNABERT-6 prioritizes context-aware primer–crRNA candidates.</p></div>
+    <div class="feature-card"><strong>Reaction layer</strong><p>Kinetic modeling narrows practical starting ranges for wet-lab refinement.</p></div>
+    <div class="feature-card"><strong>Device layer</strong><p>Fixed thermal and optical geometry supports portable, traceable readout.</p></div>
+  </div>
+</section>
+<section class="lab-section" id="design-overview" data-observe-section>
+  <div class="section-heading"><span class="section-number">01</span><div><p class="section-kicker">Design system</p><h2>Design Overview</h2></div></div><p>Respiratory infections are caused by a diverse range of pathogens, yet their clinical symptoms often overlap. This creates a particular challenge in settings such as nursing homes and kindergartens, where older adults and young children may be more vulnerable to severe complications and where rapid identification of the causative pathogen is especially important [1]. Conventional nucleic-acid testing, however, often relies on sophisticated instruments and trained personnel, limiting its suitability for decentralized screening and outbreak response in resource-constrained settings.</p><p>To address this gap, we designed a point-of-care detection platform based on recombinase polymerase amplification (RPA) coupled with CRISPR–Cas12a. RPA enables nucleic-acid amplification under isothermal conditions, while CRISPR–Cas12a provides programmable sequence recognition and a fluorescence-based readout. Together, these features make the platform attractive for rapid and highly specific molecular diagnostics without the need for thermal cycling [2].</p><p>A major challenge in developing RPA–CRISPR assays is that the optimization process is often highly empirical. Different targets vary in GC content, secondary structure, and amplification kinetics; primer and crRNA performance cannot be predicted by a single universal rule; and multiple reaction components interact with one another in a strongly coupled manner. As a result, adapting an assay to a new pathogen can require extensive trial-and-error, increasing development time and reducing reproducibility [3].</p><p>Our project therefore aims to establish a standardized development workflow that integrates model-assisted sequence screening, enzyme-kinetic parameter estimation, and iterative Design–Build–Test–Learn (DBTL) cycles between dry-lab and wet-lab experiments. Five representative respiratory pathogens are used as iterative development targets. By repeatedly designing, testing, and refining the workflow across multiple pathogen-specific systems, we aim to improve its transferability and robustness. The resulting framework is intended to support target-specific molecular component design, rational reaction-parameter initialization, and integration with a portable fluorescence-detection device.</p>
+</section>
+<section class="lab-section" id="design-requirements" data-observe-section>
+  <div class="section-heading"><span class="section-number">02</span><div><p class="section-kicker">Design system</p><h2>Design Requirements</h2></div></div><div class="table-wrap" role="region" aria-label="Scrollable table: Data table: Design requirement, Constraint / challenge, Design decision" tabindex="0"><table class="data-table"><caption class="visually-hidden">Data table: Design requirement, Constraint / challenge, Design decision</caption><thead><tr><th scope="col">Design requirement</th><th scope="col">Constraint / challenge</th><th scope="col">Design decision</th></tr></thead><tbody><tr><th scope="row">Distinguishable multiplex detection</th><td>Five respiratory pathogens must have independent and traceable recognition modules, with minimal sequence or signal cross-talk.</td><td>Pathogen-specific target regions, independent primer–crRNA sets, and distinguishable fluorescence channels.</td></tr><tr><th scope="row">Compatibility with low target abundance</th><td>Target nucleic-acid levels may be low during early infection.</td><td>Use isothermal RPA as a pre-amplification layer.</td></tr><tr><th scope="row">High specificity</th><td>Isothermal amplification alone may generate nonspecific products.</td><td>Use Cas12a–crRNA recognition as a second sequence-validation layer.</td></tr><tr><th scope="row">Interpretable assay development</th><td>Primers, crRNAs, and reaction parameters are interdependent and cannot be optimized efficiently by blind trial-and-error.</td><td>Use DNABERT-6 for sequence-level prioritization and enzyme-kinetic modeling for initial concentration and ratio estimation.</td></tr><tr><th scope="row">Modular transferability</th><td>Assays for different pathogens should share as many fixed modules as possible.</td><td>Separate target-specific sequence design from the general reaction, readout, and hardware layers.</td></tr><tr><th scope="row">Field usability</th><td>The assay should not depend on large thermal cyclers or subjective manual interpretation.</td><td>Use isothermal temperature control, enclosed optical readout, portable power, and mobile-device result display.</td></tr><tr><th scope="row">Reproducibility and extensibility</th><td>Future teams should be able to reuse the core framework while replacing the target.</td><td>Define clear interfaces, standardized reaction vessels, modular hardware, and digital parameter configuration.</td></tr><tr><th scope="row">Reduced contamination risk</th><td>Repeated tube opening after amplification increases aerosol-contamination risk.</td><td>Prioritize a closed or one-pot architecture to minimize post-amplification handling.</td></tr></tbody></table></div>
+</section>
+<section class="lab-section" id="biological-module" data-observe-section>
+  <div class="section-heading"><span class="section-number">03</span><div><p class="section-kicker">Design system</p><h2>Biological Module Design</h2></div></div><h3 id="target-selection">3.1 Target Selection</h3><p>Our detection panel includes respiratory syncytial virus (RSV), human metapneumovirus (hMPV), Streptococcus pneumoniae (SPN), Bordetella pertussis (BP), and Haemophilus influenzae (HI). For each pathogen, assay design begins with a nucleic-acid region that is representative of the target species and relatively conserved within the population of interest. Candidate target regions must satisfy two key constraints: they should minimize the impact of within-species sequence variation on assay performance, while remaining sufficiently different from non-target respiratory pathogens. This provides the sequence foundation for two layers of specificity: RPA amplification and crRNA-mediated Cas12a recognition.</p><h3 id="dnabert-6-guided-co-screening-of-rpa-primers-and-crrnas">3.2 DNABERT-6-Guided Co-screening of RPA Primers and crRNAs</h3><p>We use RPA as the upstream amplification module and couple it directly to CRISPR–Cas12a recognition. Because RPA primers and crRNAs jointly determine amplification efficiency, target specificity, and Cas12a activation, we do not treat them as two independent design problems. Instead, we use DNABERT-6 as a unified sequence-prioritization framework to co-screen candidate RPA primer–crRNA combinations.</p><p>Candidate RPA primers and corresponding crRNA target sites are first generated from the conserved, pathogen-specific regions identified in Section 3.1. RPA is selected because it amplifies nucleic acids under isothermal conditions, eliminating the denaturation, annealing, and extension cycles required for conventional PCR. During candidate generation, primer length, GC content, template matching, potential primer-dimer formation, intramolecular secondary structure, and off-target matching are considered. At the same time, the amplicon defined by the primer pair must contain a complete Cas12a-recognizable target sequence and satisfy the relevant PAM and local sequence requirements.</p><p>The candidate primer sequences, amplicon target regions, and corresponding crRNA spacer sequences are then evaluated with DNABERT-6. In our workflow, DNABERT-6 does not replace conventional sequence-design rules or wet-lab validation. Rather, it serves as a sequence-context representation and prioritization model that helps rank a large number of candidate primer–crRNA combinations. Model-derived scores are considered together with conventional bioinformatic constraints, allowing us to prioritize combinations with more favorable overall sequence specificity, amplification compatibility, target conservation, and compatibility with Cas12a recognition.</p><p>This strategy compresses a large candidate space into a smaller set of high-priority designs for experimental validation. Importantly, RPA amplification and CRISPR recognition are therefore coupled from the sequence-design stage onward. The primer pair defines the amplicon boundaries, while the crRNA spacer recognizes a pathogen-specific sequence within that amplicon. A candidate is retained only when the primer pair can support target amplification and the resulting amplicon contains an appropriate Cas12a recognition site.</p><p>During detection, RPA first enriches the target sequence under isothermal conditions. The resulting amplicon is then interrogated by the Cas12a–crRNA ribonucleoprotein complex. Only when the amplified sequence matches the corresponding crRNA and satisfies the Cas12a activation requirements is Cas12a trans-cleavage activated. RPA therefore provides target enrichment and signal amplification, whereas Cas12a–crRNA adds a second layer of sequence verification, helping reduce false-positive signals caused by nonspecific amplification.</p><h3 id="fluorescence-reporting-module">3.3 Fluorescence Reporting Module</h3><p>The reporting layer uses a single-stranded DNA fluorescence reporter that can be cleaved by activated Cas12a. In the intact reporter, the fluorophore and quencher remain in close proximity and fluorescence is suppressed. Once Cas12a is activated, trans-cleavage separates the fluorophore from the quencher, producing a fluorescence signal that can be captured by the optical module.</p><p>For parallel detection of five pathogens, each target must be assigned a distinguishable signal identity. Our design therefore uses independent reaction channels together with fluorescence color or channel encoding, creating a direct mapping between pathogen identity and signal-output channel. This allows the detected pathogen to be determined from the channel in which fluorescence is generated.</p>
+</section>
+<section class="lab-section" id="dry-lab-model" data-observe-section>
+  <div class="section-heading"><span class="section-number">04</span><div><p class="section-kicker">Design system</p><h2>Dry-Lab Model Design</h2></div></div><h3 id="dnabert-6-assisted-candidate-prioritization">4.1 DNABERT-6-Assisted Candidate Prioritization</h3><p>DNABERT-6 is the core sequence-level model in our dry-lab workflow, and its role is embedded upstream in the co-design of RPA primers and crRNAs. For each pathogen, candidate primer–crRNA combinations are generated around conserved, species-specific target regions. DNABERT-6 is then used to represent sequence-context features and support candidate ranking in combination with conventional sequence-design constraints.</p><p>The model is intended to reduce the search space rather than to output a single experimentally validated sequence. Only a limited number of high-priority primer–crRNA combinations are advanced to wet-lab testing. This increases the efficiency of experimental screening while allowing all five pathogens to be evaluated using a consistent sequence-prioritization framework.</p><h3 id="enzyme-kinetic-modeling">4.2 Enzyme-Kinetic Modeling</h3><p>After sequence-level candidate screening, we construct an enzyme-kinetic model for the RPA–CRISPR/Cas12a system. The purpose of this model is to describe how key component concentrations and their relative ratios influence reaction kinetics, product formation, and downstream signal generation.</p><p>The modeled parameters primarily include the concentrations of forward and reverse RPA primers, recombinase, polymerase, single-stranded DNA-binding protein, and other reaction components for which a mechanistic relationship can be reasonably represented. By translating concentration and stoichiometric combinations into a computationally searchable parameter space, the model can identify theoretically favorable regions of the design space under defined constraints.</p><p>Crucially, the kinetic model is not intended to determine every final experimental condition. Its role is to provide rational initial concentration ranges and component ratios for wet-lab testing. The real RPA–CRISPR/Cas12a system is influenced by additional factors that are difficult to capture completely in a simplified kinetic model, including buffer composition, ionic environment, reaction temperature, reaction time, effective enzyme activity, and non-ideal interactions between components.</p><p>We therefore use a two-stage optimization strategy: dry-lab pre-optimization followed by wet-lab refinement. First, the kinetic model provides theoretically favorable ranges for primer concentrations, enzyme concentrations, and key component ratios. These values are used as informed starting points rather than as final assay settings. Wet-lab experiments then explore the surrounding parameter space and further optimize conditions such as reaction temperature, RNP concentration and ratio, Mg2+ concentration, and other experimentally coupled variables.</p><p>In this framework, dry-lab modeling narrows the initial search space and reduces unnecessary trial-and-error, while wet-lab experiments correct for deviations between the simplified model and the actual biochemical system. The final RPA–CRISPR/Cas12a reaction conditions are therefore established through iterative model-guided experimentation rather than by computational prediction alone.</p>
+</section>
+<section class="lab-section" id="portable-device" data-observe-section>
+  <div class="section-heading"><span class="section-number">05</span><div><p class="section-kicker">Design system</p><h2>Portable Detection Device Design</h2></div></div><div class="pending-visual"><div><strong>Portable detector — exploded view</strong><span>The instrument team’s final exploded-view artwork can be placed here without changing the page structure.</span></div></div><h3 id="modular-hardware-architecture">5.1 Modular Hardware Architecture</h3><p class="table-caption">Modular Hardware Architecture</p><div class="table-wrap" role="region" aria-label="Scrollable table: Modular Hardware Architecture" tabindex="0"><table class="data-table"><caption class="visually-hidden">Modular Hardware Architecture</caption><thead><tr><th scope="col">Hardware module</th><th scope="col">Design responsibility</th></tr></thead><tbody><tr><th scope="row">Temperature-control module</th><td>Provide a stable isothermal environment for the RPA–CRISPR cascade. A heating block, temperature sensor, and feedback controller are used to reduce spatial temperature differences and temporal drift.</td></tr><tr><th scope="row">Optical excitation and acquisition module</th><td>Use LEDs matched to the reporter excitation spectrum together with optical filters and a camera or photodetector to capture fluorescence while minimizing direct excitation-light leakage into the detection path.</td></tr><tr><th scope="row">Dark chamber / optical isolation</th><td>Shield the system from ambient light and fix the relative geometry of the sample, excitation source, and detector to improve signal comparability across operating environments.</td></tr><tr><th scope="row">Control and data-processing module</th><td>Coordinate temperature control, illumination, sampling, and data logging, and provide standardized data for qualitative or semi-quantitative interpretation.</td></tr><tr><th scope="row">Communication and mobile interface</th><td>Transmit device status and readout results wirelessly to a mobile device, reducing the need for users to interpret raw fluorescence measurements.</td></tr><tr><th scope="row">Power and safety module</th><td>Support portable operation while considering overcharge, overcurrent, short-circuit, and thermal-isolation protection.</td></tr><tr><th scope="row">Mechanical and sample-positioning module</th><td>Ensure repeatable positioning of reaction tubes relative to the thermal and optical components and provide consistent geometry for multi-channel detection.</td></tr></tbody></table></div><h3 id="optical-design">5.2 Optical Design</h3><p>Portable fluorescence detection should not rely solely on visual inspection. We therefore design the optical path as a controlled chain of excitation, spectral filtering, and fixed-geometry acquisition. The excitation LED is positioned reproducibly relative to the sample chamber, emission filters are matched to the reporter spectrum, and the camera or optical sensor records only the fluorescence band of interest. An enclosed dark chamber further reduces interference from room lighting, sunlight, and mobile-phone screens.</p><p>This architecture standardizes signal acquisition across pathogen channels and provides a clear interface for future algorithm-based image or fluorescence analysis.</p><h3 id="temperature-control-design">5.3 Temperature-Control Design</h3><p>Because the RPA–CRISPR system does not require rapid thermal cycling, the thermal design can focus on three goals: reaching the target temperature quickly, maintaining stable temperature over time, and ensuring consistency across reaction positions. A heating block transfers heat to the sample chamber, a temperature sensor provides real-time feedback, and the main controller adjusts heating power through a closed-loop strategy.</p><h3 id="mobile-interface-and-user-workflow">5.4 Mobile Interface and User Workflow</h3><p>The mobile interface is organized around the needs of the field operator rather than the underlying electronics. Core pages include device connection, reaction-parameter selection, run status, fluorescence curves or images, and final interpretation. The user is expected to load the sample and reagents, select the appropriate assay protocol, and start the run; temperature control, signal acquisition, and data organization are then coordinated by the device.</p><p>For the five-pathogen panel, the result interface should clearly distinguish RSV, hMPV, SPN, BP, and HI, together with negative or invalid-signal states. This prevents ambiguity and ensures that all displayed labels correspond directly to the targets included in our project.</p>
+</section>
+<section class="lab-section" id="planned-evaluation" data-observe-section>
+  <div class="section-heading"><span class="section-number">06</span><div><p class="section-kicker">Design system</p><h2>Planned Evaluation</h2></div></div><p>Before system testing, we define the types of measurements required to evaluate whether the design meets its intended specifications. These include discrimination between target and non-target sequences, response across target-concentration gradients, reproducibility between replicate experiments, tolerance to relevant sample-matrix components, time-resolved fluorescence behavior, and compatibility with the portable readout platform.</p>
+</section>
+<section class="lab-section" id="scope-limitations" data-observe-section>
+  <div class="section-heading"><span class="section-number">07</span><div><p class="section-kicker">Design system</p><h2>Design Scope and Limitations</h2></div></div><p>To maintain a clear engineering scope, we explicitly define the limitations of the current workflow. First, extreme physicochemical properties of a target sequence—such as very high or very low GC content or highly stable secondary structures—may impose intrinsic limits on assay performance. Our workflow can improve system compatibility, but it cannot eliminate constraints arising from the underlying biology of the target itself. Second, the current iterative training and validation framework focuses on respiratory pathogens. Expansion to substantially different pathogen classes will require additional experimental data and further calibration of model performance.</p>
+</section>
+<section class="lab-section" id="references" data-observe-section>
+  <div class="section-heading"><span class="section-number">08</span><div><p class="section-kicker">Source trail</p><h2>References</h2></div></div>
+  <details class="reference-fold"><summary>Open the reference list <span>3 sources</span></summary><ol class="reference-list"><li>1. GBD 2021 Upper Respiratory Infections and Otitis Media Collaborators. Global, regional, and national burden of upper respiratory infections and otitis media, 1990–2021: a systematic analysis from the Global Burden of Disease Study 2021. Lancet Infect Dis. 2024;24(10):1112–1132.</li><li>2. Kaminski MM, Abudayyeh OO, Gootenberg JS, Zhang F, Collins JJ. CRISPR-based diagnostics. Nat Biomed Eng. 2021;5(7):643–656.</li><li>3. Mao K, Zhang H, Yang Z. Realizing the potential of CRISPR-Cas systems in point-of-care nucleic acid diagnostics. Trends Biotechnol. 2024;42(3):328–342.</li></ol></details>
+</section></div></div></main>
 
-      <article class="content page-intro">
-  <h2>Design</h2>
-  <p>Explore the design principles, system architecture, and decisions that shaped our project.</p>
-</article>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="school-info"><div class="school-logo">JLU</div><h3>JiLin University</h3><h3>JLU-SPH iGEM Team</h3></div>
-        <div class="contact-title">CONTACT WITH US!</div>
-        <div class="qr-container">
-          <div class="qr-item"><div class="qr-code"></div><span>Instagram</span></div>
-          <div class="qr-item"><div class="qr-code"></div><span>RedNote</span></div>
-          <div class="qr-item"><div class="qr-code"></div><span>WeChat</span></div>
-        </div>
-        <div class="sponsor-title">SPONSORS &amp; COOPERATORS</div>
-        <div class="sponsors">
-          <div class="sponsor-logo">iGEM</div><div class="sponsor-logo">School</div><div class="sponsor-logo">CSC</div>
-          <div class="sponsor-logo">Lab</div><div class="sponsor-logo">iGEM</div><div class="sponsor-logo">iGEM</div>
-        </div>
-        <div class="copyright">© 2026 JLU-SPH. Content licensed under CC BY 4.0.<br>Source code: gitlab.igem.org/2026/jlu-sphera</div>
-      </div>
-    </footer>
-
-    <script type="module" src="../样式/main.js"></script>
-  <script data-loading-fallback>
-  window.setTimeout(function () {
-    var loader = document.getElementById('igem-loader');
-    if (loader) {
-      loader.classList.add('is-leaving');
-      document.body.classList.remove('loading-lock');
-      window.setTimeout(function () { loader.remove(); }, 700);
-    }
-  }, 4000);
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="school-info"><div class="school-logo">JLU</div><h3>JiLin University</h3><h3>JLU-SPH iGEM Team</h3></div>
+    <div class="contact-title">CONTACT WITH US!</div>
+    <div class="qr-container">
+      <div class="qr-item"><div class="qr-code"></div><span>Instagram</span></div>
+      <div class="qr-item"><div class="qr-code"></div><span>RedNote</span></div>
+      <div class="qr-item"><div class="qr-code"></div><span>WeChat</span></div>
+    </div>
+    <div class="sponsor-title">SPONSORS &amp; COOPERATORS</div>
+    <div class="sponsors">
+      <div class="sponsor-logo">iGEM</div><div class="sponsor-logo">School</div><div class="sponsor-logo">CSC</div>
+      <div class="sponsor-logo">Lab</div><div class="sponsor-logo">iGEM</div><div class="sponsor-logo">iGEM</div>
+    </div>
+    <div class="copyright">© 2026 JLU-SPH. Content licensed under CC BY 4.0.<br />Source code: gitlab.igem.org/2026/jlu-sphera</div>
+  </div>
+</footer>
+<script type="module" src="../样式/main.js"></script>
+<script type="module" src="../样式/wetlab-pages.js"></script>
+<script data-loading-fallback>
+window.setTimeout(function () {
+  var loader = document.getElementById('igem-loader');
+  if (loader) { loader.classList.add('is-leaving'); document.body.classList.remove('loading-lock'); window.setTimeout(function () { loader.remove(); }, 700); }
+}, 5200);
 </script>
 </body>
 </html>
