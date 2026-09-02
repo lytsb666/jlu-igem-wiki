@@ -134,21 +134,34 @@ function setupReveal() {
 function setupFigureLightbox() {
   const lightbox = document.querySelector('.figure-lightbox')
   const lightboxImage = lightbox?.querySelector('img')
+  const lightboxCaption = lightbox?.querySelector('#figure-lightbox-caption')
   const closeButton = lightbox?.querySelector('.figure-lightbox__close')
-  if (!lightbox || !lightboxImage || !closeButton) return
+  if (!lightbox || !lightboxImage || !lightboxCaption || !closeButton) return
+
+  let trigger = null
 
   const close = () => {
-    lightbox.hidden = true
+    if (!lightbox.open) return
+    lightbox.close()
     lightboxImage.removeAttribute('src')
+    lightboxImage.alt = ''
+    lightboxCaption.textContent = ''
     document.body.style.removeProperty('overflow')
+    trigger?.focus()
+    trigger = null
   }
 
   document.querySelectorAll('.figure-zoom').forEach((button) => {
     button.addEventListener('click', () => {
       const image = button.querySelector('img')
+      const caption = button.closest('figure')?.querySelector('figcaption')
+      if (!image) return
+
+      trigger = button
       lightboxImage.src = image?.currentSrc || image?.src || button.dataset.fullSrc
       lightboxImage.alt = image?.alt || 'Expanded entrepreneurship figure'
-      lightbox.hidden = false
+      lightboxCaption.textContent = caption?.textContent || image.alt
+      lightbox.showModal()
       document.body.style.overflow = 'hidden'
       closeButton.focus()
     })
@@ -157,8 +170,9 @@ function setupFigureLightbox() {
   lightbox.addEventListener('click', (event) => {
     if (event.target === lightbox) close()
   })
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !lightbox.hidden) close()
+  lightbox.addEventListener('cancel', (event) => {
+    event.preventDefault()
+    close()
   })
 }
 
