@@ -49,10 +49,12 @@ function enhanceCollapsibleSections() {
 }
 
 function setupToc() {
-  const headings = Array.from(content?.querySelectorAll('h2[id], h3[id], h4[id]') || [])
+  const linkById = new Map(tocLinks.map((link) => [link.hash.slice(1), link]))
+  const headings = tocLinks
+    .map((link) => document.getElementById(link.hash.slice(1)))
+    .filter(Boolean)
   if (!headings.length || !tocLinks.length) return
 
-  const linkById = new Map(tocLinks.map((link) => [link.hash.slice(1), link]))
   const activate = (id) => {
     tocLinks.forEach((link) => link.classList.toggle('active', link.hash === `#${id}`))
     const active = linkById.get(id)
@@ -91,6 +93,7 @@ function setupReadingProgress() {
     const distance = Math.max(content.offsetHeight - window.innerHeight * 0.64, 1)
     const progress = Math.min(1, Math.max(0, (window.scrollY - start) / distance))
     content.style.setProperty('--reading-progress', `${(progress * 100).toFixed(2)}%`)
+    toc?.style.setProperty('--toc-progress', `${(progress * 100).toFixed(2)}%`)
     ticking = false
   }
   window.addEventListener(
