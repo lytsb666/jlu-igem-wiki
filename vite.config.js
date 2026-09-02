@@ -8,7 +8,7 @@ import {
 import { resolve, relative, sep } from 'node:path'
 
 const root = resolve(import.meta.dirname)
-const ignoredDirectories = new Set(['node_modules', 'dist', '.git'])
+const ignoredDirectories = new Set(['node_modules', 'dist', '.git', 'tmp'])
 
 function collectHtmlFiles(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
