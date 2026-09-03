@@ -2,8 +2,8 @@
     min-height: calc(100vh - 60px);
     padding: 140px 24px 80px;
     background:
-        radial-gradient(circle at 20% 20%, rgba(73, 45, 34, 0.12), transparent 34%),
-        radial-gradient(circle at 80% 75%, rgba(78, 61, 40, 0.14), transparent 32%),
+        radial-gradient(circle at 20% 20%, rgba(111, 78, 55, 0.12), transparent 34%),
+        radial-gradient(circle at 80% 75%, rgba(111, 78, 55, 0.14), transparent 32%),
         var(--bg);
 }
 
@@ -18,13 +18,13 @@ body[data-cover] .placeholder-main {
     padding: clamp(32px, 7vw, 72px);
     border: 1px solid var(--border);
     border-radius: 24px;
-    background: rgba(234, 216, 183, 0.9);
-    box-shadow: 0 24px 60px rgba(73, 45, 34, 0.16);
+    background: rgba(224, 193, 166, 0.9);
+    box-shadow: 0 24px 60px rgba(111, 78, 55, 0.16);
 }
 
 .placeholder-kicker {
     margin-bottom: 14px;
-    color: #6f4e37;
+    color: #6F4E37;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -33,14 +33,14 @@ body[data-cover] .placeholder-main {
 
 .placeholder-card :is(h1, h2) {
     margin-bottom: 20px;
-    color: #492d22;
+    color: #6F4E37;
     font-size: clamp(2.6rem, 8vw, 5.6rem);
     line-height: 0.95;
 }
 
 .placeholder-card p:not(.placeholder-kicker) {
     max-width: 620px;
-    color: #4e3d28;
+    color: #6F4E37;
     font-size: 1.08rem;
     line-height: 1.8;
 }
@@ -49,9 +49,9 @@ body[data-cover] .placeholder-main {
     display: inline-flex;
     margin-top: 30px;
     padding: 12px 22px;
-    border: 1px solid #492d22;
+    border: 1px solid #6F4E37;
     border-radius: 999px;
-    color: #492d22;
+    color: #6F4E37;
     font-weight: 700;
     text-decoration: none;
 }

@@ -2,10 +2,10 @@
   width: 100%;
   margin-top: 60px;
   padding: 48px 20px 34px;
-  color: #f2e3c6;
+  color: #E0C1A6;
   text-align: center;
-  background: linear-gradient(115deg, #492d22 0%, #4e3d28 100%);
-  border-top: 1px solid rgba(242, 227, 198, 0.2);
+  background: linear-gradient(115deg, #6F4E37 0%, #9A6742 100%);
+  border-top: 1px solid rgba(224, 193, 166, 0.2);
 }
 
 .site-footer .footer-content {
@@ -24,7 +24,7 @@
 
 .site-footer .school-info h3 {
   margin: 0;
-  color: #f2e3c6;
+  color: #E0C1A6;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
@@ -35,17 +35,17 @@
   flex: 0 0 70px;
   align-items: center;
   justify-content: center;
-  color: #492d22;
+  color: #6F4E37;
   font-weight: 800;
   letter-spacing: 0.05em;
-  background: #f2e3c6;
+  background: #E0C1A6;
   border-radius: 50%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
 }
 
 .site-footer .contact-title,
 .site-footer .sponsor-title {
-  color: #f2e3c6;
+  color: #E0C1A6;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -74,14 +74,14 @@
 .site-footer .qr-code {
   width: 90px;
   height: 90px;
-  background: #f2e3c6;
-  border: 1px solid rgba(242, 227, 198, 0.55);
+  background: #E0C1A6;
+  border: 1px solid rgba(224, 193, 166, 0.55);
   border-radius: 8px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 .site-footer .qr-item span {
-  color: rgba(242, 227, 198, 0.9);
+  color: rgba(224, 193, 166, 0.9);
   font-size: 0.88rem;
 }
 
@@ -104,17 +104,17 @@
   height: 50px;
   align-items: center;
   justify-content: center;
-  color: #333;
+  color: #6F4E37;
   font-size: 0.8rem;
   font-weight: 700;
-  background: #f2e3c6;
+  background: #E0C1A6;
   border-radius: 6px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.13);
 }
 
 .site-footer .copyright {
   margin-top: 20px;
-  color: rgba(242, 227, 198, 0.82);
+  color: rgba(224, 193, 166, 0.82);
   font-size: 0.85rem;
   line-height: 1.7;
 }

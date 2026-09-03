@@ -1,17 +1,17 @@
 /* Shared editorial system for the 2026 Project and Wetlab long-form pages. */
 
 :root {
-  --lab-ink: #18333a;
-  --lab-ink-soft: #35515a;
-  --lab-teal: #176d70;
-  --lab-teal-dark: #0d4d52;
-  --lab-mint: #d9eee4;
-  --lab-coral: #c7684f;
-  --lab-gold: #e3b85f;
-  --lab-paper: #fffaf0;
-  --lab-paper-2: #f6ecda;
-  --lab-line: rgba(24, 51, 58, 0.16);
-  --lab-shadow: 0 18px 48px rgba(40, 53, 47, 0.12);
+  --lab-ink: #000000;
+  --lab-ink-soft: #6F4E37;
+  --lab-teal: #9A6742;
+  --lab-teal-dark: #6F4E37;
+  --lab-mint: #E0C1A6;
+  --lab-coral: #C27B45;
+  --lab-gold: #D4A276;
+  --lab-paper: #FFFFFF;
+  --lab-paper-2: #FFFFFF;
+  --lab-line: rgba(0, 0, 0, 0.16);
+  --lab-shadow: 0 18px 48px rgba(111, 78, 55, 0.12);
 }
 
 html {
@@ -22,8 +22,8 @@ html {
 body.wetlab-page {
   color: var(--lab-ink);
   background:
-    radial-gradient(circle at 8% 16%, rgba(23, 109, 112, 0.09), transparent 24rem),
-    radial-gradient(circle at 92% 48%, rgba(199, 104, 79, 0.08), transparent 30rem),
+    radial-gradient(circle at 8% 16%, rgba(111, 78, 55, 0.09), transparent 24rem),
+    radial-gradient(circle at 92% 48%, rgba(194, 123, 69, 0.08), transparent 30rem),
     var(--lab-paper-2);
 }
 
@@ -33,7 +33,7 @@ body.wetlab-page {
   left: 12px;
   z-index: 10050;
   padding: 10px 14px;
-  color: #fff;
+  color: #FFFFFF;
   font-weight: 800;
   text-decoration: none;
   background: var(--lab-teal-dark);
@@ -58,7 +58,7 @@ body.wetlab-page {
 }
 
 .wetlab-page :where(a, button, summary):focus-visible {
-  outline: 3px solid rgba(227, 184, 95, 0.95);
+  outline: 3px solid rgba(212, 162, 118, 0.95);
   outline-offset: 4px;
 }
 
@@ -86,13 +86,13 @@ body.wetlab-page {
 
 .lab-cover-note span {
   padding: 10px 12px;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-align: center;
   text-transform: uppercase;
-  background: rgba(9, 44, 49, 0.72);
+  background: rgba(0, 0, 0, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
   backdrop-filter: blur(9px);
@@ -105,11 +105,11 @@ body.wetlab-page {
   min-height: 500px;
   margin-top: 60px;
   overflow: hidden;
-  color: #f8f0dc;
+  color: #FFFFFF;
   background:
-    radial-gradient(circle at 78% 32%, rgba(227, 184, 95, 0.28), transparent 15rem),
-    radial-gradient(circle at 18% 85%, rgba(199, 104, 79, 0.32), transparent 20rem),
-    linear-gradient(128deg, #102f37 0%, #0d5157 54%, #18333a 100%);
+    radial-gradient(circle at 78% 32%, rgba(212, 162, 118, 0.28), transparent 15rem),
+    radial-gradient(circle at 18% 85%, rgba(194, 123, 69, 0.32), transparent 20rem),
+    linear-gradient(128deg, #000000 0%, #6F4E37 54%, #000000 100%);
 }
 
 .lab-hero::before,
@@ -127,7 +127,7 @@ body.wetlab-page {
     linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 54px 54px;
-  mask-image: linear-gradient(90deg, transparent 2%, #000 58%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 2%, #000000 58%, transparent 100%);
 }
 
 .lab-hero::after {
@@ -163,13 +163,13 @@ body.wetlab-page {
 
 .lab-hero__kicker {
   margin-bottom: 20px;
-  color: #f2cf85;
+  color: #E0C1A6;
 }
 
 .lab-hero h1 {
   max-width: 760px;
   margin: 0;
-  color: #fffaf0;
+  color: #FFFFFF;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(4rem, 9vw, 8.5rem);
   font-weight: 500;
@@ -180,7 +180,7 @@ body.wetlab-page {
 .lab-hero__lead {
   max-width: 650px;
   margin-top: 28px;
-  color: rgba(255, 250, 240, 0.82);
+  color: rgba(255, 255, 255, 0.82);
   font-size: clamp(1rem, 1.6vw, 1.22rem);
   line-height: 1.7;
 }
@@ -201,7 +201,7 @@ body.wetlab-page {
 
 .lab-hero__facts dt {
   margin-bottom: 5px;
-  color: #e8c576;
+  color: #D4A276;
   font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -210,7 +210,7 @@ body.wetlab-page {
 
 .lab-hero__facts dd {
   margin: 0;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1rem;
   font-weight: 750;
   line-height: 1.35;
@@ -235,10 +235,10 @@ body.wetlab-page {
   max-height: calc(100vh - 108px);
   padding: 24px 18px 22px;
   overflow: auto;
-  background: rgba(255, 250, 240, 0.78);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--lab-line);
   border-radius: 18px;
-  box-shadow: 0 12px 34px rgba(40, 53, 47, 0.07);
+  box-shadow: 0 12px 34px rgba(111, 78, 55, 0.07);
   backdrop-filter: blur(12px);
 }
 
@@ -257,13 +257,13 @@ body.wetlab-page {
   margin: 4px 0 8px 12px;
   padding: 0 0 0 11px;
   list-style: none;
-  border-left: 1px solid rgba(24, 51, 58, 0.13);
+  border-left: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .page-toc a {
   display: block;
   padding: 9px 11px;
-  color: #526368;
+  color: #6F4E37;
   font-size: 0.84rem;
   font-weight: 650;
   line-height: 1.32;
@@ -280,7 +280,7 @@ body.wetlab-page {
 .page-toc a:hover,
 .page-toc a.is-active {
   color: var(--lab-teal-dark);
-  background: rgba(23, 109, 112, 0.1);
+  background: rgba(111, 78, 55, 0.1);
   transform: translateX(3px);
 }
 
@@ -299,7 +299,7 @@ body.wetlab-page {
 .lab-section {
   min-width: 0;
   padding: clamp(26px, 4vw, 52px);
-  background: rgba(255, 250, 240, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--lab-line);
   border-radius: 24px;
   box-shadow: var(--lab-shadow);
@@ -308,8 +308,8 @@ body.wetlab-page {
 .lab-intro {
   overflow: hidden;
   background:
-    linear-gradient(118deg, rgba(23, 109, 112, 0.08), transparent 48%),
-    rgba(255, 250, 240, 0.94);
+    linear-gradient(118deg, rgba(111, 78, 55, 0.08), transparent 48%),
+    rgba(255, 255, 255, 0.94);
 }
 
 .lab-intro h2,
@@ -335,7 +335,7 @@ body.wetlab-page {
 }
 
 .lab-intro > p:first-of-type {
-  color: #2a474e;
+  color: #6F4E37;
   font-size: clamp(1.08rem, 1.6vw, 1.24rem);
 }
 
@@ -352,11 +352,11 @@ body.wetlab-page {
   width: 46px;
   height: 46px;
   place-items: center;
-  color: #fff;
+  color: #FFFFFF;
   font: 800 0.78rem/1 Inter, Arial, sans-serif;
   background: var(--lab-teal);
   border-radius: 50%;
-  box-shadow: 0 8px 18px rgba(23, 109, 112, 0.22);
+  box-shadow: 0 8px 18px rgba(111, 78, 55, 0.22);
 }
 
 .section-kicker {
@@ -381,7 +381,7 @@ body.wetlab-page {
 
 .lab-section :where(p, li) a {
   color: var(--lab-teal-dark);
-  text-decoration-color: rgba(23, 109, 112, 0.45);
+  text-decoration-color: rgba(111, 78, 55, 0.45);
   text-underline-offset: 3px;
 }
 
@@ -406,12 +406,12 @@ body.wetlab-page {
   overflow-x: auto;
   border: 1px solid var(--lab-line);
   border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(40, 53, 47, 0.07);
+  box-shadow: 0 10px 28px rgba(111, 78, 55, 0.07);
 }
 
 .table-caption {
   margin: 26px 0 -12px;
-  color: #5a6b6f;
+  color: #6F4E37;
   font-size: 0.82rem;
   font-weight: 750;
   line-height: 1.5;
@@ -429,8 +429,8 @@ body.wetlab-page {
   padding: 15px 16px;
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid rgba(24, 51, 58, 0.11);
-  border-right: 1px solid rgba(24, 51, 58, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .data-table th:last-child,
@@ -443,14 +443,14 @@ body.wetlab-page {
 }
 
 .data-table th {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 0.76rem;
   letter-spacing: 0.04em;
   background: var(--lab-teal-dark);
 }
 
 .data-table td {
-  color: #385159;
+  color: #6F4E37;
   font-size: 0.88rem;
   line-height: 1.58;
 }
@@ -461,11 +461,11 @@ body.wetlab-page {
   font-weight: 800;
   line-height: 1.58;
   letter-spacing: 0;
-  background: rgba(23, 109, 112, 0.08);
+  background: rgba(111, 78, 55, 0.08);
 }
 
 .data-table tbody tr:nth-child(even) {
-  background: rgba(23, 109, 112, 0.045);
+  background: rgba(111, 78, 55, 0.045);
 }
 
 .status-pending {
@@ -473,12 +473,12 @@ body.wetlab-page {
   align-items: center;
   gap: 7px;
   padding: 6px 9px;
-  color: #7a5235;
+  color: #6F4E37;
   font-size: 0.72rem;
   font-weight: 800;
   white-space: nowrap;
-  background: rgba(227, 184, 95, 0.2);
-  border: 1px solid rgba(181, 131, 42, 0.26);
+  background: rgba(212, 162, 118, 0.2);
+  border: 1px solid rgba(194, 123, 69, 0.26);
   border-radius: 999px;
 }
 
@@ -501,16 +501,16 @@ body.wetlab-page {
   position: relative;
   min-height: 150px;
   padding: 20px 18px;
-  color: #fff;
+  color: #FFFFFF;
   background: linear-gradient(145deg, var(--lab-teal-dark), var(--lab-teal));
   border-radius: 16px;
-  box-shadow: 0 14px 30px rgba(23, 109, 112, 0.17);
+  box-shadow: 0 14px 30px rgba(111, 78, 55, 0.17);
 }
 
 .process-step:nth-child(even) {
   color: var(--lab-ink);
-  background: #e8d49d;
-  box-shadow: 0 14px 30px rgba(142, 100, 30, 0.14);
+  background: #E0C1A6;
+  box-shadow: 0 14px 30px rgba(154, 103, 66, 0.14);
 }
 
 .process-step::after {
@@ -555,7 +555,7 @@ body.wetlab-page {
 .dbtl-step {
   min-height: 150px;
   padding: 23px;
-  background: #f1e7d3;
+  background: #FFFFFF;
   border: 1px solid var(--lab-line);
   border-radius: 18px;
 }
@@ -578,7 +578,7 @@ body.wetlab-page {
 
 .dbtl-step p {
   margin: 0;
-  color: #4d6166;
+  color: #6F4E37;
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -594,8 +594,8 @@ body.wetlab-page {
 .metric-card,
 .feature-card {
   padding: 20px;
-  background: rgba(23, 109, 112, 0.06);
-  border: 1px solid rgba(23, 109, 112, 0.16);
+  background: rgba(111, 78, 55, 0.06);
+  border: 1px solid rgba(111, 78, 55, 0.16);
   border-radius: 16px;
 }
 
@@ -609,7 +609,7 @@ body.wetlab-page {
 .metric-card p,
 .feature-card p {
   margin: 0;
-  color: #52666b;
+  color: #6F4E37;
   font-size: 0.88rem;
   line-height: 1.58;
 }
@@ -622,10 +622,10 @@ body.wetlab-page {
   place-items: center;
   text-align: center;
   background:
-    linear-gradient(135deg, rgba(23, 109, 112, 0.08), rgba(227, 184, 95, 0.12)),
-    repeating-linear-gradient(90deg, transparent 0 31px, rgba(24, 51, 58, 0.045) 31px 32px),
-    repeating-linear-gradient(0deg, transparent 0 31px, rgba(24, 51, 58, 0.045) 31px 32px);
-  border: 1px dashed rgba(24, 51, 58, 0.3);
+    linear-gradient(135deg, rgba(111, 78, 55, 0.08), rgba(212, 162, 118, 0.12)),
+    repeating-linear-gradient(90deg, transparent 0 31px, rgba(0, 0, 0, 0.045) 31px 32px),
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(0, 0, 0, 0.045) 31px 32px);
+  border: 1px dashed rgba(0, 0, 0, 0.3);
   border-radius: 18px;
 }
 
@@ -641,7 +641,7 @@ body.wetlab-page {
   display: block;
   max-width: 48ch;
   margin-top: 9px;
-  color: #607074;
+  color: #6F4E37;
   line-height: 1.6;
 }
 
@@ -701,7 +701,7 @@ body.wetlab-page {
   place-items: center;
   content: "+";
   color: var(--lab-teal-dark);
-  background: rgba(23, 109, 112, 0.09);
+  background: rgba(111, 78, 55, 0.09);
   border-radius: 50%;
   transition: transform 180ms ease, background 180ms ease;
 }
@@ -710,7 +710,7 @@ body.wetlab-page {
 .stage-panel[open] > summary::after,
 .experiment-card[open] > summary::after {
   content: "−";
-  color: #fff;
+  color: #FFFFFF;
   background: var(--lab-teal);
   transform: rotate(180deg);
 }
@@ -731,7 +731,7 @@ body.wetlab-page {
   padding: 4px 24px 24px;
   gap: 12px;
   list-style: none;
-  color: #53676b;
+  color: #6F4E37;
 }
 
 .reference-list li {
@@ -756,8 +756,8 @@ body.wetlab-page {
 }
 
 .module-card[aria-expanded="true"] {
-  border-color: rgba(23, 109, 112, 0.46);
-  box-shadow: 0 14px 32px rgba(23, 109, 112, 0.1);
+  border-color: rgba(111, 78, 55, 0.46);
+  box-shadow: 0 14px 32px rgba(111, 78, 55, 0.1);
 }
 
 .module-card__toggle {
@@ -779,7 +779,7 @@ body.wetlab-page {
   width: 42px;
   height: 42px;
   place-items: center;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 0.74rem;
   font-weight: 850;
   background: var(--lab-coral);
@@ -811,7 +811,7 @@ body.wetlab-page {
 
 .module-card__content p {
   margin: 0 0 9px;
-  color: #52666b;
+  color: #6F4E37;
   line-height: 1.55;
 }
 
@@ -820,7 +820,7 @@ body.wetlab-page {
   margin: 0;
   padding-left: 18px;
   gap: 7px;
-  color: #405a60;
+  color: #6F4E37;
 }
 
 .toolkit-steps {
@@ -833,8 +833,8 @@ body.wetlab-page {
 .toolkit-step {
   position: relative;
   padding: 18px 20px 18px 64px;
-  background: rgba(23, 109, 112, 0.055);
-  border: 1px solid rgba(23, 109, 112, 0.14);
+  background: rgba(111, 78, 55, 0.055);
+  border: 1px solid rgba(111, 78, 55, 0.14);
   border-radius: 14px;
 }
 
@@ -848,7 +848,7 @@ body.wetlab-page {
   place-items: center;
   counter-increment: toolkit;
   content: counter(toolkit, decimal-leading-zero);
-  color: #fff;
+  color: #FFFFFF;
   font-size: 0.68rem;
   font-weight: 850;
   background: var(--lab-teal);
@@ -863,7 +863,7 @@ body.wetlab-page {
 
 .toolkit-step p {
   margin: 0;
-  color: #52666b;
+  color: #6F4E37;
   line-height: 1.55;
 }
 
@@ -889,12 +889,12 @@ body.wetlab-page {
   font: 800 0.76rem/1 Inter, Arial, sans-serif;
   cursor: pointer;
   background: transparent;
-  border: 1px solid rgba(23, 109, 112, 0.3);
+  border: 1px solid rgba(111, 78, 55, 0.3);
   border-radius: 999px;
 }
 
 .lab-button:hover {
-  color: #fff;
+  color: #FFFFFF;
   background: var(--lab-teal);
 }
 
@@ -906,7 +906,7 @@ body.wetlab-page {
   display: grid;
   margin: calc(clamp(26px, 4vw, 52px) * -1) calc(clamp(26px, 4vw, 52px) * -1) 30px;
   padding: clamp(26px, 4vw, 44px);
-  color: #fff;
+  color: #FFFFFF;
   background:
     linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 70%),
     var(--lab-teal-dark);
@@ -918,7 +918,7 @@ body.wetlab-page {
 .pathogen-banner span {
   display: block;
   margin-bottom: 8px;
-  color: #e9c778;
+  color: #D4A276;
   font-size: 0.7rem;
   font-weight: 850;
   letter-spacing: 0.16em;
@@ -927,7 +927,7 @@ body.wetlab-page {
 
 .pathogen-banner h2 {
   margin: 0;
-  color: #fff;
+  color: #FFFFFF;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.1rem, 4vw, 3.8rem);
   font-weight: 500;
@@ -988,7 +988,7 @@ body.wetlab-page {
 
 .experiment-body {
   padding: 0 22px 24px;
-  border-top: 1px solid rgba(24, 51, 58, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .experiment-date {
@@ -1007,13 +1007,13 @@ body.wetlab-page {
 }
 
 .experiment-date-line span {
-  color: #52666b;
+  color: #6F4E37;
 }
 
 .experiment-body p {
   max-width: 82ch;
   margin: 10px 0 0;
-  color: #425b61;
+  color: #6F4E37;
   line-height: 1.7;
 }
 
@@ -1023,7 +1023,7 @@ body.wetlab-page {
   padding: 6px 10px;
   color: var(--lab-teal-dark);
   font-weight: 850;
-  background: rgba(23, 109, 112, 0.1);
+  background: rgba(111, 78, 55, 0.1);
   border-radius: 7px;
 }
 
@@ -1050,7 +1050,7 @@ body.wetlab-page {
   color: var(--lab-ink);
   text-align: left;
   cursor: pointer;
-  background: #f2e7d4;
+  background: #FFFFFF;
   border: 1px solid var(--lab-line);
   border-radius: 15px;
   transition: color 180ms ease, background 180ms ease, transform 180ms ease;
@@ -1058,7 +1058,7 @@ body.wetlab-page {
 
 .pathogen-card__toggle:hover,
 .pathogen-card__toggle[aria-expanded="true"] {
-  color: #fff;
+  color: #FFFFFF;
   background: var(--lab-teal-dark);
   transform: translateY(-3px);
 }
@@ -1070,7 +1070,7 @@ body.wetlab-page {
 }
 
 .pathogen-card__toggle[aria-expanded="true"] small {
-  color: #f1ce82;
+  color: #E0C1A6;
 }
 
 .pathogen-card__toggle strong {
@@ -1084,7 +1084,7 @@ body.wetlab-page {
   margin-top: 7px;
   padding: 8px;
   gap: 5px;
-  background: rgba(255, 250, 240, 0.82);
+  background: rgba(255, 255, 255, 0.82);
   border: 1px solid var(--lab-line);
   border-radius: 12px;
 }
@@ -1103,7 +1103,7 @@ body.wetlab-page {
 }
 
 .pathogen-card__links a:hover {
-  background: rgba(23, 109, 112, 0.09);
+  background: rgba(111, 78, 55, 0.09);
 }
 
 .stage-stack {
@@ -1119,20 +1119,20 @@ body.wetlab-page {
 
 .stage-panel__body {
   padding: 4px 22px 26px;
-  border-top: 1px solid rgba(24, 51, 58, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .stage-panel__body > p {
   max-width: 82ch;
   margin: 14px 0 0;
-  color: #425b61;
+  color: #6F4E37;
   line-height: 1.72;
 }
 
 .result-subsection {
   margin-top: 22px;
   padding: 19px 20px;
-  background: rgba(23, 109, 112, 0.045);
+  background: rgba(111, 78, 55, 0.045);
   border-left: 4px solid var(--lab-teal);
   border-radius: 0 12px 12px 0;
 }
@@ -1144,7 +1144,7 @@ body.wetlab-page {
 
 .result-subsection p {
   margin: 9px 0 0;
-  color: #435c62;
+  color: #6F4E37;
   line-height: 1.68;
 }
 
@@ -1156,12 +1156,12 @@ body.wetlab-page {
   display: inline-flex;
   margin-top: 13px;
   padding: 5px 9px;
-  color: #7b4e2f;
+  color: #6F4E37;
   font-size: 0.7rem;
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(227, 184, 95, 0.22);
+  background: rgba(212, 162, 118, 0.22);
   border-radius: 6px;
 }
 
@@ -1181,7 +1181,7 @@ body.wetlab-page {
 .safety-overview-visual {
   overflow: hidden;
   margin: 26px 0 14px;
-  background: #f5eddc;
+  background: #FFFFFF;
   border: 1px solid var(--lab-line);
   border-radius: 18px;
 }
@@ -1194,14 +1194,14 @@ body.wetlab-page {
 
 .safety-overview-visual figcaption {
   padding: 12px 14px;
-  color: #52666b;
+  color: #6F4E37;
   font-size: 0.78rem;
   line-height: 1.5;
 }
 
 .safety-photo {
   overflow: hidden;
-  background: #e9dfcc;
+  background: #E0C1A6;
   border: 1px solid var(--lab-line);
   border-radius: 16px;
 }
@@ -1220,7 +1220,7 @@ body.wetlab-page {
 
 .safety-photo figcaption {
   padding: 11px 13px;
-  color: #52666b;
+  color: #6F4E37;
   font-size: 0.76rem;
   line-height: 1.45;
 }
@@ -1245,11 +1245,11 @@ body.wetlab-page {
 .risk-flow div {
   position: relative;
   padding: 17px;
-  color: #425b61;
+  color: #6F4E37;
   font-size: 0.84rem;
   line-height: 1.5;
-  background: rgba(23, 109, 112, 0.06);
-  border: 1px solid rgba(23, 109, 112, 0.14);
+  background: rgba(111, 78, 55, 0.06);
+  border: 1px solid rgba(111, 78, 55, 0.14);
   border-radius: 13px;
 }
 
@@ -1277,7 +1277,7 @@ body.wetlab-page {
 
 .safety-principles div {
   padding: 19px;
-  color: #fff;
+  color: #FFFFFF;
   background: var(--lab-teal-dark);
   border-radius: 14px;
 }
@@ -1285,7 +1285,7 @@ body.wetlab-page {
 .safety-principles strong {
   display: block;
   margin-bottom: 7px;
-  color: #f0ce83;
+  color: #E0C1A6;
 }
 
 .safety-principles span {
@@ -1306,7 +1306,7 @@ body.wetlab-page {
   width: 30px;
   height: 30px;
   place-items: center;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.06em;
@@ -1317,11 +1317,11 @@ body.wetlab-page {
 .source-note {
   margin-top: 20px;
   padding: 14px 16px;
-  color: #6c5947;
+  color: #6F4E37;
   font-size: 0.85rem;
   line-height: 1.55;
-  background: rgba(227, 184, 95, 0.14);
-  border: 1px solid rgba(181, 131, 42, 0.22);
+  background: rgba(212, 162, 118, 0.14);
+  border: 1px solid rgba(194, 123, 69, 0.22);
   border-radius: 11px;
 }
 
@@ -1351,7 +1351,7 @@ body.wetlab-page {
   .page-toc ul { display: none; }
   body[data-page="notebook"] .page-toc nav > div { display: flex; align-items: center; gap: 4px; }
   body[data-page="notebook"] .page-toc ul { display: flex; margin: 0; padding: 0; gap: 4px; list-style: none; }
-  body[data-page="notebook"] .page-toc ul a { padding: 7px 9px; font-size: 0.7rem; background: rgba(23, 109, 112, 0.06); }
+  body[data-page="notebook"] .page-toc ul a { padding: 7px 9px; font-size: 0.7rem; background: rgba(111, 78, 55, 0.06); }
   .page-toc a { padding: 9px 12px; white-space: nowrap; }
   .page-toc a:hover, .page-toc a.is-active { transform: none; box-shadow: none; }
   .safety-photo-grid { grid-template-columns: 1fr 1fr; }
@@ -1429,9 +1429,9 @@ body.wetlab-page {
   .notebook-toolbar,
   .site-footer { display: none !important; }
   .skip-link { display: none !important; }
-  body.wetlab-page { background: #fff; }
-  .lab-hero { min-height: auto; margin: 0; color: #000; background: #fff; }
-  .lab-hero h1, .lab-hero__lead, .lab-hero__facts dd { color: #000; }
+  body.wetlab-page { background: #FFFFFF; }
+  .lab-hero { min-height: auto; margin: 0; color: #000000; background: #FFFFFF; }
+  .lab-hero h1, .lab-hero__lead, .lab-hero__facts dd { color: #000000; }
   .lab-main { width: 100%; padding: 0; }
   .lab-layout { display: block; }
   .lab-intro, .lab-section { break-inside: avoid; box-shadow: none; }

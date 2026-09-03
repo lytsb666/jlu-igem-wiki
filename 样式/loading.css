@@ -9,7 +9,7 @@ body.loading-lock {
   inset: 0;
   z-index: 99999;
   overflow: hidden;
-  background: #071b25;
+  background: #000000;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.65s ease, visibility 0.65s ease;
@@ -61,7 +61,7 @@ body.loading-lock {
 
 .loading-kicker {
   margin: 0 0 18px;
-  color: #d886e9;
+  color: #E0C1A6;
   font: 600 0.72rem/1.4 Inter, Arial, sans-serif;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -84,7 +84,7 @@ body.loading-lock {
   display: block;
   width: 45%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, #f2e3c6, #9a6742, transparent);
+  background: linear-gradient(90deg, transparent, #E0C1A6, #9A6742, transparent);
   animation: loading-scan 1.15s ease-in-out infinite;
 }
 

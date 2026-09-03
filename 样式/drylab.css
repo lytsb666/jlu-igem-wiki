@@ -1,45 +1,45 @@
 /* Drylab model page — a technical layer over the shared long-form editorial system. */
 
 body.drylab-page {
-  --lab-ink: #102b45;
-  --lab-ink-soft: #40576d;
-  --lab-teal: #226da0;
-  --lab-teal-dark: #123d68;
-  --lab-mint: #dcebf5;
-  --lab-coral: #c5663d;
-  --lab-gold: #e9bc64;
-  --lab-paper: #fffaf1;
-  --lab-paper-2: #eef3f7;
-  --lab-line: rgba(25, 59, 91, 0.16);
-  --lab-shadow: 0 24px 60px rgba(20, 42, 68, 0.11);
-  --drylab-night: #061a2b;
-  --drylab-night-2: #0a2841;
-  --drylab-blue: #2d7cad;
-  --drylab-sky: #8bc3de;
-  --drylab-cream: #fff8ec;
-  --drylab-orange: #d36f3d;
+  --lab-ink: #000000;
+  --lab-ink-soft: #6F4E37;
+  --lab-teal: #9A6742;
+  --lab-teal-dark: #6F4E37;
+  --lab-mint: #E0C1A6;
+  --lab-coral: #C27B45;
+  --lab-gold: #D4A276;
+  --lab-paper: #FFFFFF;
+  --lab-paper-2: #FFFFFF;
+  --lab-line: rgba(111, 78, 55, 0.16);
+  --lab-shadow: 0 24px 60px rgba(0, 0, 0, 0.11);
+  --drylab-night: #6F4E37;
+  --drylab-night-2: #000000;
+  --drylab-blue: #9A6742;
+  --drylab-sky: #E0C1A6;
+  --drylab-cream: #E0C1A6;
+  --drylab-orange: #C27B45;
   background:
-    radial-gradient(circle at 7% 11%, rgba(55, 126, 172, 0.12), transparent 27rem),
-    radial-gradient(circle at 94% 42%, rgba(211, 111, 61, 0.1), transparent 28rem),
-    linear-gradient(180deg, #e9f0f5 0, #f7eddd 46rem, #f4ead9 100%);
+    radial-gradient(circle at 7% 11%, rgba(111, 78, 55, 0.12), transparent 27rem),
+    radial-gradient(circle at 94% 42%, rgba(194, 123, 69, 0.1), transparent 28rem),
+    linear-gradient(180deg, #FFFFFF 0, #FFFFFF 46rem, #FFFFFF 100%);
 }
 
 .drylab-page ::selection {
-  color: #fff;
-  background: #2d6f9e;
+  color: #FFFFFF;
+  background: #6F4E37;
 }
 
 .drylab-hero {
   min-height: 520px;
   background: var(--drylab-night);
-  border-color: rgba(213, 231, 245, 0.3);
-  box-shadow: 0 28px 70px rgba(5, 21, 39, 0.28);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
 }
 
 .drylab-hero::after {
   background:
-    linear-gradient(90deg, rgba(3, 17, 35, 0.88) 0%, rgba(5, 26, 48, 0.56) 36%, rgba(5, 21, 40, 0.08) 70%),
-    linear-gradient(0deg, rgba(4, 17, 32, 0.68), transparent 54%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.56) 36%, rgba(0, 0, 0, 0.08) 70%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.68), transparent 54%);
 }
 
 .drylab-hero > img {
@@ -55,7 +55,7 @@ body.drylab-page {
 }
 
 .drylab-hero .image-page-hero__label > span {
-  color: #d7eafd;
+  color: #FFFFFF;
 }
 
 .drylab-hero .image-page-hero__label h1 {
@@ -64,14 +64,14 @@ body.drylab-page {
 }
 
 .drylab-hero .image-page-hero__label h1::after {
-  background: #eac56f;
-  box-shadow: 0 0 22px rgba(234, 197, 111, 0.65);
+  background: #D4A276;
+  box-shadow: 0 0 22px rgba(212, 162, 118, 0.65);
 }
 
 .drylab-hero .image-page-hero__label p {
   max-width: 38ch;
   margin: 20px 0 0;
-  color: rgba(244, 249, 255, 0.88);
+  color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1rem, 1.7vw, 1.28rem);
   font-weight: 600;
   line-height: 1.5;
@@ -79,13 +79,13 @@ body.drylab-page {
 }
 
 .drylab-hero .lab-cover-note span {
-  background: rgba(5, 28, 52, 0.72);
-  border-color: rgba(207, 231, 248, 0.32);
+  background: rgba(0, 0, 0, 0.72);
+  border-color: rgba(255, 255, 255, 0.32);
 }
 
 .drylab-toc {
-  background: rgba(250, 248, 242, 0.82);
-  box-shadow: 0 18px 44px rgba(14, 40, 63, 0.09);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.09);
 }
 
 .drylab-toc .toc-kicker {
@@ -95,7 +95,7 @@ body.drylab-page {
 .drylab-toc a:hover,
 .drylab-toc a.is-active {
   color: var(--lab-teal-dark);
-  background: rgba(45, 124, 173, 0.11);
+  background: rgba(111, 78, 55, 0.11);
 }
 
 .drylab-toc a.is-active {
@@ -106,13 +106,13 @@ body.drylab-page {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  color: #eef7ff;
+  color: #FFFFFF;
   background:
-    radial-gradient(circle at 91% 5%, rgba(130, 193, 224, 0.24), transparent 20rem),
-    radial-gradient(circle at 4% 100%, rgba(211, 111, 61, 0.2), transparent 20rem),
-    linear-gradient(135deg, #061827 0%, #0a2c49 64%, #123d5d 100%);
-  border-color: rgba(122, 178, 210, 0.34);
-  box-shadow: 0 26px 64px rgba(9, 31, 51, 0.2);
+    radial-gradient(circle at 91% 5%, rgba(224, 193, 166, 0.24), transparent 20rem),
+    radial-gradient(circle at 4% 100%, rgba(194, 123, 69, 0.2), transparent 20rem),
+    linear-gradient(135deg, #000000 0%, #000000 64%, #6F4E37 100%);
+  border-color: rgba(224, 193, 166, 0.34);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.2);
 }
 
 .drylab-overview::after {
@@ -123,10 +123,10 @@ body.drylab-page {
   pointer-events: none;
   opacity: 0.25;
   background-image:
-    linear-gradient(rgba(173, 218, 240, 0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(173, 218, 240, 0.13) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
   background-size: 44px 44px;
-  mask-image: linear-gradient(115deg, #000, transparent 72%);
+  mask-image: linear-gradient(115deg, #000000, transparent 72%);
 }
 
 .overview-heading {
@@ -135,12 +135,12 @@ body.drylab-page {
 
 .overview-heading .section-kicker {
   margin: 0 0 13px;
-  color: #f1c36c;
+  color: #D4A276;
 }
 
 .drylab-overview .overview-heading h2 {
   max-width: 18ch;
-  color: #fff;
+  color: #FFFFFF;
   font-size: clamp(2.5rem, 5.4vw, 5.1rem);
   line-height: 0.98;
 }
@@ -148,7 +148,7 @@ body.drylab-page {
 .overview-heading > p:last-child {
   max-width: 80ch;
   margin: 24px 0 0;
-  color: rgba(233, 245, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.03rem;
   line-height: 1.82;
 }
@@ -161,14 +161,14 @@ body.drylab-page {
   min-height: 178px;
   padding: 24px;
   background: rgba(255, 255, 255, 0.075);
-  border-color: rgba(193, 223, 241, 0.22);
+  border-color: rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(8px);
 }
 
 .drylab-metrics .metric-card > span {
   display: block;
   margin-bottom: 20px;
-  color: #9ed0e8;
+  color: #E0C1A6;
   font-size: 0.68rem;
   font-weight: 850;
   letter-spacing: 0.18em;
@@ -177,7 +177,7 @@ body.drylab-page {
 
 .drylab-metrics .metric-card strong {
   margin-bottom: 9px;
-  color: #fff;
+  color: #FFFFFF;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 500;
@@ -185,7 +185,7 @@ body.drylab-page {
 }
 
 .drylab-metrics .metric-card p {
-  color: rgba(232, 245, 255, 0.72);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .drylab-pipeline {
@@ -198,8 +198,8 @@ body.drylab-page {
 .drylab-pipeline article {
   min-height: 190px;
   padding: 24px;
-  background: rgba(4, 19, 33, 0.48);
-  border: 1px solid rgba(177, 215, 236, 0.2);
+  background: rgba(0, 0, 0, 0.48);
+  border: 1px solid rgba(224, 193, 166, 0.2);
   border-radius: 16px;
 }
 
@@ -212,30 +212,30 @@ body.drylab-page {
 
 .drylab-pipeline article b {
   width: 32px;
-  color: #f3c775;
+  color: #D4A276;
   font: 850 0.7rem/1 Arial, sans-serif;
 }
 
 .drylab-pipeline article > span {
   padding: 0 9px;
-  color: #b7dbee;
+  color: #FFFFFF;
   font-size: 0.62rem;
   font-weight: 850;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border: 1px solid rgba(183, 219, 238, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 999px;
 }
 
 .drylab-pipeline h3 {
   margin: 30px 0 8px;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1.22rem;
 }
 
 .drylab-pipeline p {
   margin: 0;
-  color: rgba(228, 242, 251, 0.68);
+  color: rgba(255, 255, 255, 0.68);
   font-size: 0.87rem;
   line-height: 1.6;
 }
@@ -243,7 +243,7 @@ body.drylab-page {
 .drylab-pipeline > i {
   position: relative;
   height: 1px;
-  background: rgba(185, 221, 240, 0.38);
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .drylab-pipeline > i::after {
@@ -253,8 +253,8 @@ body.drylab-page {
   width: 7px;
   height: 7px;
   content: "";
-  border-top: 1px solid #b9ddef;
-  border-right: 1px solid #b9ddef;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -262,8 +262,8 @@ body.drylab-page {
   position: relative;
   overflow: clip;
   background:
-    linear-gradient(130deg, rgba(45, 124, 173, 0.045), transparent 27rem),
-    rgba(255, 250, 240, 0.95);
+    linear-gradient(130deg, rgba(111, 78, 55, 0.045), transparent 27rem),
+    rgba(255, 255, 255, 0.95);
 }
 
 .drylab-section::before {
@@ -277,8 +277,8 @@ body.drylab-page {
 }
 
 .drylab-section .section-number {
-  background: linear-gradient(145deg, #123d68, #2f80ad);
-  box-shadow: 0 9px 22px rgba(35, 102, 148, 0.25);
+  background: linear-gradient(145deg, #6F4E37, #6F4E37);
+  box-shadow: 0 9px 22px rgba(111, 78, 55, 0.25);
 }
 
 .drylab-section .section-kicker {
@@ -288,14 +288,14 @@ body.drylab-page {
 .section-lead,
 .section-bridge {
   max-width: 76ch;
-  color: #2f4e67 !important;
+  color: #6F4E37 !important;
   font-size: 1.08rem !important;
 }
 
 .section-bridge {
   margin-top: 34px !important;
   padding-top: 26px;
-  border-top: 1px solid rgba(29, 73, 107, 0.14);
+  border-top: 1px solid rgba(111, 78, 55, 0.14);
 }
 
 .challenge-list {
@@ -314,8 +314,8 @@ body.drylab-page {
   padding: 22px;
   grid-template-columns: 38px minmax(0, 1fr);
   gap: 14px;
-  background: #f3f6f7;
-  border: 1px solid rgba(31, 78, 112, 0.13);
+  background: #FFFFFF;
+  border: 1px solid rgba(111, 78, 55, 0.13);
   border-radius: 17px;
 }
 
@@ -332,13 +332,13 @@ body.drylab-page {
 
 .challenge-list h3 {
   margin: 0 0 9px;
-  color: #173f61;
+  color: #6F4E37;
   font-size: 1.02rem;
 }
 
 .challenge-list p {
   margin: 0;
-  color: #4a5f70;
+  color: #6F4E37;
   font-size: 0.9rem;
   line-height: 1.68;
 }
@@ -355,8 +355,8 @@ body.drylab-page {
   min-height: 220px;
   padding: 25px;
   overflow: hidden;
-  background: #fffdf7;
-  border: 1px solid rgba(27, 69, 103, 0.15);
+  background: #FFFFFF;
+  border: 1px solid rgba(111, 78, 55, 0.15);
   border-radius: 18px;
 }
 
@@ -370,10 +370,10 @@ body.drylab-page {
   background: var(--module-accent, var(--drylab-blue));
 }
 
-.drylab-module--sequence { --module-accent: #2d7cad; }
-.drylab-module--structure { --module-accent: #3d8d78; }
-.drylab-module--kinetics { --module-accent: #bc6b43; }
-.drylab-module--optimization { --module-accent: #7c6eb4; }
+.drylab-module--sequence { --module-accent: #6F4E37; }
+.drylab-module--structure { --module-accent: #6F4E37; }
+.drylab-module--kinetics { --module-accent: #C27B45; }
+.drylab-module--optimization { --module-accent: #9A6742; }
 
 .drylab-module > span,
 .method-routes article > span {
@@ -391,7 +391,7 @@ body.drylab-page {
 
 .drylab-module p {
   margin: 0;
-  color: #506477;
+  color: #6F4E37;
   font-size: 0.91rem;
   line-height: 1.68;
 }
@@ -407,28 +407,28 @@ body.drylab-page {
   min-height: 300px;
   padding: 26px;
   background:
-    linear-gradient(145deg, rgba(45, 124, 173, 0.08), transparent 56%),
-    #f9faf8;
-  border: 1px solid rgba(31, 76, 110, 0.15);
+    linear-gradient(145deg, rgba(111, 78, 55, 0.08), transparent 56%),
+    #FFFFFF;
+  border: 1px solid rgba(111, 78, 55, 0.15);
   border-radius: 18px;
 }
 
 .method-routes article:nth-child(2) {
-  --module-accent: #c2673f;
+  --module-accent: #C27B45;
   background:
-    linear-gradient(145deg, rgba(199, 104, 79, 0.09), transparent 56%),
-    #f9faf8;
+    linear-gradient(145deg, rgba(194, 123, 69, 0.09), transparent 56%),
+    #FFFFFF;
 }
 
 .method-routes h3 {
   margin: 22px 0 12px;
-  color: #123d68;
+  color: #6F4E37;
   font-size: 1.3rem;
 }
 
 .method-routes p {
   margin: 0;
-  color: #4c6173;
+  color: #6F4E37;
   font-size: 0.92rem;
   line-height: 1.73;
 }
@@ -442,11 +442,11 @@ body.drylab-page {
 
 .route-tags b {
   padding: 7px 9px;
-  color: #355a75;
+  color: #6F4E37;
   font-size: 0.67rem;
   letter-spacing: 0.03em;
-  background: rgba(45, 124, 173, 0.09);
-  border: 1px solid rgba(45, 124, 173, 0.14);
+  background: rgba(111, 78, 55, 0.09);
+  border: 1px solid rgba(111, 78, 55, 0.14);
   border-radius: 999px;
 }
 
@@ -454,7 +454,7 @@ body.drylab-page {
   position: relative;
   margin-top: 42px;
   padding-top: 34px;
-  border-top: 1px solid rgba(29, 72, 105, 0.14);
+  border-top: 1px solid rgba(111, 78, 55, 0.14);
   scroll-margin-top: 92px;
 }
 
@@ -468,7 +468,7 @@ body.drylab-page {
 
 .subsection-heading > span {
   padding-top: 7px;
-  color: #748698;
+  color: #9A6742;
   font-size: 0.62rem;
   font-weight: 850;
   letter-spacing: 0.12em;
@@ -479,7 +479,7 @@ body.drylab-page {
 .lab-section .subsection-heading h3 {
   max-width: 34ch;
   margin: 0;
-  color: #143d60;
+  color: #6F4E37;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.65rem, 3vw, 2.65rem);
   font-weight: 500;
@@ -500,9 +500,9 @@ body.drylab-page {
   position: relative;
   margin-top: 34px !important;
   padding: 14px 18px 14px 22px;
-  color: #153f61 !important;
+  color: #6F4E37 !important;
   font-size: 1.08rem !important;
-  background: linear-gradient(90deg, rgba(45, 124, 173, 0.09), transparent);
+  background: linear-gradient(90deg, rgba(111, 78, 55, 0.09), transparent);
   border-left: 3px solid var(--drylab-blue);
   border-radius: 0 12px 12px 0;
 }
@@ -519,8 +519,8 @@ body.drylab-page {
 .drylab-fold {
   margin: 22px 0 10px;
   overflow: clip;
-  background: #f4f7f8;
-  border: 1px solid rgba(27, 71, 103, 0.16);
+  background: #FFFFFF;
+  border: 1px solid rgba(111, 78, 55, 0.16);
   border-radius: 16px;
 }
 
@@ -547,9 +547,9 @@ body.drylab-page {
   height: 32px;
   place-items: center;
   content: "+";
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1.1rem;
-  background: #1e5f8c;
+  background: #6F4E37;
   border-radius: 50%;
   transform: translateY(-50%);
   transition: transform 180ms ease, background 180ms ease;
@@ -562,13 +562,13 @@ body.drylab-page {
 }
 
 .drylab-fold > summary span {
-  color: #173e5e;
+  color: #6F4E37;
   font-weight: 850;
 }
 
 .drylab-fold > summary small {
   margin-top: 5px;
-  color: #6f8393;
+  color: #9A6742;
   font-size: 0.72rem;
 }
 
@@ -583,13 +583,13 @@ body.drylab-page {
 .parameter-grid > div {
   min-width: 0;
   padding: 15px;
-  background: #fff;
-  border: 1px solid rgba(28, 72, 105, 0.12);
+  background: #FFFFFF;
+  border: 1px solid rgba(111, 78, 55, 0.12);
   border-radius: 11px;
 }
 
 .parameter-grid dt {
-  color: #718392;
+  color: #9A6742;
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.07em;
@@ -598,37 +598,37 @@ body.drylab-page {
 
 .parameter-grid dd {
   margin: 8px 0 0;
-  color: #143f62;
+  color: #6F4E37;
   font: 750 1rem/1.3 ui-monospace, "Cascadia Code", Consolas, monospace;
 }
 
 .drylab-code-fold {
-  background: #071522;
-  border-color: rgba(109, 170, 206, 0.3);
-  box-shadow: 0 18px 38px rgba(4, 20, 34, 0.16);
+  background: #000000;
+  border-color: rgba(224, 193, 166, 0.3);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
 }
 
 .drylab-code-fold > summary {
-  background: linear-gradient(90deg, rgba(54, 132, 177, 0.12), transparent);
+  background: linear-gradient(90deg, rgba(111, 78, 55, 0.12), transparent);
 }
 
 .drylab-code-fold > summary span {
-  color: #f4f8fb;
+  color: #FFFFFF;
 }
 
 .drylab-code-fold > summary small {
-  color: #91bad1;
+  color: #E0C1A6;
 }
 
 .drylab-code-fold > summary::after {
-  color: #0a243a;
-  background: #9ac9e1;
+  color: #000000;
+  background: #E0C1A6;
 }
 
 .code-window {
   overflow: hidden;
-  background: #030a10;
-  border-top: 1px solid rgba(122, 180, 211, 0.2);
+  background: #000000;
+  border-top: 1px solid rgba(224, 193, 166, 0.2);
 }
 
 .code-window__bar {
@@ -637,21 +637,21 @@ body.drylab-page {
   padding: 0 17px;
   align-items: center;
   gap: 7px;
-  color: #6f91a5;
+  color: #D4A276;
   font: 650 0.65rem/1 ui-monospace, "Cascadia Code", Consolas, monospace;
-  background: #0c1924;
-  border-bottom: 1px solid rgba(133, 185, 212, 0.12);
+  background: #000000;
+  border-bottom: 1px solid rgba(224, 193, 166, 0.12);
 }
 
 .code-window__bar i {
   width: 8px;
   height: 8px;
-  background: #d66b50;
+  background: #C27B45;
   border-radius: 50%;
 }
 
-.code-window__bar i:nth-child(2) { background: #e4b95d; }
-.code-window__bar i:nth-child(3) { background: #54a37f; }
+.code-window__bar i:nth-child(2) { background: #D4A276; }
+.code-window__bar i:nth-child(3) { background: #9A6742; }
 .code-window__bar span { margin-left: 7px; }
 
 .code-window pre {
@@ -659,7 +659,7 @@ body.drylab-page {
   margin: 0;
   padding: 24px;
   overflow: auto;
-  color: #e5edf3;
+  color: #FFFFFF;
   font: 500 0.82rem/1.75 ui-monospace, "Cascadia Code", Consolas, "Liberation Mono", monospace;
   tab-size: 4;
 }
@@ -669,22 +669,22 @@ body.drylab-page {
   white-space: pre;
 }
 
-.code-comment { color: #74b18f; }
-.code-key { color: #e5b767; }
+.code-comment { color: #D4A276; }
+.code-key { color: #D4A276; }
 
 .equation-block {
   max-width: 100% !important;
   margin: 18px 0 !important;
   padding: 17px 20px;
   overflow-x: auto;
-  color: #0d2e4b !important;
+  color: #000000 !important;
   font-family: "Cambria Math", Cambria, serif;
   line-height: 1.55 !important;
   background:
-    linear-gradient(90deg, rgba(45, 124, 173, 0.075), transparent 55%),
-    #f6f8f8;
-  border: 1px solid rgba(34, 91, 130, 0.15);
-  border-left: 3px solid #4f94bb;
+    linear-gradient(90deg, rgba(111, 78, 55, 0.075), transparent 55%),
+    #FFFFFF;
+  border: 1px solid rgba(111, 78, 55, 0.15);
+  border-left: 3px solid #9A6742;
   border-radius: 0 12px 12px 0;
 }
 
@@ -695,23 +695,23 @@ body.drylab-page {
 
 .equation-label {
   margin-top: 26px !important;
-  color: #173f61 !important;
+  color: #6F4E37 !important;
   font-weight: 800;
 }
 
 .model-figure {
   margin: 30px 0 10px;
   padding: 12px;
-  background: #071a2b;
-  border: 1px solid rgba(101, 160, 193, 0.25);
+  background: #000000;
+  border: 1px solid rgba(224, 193, 166, 0.25);
   border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(9, 31, 51, 0.14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
 }
 
 .model-figure__link {
   display: block;
   overflow: hidden;
-  background: #f8f4ec;
+  background: #FFFFFF;
   border-radius: 11px;
 }
 
@@ -732,7 +732,7 @@ body.drylab-page {
 .shared-caption {
   margin: 0;
   padding: 14px 7px 3px;
-  color: #bdd5e3;
+  color: #E0C1A6;
   font-size: 0.77rem;
   font-weight: 650;
   line-height: 1.5;
@@ -755,15 +755,15 @@ body.drylab-page {
 }
 
 .shared-caption {
-  color: #607387;
+  color: #6F4E37;
   text-align: center;
 }
 
 .drylab-table-wrap {
   margin-top: 26px;
-  background: #f9fbfb;
-  border-color: rgba(25, 70, 103, 0.18);
-  box-shadow: 0 12px 30px rgba(18, 54, 79, 0.08);
+  background: #FFFFFF;
+  border-color: rgba(111, 78, 55, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .drylab-table {
@@ -772,35 +772,35 @@ body.drylab-page {
 
 .drylab-table caption {
   padding: 13px 16px;
-  color: #51687a;
+  color: #6F4E37;
   font-size: 0.78rem;
   font-weight: 750;
   line-height: 1.45;
   text-align: left;
   caption-side: top;
-  background: #eaf1f4;
-  border-bottom: 1px solid rgba(27, 72, 104, 0.13);
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(111, 78, 55, 0.13);
 }
 
 .drylab-table th {
-  background: #123d61;
+  background: #6F4E37;
 }
 
 .drylab-table td,
 .drylab-table tbody th {
-  color: #3d5669;
+  color: #6F4E37;
 }
 
 .drylab-table tbody:nth-of-type(even) tr {
-  background: rgba(45, 124, 173, 0.045);
+  background: rgba(111, 78, 55, 0.045);
 }
 
 .drylab-table .candidate-group {
   padding: 12px 16px;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 0.73rem;
   letter-spacing: 0.035em;
-  background: linear-gradient(90deg, #286e98, #3d88aa);
+  background: linear-gradient(90deg, #6F4E37, #6F4E37);
 }
 
 .drylab-table td:nth-child(2) {
@@ -820,11 +820,11 @@ body.drylab-page {
 .drylab-reference-list li {
   position: relative;
   padding: 16px 18px 16px 58px;
-  color: #526777;
+  color: #6F4E37;
   font-size: 0.86rem;
   line-height: 1.65;
-  background: rgba(45, 124, 173, 0.045);
-  border: 1px solid rgba(31, 76, 110, 0.11);
+  background: rgba(111, 78, 55, 0.045);
+  border: 1px solid rgba(111, 78, 55, 0.11);
   border-radius: 12px;
   counter-increment: drylab-reference;
 }
@@ -838,9 +838,9 @@ body.drylab-page {
   height: 26px;
   place-items: center;
   content: counter(drylab-reference, decimal-leading-zero);
-  color: #fff;
+  color: #FFFFFF;
   font: 800 0.62rem/1 Arial, sans-serif;
-  background: #1d628f;
+  background: #6F4E37;
   border-radius: 50%;
 }
 
@@ -964,28 +964,28 @@ body.drylab-page {
 
 @media print {
   body.drylab-page {
-    background: #fff;
+    background: #FFFFFF;
   }
 
   .drylab-overview,
   .drylab-code-fold,
   .model-figure {
-    color: #102b45;
-    background: #fff;
-    border-color: #b8c5ce;
+    color: #000000;
+    background: #FFFFFF;
+    border-color: #E0C1A6;
     box-shadow: none;
   }
 
   .drylab-overview :where(h2, h3, strong),
   .drylab-code-fold > summary span {
-    color: #102b45;
+    color: #000000;
   }
 
   .overview-heading > p:last-child,
   .drylab-metrics .metric-card p,
   .drylab-pipeline p,
   .model-figure figcaption {
-    color: #40576d;
+    color: #6F4E37;
   }
 
   .drylab-overview::after,
@@ -994,13 +994,13 @@ body.drylab-page {
   }
 
   .drylab-fold[open] .code-window {
-    color: #102b45;
-    background: #fff;
+    color: #000000;
+    background: #FFFFFF;
   }
 
   .code-window pre,
   .code-comment,
   .code-key {
-    color: #102b45;
+    color: #000000;
   }
 }
