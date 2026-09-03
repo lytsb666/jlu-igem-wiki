@@ -41,33 +41,66 @@ updateReadingProgress()
 window.addEventListener('scroll', updateReadingProgress, { passive: true })
 
 const stakeholderMap = document.querySelector('.stakeholder-map')
-function activateTier(tier) {
-  if (stakeholderMap) stakeholderMap.dataset.activeTier = tier
+function activateTiers(tiers) {
+  if (stakeholderMap) stakeholderMap.dataset.activeTiers = tiers || ''
 }
 
-function scrollToTarget(id) {
+function scrollToTarget(id, { moveFocus = true, updateHash = true } = {}) {
   const target = document.getElementById(id)
   if (!target) return
-  if (target.tagName === 'DETAILS') target.open = true
-  target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' })
+  const disclosures = []
+  let disclosure = target.tagName === 'DETAILS' ? target : target.closest('details')
+  while (disclosure) {
+    disclosures.unshift(disclosure)
+    disclosure = disclosure.parentElement?.closest('details')
+  }
+  disclosures.forEach((item) => { item.open = true })
+  document.querySelectorAll('.is-map-target').forEach((item) => item.classList.remove('is-map-target'))
+  target.classList.add('is-map-target')
+  if (moveFocus) {
+    const focusTarget = target.tagName === 'DETAILS'
+      ? target.querySelector(':scope > summary')
+      : target
+    if (focusTarget === target && !target.hasAttribute('tabindex')) target.tabIndex = -1
+    focusTarget?.focus({ preventScroll: true })
+  }
+  window.requestAnimationFrame(() => {
+    target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' })
+    if (updateHash) window.history.replaceState(null, '', `#${id}`)
+  })
 }
 
 document.querySelectorAll('.stakeholder-node').forEach((button) => {
-  button.addEventListener('mouseenter', () => activateTier(button.dataset.tier))
-  button.addEventListener('focus', () => activateTier(button.dataset.tier))
+  button.addEventListener('mouseenter', () => activateTiers(button.dataset.tier))
+  button.addEventListener('focus', () => activateTiers(button.dataset.tier))
   button.addEventListener('click', () => {
-    activateTier(button.dataset.tier)
+    activateTiers(button.dataset.tier)
     scrollToTarget(button.dataset.target)
   })
 })
 
 document.querySelectorAll('[data-tier-link]').forEach((button) => {
-  button.addEventListener('mouseenter', () => activateTier(button.dataset.tierLink))
-  button.addEventListener('focus', () => activateTier(button.dataset.tierLink))
-  button.addEventListener('click', () => {
-    activateTier(button.dataset.tierLink)
+  button.addEventListener('mouseenter', () => activateTiers(button.dataset.tierLink))
+  button.addEventListener('focus', () => activateTiers(button.dataset.tierLink))
+  button.addEventListener('click', (event) => {
+    event.preventDefault()
+    activateTiers(button.dataset.tierLink)
     scrollToTarget(button.dataset.target)
   })
+})
+
+document.querySelectorAll('[data-tier-set]').forEach((item) => {
+  const showRelatedTiers = () => activateTiers(item.dataset.tierSet)
+  item.addEventListener('mouseenter', showRelatedTiers)
+  item.addEventListener('focusin', showRelatedTiers)
+  item.addEventListener('toggle', () => { if (item.open) showRelatedTiers() })
+})
+
+document.querySelectorAll('[data-profile-tier]').forEach((item) => {
+  const showProfileTier = () => activateTiers(item.dataset.profileTier)
+  item.addEventListener('mouseenter', showProfileTier)
+  item.addEventListener('focusin', showProfileTier)
+  item.addEventListener('toggle', () => { if (item.open) showProfileTier() })
 })
 
 const trackButtons = [...document.querySelectorAll('[data-track]')]
@@ -96,6 +129,8 @@ trackButtons.forEach((button, index) => {
     selectTrack(trackButtons[next].dataset.track, true)
   })
 })
+const initialTrack = trackButtons.find((button) => button.getAttribute('aria-selected') === 'true')
+if (initialTrack) selectTrack(initialTrack.dataset.track)
 
 const lightbox = document.querySelector('.ihp-lightbox')
 const lightboxImage = lightbox?.querySelector('img')
@@ -114,4 +149,19 @@ lightbox?.addEventListener('click', (event) => {
   if (event.target === lightbox) lightbox.close()
 })
 
-activateTier('core')
+let initialHash = ''
+try {
+  initialHash = decodeURIComponent(window.location.hash.slice(1))
+} catch {
+  initialHash = window.location.hash.slice(1)
+}
+const initialTarget = initialHash ? document.getElementById(initialHash) : null
+const initialTiers = initialTarget?.dataset.tierSet
+  || initialTarget?.closest('[data-tier-set]')?.dataset.tierSet
+  || initialTarget?.closest('[data-profile-tier]')?.dataset.profileTier
+if (initialTarget && initialTiers) {
+  activateTiers(initialTiers)
+  scrollToTarget(initialHash, { moveFocus: false, updateHash: false })
+} else {
+  activateTiers('core')
+}
