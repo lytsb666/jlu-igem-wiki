@@ -33,7 +33,7 @@ body.ihp-page { margin: 0; overflow-x: hidden; background: var(--ihp-cream); col
 .ihp-hero__scroll span { display: block; width: 36px; height: 1px; background: #FFFFFF; transition: width .3s; }
 .ihp-hero__scroll:hover span { width: 52px; }
 
-.ihp-preface { display: grid; grid-template-columns: .5fr 1.5fr .75fr; gap: clamp(28px, 5vw, 72px); align-items: center; width: min(1260px, calc(100% - 48px)); margin: 0 auto 64px; padding: 54px 0 64px; border-bottom: 1px solid var(--ihp-line); }
+.ihp-preface { display: grid; grid-template-columns: .5fr 1.5fr .75fr; gap: clamp(28px, 5vw, 72px); align-items: center; width: var(--wiki-main-width); margin: 0 auto 64px; padding: 54px 0 64px; border-bottom: 1px solid var(--ihp-line); }
 .ihp-preface__index { color: rgba(111, 78, 55, .1); font-family: Arial, sans-serif; font-size: clamp(7rem, 14vw, 13rem); font-weight: 900; line-height: .75; letter-spacing: -.12em; }
 .ihp-preface__copy h2 { margin: 0 0 24px; font-size: clamp(2.3rem, 4.4vw, 4.8rem); font-weight: 500; line-height: .98; letter-spacing: -.045em; }
 .ihp-preface__copy p:not(.eyebrow) { margin: 0 0 16px; font-size: 1.06rem; line-height: 1.82; }
@@ -41,14 +41,14 @@ body.ihp-page { margin: 0; overflow-x: hidden; background: var(--ihp-cream); col
 .ihp-preface__aside p { margin: 0 0 10px; color: #E0C1A6; font-family: Arial, sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .ihp-preface__aside strong { padding: 9px 0; border-top: 1px solid rgba(255, 255, 255, .14); font-size: .94rem; font-weight: 500; line-height: 1.4; }
 
-.practice-loop { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 16px; align-items: center; width: min(1260px, calc(100% - 48px)); margin: 0 auto 96px; }
+.practice-loop { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 16px; align-items: center; width: var(--wiki-main-width); margin: 0 auto 96px; }
 .practice-loop article { min-height: 190px; padding: 26px; border: 1px solid var(--ihp-line); border-radius: 18px; background: var(--ihp-paper); box-shadow: 0 12px 32px rgba(0, 0, 0, .07); }
 .practice-loop span { color: var(--ihp-coral); font-family: Arial, sans-serif; font-size: 2.5rem; font-weight: 900; }
 .practice-loop p { margin: 20px 0 8px; font-size: 1.2rem; font-weight: 700; }
 .practice-loop small { color: #6F4E37; font-family: Arial, sans-serif; font-size: .82rem; line-height: 1.55; }
 .practice-loop > i { color: var(--ihp-gold); font-size: 1.4rem; font-style: normal; }
 
-.ihp-shell { display: grid; grid-template-columns: 230px minmax(0, 1040px); gap: 54px; width: min(1320px, calc(100% - 48px)); margin: 0 auto 110px; }
+.ihp-shell { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 54px; width: var(--wiki-main-width); margin: 0 auto 110px; }
 .ihp-toc { position: sticky; top: 84px; align-self: start; padding: 22px 18px; border-left: 1px solid var(--ihp-line); font-family: Arial, sans-serif; }
 .ihp-toc > p { margin: 0 0 18px; color: var(--ihp-coral); font-size: .7rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
 .ihp-toc nav { display: grid; gap: 5px; }
@@ -444,12 +444,12 @@ body.ihp-page { background-color: var(--ihp-cream); background-image: radial-gra
   .ihp-hero__veil { background: linear-gradient(0deg, rgba(0, 0, 0, .88), rgba(0, 0, 0, .06) 76%); }
   .ihp-hero__label { right: 24px; bottom: 55px; left: 24px; }
   .ihp-hero__scroll { display: none; }
-  .ihp-preface { grid-template-columns: 1fr; width: calc(100% - 32px); }
+  .ihp-preface { grid-template-columns: 1fr; width: var(--wiki-main-width); }
   .ihp-preface__index { display: none; }
   .ihp-preface__aside { grid-column: auto; }
-  .practice-loop { grid-template-columns: 1fr; width: calc(100% - 32px); }
+  .practice-loop { grid-template-columns: 1fr; width: var(--wiki-main-width); }
   .practice-loop article { min-height: auto; }
-  .ihp-shell { width: calc(100% - 32px); }
+  .ihp-shell { width: var(--wiki-main-width); }
   .chapter { padding-bottom: 72px; }
   .chapter__heading { grid-template-columns: 52px 1fr; }
   .chapter__heading > span { font-size: 2.25rem; }

@@ -1,4 +1,16 @@
 /* Shared navigation styles for every wiki page. */
+:root {
+  /*
+   * Use 80vw on desktop, then ease continuously into 16px mobile gutters.
+   * The fluid middle value avoids a layout jump around tablet widths.
+   */
+  --wiki-main-width: clamp(
+    80vw,
+    calc(43.374vw + 402.9px),
+    calc(100vw - 32px)
+  );
+}
+
 .navbar {
   --navigation-text-color: #FFFFFF;
   --navigation-brown-rgb: 111, 78, 55;

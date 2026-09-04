@@ -340,7 +340,7 @@ body.entrepreneurship-page {
 
 .entre-summary {
   display: grid;
-  width: min(1260px, calc(100% - 48px));
+  width: var(--wiki-main-width);
   margin: 0 auto 84px;
   padding: 14px 0 64px;
   grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
@@ -423,9 +423,9 @@ body.entrepreneurship-page {
 
 .entre-shell {
   display: grid;
-  width: min(1320px, calc(100% - 48px));
+  width: var(--wiki-main-width);
   margin: 0 auto 110px;
-  grid-template-columns: 230px minmax(0, 1040px);
+  grid-template-columns: 230px minmax(0, 1fr);
   gap: 54px;
   align-items: flex-start;
 }
@@ -1007,7 +1007,7 @@ body.entrepreneurship-page {
   }
 
   .entre-shell {
-    width: min(1040px, calc(100% - 48px));
+    width: var(--wiki-main-width);
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -1047,7 +1047,7 @@ body.entrepreneurship-page {
   }
 
   .entre-summary {
-    width: calc(100% - 32px);
+    width: var(--wiki-main-width);
     margin-bottom: 54px;
     padding: 12px 0 44px;
     grid-template-columns: 1fr;
@@ -1072,7 +1072,7 @@ body.entrepreneurship-page {
   }
 
   .entre-shell {
-    width: calc(100% - 32px);
+    width: var(--wiki-main-width);
   }
 
   .hp-content {

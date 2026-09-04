@@ -217,7 +217,7 @@ body.wetlab-page {
 }
 
 .lab-main {
-  width: min(1380px, calc(100% - 40px));
+  width: var(--wiki-main-width);
   margin: 0 auto;
   padding: clamp(44px, 7vw, 92px) 0 72px;
 }
@@ -1363,7 +1363,7 @@ body.wetlab-page {
   .lab-hero__inner { width: min(100% - 28px, 1240px); padding: 76px 0 54px; gap: 34px; }
   .lab-hero h1 { font-size: clamp(3.6rem, 18vw, 6.4rem); }
   .lab-hero__facts { grid-template-columns: 1fr; }
-  .lab-main { width: min(100% - 24px, 1380px); padding-top: 30px; }
+  .lab-main { width: var(--wiki-main-width); padding-top: 30px; }
   .lab-intro, .lab-section { padding: 24px 19px; border-radius: 18px; }
   .section-heading { grid-template-columns: 1fr; gap: 12px; }
   .section-number { width: 40px; height: 40px; }

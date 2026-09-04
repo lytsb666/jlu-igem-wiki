@@ -108,6 +108,114 @@ body {
     .image-page-hero__label h1 { max-width: 100%; overflow-wrap: anywhere; font-size: clamp(2.1rem, 12vw, 5rem); }
 }
 
+/* Shared typography for the lightweight subpage template. */
+main > .page-hero,
+main > .content {
+    width: var(--wiki-main-width);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main > .page-hero {
+    margin-top: 36px;
+    padding: clamp(30px, 5vw, 58px);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(224, 193, 166, 0.72), rgba(255, 255, 255, 0.96));
+    box-shadow: 0 18px 48px rgba(111, 78, 55, 0.1);
+}
+
+body > main > .page-hero:first-child {
+    margin-top: 120px;
+}
+
+body > .image-page-hero + main > .page-hero:first-child {
+    margin-top: 0;
+}
+
+.page-hero .eyebrow {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.page-hero :is(h1, h2),
+.content > h2 {
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.page-hero :is(h1, h2) {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    line-height: 1;
+}
+
+.page-hero > p:not(.eyebrow) {
+    max-width: 72ch;
+    margin-top: 20px;
+    font-size: clamp(1rem, 1.35vw, 1.16rem);
+    line-height: 1.75;
+}
+
+main > .content {
+    margin-top: 28px;
+    margin-bottom: 96px;
+    padding: clamp(30px, 5vw, 58px);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 48px rgba(111, 78, 55, 0.1);
+}
+
+.content > h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.15;
+}
+
+.content > h2:not(:first-child) {
+    margin-top: 42px;
+}
+
+.content > p,
+.content > :is(ul, ol) {
+    max-width: 78ch;
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.content > :is(ul, ol) {
+    padding-left: 1.35rem;
+}
+
+@media (max-width: 680px) {
+    main > .page-hero,
+    main > .content {
+        border-radius: 18px;
+    }
+
+    main > .page-hero {
+        padding: 26px 22px;
+    }
+
+    body > main > .page-hero:first-child {
+        margin-top: 92px;
+    }
+
+    main > .content {
+        margin-top: 18px;
+        margin-bottom: 64px;
+        padding: 26px 22px;
+    }
+}
+
 /* Homepage project presentation */
 .home-main {
     background: radial-gradient(circle at 20% 15%, rgba(111, 78, 55, 0.12), transparent 30%), radial-gradient(circle at 85% 70%, rgba(111, 78, 55, 0.14), transparent 32%), #E0C1A6;

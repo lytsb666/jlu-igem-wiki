@@ -13,7 +13,7 @@ body[data-cover] .placeholder-main {
 }
 
 .placeholder-card {
-    width: min(820px, 100%);
+    width: var(--wiki-main-width);
     margin: 0 auto;
     padding: clamp(32px, 7vw, 72px);
     border: 1px solid var(--border);
