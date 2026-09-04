@@ -1,14 +1,7 @@
 /* Shared navigation styles for every wiki page. */
 :root {
-  /*
-   * Use 80vw on desktop, then ease continuously into 16px mobile gutters.
-   * The fluid middle value avoids a layout jump around tablet widths.
-   */
-  --wiki-main-width: clamp(
-    80vw,
-    calc(43.374vw + 402.9px),
-    calc(100vw - 32px)
-  );
+  /* Keep only a small safety gutter so subpage content uses the full viewport. */
+  --wiki-main-width: calc(100vw - clamp(20px, 2vw, 32px));
 }
 
 .navbar {
@@ -164,5 +157,11 @@
   .navbar.hide,
   .dropdown-content {
     transition-duration: 0.01ms;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --wiki-main-width: calc(100vw - 20px);
   }
 }

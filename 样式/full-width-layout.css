@@ -1,0 +1,86 @@
+/* Full-width layout pass shared by every wiki subpage. */
+
+body :is(
+  .image-page-hero,
+  .edu-hero,
+  .ihp-hero,
+  .inc-hero,
+  .entre-hero
+) {
+  width: var(--wiki-main-width);
+  max-width: none;
+}
+
+body :is(
+  main > .page-hero,
+  main > .content,
+  .lab-main,
+  .edu-shell,
+  .ihp-preface,
+  .practice-loop,
+  .ihp-shell,
+  .inc-intro,
+  .inc-shell,
+  .bmc-overview,
+  .entre-summary,
+  .entre-shell,
+  .placeholder-card
+) {
+  width: var(--wiki-main-width);
+  max-width: none;
+}
+
+body :is(
+  .article-flow,
+  .edu-content,
+  .ihp-content,
+  .inc-content,
+  .hp-content
+) {
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+}
+
+body :is(main > .content, .placeholder-card) {
+  min-width: 0;
+  max-width: none;
+}
+
+body :is(
+  main > .content,
+  .article-flow,
+  .edu-content,
+  .ihp-content,
+  .inc-content,
+  .hp-content,
+  .placeholder-card
+) :is(p, ul, ol, blockquote, h1, h2, h3, h4) {
+  width: 100%;
+  max-width: none;
+}
+
+body :is(
+  .section-heading,
+  .chapter__heading,
+  .activity-atlas__heading,
+  .feedback-copy,
+  .feedback-showcase__heading,
+  .technical-path__intro,
+  .bmc-overview__heading
+) {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 680px) {
+  body :is(
+    .image-page-hero,
+    .edu-hero,
+    .ihp-hero,
+    .inc-hero,
+    .entre-hero
+  ) {
+    width: var(--wiki-main-width);
+  }
+}

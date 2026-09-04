@@ -336,7 +336,8 @@ body.drylab-page {
 .challenge-list li > span {
   position: absolute;
   top: 50%;
-  left: -45px;
+  /* The marker's center sits on the dotted timeline at list x = 12px. */
+  left: -22px;
   display: grid;
   width: 25px;
   height: 25px;
@@ -345,7 +346,7 @@ body.drylab-page {
   font: 850 0.7rem/1 Arial, sans-serif;
   background: #E6A348;
   border-radius: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .challenge-list p {
@@ -487,19 +488,9 @@ body.drylab-page {
 .subsection-heading {
   display: grid;
   margin-bottom: 20px;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: 18px;
-}
-
-.subsection-heading > span {
-  padding-top: 7px;
-  color: #E85E58;
-  font-size: 0.62rem;
-  font-weight: 850;
-  letter-spacing: 0.12em;
-  line-height: 1.4;
-  text-transform: uppercase;
+  gap: 0;
 }
 
 .lab-section .subsection-heading h3 {
@@ -681,6 +672,29 @@ body.drylab-page {
   background: #DCE6F0;
 }
 
+/* Model pseudocode is presented as always-visible reference material. */
+.drylab-code-fold > .drylab-fold__heading {
+  position: relative;
+  display: grid;
+  min-height: 70px;
+  padding: 17px 72px 17px 20px;
+  align-content: center;
+  background: linear-gradient(90deg, rgba(81, 106, 138, 0.22), transparent);
+}
+
+.drylab-code-fold > .drylab-fold__heading span {
+  color: #FFFFFF;
+  font-weight: 850;
+}
+
+.drylab-code-fold > .drylab-fold__heading small {
+  margin-top: 5px;
+  color: #DCE6F0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .code-window {
   overflow: hidden;
   background: #172033;
@@ -746,6 +760,25 @@ body.drylab-page {
 .equation-block math {
   min-width: max-content;
   font-size: 1.05rem;
+}
+
+/* Give consecutive formulas enough breathing room without altering MathML. */
+.equation-block > br {
+  display: block;
+  margin-top: 0.72rem;
+  content: "";
+}
+
+.equation-block > math[display="block"] {
+  display: block;
+}
+
+.equation-block > math[display="block"] + math[display="block"] {
+  margin-top: 1rem;
+}
+
+.equation-block + .equation-block {
+  margin-top: 24px !important;
 }
 
 .equation-label {
