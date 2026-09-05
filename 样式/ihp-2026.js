@@ -48,6 +48,8 @@ function activateTiers(tiers) {
 function scrollToTarget(id, { moveFocus = true, updateHash = true } = {}) {
   const target = document.getElementById(id)
   if (!target) return
+  const track = target.closest('[data-track-panel]')
+  if (track) selectTrack(track.dataset.trackPanel)
   const disclosures = []
   let disclosure = target.tagName === 'DETAILS' ? target : target.closest('details')
   while (disclosure) {

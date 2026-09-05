@@ -1,4 +1,4 @@
-/* Full-width layout pass shared by every wiki subpage. */
+/* Full-width layout and typography shared by every wiki subpage. */
 
 body :is(
   .image-page-hero,
@@ -83,4 +83,127 @@ body :is(
   ) {
     width: var(--wiki-main-width);
   }
+}
+
+/* User-specified Chinese type sizes: 小初 = 36pt, 小三 = 15pt,
+   小一 = 24pt. This sheet is only included by subpages, not the home page.
+   Important declarations intentionally supersede the individual page themes. */
+:root {
+  --wiki-body-size: 15pt;
+  --wiki-heading-size: 36pt;
+  --wiki-card-heading-size: 24pt;
+  --wiki-text-leading: 1.3;
+}
+
+body,
+body *,
+body *::before,
+body *::after {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+:root body {
+  font-size: var(--wiki-body-size);
+  line-height: var(--wiki-text-leading);
+}
+
+:root body :is(main, article, section, header, footer, aside, nav, dialog),
+:root body :is(p, li, dt, dd, blockquote, figcaption, th, td, button, input, select, textarea, summary),
+:root body :is(h1, h2, h3, h4, h5, h6) {
+  line-height: var(--wiki-text-leading) !important;
+}
+
+:root body :is(main, article, .lab-hero, .edu-hero, .ihp-hero, .inc-hero, .entre-hero, dialog)
+  :is(p, li, dt, dd, blockquote, figcaption, th, td, h5, h6),
+:root body :is(.hp-p, .section-lead, .section-bridge, .activity-story p, .measurement-figure figcaption) {
+  font-size: var(--wiki-body-size) !important;
+}
+
+/* Inline emphasis and links follow the surrounding text, including headings. */
+:root body :is(p, li, dt, dd, blockquote, figcaption, th, td, h1, h2, h3, h4, h5, h6)
+  :is(a, span, strong, b, em, i, code, small) {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit;
+}
+
+/* Page titles and top-level article sections. */
+:root body :is(h1, h2, .hp-h1) {
+  font-size: var(--wiki-heading-size) !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  text-wrap: wrap !important;
+  overflow-wrap: anywhere;
+}
+
+/* Nested headings and card titles, including disclosure controls. */
+:root body :is(h3, h4, .hp-h2, .hp-h3),
+:root body main summary,
+:root body main summary strong,
+:root body .profile-group > summary > span,
+:root body :is([class~="card"], [class$="-card"], [class*="-card "], .parts-module)
+  :is(h2, h3, h4),
+:root body :is(.experiment-card, .stage-panel, .reference-fold) > summary,
+:root body :is(.experiment-card, .stage-panel, .reference-fold) > summary strong,
+:root body :is(.module-card__toggle strong, .bmc-card__title, .filmstrip__label strong) {
+  font-size: var(--wiki-card-heading-size) !important;
+  font-weight: 700 !important;
+  line-height: var(--wiki-text-leading) !important;
+  letter-spacing: normal !important;
+  text-wrap: wrap !important;
+  overflow-wrap: anywhere;
+}
+
+/* Use all available space within each text box. Keep image and diagram
+   dimensions independent of prose; auto width also respects list indentation. */
+:root body :is(main, article, .lab-hero, .edu-hero, .ihp-hero, .inc-hero, .entre-hero, dialog)
+  :is(p, ul, ol, blockquote, figcaption, h1, h2, h3, h4, h5, h6) {
+  width: auto !important;
+  min-width: 0;
+  max-width: none !important;
+  text-wrap: wrap !important;
+  overflow-wrap: break-word;
+}
+
+:root body :is(main, article, dialog) :is(p, blockquote),
+:root body :is(.article-flow, .edu-content, .ihp-content, .inc-content, .hp-content, .content)
+  li:not(:has(> a:only-child)),
+:root body .measurement-minor-heading {
+  text-align: justify !important;
+  text-align-last: start;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Prose wrappers must stretch as well as the text they contain. */
+:root body :is(
+  .section-heading, .section-copy, .prose-group, .overview-heading,
+  .subsection-heading, .chapter__heading, .activity-atlas__heading,
+  .feedback-copy, .feedback-showcase__heading, .technical-path__intro,
+  .bmc-overview__heading, .bmc-overview__intro, .bmc-overview__closing,
+  .edu-copy--lead, .implementation-card__copy, .entre-summary__copy
+) {
+  min-width: 0;
+  max-width: none !important;
+  justify-self: stretch;
+}
+
+:root body :is(.section-heading, .chapter__heading, .journey__heading) > div {
+  min-width: 0;
+  flex: 1;
+}
+
+:root body .chapter-intro {
+  margin-inline: 0;
+}
+
+/* Let longer titles grow vertically instead of clipping inside a card. */
+:root body :is(.parts-module, .experiment-card, .stage-panel, .reference-fold) > summary {
+  height: auto;
+  min-width: 0;
+  white-space: normal;
+}
+
+:root body :is(.parts-module, .experiment-card, .stage-panel, .reference-fold) > summary::after {
+  flex-shrink: 0;
 }
