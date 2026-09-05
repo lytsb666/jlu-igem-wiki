@@ -881,11 +881,10 @@ body.wetlab-page {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   min-width: 0;
-  width: min(100%, 760px, calc(100svh - 88px));
-  aspect-ratio: 1;
-  height: auto;
-  min-height: 0;
-  justify-self: center;
+  width: 100%;
+  height: min(680px, calc(100svh - 88px));
+  min-height: 320px;
+  justify-self: stretch;
   padding: 16px;
   color: #FFFFFF;
   background:
@@ -971,10 +970,6 @@ body.wetlab-page {
 .notebook-calendar__tooltip[hidden] { display: none; }
 .notebook-calendar__tooltip-date { color: #E0C1A6; font-weight: 700; }
 .notebook-calendar__tooltip-event { margin-top: 10px; }
-
-@media (max-width: 680px) {
-  .notebook-calendar { width: 100%; }
-}
 
 .notebook-calendar__viewport {
   display: flex;
