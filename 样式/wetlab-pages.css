@@ -1246,6 +1246,17 @@ body.wetlab-page {
   padding: 18px 20px;
 }
 
+.experiment-card > .experiment-heading {
+  margin: 0;
+  padding: 18px 20px;
+  color: var(--lab-ink);
+}
+
+.experiment-heading:focus-visible {
+  outline: 3px solid rgba(212, 162, 118, 0.95);
+  outline-offset: -4px;
+}
+
 .experiment-title {
   display: grid;
   gap: 5px;

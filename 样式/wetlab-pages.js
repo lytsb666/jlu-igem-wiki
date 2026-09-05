@@ -111,7 +111,7 @@ const calendarWeekdays = document.querySelector('[data-calendar-weekdays]')
 
 if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length) {
   const events = experimentCards.flatMap((card) => {
-    const title = card.querySelector('summary strong')?.textContent.trim() || ''
+    const title = card.querySelector('.experiment-heading, summary strong')?.textContent.trim() || ''
     const pathogen = title.match(/^([1-5])\./)?.[1] || '1'
     return [...card.querySelectorAll('time[datetime]')].map((time) => ({
       date: time.dateTime,
@@ -201,9 +201,9 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
     hideTooltip()
     const card = document.getElementById(event.target)
     if (!card) return
-    card.open = true
+    if (card.tagName === 'DETAILS') card.open = true
     card.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' })
-    card.querySelector('summary')?.focus({ preventScroll: true })
+    card.querySelector('.experiment-heading, summary')?.focus({ preventScroll: true })
     window.history.replaceState(null, '', `#${card.id}`)
   }
 
