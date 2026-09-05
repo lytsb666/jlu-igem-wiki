@@ -128,12 +128,68 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
     eventsByDate.set(event.date, grouped)
   })
 
-  const earliest = [...events].sort((a, b) => a.date.localeCompare(b.date))[0]?.date
-  const [initialYear, initialMonth] = (earliest || new Date().toISOString().slice(0, 7)).split('-').map(Number)
-  const calendarMonth = new Date(Date.UTC(initialYear, initialMonth - 1, 1))
+  const firstMonth = Date.UTC(2026, 2, 1)
+  const lastMonth = Date.UTC(2026, 8, 1)
+  const calendarMonth = new Date(firstMonth)
+  const previousMonthButton = document.querySelector('[data-calendar-prev]')
+  const nextMonthButton = document.querySelector('[data-calendar-next]')
   const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })
   const fullDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+  const tooltip = document.createElement('div')
+  tooltip.id = 'notebook-calendar-tooltip'
+  tooltip.className = 'notebook-calendar__tooltip'
+  tooltip.setAttribute('role', 'tooltip')
+  tooltip.hidden = true
+  document.body.append(tooltip)
+  let tooltipDay = null
+  let tooltipTimer
+  const hideTooltip = () => {
+    clearTimeout(tooltipTimer)
+    tooltip.hidden = true
+    tooltipDay?.removeAttribute('aria-describedby')
+    tooltipDay = null
+  }
+  const delayHideTooltip = () => {
+    clearTimeout(tooltipTimer)
+    tooltipTimer = setTimeout(hideTooltip, 180)
+  }
+  const showTooltip = (cell, dayEvents, dateObject) => {
+    hideTooltip()
+    tooltipDay = cell
+    tooltip.replaceChildren()
+    const dateLabel = document.createElement('div')
+    dateLabel.className = 'notebook-calendar__tooltip-date'
+    dateLabel.textContent = fullDateFormatter.format(dateObject)
+    tooltip.append(dateLabel)
+    dayEvents.forEach((event) => {
+      const label = document.createElement('div')
+      label.className = 'notebook-calendar__tooltip-event'
+      label.textContent = event.title
+      tooltip.append(label)
+    })
+    tooltip.hidden = false
+    cell.setAttribute('aria-describedby', tooltip.id)
+    const rect = cell.getBoundingClientRect()
+    const panel = tooltip.getBoundingClientRect()
+    const left = Math.max(12, Math.min(rect.left, window.innerWidth - panel.width - 12))
+    const below = rect.bottom + 8
+    const top = below + panel.height <= window.innerHeight - 12
+      ? below : Math.max(12, rect.top - panel.height - 8)
+    tooltip.style.left = `${left}px`
+    tooltip.style.top = `${top}px`
+  }
+  tooltip.addEventListener('pointerenter', () => clearTimeout(tooltipTimer))
+  tooltip.addEventListener('pointerleave', delayHideTooltip)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') hideTooltip()
+  })
+  document.addEventListener('pointerdown', (event) => {
+    if (!tooltip.contains(event.target) && !tooltipDay?.contains(event.target)) hideTooltip()
+  })
+  window.addEventListener('resize', hideTooltip)
+  window.addEventListener('scroll', hideTooltip)
 
   ;['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].forEach((weekday) => {
     const label = document.createElement('span')
@@ -142,6 +198,7 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
   })
 
   const openExperiment = (event) => {
+    hideTooltip()
     const card = document.getElementById(event.target)
     if (!card) return
     card.open = true
@@ -151,6 +208,7 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
   }
 
   const renderCalendar = () => {
+    hideTooltip()
     const year = calendarMonth.getUTCFullYear()
     const month = calendarMonth.getUTCMonth()
     const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate()
@@ -158,6 +216,8 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
     const totalCells = Math.ceil((leadingDays + daysInMonth) / 7) * 7
 
     calendarTitle.textContent = monthFormatter.format(calendarMonth)
+    if (previousMonthButton) previousMonthButton.disabled = calendarMonth.getTime() <= firstMonth
+    if (nextMonthButton) nextMonthButton.disabled = calendarMonth.getTime() >= lastMonth
     calendarGrid.style.setProperty('--calendar-weeks', String(totalCells / 7))
     calendarGrid.setAttribute('aria-label', calendarTitle.textContent)
     calendarGrid.replaceChildren()
@@ -183,14 +243,24 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
       cell.append(dayNumber)
 
       const dayEvents = eventsByDate.get(date) || []
-      if (dayEvents.length) cell.classList.add('has-events')
+      if (dayEvents.length) {
+        cell.classList.add('has-events')
+        cell.tabIndex = 0
+        cell.setAttribute('aria-label', `${fullDateFormatter.format(dateObject)}, ${dayEvents.length} experiments`)
+        cell.addEventListener('pointerenter', () => showTooltip(cell, dayEvents, dateObject))
+        cell.addEventListener('pointerleave', delayHideTooltip)
+        cell.addEventListener('focusin', () => showTooltip(cell, dayEvents, dateObject))
+        cell.addEventListener('focusout', delayHideTooltip)
+        cell.addEventListener('click', (event) => {
+          if (!event.target.closest('button')) showTooltip(cell, dayEvents, dateObject)
+        })
+      }
       dayEvents.forEach((event) => {
         const button = document.createElement('button')
         button.type = 'button'
         button.className = 'notebook-calendar__event'
         button.dataset.pathogen = event.pathogen
         button.textContent = event.title
-        button.title = event.title
         button.setAttribute('aria-label', `${event.title}, ${fullDateFormatter.format(dateObject)}`)
         button.addEventListener('click', () => openExperiment(event))
         cell.append(button)
@@ -199,11 +269,13 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
     }
   }
 
-  document.querySelector('[data-calendar-prev]')?.addEventListener('click', () => {
+  previousMonthButton?.addEventListener('click', () => {
+    if (calendarMonth.getTime() <= firstMonth) return
     calendarMonth.setUTCMonth(calendarMonth.getUTCMonth() - 1)
     renderCalendar()
   })
-  document.querySelector('[data-calendar-next]')?.addEventListener('click', () => {
+  nextMonthButton?.addEventListener('click', () => {
+    if (calendarMonth.getTime() >= lastMonth) return
     calendarMonth.setUTCMonth(calendarMonth.getUTCMonth() + 1)
     renderCalendar()
   })
