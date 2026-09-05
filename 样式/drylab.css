@@ -935,6 +935,10 @@ body.drylab-page {
   counter-reset: drylab-reference;
 }
 
+#references > .section-heading {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .drylab-reference-list li {
   position: relative;
   padding: 16px 18px 16px 58px;
