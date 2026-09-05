@@ -536,13 +536,19 @@ body.drylab-page {
   text-transform: uppercase;
 }
 
-.drylab-phase-heading > span {
+:root body.drylab-page .drylab-phase-heading > span {
   display: grid;
-  width: 24px;
-  height: 24px;
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   place-items: center;
   color: #FFFFFF;
-  font: 850 0.68rem/1 Arial, sans-serif;
+  /* The badge must not inherit the large heading size or line height. */
+  font-size: 0.875rem !important;
+  line-height: 1 !important;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-align: center;
   background: #FF766F;
   border-radius: 50%;
 }
