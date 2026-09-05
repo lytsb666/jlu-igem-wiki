@@ -269,16 +269,6 @@ body.drylab-page {
     rgba(248, 250, 252, 0.96);
 }
 
-.drylab-section::before {
-  position: absolute;
-  top: 0;
-  left: clamp(26px, 4vw, 52px);
-  width: min(200px, 28%);
-  height: 3px;
-  content: "";
-  background: linear-gradient(90deg, var(--drylab-blue), var(--drylab-orange));
-}
-
 .drylab-section .section-number {
   background: linear-gradient(145deg, #516A8A, #24324D);
   box-shadow: 0 9px 22px rgba(24, 37, 63, 0.22);
