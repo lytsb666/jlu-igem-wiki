@@ -1218,18 +1218,8 @@ body.wetlab-page {
 }
 
 .notebook-stage > h3 {
-  display: flex;
   max-width: none;
   margin: 0 0 14px;
-  align-items: center;
-  gap: 12px;
-}
-
-.notebook-stage > h3::before {
-  width: 26px;
-  height: 3px;
-  content: "";
-  background: var(--lab-coral);
 }
 
 .experiment-list {
