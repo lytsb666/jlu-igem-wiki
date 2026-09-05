@@ -158,6 +158,7 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
     const totalCells = Math.ceil((leadingDays + daysInMonth) / 7) * 7
 
     calendarTitle.textContent = monthFormatter.format(calendarMonth)
+    calendarGrid.style.setProperty('--calendar-weeks', String(totalCells / 7))
     calendarGrid.setAttribute('aria-label', calendarTitle.textContent)
     calendarGrid.replaceChildren()
 
@@ -189,6 +190,7 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
         button.className = 'notebook-calendar__event'
         button.dataset.pathogen = event.pathogen
         button.textContent = event.title
+        button.title = event.title
         button.setAttribute('aria-label', `${event.title}, ${fullDateFormatter.format(dateObject)}`)
         button.addEventListener('click', () => openExperiment(event))
         cell.append(button)

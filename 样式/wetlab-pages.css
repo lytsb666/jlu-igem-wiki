@@ -878,8 +878,12 @@ body.wetlab-page {
 }
 
 .notebook-calendar {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   min-width: 0;
-  padding: clamp(22px, 3vw, 36px);
+  height: min(600px, calc(100svh - 110px));
+  min-height: 320px;
+  padding: 16px;
   color: #FFFFFF;
   background:
     radial-gradient(circle at 86% 12%, rgba(212, 162, 118, 0.18), transparent 18rem),
@@ -891,22 +895,23 @@ body.wetlab-page {
 
 .notebook-calendar__header {
   display: flex;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   align-items: end;
   justify-content: space-between;
   gap: 24px;
 }
 
-.notebook-calendar .section-kicker {
-  margin: 0 0 8px;
+:root body[data-page="notebook"] .notebook-calendar .section-kicker {
+  margin: 0 0 4px;
+  font-size: 0.875rem !important;
   color: #D4A276;
 }
 
-.notebook-calendar h2 {
+:root body[data-page="notebook"] .notebook-calendar h2 {
   margin: 0;
   color: #FFFFFF;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.25rem, 5vw, 4.8rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem) !important;
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.045em;
@@ -919,12 +924,12 @@ body.wetlab-page {
 
 .notebook-calendar__controls button {
   display: inline-flex;
-  min-height: 42px;
-  padding: 0 15px;
+  min-height: 34px;
+  padding: 0 12px;
   align-items: center;
   gap: 7px;
   color: #FFFFFF;
-  font: 800 0.78rem/1 Inter, Arial, sans-serif;
+  font: 800 0.875rem/1 Inter, Arial, sans-serif;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -939,7 +944,10 @@ body.wetlab-page {
 }
 
 .notebook-calendar__viewport {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
+  min-height: 0;
   overflow-x: auto;
   scrollbar-color: rgba(212, 162, 118, 0.62) rgba(255, 255, 255, 0.08);
 }
@@ -947,9 +955,15 @@ body.wetlab-page {
 .notebook-calendar__weekdays,
 .notebook-calendar__grid {
   display: grid;
-  min-width: 840px;
+  min-width: 0;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 8px;
+  gap: 4px;
+}
+
+.notebook-calendar__grid {
+  flex: 1;
+  min-height: 0;
+  grid-template-rows: repeat(var(--calendar-weeks, 6), minmax(0, 1fr));
 }
 
 .notebook-calendar__weekdays {
@@ -957,20 +971,23 @@ body.wetlab-page {
 }
 
 .notebook-calendar__weekdays span {
-  padding: 0 10px;
+  padding: 0 4px;
   color: rgba(255, 255, 255, 0.52);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 850;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .notebook-calendar__day {
-  min-height: 154px;
-  padding: 10px;
+  min-height: 0;
+  min-width: 0;
+  padding: 5px;
+  overflow-y: auto;
+  scrollbar-width: thin;
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .notebook-calendar__day.is-empty {
@@ -985,18 +1002,21 @@ body.wetlab-page {
 
 .notebook-calendar__date {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   color: rgba(255, 255, 255, 0.88);
-  font: 800 0.78rem/1 Inter, Arial, sans-serif;
+  font: 800 0.875rem/1 Inter, Arial, sans-serif;
 }
 
 .notebook-calendar__event {
   display: block;
   width: 100%;
-  margin-top: 6px;
-  padding: 8px 9px;
+  margin-top: 3px;
+  padding: 3px 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #FFFFFF;
-  font: 750 0.7rem/1.32 Inter, Arial, sans-serif;
+  font: 750 0.875rem/1.3 Inter, Arial, sans-serif;
   text-align: left;
   cursor: pointer;
   background: #9A6742;
@@ -1602,12 +1622,11 @@ body.wetlab-page {
   .pathogen-code { display: none; }
   .module-card__content { padding-left: 22px; }
   .experiment-card > summary { align-items: flex-start; }
-  .notebook-calendar { padding: 20px 15px; border-radius: 18px; }
-  .notebook-calendar__header { align-items: flex-start; flex-direction: column; gap: 18px; }
-  .notebook-calendar__controls { width: 100%; justify-content: space-between; }
-  .notebook-calendar__weekdays,
-  .notebook-calendar__grid { min-width: 760px; }
-  .notebook-calendar__day { min-height: 142px; }
+  .notebook-calendar { padding: 10px; border-radius: 18px; }
+  .notebook-calendar__header { align-items: center; flex-wrap: wrap; gap: 8px; }
+  .notebook-calendar__controls { gap: 4px; }
+  .notebook-calendar__controls button { padding-inline: 8px; }
+  .notebook-calendar__day { padding: 3px; }
 }
 
 @media (max-width: 768px) {
