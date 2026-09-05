@@ -1,0 +1,174 @@
+/* Protocol follows the shared wiki type scale, with no sidebar or hero card. */
+.protocol-main {
+  width: var(--wiki-main-width);
+  margin: 108px auto 96px;
+  padding-inline: clamp(12px, 4vw, 64px);
+  min-height: calc(100svh - 204px);
+}
+
+.protocol-main [hidden] { display: none !important; }
+
+.protocol-page-heading {
+  padding-block: 0 24px;
+  margin-bottom: 36px;
+  border-bottom: 2px solid var(--text);
+}
+
+.protocol-page-heading h1 { margin: 0; }
+
+.protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 28px;
+}
+
+.protocol-category { grid-column: span 2; min-width: 0; }
+.protocol-category:nth-child(-n + 2) { grid-column: span 3; }
+
+.protocol-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 164px;
+  padding: 36px 54px;
+  border: 1.5px solid var(--text);
+  border-radius: 12px;
+  color: var(--text);
+  background: #fff;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.protocol-card-label {
+  font-size: var(--wiki-heading-size);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.protocol-card-toggle {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.protocol-card:hover { background: #f6eee7; box-shadow: 0 8px 20px #6f4e3712; }
+.protocol-card[aria-expanded="true"] { background: var(--text); color: #fff; }
+
+.protocol-main button:focus-visible,
+.protocol-main summary:focus-visible,
+.protocol-table-wrap:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 5px;
+}
+
+.protocol-index { padding-top: 12px; }
+.protocol-index ol { list-style: none; margin: 0; padding: 0; }
+.protocol-index li + li { border-top: 1px solid var(--border); }
+
+.protocol-index-button {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  font-size: var(--wiki-body-size);
+  cursor: pointer;
+}
+
+.protocol-index-button > span:nth-child(2) { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.protocol-index-number { opacity: .7; }
+.protocol-index-arrow { font-size: 1.1rem; }
+.protocol-index-button:hover,
+.protocol-index-button[aria-expanded="true"] { background: #f6eee7; }
+.protocol-index-button[aria-expanded="true"] { font-weight: 700; }
+
+.protocol-panel {
+  margin-top: 42px;
+  border-top: 2px solid var(--text);
+  padding-top: 30px;
+  scroll-margin-top: 90px;
+}
+
+.protocol-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.protocol-panel-header > div { flex: 1; min-width: 0; }
+.protocol-panel-header h2 { margin: 8px 0 0; scroll-margin-top: 90px; }
+.protocol-panel-header h2:focus { outline: none; }
+.protocol-category-label { margin: 0; color: var(--secondary); }
+
+.protocol-back {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.protocol-back:hover { background: #f6eee7; }
+.protocol-document { min-width: 0; }
+.protocol-materials { border-bottom: 1px solid var(--border); }
+.protocol-materials summary { padding: 20px 0; cursor: pointer; }
+.protocol-materials ul { columns: 3 220px; padding: 0 0 24px 28px; }
+.protocol-materials li { padding: 4px 14px 4px 0; break-inside: avoid; }
+.protocol-system-heading { margin: 32px 0 20px; }
+.protocol-empty { color: var(--secondary); font-style: italic; margin: 12px 0 24px; }
+.protocol-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+.protocol-table-wrap table { width: 100%; min-width: 640px; border-collapse: collapse; }
+.protocol-table-wrap th { background: var(--text); color: #fff; text-align: left; }
+.protocol-table-wrap :is(th, td) { padding: 14px 18px; border: 1px solid var(--border); vertical-align: top; }
+.protocol-table-wrap th:nth-child(1) { width: 25%; }
+.protocol-table-wrap th:nth-child(2) { width: 27%; }
+.protocol-table-wrap tbody tr:nth-child(even) { background: #f6eee7; }
+.protocol-subsection { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--border); }
+.protocol-subsection h3 { margin: 0 0 22px; }
+.protocol-subsection h4 { margin: 0 0 18px; }
+.protocol-subsection p { margin-block: 18px; }
+.protocol-steps { padding-left: 1.7em; }
+.protocol-steps li { padding-left: 8px; margin-bottom: 18px; }
+.protocol-steps li::marker { color: var(--secondary); font-weight: bold; }
+.protocol-noscript { margin-top: 24px; }
+
+@media (max-width: 900px) {
+  .protocol-main { padding-inline: 12px; }
+  .protocol-grid { gap: 20px; }
+  .protocol-category,
+  .protocol-category:nth-child(-n + 2) { grid-column: span 3; }
+  .protocol-panel-header { flex-direction: column; }
+}
+
+@media (max-width: 560px) {
+  .protocol-main { margin-top: 92px; margin-bottom: 64px; padding-inline: 6px; }
+  .protocol-page-heading { margin-bottom: 24px; }
+  .protocol-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .protocol-category,
+  .protocol-category:nth-child(-n + 2) { grid-column: auto; }
+  .protocol-card { min-height: 132px; padding-inline: 48px; }
+  .protocol-card-toggle { right: 18px; }
+  .protocol-index-button { padding-block: 14px; }
+  .protocol-materials ul { columns: 1; }
+  .protocol-table-wrap :is(th, td) { padding: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .protocol-card { transition: none; }
+}
