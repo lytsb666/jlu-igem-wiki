@@ -114,17 +114,26 @@ body *::after {
 }
 
 :root body :is(main, article, .lab-hero, .edu-hero, .ihp-hero, .inc-hero, .entre-hero, dialog)
-  :is(p, li, dt, dd, blockquote, figcaption, th, td, h5, h6),
+  :is(p, li, dt, dd, blockquote, figcaption, th, td, h5, h6):not(nav *),
 :root body :is(.hp-p, .section-lead, .section-bridge, .activity-story p, .measurement-figure figcaption) {
   font-size: var(--wiki-body-size) !important;
 }
 
 /* Inline emphasis and links follow the surrounding text, including headings. */
 :root body :is(p, li, dt, dd, blockquote, figcaption, th, td, h1, h2, h3, h4, h5, h6)
-  :is(a, span, strong, b, em, i, code, small) {
+  :is(a, span, strong, b, em, i, code, small):not(nav *) {
   font-size: inherit !important;
   line-height: inherit !important;
   letter-spacing: inherit;
+}
+
+/* Keep navigation levels independent of article typography. */
+:root body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a {
+  font-size: 1rem !important;
+}
+
+:root body :is(.page-toc ul a, .ihp-toc__subnav a) {
+  font-size: 0.875rem !important;
 }
 
 /* Page titles and top-level article sections. */

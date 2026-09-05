@@ -7,6 +7,8 @@
 .navbar {
   --navigation-text-color: #FFFFFF;
   --navigation-brown-rgb: 111, 78, 55;
+  --navigation-primary-size: 1rem;
+  --navigation-secondary-size: 0.875rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -66,7 +68,7 @@
   width: min(1180px, calc(100vw - 32px));
   justify-content: center;
   gap: 32px;
-  font-size: 15px;
+  font-size: var(--navigation-primary-size);
   font-weight: 600;
 }
 
@@ -78,6 +80,14 @@
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease,
     background-color 0.3s ease;
+}
+
+.navbar .nav-links > .dropdown > a {
+  font-size: var(--navigation-primary-size);
+}
+
+.navbar .dropdown-content a {
+  font-size: var(--navigation-secondary-size);
 }
 
 .nav-links > .dropdown > a:hover,
@@ -139,6 +149,7 @@
 
 @media (max-width: 768px) {
   .navbar {
+    --navigation-primary-size: 0.9375rem;
     justify-content: flex-start;
     overflow-x: auto;
   }
@@ -148,7 +159,6 @@
     min-width: 100%;
     gap: 22px;
     padding: 0 16px;
-    font-size: 14px;
   }
 }
 
