@@ -762,6 +762,21 @@ body.drylab-page {
   font-size: 1.05rem;
 }
 
+/* Math glyphs need a MATH-enabled font, independent of the prose theme. */
+:root body.drylab-page math,
+:root body.drylab-page math * {
+  font-family: "Cambria Math", "STIX Two Math", math !important;
+}
+
+:root body.drylab-page math {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-indent: 0;
+  hyphens: none;
+}
+
 /* Give consecutive formulas enough breathing room without altering MathML. */
 .equation-block > br {
   display: block;
@@ -770,7 +785,8 @@ body.drylab-page {
 }
 
 .equation-block > math[display="block"] {
-  display: block;
+  /* Preserve MathML layout: plain `block` stacks the math tokens vertically. */
+  display: block math;
 }
 
 .equation-block > math[display="block"] + math[display="block"] {
