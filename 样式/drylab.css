@@ -759,7 +759,13 @@ body.drylab-page {
 
 .equation-block math {
   min-width: max-content;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
+}
+
+/* Override prose justification for formula panels, including a/b/c rows. */
+:root body.drylab-page .equation-block {
+  text-align: center !important;
+  text-align-last: center !important;
 }
 
 /* Math glyphs need a MATH-enabled font, independent of the prose theme. */
@@ -787,6 +793,8 @@ body.drylab-page {
 .equation-block > math[display="block"] {
   /* Preserve MathML layout: plain `block` stacks the math tokens vertically. */
   display: block math;
+  width: max-content;
+  margin-inline: auto;
 }
 
 .equation-block > math[display="block"] + math[display="block"] {
