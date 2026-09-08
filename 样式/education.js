@@ -101,14 +101,9 @@ document.querySelectorAll('.tree-branch__leaves a').forEach((link) => {
 document.querySelectorAll('.activity-card').forEach((card) => {
   const body = card.querySelector('.activity-card__body');
   const media = card.querySelector('.activity-media');
-  const image = media?.querySelector('img');
   const code = card.id.replace('activity-', '').toUpperCase();
 
   if (media) media.dataset.photoCode = code;
-  if (media && image) {
-    media.dataset.photoSrc = 'true';
-    media.style.setProperty('--activity-photo', `url("${image.src}")`);
-  }
   if (!body || body.querySelector('.activity-card__stories')) return;
 
   const location = body.querySelector('.activity-card__location');
@@ -197,15 +192,44 @@ requestAnimationFrame(() => updateFeedback(feedbackIndex));
 
 const lightbox = document.querySelector('.edu-lightbox');
 const lightboxImage = lightbox?.querySelector('img');
-const lightboxClose = lightbox?.querySelector('button');
-document.querySelectorAll('[data-lightbox]').forEach((trigger) => {
+const lightboxClose = lightbox?.querySelector('.edu-lightbox__close');
+const lightboxCaption = lightbox?.querySelector('#lightbox-caption');
+const lightboxCounter = lightbox?.querySelector('[data-photo-counter]');
+const lightboxControls = lightbox?.querySelector('.edu-lightbox__controls');
+const photoTriggers = [...document.querySelectorAll('[data-lightbox]')];
+let activePhotos = [];
+let activePhotoIndex = 0;
+
+function showActivityPhoto(index) {
+  if (!lightboxImage || !activePhotos.length) return;
+  activePhotoIndex = (index + activePhotos.length) % activePhotos.length;
+  const photo = activePhotos[activePhotoIndex].querySelector('img');
+  if (!photo) return;
+  lightboxImage.src = photo.currentSrc || photo.src;
+  lightboxImage.alt = photo.alt;
+  if (lightboxCaption) lightboxCaption.textContent = photo.alt;
+  if (lightboxCounter) lightboxCounter.textContent = `${activePhotoIndex + 1} / ${activePhotos.length}`;
+  if (lightboxControls) lightboxControls.hidden = activePhotos.length < 2;
+}
+
+photoTriggers.forEach((trigger) => {
   trigger.addEventListener('click', () => {
-    const image = trigger.querySelector('img');
-    if (!image || !lightbox || !lightboxImage) return;
-    lightboxImage.src = image.currentSrc || image.src;
-    lightboxImage.alt = image.alt;
-    if (typeof lightbox.showModal === 'function') lightbox.showModal();
+    if (!lightbox || !trigger.querySelector('img')) return;
+    const group = trigger.dataset.photoGroup;
+    activePhotos = group ? photoTriggers.filter((photo) => photo.dataset.photoGroup === group) : [trigger];
+    showActivityPhoto(activePhotos.indexOf(trigger));
+    if (typeof lightbox.showModal === 'function') {
+      lightbox.showModal();
+      lightboxClose?.focus();
+    }
   });
+});
+lightbox?.querySelector('[data-photo-prev]')?.addEventListener('click', () => showActivityPhoto(activePhotoIndex - 1));
+lightbox?.querySelector('[data-photo-next]')?.addEventListener('click', () => showActivityPhoto(activePhotoIndex + 1));
+lightbox?.addEventListener('keydown', (event) => {
+  if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+  event.preventDefault();
+  showActivityPhoto(activePhotoIndex + (event.key === 'ArrowRight' ? 1 : -1));
 });
 lightboxClose?.addEventListener('click', () => lightbox.close());
 lightbox?.addEventListener('click', (event) => {

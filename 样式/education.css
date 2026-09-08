@@ -304,10 +304,21 @@ button { font: inherit; }
 .edu-references li::marker { content: "[" counter(list-item) "] "; }
 .site-footer { margin-top: 0; }
 
-.edu-lightbox { position: fixed; inset: 0; width: min(1160px, calc(100vw - 48px)); max-width: none; height: min(88vh, 850px); padding: 0; overflow: hidden; background: #000000; border: 1px solid rgba(255, 255, 255, .16); border-radius: 18px; box-shadow: 0 40px 120px rgba(0, 0, 0, .6); }
+.edu-lightbox { position: fixed; inset: 0; width: min(1160px, calc(100vw - 48px)); max-width: none; height: min(90dvh, 960px); max-height: calc(100dvh - 32px); padding: 0; overflow: hidden; color: #FFFFFF; background: #101713; border: 1px solid rgba(255, 255, 255, .16); border-radius: 18px; box-shadow: 0 40px 120px rgba(0, 0, 0, .6); }
+.edu-lightbox[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
 .edu-lightbox::backdrop { background: rgba(0, 0, 0, .82); backdrop-filter: blur(8px); }
+.edu-lightbox__image { min-height: 0; padding: 18px; }
 .edu-lightbox img { width: 100%; height: 100%; object-fit: contain; }
-.edu-lightbox button { position: absolute; top: 14px; right: 14px; z-index: 1; display: grid; width: 44px; height: 44px; place-items: center; color: #FFFFFF; cursor: pointer; background: rgba(0, 0, 0, .62); border: 1px solid rgba(255, 255, 255, .32); border-radius: 50%; font-size: 1.7rem; }
+.edu-lightbox button { flex: 0 0 44px; display: grid; width: 44px; height: 44px; place-items: center; color: #FFFFFF; cursor: pointer; background: rgba(0, 0, 0, .62); border: 1px solid rgba(255, 255, 255, .32); border-radius: 50%; font-size: 1.7rem; }
+.edu-lightbox__close { position: absolute; top: 14px; right: 14px; z-index: 1; }
+.edu-lightbox__footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 24px; border-top: 1px solid rgba(255, 255, 255, .16); }
+.edu-lightbox__footer p { margin: 0; overflow-wrap: anywhere; }
+.edu-lightbox__controls { display: flex; flex: 0 0 auto; gap: 12px; align-items: center; }
+.edu-lightbox__controls[hidden] { display: none; }
+.edu-lightbox__controls span { min-width: 42px; font-variant-numeric: tabular-nums; text-align: center; }
+.edu-lightbox button:hover { color: var(--edu-night); background: var(--edu-mint); }
+.edu-lightbox button:focus-visible { outline: 3px solid var(--edu-mint-strong); outline-offset: 3px; }
+body:has(.edu-lightbox[open]) { overflow: hidden; }
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .75s ease, transform .75s cubic-bezier(.2,.65,.2,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
@@ -725,23 +736,19 @@ button { font: inherit; }
   font-weight: 800;
   letter-spacing: .1em;
 }
-.activity-media[data-photo-src]::after {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  z-index: 2;
-  width: 38%;
-  aspect-ratio: 1.18;
-  content: "";
-  background-image: var(--activity-photo);
-  background-position: 72% center;
-  background-size: cover;
-  border: 6px solid #FFFFFF;
-  border-radius: 4px 15px 4px 15px;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, .26);
-  transform: rotate(2.5deg);
-}
 .activity-media img { min-height: 470px; filter: saturate(.92) contrast(1.02); }
+.activity-gallery { grid-column: 1; grid-row: 1; align-self: center; min-width: 0; margin: 0; padding: 24px; }
+.activity-card:nth-child(even) .activity-gallery { grid-column: 2; }
+.activity-gallery__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.activity-gallery--4 .activity-gallery__photos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.activity-gallery--2 .activity-gallery__photos { grid-template-columns: 1fr; }
+.activity-photo { display: block; min-width: 0; width: 100%; padding: 0; overflow: hidden; cursor: zoom-in; background: #EAF0E3; border: 1px solid color-mix(in srgb, var(--audience-color) 24%, transparent); border-radius: 5px 12px 5px 12px; transition: box-shadow .2s ease, border-color .2s ease; }
+.activity-photo--lead { grid-column: 1 / -1; border-radius: 16px 5px 16px 5px; }
+.activity-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.activity-photo:hover { border-color: var(--audience-color); box-shadow: 0 6px 18px rgba(23, 35, 31, .16); }
+.activity-photo:focus-visible { outline: 3px solid var(--audience-color); outline-offset: 3px; }
+.activity-gallery figcaption { display: grid; gap: 8px; margin-top: 16px; color: var(--edu-muted); }
+.activity-gallery figcaption small { color: var(--audience-color); font-size: .875rem; }
 .activity-card__body { justify-content: flex-start; padding: clamp(28px, 4vw, 46px); }
 .activity-card__meta { margin-bottom: 14px; }
 .activity-card__location { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 24px !important; }
@@ -898,6 +905,9 @@ button { font: inherit; }
   .activity-card:nth-child(even) { grid-template-columns: 1fr; border-right-width: 1px; border-left: 4px solid var(--audience-color); }
   .activity-card:nth-child(even) .activity-media,
   .activity-card:nth-child(even) .activity-card__body { grid-column: auto; grid-row: auto; }
+  .activity-gallery,
+  .activity-card:nth-child(even) .activity-gallery { grid-column: 1; grid-row: auto; }
+  .activity-gallery { padding: 24px 24px 0; }
   .activity-media,
   .activity-media img,
   .activity-media--placeholder { min-height: 340px; max-height: 460px; }
@@ -923,7 +933,12 @@ button { font: inherit; }
   .tree-branch--explorers .tree-branch__leaves { grid-template-columns: 1fr; }
   .activity-tree__root { margin-bottom: 28px; }
   .activity-tree__branches { padding-top: 0; }
-  .activity-media[data-photo-src]::after { width: 34%; border-width: 4px; }
+  .activity-gallery { padding: 18px 18px 0; }
+  .activity-gallery__photos { gap: 8px; }
+  .edu-lightbox { width: calc(100vw - 20px); }
+  .edu-lightbox__image { padding: 8px; }
+  .edu-lightbox__footer { align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px; }
+  .edu-lightbox__controls { align-self: center; }
   .activity-card__stories { gap: 11px; }
   .activity-story { padding: 15px; }
   .feedback-showcase__heading { align-items: flex-start; flex-direction: column; }
