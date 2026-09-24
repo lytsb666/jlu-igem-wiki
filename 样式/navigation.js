@@ -1,5 +1,77 @@
 const navbar = document.querySelector('.navbar')
 
+const navigationSchema = [
+  {
+    label: 'Project',
+    items: [
+      ['Description', '../Project/description.html'],
+      ['Design', '../Project/design.html'],
+      ['Engineering', '../Project/engineering.html'],
+      ['Safety', '../Project/safety.html'],
+      ['Contribution', '../Project/contribution.html'],
+    ],
+  },
+  {
+    label: 'Engagement',
+    items: [
+      ['iHP', '../Eagagement/iHP.html'],
+      ['Collaboration', '../Eagagement/collaboration.html'],
+      ['Inclusivity', '../Eagagement/inclusity.html'],
+      ['Education', '../Eagagement/education.html'],
+      ['Entrepreneurship', '../Eagagement/entrepreneurship.html'],
+    ],
+  },
+  {
+    label: 'Wetlab',
+    items: [
+      ['Protocol', '../Wet-lab/protocal.html'],
+      ['Notebook', '../Wet-lab/notebook.html'],
+      ['Measurement', '../Wet-lab/measurement.html'],
+      ['Parts', '../Wet-lab/part.html'],
+      ['Results', '../Wet-lab/result.html'],
+    ],
+  },
+  {
+    label: 'Instrument',
+    items: [
+      ['Hardware', '../Instrument/hardware.html'],
+      ['Software', '../Instrument/software.html'],
+      ['Model', '../Instrument/model.html'],
+    ],
+  },
+  {
+    label: 'Team',
+    items: [
+      ['Member', '../Team/member.html'],
+      ['Attribution', '../Team/attribution.html'],
+    ],
+  },
+  {
+    label: 'Judging',
+    items: [
+      ['iHP', '../Judging/iHP.html'],
+      ['Model', '../Judging/model.html'],
+      ['Hardware', '../Judging/hardware.html'],
+      ['Measurement', '../Wet-lab/measurement.html'],
+    ],
+  },
+]
+
+if (navbar) {
+  const navLinks = navbar.querySelector('.nav-links')
+  if (navLinks) {
+    navLinks.innerHTML = `
+      <div class="dropdown nav-home"><a href="../homepage/index.html" class="nav-link">Home</a></div>
+      ${navigationSchema.map(({ label, items }) => `
+        <div class="dropdown" data-navigation-section="${label.toLowerCase()}">
+          <a href="${items[0][1]}" class="nav-link">${label}</a>
+          <div class="dropdown-content">
+            ${items.map(([itemLabel, href]) => `<a href="${href}">${itemLabel}</a>`).join('')}
+          </div>
+        </div>`).join('')}`
+  }
+}
+
 if (navbar) {
   const TOP_EDGE = 4
   const DIRECTION_THRESHOLD = 10
