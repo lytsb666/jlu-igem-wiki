@@ -145,3 +145,120 @@ homeLink?.addEventListener('click', (event) => {
   event.preventDefault()
   window.scrollTo({ top: 0, behavior: 'smooth' })
 })
+
+if (navbar) {
+  const MENU_CLOSE_DELAY = 200
+  const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
+  const menuGroups = [...navbar.querySelectorAll('.dropdown:has(.dropdown-content)')]
+  let closeTimer = null
+
+  function setMenuOpen(group, open, { focusTrigger = false } = {}) {
+    const trigger = group?.querySelector(':scope > .nav-link')
+    if (!group || !trigger) return
+
+    group.classList.toggle('is-open', open)
+    trigger.setAttribute('aria-expanded', String(open))
+
+    if (open) {
+      menuGroups.forEach((otherGroup) => {
+        if (otherGroup === group) return
+        otherGroup.classList.remove('is-open')
+        otherGroup.querySelector(':scope > .nav-link')?.setAttribute('aria-expanded', 'false')
+      })
+    }
+
+    navbar.classList.toggle('is-interacting', menuGroups.some((item) => item.classList.contains('is-open')))
+    if (focusTrigger) trigger.focus()
+  }
+
+  function closeAllMenus(options) {
+    menuGroups.forEach((group) => setMenuOpen(group, false, options))
+  }
+
+  function cancelScheduledClose() {
+    window.clearTimeout(closeTimer)
+    closeTimer = null
+  }
+
+  function scheduleClose(group) {
+    cancelScheduledClose()
+    closeTimer = window.setTimeout(() => {
+      if (!group.matches(':hover, :focus-within')) setMenuOpen(group, false)
+    }, MENU_CLOSE_DELAY)
+  }
+
+  menuGroups.forEach((group, index) => {
+    const trigger = group.querySelector(':scope > .nav-link')
+    const menu = group.querySelector(':scope > .dropdown-content')
+    if (!trigger || !menu) return
+
+    const menuId = menu.id || `navigation-menu-${index + 1}`
+    menu.id = menuId
+    trigger.setAttribute('role', 'button')
+    trigger.setAttribute('aria-haspopup', 'true')
+    trigger.setAttribute('aria-expanded', 'false')
+    trigger.setAttribute('aria-controls', menuId)
+
+    if (!trigger.querySelector('.nav-caret')) {
+      const caret = document.createElement('span')
+      caret.className = 'nav-caret'
+      caret.setAttribute('aria-hidden', 'true')
+      caret.textContent = '▾'
+      trigger.append(caret)
+    }
+
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault()
+      cancelScheduledClose()
+      setMenuOpen(group, true)
+    })
+
+    trigger.addEventListener('keydown', (event) => {
+      if (event.key === ' ') {
+        event.preventDefault()
+        cancelScheduledClose()
+        setMenuOpen(group, true)
+      } else if (event.key === 'ArrowDown') {
+        event.preventDefault()
+        setMenuOpen(group, true)
+        menu.querySelector('a')?.focus()
+      }
+    })
+
+    group.addEventListener('pointerenter', () => {
+      cancelScheduledClose()
+      if (precisePointer.matches) setMenuOpen(group, true)
+    })
+
+    group.addEventListener('pointerleave', () => {
+      if (precisePointer.matches) scheduleClose(group)
+    })
+
+    group.addEventListener('focusin', () => {
+      cancelScheduledClose()
+      setMenuOpen(group, true)
+    })
+
+    group.addEventListener('focusout', (event) => {
+      if (!group.contains(event.relatedTarget)) scheduleClose(group)
+    })
+
+    menu.querySelectorAll('a[href]').forEach((link) => {
+      link.addEventListener('click', () => closeAllMenus())
+    })
+  })
+
+  navbar.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return
+    const openGroup = menuGroups.find((group) => group.classList.contains('is-open'))
+    if (!openGroup) return
+
+    event.preventDefault()
+    openGroup.querySelector(':scope > .nav-link')?.focus()
+    setMenuOpen(openGroup, false)
+  })
+
+  document.addEventListener('pointerdown', (event) => {
+    if (!navbar.contains(event.target)) closeAllMenus()
+  }, { passive: true })
+}
