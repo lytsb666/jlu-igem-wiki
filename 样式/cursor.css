@@ -112,6 +112,12 @@ html.custom-cursor-active body *::after {
     cursor: none !important;
 }
 
+/* Navigation needs a compact, precise pointer instead of the 64px art cursor. */
+html.custom-cursor-active.navigation-cursor-native body .navbar,
+html.custom-cursor-active.navigation-cursor-native body .navbar * {
+    cursor: pointer !important;
+}
+
 #igem-custom-cursor {
     position: fixed !important;
     top: 0 !important;

@@ -38,7 +38,8 @@
 }
 
 .navbar:hover,
-.navbar:focus-within {
+.navbar:focus-within,
+.navbar.is-interacting {
   opacity: 1;
   background-color: rgb(var(--navigation-brown-rgb));
   -webkit-backdrop-filter: blur(12px);
@@ -75,11 +76,26 @@
 .nav-links a {
   position: relative;
   display: block;
-  padding: 8px 0;
+  padding: 8px 6px;
   color: var(--navigation-text-color);
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease,
-    background-color 0.3s ease;
+  border-radius: 5px;
+  transition: color 0.22s ease, transform 0.22s ease, font-weight 0.22s ease,
+    background-color 0.22s ease;
+}
+
+.nav-links > .dropdown > .nav-link::after {
+  content: '';
+  position: absolute;
+  right: 6px;
+  bottom: 2px;
+  left: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0.35);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .navbar .nav-links > .dropdown > a {
@@ -91,11 +107,32 @@
 }
 
 .nav-links > .dropdown > a:hover,
-.nav-links > .dropdown > a.active,
 .nav-links > .dropdown:focus-within > a {
   color: var(--navigation-text-color);
   font-weight: 700;
   transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links > .dropdown > a:hover::after,
+.nav-links > .dropdown:focus-within > a::after {
+  opacity: 0.72;
+  transform: scaleX(0.72);
+}
+
+.nav-links > .dropdown > a.active {
+  color: #F3D6AD;
+  font-weight: 750;
+}
+
+.nav-links > .dropdown > a.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.navbar a:focus-visible {
+  outline: 2px solid #F3D6AD;
+  outline-offset: 2px;
 }
 
 .dropdown {
@@ -136,15 +173,23 @@
   padding: 12px 16px;
   white-space: nowrap;
   transform: none;
+  border-left: 3px solid transparent;
 }
 
 .dropdown-content a:hover,
-.dropdown-content a:focus-visible,
-.dropdown-content a.active {
+.dropdown-content a:focus-visible {
   color: var(--navigation-text-color);
   font-weight: 700;
   transform: none;
-  background-color: rgba(224, 193, 166, 0.16);
+  background-color: rgba(255, 255, 255, 0.16);
+  border-left-color: rgba(243, 214, 173, 0.65);
+}
+
+.dropdown-content a.active {
+  color: #F3D6AD;
+  font-weight: 750;
+  background-color: rgba(224, 193, 166, 0.12);
+  border-left-color: #F3D6AD;
 }
 
 @media (max-width: 768px) {

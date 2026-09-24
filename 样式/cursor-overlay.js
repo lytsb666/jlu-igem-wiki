@@ -106,6 +106,14 @@ const textSelector = [
     pointerX = event.clientX
     pointerY = event.clientY
 
+    const navigationUsesNativeCursor = event.target instanceof Element && Boolean(event.target.closest('.navbar'))
+    document.documentElement.classList.toggle('navigation-cursor-native', navigationUsesNativeCursor)
+
+    if (navigationUsesNativeCursor) {
+      cursorElement.classList.remove('is-visible')
+      return
+    }
+
     const nextCursorName = findCursorName(event.target)
     if (nextCursorName !== cursorName) {
       cursorName = nextCursorName
@@ -118,10 +126,12 @@ const textSelector = [
   }, { capture: true, passive: true })
 
   document.addEventListener('pointerleave', () => {
+    document.documentElement.classList.remove('navigation-cursor-native')
     cursorElement.classList.remove('is-visible')
   })
 
   window.addEventListener('blur', () => {
+    document.documentElement.classList.remove('navigation-cursor-native')
     cursorElement.classList.remove('is-visible')
   })
 }
