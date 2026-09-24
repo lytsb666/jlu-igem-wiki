@@ -152,13 +152,22 @@ function setupFigureLightbox() {
   }
 
   document.querySelectorAll('.figure-zoom').forEach((button) => {
+    const image = button.querySelector('img')
+    const syncFullSource = () => {
+      const source = image?.currentSrc || image?.src
+      if (source) button.dataset.fullSrc = source
+    }
+
+    syncFullSource()
+    image?.addEventListener('load', syncFullSource, { once: true })
+
     button.addEventListener('click', () => {
-      const image = button.querySelector('img')
       const caption = button.closest('figure')?.querySelector('figcaption')
       if (!image) return
 
+      syncFullSource()
       trigger = button
-      lightboxImage.src = image?.currentSrc || image?.src || button.dataset.fullSrc
+      lightboxImage.src = button.dataset.fullSrc
       lightboxImage.alt = image?.alt || 'Expanded entrepreneurship figure'
       lightboxCaption.textContent = caption?.textContent || image.alt
       lightbox.showModal()

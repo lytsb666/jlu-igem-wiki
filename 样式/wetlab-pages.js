@@ -46,6 +46,19 @@ document.querySelectorAll('[data-auto-toc]').forEach((toc) => {
   })
 })
 
+document.querySelectorAll('.model-figure__link').forEach((link) => {
+  const image = link.querySelector('img')
+  if (!image) return
+
+  const syncImageLink = () => {
+    const source = image.currentSrc || image.src
+    if (source) link.href = source
+  }
+
+  syncImageLink()
+  image.addEventListener('load', syncImageLink, { once: true })
+})
+
 const tocLinks = [...document.querySelectorAll('[data-section-link]')]
 const trackedSections = tocLinks
   .map((link) => document.querySelector(link.getAttribute('href')))
