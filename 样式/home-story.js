@@ -21,6 +21,8 @@ if (story) {
   const careScene = story.querySelector('.care-scene')
   const legacyScene = story.querySelector('.legacy-scene')
   const finaleScene = story.querySelector('.finale-scene')
+  const storyProgressIndicator = story.querySelector('.home-story-progress')
+  const storyProgressOutput = storyProgressIndicator?.querySelector('output')
   const compactViewport = window.matchMedia('(max-width: 720px)')
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
   const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
@@ -68,6 +70,7 @@ if (story) {
   let worldIntroPointerFrame = null
   let worldIntroPointerX = 0
   let worldIntroPointerY = 0
+  let lastStoryProgressPercent = -1
   let timelineViewportWidth = window.innerWidth
   let timelineViewportHeight = Math.max(1, window.innerHeight)
   let timelineOrientation = window.innerWidth >= window.innerHeight ? 'landscape' : 'portrait'
@@ -375,6 +378,8 @@ if (story) {
     instrumentScene.style.setProperty('--cover-shade-opacity', (reduce ? 0 : shadeIn * 0.42).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
     instrumentScene.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
+    stage.style.setProperty('--cover-cue-opacity', (1 - cueExit).toFixed(3))
+    stage.style.setProperty('--cover-cue-rise', `${(cueExit * 10).toFixed(2)}px`)
     setSceneVisibility(instrumentScene, sceneOpacity > 0.001)
   }
 
@@ -628,7 +633,18 @@ if (story) {
     const viewportHeight = window.innerHeight
     const timelineHeight = timelineViewportHeight
     const scrolled = clamp(-rect.top, 0, scrollDistance)
+    const storyProgress = clamp(scrolled / scrollDistance)
+    const storyProgressPercent = Math.round(storyProgress * 100)
     const storyIsPinned = rect.top <= 0 && rect.bottom >= viewportHeight
+
+    if (storyProgressIndicator) {
+      storyProgressIndicator.style.setProperty('--home-story-progress', storyProgress.toFixed(4))
+      if (storyProgressPercent !== lastStoryProgressPercent) {
+        storyProgressIndicator.setAttribute('aria-valuenow', String(storyProgressPercent))
+        if (storyProgressOutput) storyProgressOutput.textContent = `${storyProgressPercent}%`
+        lastStoryProgressPercent = storyProgressPercent
+      }
+    }
     // Keep every chapter's internal choreography, but use 30% less wheel
     // distance across the complete story.
     const coverScrollDistance = Math.min(scrollDistance, timelineHeight * 6.5 * storyPace)
