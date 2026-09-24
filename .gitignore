@@ -1,7 +1,28 @@
 node_modules/
 dist/
+.vite/
+.sites-work/
+tmp/
 .docx-*/
 offline/
 *.log
 *.pid
 assets/*.docx
+
+# Local environment files (keep documented examples trackable)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Editor and IDE state
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
