@@ -7,14 +7,11 @@ body.loading-lock {
 
 .igem-loader {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
+  inset: -2px;
+  width: calc(100vw + 4px);
+  height: calc(100vh + 4px);
+  min-width: calc(100vw + 4px);
+  min-height: calc(100vh + 4px);
   max-width: none;
   max-height: none;
   z-index: 2147483647;
@@ -43,7 +40,7 @@ body.loading-lock {
   width: 100%;
   height: 100%;
   max-width: none;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   opacity: 1;
   background: #c6c1be;
@@ -114,8 +111,8 @@ body.loading-lock {
 
 @supports (height: 100dvh) {
   .igem-loader {
-    height: 100dvh;
-    min-height: 100dvh;
+    height: calc(100dvh + 4px);
+    min-height: calc(100dvh + 4px);
   }
 }
 
