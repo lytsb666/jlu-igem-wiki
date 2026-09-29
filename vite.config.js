@@ -36,6 +36,7 @@ const input = Object.fromEntries(
 function sitesOutput() {
   return {
     name: 'sites-output',
+    apply: 'build',
     buildStart() {
       rmSync(resolve(root, 'dist'), { recursive: true, force: true })
     },
