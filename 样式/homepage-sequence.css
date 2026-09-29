@@ -1,8 +1,8 @@
 /* Homepage-only narrative sequence. The source images stay within the
    original Home asset library; the reference folder is never loaded. */
 .scroll-story {
-  height: 2860vh;
-  height: 2860svh;
+  height: 2660vh;
+  height: 2660svh;
 }
 
 .home-sequence,
@@ -88,12 +88,32 @@
 .home-chapter--sanitation .chapter-continent { z-index: 2; }
 .home-chapter--sanitation .chapter-message { z-index: 3; }
 
-.home-chapter--procession .chapter-mascot {
+.home-chapter--procession {
+  background: radial-gradient(circle at 50% 18%, #5b321e 0, #2d180f 58%, #1c100c 100%);
+}
+
+.home-chapter--procession .chapter-procession-top {
+  z-index: 1;
+  object-fit: cover;
+  clip-path: inset(0 0 54% 0);
+  transform: scale(1.012);
+}
+
+.home-chapter--procession .chapter-procession-people {
+  z-index: 2;
+  object-fit: cover;
+  clip-path: inset(36% 0 27% 0);
+  transform: translate3d(var(--procession-people-x, -4vw), 0, 0) scale(1.055);
+  transform-origin: center;
+}
+
+.home-chapter--procession .chapter-procession-mascot {
+  z-index: 3;
+  width: min(17vw, 260px);
+  height: min(42vh, 430px);
+  inset: auto auto 0 68%;
   object-fit: contain;
-  width: min(30vw, 360px);
-  height: min(64vh, 740px);
-  inset: auto auto 0 var(--chapter-mascot-x, 8%);
-  transform: translateX(-50%) translateY(var(--chapter-mascot-y, 8%));
+  transform: translate3d(var(--procession-mascot-x, 18vw), 2%, 0);
 }
 
 .home-chapter--door .chapter-door,
@@ -114,36 +134,40 @@
 .home-chapter--workflow img { object-fit: cover; transform: scale(var(--chapter-scale, 1.04)); }
 
 .home-chapter--cards {
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle at 50% 35%, #896247 0, #3e291e 45%, #130f0c 100%);
+  display: block;
+  background: #c9ae91 url('../a  图片/home-story/cards/cards-front.png') center / 100% 100% no-repeat;
 }
 
 .home-chapter--cards.is-visible { pointer-events: auto; }
 
 .home-cards {
+  position: absolute;
+  inset: -1px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(10px, 1.6vw, 28px);
-  width: min(92vw, 1520px);
+  gap: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   opacity: var(--chapter-layer-opacity, 0);
-  transform: translateY(var(--chapter-layer-rise, 28px));
+  transform: none;
 }
 
 .home-flip-card {
   min-width: 0;
-  aspect-ratio: .46;
+  min-height: 0;
+  height: 100%;
   padding: 0;
   border: 0;
-  border-radius: clamp(12px, 1.5vw, 24px);
+  border-radius: 0;
   background: transparent;
   cursor: pointer;
   perspective: 1200px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, .32);
+  box-shadow: none;
+  overflow: hidden;
 }
 
-.home-flip-card:focus-visible { outline: 4px solid #f8df9a; outline-offset: 5px; }
-.home-flip-card__inner { display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .62s cubic-bezier(.2,.75,.24,1); }
+.home-flip-card:focus-visible { outline: 4px solid #f8df9a; outline-offset: -6px; }
+.home-flip-card__inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .62s cubic-bezier(.2,.75,.24,1); }
 .home-flip-card.is-flipped .home-flip-card__inner { transform: rotateY(180deg); }
 .home-flip-card__face { position: absolute; inset: 0; display: block; border-radius: inherit; backface-visibility: hidden; background-repeat: no-repeat; background-size: 400% 100%; }
 .home-flip-card__front { background-image: url('../a  图片/home-story/cards/cards-front.png'); }
@@ -162,9 +186,9 @@
 .reach-orbit--four { right: 9%; bottom: 7%; }
 
 @media (max-width: 720px) {
-  .scroll-story { height: 2740svh; }
-  .home-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(76vw, 430px); gap: 12px; }
-  .home-flip-card { aspect-ratio: .58; }
+  .scroll-story { height: 2540svh; }
+  .home-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .home-chapter--procession .chapter-procession-mascot { width: min(31vw, 190px); height: min(34vh, 300px); left: 66%; }
   .reach-orbit { width: 35vw; border-width: 3px; }
   .reach-orbit--one { left: 4%; top: 12%; }
   .reach-orbit--two { right: 4%; top: 12%; }

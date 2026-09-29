@@ -46,6 +46,9 @@ if (story) {
     chapter.style.setProperty('--chapter-open-opacity', smoothstep(range(localProgress, .45, .72)).toFixed(3))
     chapter.style.setProperty('--chapter-mascot-walk', `${(-26 + smoothstep(range(localProgress, .18, .72)) * 22).toFixed(1)}vw`)
     chapter.style.setProperty('--chapter-device-scale', (0.64 + smoothstep(range(localProgress, .28, .78)) * .25).toFixed(3))
+    const processionMotion = smoothstep(range(localProgress, .18, .82))
+    chapter.style.setProperty('--procession-people-x', `${(-4 + processionMotion * 8).toFixed(2)}vw`)
+    chapter.style.setProperty('--procession-mascot-x', `${(18 - processionMotion * 56).toFixed(2)}vw`)
 
     const reachReveal = smoothstep(range(localProgress, .26, .82))
     chapter.style.setProperty('--reach-opacity', reachReveal.toFixed(3))
