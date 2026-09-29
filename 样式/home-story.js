@@ -746,7 +746,12 @@ if (story) {
     if (renderedCoverProgress === null || reducedMotion.matches || !storyIsPinned) {
       renderedCoverProgress = coverProgress
     } else {
-      const inertia = 1 - Math.exp(-elapsed / 125)
+      // Keep a small amount of easing without letting the cover trail behind
+      // wheel or trackpad input. Larger gaps catch up more aggressively, while
+      // fine scrolling retains enough interpolation to avoid visible stepping.
+      const progressGap = Math.abs(coverProgress - renderedCoverProgress)
+      const responseTime = progressGap > 0.012 ? 52 : 76
+      const inertia = 1 - Math.exp(-elapsed / responseTime)
       renderedCoverProgress += (coverProgress - renderedCoverProgress) * inertia
       if (Math.abs(coverProgress - renderedCoverProgress) < 0.00025) {
         renderedCoverProgress = coverProgress
