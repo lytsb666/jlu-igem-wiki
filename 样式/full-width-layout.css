@@ -1,5 +1,41 @@
 /* Full-width layout and typography shared by every wiki subpage. */
 
+/* Shared desktop frame for in-page navigation. The supplied artwork and its
+   reference screenshot identify this asset as the subpage navigation scroll. */
+@media (min-width: 901px) {
+  body :is(.lab-layout, .ihp-shell, .edu-shell, .inc-shell, .entre-shell) {
+    grid-template-columns: minmax(280px, 300px) minmax(0, 1fr);
+    gap: var(--wiki-section-gap);
+  }
+
+  body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) {
+    isolation: isolate;
+    padding: 170px 60px 150px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc)::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    pointer-events: none;
+    background: url('../a  图片/navigation/scroll-frame.png') center / 100% 100% no-repeat;
+  }
+
+  body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) > nav {
+    max-height: calc(100vh - 480px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+}
+
 body :is(
   .image-page-hero,
   .edu-hero,
@@ -215,4 +251,20 @@ body *::after {
 
 :root body :is(.parts-module, .experiment-card, .stage-panel, .reference-fold) > summary::after {
   flex-shrink: 0;
+}
+
+/* Keep large data sets readable without allowing them to widen the article. */
+:root body :is(.table-wrap, .document-table-wrap, .notebook-table-wrap, .protocol-table-wrap) {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+:root body :is(.data-table, .document-table, .protocol-table-wrap table) {
+  font-size: clamp(0.82rem, 0.95vw, 1rem);
+}
+
+:root body :is(.data-table, .document-table, .protocol-table-wrap table) :is(th, td) {
+  padding: clamp(10px, 1.1vw, 15px) clamp(10px, 1.2vw, 16px);
 }

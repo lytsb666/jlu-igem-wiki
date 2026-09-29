@@ -1,7 +1,9 @@
 /* Shared navigation styles for every wiki page. */
 :root {
-  /* Keep only a small safety gutter so subpage content uses the full viewport. */
-  --wiki-main-width: calc(100vw - clamp(20px, 2vw, 32px));
+  --wiki-content-max-width: 1440px;
+  --wiki-content-gutter: clamp(24px, 5vw, 96px);
+  --wiki-section-gap: clamp(28px, 5vw, 72px);
+  --wiki-main-width: min(var(--wiki-content-max-width), calc(100vw - var(--wiki-content-gutter)));
 }
 
 .navbar {

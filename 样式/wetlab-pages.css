@@ -1648,6 +1648,11 @@ body.wetlab-page {
   }
   .safety-photo:first-child { grid-column: auto; }
   .pathogen-banner { grid-template-columns: 1fr; }
+  .pathogen-section .pathogen-banner {
+    margin: -24px -19px 30px;
+    padding: 26px 19px;
+  }
+  .pathogen-banner > div { min-width: 0; }
   .pathogen-code { display: none; }
   .module-card__content { padding-left: 22px; }
   .experiment-card > summary { align-items: flex-start; }
