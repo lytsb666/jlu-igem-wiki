@@ -1,13 +1,23 @@
 @import './cursor.css';
 
+html:has(body.loading-lock),
 body.loading-lock {
   overflow: hidden !important;
 }
 
 .igem-loader {
   position: fixed;
-  inset: 0;
-  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: none;
+  max-height: none;
+  z-index: 2147483647;
   overflow: hidden;
   /* Match the flat outer field of the supplied video so its first decoded
      frame and any cover-fit edge never flash against black. */
@@ -29,22 +39,21 @@ body.loading-lock {
 
 .loading-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
   width: 100%;
   height: 100%;
   max-width: none;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   opacity: 1;
   background: #c6c1be;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   transition: transform 0.65s ease, opacity 0.65s ease;
 }
 
 .igem-loader.is-leaving .loading-video {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(1.02);
+  transform: scale(1.02);
 }
 
 .loading-overlay {
@@ -101,6 +110,13 @@ body.loading-lock {
 @keyframes loading-scan {
   from { transform: translateX(-110%); }
   to { transform: translateX(330%); }
+}
+
+@supports (height: 100dvh) {
+  .igem-loader {
+    height: 100dvh;
+    min-height: 100dvh;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

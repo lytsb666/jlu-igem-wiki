@@ -3,7 +3,7 @@ import './navigation.js'
 import './cursor-overlay.js'
 
 const MINIMUM_VISIBLE_TIME = 320
-const LOADING_VIDEO_TIMEOUT = 5000
+const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href
 
 function createLoader() {
   const existingLoader = document.querySelector('#igem-loader')
@@ -16,8 +16,8 @@ function createLoader() {
   loader.setAttribute('aria-live', 'polite')
   loader.setAttribute('aria-label', 'Loading page')
   loader.innerHTML = `
-    <video class="loading-video" autoplay muted playsinline preload="auto">
-      <source src="../b%20%20%E8%A7%86%E9%A2%91/loading.mp4" type="video/mp4">
+    <video class="loading-video" autoplay muted loop playsinline preload="auto">
+      <source src="${LOADING_VIDEO_URL}" type="video/mp4">
     </video>
     <div class="loading-overlay"></div>
     <div class="loading-content">
@@ -38,26 +38,6 @@ function pageHasLoaded() {
 
 function minimumVisibleTime() {
   return new Promise((resolve) => setTimeout(resolve, MINIMUM_VISIBLE_TIME))
-}
-
-function loadingVideoHasFinished(video) {
-  if (!video || video.ended || video.error) return Promise.resolve()
-
-  return new Promise((resolve) => {
-    let finished = false
-    const finish = () => {
-      if (finished) return
-      finished = true
-      window.clearTimeout(timeoutId)
-      video.removeEventListener('ended', finish)
-      video.removeEventListener('error', finish)
-      resolve()
-    }
-    const timeoutId = window.setTimeout(finish, LOADING_VIDEO_TIMEOUT)
-
-    video.addEventListener('ended', finish, { once: true })
-    video.addEventListener('error', finish, { once: true })
-  })
 }
 
 function pageOpeningIsReady() {
@@ -88,11 +68,15 @@ function dismissLoader(loader) {
 document.body.classList.add('loading-lock')
 const loader = createLoader()
 const loaderVideo = loader.querySelector('.loading-video')
-if (loaderVideo) loaderVideo.play().catch(() => loaderVideo.dispatchEvent(new Event('error')))
+if (loaderVideo) {
+  loaderVideo.loop = true
+  loaderVideo.muted = true
+  loaderVideo.playsInline = true
+  loaderVideo.play().catch(() => undefined)
+}
 
 Promise.all([
   pageHasLoaded(),
   minimumVisibleTime(),
-  loadingVideoHasFinished(loaderVideo),
   pageOpeningIsReady(),
 ]).then(() => dismissLoader(loader))
