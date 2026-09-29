@@ -1681,7 +1681,7 @@ body.wetlab-page {
     font-size: 13px;
   }
 
-  .wetlab-page .nav-links > .dropdown > a {
+  .wetlab-page .nav-links > .dropdown > .nav-link {
     padding: 6px 0;
   }
 

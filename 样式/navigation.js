@@ -62,13 +62,16 @@ if (navbar) {
   if (navLinks) {
     navLinks.innerHTML = `
       <div class="dropdown nav-home"><a href="../homepage/index.html" class="nav-link">Home</a></div>
-      ${navigationSchema.map(({ label, items }) => `
+      ${navigationSchema.map(({ label, items }) => {
+        const menuId = `navigation-menu-${label.toLowerCase()}`
+        return `
         <div class="dropdown" data-navigation-section="${label.toLowerCase()}">
-          <a href="${items[0][1]}" class="nav-link">${label}</a>
-          <div class="dropdown-content">
+          <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="${menuId}">${label}</button>
+          <div class="dropdown-content" id="${menuId}">
             ${items.map(([itemLabel, href]) => `<a href="${href}">${itemLabel}</a>`).join('')}
           </div>
-        </div>`).join('')}`
+        </div>`
+      }).join('')}`
   }
 }
 
@@ -266,7 +269,6 @@ if (navbar) {
 
     const menuId = menu.id || `navigation-menu-${index + 1}`
     menu.id = menuId
-    trigger.setAttribute('role', 'button')
     trigger.setAttribute('aria-haspopup', 'true')
     trigger.setAttribute('aria-expanded', 'false')
     trigger.setAttribute('aria-controls', menuId)
