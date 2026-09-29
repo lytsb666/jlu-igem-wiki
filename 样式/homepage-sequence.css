@@ -72,6 +72,14 @@
   transform: translate3d(0, var(--chapter-layer-rise, 30px), 0) scale(var(--chapter-layer-scale, .96));
 }
 
+.home-chapter--sanitation .chapter-sanitation-subject {
+  z-index: 2;
+  object-fit: contain;
+  padding: clamp(24px, 5vw, 92px);
+  opacity: var(--chapter-layer-opacity, 0);
+  transform: translate3d(0, var(--chapter-layer-rise, 30px), 0) scale(var(--chapter-layer-scale, .96));
+}
+
 .home-chapter--care .chapter-nurse,
 .home-chapter--care .chapter-elderly,
 .home-chapter--family .chapter-people { z-index: 2; }
