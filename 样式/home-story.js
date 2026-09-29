@@ -53,6 +53,11 @@ if (story) {
     const reachReveal = smoothstep(range(localProgress, .26, .82))
     chapter.style.setProperty('--reach-opacity', reachReveal.toFixed(3))
     chapter.style.setProperty('--reach-scale', (0.48 + reachReveal * .52).toFixed(3))
+    chapter.style.setProperty('--reach-scene-scale', (1.045 - smoothstep(range(localProgress, .08, .9)) * .045).toFixed(3))
+    chapter.style.setProperty('--reach-one', smoothstep(range(localProgress, .18, .34)).toFixed(3))
+    chapter.style.setProperty('--reach-two', smoothstep(range(localProgress, .34, .5)).toFixed(3))
+    chapter.style.setProperty('--reach-three', smoothstep(range(localProgress, .5, .66)).toFixed(3))
+    chapter.style.setProperty('--reach-four', smoothstep(range(localProgress, .66, .82)).toFixed(3))
     chapter.classList.toggle('is-visible', opacity > .001)
   }
 
