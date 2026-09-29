@@ -9,6 +9,9 @@ if (story) {
   const progressOutput = progressIndicator?.querySelector('output')
   const scrollCue = story.querySelector('.cover-scroll-cue')
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+  const workflowChapter = story.querySelector('.home-chapter--workflow')
+  const workflowTimer = workflowChapter?.querySelector('.workflow-timer')
+  const workflowPathogens = [...(workflowChapter?.querySelectorAll('.workflow-pathogen') ?? [])]
 
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value))
   const range = (value, start, end) => clamp((value - start) / Math.max(.0001, end - start))
@@ -53,25 +56,56 @@ if (story) {
     const reachReveal = smoothstep(range(localProgress, .26, .82))
     chapter.style.setProperty('--reach-opacity', reachReveal.toFixed(3))
     chapter.style.setProperty('--reach-scale', (0.48 + reachReveal * .52).toFixed(3))
-    const reachFinal = smoothstep(range(localProgress, .9, .99))
+    const reachFinal = smoothstep(range(localProgress, .64, .78))
     chapter.style.setProperty('--reach-final-opacity', reachFinal.toFixed(3))
     chapter.style.setProperty('--reach-final-scale', (1.025 - reachFinal * .025).toFixed(3))
     chapter.classList.toggle('is-visible', opacity > .001)
+    chapter.classList.toggle('is-interactive', entered > .92 && leaving > .92)
+
+    if (chapter === workflowChapter) {
+      const backgroundArrival = smoothstep(range(localProgress, .12, .34))
+      chapter.style.setProperty('--workflow-background-brightness', (.66 + backgroundArrival * .34).toFixed(3))
+      chapter.style.setProperty('--workflow-background-scale', (1.045 - backgroundArrival * .045).toFixed(4))
+
+      const setWorkflowLayer = (layer, reveal) => {
+        if (!layer) return
+        const resolvedReveal = reducedMotion.matches ? entered : reveal
+        layer.style.setProperty('--workflow-layer-opacity', resolvedReveal.toFixed(3))
+        layer.style.setProperty('--workflow-layer-rise', `${((1 - resolvedReveal) * 28).toFixed(2)}px`)
+        layer.style.setProperty('--workflow-layer-scale', (.8 + resolvedReveal * .2).toFixed(4))
+        layer.style.setProperty('--workflow-layer-blur', `${((1 - resolvedReveal) * 8).toFixed(2)}px`)
+      }
+
+      setWorkflowLayer(workflowTimer, smoothstep(range(localProgress, .28, .46)))
+      workflowPathogens.forEach((pathogen, index) => {
+        const start = .38 + index * .065
+        setWorkflowLayer(pathogen, smoothstep(range(localProgress, start, start + .17)))
+      })
+      chapter.classList.toggle('is-motion-live', opacity > .5 && !reducedMotion.matches)
+    }
   }
 
   function update() {
     const rect = story.getBoundingClientRect()
     const distance = Math.max(1, story.offsetHeight - window.innerHeight)
     const progress = clamp(-rect.top / distance)
-    const coverLength = .155
-    const chapterLength = (1 - coverLength) / chapters.length
+    const originalCoverLength = .155
+    const coverWeight = chapters.length * originalCoverLength / (1 - originalCoverLength)
+    const chapterWeights = chapters.map((chapter) => {
+      if (chapter.classList.contains('home-chapter--reach')) return 2.25
+      if (chapter.classList.contains('home-chapter--cards')) return 1.15
+      return 1
+    })
+    const totalWeight = coverWeight + chapterWeights.reduce((total, weight) => total + weight, 0)
+    const coverLength = coverWeight / totalWeight
 
     setCover(clamp(progress / coverLength))
-    chapters.forEach((chapter, index) => setChapter(
-      chapter,
-      range(progress, coverLength + index * chapterLength, coverLength + (index + 1) * chapterLength),
-      index === chapters.length - 1,
-    ))
+    let chapterStart = coverLength
+    chapters.forEach((chapter, index) => {
+      const chapterEnd = chapterStart + chapterWeights[index] / totalWeight
+      setChapter(chapter, range(progress, chapterStart, chapterEnd), index === chapters.length - 1)
+      chapterStart = chapterEnd
+    })
 
     if (scrollCue) scrollCue.style.opacity = String(1 - smoothstep(range(progress, .02, .07)))
     if (progressIndicator) {

@@ -1,8 +1,8 @@
 /* Homepage-only narrative sequence. The source images stay within the
    original Home asset library; the reference folder is never loaded. */
 .scroll-story {
-  height: 2660vh;
-  height: 2660svh;
+  height: 2965vh;
+  height: 2965svh;
 }
 
 .home-sequence,
@@ -89,9 +89,9 @@
 .home-chapter--sanitation .chapter-message {
   z-index: 3;
   inset: 50% auto auto 50%;
-  width: min(94vw, 1920px);
+  width: min(78vw, 1500px);
   height: auto;
-  max-height: 94vh;
+  max-height: 82vh;
   transform: translate3d(-50%, calc(-50% + var(--chapter-layer-rise, 30px)), 0) scale(var(--chapter-layer-scale, .96));
 }
 
@@ -138,19 +138,102 @@
   transform: translateY(var(--chapter-mascot-y, 14%)) scale(var(--chapter-mascot-scale, .88));
 }
 
-.home-chapter--workflow img { object-fit: cover; transform: scale(var(--chapter-scale, 1.04)); }
+.home-chapter--workflow { background: #8d959a; }
+
+.workflow-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100vw, 178.8889vh);
+  height: max(100vh, 55.9006vw);
+  overflow: hidden;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.workflow-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+  filter: brightness(var(--workflow-background-brightness, .68));
+  transform: scale(var(--workflow-background-scale, 1.035));
+  transform-origin: center;
+}
+
+.workflow-timer,
+.workflow-pathogen {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  max-width: none;
+  opacity: var(--workflow-layer-opacity, 0);
+  filter: blur(var(--workflow-layer-blur, 8px));
+  transform:
+    translate3d(-50%, -50%, 0)
+    translateY(var(--workflow-layer-rise, 28px))
+    scale(var(--workflow-layer-scale, .8));
+  transform-origin: center;
+  will-change: transform, opacity, filter;
+}
+
+.workflow-timer { top: 41.8%; left: 40.3%; width: 8.7%; z-index: 4; }
+.workflow-pathogen--one { top: 49%; left: 21%; width: 9.2%; --workflow-float-duration: 5.6s; --workflow-float-delay: -1.1s; --workflow-float-x: -1.8%; }
+.workflow-pathogen--two { top: 22.8%; left: 29.6%; width: 9.2%; --workflow-float-duration: 6.4s; --workflow-float-delay: -3.2s; --workflow-float-x: 1.5%; }
+.workflow-pathogen--three { top: 10.4%; left: 50.4%; width: 9%; --workflow-float-duration: 5.9s; --workflow-float-delay: -2.1s; --workflow-float-x: 1.1%; }
+.workflow-pathogen--four { top: 49.4%; left: 79.6%; width: 8.8%; --workflow-float-duration: 6.2s; --workflow-float-delay: -4.1s; --workflow-float-x: -1.3%; }
+.workflow-pathogen--five { top: 23%; left: 73.5%; width: 8.8%; --workflow-float-duration: 5.4s; --workflow-float-delay: -2.8s; --workflow-float-x: 1.7%; }
+
+.workflow-timer img,
+.workflow-pathogen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.workflow-timer img {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 .34rem rgba(255, 249, 222, .98)) drop-shadow(0 0 .9rem rgba(255, 238, 185, .78));
+  animation: workflow-timer-flicker 1.45s linear infinite paused;
+}
+
+.workflow-pathogen img {
+  filter: drop-shadow(0 .4rem .65rem rgba(65, 45, 30, .22));
+  animation: workflow-pathogen-float var(--workflow-float-duration, 5.8s) ease-in-out var(--workflow-float-delay, 0s) infinite paused;
+}
+
+.home-chapter--workflow.is-motion-live .workflow-timer img,
+.home-chapter--workflow.is-motion-live .workflow-pathogen img { animation-play-state: running; }
+
+@keyframes workflow-timer-flicker {
+  0%, 8%, 13%, 49%, 57%, 100% { opacity: 1; }
+  9% { opacity: .42; }
+  11% { opacity: .82; }
+  52% { opacity: .56; }
+  55% { opacity: .9; }
+}
+
+@keyframes workflow-pathogen-float {
+  0%, 100% { transform: translate3d(0, 1.8%, 0) rotate(-.7deg) scale(.985); }
+  50% { transform: translate3d(var(--workflow-float-x, 1.4%), -3.4%, 0) rotate(.8deg) scale(1.035); }
+}
 
 .home-chapter--cards {
   display: block;
   background: #c9ae91 url('../a  图片/home-story/cards/cards-front.png') center / 100% 100% no-repeat;
 }
 
-.home-chapter--cards.is-visible { pointer-events: auto; }
+.home-chapter--cards.is-interactive { pointer-events: auto; }
 
 .home-cards {
   position: absolute;
   inset: 0;
-  opacity: var(--chapter-layer-opacity, 0);
+  opacity: 1;
   transform: none;
 }
 
@@ -196,13 +279,25 @@
 .home-chapter--reach .reach-final { z-index: 4; opacity: var(--reach-final-opacity, 0); transform: scale(var(--reach-final-scale, 1.025)); pointer-events: none; }
 
 @media (max-width: 720px) {
-  .scroll-story { height: 2540svh; }
+  .scroll-story { height: 2830svh; }
   .home-chapter--procession .chapter-procession-mascot { width: min(31vw, 190px); height: min(34vh, 300px); left: 66%; }
   .reach-orbit { width: 35vw; border-width: 3px; }
   .reach-orbit--one { left: 4%; top: 12%; }
   .reach-orbit--two { right: 4%; top: 12%; }
   .reach-orbit--three { left: 4%; bottom: 12%; }
   .reach-orbit--four { right: 4%; bottom: 12%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workflow-background { filter: none; transform: none; }
+  .workflow-timer,
+  .workflow-pathogen {
+    filter: none;
+    --workflow-layer-rise: 0px !important;
+    --workflow-layer-scale: 1 !important;
+  }
+  .workflow-timer img,
+  .workflow-pathogen img { animation: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
