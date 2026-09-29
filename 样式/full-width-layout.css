@@ -4,28 +4,24 @@
    reference screenshot identify this asset as the subpage navigation scroll. */
 @media (min-width: 901px) {
   body :is(.lab-layout, .ihp-shell, .edu-shell, .inc-shell, .entre-shell) {
-    grid-template-columns: minmax(280px, 300px) minmax(0, 1fr);
+    grid-template-columns: minmax(300px, 320px) minmax(0, 1fr);
     gap: var(--wiki-section-gap);
   }
 
   body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) {
     isolation: isolate;
-    padding: 170px 60px 150px;
-    overflow: hidden;
-    border: 0;
+    padding: 28px;
+    overflow: visible;
+    border: 90px solid transparent;
     border-radius: 0;
+    border-width: 90px 54px;
+    border-image-source: url('../a  图片/navigation/scroll-frame.png');
+    border-image-slice: 400 250 400 250 fill;
+    border-image-width: 90px 54px;
+    border-image-repeat: stretch;
     background: transparent;
     box-shadow: none;
     backdrop-filter: none;
-  }
-
-  body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc)::before {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    content: "";
-    pointer-events: none;
-    background: url('../a  图片/navigation/scroll-frame.png') center / 100% 100% no-repeat;
   }
 
   body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) > nav {
