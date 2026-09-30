@@ -1,5 +1,171 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Members | JLU-SPH</title><link rel="stylesheet" href="../样式/style.css"><link rel="stylesheet" href="../样式/loading.css"><link rel="stylesheet" href="../样式/placeholder-page.css">  <link rel="stylesheet" href="../样式/full-width-layout.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the students and advisors behind the JLU-SPH iGEM team.">
+  <title>Members | JLU-SPH</title>
+  <link rel="icon" type="image/webp" href="../b  视频/loading-poster.webp">
+  <link rel="preload" as="image" href="../b  视频/loading-poster.webp" type="image/webp">
+  <link rel="stylesheet" href="../样式/style.css">
+  <link rel="stylesheet" href="../样式/loading.css">
+  <link rel="stylesheet" href="../样式/full-width-layout.css">
+  <link rel="stylesheet" href="../样式/member.css">
 </head>
-<body class="loading-lock" data-section="Team" data-title="Members" data-description="Meet the people behind JLU-SPH. Team profiles and roles can be added to this page."><div id="placeholder-root"></div><script type="module" src="../样式/placeholder-page.js"></script></body></html>
+<body class="loading-lock team-page-body">
+  <nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-links">
+      <div class="dropdown nav-home"><a href="../homepage/index.html" class="nav-link">Home</a></div>
+      <div class="dropdown">
+        <a href="../Project/description.html" class="nav-link">Project</a>
+        <div class="dropdown-content">
+          <a href="../Project/description.html">Description</a><a href="../Project/design.html">Design</a>
+          <a href="../Project/engineering.html">Engineering</a><a href="../Project/safety.html">Safety</a>
+          <a href="../Project/contribution.html">Contribution</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="../Eagagement/iHP.html" class="nav-link">Engagement</a>
+        <div class="dropdown-content">
+          <a href="../Eagagement/iHP.html">iHP</a><a href="../Eagagement/collaboration.html">Collaboration</a>
+          <a href="../Eagagement/inclusity.html">Inclusivity</a><a href="../Eagagement/education.html">Education</a>
+          <a href="../Eagagement/entrepreneurship.html">Entrepreneurship</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="../Wet-lab/protocal.html" class="nav-link">Wetlab</a>
+        <div class="dropdown-content">
+          <a href="../Wet-lab/protocal.html">Protocol</a><a href="../Wet-lab/notebook.html">Notebook</a>
+          <a href="../Wet-lab/measurement.html">Measurement</a><a href="../Wet-lab/part.html">Part</a>
+          <a href="../Wet-lab/result.html">Result</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="../Instrument/hardware.html" class="nav-link">Instrument</a>
+        <div class="dropdown-content">
+          <a href="../Instrument/hardware.html">Hardware</a><a href="../Instrument/software.html">Software</a>
+          <a href="../Instrument/model.html">Model</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="../Team/member.html" class="nav-link active" aria-current="page">Team</a>
+        <div class="dropdown-content"><a href="../Team/member.html" class="active" aria-current="page">Member</a><a href="../Team/attribution.html">Attribution</a></div>
+      </div>
+      <div class="dropdown">
+        <a href="../Eagagement/iHP.html" class="nav-link">Judging</a>
+        <div class="dropdown-content"><a href="../Eagagement/iHP.html">iHP</a><a href="../Instrument/model.html">Model</a><a href="../Instrument/hardware.html">Hardware</a><a href="../Wet-lab/measurement.html">Measurement</a></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="team-page" id="main-content">
+    <section class="team-hero" aria-labelledby="team-page-title">
+      <div class="team-hero__copy">
+        <p class="team-eyebrow">JLU-SPH · iGEM 2026</p>
+        <h1 id="team-page-title">OUR TEAM</h1>
+        <p class="team-hero__lead">Meet the people behind our project.</p>
+        <a class="team-hero__jump" href="#team-directory">Explore the team <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="team-hero__visual" role="img" aria-label="Reserved space for the future team photograph">
+        <div class="team-hero__orbit team-hero__orbit--one" aria-hidden="true"></div>
+        <div class="team-hero__orbit team-hero__orbit--two" aria-hidden="true"></div>
+        <div class="team-hero__monogram" aria-hidden="true">JLU</div>
+        <p><span>Team photograph</span>Reserved for the official portrait</p>
+      </div>
+    </section>
+
+    <section class="team-section team-leaders" aria-labelledby="leaders-title">
+      <header class="team-section__heading">
+        <div>
+          <p class="team-eyebrow">Leading the journey</p>
+          <h2 id="leaders-title">Team Leaders</h2>
+        </div>
+        <p>Guiding our research, collaboration, and shared direction.</p>
+      </header>
+      <div class="leader-grid" id="leader-grid"></div>
+    </section>
+
+    <section class="team-directory" id="team-directory" aria-labelledby="directory-title">
+      <header class="team-section__heading team-directory__heading">
+        <div>
+          <p class="team-eyebrow">One project, many disciplines</p>
+          <h2 id="directory-title">Meet the Team</h2>
+        </div>
+        <p>Choose a group to discover the people shaping each part of our work.</p>
+      </header>
+
+      <div class="team-filters" role="toolbar" aria-label="Filter team members">
+        <button class="team-filter is-active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="team-filter" type="button" data-filter="Wet Lab" aria-pressed="false">Wet Lab</button>
+        <button class="team-filter" type="button" data-filter="Dry Lab" aria-pressed="false">Dry Lab</button>
+        <button class="team-filter" type="button" data-filter="Human Practices" aria-pressed="false">Human Practices</button>
+        <button class="team-filter" type="button" data-filter="Hardware & Wiki" aria-pressed="false">Hardware &amp; Wiki</button>
+        <button class="team-filter" type="button" data-filter="Visual Design" aria-pressed="false">Visual Design</button>
+        <button class="team-filter" type="button" data-filter="Advisors" aria-pressed="false">Advisors</button>
+      </div>
+
+      <p class="team-results" id="team-results" role="status" aria-live="polite"></p>
+      <div class="member-grid" id="member-grid"></div>
+    </section>
+
+    <section class="team-section advisor-section" id="advisor-section" aria-labelledby="advisors-title">
+      <header class="team-section__heading">
+        <div>
+          <p class="team-eyebrow">Experience and guidance</p>
+          <h2 id="advisors-title">Our Advisors</h2>
+        </div>
+        <p>Supporting the team with scientific insight, careful review, and perspective.</p>
+      </header>
+      <div class="advisor-grid" id="advisor-grid"></div>
+    </section>
+  </main>
+
+  <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-name">
+    <div class="profile-shell">
+      <button class="profile-close" type="button" aria-label="Close profile"><span aria-hidden="true">×</span></button>
+      <div class="profile-portrait" id="profile-portrait"></div>
+      <article class="profile-content">
+        <p class="profile-kicker" id="profile-group"></p>
+        <h2 id="profile-name"></h2>
+        <p class="profile-role" id="profile-role"></p>
+        <blockquote class="profile-quote" id="profile-quote"></blockquote>
+        <section class="profile-section" aria-labelledby="profile-about-title">
+          <h3 id="profile-about-title">About Me</h3>
+          <p id="profile-introduction"></p>
+        </section>
+        <section class="profile-section" aria-labelledby="profile-contribution-title">
+          <h3 id="profile-contribution-title">Contributions</h3>
+          <div class="profile-tags" id="profile-tags"></div>
+          <button class="profile-expand" id="profile-expand" type="button" aria-expanded="false" aria-controls="profile-details">
+            <span>View full contribution</span><span aria-hidden="true">＋</span>
+          </button>
+          <div class="profile-details" id="profile-details" hidden>
+            <div class="profile-task-codes" id="profile-general-tasks"></div>
+            <div class="profile-task-list" id="profile-task-list"></div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="school-info"><div class="school-logo">JLU</div><h3>JiLin University</h3><h3>JLU-SPH iGEM Team</h3></div>
+      <div class="contact-title">CONTACT WITH US!</div>
+      <div class="qr-container">
+        <div class="qr-item"><div class="qr-code"></div><span>Instagram</span></div>
+        <div class="qr-item"><div class="qr-code"></div><span>RedNote</span></div>
+        <div class="qr-item"><div class="qr-code"></div><span>WeChat</span></div>
+      </div>
+      <div class="sponsor-title">SPONSORS &amp; COOPERATORS</div>
+      <div class="sponsors">
+        <div class="sponsor-logo">iGEM</div><div class="sponsor-logo">School</div><div class="sponsor-logo">CSC</div>
+        <div class="sponsor-logo">Lab</div><div class="sponsor-logo">iGEM</div><div class="sponsor-logo">iGEM</div>
+      </div>
+      <div class="copyright">© 2026 JLU-SPH. Content licensed under CC BY 4.0.<br>Source code: gitlab.igem.org/2026/jlu-sphera</div>
+    </div>
+  </footer>
+
+  <script type="module" src="../样式/member.js"></script>
+</body>
+</html>
