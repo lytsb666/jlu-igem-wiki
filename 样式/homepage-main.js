@@ -3,9 +3,9 @@ import './cursor-overlay.js'
 
 const MINIMUM_VISIBLE_TIME = 320
 
-function pageHasLoaded() {
-  if (document.readyState === 'complete') return Promise.resolve()
-  return new Promise((resolve) => window.addEventListener('load', resolve, { once: true }))
+function pageMarkupIsReady() {
+  if (document.readyState !== 'loading') return Promise.resolve()
+  return new Promise((resolve) => document.addEventListener('DOMContentLoaded', resolve, { once: true }))
 }
 
 function minimumVisibleTime() {
@@ -13,7 +13,8 @@ function minimumVisibleTime() {
 }
 
 function pageOpeningIsReady() {
-  const images = [...document.querySelectorAll('.instrument-scene img')]
+  const firstFrame = document.querySelector('.instrument-scene .cover-keyframe:first-child')
+  const images = firstFrame ? [firstFrame] : []
 
   return Promise.all(images.map((image) => {
     const loaded = image.complete
@@ -48,7 +49,7 @@ if (loaderVideo) {
 // The supplied video is a looping visual, not a progress gate. Fade away as
 // soon as the opening artwork is ready instead of waiting for a full loop.
 Promise.all([
-  pageHasLoaded(),
+  pageMarkupIsReady(),
   minimumVisibleTime(),
   pageOpeningIsReady(),
 ]).then(() => dismissLoader(loader))

@@ -4,6 +4,7 @@ import './cursor-overlay.js'
 
 const MINIMUM_VISIBLE_TIME = 320
 const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href
+const LOADING_POSTER_URL = new URL('../b  视频/loading-poster.webp', import.meta.url).href
 
 function createLoader() {
   const existingLoader = document.querySelector('#igem-loader')
@@ -16,7 +17,7 @@ function createLoader() {
   loader.setAttribute('aria-live', 'polite')
   loader.setAttribute('aria-label', 'Loading page')
   loader.innerHTML = `
-    <video class="loading-video" autoplay muted loop playsinline preload="auto">
+    <video class="loading-video" autoplay muted loop playsinline preload="auto" poster="${LOADING_POSTER_URL}">
       <source src="${LOADING_VIDEO_URL}" type="video/mp4">
     </video>
     <div class="loading-overlay"></div>
@@ -31,9 +32,9 @@ function createLoader() {
   return loader
 }
 
-function pageHasLoaded() {
-  if (document.readyState === 'complete') return Promise.resolve()
-  return new Promise((resolve) => window.addEventListener('load', resolve, { once: true }))
+function pageMarkupIsReady() {
+  if (document.readyState !== 'loading') return Promise.resolve()
+  return new Promise((resolve) => document.addEventListener('DOMContentLoaded', resolve, { once: true }))
 }
 
 function minimumVisibleTime() {
@@ -41,7 +42,13 @@ function minimumVisibleTime() {
 }
 
 function pageOpeningIsReady() {
-  const images = [...document.querySelectorAll('.instrument-scene img')]
+  const candidates = document.querySelectorAll([
+    '.instrument-scene img:first-child',
+    'main img[fetchpriority="high"]',
+    '.ihp-hero img',
+    '.image-page-hero img',
+  ].join(','))
+  const images = [...new Set(candidates)].slice(0, 3)
 
   return Promise.all(images.map((image) => {
     const loaded = image.complete
@@ -76,7 +83,7 @@ if (loaderVideo) {
 }
 
 Promise.all([
-  pageHasLoaded(),
+  pageMarkupIsReady(),
   minimumVisibleTime(),
   pageOpeningIsReady(),
 ]).then(() => dismissLoader(loader))

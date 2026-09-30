@@ -12,10 +12,29 @@ if (story) {
   const workflowChapter = story.querySelector('.home-chapter--workflow')
   const workflowTimer = workflowChapter?.querySelector('.workflow-timer')
   const workflowPathogens = [...(workflowChapter?.querySelectorAll('.workflow-pathogen') ?? [])]
+  const chapterProgressCache = new WeakMap()
+  const chapterReady = new WeakSet()
 
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value))
   const range = (value, start, end) => clamp((value - start) / Math.max(.0001, end - start))
   const smoothstep = (value) => value * value * (3 - 2 * value)
+
+  const originalCoverLength = .155
+  const coverWeight = chapters.length * originalCoverLength / (1 - originalCoverLength)
+  const chapterWeights = chapters.map((chapter) => {
+    if (chapter.classList.contains('home-chapter--reach')) return 2.25
+    if (chapter.classList.contains('home-chapter--cards')) return 1.15
+    return 1
+  })
+  const totalWeight = coverWeight + chapterWeights.reduce((total, weight) => total + weight, 0)
+  const coverLength = coverWeight / totalWeight
+  let runningChapterStart = coverLength
+  const chapterRanges = chapterWeights.map((weight) => {
+    const start = runningChapterStart
+    const end = start + weight / totalWeight
+    runningChapterStart = end
+    return { start, end }
+  })
 
   function setCover(progress) {
     const frameProgress = clamp(progress * coverFrames.length)
@@ -32,7 +51,12 @@ if (story) {
     cover?.style.setProperty('--instrument-scene-opacity', String(1 - smoothstep(range(progress, .92, 1))))
   }
 
-  function setChapter(chapter, localProgress, isFinalChapter) {
+  function setChapter(chapter, localProgress, isFinalChapter, force = false) {
+    localProgress = clamp(localProgress)
+    const previousProgress = chapterProgressCache.get(chapter)
+    if (!force && previousProgress !== undefined && Math.abs(previousProgress - localProgress) < .0005) return
+    chapterProgressCache.set(chapter, localProgress)
+
     const entered = smoothstep(range(localProgress, .04, .22))
     const leaving = isFinalChapter ? 1 : 1 - smoothstep(range(localProgress, .82, .99))
     const opacity = entered * leaving
@@ -60,7 +84,7 @@ if (story) {
     chapter.style.setProperty('--reach-final-opacity', reachFinal.toFixed(3))
     chapter.style.setProperty('--reach-final-scale', (1.025 - reachFinal * .025).toFixed(3))
     chapter.classList.toggle('is-visible', opacity > .001)
-    chapter.classList.toggle('is-interactive', entered > .92 && leaving > .92)
+    chapter.classList.toggle('is-interactive', entered > .55 && leaving > .7)
 
     if (chapter === workflowChapter) {
       const backgroundArrival = smoothstep(range(localProgress, .12, .34))
@@ -89,23 +113,29 @@ if (story) {
     const rect = story.getBoundingClientRect()
     const distance = Math.max(1, story.offsetHeight - window.innerHeight)
     const progress = clamp(-rect.top / distance)
-    const originalCoverLength = .155
-    const coverWeight = chapters.length * originalCoverLength / (1 - originalCoverLength)
-    const chapterWeights = chapters.map((chapter) => {
-      if (chapter.classList.contains('home-chapter--reach')) return 2.25
-      if (chapter.classList.contains('home-chapter--cards')) return 1.15
-      return 1
-    })
-    const totalWeight = coverWeight + chapterWeights.reduce((total, weight) => total + weight, 0)
-    const coverLength = coverWeight / totalWeight
 
     setCover(clamp(progress / coverLength))
-    let chapterStart = coverLength
     chapters.forEach((chapter, index) => {
-      const chapterEnd = chapterStart + chapterWeights[index] / totalWeight
-      setChapter(chapter, range(progress, chapterStart, chapterEnd), index === chapters.length - 1)
-      chapterStart = chapterEnd
+      const { start, end } = chapterRanges[index]
+      setChapter(chapter, range(progress, start, end), index === chapters.length - 1)
     })
+
+    const targetIndex = chapterRanges.findIndex(({ start, end }, index) => (
+      progress >= start && (progress < end || index === chapters.length - 1)
+    ))
+    if (targetIndex >= 0 && !chapterReady.has(chapters[targetIndex])) {
+      const targetChapter = chapters[targetIndex]
+      targetChapter.style.setProperty('--chapter-opacity', '0')
+      targetChapter.classList.remove('is-visible', 'is-interactive')
+
+      let fallbackIndex = targetIndex - 1
+      while (fallbackIndex >= 0 && !chapterReady.has(chapters[fallbackIndex])) fallbackIndex -= 1
+      if (fallbackIndex >= 0) {
+        setChapter(chapters[fallbackIndex], .72, false, true)
+      } else {
+        setCover(.9)
+      }
+    }
 
     if (scrollCue) scrollCue.style.opacity = String(1 - smoothstep(range(progress, .02, .07)))
     if (progressIndicator) {
@@ -118,8 +148,11 @@ if (story) {
 
   story.querySelectorAll('.home-flip-card').forEach((card) => {
     card.addEventListener('click', () => {
+      if (card.classList.contains('is-turning')) return
+      card.classList.add('is-turning')
       const flipped = card.classList.toggle('is-flipped')
       card.setAttribute('aria-pressed', String(flipped))
+      window.setTimeout(() => card.classList.remove('is-turning'), reducedMotion.matches ? 20 : 740)
     })
   })
 
@@ -133,10 +166,42 @@ if (story) {
     })
   }
 
+  chapters.forEach((chapter) => {
+    const images = [...chapter.querySelectorAll('img')]
+    if (!images.length) {
+      chapterReady.add(chapter)
+      return
+    }
+
+    Promise.all(images.map((image) => {
+      const loaded = image.complete
+        ? Promise.resolve()
+        : new Promise((resolve) => {
+            image.addEventListener('load', resolve, { once: true })
+            image.addEventListener('error', resolve, { once: true })
+          })
+      return loaded.then(() => (
+        image.naturalWidth && typeof image.decode === 'function'
+          ? image.decode().catch(() => undefined)
+          : undefined
+      ))
+    })).then(() => new Promise((resolve) => {
+      window.requestAnimationFrame(() => window.requestAnimationFrame(resolve))
+    })).then(() => {
+      chapterReady.add(chapter)
+      chapterProgressCache.delete(chapter)
+      chapter.classList.add('is-ready')
+      requestUpdate()
+    })
+  })
+
   window.addEventListener('scroll', requestUpdate, { passive: true })
   window.addEventListener('resize', requestUpdate)
   window.addEventListener('pageshow', requestUpdate)
-  reducedMotion.addEventListener?.('change', requestUpdate)
+  reducedMotion.addEventListener?.('change', () => {
+    chapters.forEach((chapter) => chapterProgressCache.delete(chapter))
+    requestUpdate()
+  })
   stage?.addEventListener('load', requestUpdate, true)
   update()
 }

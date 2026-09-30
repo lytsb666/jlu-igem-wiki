@@ -5,6 +5,18 @@ body.loading-lock {
   overflow: hidden !important;
 }
 
+body.loading-lock::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: #c1a387 url('../b  视频/loading-poster.webp') center / cover no-repeat;
+  pointer-events: auto;
+}
+
 .igem-loader {
   position: fixed;
   inset: -2px;
@@ -16,9 +28,9 @@ body.loading-lock {
   max-height: none;
   z-index: 2147483647;
   overflow: hidden;
-  /* Match the flat outer field of the supplied video so its first decoded
-     frame and any cover-fit edge never flash against black. */
-  background: #c6c1be;
+  /* The poster is available before the video decodes, so page navigation
+     never exposes an unrelated grey frame or the content underneath. */
+  background: #c1a387 url('../b  视频/loading-poster.webp') center / cover no-repeat;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.65s ease, visibility 0.65s ease;
@@ -43,7 +55,7 @@ body.loading-lock {
   object-fit: cover;
   object-position: center center;
   opacity: 1;
-  background: #c6c1be;
+  background: transparent;
   transform: scale(1);
   transition: transform 0.65s ease, opacity 0.65s ease;
 }
@@ -110,6 +122,10 @@ body.loading-lock {
 }
 
 @supports (height: 100dvh) {
+  body.loading-lock::before {
+    height: 100dvh;
+  }
+
   .igem-loader {
     height: calc(100dvh + 4px);
     min-height: calc(100dvh + 4px);
