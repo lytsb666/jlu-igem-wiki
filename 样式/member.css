@@ -1,4 +1,5 @@
 /* Member-only presentation. Public navigation, loader, footer and cursor are shared. */
+html:has(body.team-page-body) { scroll-behavior: smooth; }
 .team-page-body {
   background: radial-gradient(circle at 10% 12%, rgba(194,123,69,.1), transparent 30rem), #fffaf5;
 }
@@ -180,5 +181,5 @@
   .member-card__rotor { transition: none; transform: none !important; }
   .member-card__back { transform: none; }
   .member-card__front[aria-hidden="true"], .member-card__back[aria-hidden="true"] { visibility: hidden; }
-  .team-page { scroll-behavior: auto; }
+  html:has(body.team-page-body) { scroll-behavior: auto; }
 }

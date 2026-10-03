@@ -2478,11 +2478,11 @@ export const memberDataIssues = [
   }
 ]
 
-// Faculty: only names and roles evidenced by the supplied photo filenames/folders.
+// Faculty: English display names use pinyin; raw Chinese names and source roles remain recorded.
 export const teamFaculty = [
   {
     "id": "pi-song-xiuling",
-    "name": "宋秀玲",
+    "name": "Xiuling Song",
     "role": "PI",
     "groups": [
       "PI"
@@ -2506,11 +2506,16 @@ export const teamFaculty = [
       "Introduction",
       "Quote",
       "Contributions"
-    ]
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "宋秀玲",
+      "preferredEnglishSpellingVerified": false
+    }
   },
   {
     "id": "pi-pang-bo",
-    "name": "庞博",
+    "name": "Bo Pang",
     "role": "PI",
     "groups": [
       "PI"
@@ -2534,11 +2539,16 @@ export const teamFaculty = [
       "Introduction",
       "Quote",
       "Contributions"
-    ]
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "庞博",
+      "preferredEnglishSpellingVerified": false
+    }
   },
   {
     "id": "pi-li-jinhua",
-    "name": "李金华",
+    "name": "Jinhua Li",
     "role": "PI",
     "groups": [
       "PI"
@@ -2562,11 +2572,16 @@ export const teamFaculty = [
       "Introduction",
       "Quote",
       "Contributions"
-    ]
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "李金华",
+      "preferredEnglishSpellingVerified": false
+    }
   },
   {
     "id": "secondary-pi-wang-juan",
-    "name": "王娟",
+    "name": "Juan Wang",
     "role": "Secondary PI",
     "groups": [
       "Secondary PI"
@@ -2590,11 +2605,16 @@ export const teamFaculty = [
       "Introduction",
       "Quote",
       "Contributions"
-    ]
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "王娟",
+      "preferredEnglishSpellingVerified": false
+    }
   },
   {
     "id": "secondary-pi-su-guofan",
-    "name": "苏国范",
+    "name": "Guofan Su",
     "role": "Secondary PI",
     "groups": [
       "Secondary PI"
@@ -2618,11 +2638,16 @@ export const teamFaculty = [
       "Introduction",
       "Quote",
       "Contributions"
-    ]
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "苏国范",
+      "preferredEnglishSpellingVerified": false
+    }
   },
   {
     "id": "secondary-pi-zhao-chao",
-    "name": "赵超",
+    "name": "Chao Zhao",
     "role": "Secondary PI",
     "groups": [
       "Secondary PI"
@@ -2646,6 +2671,11 @@ export const teamFaculty = [
       "Introduction",
       "Quote",
       "Contributions"
-    ]
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "赵超",
+      "preferredEnglishSpellingVerified": false
+    }
   }
 ]
