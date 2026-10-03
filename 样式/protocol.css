@@ -125,19 +125,20 @@
 }
 
 .protocol-back:hover { background: #f6eee7; }
-.protocol-document { min-width: 0; }
+.protocol-document { min-width: 0; overflow-wrap: anywhere; }
 .protocol-materials { border-bottom: 1px solid var(--border); }
 .protocol-materials summary { padding: 20px 0; cursor: pointer; }
 .protocol-materials ul { columns: 3 220px; padding: 0 0 24px 28px; }
 .protocol-materials li { padding: 4px 14px 4px 0; break-inside: avoid; }
 .protocol-system-heading { margin: 32px 0 20px; }
 .protocol-empty { color: var(--secondary); font-style: italic; margin: 12px 0 24px; }
-.protocol-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+.protocol-table-wrap { width: 100%; max-width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
 .protocol-table-wrap table { width: 100%; min-width: 640px; border-collapse: collapse; }
-.protocol-table-wrap th { background: var(--text); color: #fff; text-align: left; }
+.protocol-table-wrap thead th { background: var(--text); color: #fff; text-align: left; }
+.protocol-table-wrap tbody th { text-align: left; font-weight: 400; }
 .protocol-table-wrap :is(th, td) { padding: 14px 18px; border: 1px solid var(--border); vertical-align: top; }
-.protocol-table-wrap th:nth-child(1) { width: 25%; }
-.protocol-table-wrap th:nth-child(2) { width: 27%; }
+.protocol-reaction-table thead th:nth-child(1) { width: 25%; }
+.protocol-reaction-table thead th:nth-child(2) { width: 27%; }
 .protocol-table-wrap tbody tr:nth-child(even) { background: #f6eee7; }
 .protocol-subsection { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--border); }
 .protocol-subsection h3 { margin: 0 0 22px; }
