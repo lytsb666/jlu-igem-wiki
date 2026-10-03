@@ -1,0 +1,62 @@
+[
+  {
+    "url": "/Instrument/software.html",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "length": "33103"
+  },
+  {
+    "url": "/software-resources/software-user-guide.pdf",
+    "status": 200,
+    "type": "application/pdf",
+    "length": "4038017"
+  },
+  {
+    "url": "/software-resources/demo-recording-checklist.txt",
+    "status": 200,
+    "type": "text/plain",
+    "length": "1502"
+  },
+  {
+    "url": "/assets/BCuVRtVF.jpeg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "304209"
+  },
+  {
+    "url": "/assets/CMpych12.jpeg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "530900"
+  },
+  {
+    "url": "/assets/-zg-Y64I.jpg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "157505"
+  },
+  {
+    "url": "/assets/BluT2dXB.jpeg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "299598"
+  },
+  {
+    "url": "/assets/BcRDO8Xz.jpeg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "312844"
+  },
+  {
+    "url": "/assets/GPNwYeqv.jpeg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "144388"
+  },
+  {
+    "url": "/assets/ipAkcp-J.jpeg",
+    "status": 200,
+    "type": "image/jpeg",
+    "length": "437224"
+  }
+]

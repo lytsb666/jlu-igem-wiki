@@ -1,0 +1,38 @@
+[
+  {
+    "original": "originals/doc1-image5.jpeg",
+    "sha256": "13601548c5ef34866a60a008e179c1fce464683b763d78f7fd0ee7b191a84f13",
+    "display": "images/connection.jpg",
+    "crop_box_xyxy": [
+      0,
+      455,
+      1260,
+      2408
+    ],
+    "edit": "Crop only; no redrawing, recoloring, retouching or fabricated data."
+  },
+  {
+    "original": "originals/doc1-image6.jpeg",
+    "sha256": "6406157f0acddbb4ce6cd3fb905daa6756d8d36e2be83c6a719a2fd697e27d30",
+    "display": "images/curve-detail.jpg",
+    "crop_box_xyxy": [
+      30,
+      760,
+      1570,
+      1860
+    ],
+    "edit": "Crop only; no redrawing, recoloring, retouching or fabricated data."
+  },
+  {
+    "original": "originals/doc1-image5.jpeg",
+    "sha256": "13601548c5ef34866a60a008e179c1fce464683b763d78f7fd0ee7b191a84f13",
+    "display": "images/connection-controls.jpg",
+    "crop_box_xyxy": [
+      0,
+      455,
+      1260,
+      1160
+    ],
+    "edit": "Crop only; no redrawing, recoloring, retouching or fabricated data."
+  }
+]

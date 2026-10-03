@@ -1,0 +1,766 @@
+{
+  "source": "C:\\Users\\UserTech\\Desktop\\Software_Wiki页面.docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Software Wiki页面首屏与导航排版要求",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "一、首页开屏设计",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "参考页面：TUDarmstadt 2025 Hardware",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "https://2025.igem.wiki/tudarmstadt/hardware",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "1. 首页开屏文字",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "页面标题：SOFTWARE",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "核心标题：把设备控制、荧光采集与结果判读整合到同一个界面",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "中文文字稿：我们的Android APP是多通道检测仪的移动操作入口。用户通过Wi-Fi 连接 AI Box，设置加热时间与温控开关，查看温度、荧光曲线及设备返回的图像和管位标签，在同一界面完成控制与结果查看。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "2. 首页开屏中的动态呈现",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "在首页开屏的右侧或中部放置一个6–10秒循环动画，与左侧标题和简介同时出现，用动画快速展示软件在整个检测流程中的作用。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "动画内容按照以下顺序呈现：",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "手机与仪器出现 → Wi-Fi 建立连接 → 设置并启动检测参数 → 荧光曲线逐渐生长 → 检测结果卡弹出",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "动画结束后自动回到初始状态并循环播放。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "二、侧边目录设计",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "参考页面：Munich 2025 Softwarehttps://2025.igem.wiki/munich/software/",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "页面右侧设置粘性侧边目录",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "01 概述02 系统架构03 验证04 可复用性05 用户指南06 开源资源",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "01  概述",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "按照“定位 → 核心功能 → 数据流 → 开发演进 → 结果展示”的顺序展开。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "软件定位：",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "中文稿：为了让使用者在手机上操作检测仪，我们开发了配套Android APP。APP通过TCP发送控制指令，接收AI Box返回的温度、荧光数据、图像及管位标签，并将这些信息显示为曲线和结果。图像处理位于AI Box侧，APP负责交互、通信和显示。仓库公开两代Java源码、Gradle构建配置、README与通信协议，采用Apache License 2.0。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "呈现方式：保留左侧正文与右侧“仪器 → APP → 荧光曲线 → 判定结果”的简化动效/流程图；正文下方加 View Source Code 文字链接：https://gitlab.igem.org/2026/software/jlu-sph/sph-software。源码页同时提供 README、LICENSE 和 docs/PROTOCOL.md 入口。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "1.2 六个核心功能：用卡片替代大段说明",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId8",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image1.png"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "1.3 一条数据流：在六张功能卡下面放一条横向流程，文字尽量短：",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "1.4 功能不是一次完成的：",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "参考页面：Vilnius-Lithuania 2024 Softwarehttps://2024.igem.wiki/vilnius-lithuania/software/：",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "参考内容：参考该页面Planning部分的开发历程叙事方式。Vilnius-Lithuania没有只展示最终完成的软件，而是从最初的Minimum Viable Product（MVP）出发，根据实际使用者的需求和反馈逐步增加功能，并把每一次功能扩展记录在Wiki中。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "中文文字稿：软件并不是一次性完成的。随着检测仪功能不断完善，我们也逐步调整移动端，使软件从最初的设备连接工具，逐渐成为能够覆盖设备控制、反应监测、荧光采集与结果判读的完整操作入口。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "阶段 1｜先让设备“连得上”",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "当时的问题：仪器已经能够完成基础控制，但用户仍需要一个更加直接的移动端入口与设备建立连接并发送操作指令。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "新增能力：完成 APP 基础界面划分与设备通信功能，使移动端能够连接检测仪，并实现基础控制指令的传递。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "阶段 2｜再让反应“看得见”",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "当时的问题：仅仅能够控制仪器还不够，用户需要知道反应是否正常进行，以及当前温度、运行时间和荧光信号发生了怎样的变化。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "新增能力：加入加热倒计时、温度显示和实时荧光曲线，将反应状态集中到移动端。第二代进一步提供五管结果标签及独立温控开关。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "页面图片：使用一张包含“温度 + 时间 + 荧光曲线”的真实APP页面截图。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId9",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image2.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "阶段 3｜最后让结果“读得懂”",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "当时的问题：检测完成后，如果用户仍需要自行观察荧光图像并判断结果，软件与仪器之间的流程仍然没有真正闭环。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "新增能力：接入AI Box返回的图像与分析结果。第一代显示两管结果，第二代扩展为五管颜色标签，并增加舵机控制。APP 通过通信接口接收设备侧分析结果，同时保留图像查看与保存入口。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "页面图片：选择最终版本的真实结果界面，展示五管标签、荧光曲线或采集图像。",
+      "images": [
+        {
+          "Id": "rId10",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image3.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "02  系统架构",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId11",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image4.png"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "系统架构",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "移动APP和AI Box通过本地Wi-Fi网络连接。连接界面中的实机参数为10.42.0.1和端口8080。Android APP作为TCP客户端发送UTF-8 JSON控制指令。每条消息由8字节报头和载荷组成；报头以大端序的两个32位整数记录载荷字节数与类型，其中0表示文本、1 表示图像。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "移动应用： Java编写，负责连接、倒计时、温控与舵机指令、图像和曲线显示。NetworkService 处理TCP消息，MainActivity处理交互与展示。通信解析和MPAndroidChart绘图逻辑可供其他队伍适配，需调整设备协议与界面绑定。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "AI Box：集成温度控制、光学采集、机械控制和图像分析，接收APP指令并返回状态、图像与结果。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "无线通信：两代 APP 均使用 get_image 请求图像、get_tem 请求温度，并通过 set_tem 发送温控数值。第二代另使用 set_tem43/set_tem90 控制两个温控开关，并使用 set_servo 控制舵机。响应字段包括type（消息类型）、content（字符串载荷）和可选 timestamp。第二代使用 tubeluminance 传递 data1 和 data2 两个曲线值，曲线时间由APP接收时记录；温度消息 tem独立更新。协议字段和示例见仓库 docs/PROTOCOL.md，例如温度响应载荷 {\"type\":\"tem\",\"content\":\"25.0\"}；该示例为格式说明。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "AI分析：设备侧处理荧光图像，APP显示返回的图像和tubelabels标签。第二代将代码0、1、2、3分别显示为绿色、红色、蓝色和空管标签。颜色与检测结论的对应关系依据实验方案解释；模型训练、推理代码及验证结果应在对应模型说明中展示。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "示例页面：参考布局：Software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId12",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image5.png"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "03  验证",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "3.1 设备连接与数据采集",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "连接界面填写AI Box的地址10.42.0.1 和端口8080。连接建立后，APP显示服务连接状态，并可进入数据采集流程。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId13",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image6.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "设备连接界面：填写AI Box的IP地址和端口。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "3.2 温度与荧光曲线显示",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "数据界面显示当前温度，并按运行时间更新两条荧光曲线。两次界面记录的温度分别为43.1 °C 和43.0 °C，TUBE1与TUBE2的数值随采集过程更新。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId14",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image7.jpeg"
+        },
+        {
+          "Id": "rId15",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image8.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "数据采集界面：当前温度与双通道荧光曲线               数据界面的第二次运行记录",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "3.3 图像结果与管位标签",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "结果界面接收AI Box返回的图像，并显示五个管位标签。在所示结果中，Tube2标记为tube_green，Tube3 标记为tube_blue，Tube4标记为tube_red，Tube1和Tube5标记为tube_null；界面同时显示温度43.0 °C。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId16",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image9.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "结果界面：AI Box返回图像与五个管位标签。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "04  可复用性",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "界面与模块复用",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "参考页面：Groningen 2025 Software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "https://2025.igem.wiki/groningen/software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "参考内容：参考 Groningen 2025 Software 页面对于“操作便捷性”的表达方式。页面没有仅仅强调软件“easy to use”，而是通过数据上传、格式选择、数据预览等具体操作说明软件如何降低用户使用门槛。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "中文文字稿：为了减少检测过程中的重复操作，我们将设备控制、反应参数和检测状态集中到移动端界面中。用户不需要在多个程序之间切换，即可完成设备连接、参数设置、反应监测和结果查看。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "加热时间、温控开关与图像请求集中在操作界面；连接状态、温度和双通道荧光曲线随设备返回数据更新。其他团队可复用通信解析、曲线显示和结果展示模块，并按其设备协议调整指令与字段映射。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "源码运行：从仓库选择一代工程，在Android Studio中打开，设置JDK 17 和 Android SDK 34，完成Gradle同步后运行app。工程使用Gradle 8.2、Android Gradle Plugin 8.2.0；也可在工程目录执行 gradlew.bat assembleDebug。完整构建步骤见仓库README，服务端与模型需另行配置。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "05  用户指南",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "先给用户两个入口：Manual + 演示视频",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "参考页面",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "GreatBay-SCIE 2023 Hardwarehttps://2023.igem.wiki/greatbay-scie/hardware",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Patras Medicine 2022 Implementationhttps://2022.igem.wiki/patras-medicine/implementation/",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "参考内容：我们可以借鉴其“视频演示 + 使用手册双入口”的呈现方式，一个用于直观演示设备操作过程，一个用于提供可查阅、可下载的使用说明。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "页面中文引导文字：快速开始",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "快速开始：下载APK并安装到Android 7.0（API 24）及以上设备，按系统提示允许当前下载来源安装应用。连接AI Box所在网络后，在连接界面输入10.42.0.1 和端口8080。完整采集与控制流程需要配套AI Box服务端。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "页面布局计划：在页面上方设置两个并列的主要入口",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId17",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image10.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "A｜Download Manual",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "下载使用手册",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "页面文字：通过图解手册了解设备连接、软件界面和检测流程，可在线预览或下载。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "在手册说明下方增加Download APK 文字链接：https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Manual 内容：由美工组制作 1–2 页 PDF 图解手册，尽量以真实 APP 截图、图标、箭头和编号为主，减少大段文字。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "内容建议按照以下顺序：安装 APK → 设备连接 → APP 主要功能 → 温控与时间设置 → 启动操作 → 查看温度与荧光曲线 → 请求图像 → 查看管位标签 → 异常状态提示。APK版本为1.0，包名com.chuangxin.socket。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "B｜Watch the Demo",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "观看操作演示",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "页面文字：通过完整操作演示，直观看到软件如何与检测仪协同工作，并了解从设备连接到结果读取的一次完整检测过程。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "视频内容：录制一段约60–90秒的真实操作视频，尽量同时拍到检测仪与手机APP，而不是只进行手机录屏。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "视频按照实际操作顺序进行：开机并连接设备 → 设置加热时间与温控开关 → 查看温度、倒计时与荧光曲线 → 请求荧光图像 → 查看管位标签；第二代可展示舵机控制。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "06  开源资源",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "源码仓库",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "https://gitlab.igem.org/2026/software/jlu-sph/sph-software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "仓库包含第一代和第二代Android源码工程、Gradle构建配置、README、TCP/JSON通信协议说明，并采用 Apache License2.0。",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "下载入口",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "第一代APK：https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/first-generation-fluorescent-detection.apk",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "第二代APK：https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "通信协议说明：https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/docs/PROTOCOL.md",
+      "images": []
+    }
+  ],
+  "media": [
+    {
+      "path": "word/media/image1.png",
+      "bytes": 116298,
+      "width": 1600,
+      "height": 1000,
+      "format": "PNG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image1.png",
+      "sha256": "0a4f08aba801bc1b357ea8d8113642e9f4455c4e89fa3e50f7edb8276e683bf8"
+    },
+    {
+      "path": "word/media/image10.jpeg",
+      "bytes": 46429,
+      "width": 1548,
+      "height": 625,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image9.jpeg",
+      "sha256": "14df8422dc4664992c92063cda7d21b97fab9a71b119ed455c710982f0564403"
+    },
+    {
+      "path": "word/media/image2.jpeg",
+      "bytes": 304209,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image2.jpeg",
+      "sha256": "fb4888f6322252ca24d0ae7a7abfaf495df15ac8637f9c3a494f877a53b709c2"
+    },
+    {
+      "path": "word/media/image3.jpeg",
+      "bytes": 144388,
+      "width": 1920,
+      "height": 1080,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc2-image3.jpeg",
+      "sha256": "f418cf60aa1c638c4fe85c73cd2eed1dbac7847d8ce95bad0e855a85df40982b"
+    },
+    {
+      "path": "word/media/image4.png",
+      "bytes": 109763,
+      "width": 1203,
+      "height": 819,
+      "format": "PNG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image3.png",
+      "sha256": "45407e0e104d342350a683c0b4c48fce25f3dd6817fc683b4dd7acb27e2b5d72"
+    },
+    {
+      "path": "word/media/image5.png",
+      "bytes": 202011,
+      "width": 838,
+      "height": 960,
+      "format": "PNG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image4.png",
+      "sha256": "d52a9da07c8bdc0a30f5544bab27f85739c94bd7e962bc9f239bb00628cc522b"
+    },
+    {
+      "path": "word/media/image6.jpeg",
+      "bytes": 437224,
+      "width": 1260,
+      "height": 2800,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image5.jpeg",
+      "sha256": "13601548c5ef34866a60a008e179c1fce464683b763d78f7fd0ee7b191a84f13"
+    },
+    {
+      "path": "word/media/image7.jpeg",
+      "bytes": 299598,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image6.jpeg",
+      "sha256": "6406157f0acddbb4ce6cd3fb905daa6756d8d36e2be83c6a719a2fd697e27d30"
+    },
+    {
+      "path": "word/media/image8.jpeg",
+      "bytes": 312844,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image7.jpeg",
+      "sha256": "260c0aaac4764c40ae387e3e07a2a69700803695847398582a9305b19f25889b"
+    },
+    {
+      "path": "word/media/image9.jpeg",
+      "bytes": 530900,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image8.jpeg",
+      "sha256": "22e332a7d7519510f02847d39ec724150d94fce2787f4a27a5162860859d4ff4"
+    }
+  ],
+  "comments": [],
+  "trackedChanges": 0,
+  "links": [],
+  "analysis_note": "结构化提取供定位与交接；最终内容、上下标和排版回查原 DOCX。图像路径指向持久交接材料。"
+}

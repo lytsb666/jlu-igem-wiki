@@ -1,0 +1,26 @@
+JLU-SPH SOFTWARE - REAL OPERATION DEMO RECORDING CHECKLIST
+Status: no publishable operation video supplied as of 3 October 2026.
+Target length: 60-90 seconds. Capture the detector and phone together.
+
+Before recording
+- Identify the device generation, app version, server version and assay context.
+- Use a running, compatible AI Box server. Check the actual IP address and port.
+- Clear unrelated personal information from the phone view.
+- Keep the original recording. Record any cuts; do not fabricate readings or results.
+
+Shot sequence
+1. 0-12 s: show the detector and phone, power on and join the device network.
+2. 12-25 s: open the app, enter the IP/port, connect and show returned status.
+3. 25-40 s: set heating time and supported temperature-control switches.
+4. 40-55 s: show countdown, returned temperature and the two fluorescence curves.
+5. 55-70 s: request an image and show the real returned image.
+6. 70-85 s: show all five tube labels. Explain that labels are separate from curves.
+7. Optional ending: show second-generation servo control and image viewing/saving.
+
+Delivery to 00
+- Original video and an approved English-captioned edit.
+- Capture date, app/device/server versions and confirmation of a genuine run.
+- Assay explanation for label colors and any consent/permission needed for the footage.
+- A transcript and captions; readable phone screen; no stock or simulated experiment footage.
+
+The page's eight-second animation illustrates workflow only. It is not this demo.

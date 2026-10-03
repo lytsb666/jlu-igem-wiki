@@ -1,0 +1,62 @@
+[
+  {
+    "file": "doc1-image1.png",
+    "role": "layout_reference",
+    "note": "六功能卡布局草图；重建英文语义卡片，不把中文截图作为英文正文",
+    "sha256": "0a4f08aba801bc1b357ea8d8113642e9f4455c4e89fa3e50f7edb8276e683bf8"
+  },
+  {
+    "file": "doc1-image2.jpeg",
+    "role": "app_evidence",
+    "note": "温度和双曲线真实 APP 截图",
+    "sha256": "fb4888f6322252ca24d0ae7a7abfaf495df15ac8637f9c3a494f877a53b709c2"
+  },
+  {
+    "file": "doc1-image3.png",
+    "role": "architecture_source",
+    "note": "操作/系统逻辑图；回查软件仓库并保留来源",
+    "sha256": "45407e0e104d342350a683c0b4c48fce25f3dd6817fc683b4dd7acb27e2b5d72"
+  },
+  {
+    "file": "doc1-image4.png",
+    "role": "external_layout_reference_only",
+    "note": "其他团队 MESA Architecture 页面截图；不可宣称为 JLU 架构或技术栈",
+    "sha256": "d52a9da07c8bdc0a30f5544bab27f85739c94bd7e962bc9f239bb00628cc522b"
+  },
+  {
+    "file": "doc1-image5.jpeg",
+    "role": "app_evidence",
+    "note": "连接画面含播放器界面；仅裁剪展示区域并保存原图",
+    "sha256": "13601548c5ef34866a60a008e179c1fce464683b763d78f7fd0ee7b191a84f13"
+  },
+  {
+    "file": "doc1-image6.jpeg",
+    "role": "app_evidence",
+    "note": "一次运行温度和双曲线",
+    "sha256": "6406157f0acddbb4ce6cd3fb905daa6756d8d36e2be83c6a719a2fd697e27d30"
+  },
+  {
+    "file": "doc1-image7.jpeg",
+    "role": "app_evidence",
+    "note": "另一运行温度和双曲线",
+    "sha256": "260c0aaac4764c40ae387e3e07a2a69700803695847398582a9305b19f25889b"
+  },
+  {
+    "file": "doc1-image8.jpeg",
+    "role": "app_evidence",
+    "note": "五管结果标签与双曲线",
+    "sha256": "22e332a7d7519510f02847d39ec724150d94fce2787f4a27a5162860859d4ff4"
+  },
+  {
+    "file": "doc1-image9.jpeg",
+    "role": "layout_reference",
+    "note": "Manual/Demo 手绘入口草图；不是完成的 PDF 或视频",
+    "sha256": "14df8422dc4664992c92063cda7d21b97fab9a71b119ed455c710982f0564403"
+  },
+  {
+    "file": "doc2-image3.jpeg",
+    "role": "experiment_evidence",
+    "note": "中文稿额外五管荧光照片及 ROI 标记；英文稿未重复附图",
+    "sha256": "f418cf60aa1c638c4fe85c73cd2eed1dbac7847d8ce95bad0e855a85df40982b"
+  }
+]
