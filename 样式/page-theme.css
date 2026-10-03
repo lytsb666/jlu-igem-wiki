@@ -1,0 +1,12 @@
+/* Page canvas shared by Homepage and every subpage. */
+@media screen {
+  :root {
+    --wiki-page-background: #E0C1A6;
+  }
+
+  /* Override module-specific body gradients without recoloring artwork,
+     cards, charts, navigation or print output. */
+  html:root body {
+    background: var(--wiki-page-background);
+  }
+}

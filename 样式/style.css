@@ -1,12 +1,13 @@
 @import './navigation.css';
 @import './footer.css';
+@import './page-theme.css';
 
 /* 全局样式 */
 :root {
     --primary: #C27B45;
     --secondary: #9A6742;
     --text: #6F4E37;
-    --bg: #FFFFFF;
+    --bg: var(--wiki-page-background, #FFFFFF);
     --card-bg: #E0C1A6;
     --border: rgba(111, 78, 55, 0.24);
 }
