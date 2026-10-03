@@ -25,6 +25,14 @@ if (story) {
   const workflowChapter = story.querySelector('.home-chapter--workflow')
   const workflowTimer = workflowChapter.querySelector('.workflow-timer')
   const workflowPathogens = [...workflowChapter.querySelectorAll('.workflow-pathogen')]
+  const cardsChapter = story.querySelector('.home-chapter--cards')
+  const cards = [...cardsChapter.querySelectorAll('.home-flip-card')]
+  const cardStates = new Map(cards.map(card => [card, { handled: false, timer: null }]))
+  const cardThresholds = [.38, .52, .66, .80]
+  let cardsProgress = 0
+  let cardsOnscreen = false
+  let automaticCard = null
+  let cardQueueTimer = null
   const coverUnits = 4.55
   const chapterWeights = chapters.map(chapter => Number(chapter.dataset.weight))
   const coverFrameMotion = [
@@ -115,10 +123,16 @@ if (story) {
     chapter.classList.toggle('is-interactive', isOnscreen && entered > .55)
     chapter.inert = !isOnscreen || entered <= .55
     const travel = smootherstep(range(localProgress, .22, .88))
-    // Both the supplied people strip and mascot reach the far left. Their
-    // coordinates depend only on scroll position, so reverse scrolling retraces them.
-    chapter.style.setProperty('--procession-people-x', (reduce ? 0 : 100 - travel * 260) + 'vw')
+    // The crowd walks right while the lower mascot walks left. Both positions
+    // depend on the scroll timeline so reversing the journey retraces them.
+    chapter.style.setProperty('--procession-people-x', (reduce ? -30 : -60 + travel * 160) + 'vw')
     chapter.style.setProperty('--procession-mascot-x', (reduce ? 0 : 86 - travel * 86) + 'vw')
+
+    if (chapter === cardsChapter) {
+      cardsProgress = localProgress
+      cardsOnscreen = isOnscreen && entered > .55 && chapterReady.has(chapter)
+      queueAutomaticCard()
+    }
 
     if (chapter.classList.contains('home-chapter--door')) {
       const walk = smootherstep(range(localProgress, .145, .49))
@@ -453,14 +467,56 @@ if (story) {
     })
   })
 
-  story.querySelectorAll('.home-flip-card').forEach(card => {
+  function finishCardTurn(card) {
+    const state = cardStates.get(card)
+    window.clearTimeout(state.timer)
+    state.timer = null
+    card.classList.remove('is-turning')
+    if (automaticCard === card) {
+      automaticCard = null
+      cardQueueTimer = window.setTimeout(() => {
+        cardQueueTimer = null
+        queueAutomaticCard()
+      }, reducedMotion.matches ? 0 : 110)
+    }
+  }
+
+  function turnCard(card, flipped, source) {
+    if (card.classList.contains('is-flipped') === flipped) return false
+    card.classList.add('is-turning')
+    card.classList.toggle('is-flipped', flipped)
+    card.dataset.flipSource = source
+    card.setAttribute('aria-pressed', String(flipped))
+    card.setAttribute('aria-label', card.dataset.cardLabel + (flipped ? ': show front' : ': show application'))
+    // transitionend normally releases the turn; the fallback also covers a
+    // reduced-motion change or an offscreen transition cancelled by navigation.
+    cardStates.get(card).timer = window.setTimeout(() => finishCardTurn(card), reducedMotion.matches ? 20 : 900)
+    return true
+  }
+
+  function queueAutomaticCard() {
+    if (!cardsOnscreen || automaticCard || cardQueueTimer !== null) return
+    const card = cards.find((candidate, index) => cardsProgress >= cardThresholds[index] && !cardStates.get(candidate).handled)
+    if (!card) return
+    cardStates.get(card).handled = true
+    if (card.classList.contains('is-flipped')) {
+      queueAutomaticCard()
+      return
+    }
+    automaticCard = card
+    turnCard(card, true, 'automatic')
+  }
+
+  cards.forEach(card => {
     card.addEventListener('click', () => {
       if (card.classList.contains('is-turning')) return
-      card.classList.add('is-turning')
-      const flipped = card.classList.toggle('is-flipped')
-      card.setAttribute('aria-pressed', String(flipped))
-      card.setAttribute('aria-label', card.dataset.cardLabel + (flipped ? ': show front' : ': show application'))
-      window.setTimeout(() => card.classList.remove('is-turning'), reducedMotion.matches ? 20 : 740)
+      // A user's choice, including turning a card back, takes precedence over
+      // subsequent automatic thresholds and reverse scrolling.
+      cardStates.get(card).handled = true
+      turnCard(card, !card.classList.contains('is-flipped'), 'manual')
+    })
+    card.querySelector('.home-flip-card__inner').addEventListener('transitionend', event => {
+      if (event.propertyName === 'transform' && event.target === event.currentTarget) finishCardTurn(card)
     })
   })
 
@@ -501,6 +557,18 @@ if (story) {
     requestUpdate()
   })
   window.addEventListener('pageshow', requestUpdate)
+  window.addEventListener('pagehide', () => {
+    cardsOnscreen = false
+    window.clearTimeout(cardQueueTimer)
+    cardQueueTimer = null
+    automaticCard = null
+    cards.forEach(card => {
+      window.clearTimeout(cardStates.get(card).timer)
+      cardStates.get(card).timer = null
+      card.classList.remove('is-turning')
+    })
+    chapterProgressCache.delete(cardsChapter)
+  })
   window.addEventListener('blur', () => { hoveredActions.clear(); requestUpdate() })
   reducedMotion.addEventListener?.('change', () => {
     chapters.forEach(chapter => chapterProgressCache.delete(chapter))
