@@ -1,0 +1,751 @@
+{
+  "source": "C:\\Users\\UserTech\\Desktop\\Software_Wiki_Page_English.docx",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Software Wiki Landing Page and Navigation Layout",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "I. Landing Page Design",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "Reference page: TUDarmstadt 2025 Hardware",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "https://2025.igem.wiki/tudarmstadt/hardware",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "1. Landing Page Copy",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Page title: SOFTWARE",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Main heading: Device Control, Fluorescence Acquisition, and Result Interpretation in One Interface",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Copy: Our Android app is the mobile interface for the multichannel detector. Users connect to the AI Box over Wi-Fi, set the heating time and temperature-control switches, and view the temperature, fluorescence curves, returned images, and tube labels. Device control and result viewing are integrated in one interface.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "2. Landing Page Animation",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Place a 6–10 second looping animation in the center or on the right of the landing page, beside the heading and introduction. The animation should show the role of the software in the detection workflow.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Animation sequence:",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Phone and instrument appear → Wi-Fi connection is established → Detection parameters are set and started → Fluorescence curves develop → The result card appears",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "The animation returns to its initial state and loops automatically.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "II. Side Navigation",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Reference page: Munich 2025 Softwarehttps://2025.igem.wiki/munich/software/",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Add sticky navigation to the right side of the page.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "01 Overview02 Architecture03 Validation04 Reusability05 User Guide06 Open Source",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "01  Overview",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Present the content in this order: purpose → core functions → data flow → development process → result display.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Software purpose:",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "Copy: We developed an Android app that allows users to operate the detector from a phone. The app sends control commands over TCP and receives temperature readings, fluorescence data, images, and tube labels from the AI Box. It displays these data as curves and results. Image processing runs on the AI Box, while the app handles interaction, communication, and display. The repository provides the Java source code for both app generations, Gradle configuration, a README, and protocol documentation under the Apache License 2.0.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Layout: Keep the main text on the left and a simplified animation or flow diagram on the right: instrument → app → fluorescence curve → result. Add a View Source Code link below the text: https://gitlab.igem.org/2026/software/jlu-sph/sph-software. The repository also provides links to the README, LICENSE, and docs/PROTOCOL.md.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "1.2 Six Core Functions: Use Cards Instead of Long Paragraphs",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId8",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image1.png"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "1.3 Data Flow: Place a concise horizontal workflow below the six function cards",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "1.4 Development Process",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Reference page: Vilnius-Lithuania 2024 Softwarehttps://2024.igem.wiki/vilnius-lithuania/software/",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Reference approach: Follow the development narrative used in the Planning section. Vilnius-Lithuania presents its software from the initial minimum viable product (MVP) through subsequent functions added in response to user needs and feedback.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Copy: The software developed alongside the detector. The mobile app began as a device-connection tool and gradually expanded to support device control, reaction monitoring, fluorescence acquisition, and result viewing.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Stage 1 | Establishing the Device Connection",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Need: The instrument supported basic control, but users needed a direct mobile interface for connecting to the device and sending commands.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Added function: We created the basic app interface and device-communication functions so that the phone could connect to the detector and send basic control commands.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Stage 2 | Displaying the Reaction",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Need: Device control alone did not show whether the reaction was proceeding normally or how temperature, elapsed time, and fluorescence changed.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Added function: We added a heating countdown, temperature display, and real-time fluorescence curves. The second-generation app also displays five tube labels and provides separate temperature-control switches.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Page image: Use a real app screenshot showing temperature, time, and fluorescence curves.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId9",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image2.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Stage 3 | Presenting the Results",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Need: After detection, users still had to inspect the fluorescence image and interpret the result themselves.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Added function: The app receives images and analysis results from the AI Box. The first generation displays two tube results; the second expands the display to five color-coded tube labels and adds servo control. The app receives device-side results through the communication interface and retains image viewing and saving.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Page image: Use the final result interface to show the five tube labels, fluorescence curves, or acquired image.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "02  Architecture",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId10",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image3.png"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "5",
+      "text": "System Architecture",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "The mobile app and AI Box communicate over a local Wi-Fi network. The connection screen shown uses 10.42.0.1 and port 8080. The Android app acts as a TCP client and sends UTF-8 JSON control commands. Each message contains an eight-byte header followed by its payload. Two big-endian 32-bit integers in the header specify the payload length and message type, where 0 denotes text and 1 denotes an image.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "Mobile app: Written in Java, the app handles connection, countdown timing, temperature and servo commands, and image and curve display. NetworkService processes TCP messages, while MainActivity manages interaction and display. Other teams may adapt the communication parser and MPAndroidChart plotting logic by changing the device protocol and interface bindings.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "AI Box: The device integrates temperature control, optical acquisition, mechanical control, and image analysis. It receives commands from the app and returns status data, images, and results.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "Wireless communication: Both app generations use get_image to request an image, get_tem to request temperature, and set_tem to send a temperature-control value. The second generation also uses set_tem43 and set_tem90 for two temperature-control switches and set_servo for servo control. Responses contain type, content, and an optional timestamp. In the second generation, tubeluminance carries the two curve values data1 and data2. The app records the reception time for each curve point, while tem messages update temperature separately. Protocol fields and examples are provided in docs/PROTOCOL.md. For example, {\"type\":\"tem\",\"content\":\"25.0\"} illustrates the temperature-message format.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "30",
+      "text": "AI-assisted analysis: The device processes the fluorescence image, and the app displays the returned image and tubelabels. The second-generation client maps codes 0, 1, 2, and 3 to green, red, blue, and empty-tube labels. Their experimental interpretation should follow the assay design. Model training, inference code, and validation results should be documented with the corresponding model.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Example page layout: Software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId11",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image4.png"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "03  Validation",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "3.1 Device Connection and Data Acquisition",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "The connection screen uses the AI Box address 10.42.0.1 and port 8080. After the connection is established, the app displays the service status and can enter the data-acquisition workflow.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId12",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image5.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Device connection screen: AI Box IP address and port.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "3.2 Temperature and Fluorescence-Curve Display",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "The data screen displays the current temperature and updates two fluorescence curves over elapsed time. The two recorded screens show temperatures of 43.1 °C and 43.0 °C. TUBE1 and TUBE2 values update during acquisition.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId13",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image6.jpeg"
+        },
+        {
+          "Id": "rId14",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image7.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Data-acquisition screen: current temperature and two-channel fluorescence curves               Second recorded run on the data screen",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "3.3 Image Results and Tube Labels",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "The result screen receives an image from the AI Box and displays five tube labels. In the example shown, Tube2 is labelled tube_green, Tube3 tube_blue, Tube4 tube_red, and Tube1 and Tube5 tube_null. The screen also shows a temperature of 43.0 °C.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId15",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image8.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Result screen: image returned by the AI Box and five tube labels.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "04  Reusability",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Interface and Module Reuse",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Reference page: Groningen 2025 Software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "https://2025.igem.wiki/groningen/software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Reference approach: Follow the Groningen 2025 Software page, which explains usability through specific operations such as data upload, format selection, and data preview rather than relying on a general “easy to use” claim.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Copy: We integrated device control, reaction parameters, and detection status into the mobile interface. Users can connect the device, configure parameters, monitor the reaction, and view results without switching between separate programs.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "The operating screen groups the heating time, temperature-control switches, and image requests. Connection status, temperature, and two-channel fluorescence curves update with data returned by the device. Other teams may reuse the communication parser, curve display, and result-display modules by adapting the commands and field mappings to their device protocol.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Running the source: Select either app-generation project from the repository and open it in Android Studio. Configure JDK 17 and Android SDK 34, complete Gradle synchronization, and run the app. The projects use Gradle 8.2 and Android Gradle Plugin 8.2.0. Alternatively, run gradlew.bat assembleDebug from the project directory. The repository README provides the full build instructions. The device server and model must be configured separately.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "05  User Guide",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Provide two entry points: Manual + Demo Video",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Reference pages",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "GreatBay-SCIE 2023 Hardwarehttps://2023.igem.wiki/greatbay-scie/hardware",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Patras Medicine 2022 Implementationhttps://2022.igem.wiki/patras-medicine/implementation/",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Reference approach: Use two entry points, one for a visual demonstration of device operation and one for a downloadable user manual.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Page introduction: Quick Start",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Quick start: Download the APK and install it on a device running Android 7.0 (API 24) or later. If prompted, allow installation from the current download source. Connect the phone to the AI Box network, then enter 10.42.0.1 and port 8080 on the connection screen. Full acquisition and control require the corresponding AI Box server.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Layout: Place two main entry points side by side near the top of the page.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "",
+      "images": [
+        {
+          "Id": "rId16",
+          "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
+          "Target": "media/image9.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "A | Download Manual",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Download the User Manual",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Page copy: Use the illustrated manual to learn about device connection, the software interface, and the detection workflow. The manual can be previewed online or downloaded.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Add a Download APK link below the manual description: https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Manual content: Create a one- or two-page illustrated PDF using real app screenshots, icons, arrows, and numbered steps, with minimal long-form text.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Suggested sequence: install the APK → connect the device → review the main app functions → set temperature controls and time → start the operation → view temperature and fluorescence curves → request an image → view tube labels → review error messages. The APK version is 1.0 and the package name is com.chuangxin.socket.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "B | Watch the Demo",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Watch the Operation Demo",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Page copy: The complete operation demo shows how the software works with the detector, from device connection to result viewing.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Video content: Record a 60–90 second operation video showing both the detector and the mobile app, rather than only a phone screen recording.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Suggested sequence: power on and connect the device → set the heating time and temperature-control switches → view temperature, countdown, and fluorescence curves → request a fluorescence image → view tube labels. The second-generation app may also demonstrate servo control.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "3",
+      "text": "06  Open Source",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Source Repository",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "https://gitlab.igem.org/2026/software/jlu-sph/sph-software",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "The repository contains the first- and second-generation Android source projects, Gradle configuration, a README, and TCP/JSON protocol documentation. It is distributed under the Apache License 2.0.",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "4",
+      "text": "Downloads",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "First-generation APK: https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/first-generation-fluorescent-detection.apk",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Second-generation APK: https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk",
+      "images": []
+    },
+    {
+      "type": "paragraph",
+      "style": "",
+      "text": "Protocol documentation: https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/docs/PROTOCOL.md",
+      "images": []
+    }
+  ],
+  "media": [
+    {
+      "path": "word/media/image1.png",
+      "bytes": 116298,
+      "width": 1600,
+      "height": 1000,
+      "format": "PNG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image1.png",
+      "sha256": "0a4f08aba801bc1b357ea8d8113642e9f4455c4e89fa3e50f7edb8276e683bf8"
+    },
+    {
+      "path": "word/media/image2.jpeg",
+      "bytes": 304209,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image2.jpeg",
+      "sha256": "fb4888f6322252ca24d0ae7a7abfaf495df15ac8637f9c3a494f877a53b709c2"
+    },
+    {
+      "path": "word/media/image3.png",
+      "bytes": 109763,
+      "width": 1203,
+      "height": 819,
+      "format": "PNG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image3.png",
+      "sha256": "45407e0e104d342350a683c0b4c48fce25f3dd6817fc683b4dd7acb27e2b5d72"
+    },
+    {
+      "path": "word/media/image4.png",
+      "bytes": 202011,
+      "width": 838,
+      "height": 960,
+      "format": "PNG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image4.png",
+      "sha256": "d52a9da07c8bdc0a30f5544bab27f85739c94bd7e962bc9f239bb00628cc522b"
+    },
+    {
+      "path": "word/media/image5.jpeg",
+      "bytes": 437224,
+      "width": 1260,
+      "height": 2800,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image5.jpeg",
+      "sha256": "13601548c5ef34866a60a008e179c1fce464683b763d78f7fd0ee7b191a84f13"
+    },
+    {
+      "path": "word/media/image6.jpeg",
+      "bytes": 299598,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image6.jpeg",
+      "sha256": "6406157f0acddbb4ce6cd3fb905daa6756d8d36e2be83c6a719a2fd697e27d30"
+    },
+    {
+      "path": "word/media/image7.jpeg",
+      "bytes": 312844,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image7.jpeg",
+      "sha256": "260c0aaac4764c40ae387e3e07a2a69700803695847398582a9305b19f25889b"
+    },
+    {
+      "path": "word/media/image8.jpeg",
+      "bytes": 530900,
+      "width": 1600,
+      "height": 2560,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image8.jpeg",
+      "sha256": "22e332a7d7519510f02847d39ec724150d94fce2787f4a27a5162860859d4ff4"
+    },
+    {
+      "path": "word/media/image9.jpeg",
+      "bytes": 46429,
+      "width": 1548,
+      "height": 625,
+      "format": "JPEG",
+      "extracted": "D:\\JLU—Wiki\\IGEMwiki\\worktrees\\_task-briefs\\2026-10-03-software-protocol-46368360\\materials\\doc1-image9.jpeg",
+      "sha256": "14df8422dc4664992c92063cda7d21b97fab9a71b119ed455c710982f0564403"
+    }
+  ],
+  "comments": [],
+  "trackedChanges": 0,
+  "links": [],
+  "analysis_note": "结构化提取供定位与交接；最终内容、上下标和排版回查原 DOCX。图像路径指向持久交接材料。"
+}

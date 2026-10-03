@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "language": "en",
+      "document": "Software_Wiki_Page_English.docx",
+      "sha256": "51495d085cc61aab1db538e1fe4e8d2c09893a83314b7830a2cef3f7b6ec0b39",
+      "embedded_images_verified": 9
+    },
+    {
+      "language": "zh",
+      "document": "Software_Wiki页面.docx",
+      "sha256": "6eca895ba2613a772ff9a5554e6615fda9ee4ed87b72daa1a7143f006339ffe5",
+      "embedded_images_verified": 10
+    }
+  ],
+  "protected_blocks_unchanged": {
+    "navbar": "de5070e797ab4310ff1f01771a5bb33b2f1f495892e089fc8a2a79df095e6ca2",
+    "loading_markup": "f4f84e7e61a2fbf1671db384bd31e386dbf95f98a61bef19bb4e1793f5a14e69",
+    "footer": "5e349c81e95e881d1bf18a99f110a037328bf2764eaa11ed68694f6cec55f193",
+    "loading_fallback": "c0d5244d9491e48d57b1e1aeed8864a3f2a7d31bcb71258430fb7d11bbd953bb",
+    "cover_markup": "601a03097406bca1488dd9b06572d32555f26a6d3a9ad8a989d5b4833f4e84b2"
+  },
+  "anchors_valid": true,
+  "reference_only_team_stack_excluded": true,
+  "new_sections": 6,
+  "pdf_git_bytes_preserved": true,
+  "source_commit": "b06ba6ae99be8757e911f468d2fd0670d99b2e48"
+}
