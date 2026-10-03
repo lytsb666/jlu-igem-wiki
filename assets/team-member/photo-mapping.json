@@ -203,7 +203,7 @@
       "currentGroups": [
         "Advisors"
       ],
-      "status": "pending-00-alias",
+      "status": "user-confirmed-alias",
       "cropPixels": [
         0,
         230,
@@ -215,8 +215,15 @@
         1920
       ],
       "originalSha256": "9bf8f49f82689d0b6c8590495c3f70f66dd0d44c7a2cb20e5389ae9a0abf62c3",
-      "webFile": "assets/team-member/pending/ziyun-ma.webp",
-      "webBytes": 46150
+      "webFile": "assets/team-member/portraits/ziyun-ma.webp",
+      "webBytes": 46150,
+      "previousStatus": "pending-00-alias",
+      "previousWebFile": "assets/team-member/pending/ziyun-ma.webp",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
     },
     {
       "id": "haoyang-liu",
@@ -347,7 +354,7 @@
       "currentGroups": [
         "Dry Lab"
       ],
-      "status": "pending-00-group; photo filename matched",
+      "status": "filename-match",
       "cropPixels": [
         0,
         545,
@@ -360,7 +367,14 @@
       ],
       "originalSha256": "3fbd79afe003df9867e3ed9cb38847cd09684f3d39cd7279d067a019b8885af9",
       "webFile": "assets/team-member/portraits/mo-jin.webp",
-      "webBytes": 45948
+      "webBytes": 45948,
+      "groupDecision": {
+        "reviewer": "00",
+        "date": "2026-10-03",
+        "resolution": "Keep existing role and groups; explicit contribution role takes precedence over folder placement.",
+        "evidence": "Hardware/Dry Lab 金墨.docx: Team Role is Dry Lab."
+      },
+      "previousStatus": "pending-00-group; photo filename matched"
     },
     {
       "id": "yirui-lu",
@@ -780,7 +794,7 @@
       "currentGroups": [
         "Team Leaders"
       ],
-      "status": "pending-00-alias",
+      "status": "user-confirmed-alias",
       "cropPixels": [
         0,
         327,
@@ -792,8 +806,21 @@
         3271
       ],
       "originalSha256": "93edf38b0f1093c858ae11146ab0a60bbb24c0343b237ae6cbee4bf605432a34",
-      "webFile": "assets/team-member/pending/liuyu-yang.webp",
-      "webBytes": 64564
+      "webFile": "assets/team-member/portraits/liuyu-yang.webp",
+      "webBytes": 64564,
+      "previousStatus": "pending-00-alias",
+      "previousWebFile": "assets/team-member/pending/liuyu-yang.webp",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      },
+      "groupDecision": {
+        "reviewer": "00",
+        "date": "2026-10-03",
+        "resolution": "Keep existing role and groups; explicit contribution role takes precedence over folder placement.",
+        "evidence": "美工/Team Member-杨鏐玉.docx: Team Role is Student leader; original identity conflict remains recorded."
+      }
     },
     {
       "id": "qianwen-wang",
@@ -1035,5 +1062,17 @@
       "webFile": "assets/team-member/portraits/secondary-pi-zhao-chao.webp",
       "webBytes": 57564
     }
-  ]
+  ],
+  "userConfirmedAliases": {
+    "liuyu-yang": {
+      "authority": "human user",
+      "date": "2026-10-03",
+      "answer": "两张都对应原成员"
+    },
+    "ziyun-ma": {
+      "authority": "human user",
+      "date": "2026-10-03",
+      "answer": "两张都对应原成员"
+    }
+  }
 }

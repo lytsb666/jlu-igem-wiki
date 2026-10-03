@@ -43,7 +43,6 @@ const navigationSchema = [
     label: 'Team',
     items: [
       ['Member', '../Team/member.html'],
-      ['Attribution', '../Team/attribution.html'],
     ],
   },
   {

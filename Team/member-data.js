@@ -33,7 +33,7 @@ export const teamMembers = [
         "detail": "Contributed to the research design and technical roadmap, helping refine the project framework and optimize the overall research strategy."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/liuyu-yang.webp",
     "source": {
       "file": "Team Member-杨鏐玉.docx",
       "rawName": "Jingyi Kang",
@@ -55,7 +55,7 @@ export const teamMembers = [
     ],
     "photoSource": {
       "file": "美工/杨liu玉.jpg",
-      "status": "pending-00-alias",
+      "status": "user-confirmed-alias",
       "cropPixels": [
         0,
         327,
@@ -63,7 +63,12 @@ export const teamMembers = [
         3053
       ],
       "originalSha256": "93edf38b0f1093c858ae11146ab0a60bbb24c0343b237ae6cbee4bf605432a34",
-      "groupReview": "Pending 00: supplied folder differs from existing role; existing groups retained."
+      "groupReview": "Resolved by 00: original contribution role and groups retained.",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
     }
   },
   {
@@ -626,7 +631,7 @@ export const teamMembers = [
         4677
       ],
       "originalSha256": "3fbd79afe003df9867e3ed9cb38847cd09684f3d39cd7279d067a019b8885af9",
-      "groupReview": "Pending 00: supplied folder differs from existing role; existing groups retained."
+      "groupReview": "Resolved by 00: original contribution role and groups retained."
     }
   },
   {
@@ -2396,7 +2401,7 @@ export const teamMembers = [
         "detail": "Sorted, cleaned and annotated raw experimental data, organizing datasets for team sharing and future reference."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/ziyun-ma.webp",
     "source": {
       "file": "马梓云.docx",
       "rawName": "Ziyun Ma",
@@ -2405,14 +2410,19 @@ export const teamMembers = [
     "dataIssues": [],
     "photoSource": {
       "file": "ad/马子云ad.jpg",
-      "status": "pending-00-alias",
+      "status": "user-confirmed-alias",
       "cropPixels": [
         0,
         230,
         1280,
         1830
       ],
-      "originalSha256": "9bf8f49f82689d0b6c8590495c3f70f66dd0d44c7a2cb20e5389ae9a0abf62c3"
+      "originalSha256": "9bf8f49f82689d0b6c8590495c3f70f66dd0d44c7a2cb20e5389ae9a0abf62c3",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
     }
   }
 ]
