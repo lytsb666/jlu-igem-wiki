@@ -1,280 +1,166 @@
 import './main.js'
-import { teamMembers } from '../Team/member-data.js'
+import { teamMembers, teamFaculty } from '../Team/member-data.js'
 
-const leaderGrid = document.querySelector('#leader-grid')
+// Static glob resolves portraits in development and in Vite's hashed builds.
+const portraits = import.meta.glob('../assets/team-member/portraits/*.webp', {
+  eager: true, query: '?url', import: 'default',
+})
 const memberGrid = document.querySelector('#member-grid')
-const advisorGrid = document.querySelector('#advisor-grid')
 const advisorSection = document.querySelector('#advisor-section')
 const resultStatus = document.querySelector('#team-results')
-const filterButtons = [...document.querySelectorAll('.team-filter')]
-const dialog = document.querySelector('#profile-dialog')
-const closeButton = dialog.querySelector('.profile-close')
-const expandButton = dialog.querySelector('#profile-expand')
-const detailsPanel = dialog.querySelector('#profile-details')
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+const filters = [...document.querySelectorAll('.team-filter')]
+let openedCard = null
 
-const leaders = teamMembers.filter((member) => member.groups.includes('Team Leaders'))
-const advisors = teamMembers.filter((member) => member.groups.includes('Advisors'))
-const members = teamMembers.filter((member) => (
-  !member.groups.includes('Team Leaders') && !member.groups.includes('Advisors')
-))
-
-let lastProfileTrigger = null
-let filterRevision = 0
-
-function createElement(tag, className, text) {
-  const element = document.createElement(tag)
-  if (className) element.className = className
-  if (text !== undefined) element.textContent = text
-  return element
+function element(tag, className, text) {
+  const node = document.createElement(tag)
+  if (className) node.className = className
+  if (text !== undefined) node.textContent = text
+  return node
 }
 
-function getInitials(name) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join('')
-    .toUpperCase()
-}
-
-function createPortrait(member, variant = 'card') {
-  const portrait = createElement('div', `member-photo member-photo--${variant}`)
-  if (member.photo) {
-    const image = document.createElement('img')
-    image.src = new URL(member.photo, import.meta.url).href
-    image.alt = `${member.name} portrait`
-    image.loading = variant === 'profile' ? 'eager' : 'lazy'
+function portrait(person) {
+  const host = element('span', 'member-photo')
+  if (person.photo && portraits[person.photo]) {
+    const image = element('img')
+    image.src = portraits[person.photo]
+    image.alt = `${person.name} portrait`
+    image.width = 800
+    image.height = 1000
+    image.loading = 'lazy'
     image.decoding = 'async'
-    portrait.append(image)
-    return portrait
+    host.append(image)
+  } else {
+    host.classList.add('member-photo--placeholder')
+    const initials = person.name.split(/\s+/).slice(0, 2).map((p) => p[0]).join('').toUpperCase()
+    const monogram = element('span', 'member-photo__initials', initials)
+    monogram.setAttribute('aria-hidden', 'true')
+    host.append(monogram)
   }
-
-  portrait.classList.add('member-photo--placeholder')
-  const initials = createElement('span', 'member-photo__initials', getInitials(member.name))
-  initials.setAttribute('aria-hidden', 'true')
-  portrait.append(initials)
-  return portrait
+  return host
 }
 
-function createMemberCard(member, variant) {
-  const card = createElement('button', `member-card member-card--${variant}`)
-  card.type = 'button'
-  card.dataset.memberId = member.id
-  card.dataset.groups = member.groups.join('|')
-  card.setAttribute('aria-label', `View ${member.name}'s profile`)
-
-  const portrait = createPortrait(member, variant)
-  const hoverLayer = createElement('span', 'member-card__hover')
-  const quote = createElement(
-    'span',
-    'member-card__quote',
-    member.quote || 'Discover this team member’s work.',
-  )
-  const view = createElement('span', 'member-card__view', 'View profile →')
-  hoverLayer.append(quote, view)
-  portrait.append(hoverLayer)
-
-  const body = createElement('span', 'member-card__body')
-  const name = createElement('span', 'member-card__name', member.name)
-  const role = createElement('span', 'member-card__role', member.role)
-  body.append(name, role)
-
-  if (member.groups.length > 1) {
-    const groups = createElement('span', 'member-card__groups')
-    member.groups.forEach((group) => groups.append(createElement('span', '', group)))
-    body.append(groups)
+function setFlipped(card, flipped, restoreFocus = true) {
+  const front = card.querySelector('.member-card__front')
+  const back = card.querySelector('.member-card__back')
+  card.classList.toggle('is-flipped', flipped)
+  front.setAttribute('aria-expanded', String(flipped))
+  front.setAttribute('aria-hidden', String(flipped))
+  front.inert = flipped
+  back.setAttribute('aria-hidden', String(!flipped))
+  back.inert = !flipped
+  if (flipped) {
+    if (openedCard && openedCard !== card) setFlipped(openedCard, false, false)
+    openedCard = card
+    card.querySelector('.member-card__return').focus({ preventScroll: true })
+  } else {
+    if (openedCard === card) openedCard = null
+    if (restoreFocus) front.focus({ preventScroll: true })
   }
+}
 
-  card.append(portrait, body)
-  card.addEventListener('click', () => openProfile(member, card))
+function addProfile(back, person) {
+  const scroll = element('div', 'member-card__reading')
+  scroll.tabIndex = 0
+  scroll.setAttribute('role', 'region')
+  scroll.setAttribute('aria-label', `${person.name} biography and contributions`)
+  scroll.append(element('h3', 'member-card__back-name', person.name))
+  scroll.append(element('p', 'member-card__back-role', person.role))
+  if (person.introduction) {
+    scroll.append(element('h4', 'profile-heading', 'About Me'), element('p', 'profile-text', person.introduction))
+  }
+  if (person.quote) scroll.append(element('blockquote', 'profile-quote', `“${person.quote}”`))
+  if (person.profileStatus === 'basic-information-only') {
+    scroll.append(element('p', 'profile-text', 'Biography and contributions to follow.'))
+  } else {
+    scroll.append(element('h4', 'profile-heading', 'Contributions'))
+    const tags = element('div', 'profile-tags')
+    person.contributionCategories.forEach((category) => tags.append(element('span', '', category)))
+    scroll.append(tags)
+    const details = element('details', 'profile-details')
+    details.append(element('summary', 'profile-expand', 'Read full contribution'))
+    if (person.generalTasks.length) {
+      details.append(element('h4', 'profile-heading', 'General Tasks'))
+      details.append(element('p', 'profile-text', `Source indices: ${person.generalTasks.join(' · ')}`))
+    }
+    details.append(element('h4', 'profile-heading', 'Specific Tasks'))
+    person.tasks.forEach((task) => {
+      const entry = element('section', 'profile-task')
+      entry.append(element('h5', '', task.category), element('p', 'profile-text', task.detail))
+      details.append(entry)
+    })
+    scroll.append(details)
+  }
+  scroll.append(element('p', 'profile-end', 'End of profile'))
+  back.append(scroll)
+}
+
+function memberCard(person) {
+  const card = element('article', 'member-card')
+  card.dataset.memberId = person.id
+  card.dataset.groups = person.groups.join('|')
+  const rotor = element('div', 'member-card__rotor')
+  const front = element('button', 'member-card__front')
+  front.type = 'button'
+  front.setAttribute('aria-label', `Flip ${person.name}'s card to read their profile`)
+  front.setAttribute('aria-expanded', 'false')
+  front.setAttribute('aria-controls', `profile-${person.id}`)
+  front.setAttribute('aria-hidden', 'false')
+  const body = element('span', 'member-card__body')
+  body.append(element('span', 'member-card__name', person.name), element('span', 'member-card__role', person.role))
+  if (person.groups.length > 1) body.append(element('span', 'member-card__groups', person.groups.join(' · ')))
+  body.append(element('span', 'member-card__hint', 'Flip to explore ↻'))
+  front.append(portrait(person), body)
+  const back = element('section', 'member-card__back')
+  back.id = `profile-${person.id}`
+  back.setAttribute('aria-hidden', 'true')
+  back.inert = true
+  const returnButton = element('button', 'member-card__return', '↶ Back to photo')
+  returnButton.type = 'button'
+  returnButton.setAttribute('aria-label', `Return to ${person.name}'s photo`)
+  back.append(returnButton)
+  addProfile(back, person)
+  front.addEventListener('click', () => setFlipped(card, true))
+  returnButton.addEventListener('click', () => setFlipped(card, false))
+  rotor.append(front, back)
+  card.append(rotor)
   return card
 }
 
-function renderCards() {
-  const leaderFragment = document.createDocumentFragment()
-  leaders.forEach((member) => leaderFragment.append(createMemberCard(member, 'leader')))
-  leaderGrid.append(leaderFragment)
-
-  const memberFragment = document.createDocumentFragment()
-  members.forEach((member) => memberFragment.append(createMemberCard(member, 'member')))
-  memberGrid.append(memberFragment)
-
-  const advisorFragment = document.createDocumentFragment()
-  advisors.forEach((member) => advisorFragment.append(createMemberCard(member, 'advisor')))
-  advisorGrid.append(advisorFragment)
+function render(group, host) {
+  const fragment = document.createDocumentFragment()
+  group.forEach((person) => fragment.append(memberCard(person)))
+  host.append(fragment)
 }
+render(teamFaculty.filter((p) => p.groups.includes('PI')), document.querySelector('#pi-grid'))
+render(teamFaculty.filter((p) => p.groups.includes('Secondary PI')), document.querySelector('#secondary-pi-grid'))
+render(teamMembers.filter((p) => p.groups.includes('Team Leaders')), document.querySelector('#leader-grid'))
+render(teamMembers.filter((p) => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors')), memberGrid)
+render(teamMembers.filter((p) => p.groups.includes('Advisors')), document.querySelector('#advisor-grid'))
 
-function fillProfile(member) {
-  const portraitHost = dialog.querySelector('#profile-portrait')
-  portraitHost.replaceChildren(createPortrait(member, 'profile'))
-  dialog.querySelector('#profile-group').textContent = member.groups.join(' · ')
-  dialog.querySelector('#profile-name').textContent = member.name
-  dialog.querySelector('#profile-role').textContent = member.role
-
-  const quote = dialog.querySelector('#profile-quote')
-  quote.textContent = member.quote ? `“${member.quote}”` : ''
-  quote.hidden = !member.quote
-  dialog.querySelector('#profile-introduction').textContent = member.introduction
-
-  const tagHost = dialog.querySelector('#profile-tags')
-  tagHost.replaceChildren()
-  const categories = member.contributionCategories.length
-    ? member.contributionCategories
-    : ['Contribution details']
-  categories.forEach((category) => tagHost.append(createElement('span', '', category)))
-
-  const generalTaskHost = dialog.querySelector('#profile-general-tasks')
-  generalTaskHost.replaceChildren()
-  if (member.generalTasks.length) {
-    generalTaskHost.append(
-      createElement('h4', '', 'General Tasks'),
-      createElement('p', '', `Source indices: ${member.generalTasks.join(' · ')}`),
-    )
-  }
-
-  const taskHost = dialog.querySelector('#profile-task-list')
-  taskHost.replaceChildren()
-  taskHost.append(createElement('h4', '', 'Specific Tasks'))
-  member.tasks.forEach((task) => {
-    const item = createElement('article', 'profile-task')
-    item.append(
-      createElement('h5', '', task.category),
-      createElement('p', '', task.detail),
-    )
-    taskHost.append(item)
+function applyFilter(filter) {
+  // Synchronous filtering avoids stale animation completions hiding a new selection.
+  if (openedCard) setFlipped(openedCard, false, false)
+  filters.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)))
+  let count = 0
+  memberGrid.querySelectorAll('.member-card').forEach((card) => {
+    const show = filter === 'All' || (filter !== 'Advisors' && card.dataset.groups.split('|').includes(filter))
+    card.hidden = !show
+    if (show) count++
   })
-
-  detailsPanel.hidden = true
-  expandButton.setAttribute('aria-expanded', 'false')
-  expandButton.firstElementChild.textContent = 'View full contribution'
-  expandButton.lastElementChild.textContent = '＋'
+  advisorSection.hidden = filter !== 'All' && filter !== 'Advisors'
+  resultStatus.textContent = filter === 'All'
+    ? 'Showing 26 members · 9 advisors. Team leaders and PIs appear above.'
+    : filter === 'Advisors' ? 'Showing 9 advisors below. Team leaders and PIs appear above.'
+      : `Showing ${count} ${filter} member${count === 1 ? '' : 's'}. Team leaders and PIs appear above.`
 }
-
-function openProfile(member, trigger) {
-  lastProfileTrigger = trigger
-  fillProfile(member)
-  document.documentElement.classList.add('profile-open')
-  document.body.classList.add('profile-open')
-  dialog.showModal()
-  requestAnimationFrame(() => closeButton.focus())
-}
-
-function closeProfile() {
-  if (dialog.open) dialog.close()
-}
-
-function unlockPage() {
-  document.documentElement.classList.remove('profile-open')
-  document.body.classList.remove('profile-open')
-  if (lastProfileTrigger?.isConnected) lastProfileTrigger.focus({ preventScroll: true })
-}
-
-function toggleDetails() {
-  const willOpen = detailsPanel.hidden
-  detailsPanel.hidden = !willOpen
-  expandButton.setAttribute('aria-expanded', String(willOpen))
-  expandButton.firstElementChild.textContent = willOpen
-    ? 'Hide full contribution'
-    : 'View full contribution'
-  expandButton.lastElementChild.textContent = willOpen ? '−' : '＋'
-  if (willOpen && !reduceMotion.matches) {
-    detailsPanel.animate(
-      [
-        { opacity: 0, transform: 'translateY(-8px)' },
-        { opacity: 1, transform: 'translateY(0)' },
-      ],
-      { duration: 240, easing: 'cubic-bezier(.2,.7,.2,1)' },
-    )
+filters.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.filter)))
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && openedCard) {
+    event.preventDefault()
+    setFlipped(openedCard, false)
   }
-}
-
-async function applyFilter(filter) {
-  const revision = ++filterRevision
-  filterButtons.forEach((button) => {
-    const active = button.dataset.filter === filter
-    button.classList.toggle('is-active', active)
-    button.setAttribute('aria-pressed', String(active))
-  })
-
-  const cards = [...memberGrid.querySelectorAll('.member-card')]
-  const visibleCards = filter === 'All' || filter === 'Advisors'
-    ? (filter === 'All' ? cards : [])
-    : cards.filter((card) => card.dataset.groups.split('|').includes(filter))
-  const visibleSet = new Set(visibleCards)
-  const cardsToHide = cards.filter((card) => !card.hidden && !visibleSet.has(card))
-
-  if (!reduceMotion.matches && cardsToHide.length) {
-    await Promise.all(cardsToHide.map((card) => card.animate(
-      [
-        { opacity: 1, transform: 'translateY(0)' },
-        { opacity: 0, transform: 'translateY(8px)' },
-      ],
-      { duration: 130, easing: 'ease-in', fill: 'forwards' },
-    ).finished.catch(() => undefined)))
-  }
-  if (revision !== filterRevision) return
-
-  cards.forEach((card) => { card.hidden = !visibleSet.has(card) })
-  const showAdvisors = filter === 'All' || filter === 'Advisors'
-  advisorSection.hidden = !showAdvisors
-
-  if (!reduceMotion.matches) {
-    visibleCards.forEach((card, index) => {
-      card.getAnimations().forEach((animation) => animation.cancel())
-      card.animate(
-        [
-          { opacity: 0, transform: 'translateY(10px)' },
-          { opacity: 1, transform: 'translateY(0)' },
-        ],
-        {
-          duration: 260,
-          delay: Math.min(index * 22, 180),
-          easing: 'cubic-bezier(.2,.7,.2,1)',
-        },
-      )
-    })
-    if (showAdvisors) {
-      advisorSection.animate(
-        [{ opacity: 0 }, { opacity: 1 }],
-        { duration: 280, easing: 'ease-out' },
-      )
-    }
-  }
-
-  if (filter === 'All') {
-    resultStatus.textContent = `Showing all ${teamMembers.length} people.`
-  } else if (filter === 'Advisors') {
-    resultStatus.textContent = `Showing ${advisors.length} advisors.`
-  } else {
-    resultStatus.textContent = `Showing ${visibleCards.length} ${filter} member${visibleCards.length === 1 ? '' : 's'}.`
-  }
-}
-
-function observeCards() {
-  if (reduceMotion.matches || !('IntersectionObserver' in window)) return
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return
-      entry.target.classList.add('is-revealed')
-      observer.unobserve(entry.target)
-    })
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 })
-  document.querySelectorAll('.member-card').forEach((card) => observer.observe(card))
-}
-
-renderCards()
-observeCards()
-resultStatus.textContent = `Showing all ${teamMembers.length} people.`
-
-filterButtons.forEach((button) => {
-  button.addEventListener('click', () => applyFilter(button.dataset.filter))
 })
-
-closeButton.addEventListener('click', closeProfile)
-dialog.addEventListener('close', unlockPage)
-dialog.addEventListener('click', (event) => {
-  if (event.target === dialog) closeProfile()
+document.querySelector('a[href="#advisors-title"]').addEventListener('click', () => {
+  if (advisorSection.hidden) applyFilter('All')
 })
-expandButton.addEventListener('click', toggleDetails)
+applyFilter('All')
