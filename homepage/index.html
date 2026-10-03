@@ -87,9 +87,10 @@
 </nav>
 
     <main class="home-main story-home">
-  <section class="scroll-story" id="home-story" aria-label="From the ByeGerm cover through a magnifying glass into a vertical journey through disease, science, diagnosis, care, shared scientific legacy and the global sanitation challenge">
+  <section class="scroll-story" id="home-story" aria-label="A continuous illustrated journey from ByeGerm through history, molecular diagnostics and accessible care">
     <div class="story-stage">
-      <div class="world-scene">
+      <div class="story-ribbon">
+      <div class="world-scene is-visible">
         <img class="story-world" src="../a  图片/home-story/world.jpg" width="1080" height="1809" fetchpriority="high" decoding="async" alt="A long illustrated world of forest, village, coast, stone road, tree and research house" />
 
         <div class="story-world-lights" aria-hidden="true">
@@ -104,10 +105,65 @@
           <img class="world-intro-art" src="../a  图片/home-story/campfire-transition.jpg" width="1935" height="1080" decoding="async" alt="" />
         </div>
 
+        <img class="world-room-lit" src="../a  图片/home-story/revision-2026/room-lit.webp" alt="" aria-hidden="true" decoding="async" />
+        <button class="world-hotspot world-hotspot--campfire" type="button" data-world-action="campfire" aria-label="Reveal the people around the campfire" aria-pressed="false"></button>
+        <button class="world-hotspot world-hotspot--lighthouse" type="button" data-world-action="lighthouse" aria-label="Light the lighthouse" aria-pressed="false"></button>
+        <button class="world-hotspot world-hotspot--room" type="button" data-world-action="room" aria-label="Light the research room" aria-pressed="false"></button>
         <div class="story-vignette"></div>
-        <img class="story-world-frame" src="../a  图片/home-story/world-frame.webp" width="2752" height="1536" decoding="async" alt="" aria-hidden="true" />
+
       </div>
 
+      <div class="home-sequence" aria-label="The Homepage story continues through the team’s original illustrated scenes">
+        <section class="home-chapter home-chapter--sanitation" data-chapter data-weight="2.6" aria-label="Global sanitation access challenge"><img class="chapter-background" src="../a  图片/home-story/final-scene/background.jpg" alt="" /><img class="chapter-continent" src="../a  图片/home-story/final-scene/continent.webp" alt="" /><img class="chapter-message" src="../a  图片/home-story/revision-2026/map-badge.webp" alt="Health is a fundamental right. Access should not be a privilege — inspired by the WHO Constitution." /></section>
+        <section class="home-chapter home-chapter--procession" data-chapter data-weight="3.4" aria-label="People of every generation travel from right to left">
+          <img class="chapter-procession-top" src="../a  图片/home-story/sequence/05-procession.webp" decoding="async" alt="" />
+          <img class="chapter-procession-people" src="../a  图片/home-story/revision-2026/procession-people.webp" decoding="async" alt="A procession of people of all ages, with strollers, wheelchairs and companions" />
+          <img class="chapter-procession-mascot" src="../a  图片/home-story/procession-scene/mascot.png" decoding="async" alt="" />
+        </section>
+        <section class="home-chapter home-chapter--door" data-chapter data-weight="3.6" aria-label="The mascot walks to the moonlit laboratory and opens its door">
+          <div class="detector-canvas">
+            <div class="detector-entry-world" aria-hidden="true">
+              <img class="detector-door-frame detector-door-closed" src="../a  图片/home-story/detector-entrance/door-closed.webp" decoding="async" alt="" />
+              <img class="detector-door-frame detector-door-open" src="../a  图片/home-story/detector-entrance/door-open.webp" decoding="async" alt="" />
+              <img class="detector-character detector-character-walking" src="../a  图片/home-story/detector-entrance/character-walking.png" decoding="async" alt="" />
+              <img class="detector-character detector-character-standing" src="../a  图片/home-story/detector-entrance/character-standing.png" decoding="async" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="home-chapter home-chapter--process" data-chapter data-weight="2" aria-label="The rapid-testing process unfolds step by step"><img src="../a  图片/home-story/sequence/07-process.webp" decoding="async" alt="" /></section>
+        <section class="home-chapter home-chapter--workflow" data-chapter data-weight="3.2" aria-label="The instrument completes a rapid testing workflow">
+          <div class="workflow-canvas" aria-hidden="true">
+            <img class="workflow-background" src="../a  图片/home-story/detector-scene/instrument.jpg" alt="" />
+            <span class="workflow-timer"><img src="../a  图片/home-story/detector-scene/timer.png" alt="" /></span>
+            <span class="workflow-pathogen workflow-pathogen--one"><img src="../a  图片/home-story/detector-scene/pathogen-1.png" alt="" /></span>
+            <span class="workflow-pathogen workflow-pathogen--two"><img src="../a  图片/home-story/detector-scene/pathogen-2.png" alt="" /></span>
+            <span class="workflow-pathogen workflow-pathogen--three"><img src="../a  图片/home-story/detector-scene/pathogen-3.png" alt="" /></span>
+            <span class="workflow-pathogen workflow-pathogen--four"><img src="../a  图片/home-story/detector-scene/pathogen-4.png" alt="" /></span>
+            <span class="workflow-pathogen workflow-pathogen--five"><img src="../a  图片/home-story/detector-scene/pathogen-5.png" alt="" /></span>
+          </div>
+        </section>
+        <section class="home-chapter home-chapter--cards" data-chapter data-weight="2.8" aria-label="Applications in hospital, care home, kindergarten and home"><div class="home-cards" role="group" aria-label="Select a setting to reveal its benefit" aria-describedby="home-card-hint"><button class="home-flip-card" type="button" aria-pressed="false" data-card-label="Hospital" aria-label="Hospital: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button><button class="home-flip-card" type="button" aria-pressed="false" data-card-label="Care Home" aria-label="Care Home: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button><button class="home-flip-card" type="button" aria-pressed="false" data-card-label="Kindergarten" aria-label="Kindergarten: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button><button class="home-flip-card" type="button" aria-pressed="false" data-card-label="Home" aria-label="Home: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button></div><p id="home-card-hint" class="home-card-hint">Click a card to flip · Click again to return</p></section>
+        <section class="home-chapter home-chapter--reach" data-chapter data-weight="4" aria-label="Bringing reliable diagnostic testing closer to where it is needed">
+          <img class="legacy-backdrop" src="../a  图片/home-story/legacy-scene/background.webp" alt="" />
+          <div class="legacy-canvas">
+            <img class="legacy-background" src="../a  图片/home-story/legacy-scene/background.webp" alt="" />
+            <div class="legacy-layer legacy-device-layer"><img class="legacy-layer-art legacy-device-art" src="../a  图片/home-story/legacy-scene/device.png" alt="" /></div>
+            <div class="legacy-layer legacy-effect-layer"><img class="legacy-layer-art legacy-effect-art" src="../a  图片/home-story/legacy-scene/effect.png" alt="" /></div>
+            <div class="legacy-layer legacy-ensemble legacy-people"><img class="legacy-layer-art" src="../a  图片/home-story/legacy-scene/people.png" alt="" /></div>
+            <div class="legacy-layer legacy-ensemble legacy-stones"><img class="legacy-layer-art" src="../a  图片/home-story/legacy-scene/stones.png" alt="" /></div>
+            <img class="reach-message" src="../a  图片/home-story/revision-2026/finale-text.webp" alt="Bringing reliable diagnostic testing closer to where it is needed." />
+          </div>
+        </section>
+      </div>
+      </div>
+      <div class="world-frame-overlay" aria-hidden="true">
+        <img class="story-world-frame" src="../a  图片/home-story/world-frame.webp" width="2752" height="1536" decoding="async" alt="" aria-hidden="true" />
+        <div class="world-clock">
+          <img class="world-frame-clock" src="../a  图片/home-story/revision-2026/frame-clock.webp" alt="" />
+          <span class="world-clock-hand world-clock-hand--minute"></span>
+          <span class="world-clock-hand world-clock-hand--hour"></span>
+        </div>
+      </div>
       <div class="instrument-scene is-visible" role="img" aria-label="The camera moves from the ByeGerm cover through a magnifying glass, into an iris and toward a virus">
         <div class="instrument-canvas">
           <div class="cover-keyframes" aria-hidden="true">
@@ -134,28 +190,6 @@
         <output>0%</output>
       </div>
 
-      <div class="home-sequence" aria-label="The Homepage story continues through the team’s original illustrated scenes">
-        <section class="home-chapter home-chapter--world" data-chapter aria-label="Respiratory pathogens throughout history"><img src="../a  图片/home-story/sequence/01-history.webp" decoding="async" alt="" /></section>
-        <section class="home-chapter home-chapter--lighthouse" data-chapter aria-label="A lighthouse marks the history of molecular diagnostics"><img src="../a  图片/home-story/sequence/02-lighthouse.webp" decoding="async" alt="" /></section>
-        <section class="home-chapter home-chapter--care" data-chapter aria-label="Care facilities face rapid-testing gaps"><img src="../a  图片/home-story/sequence/03-care.webp" decoding="async" alt="" /></section>
-        <section class="home-chapter home-chapter--sanitation" data-chapter aria-label="Global sanitation access challenge"><img class="chapter-background" src="../a  图片/home-story/final-scene/background.jpg" alt="" /><img class="chapter-continent" src="../a  图片/home-story/final-scene/continent.webp" alt="" /><img class="chapter-message" src="../a  图片/home-story/final-scene/message.webp" alt="" /></section>
-        <section class="home-chapter home-chapter--procession" data-chapter aria-label="Pathogens affect people of every generation"><img class="chapter-procession-top" src="../a  图片/home-story/sequence/05-procession.webp" decoding="async" alt="" /><img class="chapter-procession-people" src="../a  图片/home-story/sequence/05-procession.webp" decoding="async" alt="" /><img class="chapter-procession-mascot" src="../a  图片/home-story/procession-scene/mascot.png" decoding="async" alt="" /></section>
-        <section class="home-chapter home-chapter--process" data-chapter aria-label="The rapid-testing process unfolds step by step"><img src="../a  图片/home-story/sequence/07-process.webp" decoding="async" alt="" /></section>
-        <section class="home-chapter home-chapter--workflow" data-chapter aria-label="The instrument completes a rapid testing workflow">
-          <div class="workflow-canvas" aria-hidden="true">
-            <img class="workflow-background" src="../a  图片/home-story/detector-scene/instrument.jpg" alt="" />
-            <span class="workflow-timer"><img src="../a  图片/home-story/detector-scene/timer.png" alt="" /></span>
-            <span class="workflow-pathogen workflow-pathogen--one"><img src="../a  图片/home-story/detector-scene/pathogen-1.png" alt="" /></span>
-            <span class="workflow-pathogen workflow-pathogen--two"><img src="../a  图片/home-story/detector-scene/pathogen-2.png" alt="" /></span>
-            <span class="workflow-pathogen workflow-pathogen--three"><img src="../a  图片/home-story/detector-scene/pathogen-3.png" alt="" /></span>
-            <span class="workflow-pathogen workflow-pathogen--four"><img src="../a  图片/home-story/detector-scene/pathogen-4.png" alt="" /></span>
-            <span class="workflow-pathogen workflow-pathogen--five"><img src="../a  图片/home-story/detector-scene/pathogen-5.png" alt="" /></span>
-          </div>
-        </section>
-        <section class="home-chapter home-chapter--family" data-chapter aria-label="Bring care closer and make every diagnosis count"><img src="../a  图片/home-story/sequence/09-message.jpg" alt="" /></section>
-        <section class="home-chapter home-chapter--cards" data-chapter aria-label="Applications in hospital, care home, kindergarten and home"><div class="home-cards" role="group" aria-label="Select a setting to reveal its benefit"><button class="home-flip-card" type="button" aria-pressed="false" aria-label="Hospital: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button><button class="home-flip-card" type="button" aria-pressed="false" aria-label="Care Home: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button><button class="home-flip-card" type="button" aria-pressed="false" aria-label="Kindergarten: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button><button class="home-flip-card" type="button" aria-pressed="false" aria-label="Home: show application"><span class="home-flip-card__inner"><span class="home-flip-card__face home-flip-card__front"></span><span class="home-flip-card__face home-flip-card__back"></span></span></button></div></section>
-        <section class="home-chapter home-chapter--reach" data-chapter aria-label="Reliable diagnostic testing reaches people wherever it is needed"><img class="chapter-background" src="../a  图片/home-story/legacy-scene/background.webp" alt="" /><img class="chapter-device" src="../a  图片/home-story/legacy-scene/device.png" alt="" /><div class="reach-orbit reach-orbit--one"><img src="../a  图片/home-story/family-scene/background.jpg" alt="" /></div><div class="reach-orbit reach-orbit--two"><img src="../a  图片/home-story/care-scene/background.webp" alt="" /></div><div class="reach-orbit reach-orbit--three"><img src="../a  图片/home-story/world.jpg" alt="" /></div><div class="reach-orbit reach-orbit--four"><img src="../a  图片/home-story/detector-scene/instrument.jpg" alt="" /></div><img class="reach-final" src="../a  图片/home-story/sequence/11-reach-clean.webp" decoding="async" alt="" /></section>
-      </div>
     </div>
   </section>
 </main>
