@@ -27,12 +27,9 @@ if (story) {
   const workflowPathogens = [...workflowChapter.querySelectorAll('.workflow-pathogen')]
   const cardsChapter = story.querySelector('.home-chapter--cards')
   const cards = [...cardsChapter.querySelectorAll('.home-flip-card')]
-  const cardStates = new Map(cards.map(card => [card, { handled: false, timer: null }]))
-  const cardThresholds = [.38, .52, .66, .80]
+  const cardStates = new Map(cards.map(card => [card, { handled: false, autoCompleted: false, timer: null }]))
   let cardsProgress = 0
   let cardsOnscreen = false
-  let automaticCard = null
-  let cardQueueTimer = null
   const coverUnits = 4.55
   const chapterWeights = chapters.map(chapter => Number(chapter.dataset.weight))
   const coverFrameMotion = [
@@ -131,7 +128,7 @@ if (story) {
     if (chapter === cardsChapter) {
       cardsProgress = localProgress
       cardsOnscreen = isOnscreen && entered > .55 && chapterReady.has(chapter)
-      queueAutomaticCard()
+      updateAutomaticCards()
     }
 
     if (chapter.classList.contains('home-chapter--door')) {
@@ -472,13 +469,6 @@ if (story) {
     window.clearTimeout(state.timer)
     state.timer = null
     card.classList.remove('is-turning')
-    if (automaticCard === card) {
-      automaticCard = null
-      cardQueueTimer = window.setTimeout(() => {
-        cardQueueTimer = null
-        queueAutomaticCard()
-      }, reducedMotion.matches ? 0 : 110)
-    }
   }
 
   function turnCard(card, flipped, source) {
@@ -494,17 +484,27 @@ if (story) {
     return true
   }
 
-  function queueAutomaticCard() {
-    if (!cardsOnscreen || automaticCard || cardQueueTimer !== null) return
-    const card = cards.find((candidate, index) => cardsProgress >= cardThresholds[index] && !cardStates.get(candidate).handled)
-    if (!card) return
-    cardStates.get(card).handled = true
-    if (card.classList.contains('is-flipped')) {
-      queueAutomaticCard()
-      return
-    }
-    automaticCard = card
-    turnCard(card, true, 'automatic')
+  function updateAutomaticCards() {
+    if (!cardsOnscreen) return
+    const progress = reducedMotion.matches ? Number(cardsProgress >= .48) : smootherstep(range(cardsProgress, .32, .64))
+    cards.forEach(card => {
+      const state = cardStates.get(card)
+      if (state.handled || state.autoCompleted) return
+      // All untouched cards follow the same scroll angle. Completed or manually
+      // chosen cards retain their state when the reader revisits the chapter.
+      const flipped = progress >= .5
+      card.classList.add('is-scroll-turning')
+      card.style.setProperty('--scroll-flip-angle', `${(progress * 180).toFixed(3)}deg`)
+      card.classList.toggle('is-flipped', flipped)
+      card.dataset.flipSource = 'automatic'
+      card.setAttribute('aria-pressed', String(flipped))
+      card.setAttribute('aria-label', card.dataset.cardLabel + (flipped ? ': show front' : ': show application'))
+      if (progress === 1) {
+        state.autoCompleted = true
+        card.classList.remove('is-scroll-turning')
+        card.style.removeProperty('--scroll-flip-angle')
+      }
+    })
   }
 
   cards.forEach(card => {
@@ -513,6 +513,8 @@ if (story) {
       // A user's choice, including turning a card back, takes precedence over
       // subsequent automatic thresholds and reverse scrolling.
       cardStates.get(card).handled = true
+      card.classList.remove('is-scroll-turning')
+      card.style.removeProperty('--scroll-flip-angle')
       turnCard(card, !card.classList.contains('is-flipped'), 'manual')
     })
     card.querySelector('.home-flip-card__inner').addEventListener('transitionend', event => {
@@ -559,9 +561,6 @@ if (story) {
   window.addEventListener('pageshow', requestUpdate)
   window.addEventListener('pagehide', () => {
     cardsOnscreen = false
-    window.clearTimeout(cardQueueTimer)
-    cardQueueTimer = null
-    automaticCard = null
     cards.forEach(card => {
       window.clearTimeout(cardStates.get(card).timer)
       cardStates.get(card).timer = null

@@ -133,6 +133,7 @@
 .home-flip-card:focus-visible { outline: 4px solid #f8df9a; outline-offset: 3px; }
 .home-flip-card__inner { position: relative; display: block; width: 100%; height: 100%; border-radius: inherit; transform-style: preserve-3d; transform-origin: center; transition: transform .82s cubic-bezier(.45,0,.2,1); }
 .home-flip-card.is-flipped .home-flip-card__inner { transform: rotateY(180deg); }
+.home-flip-card.is-scroll-turning .home-flip-card__inner { transform: rotateY(var(--scroll-flip-angle,0deg)); transition: none; }
 .home-flip-card__face { position: absolute; inset: 0; display: block; overflow: hidden; border-radius: inherit; -webkit-backface-visibility: hidden; backface-visibility: hidden; background-repeat: no-repeat; box-shadow: 0 .18rem .45rem rgba(58, 30, 22, .16); }
 .home-flip-card__front { background-image: url('../a  图片/home-story/cards/cards-front.webp'); background-size: var(--front-size) 119.70509%; background-position: var(--front-x) 52.04082%; transform: rotateY(0deg) translateZ(.1px); }
 .home-flip-card__back { background-image: url('../a  图片/home-story/cards/cards-back.jpg'); background-size: var(--back-size) 120.18779%; background-position: var(--back-x) 50.69767%; transform: rotateY(180deg) translateZ(.1px); }
@@ -140,7 +141,18 @@
 .home-flip-card:nth-child(2) { --card-left: 26.875%; --card-width: 23.1875%; --front-size: 431.26685%; --front-x: 34.98779%; --back-size: 432.01507%; --back-x: 34.94044%; }
 .home-flip-card:nth-child(3) { --card-left: 50.28125%; --card-width: 23.1875%; --front-size: 431.26685%; --front-x: 65.45972%; --back-size: 431.20301%; --back-x: 65.437%; }
 .home-flip-card:nth-child(4) { --card-left: 73.71875%; --card-width: 23.21875%; --front-size: 430.68641%; --front-x: 96.0114%; --back-size: 430.393996%; --back-x: 95.9682%; }
-.home-card-hint { position: absolute; z-index: 2; bottom: 14px; left: 0; width: 100%; margin: 0; padding: 0 12px; text-align: center; color: #35251d; text-shadow: 0 1px 2px #f9ead9; pointer-events: none; }
+.home-card-hint { position: absolute; z-index: 2; bottom: 12px; left: 24px; width: min(350px,calc(50% - 244px)); margin: 0; font-size: .8rem; text-align: left; color: #35251d; text-shadow: 0 1px 2px #f9ead9; pointer-events: none; }
+.story-home .home-story-progress {
+  left: 50%; right: auto; transform: translateX(-50%);
+  bottom: max(12px,env(safe-area-inset-bottom)); width: min(440px,calc(100vw - 180px));
+  grid-template-columns: auto minmax(30px,1fr) 4ch; gap: 10px; padding: 9px 14px;
+  border: 1px solid rgba(224,193,166,.8); border-radius: 12px;
+  background: rgba(64,40,27,.9); color: #fff3df; font-size: .7rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+}
+.story-home .home-story-progress i { height: 6px; border-radius: 4px; background: #8c7059; overflow: hidden; }
+.story-home .home-story-progress b { background: #e0c1a6; }
+.story-home .home-story-progress span { display: inline; }
 .home-chapter--reach { background: #182418; }
 .home-chapter--reach .reach-message { position: absolute; z-index: 8; top: 3%; left: 23%; width: 54%; height: auto; opacity: var(--reach-message-opacity, 0); transform: translateY(var(--reach-message-rise, 28px)); }
 .home-chapter--reach.is-device-live .legacy-device-art,
@@ -149,6 +161,8 @@
 @media (max-width: 720px) {
   .home-chapter--sanitation .chapter-message { width: min(90vw, 1080px); top: 20%; max-height: 48%; }
   .home-chapter--procession .chapter-procession-mascot { width: min(31vw, 190px); height: min(34vh, 300px); }
+  .home-card-hint { left: 0; bottom: 52px; width: 100%; padding: 0 6px; text-align: center; }
+  .story-home .home-story-progress { gap: 6px; padding-inline: 9px; }
 }
 
 @media (max-width: 720px) and (orientation: portrait) {
