@@ -104,7 +104,7 @@ requestAnimationFrame(() => revealHash('instant'))
 const jumps = [...document.querySelectorAll('.cl-jumps a')]
 const parts = jumps.map(link => document.querySelector(link.getAttribute('href')))
 function trackSection() {
-  const threshold = document.querySelector('.cl-jumps').getBoundingClientRect().bottom + 28
+  const threshold = (parseFloat(getComputedStyle(parts[0]).scrollMarginTop) || 100) + 20
   const current = parts.reduce((active, part) => part.getBoundingClientRect().top <= threshold ? part : active, null)
   jumps.forEach(link => {
     if (current && link.hash === `#${current.id}`) link.setAttribute('aria-current', 'location')

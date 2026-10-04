@@ -17,6 +17,7 @@
 ## 页面结果
 
 - 保留 Overview 与四部分九项活动：US–China、CCiC/APIc、BioAI/干实验、ZJUT、两本手册、SBti、游戏、融合徒步。
+- 四项章节导航现位于桌面正文左侧并随滚动固定；900px 及以下保留顶部横向导航，正文占满宽度。
 - 在页面专用 CSS 中明确封面图片高度，覆盖 HTML `height="1600"` 带来的固定高度。1280×720 下封面约 601px，CTA 底部约 621px，标题与按钮都在首屏；390×844 下封面约 619px。
 - 保持既有米棕背景及公共字号，完善卡片间距、长标题换行、正文标签和 ZJUT 分栏照片墙。保留 whiteboard co-creation 的引用强调。
 - 四组图集分开：CCiC 4 张、APIc 2 张、干实验 5 张、徒步 2 张；ZJUT 照片墙 3 张。没有自动轮播。图集支持按钮、方向键、Home/End 与横向滚动，首尾按钮按实际位置禁用；照片编号与末张状态一致。
@@ -67,7 +68,7 @@
 | 桌面 1280×720 | 首屏标题/CTA 可见，四图集首尾与编号、分栏照片墙、横向知识链及生产弹窗通过 |
 | 手机 390×844 | 正文无横向溢出，四图集按钮与键盘翻页、纵向知识链、社区展开通过 |
 | 窄屏 320×740 | clientWidth 与 scrollWidth 均 305px（其余为浏览器滚动条）；封面、正文卡片、章节标题无越界 |
-| 首屏 CTA 与四部分锚点 | URL/focus/目录追踪正常；章节停靠在约 160px，位于目录底部 150px 下方 |
+| 首屏 CTA 与四部分锚点 | URL/focus/目录追踪正常；左侧导航更新后，桌面章节停靠约 100px，手机约 160px |
 | 直接链接 | #sbti 与生产 #game 可展开正文；#game 顶部约 160px；浏览器返回 #knowledge 正常 |
 | 三项社区活动 | SBti 点击展开、游戏键盘展开、徒步键盘收起/再展开均通过 |
 | 照片弹窗 | 16/16 图片、alt、图注对应；Esc 关闭及焦点返回通过；生产版另验证关闭按钮 |
@@ -79,13 +80,25 @@
 
 构建依赖按现有锁文件准备在本 worktree 的忽略目录 `node_modules/`；准备工具与缓存位于 `tmp/collaboration-qa/`。未借用或写入主仓库的依赖目录，没有更改 package.json/package-lock.json。
 
-## 截图
+## 首版截图（266ac11）
 
 - [桌面首屏](desktop-1280.jpg)
 - [手机 390px 首屏](mobile-390.jpg)
 - [ZJUT 分栏与照片墙](desktop-zjut.jpg)
 - [桌面知识链](desktop-knowledge.jpg)
 - [手机社区展开](mobile-community.jpg)
+
+## 左侧导航更新
+
+用户截图后续要求：将四项页内导航移到左侧。本次在 `266ac11` 基础上修改三个 Collaboration 页面文件；正文、原图与公共区块保留。
+
+- 桌面大于 900px：左侧 200–240px 导航栏与右侧正文构成两列，导航固定在视口顶部 84px；1024px 时 ZJUT 与手册卡片使用单列。
+- 900px 及以下：导航保留顶部横向布局；正文全宽。
+- 章节追踪按正文的 scroll-margin 计算，适配左侧导航；锚点、URL 与键盘焦点仍有效。
+- 1280px 下四项导航的 Enter 跳转与高亮全部通过，导航滚动位置始终为 84px；1024px 两栏无重叠；390px 页面无横向溢出，直接链接、点击与浏览器返回通过。
+- JavaScript 语法、生产构建及 Git 空白检查通过。公共 Navbar/Loading/Footer 与部署配置未修改。
+
+最新截图：[左侧导航桌面版](left-navigation-desktop.jpg)、[手机导航](left-navigation-mobile.jpg)。验收状态：[left-navigation-checks.json](left-navigation-checks.json)。此前的 browser-checks.json 记录首版交互验收；最新导航位置以本节及新记录为准。
 
 ## 待补事项与公共接入交给 00
 
@@ -103,6 +116,6 @@
 
 页面文件：`Eagagement/collaboration.html`、`样式/collaboration.css`、`样式/collaboration.js`。
 素材目录：`assets/collaboration/2026-10-04/` 中 16 张原图和 `image-source-map.csv`。
-专用审查目录：本 README、5 张截图、`browser-checks.json`、`production-assets.json`。
+专用审查目录：本 README、7 张截图、`browser-checks.json`、`production-assets.json`、`left-navigation-checks.json`。
 
 16 张图片及文件名见上表。全部交付文件位于 R04B 允许范围。截图与审查记录没有作为页面运行时资源引入；生产构建只引用实际展示的封面、16 张图片和页面依赖。

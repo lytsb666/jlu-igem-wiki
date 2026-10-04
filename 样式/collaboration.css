@@ -6,12 +6,13 @@ html:has(body.collaboration-page) { scroll-behavior: smooth; }
 .cl-cover .image-page-hero__label h1 { line-height: 1.08 !important; }
 .cl-cover .image-page-hero__label p { margin: 12px 0 20px; }
 .cl-cover .cl-button { background: #e0c1a6; color: #6f4e37; text-shadow: none; }
-.cl-main { width: var(--wiki-main-width); margin: 0 auto; padding: 32px 0 80px; }
-.cl-main :is(section, article, h2, h3) { scroll-margin-top: 160px; }
+.cl-main { --cl-scroll-offset: 100px; display: grid; grid-template-columns: clamp(200px,19vw,240px) minmax(0,1fr); gap: clamp(20px,2.5vw,36px); align-items: start; width: var(--wiki-main-width); margin: 0 auto; padding: 32px 0 80px; }
+.cl-content { min-width: 0; }
+.cl-main :is(section, article, h2, h3) { scroll-margin-top: var(--cl-scroll-offset); }
 .cl-cover h1 { scroll-margin-top: 110px; }
 .cl-cover { scroll-margin-top: 84px; }
-.cl-jumps { position: sticky; top: 68px; z-index: 25; display: flex; gap: 6px; padding: 10px; margin-bottom: 32px; border: 1px solid rgba(111,78,55,.28); border-radius: 16px; background: #f8edde; box-shadow: 0 8px 24px rgba(111,78,55,.08); overflow-x: auto; }
-.cl-jumps a { flex: 1 0 auto; padding: 10px 14px; border-radius: 10px; color: #6f4e37; text-decoration: none; white-space: nowrap; text-align: center; }
+.cl-jumps { position: sticky; top: 84px; z-index: 25; display: flex; flex-direction: column; gap: 6px; max-height: calc(100svh - 112px); padding: 10px; margin: 0; border: 1px solid rgba(111,78,55,.28); border-radius: 16px; background: #f8edde; box-shadow: 0 8px 24px rgba(111,78,55,.08); overflow-y: auto; }
+.cl-jumps a { flex: 0 0 auto; padding: 10px 14px; border-radius: 10px; color: #6f4e37; text-decoration: none; white-space: normal; text-align: left; }
 .cl-jumps a:hover, .cl-jumps a[aria-current] { color: #fffaf5; background: #6f4e37; }
 .cl-intro { max-width: 1000px; padding: clamp(24px,4vw,52px); margin: 0 auto 40px; border-left: 4px solid #9a6742; background: rgba(255,250,245,.66); border-radius: 0 18px 18px 0; }
 .cl-intro h2 { margin-bottom: 20px; }
@@ -74,8 +75,13 @@ html:has(body.collaboration-page) { scroll-behavior: smooth; }
 .cl-dialog p { margin: 0; }
 body.collaboration-page:has(.cl-dialog[open]) { overflow: hidden; }
 .collaboration-page :is(a,button,summary,[tabindex]):focus-visible { outline: 3px solid #9a6742; outline-offset: 4px; }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .cl-zjut, .cl-drafts { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 900px) {
+  .cl-main { --cl-scroll-offset: 160px; display: block; }
+  .cl-jumps { top: 68px; flex-direction: row; max-height: none; margin-bottom: 32px; overflow-x: auto; }
+  .cl-jumps a { flex: 1 0 auto; white-space: nowrap; }
   .cl-knowledge { grid-template-columns: minmax(0,1fr); }
   .cl-knowledge { padding-top: 0; }
   .cl-knowledge { padding-left: 38px; }
@@ -102,6 +108,7 @@ body.collaboration-page:has(.cl-dialog[open]) { overflow: hidden; }
   .cl-knowledge li, .cl-chain-progress, .cl-knowledge-rail circle { transition: none; }
 }
 @media print {
+  .cl-main { display: block; }
   .cl-jumps, .cl-gallery-controls, .cl-dialog, .cl-bottom-link { display: none; }
   .cl-gallery-track { flex-wrap: wrap; overflow: visible; }
   .cl-gallery-track figure { flex-basis: 46%; }
