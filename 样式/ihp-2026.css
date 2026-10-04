@@ -290,11 +290,6 @@ body.ihp-page { background-color: var(--ihp-cream); background-image: radial-gra
 .practice-loop p { margin-top: 18px; }
 .practice-loop > i { position: relative; z-index: 2; display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: var(--ihp-paper); }
 
-.stakeholder-part-nav { position: sticky; top: 72px; z-index: 15; display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin: 12px 0 22px; padding: 7px; border: 1px solid rgba(111, 78, 55, .16); border-radius: 17px; background: rgba(255, 255, 255, .88); box-shadow: 0 10px 30px rgba(0, 0, 0, .1); backdrop-filter: blur(14px); }
-.stakeholder-part-nav a { display: grid; gap: 5px; min-height: 64px; align-content: center; padding: 10px 14px; border-radius: 11px; color: var(--ihp-deep); font: 700 .82rem/1.25 Arial, sans-serif; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
-.stakeholder-part-nav a:hover, .stakeholder-part-nav a:focus-visible { background: var(--ihp-deep); color: #FFFFFF; transform: translateY(-2px); }
-.stakeholder-part-nav span { color: var(--ihp-coral); font-size: .61rem; letter-spacing: .14em; text-transform: uppercase; }
-.stakeholder-part-nav a:hover span, .stakeholder-part-nav a:focus-visible span { color: #E0C1A6; }
 .stakeholder-parts { display: grid; }
 .stakeholder-part { padding: 82px 0 90px; border-top: 1px solid rgba(111, 78, 55, .18); scroll-margin-top: 145px; }
 .stakeholder-part:first-child { border-top: 0; }
@@ -528,8 +523,6 @@ body.ihp-page { background-color: var(--ihp-cream); background-image: radial-gra
   .stakeholder-chapter .practice-loop::before, .practice-loop > i { display: none; }
   .practice-loop a, .practice-loop a:nth-of-type(2), .practice-loop a:nth-of-type(3) { min-height: auto; transform: none; }
   .practice-loop a:hover, .practice-loop a:focus-visible, .practice-loop a:nth-of-type(2):hover, .practice-loop a:nth-of-type(2):focus-visible, .practice-loop a:nth-of-type(3):hover, .practice-loop a:nth-of-type(3):focus-visible { transform: translateY(-3px); }
-  .stakeholder-part-nav { position: relative; top: 0; grid-auto-flow: column; grid-auto-columns: minmax(175px, 1fr); grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; }
-  .stakeholder-part-nav a { scroll-snap-align: start; }
   .stakeholder-part { padding: 62px 0 70px; scroll-margin-top: 88px; }
   .stakeholder-part__heading { grid-template-columns: 1fr; gap: 14px; }
   .stakeholder-part__heading > span { width: fit-content; }
