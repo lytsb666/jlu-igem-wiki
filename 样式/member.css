@@ -4,9 +4,11 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   background: radial-gradient(circle at 10% 12%, rgba(194,123,69,.1), transparent 30rem), #fffaf5;
 }
 .team-page { padding: 104px 0 80px; color: #6f4e37; }
-.team-hero, .team-jumps, .team-section, .team-directory {
+.team-hero, .team-layout {
   width: var(--wiki-main-width); margin-inline: auto; min-width: 0;
 }
+.team-layout { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 32px; align-items: start; margin-top: 32px; }
+.team-content, .team-section, .team-directory { min-width: 0; width: 100%; }
 .team-hero {
   padding: clamp(32px, 5vw, 64px); border: 1px solid rgba(111,78,55,.22);
   border-radius: 24px; background: linear-gradient(125deg,#ead3be,#dfbea1 70%,#c99164);
@@ -31,10 +33,10 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
 }
 .team-page .team-hero__note { margin: 20px 0 0; }
 .team-jumps {
-  position: sticky; top: 72px; z-index: 30;
-  display: flex; flex-wrap: nowrap; overflow-x: auto;
-  overscroll-behavior-inline: contain; scrollbar-width: thin;
-  gap: 8px; margin-top: 24px; padding: 10px; border: 1px solid rgba(111,78,55,.2);
+  position: sticky; top: 88px; z-index: 30; align-self: start;
+  display: flex; flex-direction: column; overflow-y: auto; overflow-x: hidden;
+  max-height: calc(100dvh - 108px); overscroll-behavior: contain; scrollbar-width: thin;
+  gap: 8px; padding: 10px; border: 1px solid rgba(111,78,55,.2);
   border-radius: 14px; background: rgba(255,250,245,.97); box-shadow: 0 8px 24px rgba(111,78,55,.06);
 }
 .team-jumps a, .team-filter {
@@ -45,7 +47,8 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   background: transparent; cursor: pointer;
 }
 .team-jumps a:hover, .team-filter:hover { background: rgba(194,123,69,.12); }
-.team-jumps a { flex: 0 0 auto; white-space: nowrap; }
+.team-jumps a { flex: 0 0 auto; white-space: normal; overflow-wrap: break-word; }
+.team-jumps a[aria-current="location"] { color: #fffaf5; background: #6f4e37; }
 .team-section, .team-directory { padding-top: clamp(64px,7vw,104px); }
 .team-section__heading {
   display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.65fr);
@@ -55,9 +58,9 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   margin: 0; color: #6f4e37; font-size: clamp(2.6rem,5vw,5rem) !important;
   font-weight: 500 !important; line-height: .96 !important; letter-spacing: -.045em !important;
   text-transform: uppercase; overflow-wrap: anywhere;
-  scroll-margin-top: 192px;
+  scroll-margin-top: 108px;
 }
-.team-directory { scroll-margin-top: 160px; }
+.team-directory { scroll-margin-top: 108px; }
 .team-page .team-section__heading > p {
   max-width: 40ch !important; margin: 0; color: rgba(111,78,55,.78);
   font-size: 1rem !important; line-height: 1.65 !important; text-align: left !important;
@@ -67,6 +70,7 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   margin-top: 34px; align-items: start;
 }
 .leader-grid { grid-template-columns: repeat(2,minmax(0,1fr)); max-width: 980px; margin-inline: auto; }
+.leader-grid:has(> :only-child) { grid-template-columns: minmax(0,460px); justify-content: center; }
 .member-card { min-width: 0; perspective: 1600px; }
 .member-card__rotor {
   display: grid; transform-style: preserve-3d; transition: transform 420ms cubic-bezier(.2,.7,.2,1);
@@ -80,8 +84,12 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
 }
 .member-card__front { display: block; width: 100%; overflow: hidden; cursor: pointer; }
 .member-card__front:hover { border-color: #a26137; }
+.faculty-card .member-card__front { cursor: default; }
+.faculty-card .member-card__body { min-height: 114px; }
 .member-photo { display: block; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #dfbea1; }
 .member-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.faculty-card[data-member-id="pi-song-xiuling"] .member-photo img { transform-origin: 50% 34%; transform: scale(2); }
+.faculty-card[data-member-id="secondary-pi-zhao-chao"] .member-photo img { transform-origin: 50% 18%; transform: scale(1.7); }
 .member-photo--placeholder {
   display: grid; place-items: center;
   background: radial-gradient(circle at 72% 18%,rgba(255,250,245,.5),transparent 22%),linear-gradient(155deg,#efd9c5,#d4aa86 58%,#b9784c);
@@ -170,14 +178,15 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
 }
 @media (max-width: 600px) {
   .team-page { padding-top: 84px; }
-  .team-hero, .team-jumps, .team-section, .team-directory { width: calc(100% - 20px); }
+  .team-hero, .team-layout { width: calc(100% - 20px); }
+  .team-layout { grid-template-columns: 100px minmax(0,1fr); gap: 12px; }
   .team-hero { padding: 32px 24px; border-radius: 18px; }
   .team-page .team-hero h1 { font-size: clamp(3.45rem,19vw,5.2rem) !important; }
-  .team-jumps { gap: 4px; }
-  .team-jumps a { padding: 9px 10px; }
+  .team-jumps { top: 78px; gap: 4px; padding: 4px; border-radius: 10px; }
+  .team-jumps a { padding: 9px 5px; letter-spacing: .02em; text-transform: none; }
   .faculty-grid, .leader-grid, .member-grid, .advisor-grid { grid-template-columns: 1fr; gap: 26px; }
   .team-section, .team-directory { padding-top: 64px; }
-  .team-page .team-section__heading h2 { font-size: 2.55rem !important; scroll-margin-top: 232px; }
+  .team-page .team-section__heading h2 { font-size: 2.55rem !important; scroll-margin-top: 96px; }
   .team-filter { padding: 10px 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -187,5 +196,6 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   html:has(body.team-page-body) { scroll-behavior: auto; }
 }
 @media print {
-  .team-jumps { position: static; flex-wrap: wrap; overflow: visible; }
+  .team-layout { display: block; }
+  .team-jumps { position: static; flex-direction: row; flex-wrap: wrap; max-height: none; overflow: visible; }
 }

@@ -184,3 +184,14 @@ Remaining content gaps: the six faculty still lack verified English names, insti
 At the user's request, faculty display names now follow the same given-name/surname presentation as the student cards: Xiuling Song, Bo Pang, Jinhua Li, Juan Wang, Guofan Su and Chao Zhao. These are pinyin romanizations of the supplied Chinese names, not claims that preferred professional English spellings have been verified. Original Chinese names, source filenames, portraits, IDs and PI/Secondary PI roles remain unchanged. The verified-English-name gap remains in the source metadata; biographies and other missing faculty fields are not invented.
 
 The user clarified that abrupt navigation refers to Member's PI/Secondary PI/Team Leaders/Members/Advisors section links. Member-specific CSS now enables native smooth scrolling on this page's root scroll container. The existing anchor links, hashes, browser history, header clearance and Advisors filter restoration are retained. Reduced-motion preference uses immediate scrolling instead. No shared navigation or global stylesheet was changed.
+
+
+## 2026-10-04 user corrections
+
+- Liuyu Yang: Visual Design; Jingyi Kang remains Team Leader.
+- Zhiyuan Jin: display Wet Lab, without the group-specific Leader label.
+- Mo Jin: Hardware & Wiki, preserving the existing name and portrait.
+- Feiyue Wang and Luozhao Wang exchange display positions; other advisor order is retained.
+- Six faculty portraits are static cards; Xiuling Song and Chao Zhao use page-only framing parameters. Their `framingPhoto` files are byte-for-byte copies of the supplied original JPGs, retaining the upper background needed for consistent head/shoulder framing. Original desktop photos and the existing 43 WebP portraits are unchanged.
+- Latest user corrections supersede previous grouping decisions; source biographies, contribution records and historical import issues are retained.
+- Counts: 43 unique people = 6 faculty + 1 team leader + 27 directory members + 9 advisors.

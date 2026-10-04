@@ -3,9 +3,9 @@ export const teamMembers = [
   {
     "id": "liuyu-yang",
     "name": "Liuyu Yang",
-    "role": "Team Leader",
+    "role": "Visual Design",
     "groups": [
-      "Team Leaders"
+      "Visual Design"
     ],
     "quote": "",
     "introduction": "Hi! I’m Liuyu Yang. This is my second iGEM journey. I’m excited to keep exploring, growing, and creating with my teammates. See you at the Jamboree!",
@@ -69,6 +69,11 @@ export const teamMembers = [
         "date": "2026-10-03",
         "answer": "两张都对应原成员"
       }
+    },
+    "roleCorrection": {
+      "date": "2026-10-04",
+      "source": "10.4需求以及改动.docx / user instruction",
+      "note": "Latest user correction supersedes earlier retained source grouping; biography and contribution records are unchanged."
     }
   },
   {
@@ -354,7 +359,7 @@ export const teamMembers = [
   {
     "id": "zhiyuan-jin",
     "name": "Zhiyuan Jin",
-    "role": "Wet Lab Leader",
+    "role": "Wet Lab",
     "groups": [
       "Wet Lab"
     ],
@@ -426,6 +431,11 @@ export const teamMembers = [
         5540
       ],
       "originalSha256": "93ec4452046bdeca41b074d64e4792bbf245bb6418ccf39fce625301ca2aaf24"
+    },
+    "roleCorrection": {
+      "date": "2026-10-04",
+      "source": "10.4需求以及改动.docx / user instruction",
+      "note": "Latest user correction supersedes earlier retained source grouping; biography and contribution records are unchanged."
     }
   },
   {
@@ -559,9 +569,9 @@ export const teamMembers = [
   {
     "id": "mo-jin",
     "name": "Mo Jin",
-    "role": "Dry Lab",
+    "role": "Hardware & Wiki",
     "groups": [
-      "Dry Lab"
+      "Hardware & Wiki"
     ],
     "quote": "Every step counts.",
     "introduction": "Hi everyone. I am Jin Mo from the School of Public Health at Jilin University. This is my first time participating in iGEM. This competition has been a rewarding journey full of exploration and growth for me. iGEM provides a fantastic platform for me to communicate with iGEMers from different countries and universities. It is inspiring to discuss synthetic biology together with all these passionate minds. I would like to express my sincere gratitude to our instructors for their patient guidance, and to all my teammates for their continuous support, close cooperation and persistent efforts. I look forward to exchanging ideas, learning and growing together with everyone in the iGEM community. See you in Paris!",
@@ -632,6 +642,11 @@ export const teamMembers = [
       ],
       "originalSha256": "3fbd79afe003df9867e3ed9cb38847cd09684f3d39cd7279d067a019b8885af9",
       "groupReview": "Resolved by 00: original contribution role and groups retained."
+    },
+    "roleCorrection": {
+      "date": "2026-10-04",
+      "source": "10.4需求以及改动.docx / user instruction",
+      "note": "Latest user correction supersedes earlier retained source grouping; biography and contribution records are unchanged."
     }
   },
   {
@@ -1858,73 +1873,66 @@ export const teamMembers = [
     }
   },
   {
-    "id": "feiyue-wang",
-    "name": "Feiyue Wang",
+    "id": "luozhao-wang",
+    "name": "Luozhao Wang",
     "role": "Advisor",
     "groups": [
       "Advisors"
     ],
-    "quote": "Stay confident, stay curious, and keep moving forward—every step you take writes your own story.",
-    "introduction": "Hi everyone. I am Feiyue Wang from the School of Public Health at Jilin University, majoring in Occupational and Environmental Health. This year marks my first iGEM journey as an advisor. This role is both a valuable experience and a meaningful responsibility. I would like to express my sincere gratitude to our instructors for their guidance and to all teammates for their dedication and collaboration. I am glad to support our team in project design, data analysis, safety, and writing. I look forward to learning, growing, and making progress with the iGEM community. See you at the Jamboree!",
+    "quote": "Every time you fall is a chance to get back up.",
+    "introduction": "Hi everyone. I'm Wang Luozhao from the School of Public Health at Jilin University. I'm really happy to join iGEM as an advisor. I believe this will be a valuable learning experience, and I also hope to contribute to the team. Alone you go fast, but together you go far. I look forward to making progress with my teammates, and I also hope to learn and grow together with other teams in the iGEM community.",
     "generalTasks": [
       "1",
-      "2",
       "3",
-      "8",
-      "11",
-      "13"
+      "9",
+      "11"
     ],
     "contributionCategories": [
-      "Analysis",
-      "Conceptualization",
       "Background Research",
-      "Safety",
+      "Analysis",
+      "Data Curation",
       "Project Administration",
-      "Public Engagement"
+      "Scientific Support"
     ],
     "tasks": [
       {
-        "category": "Analysis",
-        "detail": "Guided the team in organizing and analyzing experimental data and model outputs, comparing candidate primer–crRNA combinations and optimized reaction parameters, and interpreting the performance of the RPA-CRISPR/Cas12a detection system."
-      },
-      {
-        "category": "Conceptualization",
-        "detail": "Contributed to the research design and technical roadmap, including the integration of DNABERT-6-based sequence screening, molecular docking/molecular dynamics simulation, enzyme kinetics modeling, and wet-lab validation into a spiral closed-loop optimization framework for portable multiplex respiratory pathogen detection."
-      },
-      {
         "category": "Background Research",
-        "detail": "Provided guidance on literature review and study rationale, covering respiratory pathogens, RPA, CRISPR/Cas12a, DNABERT, molecular simulation, biosafety guidelines, and point-of-care testing."
+        "detail": "Conduct literature reviews and background research to clarify the scientific context, identify existing approaches and their limitations, and help the team define the significance and objectives of the project.2. Data"
       },
       {
-        "category": "Safety",
-        "detail": "Advised on biosafety documentation, experimental standardization, and compliance with institutional and iGEM safety requirements, supporting safe and standardized implementation of experimental and testing procedures."
+        "category": "Analysis",
+        "detail": "Organize and analyze experimental and research data, identify meaningful trends and relationships, and provide evidence-based interpretations to support project development and decision-making."
+      },
+      {
+        "category": "Data Curation",
+        "detail": "Collect, organize, verify, and standardize relevant scientific data and literature. I also help ensure that the sources of key information are properly documented and that the data used by the team are reliable and traceable."
       },
       {
         "category": "Project Administration",
-        "detail": "Helped coordinate project planning, milestones, documentation, version control, evaluation forms, and application materials, and supported communication among team members; also reviewed and edited wiki, reports, and presentation materials."
+        "detail": "Assist with project planning, task coordination, documentation, and progress tracking. I help maintain communication among team members and ensure that research, experimental work, and project documentation progress according to the team's timeline."
       },
       {
-        "category": "Public Engagement",
-        "detail": "Guided project presentations and defense preparation, highlighting the potential of the platform for rapid on-site detection of respiratory pathogens and its public health significance."
+        "category": "Scientific Support",
+        "detail": "Provide feedback on experimental design, interpretation of results, and project direction when needed, and help the team identify potential scientific or organizational issues at an early stage."
       }
     ],
-    "photo": "../assets/team-member/portraits/feiyue-wang.webp",
+    "photo": "../assets/team-member/portraits/luozhao-wang.webp",
     "source": {
-      "file": "20260924_王飞跃.docx",
-      "rawName": "Feiyue Wang",
+      "file": "advisor王洛钊.docx",
+      "rawName": "Luozhao Wang",
       "rawRole": "Advisor"
     },
     "dataIssues": [],
     "photoSource": {
-      "file": "ad/王飞跃ad.jpg",
+      "file": "ad/王洛钊ad.jpg",
       "status": "filename-match",
       "cropPixels": [
         0,
-        145,
+        211,
         1280,
-        1745
+        1811
       ],
-      "originalSha256": "7e001b0c675bf408fe3f2829029129eb5dd556e536a42e16f00939a9775989b5"
+      "originalSha256": "3fbf8e9ad08efa34aefcdd0366c3f16ccbe438634761316b1df9761eb7303a90"
     }
   },
   {
@@ -2114,66 +2122,73 @@ export const teamMembers = [
     }
   },
   {
-    "id": "luozhao-wang",
-    "name": "Luozhao Wang",
+    "id": "feiyue-wang",
+    "name": "Feiyue Wang",
     "role": "Advisor",
     "groups": [
       "Advisors"
     ],
-    "quote": "Every time you fall is a chance to get back up.",
-    "introduction": "Hi everyone. I'm Wang Luozhao from the School of Public Health at Jilin University. I'm really happy to join iGEM as an advisor. I believe this will be a valuable learning experience, and I also hope to contribute to the team. Alone you go fast, but together you go far. I look forward to making progress with my teammates, and I also hope to learn and grow together with other teams in the iGEM community.",
+    "quote": "Stay confident, stay curious, and keep moving forward—every step you take writes your own story.",
+    "introduction": "Hi everyone. I am Feiyue Wang from the School of Public Health at Jilin University, majoring in Occupational and Environmental Health. This year marks my first iGEM journey as an advisor. This role is both a valuable experience and a meaningful responsibility. I would like to express my sincere gratitude to our instructors for their guidance and to all teammates for their dedication and collaboration. I am glad to support our team in project design, data analysis, safety, and writing. I look forward to learning, growing, and making progress with the iGEM community. See you at the Jamboree!",
     "generalTasks": [
       "1",
+      "2",
       "3",
-      "9",
-      "11"
+      "8",
+      "11",
+      "13"
     ],
     "contributionCategories": [
-      "Background Research",
       "Analysis",
-      "Data Curation",
+      "Conceptualization",
+      "Background Research",
+      "Safety",
       "Project Administration",
-      "Scientific Support"
+      "Public Engagement"
     ],
     "tasks": [
       {
-        "category": "Background Research",
-        "detail": "Conduct literature reviews and background research to clarify the scientific context, identify existing approaches and their limitations, and help the team define the significance and objectives of the project.2. Data"
-      },
-      {
         "category": "Analysis",
-        "detail": "Organize and analyze experimental and research data, identify meaningful trends and relationships, and provide evidence-based interpretations to support project development and decision-making."
+        "detail": "Guided the team in organizing and analyzing experimental data and model outputs, comparing candidate primer–crRNA combinations and optimized reaction parameters, and interpreting the performance of the RPA-CRISPR/Cas12a detection system."
       },
       {
-        "category": "Data Curation",
-        "detail": "Collect, organize, verify, and standardize relevant scientific data and literature. I also help ensure that the sources of key information are properly documented and that the data used by the team are reliable and traceable."
+        "category": "Conceptualization",
+        "detail": "Contributed to the research design and technical roadmap, including the integration of DNABERT-6-based sequence screening, molecular docking/molecular dynamics simulation, enzyme kinetics modeling, and wet-lab validation into a spiral closed-loop optimization framework for portable multiplex respiratory pathogen detection."
+      },
+      {
+        "category": "Background Research",
+        "detail": "Provided guidance on literature review and study rationale, covering respiratory pathogens, RPA, CRISPR/Cas12a, DNABERT, molecular simulation, biosafety guidelines, and point-of-care testing."
+      },
+      {
+        "category": "Safety",
+        "detail": "Advised on biosafety documentation, experimental standardization, and compliance with institutional and iGEM safety requirements, supporting safe and standardized implementation of experimental and testing procedures."
       },
       {
         "category": "Project Administration",
-        "detail": "Assist with project planning, task coordination, documentation, and progress tracking. I help maintain communication among team members and ensure that research, experimental work, and project documentation progress according to the team's timeline."
+        "detail": "Helped coordinate project planning, milestones, documentation, version control, evaluation forms, and application materials, and supported communication among team members; also reviewed and edited wiki, reports, and presentation materials."
       },
       {
-        "category": "Scientific Support",
-        "detail": "Provide feedback on experimental design, interpretation of results, and project direction when needed, and help the team identify potential scientific or organizational issues at an early stage."
+        "category": "Public Engagement",
+        "detail": "Guided project presentations and defense preparation, highlighting the potential of the platform for rapid on-site detection of respiratory pathogens and its public health significance."
       }
     ],
-    "photo": "../assets/team-member/portraits/luozhao-wang.webp",
+    "photo": "../assets/team-member/portraits/feiyue-wang.webp",
     "source": {
-      "file": "advisor王洛钊.docx",
-      "rawName": "Luozhao Wang",
+      "file": "20260924_王飞跃.docx",
+      "rawName": "Feiyue Wang",
       "rawRole": "Advisor"
     },
     "dataIssues": [],
     "photoSource": {
-      "file": "ad/王洛钊ad.jpg",
+      "file": "ad/王飞跃ad.jpg",
       "status": "filename-match",
       "cropPixels": [
         0,
-        211,
+        145,
         1280,
-        1811
+        1745
       ],
-      "originalSha256": "3fbf8e9ad08efa34aefcdd0366c3f16ccbe438634761316b1df9761eb7303a90"
+      "originalSha256": "7e001b0c675bf408fe3f2829029129eb5dd556e536a42e16f00939a9775989b5"
     }
   },
   {
@@ -2511,7 +2526,8 @@ export const teamFaculty = [
       "method": "Pinyin romanization",
       "rawName": "宋秀玲",
       "preferredEnglishSpellingVerified": false
-    }
+    },
+    "framingPhoto": "../assets/team-member/portraits/pi-song-xiuling-source.jpg"
   },
   {
     "id": "pi-pang-bo",
@@ -2676,6 +2692,7 @@ export const teamFaculty = [
       "method": "Pinyin romanization",
       "rawName": "赵超",
       "preferredEnglishSpellingVerified": false
-    }
+    },
+    "framingPhoto": "../assets/team-member/portraits/secondary-pi-zhao-chao-source.jpg"
   }
 ]

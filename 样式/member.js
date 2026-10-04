@@ -2,7 +2,7 @@ import './main.js'
 import { teamMembers, teamFaculty } from '../Team/member-data.js'
 
 // Static glob resolves portraits in development and in Vite's hashed builds.
-const portraits = import.meta.glob('../assets/team-member/portraits/*.webp', {
+const portraits = import.meta.glob('../assets/team-member/portraits/*.{webp,jpg}', {
   eager: true, query: '?url', import: 'default',
 })
 const memberGrid = document.querySelector('#member-grid')
@@ -20,9 +20,10 @@ function element(tag, className, text) {
 
 function portrait(person) {
   const host = element('span', 'member-photo')
-  if (person.photo && portraits[person.photo]) {
+  const photo = person.framingPhoto || person.photo
+  if (photo && portraits[photo]) {
     const image = element('img')
-    image.src = portraits[person.photo]
+    image.src = portraits[photo]
     image.alt = `${person.name} portrait`
     image.width = 800
     image.height = 1000
@@ -126,16 +127,33 @@ function memberCard(person) {
   return card
 }
 
-function render(group, host) {
+function facultyCard(person) {
+  const card = element('article', 'member-card faculty-card')
+  card.dataset.memberId = person.id
+  const front = element('div', 'member-card__front')
+  const body = element('div', 'member-card__body')
+  const name = element('span', 'member-card__name', person.name)
+  name.setAttribute('role', 'heading')
+  name.setAttribute('aria-level', '3')
+  body.append(name, element('span', 'member-card__role', person.role))
+  if (person.introduction) body.append(element('p', 'profile-text', person.introduction))
+  front.append(portrait(person), body)
+  card.append(front)
+  return card
+}
+
+function render(group, host, makeCard = memberCard) {
   const fragment = document.createDocumentFragment()
-  group.forEach((person) => fragment.append(memberCard(person)))
+  group.forEach((person) => fragment.append(makeCard(person)))
   host.append(fragment)
 }
-render(teamFaculty.filter((p) => p.groups.includes('PI')), document.querySelector('#pi-grid'))
-render(teamFaculty.filter((p) => p.groups.includes('Secondary PI')), document.querySelector('#secondary-pi-grid'))
+render(teamFaculty.filter((p) => p.groups.includes('PI')), document.querySelector('#pi-grid'), facultyCard)
+render(teamFaculty.filter((p) => p.groups.includes('Secondary PI')), document.querySelector('#secondary-pi-grid'), facultyCard)
 render(teamMembers.filter((p) => p.groups.includes('Team Leaders')), document.querySelector('#leader-grid'))
 render(teamMembers.filter((p) => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors')), memberGrid)
 render(teamMembers.filter((p) => p.groups.includes('Advisors')), document.querySelector('#advisor-grid'))
+const advisorCount = teamMembers.filter((p) => p.groups.includes('Advisors')).length
+document.querySelector('.team-hero__note').textContent = `${teamMembers.length + teamFaculty.length} people · one shared journey`
 
 function applyFilter(filter) {
   // Synchronous filtering avoids stale animation completions hiding a new selection.
@@ -149,8 +167,8 @@ function applyFilter(filter) {
   })
   advisorSection.hidden = filter !== 'All' && filter !== 'Advisors'
   resultStatus.textContent = filter === 'All'
-    ? 'Showing 26 members · 9 advisors. Team leaders and PIs appear above.'
-    : filter === 'Advisors' ? 'Showing 9 advisors below. Team leaders and PIs appear above.'
+    ? `Showing ${count} members · ${advisorCount} advisors. Team leaders and PIs appear above.`
+    : filter === 'Advisors' ? `Showing ${advisorCount} advisors below. Team leaders and PIs appear above.`
       : `Showing ${count} ${filter} member${count === 1 ? '' : 's'}. Team leaders and PIs appear above.`
 }
 filters.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.filter)))
@@ -164,3 +182,25 @@ document.querySelector('a[href="#advisors-title"]').addEventListener('click', ()
   if (advisorSection.hidden) applyFilter('All')
 })
 applyFilter('All')
+
+// Track the existing section anchors without replacing native hash navigation.
+const sectionLinks = [...document.querySelectorAll('.team-jumps a')]
+let sectionUpdatePending = false
+function updateCurrentSection() {
+  sectionUpdatePending = false
+  const visible = sectionLinks.filter(link => !document.querySelector(link.hash).closest('[hidden]'))
+  const current = visible.filter(link => document.querySelector(link.hash).getBoundingClientRect().top <= 150).at(-1) || visible[0]
+  sectionLinks.forEach(link => {
+    if (link === current) link.setAttribute('aria-current', 'location')
+    else link.removeAttribute('aria-current')
+  })
+}
+function requestSectionUpdate() {
+  if (sectionUpdatePending) return
+  sectionUpdatePending = true
+  requestAnimationFrame(updateCurrentSection)
+}
+window.addEventListener('scroll', requestSectionUpdate, { passive: true })
+window.addEventListener('resize', requestSectionUpdate)
+filters.forEach(button => button.addEventListener('click', requestSectionUpdate))
+updateCurrentSection()
