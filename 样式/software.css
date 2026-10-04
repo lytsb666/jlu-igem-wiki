@@ -1,4 +1,5 @@
 /* Software-only presentation. Shared typography, navigation and loading stay upstream. */
+html:has(body.software-page) { scroll-behavior: smooth; }
 .software-page {
   --sw-accent: #166c66;
   --sw-muted: #695c4e;
@@ -235,6 +236,7 @@
   .software-page .sw-actions .sw-button { flex: 1 1 auto; }
 }
 @media (prefers-reduced-motion: reduce) {
+  html:has(body.software-page) { scroll-behavior: auto; }
   .software-page .sw-animation :is(.sw-signal, .sw-parameter, .sw-trace, .sw-result) { animation: none; opacity: 1; stroke-dashoffset: 0; }
   .software-page .sw-static-note { display: block; }
   .software-page .sw-animation [data-sw-pause] { display: none; }

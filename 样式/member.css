@@ -31,7 +31,9 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
 }
 .team-page .team-hero__note { margin: 20px 0 0; }
 .team-jumps {
-  display: flex; flex-wrap: wrap;
+  position: sticky; top: 72px; z-index: 30;
+  display: flex; flex-wrap: nowrap; overflow-x: auto;
+  overscroll-behavior-inline: contain; scrollbar-width: thin;
   gap: 8px; margin-top: 24px; padding: 10px; border: 1px solid rgba(111,78,55,.2);
   border-radius: 14px; background: rgba(255,250,245,.97); box-shadow: 0 8px 24px rgba(111,78,55,.06);
 }
@@ -43,6 +45,7 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   background: transparent; cursor: pointer;
 }
 .team-jumps a:hover, .team-filter:hover { background: rgba(194,123,69,.12); }
+.team-jumps a { flex: 0 0 auto; white-space: nowrap; }
 .team-section, .team-directory { padding-top: clamp(64px,7vw,104px); }
 .team-section__heading {
   display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.65fr);
@@ -52,7 +55,7 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   margin: 0; color: #6f4e37; font-size: clamp(2.6rem,5vw,5rem) !important;
   font-weight: 500 !important; line-height: .96 !important; letter-spacing: -.045em !important;
   text-transform: uppercase; overflow-wrap: anywhere;
-  scroll-margin-top: 160px;
+  scroll-margin-top: 192px;
 }
 .team-directory { scroll-margin-top: 160px; }
 .team-page .team-section__heading > p {
@@ -174,7 +177,7 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   .team-jumps a { padding: 9px 10px; }
   .faculty-grid, .leader-grid, .member-grid, .advisor-grid { grid-template-columns: 1fr; gap: 26px; }
   .team-section, .team-directory { padding-top: 64px; }
-  .team-page .team-section__heading h2 { font-size: 2.55rem !important; }
+  .team-page .team-section__heading h2 { font-size: 2.55rem !important; scroll-margin-top: 232px; }
   .team-filter { padding: 10px 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -182,4 +185,7 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
   .member-card__back { transform: none; }
   .member-card__front[aria-hidden="true"], .member-card__back[aria-hidden="true"] { visibility: hidden; }
   html:has(body.team-page-body) { scroll-behavior: auto; }
+}
+@media print {
+  .team-jumps { position: static; flex-wrap: wrap; overflow: visible; }
 }
