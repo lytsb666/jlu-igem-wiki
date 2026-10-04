@@ -1,0 +1,142 @@
+{
+  "page": "http://127.0.0.1:58571/Eagagement/collaboration.html",
+  "http": 200,
+  "productionImages": [
+    {
+      "source": "../a  图片/page-covers/collaboration.webp",
+      "url": "/assets/BmvDLQ_l.webp",
+      "http": 200,
+      "sha256": "8527bd782497e9e64ca22aa8ecaa5b757a15a8578075379a6e7a1942db6b34ba"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/ccic-auditorium.jpg",
+      "url": "/assets/55oYyaBf.jpg",
+      "http": 200,
+      "sha256": "4345f11ff46bcdcb5b50c53b1263cb8157eb893ded81c8cd2cfeb2b12b234a24"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/ccic-teams.jpg",
+      "url": "/assets/BDph5QG3.jpg",
+      "http": 200,
+      "sha256": "866250338b5c167a1d43c074148a1f45ad0cd52ffc36e550a31048844d3102a2"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/ccic-exchange.jpg",
+      "url": "/assets/79WbjtwZ.jpg",
+      "http": 200,
+      "sha256": "468b99cbff891584b5e94da08f0641569e742ed0af5ccd8b15a523cc1bdbba33"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/ccic-presentation.jpg",
+      "url": "/assets/D4Zr1WZe.jpg",
+      "http": 200,
+      "sha256": "c8c31eff75bfdbf3471edd7d746fab3c982453a0374b71107ae9e479e5c7b88e"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/apic-group.jpg",
+      "url": "/assets/DCobdqU0.jpg",
+      "http": 200,
+      "sha256": "51292d17cedaf80c167e1dcab5fc83705d9035e1734f9c4ee8dbfe6560d5e7fd"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/apic-poster.jpg",
+      "url": "/assets/B6CvoytW.jpg",
+      "http": 200,
+      "sha256": "4091e9829830f26ed5a69cbca5af571c46fa2bc4e08e18971d3e1468d6a93397"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/bioai-meeting.jpg",
+      "url": "/assets/JC-93fEH.jpg",
+      "http": 200,
+      "sha256": "b74ffdedf19bb7d4a2df6ca5ff89e36c7325186eb343b34654cf6902cbf76e2a"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/bioai-platform.png",
+      "url": "/assets/C86JCTsO.png",
+      "http": 200,
+      "sha256": "fa99964f690440d2025b6014ffe4db8ec184c2b926b874187a810622bb137abb"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/drylab-course.jpg",
+      "url": "/assets/Vc4qgYDM.jpg",
+      "http": 200,
+      "sha256": "ecb80040f86f7888870a08e0c9ec7574c6009debf5075857d56efaae6be13390"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/drylab-workshop.jpg",
+      "url": "/assets/DIwaCsMQ.jpg",
+      "http": 200,
+      "sha256": "7c9443e450b21d5e370c6cfc50df015fc9a3e855c8e6127eec6de6f20e2d9d57"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/protein-visualization.jpg",
+      "url": "/assets/CXngW6ro.jpg",
+      "http": 200,
+      "sha256": "d09bde79beccf9590e5fc7c77b4990d290be1ef0f655762c1830e49199ef42f3"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/zjut-dialogue.jpg",
+      "url": "/assets/CWHKZCqg.jpg",
+      "http": 200,
+      "sha256": "d18deb06f710bb0304db56ca1826a086fc5ebe1c0a349777877332878039b66f"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/zjut-whiteboard.jpg",
+      "url": "/assets/CRCri1Yy.jpg",
+      "http": 200,
+      "sha256": "2322728b5de53881154aff0f904f8feffea57e8ca77d54a316c4393754712216"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/zjut-poster.jpg",
+      "url": "/assets/Bu6wOjEa.jpg",
+      "http": 200,
+      "sha256": "5d42487e271a0716ba4822d91a31a9a1fa2e56cc5d7b77f32fdd81a24b51f4b5"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/inclusion-hike-group.jpg",
+      "url": "/assets/AMIzu617.jpg",
+      "http": 200,
+      "sha256": "ebe35a8a527dd9c471005439a79974ba0391b532b2784967378d0c7ccc775fd8"
+    },
+    {
+      "source": "../assets/collaboration/2026-10-04/inclusion-hike-support.jpg",
+      "url": "/assets/DeqGcNcg.jpg",
+      "http": 200,
+      "sha256": "6f7ad9da97e049b02ad050d0dd29429ed7f8d8719df6ee942179cf6c2a41e6c1"
+    }
+  ],
+  "resources": [
+    {
+      "url": "/assets/BO4c1Xl1.webp",
+      "http": 200
+    },
+    {
+      "url": "/assets/RGfjFRzJ.js",
+      "http": 200
+    },
+    {
+      "url": "/assets/Dezn_h7o.js",
+      "http": 200
+    },
+    {
+      "url": "/assets/DT5_qENP.js",
+      "http": 200
+    },
+    {
+      "url": "/assets/D1-C49nL.css",
+      "http": 200
+    },
+    {
+      "url": "/assets/BSlP_689.css",
+      "http": 200
+    },
+    {
+      "url": "/assets/CjV4nwtm.css",
+      "http": 200
+    },
+    {
+      "url": "/assets/BAy7SHjM.css",
+      "http": 200
+    }
+  ]
+}
