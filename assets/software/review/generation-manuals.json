@@ -1,0 +1,53 @@
+{
+  "prepared": "2026-10-06",
+  "scope": "Two generation-specific app manuals and pending Hardware links only",
+  "reference_pdf": "public/software-resources/software-user-guide.pdf",
+  "source_commit": "b06ba6ae99be8757e911f468d2fd0670d99b2e48",
+  "guides": [
+    {
+      "file": "public/software-resources/software-user-guide-first-generation.pdf",
+      "pages": 2,
+      "bytes": 502623,
+      "sha256": "6c03bb66612a4527adc507c8ab75a45bfc911c0bffe189318c09b6bdb671420b",
+      "package": "com.chuangxin.socket_test",
+      "apk": "https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/first-generation-fluorescent-detection.apk?inline=false",
+      "source": "https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/tree/b06ba6ae99be8757e911f468d2fd0670d99b2e48/first-generation-app-source-code",
+      "hardware_placeholder": "../Instrument/hardware.html"
+    },
+    {
+      "file": "public/software-resources/software-user-guide-second-generation.pdf",
+      "pages": 2,
+      "bytes": 1187346,
+      "sha256": "feee86d6e605a791d47d94ee5a6dcdd586cb96b56d64ecbdf541bcc3d72d0d3a",
+      "package": "com.chuangxin.socket",
+      "apk": "https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk?inline=false",
+      "source": "https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/tree/b06ba6ae99be8757e911f468d2fd0670d99b2e48/second-generation-app-source-code",
+      "hardware_placeholder": "../Instrument/hardware.html"
+    }
+  ],
+  "images": [
+    {
+      "file": "assets/software/images/connection-controls.jpg",
+      "sha256": "968127525677860133d4f200946de171cd85caca45d71bfc2c97071a706a8969"
+    },
+    {
+      "file": "assets/software/images/curve-detail.jpg",
+      "sha256": "1ede2ecd797ac8ddd55646df1397ae9b8cfe7af9c18db5e97b7f66cfd78bbe3c"
+    },
+    {
+      "file": "assets/software/originals/doc1-image8.jpeg",
+      "sha256": "22e332a7d7519510f02847d39ec724150d94fce2787f4a27a5162860859d4ff4"
+    }
+  ],
+  "gaps": [
+    "Final Hardware manual/video sections and links",
+    "Device network credentials and compatibility",
+    "Device start/shutdown sequence and approved assay parameters",
+    "Exact screenshot/APK correspondence",
+    "Second-generation chart count differs between source and screenshots",
+    "First-generation released temperature-control labels",
+    "Servo physical position meanings",
+    "Result thresholds and complete measurement-export/history instructions"
+  ],
+  "validation_limit": "Document layout and Wiki resources only; no APK installation or device operation test"
+}
