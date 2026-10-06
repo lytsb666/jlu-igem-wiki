@@ -1116,3 +1116,10 @@ body.drylab-page {
     color: #000000;
   }
 }
+
+/* Keep directory text inside the clear center of the supplied scroll artwork. */
+@media(min-width:901px) {
+  :root body main .page-toc { padding:16px 12px; border-width:90px 54px; border-image-width:90px 54px; border-image-slice:800 640 800 640 fill; background:transparent; box-shadow:none; backdrop-filter:none; max-height:none; }
+  :root body main .page-toc > nav { max-height:calc(100svh - 400px); overflow-x:hidden; overflow-y:auto; }
+  :root body main .page-toc a { overflow-wrap:anywhere; }
+}

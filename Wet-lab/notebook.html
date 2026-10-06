@@ -20,7 +20,7 @@
 :root body.research-manuscript main h5 { font-size:1.167rem !important; color:#DEAF81; line-height:1.4 !important; }
 :root body.research-manuscript main .research-figure { margin:1.5rem 0 2rem; text-align:center; }
 :root body.research-manuscript main .research-figure img { display:block; width:auto; height:auto; max-width:100%; max-height:46rem; object-fit:contain; margin:auto; }
-:root body.research-manuscript main .research-chart img { max-width:min(100%,40rem); max-height:32rem; }
+:root body.research-manuscript main .research-chart img { width:auto !important; height:auto; max-width:min(80%,28rem); max-height:20rem; }
 :root body.research-manuscript main :is(.research-figure figcaption,.research-table-caption) { color:#7D521D !important; font-size:1rem !important; font-weight:700; text-align:center !important; margin:.75rem 0; }
 :root body.research-manuscript main .research-table-wrap { max-width:48rem; width:100%; margin:.75rem auto 1.5rem; overflow:auto; border:1px solid #d9c4b4; border-radius:8px; }
 :root body.research-manuscript main .research-table { width:100%; min-width:28rem; border-collapse:collapse; }
@@ -38,17 +38,18 @@
 :root body.research-manuscript main [id] { scroll-margin-top:7rem; }
 @media(min-width:901px) {
  :root body.research-manuscript main .lab-layout { grid-template-columns:minmax(330px,370px) minmax(0,1fr); gap:clamp(24px,3vw,48px); }
- :root body.research-manuscript main .page-toc { padding:18px; border-width:80px 42px; border-image-width:80px 42px; }
- :root body.research-manuscript main .page-toc>nav { max-height:calc(100vh - 360px); }
+ :root body.research-manuscript main .page-toc { padding:16px 12px; border-width:90px 54px; border-image-width:90px 54px; border-image-slice:800 640 800 640 fill; background:transparent; box-shadow:none; backdrop-filter:none; }
+ :root body.research-manuscript main .page-toc>nav { max-height:calc(100svh - 320px); }
 }
 @media(max-width:900px) { :root body.research-manuscript main .lab-layout { grid-template-columns:1fr; } }
 
-:root body.research-manuscript main .notebook-calendar__day:not(.is-empty) { background:#6A3F24; color:#fff; border-color:#a87a58; }
+:root body.research-manuscript main .notebook-calendar__day { background:#21262a; color:#fff; border:1px solid #71604d; border-radius:14px; padding:8px; }
 :root body.research-manuscript main :is(.notebook-calendar__date,.notebook-calendar__event) { color:#fff !important; }
-:root body.research-manuscript main .notebook-calendar__event { background:#843F0B; border:1px solid #ba8d69; font-size:.75rem !important; line-height:1.25 !important; }
+:root body.research-manuscript main .notebook-calendar__event { background:#9A6742; color:#fff; border:0; border-radius:10px; padding:5px 7px; font-size:.875rem !important; font-weight:700; line-height:1.3 !important; }
 
 :root body.research-manuscript main .page-toc nav { overflow-x:hidden; }
 :root body.research-manuscript main .page-toc a { overflow-wrap:anywhere; }
+:root body.research-manuscript main .notebook-calendar__date { font-size:1rem !important; font-style:italic; margin-bottom:6px; }
 </style>
 </head>
 <body class="research-manuscript wetlab-page loading-lock" data-page="notebook">
