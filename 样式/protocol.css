@@ -173,3 +173,54 @@
 @media (prefers-reduced-motion: reduce) {
   .protocol-card { transition: none; }
 }
+
+
+/* Research manuscript typography; limited to this page's main content. */
+:root body.research-manuscript main { color:#7D521D; font-family:"Times New Roman",Times,serif; }
+:root body.research-manuscript main :is(p,li,figcaption,th,td,summary) { font-size:1rem !important; line-height:1.65 !important; color:#7D521D; }
+:root body.research-manuscript main h2 { font-size:1.833rem !important; color:#6A3F24; font-weight:700; line-height:1.3 !important; }
+:root body.research-manuscript main :is(h3,.research-result-stage>summary,.research-reference>summary) { font-size:1.333rem !important; color:#843F0B; line-height:1.4 !important; }
+:root body.research-manuscript main h4 { font-size:1.167rem !important; color:#CB8611; line-height:1.4 !important; }
+:root body.research-manuscript main h5 { font-size:1.167rem !important; color:#DEAF81; line-height:1.4 !important; }
+:root body.research-manuscript main .research-figure { margin:1.5rem 0 2rem; text-align:center; }
+:root body.research-manuscript main .research-figure img { display:block; width:auto; height:auto; max-width:100%; max-height:46rem; object-fit:contain; margin:auto; }
+:root body.research-manuscript main .research-chart img { max-width:min(100%,40rem); max-height:32rem; }
+:root body.research-manuscript main :is(.research-figure figcaption,.research-table-caption) { color:#7D521D !important; font-size:1rem !important; font-weight:700; text-align:center !important; margin:.75rem 0; }
+:root body.research-manuscript main .research-table-wrap { max-width:48rem; width:100%; margin:.75rem auto 1.5rem; overflow:auto; border:1px solid #d9c4b4; border-radius:8px; }
+:root body.research-manuscript main .research-table { width:100%; min-width:28rem; border-collapse:collapse; }
+:root body.research-manuscript main .research-table :is(th,td) { padding:.45rem .6rem; font-size:.9375rem !important; border:1px solid #d9c4b4; vertical-align:middle; overflow-wrap:anywhere; }
+:root body.research-manuscript main .research-table thead th { background:#6A3F24; color:#fff; }
+:root body.research-manuscript main .research-table tbody th { background:#f5ece5; color:#7D521D; }
+:root body.research-manuscript main .research-table tbody tr:nth-child(even) td { background:#faf6f2; }
+:root body.research-manuscript main .research-reference { border:1px solid #d9c4b4; border-radius:12px; padding:1rem; background:#fff; }
+:root body.research-manuscript main summary { cursor:pointer; }
+:root body.research-manuscript main .research-original:focus-visible { outline:3px solid #CB8611; outline-offset:4px; }
+:root body.research-manuscript main .research-stage-body { padding:1rem clamp(.75rem,2vw,2rem); }
+:root body.research-manuscript main .research-result-stage { margin:1.25rem 0; }
+:root body.research-manuscript main .research-section>h2 { margin-top:0; }
+:root body.research-manuscript main .legacy-source-anchor { display:block; scroll-margin-top:7rem; }
+:root body.research-manuscript main [id] { scroll-margin-top:7rem; }
+@media(min-width:901px) {
+ :root body.research-manuscript main .lab-layout { grid-template-columns:minmax(330px,370px) minmax(0,1fr); gap:clamp(24px,3vw,48px); }
+ :root body.research-manuscript main .page-toc { padding:18px; border-width:80px 42px; border-image-width:80px 42px; }
+ :root body.research-manuscript main .page-toc>nav { max-height:calc(100vh - 360px); }
+}
+@media(max-width:900px) { :root body.research-manuscript main .lab-layout { grid-template-columns:1fr; } }
+
+/* Protocol retains its existing selectors and adds the requested scroll directory. */
+.protocol-main .protocol-content { min-width:0; background:#fff; padding:clamp(16px,2vw,32px); border:1px solid #d9c4b4; border-radius:22px; }
+.protocol-main .protocol-card { min-height:120px; padding:24px 30px; }
+:root body.research-manuscript .protocol-main .protocol-card-label { font-size:1.333rem !important; }
+.protocol-main .protocol-grid { gap:18px; }
+.protocol-main .protocol-card-toggle { right:15px; bottom:12px; }
+.protocol-main .protocol-panel { margin-top:2rem; padding:clamp(12px,2vw,24px); }
+.protocol-main .protocol-table-wrap { width:100%; max-width:44rem; margin:1rem auto 1.5rem; }
+:root body.research-manuscript .protocol-main .protocol-table-wrap :is(th,td) { padding:.45rem .6rem; font-size:.9375rem !important; line-height:1.45 !important; }
+.protocol-main .protocol-table-wrap table { min-width:26rem; }
+.protocol-main .protocol-toc a.is-active { color:#843F0B; background:#deaf8150; }
+@media(max-width:900px) { .protocol-main .protocol-toc { position:static; max-height:none; } }
+
+:root body.research-manuscript main .page-toc nav { overflow-x:hidden; }
+:root body.research-manuscript main .page-toc a { overflow-wrap:anywhere; }
+
+:root body.research-manuscript .protocol-main .protocol-table-wrap thead th { color:#fff !important; background:#6A3F24; }

@@ -9,8 +9,45 @@
   <link rel="stylesheet" href="../样式/loading.css" />
   <link rel="stylesheet" href="../样式/wetlab-pages.css" />
   <link rel="stylesheet" href="../样式/full-width-layout.css">
+<style data-research-manuscript>
+
+/* Research manuscript typography; limited to this page's main content. */
+:root body.research-manuscript main { color:#7D521D; font-family:"Times New Roman",Times,serif; }
+:root body.research-manuscript main :is(p,li,figcaption,th,td,summary) { font-size:1rem !important; line-height:1.65 !important; color:#7D521D; }
+:root body.research-manuscript main h2 { font-size:1.833rem !important; color:#6A3F24; font-weight:700; line-height:1.3 !important; }
+:root body.research-manuscript main :is(h3,.research-result-stage>summary,.research-reference>summary) { font-size:1.333rem !important; color:#843F0B; line-height:1.4 !important; }
+:root body.research-manuscript main h4 { font-size:1.167rem !important; color:#CB8611; line-height:1.4 !important; }
+:root body.research-manuscript main h5 { font-size:1.167rem !important; color:#DEAF81; line-height:1.4 !important; }
+:root body.research-manuscript main .research-figure { margin:1.5rem 0 2rem; text-align:center; }
+:root body.research-manuscript main .research-figure img { display:block; width:auto; height:auto; max-width:100%; max-height:46rem; object-fit:contain; margin:auto; }
+:root body.research-manuscript main .research-chart img { max-width:min(100%,40rem); max-height:32rem; }
+:root body.research-manuscript main :is(.research-figure figcaption,.research-table-caption) { color:#7D521D !important; font-size:1rem !important; font-weight:700; text-align:center !important; margin:.75rem 0; }
+:root body.research-manuscript main .research-table-wrap { max-width:48rem; width:100%; margin:.75rem auto 1.5rem; overflow:auto; border:1px solid #d9c4b4; border-radius:8px; }
+:root body.research-manuscript main .research-table { width:100%; min-width:28rem; border-collapse:collapse; }
+:root body.research-manuscript main .research-table :is(th,td) { padding:.45rem .6rem; font-size:.9375rem !important; border:1px solid #d9c4b4; vertical-align:middle; overflow-wrap:anywhere; }
+:root body.research-manuscript main .research-table thead th { background:#6A3F24; color:#fff; }
+:root body.research-manuscript main .research-table tbody th { background:#f5ece5; color:#7D521D; }
+:root body.research-manuscript main .research-table tbody tr:nth-child(even) td { background:#faf6f2; }
+:root body.research-manuscript main .research-reference { border:1px solid #d9c4b4; border-radius:12px; padding:1rem; background:#fff; }
+:root body.research-manuscript main summary { cursor:pointer; }
+:root body.research-manuscript main .research-original:focus-visible { outline:3px solid #CB8611; outline-offset:4px; }
+:root body.research-manuscript main .research-stage-body { padding:1rem clamp(.75rem,2vw,2rem); }
+:root body.research-manuscript main .research-result-stage { margin:1.25rem 0; }
+:root body.research-manuscript main .research-section>h2 { margin-top:0; }
+:root body.research-manuscript main .legacy-source-anchor { display:block; scroll-margin-top:7rem; }
+:root body.research-manuscript main [id] { scroll-margin-top:7rem; }
+@media(min-width:901px) {
+ :root body.research-manuscript main .lab-layout { grid-template-columns:minmax(330px,370px) minmax(0,1fr); gap:clamp(24px,3vw,48px); }
+ :root body.research-manuscript main .page-toc { padding:18px; border-width:80px 42px; border-image-width:80px 42px; }
+ :root body.research-manuscript main .page-toc>nav { max-height:calc(100vh - 360px); }
+}
+@media(max-width:900px) { :root body.research-manuscript main .lab-layout { grid-template-columns:1fr; } }
+
+:root body.research-manuscript main .page-toc nav { overflow-x:hidden; }
+:root body.research-manuscript main .page-toc a { overflow-wrap:anywhere; }
+</style>
 </head>
-<body class="wetlab-page loading-lock" data-page="design">
+<body class="research-manuscript wetlab-page loading-lock" data-page="design">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div id="igem-loader" class="igem-loader" role="status" aria-live="polite" aria-label="Loading page">
@@ -76,68 +113,172 @@
 </section>
 <main class="lab-main" id="main-content" tabindex="-1">
   <div class="lab-layout">
-    <aside class="page-toc document-toc" aria-label="On this page">
-      <p class="toc-kicker">On this page</p>
+    <aside class="page-toc document-toc" aria-label="Section directory">
       <nav data-auto-toc></nav>
     </aside>
     <article class="article-flow document-page-content" data-document-content>
-<section class="lab-section document-section" id="design-1-design-overview" data-observe-section><div class="section-heading"><h2 data-toc-level="1">1. Design Overview</h2></div>
-<p>Respiratory infections are caused by a diverse range of pathogens, yet their clinical symptoms often overlap. This creates a particular challenge in settings such as nursing homes and kindergartens, where older adults and young children may be more vulnerable to severe complications and where rapid identification of the causative pathogen is especially important <sup>[1]</sup>. Conventional nucleic-acid testing, however, often relies on sophisticated instruments and trained personnel, limiting its suitability for decentralized screening and outbreak response in resource-constrained settings.</p>
-<p>To address this gap, we designed a point-of-care detection platform based on recombinase polymerase amplification (RPA) coupled with CRISPR–Cas12a. RPA enables nucleic-acid amplification under isothermal conditions, while CRISPR–Cas12a provides programmable sequence recognition and a fluorescence-based readout. Together, these features make the platform attractive for rapid and highly specific molecular diagnostics without the need for thermal cycling <sup>[2]</sup>.</p>
-<p>A major challenge in developing RPA–CRISPR assays is that the optimization process is often highly empirical. Different targets vary in GC content, secondary structure, and amplification kinetics; primer and crRNA performance cannot be predicted by a single universal rule; and multiple reaction components interact with one another in a strongly coupled manner. As a result, adapting an assay to a new pathogen can require extensive trial-and-error, increasing development time and reducing reproducibility <sup>[3]</sup>.</p>
-<p>Our project therefore aims to establish a standardized development workflow that integrates model-assisted sequence screening, enzyme-kinetic parameter estimation, and iterative Design–Build–Test–Learn (DBTL) cycles between dry-lab and wet-lab experiments. Five representative respiratory pathogens are used as iterative development targets. By repeatedly designing, testing, and refining the workflow across multiple pathogen-specific systems, we aim to improve its transferability and robustness. The resulting framework is intended to support target-specific molecular component design, rational reaction-parameter initialization, and integration with a portable fluorescence-detection device.</p>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-1-design-overview" data-toc-level="1" data-source-block="1">1. Design Overview</h2>
+<p data-source-block="2">Respiratory infections remain a major global health burden. The GBD 2023 analysis identified lower respiratory infections (LRIs) as the world&#x27;s leading infectious cause of death, accounting for an estimated 2.50 million deaths in 2023, with the highest burden among children younger than 5 years and adults aged 70 years and older<sup> [1]</sup>. Meanwhile, the co-circulation of respiratory viruses such as SARS-CoV-2, influenza A/B, and respiratory syncytial virus (RSV) highlights the need for rapid and reliable multiplex testing <sup>[2,3]</sup>. Although conventional RT-qPCR-based workflows can provide sensitive and specific detection, their dependence on nucleic-acid extraction, complex instrumentation, and trained personnel can limit their application in decentralized screening and rapid outbreak response <sup>[2]</sup>.</p>
+<p data-source-block="3">To address these limitations, we designed an integrated point-of-care detection platform combining recombinase polymerase amplification (RPA) with CRISPR-Cas12a. In our design, isothermal nucleic-acid amplification is intended to enrich low-abundance target sequences without the need for thermal cycling, while the CRISPR-Cas12a system provides programmable sequence recognition and collateral-cleavage-based signal generation <sup>[4]</sup>. By integrating these two processes, we aim to develop a workflow that combines rapid target amplification with sequence-specific detection while reducing dependence on complex laboratory equipment. Recent developments in one-pot isothermal amplification–CRISPR systems further support this strategy and provide a basis for simplifying the workflow toward rapid and sensitive point-of-care diagnostics<sup> [5,6]</sup>.</p>
+<p data-source-block="4">However, simply combining RPA and CRISPR-Cas12a does not necessarily produce an optimal detection system. A major consideration in our design is therefore how to systematically optimize the molecular components and reaction conditions. One-pot integration of isothermal amplification with CRISPR can be affected by incompatibilities in reaction conditions and interactions between amplification and cleavage processes<sup> [5,6]</sup>. In addition, the selection of effective crRNAs for CRISPR-Cas12a-based diagnostics remains challenging and time-consuming. Recent deep-learning approaches provide an opportunity to prioritize candidate crRNAs and integrate crRNA selection with RPA-primer design, potentially reducing the experimental screening burden <sup>[7]</sup>. Based on these considerations, we designed our development strategy around a model-guided and iterative workflow rather than relying primarily on empirical trial-and-error.</p>
+<p data-source-block="5">Our overall design therefore integrates model-assisted sequence screening, enzyme-kinetic parameter estimation, and iterative <strong>Design–Build–Test–Learn (DBTL)</strong> cycles connecting dry-lab prediction with wet-lab validation. We selected five representative respiratory pathogens as iterative development targets. For each target, candidate molecular components and initial reaction parameters are designed computationally, evaluated experimentally, and subsequently refined according to experimental feedback. By repeating this process across multiple pathogen-specific systems, we aim to identify both target-specific requirements and generalizable design principles, thereby improving the transferability and robustness of the overall workflow.</p>
+<p data-source-block="6">Ultimately, our design is intended to establish a standardized development framework rather than a single pathogen-specific assay. The framework is designed to support three interconnected stages: target-specific molecular component design, rational initialization and iterative optimization of reaction parameters, and integration of the optimized assay with a portable fluorescence-detection device. Through this design, we aim to provide a systematic route from sequence selection and computational prediction to experimental optimization and point-of-care implementation.</p>
 </section>
-<section class="lab-section document-section" id="design-2-design-requirements" data-observe-section><div class="section-heading"><h2 data-toc-level="1">2. Design Requirements</h2></div>
-<div class="table-wrap document-table-wrap" role="region" aria-label="Document data table" tabindex="0"><table class="data-table document-table"><thead><tr><th scope="col">Design requirement</th><th scope="col">Constraint / challenge</th><th scope="col">Design decision</th></tr></thead><tbody><tr><th scope="row">Distinguishable multiplex detection</th><td>Five respiratory pathogens must have independent and traceable recognition modules, with minimal sequence or signal cross-talk.</td><td>Pathogen-specific target regions, independent primer–crRNA sets, and distinguishable fluorescence channels.</td></tr><tr><th scope="row">Compatibility with low target abundance</th><td>Target nucleic-acid levels may be low during early infection.</td><td>Use isothermal RPA as a pre-amplification layer.</td></tr><tr><th scope="row">High specificity</th><td>Isothermal amplification alone may generate nonspecific products.</td><td>Use Cas12a–crRNA recognition as a second sequence-validation layer.</td></tr><tr><th scope="row">Interpretable assay development</th><td>Primers, crRNAs, and reaction parameters are interdependent and cannot be optimized efficiently by blind trial-and-error.</td><td>Use DNABERT-6 for sequence-level prioritization and enzyme-kinetic modeling for initial concentration and ratio estimation.</td></tr><tr><th scope="row">Modular transferability</th><td>Assays for different pathogens should share as many fixed modules as possible.</td><td>Separate target-specific sequence design from the general reaction, readout, and hardware layers.</td></tr><tr><th scope="row">Field usability</th><td>The assay should not depend on large thermal cyclers or subjective manual interpretation.</td><td>Use isothermal temperature control, enclosed optical readout, portable power, and mobile-device result display.</td></tr><tr><th scope="row">Reproducibility and extensibility</th><td>Future teams should be able to reuse the core framework while replacing the target.</td><td>Define clear interfaces, standardized reaction vessels, modular hardware, and digital parameter configuration.</td></tr><tr><th scope="row">Reduced contamination risk</th><td>Repeated tube opening after amplification increases aerosol-contamination risk.</td><td>Prioritize a closed or one-pot architecture to minimize post-amplification handling.</td></tr></tbody></table></div>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-2-design-requirements" data-toc-level="1" data-source-block="7">2. Design Requirements</h2>
+<div class="table-wrap research-table-wrap" tabindex="0" role="region" aria-label="design manuscript table 1"><table class="data-table research-table" data-source-block="8"><thead>
+<tr>
+<th scope="col">Design requirement</th>
+<th scope="col">Constraint / challenge</th>
+<th scope="col">Design decision</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">Clear multi-target detection</th>
+<td>Five respiratory pathogens must have independent and traceable recognition modules, with minimal sequence or signal cross-talk.</td>
+<td>Pathogen-specific target regions, independent primer-crRNA sets, and distinguishable fluorescence channels.</td>
+</tr>
+<tr>
+<th scope="row">Compatibility with low target abundance</th>
+<td>Target nucleic-acid levels may be low during early infection.</td>
+<td>Use isothermal RPA as a pre-amplification layer.</td>
+</tr>
+<tr>
+<th scope="row">High specificity</th>
+<td>Isothermal amplification alone may generate non-specific products.</td>
+<td>Use Cas12a-crRNA recognition as a second sequence-validation layer.</td>
+</tr>
+<tr>
+<th scope="row">Clear assay development</th>
+<td>Primers, crRNAs, and reaction parameters collectively influence RPA-CRISPR/Cas12a performance, making large-scale empirical optimization of complete detection systems challenging.</td>
+<td>We use DNABERT-6-based sequence representation learning to prioritize candidate primer-crRNA combinations, while enzyme kinetic modeling guides the selection of initial reaction concentrations and component ratios.</td>
+</tr>
+<tr>
+<th scope="row">Modular use for other targets</th>
+<td>Assays for different pathogens should share as many fixed modules as possible.</td>
+<td>Separate target-specific sequence design from the general reaction, readout, and hardware layers.</td>
+</tr>
+<tr>
+<th scope="row">Field usability</th>
+<td>The assay should not depend on large thermal cyclers or subjective manual interpretation.</td>
+<td>Use isothermal temperature control, enclosed optical readout, portable power, and mobile-device result display.</td>
+</tr>
+<tr>
+<th scope="row">Reproducibility and future expansion</th>
+<td>Future teams should be able to reuse the core framework while replacing the target.</td>
+<td>Define clear interfaces, standardized reaction vessels, modular hardware, and digital parameter configuration.</td>
+</tr>
+<tr>
+<th scope="row">Reduced contamination risk</th>
+<td>Repeated tube opening after amplification increases aerosol-contamination risk.</td>
+<td>Prioritize a closed or one-pot architecture to minimize post-amplification handling.</td>
+</tr>
+</tbody></table></div>
 </section>
-<section class="lab-section document-section" id="design-3-biological-module-design" data-observe-section><div class="section-heading"><h2 data-toc-level="1">3. Biological Module Design</h2></div>
-<h3 id="design-3-1-target-selection" data-toc-level="2">3.1 Target Selection</h3>
-<p>Our detection panel includes respiratory syncytial virus (RSV), human metapneumovirus (hMPV), Streptococcus pneumoniae (SPN), Bordetella pertussis (BP), and Haemophilus influenzae (HI). For each pathogen, assay design begins with a nucleic-acid region that is representative of the target species and relatively conserved within the population of interest. Candidate target regions must satisfy two key constraints: they should minimize the impact of within-species sequence variation on assay performance, while remaining sufficiently different from non-target respiratory pathogens. This provides the sequence foundation for two layers of specificity: RPA amplification and crRNA-mediated Cas12a recognition.</p>
-<h3 id="design-3-2-dnabert-6-guided-co-screening-of-rpa-primers-and-crrnas" data-toc-level="2">3.2 DNABERT-6-Guided Co-screening of RPA Primers and crRNAs</h3>
-<p>We use RPA as the upstream amplification module and couple it directly to CRISPR–Cas12a recognition. Because RPA primers and crRNAs jointly determine amplification efficiency, target specificity, and Cas12a activation, we do not treat them as two independent design problems. Instead, we use DNABERT-6 as a unified sequence-prioritization framework to co-screen candidate RPA primer–crRNA combinations.</p>
-<p>Candidate RPA primers and corresponding crRNA target sites are first generated from the conserved, pathogen-specific regions identified in Section 3.1. RPA is selected because it amplifies nucleic acids under isothermal conditions, eliminating the denaturation, annealing, and extension cycles required for conventional PCR. During candidate generation, primer length, GC content, template matching, potential primer-dimer formation, intramolecular secondary structure, and off-target matching are considered. At the same time, the amplicon defined by the primer pair must contain a complete Cas12a-recognizable target sequence and satisfy the relevant PAM and local sequence requirements.</p>
-<p>The candidate primer sequences, amplicon target regions, and corresponding crRNA spacer sequences are then evaluated with DNABERT-6. In our workflow, DNABERT-6 does not replace conventional sequence-design rules or wet-lab validation. Rather, it serves as a sequence-context representation and prioritization model that helps rank a large number of candidate primer–crRNA combinations. Model-derived scores are considered together with conventional bioinformatic constraints, allowing us to prioritize combinations with more favorable overall sequence specificity, amplification compatibility, target conservation, and compatibility with Cas12a recognition.</p>
-<p>This strategy compresses a large candidate space into a smaller set of high-priority designs for experimental validation. Importantly, RPA amplification and CRISPR recognition are therefore coupled from the sequence-design stage onward. The primer pair defines the amplicon boundaries, while the crRNA spacer recognizes a pathogen-specific sequence within that amplicon. A candidate is retained only when the primer pair can support target amplification and the resulting amplicon contains an appropriate Cas12a recognition site.</p>
-<p>During detection, RPA first enriches the target sequence under isothermal conditions. The resulting amplicon is then interrogated by the Cas12a–crRNA ribonucleoprotein complex. Only when the amplified sequence matches the corresponding crRNA and satisfies the Cas12a activation requirements is Cas12a trans-cleavage activated. RPA therefore provides target enrichment and signal amplification, whereas Cas12a–crRNA adds a second layer of sequence verification, helping reduce false-positive signals caused by nonspecific amplification.</p>
-<h3 id="design-3-3-fluorescence-reporting-module" data-toc-level="2">3.3 Fluorescence Reporting Module</h3>
-<p>The reporting layer uses a single-stranded DNA fluorescence reporter that can be cleaved by activated Cas12a. In the intact reporter, the fluorophore and quencher remain in close proximity and fluorescence is suppressed. Once Cas12a is activated, trans-cleavage separates the fluorophore from the quencher, producing a fluorescence signal that can be captured by the optical module.</p>
-<p>For parallel detection of five pathogens, each target must be assigned a distinguishable signal identity. Our design therefore uses independent reaction channels together with fluorescence color or channel encoding, creating a direct mapping between pathogen identity and signal-output channel. This allows the detected pathogen to be determined from the channel in which fluorescence is generated.</p>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-3-biological-module-design" data-toc-level="1" data-source-block="9">3. Biological Module Design</h2>
+<h3 id="design-3-1-target-selection" data-toc-level="2" data-source-block="10">3.1 Target Selection</h3>
+<p data-source-block="11">Our detection panel includes respiratory syncytial virus (RSV), human metapneumovirus-B (hMPV-B), Streptococcus pneumoniae (SPN), Bordetella pertussis (BP), and Haemophilus influenzae (HI). For each pathogen, assay design begins with a nucleic-acid region that is representative of the target species and relatively conserved within the population of interest. Candidate target regions must satisfy two key constraints: they should reduce the effect of within-species sequence variation on assay performance, while while being different enough from non-target respiratory pathogens. This provides the sequence basis for two layers of specificity: RPA amplification and crRNA-mediated Cas12a recognition.</p>
+<h3 id="design-3-2-dnabert-6-guided-co-screening-of-rpa-primers-and-crrnas" data-toc-level="2" data-source-block="12">3.2 Deep Learning–Assisted Ranking of RPA Primer–crRNA Combinations Using DNABERT-6 Sequence Representations</h3>
+<p data-source-block="13">We use RPA as the upstream amplification module and couple it directly to CRISPR-Cas12a recognition. Because RPA primers and crRNAs together affect amplification efficiency, target specificity, and Cas12a activation, we do not design them as two separate parts. Instead, we incorporate DNABERT-6-derived sequence representations into a ranking model to prioritize candidate RPA primer–crRNA combinations.</p>
+<p data-source-block="14">Candidate RPA primers and matching crRNA target sites are first generated from the conserved, pathogen-specific regions identified in Section 3.1. RPA is selected because it amplifies nucleic acids under isothermal conditions, avoiding the denaturation, annealing, and extension cycles required for conventional PCR. During candidate generation, primer length, GC content, template matching, potential primer-dimer formation, intramolecular secondary structure, and off-target matching are checked. At the same time, the amplicon defined by the primer pair must contain a complete Cas12a-recognizable target sequence and satisfy the related PAM and local sequence requirements.</p>
+<p data-source-block="15">The candidate primer sequences, amplicon target regions, and matching crRNA spacer sequences are then encoded with DNABERT-6. In our workflow, DNABERT-6 does not replace standard sequence-design rules or wet-lab validation. Rather, it serves as a sequence-context representation module, whose embeddings are integrated with conventional design features and further processed by a ranking model to prioritize candidate primer–crRNA combinations.</p>
+<p data-source-block="16">This strategy reduces a large candidate set into a smaller set of top-ranked designs for experimental validation. Importantly, RPA amplification and CRISPR recognition are therefore designed together from the sequence-design stage. The primer pair defines the amplicon boundaries, while the crRNA spacer recognizes a pathogen-specific sequence within that amplicon. A candidate is kept only when the primer pair can support target amplification and the resulting amplicon contains an appropriate Cas12a recognition site.</p>
+<p data-source-block="17">During detection, RPA first enriches the target sequence under isothermal conditions. The resulting amplicon is then tested by the Cas12a-crRNA ribonucleoprotein complex. Only when the amplified sequence matches the matching crRNA and satisfies the Cas12a activation requirements is Cas12a trans-cleavage activated. RPA therefore provides target increase and signal amplification, whereas Cas12a–crRNA provides sequence-specific recognition of the amplified product, adding an additional verification step after amplification.</p>
+<h3 id="design-3-3-fluorescence-reporting-module" data-toc-level="2" data-source-block="18">3.3 Fluorescence Reporting Module</h3>
+<p data-source-block="19">The reporting layer uses a single-stranded DNA fluorescence reporter that can be cleaved by activated Cas12a. In the intact reporter, the fluorophore and quencher remain close together and fluorescence stays low. Once Cas12a is activated, trans-cleavage separates the fluorophore from the quencher, producing a fluorescence signal that can be captured by the optical module.</p>
 </section>
-<section class="lab-section document-section" id="design-4-dry-lab-model-design" data-observe-section><div class="section-heading"><h2 data-toc-level="1">4. Dry-Lab Model Design</h2></div>
-<h3 id="design-4-1-dnabert-6-assisted-candidate-prioritization" data-toc-level="2">4.1 DNABERT-6-Assisted Candidate Prioritization</h3>
-<p>DNABERT-6 is the core sequence-level model in our dry-lab workflow, and its role is embedded upstream in the co-design of RPA primers and crRNAs. For each pathogen, candidate primer–crRNA combinations are generated around conserved, species-specific target regions. DNABERT-6 is then used to represent sequence-context features and support candidate ranking in combination with conventional sequence-design constraints.</p>
-<p>The model is intended to reduce the search space rather than to output a single experimentally validated sequence. Only a limited number of high-priority primer–crRNA combinations are advanced to wet-lab testing. This increases the efficiency of experimental screening while allowing all five pathogens to be evaluated using a consistent sequence-prioritization framework.</p>
-<h3 id="design-4-2-enzyme-kinetic-modeling" data-toc-level="2">4.2 Enzyme-Kinetic Modeling</h3>
-<p>After sequence-level candidate screening, we construct an enzyme-kinetic model for the RPA–CRISPR/Cas12a system. The purpose of this model is to describe how key component concentrations and their relative ratios influence reaction kinetics, product formation, and downstream signal generation.</p>
-<p>The modeled parameters primarily include the concentrations of forward and reverse RPA primers, recombinase, polymerase, single-stranded DNA-binding protein, and other reaction components for which a mechanistic relationship can be reasonably represented. By translating concentration and stoichiometric combinations into a computationally searchable parameter space, the model can identify theoretically favorable regions of the design space under defined constraints.</p>
-<p>Crucially, the kinetic model is not intended to determine every final experimental condition. Its role is to provide rational initial concentration ranges and component ratios for wet-lab testing. The real RPA–CRISPR/Cas12a system is influenced by additional factors that are difficult to capture completely in a simplified kinetic model, including buffer composition, ionic environment, reaction temperature, reaction time, effective enzyme activity, and non-ideal interactions between components.</p>
-<p>We therefore use a two-stage optimization strategy: dry-lab pre-optimization followed by wet-lab refinement. First, the kinetic model provides theoretically favorable ranges for primer concentrations, enzyme concentrations, and key component ratios. These values are used as informed starting points rather than as final assay settings. Wet-lab experiments then explore the surrounding parameter space and further optimize conditions such as reaction temperature, RNP concentration and ratio, Mg2+ concentration, and other experimentally coupled variables.</p>
-<p>In this framework, dry-lab modeling narrows the initial search space and reduces unnecessary trial-and-error, while wet-lab experiments correct for deviations between the simplified model and the actual biochemical system. The final RPA–CRISPR/Cas12a reaction conditions are therefore established through iterative model-guided experimentation rather than by computational prediction alone.</p>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-4-dry-lab-model-design" data-toc-level="1" data-source-block="20">4. Dry-Lab Model Design</h2>
+<h3 id="design-4-1-dnabert-6-assisted-candidate-prioritization" data-toc-level="2" data-source-block="21">4.1 DNABERT-6-Assisted Candidate Prioritization</h3>
+<p data-source-block="22">DNABERT-6 serves as the sequence representation component in our dry-lab workflow. For each pathogen, candidate primer–crRNA combinations are generated around conserved, species-specific target regions. The four sequence components, including forward primer, reverse primer, crRNA spacer, and amplicon region, are encoded by DNABERT-6 and integrated with conventional sequence-design features for candidate ranking.</p>
+<p data-source-block="23">This increases experimental efficiency while allowing different pathogen targets to be evaluated using a consistent sequence-prioritization framework. Only a limited number of high-priority primer-crRNA combinations are advanced to wet-lab testing. This increases the efficiency of experimental screening while allowing all five pathogens to be evaluated using a consistent sequence-prioritization framework.</p>
+<h3 id="design-4-2-enzyme-kinetic-modeling" data-toc-level="2" data-source-block="24">4.2 Enzyme-Kinetic Modeling</h3>
+<p data-source-block="25">After sequence-level candidate prioritization, we further construct an enzyme-kinetic model for the RPA–CRISPR/Cas12a system to explore how reaction-level parameters influence amplification dynamics and downstream signal generation. While the sequence model prioritizes suitable primer–crRNA combinations, the kinetic model focuses on the optimization of biochemical reaction conditions after target sequence selection.</p>
+<p data-source-block="26">The model describes the effects of adjustable reaction components and their relative ratios on target amplification, Cas12a-mediated recognition, and signal accumulation. The modeled parameters primarily include experimentally controllable factors associated with the RPA and CRISPR/Cas12a reaction system, such as primer concentrations, enzyme concentrations, and other key component ratios. By translating these parameters into a computationally searchable design space, the model identifies theoretically favorable regions for subsequent experimental evaluation.</p>
+<p data-source-block="27">Importantly, the kinetic model is not intended to fully reproduce all biochemical processes or directly determine the final assay conditions. The actual RPA–CRISPR/Cas12a reaction is affected by multiple interacting factors that may not be completely captured in a simplified kinetic framework, including buffer composition, ionic conditions, temperature, reaction time, effective enzyme activity, and non-ideal interactions among reaction components.</p>
+<p data-source-block="28">Therefore, we adopted a model-guided optimization strategy combining computational exploration with experimental refinement. The kinetic model first provides rational parameter ranges and relative component ratios as informed starting points for wet-lab experiments. Experimental optimization is then performed around these predicted regions by evaluating additional assay variables, including reaction temperature, RNP concentration, Mg²⁺ concentration, and other experimentally coupled conditions.</p>
+<p data-source-block="29">In this framework, dry-lab kinetic modeling does not replace experimental optimization but reduces unnecessary exploration of the parameter space. The final RPA–CRISPR/Cas12a reaction conditions are established through iterative refinement between computational modeling and experimental validation, allowing the model to provide mechanistic guidance while accounting for the complexity of the real biochemical system.</p>
+<p data-source-block="30"></p>
 </section>
-<section class="lab-section document-section" id="design-5-portable-detection-device-design" data-observe-section><div class="section-heading"><h2 data-toc-level="1">5. Portable Detection Device Design</h2></div>
-<h3 id="design-5-1-modular-hardware-architecture" data-toc-level="2">5.1 Modular Hardware Architecture</h3>
-<div class="table-wrap document-table-wrap" role="region" aria-label="Document data table" tabindex="0"><table class="data-table document-table"><thead><tr><th scope="col">Hardware module</th><th scope="col">Design responsibility</th></tr></thead><tbody><tr><th scope="row">Temperature-control module</th><td>Provide a stable isothermal environment for the RPA–CRISPR cascade. A heating block, temperature sensor, and feedback controller are used to reduce spatial temperature differences and temporal drift.</td></tr><tr><th scope="row">Optical excitation and acquisition module</th><td>Use LEDs matched to the reporter excitation spectrum together with optical filters and a camera or photodetector to capture fluorescence while minimizing direct excitation-light leakage into the detection path.</td></tr><tr><th scope="row">Dark chamber / optical isolation</th><td>Shield the system from ambient light and fix the relative geometry of the sample, excitation source, and detector to improve signal comparability across operating environments.</td></tr><tr><th scope="row">Control and data-processing module</th><td>Coordinate temperature control, illumination, sampling, and data logging, and provide standardized data for qualitative or semi-quantitative interpretation.</td></tr><tr><th scope="row">Communication and mobile interface</th><td>Transmit device status and readout results wirelessly to a mobile device, reducing the need for users to interpret raw fluorescence measurements.</td></tr><tr><th scope="row">Power and safety module</th><td>Support portable operation while considering overcharge, overcurrent, short-circuit, and thermal-isolation protection.</td></tr><tr><th scope="row">Mechanical and sample-positioning module</th><td>Ensure repeatable positioning of reaction tubes relative to the thermal and optical components and provide consistent geometry for multi-channel detection.</td></tr></tbody></table></div>
-<h3 id="design-5-2-optical-design" data-toc-level="2">5.2 Optical Design</h3>
-<p>Portable fluorescence detection should not rely solely on visual inspection. We therefore design the optical path as a controlled chain of excitation, spectral filtering, and fixed-geometry acquisition. The excitation LED is positioned reproducibly relative to the sample chamber, emission filters are matched to the reporter spectrum, and the camera or optical sensor records only the fluorescence band of interest. An enclosed dark chamber further reduces interference from room lighting, sunlight, and mobile-phone screens.</p>
-<p>This architecture standardizes signal acquisition across pathogen channels and provides a clear interface for future algorithm-based image or fluorescence analysis.</p>
-<h3 id="design-5-3-temperature-control-design" data-toc-level="2">5.3 Temperature-Control Design</h3>
-<p>Because the RPA–CRISPR system does not require rapid thermal cycling, the thermal design can focus on three goals: reaching the target temperature quickly, maintaining stable temperature over time, and ensuring consistency across reaction positions. A heating block transfers heat to the sample chamber, a temperature sensor provides real-time feedback, and the main controller adjusts heating power through a closed-loop strategy.</p>
-<h3 id="design-5-4-mobile-interface-and-user-workflow" data-toc-level="2">5.4 Mobile Interface and User Workflow</h3>
-<p>The mobile interface is organized around the needs of the field operator rather than the underlying electronics. Core pages include device connection, reaction-parameter selection, run status, fluorescence curves or images, and final interpretation. The user is expected to load the sample and reagents, select the appropriate assay protocol, and start the run; temperature control, signal acquisition, and data organization are then coordinated by the device.</p>
-<p>For the five-pathogen panel, the result interface should clearly distinguish RSV, hMPV, SPN, BP, and HI, together with negative or invalid-signal states. This prevents ambiguity and ensures that all displayed labels correspond directly to the targets included in our project.</p>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-5-portable-detection-device-design" data-toc-level="1" data-source-block="31"><strong>5. Portable Detection Device Design</strong></h2>
+<h3 id="design-5-1-modular-hardware-architecture" data-toc-level="2" data-source-block="32"><strong>5.1 Modular Hardware Architecture</strong></h3>
+<p data-source-block="33">To enable integrated on-site detection of the five respiratory pathogens, the portable detection device adopts a compact rectangular structure of approximately 15 cm × 30 cm × 20 cm, integrating multiple functional modules—including the main control and AI core, temperature control, optical acquisition, power management, and mechanical positioning—to support simultaneous reaction and signal readout across multiple samples and channels. The table below summarizes the hardware modules and their design responsibilities.</p>
+<div class="table-wrap research-table-wrap" tabindex="0" role="region" aria-label="design manuscript table 2"><table class="data-table research-table" data-source-block="34"><thead>
+<tr>
+<th scope="col">Hardware Module</th>
+<th scope="col">Design Responsibility</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">Temperature control module</th>
+<td>Uses PTC/ceramic heating elements and high-precision temperature sensors (PT1000/18B20) to hold the RPA–CRISPR reaction within the isothermal range (about 37–43 ℃) via a PID closed-loop algorithm, and reserves a high-temperature lysis zone to support integrated sample pretreatment.</td>
+</tr>
+<tr>
+<th scope="row">Optical excitation and acquisition module</th>
+<td>Excites fluorescence with LEDs matched to the excitation spectra of the reporter probes (e.g., 470 nm blue light), filters out the excitation light with emission filters, and acquires signals with a high-resolution macro camera for quantitative multichannel fluorescence readout.</td>
+</tr>
+<tr>
+<th scope="row">Dark chamber / optical isolation</th>
+<td>Uses an enclosed dark chamber to block ambient light and fixes the relative geometric relationships among the sample, excitation source, and detector to improve signal comparability across different working environments.</td>
+</tr>
+<tr>
+<th scope="row">Main control and AI core module</th>
+<td>Centered on a high-performance SoC, it is responsible for central control and data scheduling, and embeds a trained fluorescence classification model (e.g., YOLOv8n/CNN) to perform real-time inference and result determination on multicolor fluorescence images.</td>
+</tr>
+<tr>
+<th scope="row">Communication and mobile interface</th>
+<td>Interacts wirelessly with mobile devices over Wi-Fi (TCP/IP), transmitting device status, fluorescence images, and interpretation results to the mobile app in real time.</td>
+</tr>
+<tr>
+<th scope="row">Power and safety module</th>
+<td>Provides built-in lithium battery storage (with balancing protection circuitry) for portable operation, and offers overcharge, overcurrent, short-circuit, and thermal-isolation protection.</td>
+</tr>
+<tr>
+<th scope="row">Mechanical and sample positioning module</th>
+<td>Achieves repeatable positioning and multi-face rotation of reaction tubes through a rotating heating stage, drive motors, and position sensors, ensuring consistent geometry of the thermal and optical components across multiple samples.</td>
+</tr>
+</tbody></table></div>
+<h3 id="design-5-2-optical-design" data-toc-level="2" data-source-block="35"><strong>5.2 Optical Design</strong></h3>
+<p data-source-block="36">Portable fluorescence detection should not rely solely on visual inspection. We therefore design the optical path as a controlled “excitation–spectral filtering–fixed-geometry acquisition” chain. On the excitation side, a high-power LED matched to the excitation spectrum of the reporter probe (e.g., a 470 nm blue LED) illuminates the sample well, and its position relative to the sample is fixed mechanically to ensure reproducibility; on the emission side, an emission filter (e.g., an orange filter with a center wavelength of 600 nm and a bandwidth of ±20 nm) selectively transmits the target fluorescence band while rejecting the excitation light and stray light, after which a high-resolution macro camera (e.g., 48 megapixels, supporting 1080P) records only the target fluorescence signal. In this way, each of the five pathogen channels corresponds to an independent excitation–acquisition path and is mapped one-to-one to the fluorescence color of its reporter probe.</p>
+<p data-source-block="37">The entire optical assembly is enclosed in a closed dark chamber to reduce ambient-light interference from indoor lighting, sunlight, and phone screens, and to fix the geometric relationships among the sample, the excitation source, and the detector. This architecture standardizes signal acquisition across pathogen channels and allows the fluorescence images to serve directly as inputs to a downstream AI classification model, providing a clear interface for algorithm-based automatic interpretation—the built-in convolutional neural network (CNN) model classifies the acquired multicolor fluorescence images, thereby replacing manual interpretation and reducing subjective error.</p>
+<h3 id="design-5-3-temperature-control-design" data-toc-level="2" data-source-block="38"><strong>5.3 Temperature Control Design</strong></h3>
+<p data-source-block="39">Because the RPA–CRISPR system does not require rapid thermal cycling, the thermal design can focus on three goals: reaching the target temperature quickly, maintaining temperature stability over time, and ensuring consistency across reaction sites. The heating element uses PTC/ceramic heating cores that transfer heat uniformly to the sample wells; temperature sensors (such as PT1000 or 18B20, with an accuracy of about ±0.3 ℃) provide real-time feedback, and the main controller regulates the heating power through a PID closed-loop algorithm to hold the reaction temperature within the preset isothermal range, with control accuracy of up to ±0.1–±0.5 ℃. To also support integrated sample pretreatment, the device reserves a separate high-temperature lysis zone (about 90 ℃) that is thermally isolated from the low-temperature reaction zone, with rapid cooling by a DC fan to avoid thermal-inertia interference, thereby accomplishing the full “high-temperature lysis–low-temperature reaction” temperature control within a single device.</p>
+<figure id="design-figure-40" class="research-figure" data-source-block="40">
+<a class="research-original" href="../a  图片/research-2026-10-05/design/image1.png" target="_blank" rel="noopener" aria-label="Open original image: Figure 1  Example of the PID Algorithm" data-source-original="../a  图片/research-2026-10-05/design/image1.png"><img src="../a  图片/research-2026-10-05/design/image1.png" width="1269" height="644" alt="Figure 1  Example of the PID Algorithm" loading="lazy" decoding="async" style="width:1269px;aspect-ratio:1269/644"></a>
+<figcaption data-source-block="41"><strong>F</strong><strong>i</strong><strong>gure</strong><strong> </strong><strong>1</strong>  Example of the PID Algorithm</figcaption>
+</figure>
+<figure id="design-figure-42" class="research-figure" data-source-block="42">
+<a class="research-original" href="../a  图片/research-2026-10-05/design/image2.png" target="_blank" rel="noopener" aria-label="Open original image: Figure 2  Interrupt Code for the Temperature Sensor" data-source-original="../a  图片/research-2026-10-05/design/image2.png"><img src="../a  图片/research-2026-10-05/design/image2.png" width="1269" height="760" alt="Figure 2  Interrupt Code for the Temperature Sensor" loading="lazy" decoding="async" style="width:1269px;aspect-ratio:1269/760"></a>
+<figcaption data-source-block="43"><strong>Figure</strong><strong> </strong><strong>2</strong>  Interrupt Code for the Temperature Sensor</figcaption>
+</figure>
+<h3 id="design-5-4-mobile-interface-and-user-workflow" data-toc-level="2" data-source-block="44"><strong>5.4 Mobile Interface and User Workflow</strong></h3>
+<p data-source-block="45">The mobile interface is organized around the needs of on-site operators rather than around the underlying electronics. The mobile app (developed with Android Studio) connects to the device&#x27;s main controller over Wi-Fi via the TCP protocol and transmits data in JSON, integrating functions such as temperature control, signal detection, protocol configuration, wireless communication, image recognition, model inference, data visualization, and result determination. The core pages include three major modules: device connection (Home), reaction-protocol selection (Protocol), and wireless connection (Wi-Fi). During detection, the user only needs to load the sample and reagents, select an appropriate detection protocol, and start the run; temperature control, fluorescence-image acquisition, CNN model inference, and data organization are all coordinated by the device.</p>
+<p data-source-block="46">For the five-pathogen detection panel, the result interface should clearly distinguish the fluorescence channels of RSV, hMPV-B, SPN, BP, and HI, while also including negative or invalid signal states, and should present the interpretation in the form of confidence scores or fluorescence levels to avoid ambiguity and to ensure that all displayed labels correspond directly to the targets covered by this project. In addition, the app should display real-time curves of reaction temperature and fluorescence intensity over time, support user-defined reaction parameters, and maintain consistent compatibility and usability across mainstream phone operating systems (such as HarmonyOS, HyperOS, ColorOS, and OriginOS) to meet the on-site detection needs of different end users.</p>
+
 </section>
-<section class="lab-section document-section" id="design-6-planned-evaluation" data-observe-section><div class="section-heading"><h2 data-toc-level="1">6. Planned Evaluation</h2></div>
-<p>Before system testing, we define the types of measurements required to evaluate whether the design meets its intended specifications. These include discrimination between target and non-target sequences, response across target-concentration gradients, reproducibility between replicate experiments, tolerance to relevant sample-matrix components, time-resolved fluorescence behavior, and compatibility with the portable readout platform.</p>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-6-planned-evaluation" data-toc-level="1" data-source-block="48">6. Planned Evaluation</h2>
+<p data-source-block="49">Before system testing, we define the types of measurements required to evaluate whether the design meets its design goals. These include discrimination between target and non-target sequences, response across target-concentration gradients, reproducibility between replicate experiments, tolerance to related components in the sample matrix, time-resolved fluorescence behavior, and compatibility with the portable readout platform.</p>
 </section>
-<section class="lab-section document-section" id="design-7-design-scope-and-limitations" data-observe-section><div class="section-heading"><h2 data-toc-level="1">7. Design Scope and Limitations</h2></div>
-<p>To maintain a clear engineering scope, we explicitly define the limitations of the current workflow. First, extreme physicochemical properties of a target sequence—such as very high or very low GC content or highly stable secondary structures—may impose intrinsic limits on assay performance. Our workflow can improve system compatibility, but it cannot eliminate constraints arising from the underlying biology of the target itself. Second, the current iterative training and validation framework focuses on respiratory pathogens. Expansion to substantially different pathogen classes will require additional experimental data and further calibration of model performance.</p>
+<section class="lab-section research-section" data-observe-section>
+<h2 id="design-7-design-scope-and-limitations" data-toc-level="1" data-source-block="50">7. Design Scope and Limitations</h2>
+<p data-source-block="51">To maintain a clear engineering scope, we clearly define the limitations of the current workflow. First, extreme physical and chemical properties of a target sequence, such as very high or very low GC content or highly stable secondary structures, may create basic limits on assay performance. Our workflow can improve system compatibility, but it cannot remove limits caused by the underlying biology of the target itself. Second, the current iterative training and validation framework focuses on respiratory pathogens. Expansion to very different pathogen classes will require additional experimental data and further calibration of model performance.</p>
 </section>
-<section class="lab-section document-section" id="design-references" data-observe-section><div class="section-heading"><h2 data-toc-level="1">References</h2></div>
-<p>1. GBD 2021 Upper Respiratory Infections and Otitis Media Collaborators. Global, regional, and national burden of upper respiratory infections and otitis media, 1990–2021: a systematic analysis from the Global Burden of Disease Study 2021. Lancet Infect Dis. 2024;24(10):1112–1132.</p>
-<p>2. Kaminski MM, Abudayyeh OO, Gootenberg JS, Zhang F, Collins JJ. CRISPR-based diagnostics. Nat Biomed Eng. 2021;5(7):643–656.</p>
-<p>3. Mao K, Zhang H, Yang Z. Realizing the potential of CRISPR-Cas systems in point-of-care nucleic acid diagnostics. Trends Biotechnol. 2024;42(3):328–342.</p>
+<section class="lab-section research-section" data-observe-section>
+<details class="reference-fold research-reference" id="design-references"><summary><span data-toc-level="1" data-source-block="52">References</span></summary>
+<p data-source-block="53">1.GBD 2023 Lower Respiratory Infections and Antimicrobial Resistance Collaborators. Global burden of lower respiratory infections and aetiologies, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023. Lancet Infect Dis. 2026;26(4):343-361. doi:10.1016/S1473-3099(25)00689-9. PMID:41412141.</p>
+<p data-source-block="54">2.Lim J, Koprowski K, Stavins R, Xuan N, Hoang TH, Baek J, et al. Point-of-Care Multiplex Detection of Respiratory Viruses. ACS Sens. 2024;9(8):4058-4068. doi:10.1021/acssensors.4c00992. PMID:39101394.</p>
+<p data-source-block="55">3.Lin M, Qiu Z, Hao M, Qi W, Zhang T, Shen Y, et al. Cas12a Cis-cleavage mediated lateral flow assay enables multiplex and ultra-specific nucleic acid detection. Nat Commun. 2025;16(1):5597. doi:10.1038/s41467-025-60917-9. PMID:40593618.</p>
+<p data-source-block="56">4.Chen Y, Wang X, Zhang J, Jiang Q, Qiao B, He B, et al. Split crRNA with CRISPR-Cas12a enabling highly sensitive and multiplexed detection of RNA and DNA. Nat Commun. 2024;15(1):8342. doi:10.1038/s41467-024-52691-x. PMID:39333528.</p>
+<p data-source-block="57">5.Liu H, Yin H, Xiu L, Wu W, Hu Q, Xia Y, et al. One-Pot Isothermal Nucleic Acid Amplification Assisted CRISPR/Cas Detection Technology: Challenges, Strategies, and Perspectives. Adv Sci (Weinh). 2025;12(37). doi:10.1002/advs.202506716. PMID:40884263.</p>
+<p data-source-block="58">6.Cheng ZH, Luo XY, Yu SS, Min D, Zhang SX, Li XF, et al. Tunable control of Cas12 activity promotes universal and fast one-pot nucleic acid detection. Nat Commun. 2025;16(1):1166. doi:10.1038/s41467-025-56516-3. PMID:39885211.</p>
+<p data-source-block="59">7.Huang B, Guo L, Yin H, Wu Y, Zeng Z, Xu S, et al. Deep learning enhancing guide RNA design for CRISPR/Cas12a-based diagnostics. iMeta. 2024;3(4). doi:10.1002/imt2.214. PMID:39135699.</p>
+</details>
 </section>
-    </article>
+</article>
   </div>
 </main>
 
@@ -165,6 +306,37 @@ window.setTimeout(function () {
   var loader = document.getElementById('igem-loader');
   if (loader) { loader.classList.add('is-leaving'); document.body.classList.remove('loading-lock'); window.setTimeout(function () { loader.remove(); }, 700); }
 }, 5200);
+</script>
+
+<script data-research-fragments>
+(() => {
+  const main = document.querySelector('main');
+  // Production builds rename images; original-image links follow the loaded asset.
+  main.querySelectorAll('.research-original, .measurement-map__original a').forEach(link => {
+    const image = link.querySelector('img') || link.closest('figure')?.querySelector('img');
+    if (!image) return;
+    const sync = () => { link.href = image.currentSrc || image.src; };
+    sync();
+    image.addEventListener('load', sync);
+  });
+
+  function reveal(hash, scroll) {
+    let id;
+    try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target || !main.contains(target)) return;
+    for (let node = target; node && node !== main; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({behavior:'instant',block:'start'}));
+  }
+  main.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (link) reveal(link.hash, false);
+  });
+  window.addEventListener('hashchange', () => reveal(location.hash, true));
+  reveal(location.hash, true);
+})();
 </script>
 </body>
 </html>

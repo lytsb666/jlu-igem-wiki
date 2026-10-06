@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="../样式/style.css" />
       <link rel="stylesheet" href="../样式/loading.css" />
   <link rel="stylesheet" href="../样式/full-width-layout.css">
+<link rel="stylesheet" href="../样式/wetlab-pages.css" />
+
   <link rel="stylesheet" href="../样式/protocol.css" />
 </head>
 
-  <body class="loading-lock">
+  <body class="research-manuscript loading-lock">
 <div id="igem-loader" class="igem-loader" role="status" aria-live="polite" aria-label="Loading page">
   <video class="loading-video" autoplay muted playsinline preload="auto">
     <source src="../b%20%20%E8%A7%86%E9%A2%91/loading.mp4" type="video/mp4" />
@@ -86,27 +88,54 @@
 </nav>
 
 
-    <main class="protocol-main">
+    <main class="protocol-main" id="main-content" tabindex="-1">
       <header class="protocol-page-heading"><h1>Protocol</h1></header>
-      <div class="protocol-grid" aria-label="Protocol categories">
+      <div class="lab-layout protocol-layout"><aside class="page-toc protocol-toc" aria-label="Protocol section directory"><nav>
+<div><a href="#category-rsv" data-protocol-link>RSV N gene</a><ul>
+<li><a href="#panel-rsv-1" data-protocol-link>Primer Screening</a></li>
+<li><a href="#panel-rsv-2" data-protocol-link>System Optimization</a></li>
+<li><a href="#panel-rsv-3" data-protocol-link>Performance Evaluation</a></li>
+</ul></div>
+<div><a href="#category-hmpv-b" data-protocol-link>hMPV-B N gene</a><ul>
+<li><a href="#panel-hmpv-b-1" data-protocol-link>Primer Screening</a></li>
+<li><a href="#panel-hmpv-b-2" data-protocol-link>System Optimization</a></li>
+<li><a href="#panel-hmpv-b-3" data-protocol-link>Performance Evaluation</a></li>
+</ul></div>
+<div><a href="#category-bp" data-protocol-link>BP-IS1663 gene</a><ul>
+<li><a href="#panel-bp-1" data-protocol-link>Primer Screening</a></li>
+<li><a href="#panel-bp-2" data-protocol-link>System Optimization</a></li>
+<li><a href="#panel-bp-3" data-protocol-link>Performance Evaluation</a></li>
+</ul></div>
+<div><a href="#category-hi" data-protocol-link>HI-omp P6 gene</a><ul>
+<li><a href="#panel-hi-1" data-protocol-link>Primer Screening</a></li>
+<li><a href="#panel-hi-2" data-protocol-link>System Optimization</a></li>
+<li><a href="#panel-hi-3" data-protocol-link>Performance Evaluation</a></li>
+</ul></div>
+<div><a href="#category-spn" data-protocol-link>SPN lytA gene</a><ul>
+<li><a href="#panel-spn-1" data-protocol-link>Primer Screening</a></li>
+<li><a href="#panel-spn-2" data-protocol-link>System Optimization</a></li>
+<li><a href="#panel-spn-3" data-protocol-link>Performance Evaluation</a></li>
+</ul></div>
+</nav></aside><div class="protocol-content">
+<div class="protocol-grid" aria-label="Protocol categories">
         <div class="protocol-category">
-          <button type="button" class="protocol-card" id="category-rsv" aria-controls="menu-rsv" aria-expanded="false" aria-label="Protocol of RSV"><span class="protocol-card-label">RSV</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
+          <button type="button" class="protocol-card" id="category-rsv" aria-controls="menu-rsv" aria-expanded="false" aria-label="Protocol for RSV N gene"><span class="protocol-card-label">RSV N gene</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
           <nav class="protocol-index" id="menu-rsv" aria-label="RSV protocol sections" hidden><ol><li><button type="button" class="protocol-index-button" id="index-rsv-1" aria-controls="panel-rsv-1" aria-expanded="false"><span class="protocol-index-number">1.</span><span>Primer Screening</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-rsv-2" aria-controls="panel-rsv-2" aria-expanded="false"><span class="protocol-index-number">2.</span><span>System Optimization</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-rsv-3" aria-controls="panel-rsv-3" aria-expanded="false"><span class="protocol-index-number">3.</span><span>Performance Evaluation</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li></ol></nav>
         </div>
 <div class="protocol-category">
-          <button type="button" class="protocol-card" id="category-hmpv-b" aria-controls="menu-hmpv-b" aria-expanded="false" aria-label="Protocol of hMPV-B"><span class="protocol-card-label">hMPV-B</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
+          <button type="button" class="protocol-card" id="category-hmpv-b" aria-controls="menu-hmpv-b" aria-expanded="false" aria-label="Protocol for hMPV-B N gene"><span class="protocol-card-label">hMPV-B N gene</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
           <nav class="protocol-index" id="menu-hmpv-b" aria-label="hMPV-B protocol sections" hidden><ol><li><button type="button" class="protocol-index-button" id="index-hmpv-b-1" aria-controls="panel-hmpv-b-1" aria-expanded="false"><span class="protocol-index-number">1.</span><span>Primer Screening</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-hmpv-b-2" aria-controls="panel-hmpv-b-2" aria-expanded="false"><span class="protocol-index-number">2.</span><span>System Optimization</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-hmpv-b-3" aria-controls="panel-hmpv-b-3" aria-expanded="false"><span class="protocol-index-number">3.</span><span>Performance Evaluation</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li></ol></nav>
         </div>
 <div class="protocol-category">
-          <button type="button" class="protocol-card" id="category-bp" aria-controls="menu-bp" aria-expanded="false" aria-label="Protocol of BP"><span class="protocol-card-label">BP</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
+          <button type="button" class="protocol-card" id="category-bp" aria-controls="menu-bp" aria-expanded="false" aria-label="Protocol for BP-IS1663 gene"><span class="protocol-card-label">BP-IS1663 gene</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
           <nav class="protocol-index" id="menu-bp" aria-label="BP protocol sections" hidden><ol><li><button type="button" class="protocol-index-button" id="index-bp-1" aria-controls="panel-bp-1" aria-expanded="false"><span class="protocol-index-number">1.</span><span>Primer Screening</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-bp-2" aria-controls="panel-bp-2" aria-expanded="false"><span class="protocol-index-number">2.</span><span>System Optimization</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-bp-3" aria-controls="panel-bp-3" aria-expanded="false"><span class="protocol-index-number">3.</span><span>Performance Evaluation</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li></ol></nav>
         </div>
 <div class="protocol-category">
-          <button type="button" class="protocol-card" id="category-hi" aria-controls="menu-hi" aria-expanded="false" aria-label="Protocol of HI"><span class="protocol-card-label">HI</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
+          <button type="button" class="protocol-card" id="category-hi" aria-controls="menu-hi" aria-expanded="false" aria-label="Protocol for HI-omp P6 gene"><span class="protocol-card-label">HI-omp P6 gene</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
           <nav class="protocol-index" id="menu-hi" aria-label="HI protocol sections" hidden><ol><li><button type="button" class="protocol-index-button" id="index-hi-1" aria-controls="panel-hi-1" aria-expanded="false"><span class="protocol-index-number">1.</span><span>Primer Screening</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-hi-2" aria-controls="panel-hi-2" aria-expanded="false"><span class="protocol-index-number">2.</span><span>System Optimization</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-hi-3" aria-controls="panel-hi-3" aria-expanded="false"><span class="protocol-index-number">3.</span><span>Performance Evaluation</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li></ol></nav>
         </div>
 <div class="protocol-category">
-          <button type="button" class="protocol-card" id="category-spn" aria-controls="menu-spn" aria-expanded="false" aria-label="Protocol of SPN"><span class="protocol-card-label">SPN</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
+          <button type="button" class="protocol-card" id="category-spn" aria-controls="menu-spn" aria-expanded="false" aria-label="Protocol for SPN lytA gene"><span class="protocol-card-label">SPN lytA gene</span><span class="protocol-card-toggle" aria-hidden="true">+</span></button>
           <nav class="protocol-index" id="menu-spn" aria-label="SPN protocol sections" hidden><ol><li><button type="button" class="protocol-index-button" id="index-spn-1" aria-controls="panel-spn-1" aria-expanded="false"><span class="protocol-index-number">1.</span><span>Primer Screening</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-spn-2" aria-controls="panel-spn-2" aria-expanded="false"><span class="protocol-index-number">2.</span><span>System Optimization</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li><li><button type="button" class="protocol-index-button" id="index-spn-3" aria-controls="panel-spn-3" aria-expanded="false"><span class="protocol-index-number">3.</span><span>Performance Evaluation</span><span class="protocol-index-arrow" aria-hidden="true">↗</span></button></li></ol></nav>
         </div>
       </div>
@@ -3103,7 +3132,7 @@
         </article>
         <article class="protocol-panel" id="panel-hi-1" aria-labelledby="heading-hi-1" hidden>
           <header class="protocol-panel-header">
-            <div><p data-source-block="658" class="protocol-category-label">Protocol for a simulated plasmid carrying HI-omp P6</p><h2 data-source-block="659" id="heading-hi-1" tabindex="-1">1 Primer Screening</h2></div>
+            <div><p data-source-block="658" class="protocol-category-label">Protocol for a simulated plasmid carrying the HI-omp P6 gene</p><h2 data-source-block="659" id="heading-hi-1" tabindex="-1">1 Primer Screening</h2></div>
             <button type="button" class="protocol-back" data-index="index-hi-1">↑ Back to index</button>
           </header>
           <div class="protocol-document">
@@ -3747,7 +3776,8 @@
           </div>
         </article>
       </div>
-    </main>
+    </div></div>
+</main>
 
     <footer class="site-footer">
       <div class="footer-content">
