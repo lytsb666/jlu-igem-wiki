@@ -1,0 +1,115 @@
+{
+  "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\msg\\file\\2026-10\\model.docx",
+  "source_sha256": "667692f852dbb569db68fdb969fa766c4cb77f77b1ac559aced18e32fdd71360",
+  "paragraphs": 578,
+  "math_objects": 73,
+  "comments": [
+    {
+      "id": "0",
+      "text": "带序号的排序框"
+    },
+    {
+      "id": "1",
+      "text": "带序号的排序框"
+    },
+    {
+      "id": "2",
+      "text": "伪代码框"
+    },
+    {
+      "id": "3",
+      "text": "伪代码框"
+    },
+    {
+      "id": "4",
+      "text": "伪代码框"
+    }
+  ],
+  "figures": [
+    {
+      "number": 1,
+      "source_paragraph": 16,
+      "url": "../a  图片/drylab/overall-workflow.jpeg",
+      "sha256": "703a0ae8aa7f607f0f4333aea44b0afed52303511640e8726486a9f83958b321"
+    },
+    {
+      "number": 2,
+      "source_paragraph": 44,
+      "url": "../a  图片/drylab/model-architecture.jpeg",
+      "sha256": "46973c7a61f29b083bf134f1b615cb9bbbbe12fe9895b2a774c19aeb9943f07a"
+    },
+    {
+      "number": 3,
+      "source_paragraph": 195,
+      "url": "../a  图片/drylab/mechanism-01-primer-complex.jpeg",
+      "sha256": "2206cbc76338224d43c757170731dd8f8d057aa0083b7e200da83ea5edf70340"
+    },
+    {
+      "number": 4,
+      "source_paragraph": 203,
+      "url": "../a  图片/drylab/mechanism-02-reverse-transcription.jpeg",
+      "sha256": "c9ea2601c89bbeba18520e914a8f9856d06ce3dd626b8b77dd9c7d3da51b2918"
+    },
+    {
+      "number": 5,
+      "source_paragraph": 211,
+      "url": "../a  图片/drylab/mechanism-03-rpa.jpeg",
+      "sha256": "bcddb8f09d05ed7e30a79113adc9ac5a4a4dd60265215e7b1d4a1cb90d2dd0c7"
+    },
+    {
+      "number": 6,
+      "source_paragraph": 220,
+      "url": "../a  图片/drylab/mechanism-04-cas12a.jpeg",
+      "sha256": "54be3dd467166f0e89bf664054879626f08afb9f9aa781d6ab5cc6e1a52d043d"
+    },
+    {
+      "number": 7,
+      "source_paragraph": 529,
+      "url": "../assets/model/images/simulation-results.jpeg",
+      "sha256": "efa0c0a43b67f792b578de9bddf322abc9b538f773ee21ae60c589807f4c2414"
+    }
+  ],
+  "tables": [
+    {
+      "title": "RSV top 10 candidate combinations",
+      "rows": 41,
+      "source_text": "ComponentSequence (5′→3′)Length (bases)Candidate 1Forward primer FACTGTGTATAGCAGCACTTGTAATAACCAA30Reverse primer RTGCAATGCCAAAGTGCACAAAAACATCTAT30crRNA spacer sequenceGTTATTACAAGTGCTGCTA19Candidate 2Forward primer FACCATATATTGAACAATCCAAAAGCATCAT30Reverse primer RATTTTCTTTGAGTTGCTCTGCATATGCTTT30crRNA spacer sequenceCTAACTTCTCAAGTGTGGTCCT22Candidate 3Forward primer FACCATATATTGAACAATCCAAAAGCATCAT30Reverse primer RATTTTCTTTGAGTTGCTCTGCATATGCTTT30crRNA spacer sequenceGCTGCATCATAAAGATCCTG20Candidate 4Forward primer FACTGTGTATAGCAGCACTTGTAATAACCAA30Reverse primer RTGCAATGCCAAAGTGCACAAAAACATCTAT30crRNA spacer sequenceGTTATTACAAGTGCTGCTAT20Candidate 5Forward primer FACTGTGTATAGCAGCACTTGTAATAACCAA30Reverse primer RTGCAATGCCAAAGTGCACAAAAACATCTAT30crRNA spacer sequenceGTTATTACAAGTGCTGCTATAC22Candidate 6Forward primer FTATATTGAACAATCCAAAAGCATCATTGCT30Reverse primer RATTTTCTTTGAGTTGCTCTGCATATGCTTT30crRNA spacer sequenceCTAACTTCTCAAGTGTGGTC20Candidate 7Forward primer FTAGATGTTTTTGTGCATCTTGGCATTGCA29Reverse primer RAACCATAGGCATTCATAAACAATCCTGCA29crRNA spacer sequenceCAGGATTGTTTATGAATGCCTATG24Candidate 8Forward primer FAGCAGCACTTGTAATAACCAAATTAGCAGCA31Reverse primer RAACCATAGGCATTCATAAACAATCCTGCAAA31crRNA spacer sequenceGCATTGCACAATCATCAACAA21Candidate 9Forward primer FAGCAGCACTTGTAATAACCAAATTAGCAGCA31Reverse primer RAACCATAGGCATTCATAAACAATCCTGCAAA31crRNA spacer sequenceGCATTGCACAATCATCAACAAG22Candidate 10Forward primer FTATATTGAACAATCCAAAAGCATCATTGCT30Reverse primer RATTTTCTTTGAGTTGCTCTGCATATGCTTT30crRNA spacer sequenceGCTGCATCATAAAGATCCTGGT22"
+    },
+    {
+      "title": "Nomenclature",
+      "rows": 30,
+      "source_text": "AbbreviationDescriptionGSingle-stranded DNA-binding protein (Gp32)mNumber of Gp32-binding sites on a primerRRecombinase complex (UvsX.6*UvsY)FDNA primerFG(m)Primer/Gp32 complexFG(m)R*Unstable primer/Gp32/single recombinase complexFG(m-1)RPrimer/Gp32/single recombinase complexBNumber of base pairs in the DNA templatenNumber of recombinase-binding sites on a primernpNumber of base pairs in the primer / primer lengthFG(m-1)R(n)Primer/Gp32/n recombinase complexFR(n)Primer/n recombinase complexRNATarget RNA sequence fragmentRTReverse transcriptaseGSPGene-specific primerRT_RNAReverse transcriptaser/target RNA sequence fragment complexcDNAComplementary DNA of the target RNA sequence fragmentDNADouble-stranded DNA corresponding to the target RNA sequence fragmentPDNA polymeraseP_cDNAPolymerase/cDNA complexFR(n)DPrimer/n recombinase/DNA complexFDPrimer/DNA complexPFDPolymerase/primer/DNA complex complexCas12aA protein from the CRISPR familypre_crRNAFree crRNA precursorsCas12a_pre_crRNACas12a/pre_crRNA complexCas12a_crRNACas12a/crRNA complexCas12a_crRNA_DNACas12a/crRNA/DNA complexXThe DNA products after enzymatic cleavage"
+    },
+    {
+      "title": "Rate constants",
+      "rows": 32,
+      "source_text": "AbbreviationDescriptionValue(Unit)Referencek(1f)Forward rate constant for Eq.1 0.5 (1/(nM×s)) [15] k(1)(r)Reverse rate constant for Eq. 1 5E3 (1/s) [15] k(2af)Forward rate constant for Eq.2a 0.1 (1/(nM×s)) [15]k(2ar)Reverse rate constant for Eq. 2a 1.471 (1/s)[15]k(2b)Rate constant for Eq.2b 47E-3 (1/s)[15]k(2cf) Forward rate constant for Eq.2c 0.1 (1/(nM×s))[15]k(2cr)Reverse rate constant for Eq. 2c33 (1/s)[15]k(2d)Rate constant for Eq.2d4.6E-3 (1/s)[15]k(3af)Forward rate constant for Eq.3a2.6E-2 (1/(nM×s))[8]k(3ar)Reverse rate constant for Eq. 3a 0.7 (1/s)[8]k(3b)Rate constant for Eq.3b 70 (1/s)[8]k(3cf)Forward rate constant for Eq.3c2.5E-3（1/nM×s）[8]k(3cr)Reverse rate constant for Eq. 3c 6E-2 (1/s)[8]k(3d)Rate constant for Eq.3d0.99(1/s)(k3d=87/(B-np))[8]k(4af)Forward rate constant for Eq.4a 0.1 (1/(nM×s))[15]k(4ar)Reverse rate constant for Eq. 4a59.37 (1/s)[15]k(4b1cat)Rate constant for Eq.4b14.22 (1/s)[9,15]K(4b2cat)Rate constant for Eq.4b28.32（1/s)[9,15]k4cRate constant for Eq.4c4.1E-9(1/(nM×s))[15]k4dRate constant for Eq.4d1.13E-9(1/(nM×s))[15]k(5af)Forward rate constant for Eq.5a1.2E-2 (1/(nM×s))[15]k(5ar)Reverse rate constant for Eq. 5a0.06 (1/s)[15]k(5b)Rate constant for Eq.5b0.99(1/s)(k5b=87/(B-np))[15]K(6af)Forward rate constant for Eq.6a2.9E-3(1/(nM×s))[12]K(6ar)Reverse rate constant for Eq. 6a1.6E-6(1/s)[12]k(6b)Rate constant for Eq.6b2.3E-3(1/s)[12]K(6cf)Forward rate constant for Eq.6c1.1E-1(1/(nM×s))[13]K(6cr)Reverse rate constant for Eq. 6c5.9E-6(1/s)[13]k(6d)Rate constant for Eq.6d17(1/s)[14]KmKm for Eq.6d1E3(nM)[14]KiCompetitive Binding Constant of ADP to Free Recombinase UvsX1E5（nM）[7]"
+    },
+    {
+      "title": "Initial conditions",
+      "rows": 15,
+      "source_text": "AbbreviationValueCbead1 μMNR5.9NG0.9NP1.3Ftotal4E2 nMRNA44 nMCas12a10 nMcrRNA10 nMRT20 nMnp32 bpdNTP4E4 nMB120 bpReporter2000 nMATP1.4 mM"
+    },
+    {
+      "title": "Global coarse search",
+      "rows": 4,
+      "source_text": "SymbolValuePrimer (F）[0.4862, 0.7262] μMCas12a/crRNA[79.2256, 100.0000] nMRT[37.9946, 40.0000] μM"
+    },
+    {
+      "title": "Fine local search",
+      "rows": 4,
+      "source_text": "SymbolValuePrimer (F）0.7106 μMCas12a/crRNA81.9139 nMRT39.9959 μM"
+    }
+  ],
+  "editorial_changes": [
+    "Duplicate simulation Figure 5 renumbered Figure 7.",
+    "TOC wording Kinetic equations; existing fragment retained."
+  ],
+  "source_issues": [
+    "Intro/method still describe PDE; System State and simulation specify homogeneous ODE/LSODA.",
+    "Intro lists five optimization components, detailed optimization and tables list three.",
+    "Simulation prose describes four curves and an early DNA peak; supplied graph contains DNA and X with no DNA peak.",
+    "Some formulas are plain linear text in the supplied DOCX. No missing operators or denominators were invented.",
+    "RT initial/optimization units differ substantially; retained exactly as supplied."
+  ]
+}

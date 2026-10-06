@@ -1,0 +1,150 @@
+{
+  "production": [
+    {
+      "url": "http://127.0.0.1:5199/Instrument/hardware.html",
+      "status": 200,
+      "bytes": 6222
+    },
+    {
+      "url": "http://127.0.0.1:5199/Instrument/model.html",
+      "status": 200,
+      "bytes": 109087
+    },
+    {
+      "url": "http://127.0.0.1:5199/Instrument/software.html",
+      "status": 200,
+      "bytes": 29574
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/-zg-Y64I.jpg",
+      "status": 200,
+      "bytes": 157505
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/B9FbOIYC.css",
+      "status": 200,
+      "bytes": 14308
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/BAHkoB4Q.jpeg",
+      "status": 200,
+      "bytes": 69110
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/BCJ-gy7e.jpeg",
+      "status": 200,
+      "bytes": 111659
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/BwGjqiUZ.js",
+      "status": 200,
+      "bytes": 262
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/C16dvBr-.jpg",
+      "status": 200,
+      "bytes": 309587
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/C7-v1MhA.jpg",
+      "status": 200,
+      "bytes": 316013
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/CEBhv4ac.css",
+      "status": 200,
+      "bytes": 28282
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/CESeAx7V.jpeg",
+      "status": 200,
+      "bytes": 215710
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/CQkzXgo-.webp",
+      "status": 200,
+      "bytes": 1043820
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/CiDd1n1b.jpeg",
+      "status": 200,
+      "bytes": 64679
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/CjANLTIB.jpg",
+      "status": 200,
+      "bytes": 311295
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/CkaFD_Gs.jpg",
+      "status": 200,
+      "bytes": 385882
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/D1-C49nL.css",
+      "status": 200,
+      "bytes": 4763
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/D3FosjB9.jpeg",
+      "status": 200,
+      "bytes": 64394
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/DCxp_X13.css",
+      "status": 200,
+      "bytes": 5520
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/DFTGXXEA.css",
+      "status": 200,
+      "bytes": 34864
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/DFp1Ms10.css",
+      "status": 200,
+      "bytes": 18970
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/DNix5SV5.jpeg",
+      "status": 200,
+      "bytes": 84523
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/DkvJCmGP.png",
+      "status": 200,
+      "bytes": 78273
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/DnS4Uv44.jpeg",
+      "status": 200,
+      "bytes": 72285
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/GPNwYeqv.jpeg",
+      "status": 200,
+      "bytes": 144388
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/KGnKXT6E.webp",
+      "status": 200,
+      "bytes": 467760
+    },
+    {
+      "url": "http://127.0.0.1:5199/assets/bDRmIJst.js",
+      "status": 200,
+      "bytes": 1520
+    },
+    {
+      "url": "http://127.0.0.1:5199/software-resources/software-user-guide-first-generation.pdf",
+      "status": 200,
+      "bytes": 502623
+    },
+    {
+      "url": "http://127.0.0.1:5199/software-resources/software-user-guide-second-generation.pdf",
+      "status": 200,
+      "bytes": 1187346
+    }
+  ],
+  "existing_manual_hashes_unchanged": true
+}

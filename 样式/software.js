@@ -1,3 +1,4 @@
+import { enhanceSectionNavigation } from './instrument-navigation.js'
 // Enhancements are scoped to Software. The six chapters remain readable without JS.
 const softwareRoot = document.querySelector('.software-page .sw-main')
 if (softwareRoot) {
@@ -9,8 +10,6 @@ if (softwareRoot) {
     image.addEventListener('load', sync)
     sync()
   }
-  const originalConnection = softwareRoot.querySelector('[data-sw-connection-original]')
-  if (originalConnection) originalConnection.href = new URL('../assets/software/originals/doc1-image5.jpeg', import.meta.url).href
 
   const animation = softwareRoot.querySelector('[data-sw-animation]')
   const pauseButton = animation?.querySelector('[data-sw-pause]')
@@ -57,26 +56,6 @@ if (softwareRoot) {
   document.addEventListener('visibilitychange', updateMotion)
   updateMotion()
 
-  const tocLinks = [...softwareRoot.querySelectorAll('.sw-toc a[href^="#software-"]')]
-  const sections = [...softwareRoot.querySelectorAll('.sw-section[id]')]
-  const visible = new Map()
-  function markSection(id) {
-    for (const link of tocLinks) {
-      if (link.getAttribute('href') === '#' + id) link.setAttribute('aria-current', 'location')
-      else link.removeAttribute('aria-current')
-    }
-  }
-  tocLinks.forEach((link) => link.addEventListener('click', () => markSection(link.hash.slice(1))))
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => visible.set(entry.target.id, entry.isIntersecting))
-      const firstVisible = sections.find((section) => visible.get(section.id))
-      if (firstVisible) markSection(firstVisible.id)
-    }, { rootMargin: '-150px 0px -55% 0px', threshold: 0 })
-    sections.forEach((section) => observer.observe(section))
-  }
-  if (sections.some((section) => '#' + section.id === window.location.hash)) {
-    markSection(window.location.hash.slice(1))
-  }
+  enhanceSectionNavigation(softwareRoot, '.sw-toc ol a[href^="#"]')
   window.addEventListener('pagehide', stopTimer)
 }

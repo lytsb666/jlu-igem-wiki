@@ -144,6 +144,16 @@
       </header>
 
       <div class="sw-shell">
+        <aside class="sw-toc page-toc" aria-label="Software page contents">
+          <nav id="software-navigation" aria-label="Software sections" tabindex="-1"><span class="sw-toc-title">On this page</span><ol>
+            <li><a href="#software-overview" aria-current="location"><span>01</span> Overview</a></li>
+            <li><a href="#software-architecture"><span>02</span> Architecture</a></li>
+            <li><a href="#software-validation"><span>03</span> Validation</a></li>
+            <li><a href="#software-reusability"><span>04</span> Reusability</a></li>
+            <li><a href="#software-user-guide"><span>05</span> User Guide</a></li>
+            <li><a href="#software-open-source"><span>06</span> Open Source</a></li>
+          </ol><a class="sw-toc-top" href="#software-content">Back to top ↑</a></nav>
+        </aside>
         <article class="sw-article">
           <section class="sw-section" id="software-overview" aria-labelledby="sw-overview-heading">
             <div class="sw-section-heading"><span class="sw-section-number">01</span><h2 id="sw-overview-heading">Overview</h2></div>
@@ -161,7 +171,6 @@
             <ol class="sw-data-flow" aria-label="Device and app data flow">
               <li><span>1</span>Connect over Wi-Fi</li><li><span>2</span>Send parameters</li><li><span>3</span>AI Box acquires and analyzes</li><li><span>4</span>Return temperature, curves, images and labels</li><li><span>5</span>App displays results</li>
             </ol>
-            <p class="sw-note">Five tube-result labels and two fluorescence curves describe different outputs. The second-generation protocol supplies only <code>data1</code> and <code>data2</code> for plotting.</p>
             <h3>Developing alongside the detector</h3>
             <p>The mobile interface began with device connection and expanded to support control, reaction monitoring, acquisition, and result viewing.</p>
             <ol class="sw-development">
@@ -170,70 +179,58 @@
               <li><span class="sw-stage-number">Stage 3</span><div><h4>Presenting the results</h4><p><strong>Need:</strong> viewing the acquired image alongside device-side analysis. <strong>Added:</strong> two-tube results in the first generation, then five color-coded labels and servo control in the second.</p></div></li>
             </ol>
             <div class="sw-overview-figures">
-              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/originals/doc1-image2.jpeg"><img src="../assets/software/originals/doc1-image2.jpeg" width="1600" height="2560" alt="Supplied app screen displaying 43.1 degrees Celsius, an acquisition control and TUBE1 and TUBE2 curves" loading="lazy" decoding="async"/></a><figcaption>Reaction display: temperature and two fluorescence curves. This supplied screen illustrates the monitoring interface. Select an image to inspect it at full size.</figcaption></figure>
-              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/originals/doc1-image8.jpeg"><img src="../assets/software/originals/doc1-image8.jpeg" width="1600" height="2560" alt="Supplied second-generation result screen with five tube labels and an image of five tubes" loading="lazy" decoding="async"/></a><figcaption>Result display: five tube labels and the image returned by the AI Box. The archived timestamp remains visible in the original screenshot.</figcaption></figure>
+              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/images/reaction-display.jpg"><img src="../assets/software/images/reaction-display.jpg" width="1600" height="2480" alt="Supplied app screen displaying 43.1 degrees Celsius, an acquisition control and TUBE1 and TUBE2 curves" loading="lazy" decoding="async"/></a><figcaption>Reaction display: temperature and two fluorescence curves. This supplied screen illustrates the monitoring interface.</figcaption></figure>
+              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/images/result-display.jpg"><img src="../assets/software/images/result-display.jpg" width="1600" height="2480" alt="Supplied second-generation result screen with five tube labels and an image of five tubes" loading="lazy" decoding="async"/></a><figcaption>Result display: five tube labels and the image returned by the AI Box.</figcaption></figure>
             </div>
           </section>
 
           <section class="sw-section" id="software-architecture" aria-labelledby="sw-architecture-heading">
             <div class="sw-section-heading"><span class="sw-section-number">02</span><h2 id="sw-architecture-heading">Architecture</h2></div>
-            <p>The Android app is a Java TCP client on a local Wi-Fi network. <code>NetworkService</code> parses incoming messages; <code>MainActivity</code> manages interaction and display. MPAndroidChart plots received values. The AI Box integrates thermal, optical, mechanical, and image-analysis functions.</p>
-            <div class="sw-architecture" aria-label="Responsibilities of the mobile app and AI Box">
-              <div><h3>Android app</h3><ul><li>Connection and user controls</li><li>Countdown and temperature display</li><li>Two-series curve plotting</li><li>Image viewing and tube labels</li></ul></div>
-              <div class="sw-transport"><strong>Local Wi-Fi</strong><span>TCP frames</span><span>Commands →</span><span>← Data and images</span></div>
-              <div><h3>AI Box</h3><ul><li>Temperature and mechanical control</li><li>Optical image acquisition</li><li>Image processing and analysis</li><li>Returned status and results</li></ul></div>
-            </div>
-            <h3>Message framing</h3>
-            <p>Every message starts with an eight-byte header: two big-endian 32-bit integers specify the payload length and the frame type, followed by the payload. Frame type <code>0</code> carries text; type <code>1</code> carries image content. JSON control commands use UTF-8. A plain JSON line without this header is not a valid frame.</p>
-            <div class="sw-frame" aria-label="TCP frame layout"><span><strong>4 bytes</strong>Payload length</span><span><strong>4 bytes</strong>Frame type</span><span><strong>N bytes</strong>Payload</span></div>
-            <h3>Control commands</h3>
-            <div class="sw-table-wrap" role="region" aria-label="App command reference" tabindex="0"><table class="sw-table"><thead><tr><th scope="col">Command</th><th scope="col">Generation</th><th scope="col">Purpose</th></tr></thead><tbody>
-              <tr><th scope="row"><code>get_image</code></th><td>Both</td><td>Request an image and result update.</td></tr>
-              <tr><th scope="row"><code>get_tem</code></th><td>Both</td><td>Request temperature separately.</td></tr>
-              <tr><th scope="row"><code>set_tem</code></th><td>Both</td><td>Send a numeric temperature-control value.</td></tr>
-              <tr><th scope="row"><code>set_tem43</code><br/><code>set_tem90</code></th><td>Second</td><td>Send 1 or 0 from the two temperature-control switches.</td></tr>
-              <tr><th scope="row"><code>set_servo</code></th><td>Second</td><td>Send a numeric servo-control value.</td></tr>
-            </tbody></table></div>
-            <p>Text responses contain <code>type</code>, string-valued <code>content</code>, and an optional <code>timestamp</code>. The second-generation <code>tubeluminance</code> message contains <code>data1</code> and <code>data2</code>; the app records reception time for each plotted point. Temperature arrives independently as <code>tem</code>.</p>
-            <details class="sw-detail"><summary>Read a protocol example</summary><div><p>This illustrates a message payload, not an experimental measurement. It must be sent with the binary frame header.</p><pre><code>{"type":"tem","content":"25.0"}</code></pre><p>For image envelopes, Base64 handling, and case-sensitive fields, read the <a href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/docs/PROTOCOL.md" target="_blank" rel="noopener">complete protocol</a>.</p></div></details>
-            <h3>Device-side analysis, client-side labels</h3>
-            <p>The second-generation app maps server codes <code>0</code>, <code>1</code>, <code>2</code>, and <code>3</code> to <code>tube_green</code>, <code>tube_red</code>, <code>tube_blue</code>, and <code>tube_null</code>. The biological meaning follows the assay and server implementation. The Android repository does not contain the device server, firmware, inference model, model weights, or experimental dataset.</p>
-            <p class="sw-source-line">Source: <a href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/README.md" target="_blank" rel="noopener">repository README</a> and <a href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/docs/PROTOCOL.md" target="_blank" rel="noopener">protocol documentation</a>, checked on 3 October 2026.</p>
+            <figure class="sw-figure sw-app-diagram"><a data-sw-fullimage href="../assets/software/images/app-operation-flow.png"><img src="../assets/software/images/app-operation-flow.png" width="965" height="712" alt="Supplied APP operation diagram linking device connection, controls, temperature and fluorescence display, image acquisition and results" loading="lazy" decoding="async"/></a><figcaption>APP operation flow.</figcaption></figure>
+            <p>The mobile app and AI Box communicate over a local Wi-Fi network. The connection screen shown uses 10.42.0.1 and port 8080. The Android app acts as a TCP client and sends UTF-8 JSON control commands. Each message contains an eight-byte header followed by its payload. Two big-endian 32-bit integers in the header specify the payload length and message type, where 0 denotes text and 1 denotes an image.</p>
+            <h3>Mobile app</h3>
+            <p>Written in Java, the app handles connection, countdown timing, temperature and servo commands, and image and curve display. NetworkService processes TCP messages, while MainActivity manages interaction and display. Other teams may adapt the communication parser and MPAndroidChart plotting logic by changing the device protocol and interface bindings.</p>
+            <h3>AI Box</h3>
+            <p>The device integrates temperature control, optical acquisition, mechanical control, and image analysis. It receives commands from the app and returns status data, images, and results.</p>
+            <h3>Wireless communication</h3>
+            <p>Both app generations use <code>get_image</code>, <code>get_tem</code>, and <code>set_tem</code>. The second generation also supports <code>set_tem43</code>, <code>set_tem90</code>, and <code>set_servo</code>. Text responses contain <code>type</code>, <code>content</code>, and an optional <code>timestamp</code>; the app displays the returned temperature, fluorescence values, images, and tube labels.</p>
+            <h3>Image analysis and results</h3>
+            <p>The AI Box processes fluorescence images, and the app displays the returned image and tube labels. The second-generation app maps codes <code>0</code>, <code>1</code>, <code>2</code>, and <code>3</code> to green, red, blue, and empty labels. Their biological interpretation follows the assay.</p>
+
+
+
+
+
+
           </section>
 
           <section class="sw-section" id="software-validation" aria-labelledby="sw-validation-heading">
             <div class="sw-section-heading"><span class="sw-section-number">03</span><h2 id="sw-validation-heading">Validation</h2></div>
-            <p>These supplied records show the app connection and display workflow. They document visible interface behavior; they do not establish thermal accuracy, model accuracy, analytical sensitivity, or clinical performance.</p>
+
             <div class="sw-evidence-case">
-              <div><p class="sw-kicker">Case 01 · Connection</p><h3>Device connection and acquisition</h3><p>The recorded connection screen uses <code>10.42.0.1</code> and TCP port <code>8080</code>, and shows “Service connected”. Use the address and port of the actual device configuration.</p><p>The display region has been cropped from a supplied video-player screenshot. Its original frame is preserved.</p><a data-sw-connection-original href="../assets/software/originals/doc1-image5.jpeg" target="_blank" rel="noopener">View original frame</a></div>
-              <figure class="sw-figure sw-connection-figure"><a data-sw-fullimage href="../assets/software/images/connection.jpg"><img src="../assets/software/images/connection.jpg" width="1260" height="1953" alt="Real app connection screen with IP 10.42.0.1, port 8080 and Service connected status; player interface removed by cropping" loading="lazy" decoding="async"/></a><figcaption>Figure 1. Connection record from the English Word source; crop only.</figcaption></figure>
+              <div><p class="sw-kicker">Case 01 · Connection</p><h3>Device connection and acquisition</h3><p>The connection screen uses the AI Box address <code>10.42.0.1</code> and port <code>8080</code>. After the connection is established, the app displays the service status and can enter the data-acquisition workflow.</p></div>
+              <figure class="sw-figure sw-connection-figure"><img src="../assets/software/images/connection.jpg" width="1260" height="1953" alt="Real app connection screen with IP 10.42.0.1, port 8080 and Service connected status; player interface removed by cropping" loading="lazy" decoding="async"/><figcaption>Figure 1. Device connection screen.</figcaption></figure>
             </div>
             <h3>Temperature and fluorescence-curve display</h3>
-            <p>Two supplied screens show temperature readings of <strong>43.1 °C</strong> and <strong>43.0 °C</strong> with TUBE1 and TUBE2 traces. The plots retain their original values and axes. These readings are observations on the interface, not a temperature-calibration test.</p>
+            <p>The data screen displays the current temperature and updates two fluorescence curves over elapsed time. The two recorded screens show temperatures of <strong>43.1 °C</strong> and <strong>43.0 °C</strong>. TUBE1 and TUBE2 values update during acquisition.</p>
             <div class="sw-evidence-grid">
-              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/originals/doc1-image6.jpeg"><img src="../assets/software/originals/doc1-image6.jpeg" width="1600" height="2560" alt="First supplied acquisition record showing 43.1 degrees Celsius and two labelled curves" loading="lazy" decoding="async"/></a><figcaption>Figure 2. Supplied acquisition record A: 43.1 °C and two curve series.</figcaption></figure>
-              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/originals/doc1-image7.jpeg"><img src="../assets/software/originals/doc1-image7.jpeg" width="1600" height="2560" alt="Second supplied acquisition record showing 43.0 degrees Celsius and two labelled curves" loading="lazy" decoding="async"/></a><figcaption>Figure 3. Supplied acquisition record B: 43.0 °C and two curve series.</figcaption></figure>
+              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/images/acquisition-a.jpg"><img src="../assets/software/images/acquisition-a.jpg" width="1600" height="2480" alt="First supplied acquisition record showing 43.1 degrees Celsius and two labelled curves" loading="lazy" decoding="async"/></a><figcaption>Figure 2. Supplied acquisition record A: 43.1 °C and two curve series.</figcaption></figure>
+              <figure class="sw-figure"><a data-sw-fullimage href="../assets/software/images/acquisition-b.jpg"><img src="../assets/software/images/acquisition-b.jpg" width="1600" height="2480" alt="Second supplied acquisition record showing 43.0 degrees Celsius and two labelled curves" loading="lazy" decoding="async"/></a><figcaption>Figure 3. Supplied acquisition record B: 43.0 °C and two curve series.</figcaption></figure>
             </div>
             <h3>Image results and five tube labels</h3>
-            <p>The supplied result screen labels Tube2 as <code>tube_green</code>, Tube3 as <code>tube_blue</code>, and Tube4 as <code>tube_red</code>; Tube1 and Tube5 are <code>tube_null</code>. It also shows 43.0 °C. The five labels remain separate from the two-series plotting interface.</p>
+            <p>The result screen receives an image from the AI Box and displays five tube labels. In the example shown, Tube2 is labelled <code>tube_green</code>, Tube3 <code>tube_blue</code>, Tube4 <code>tube_red</code>, and Tube1 and Tube5 <code>tube_null</code>. The screen also shows a temperature of 43.0 °C.</p>
             <figure class="sw-figure sw-wide-figure"><a data-sw-fullimage href="../assets/software/originals/doc2-image3.jpeg"><img src="../assets/software/originals/doc2-image3.jpeg" width="1920" height="1080" alt="Supplied fluorescence photograph of five tubes with original ROI boxes and green, blue, red and null annotations" loading="lazy" decoding="async"/></a><figcaption>Figure 4. Additional five-tube fluorescence photograph from the Chinese Word source. Original ROI boxes, labels, and percentage annotations are retained; the percentages are not evidence of validated model accuracy.</figcaption></figure>
-            <div class="sw-note"><strong>Evidence scope.</strong> No raw time-series files, calibration logs, model evaluation dataset, or new device test was supplied for this page. The result screenshot includes an archived 2025 timestamp; it is presented as a supplied interface record, not a newly performed 2026 experiment.</div>
           </section>
 
           <section class="sw-section" id="software-reusability" aria-labelledby="sw-reusability-heading">
             <div class="sw-section-heading"><span class="sw-section-number">04</span><h2 id="sw-reusability-heading">Reusability</h2></div>
-            <p>Connection, parameter configuration, monitoring, and result viewing share one mobile interface. Other teams can adapt the communication parser, MPAndroidChart plotting, and result display to their own device commands and field mappings.</p>
-            <div class="sw-reuse-grid">
-              <div><h3>Reuse the client</h3><p>Start from either Java source project. Keep communication and display responsibilities separate when adapting <code>NetworkService</code> and <code>MainActivity</code>.</p></div>
-              <div><h3>Match the device</h3><p>Implement the TCP frame and the selected generation’s commands on a compatible server. Hardware command values must agree with the firmware.</p></div>
-              <div><h3>Verify the adaptation</h3><p>Check connection, separate temperature updates, two-series plotting, image handling, and the tube-label mapping against your device and assay.</p></div>
-            </div>
+            <p>We integrated device control, reaction parameters, and detection status into the mobile interface. Users can connect the device, configure parameters, monitor the reaction, and view results without switching between separate programs.</p>
+            <p>The operating screen groups the heating time, temperature-control switches, and image requests. Connection status, temperature, and two-channel fluorescence curves update with data returned by the device. Other teams may reuse the communication parser, curve display, and result-display modules by adapting the commands and field mappings to their device protocol.</p>
             <details class="sw-detail"><summary>Build from source</summary><div>
               <ol><li>Open one generation directory as a separate Android Studio project.</li><li>Select <strong>JDK 17</strong> as the Gradle JDK and install <strong>Android SDK Platform 34</strong>.</li><li>Synchronize Gradle, then select the <code>app</code> configuration and run on Android 7.0 / API 24 or later.</li></ol>
               <p>The projects use Gradle 8.2 and Android Gradle Plugin 8.2.0. From the selected project directory in PowerShell:</p><pre><code>.\gradlew.bat assembleDebug</code></pre>
               <p>The corresponding server and model require separate configuration. Read the <a href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/README.md" target="_blank" rel="noopener">full build and verification notes</a>.</p>
             </div></details>
-            <p class="sw-note">Repository verification covered source-file integrity and documentation consistency. Compilation and device tests were not completed during source publication. The supplied tests are template checks; the second-generation instrumentation test still expects the first-generation application ID.</p>
           </section>
 
           <section class="sw-section" id="software-user-guide" aria-labelledby="sw-guide-heading">
@@ -264,19 +261,9 @@
               <div class="sw-resource-card"><h4>Second generation</h4><p>Version 1.0 · Android 7.0+<br/><code>com.chuangxin.socket</code><br/>Five tube labels, servo control and two temperature-control switches.</p><a class="sw-button" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk?inline=false">Download second-generation APK ↗</a></div>
             </div>
             <p>Both APKs are team-supplied binaries with the debuggable manifest flag enabled; they were not rebuilt from the repository during publication. File hashes and package metadata are listed in the <a href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/blob/main/downloads/README.md" target="_blank" rel="noopener">download metadata</a>. A reachable download does not establish successful installation or device operation.</p>
-            <p class="sw-source-line">Source documentation checked on 3 October 2026 at commit <a href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/commit/b06ba6ae99be8757e911f468d2fd0670d99b2e48" target="_blank" rel="noopener"><code>b06ba6a</code></a>. For device context, see <a href="hardware.html">Hardware</a>; for the project’s computational work, see <a href="model.html">Model</a>.</p>
           </section>
         </article>
-        <aside class="sw-toc" aria-label="Software page contents">
-          <nav id="software-navigation" aria-label="Software sections" tabindex="-1"><span class="sw-toc-title">On this page</span><ol>
-            <li><a href="#software-overview" aria-current="location"><span>01</span> Overview</a></li>
-            <li><a href="#software-architecture"><span>02</span> Architecture</a></li>
-            <li><a href="#software-validation"><span>03</span> Validation</a></li>
-            <li><a href="#software-reusability"><span>04</span> Reusability</a></li>
-            <li><a href="#software-user-guide"><span>05</span> User Guide</a></li>
-            <li><a href="#software-open-source"><span>06</span> Open Source</a></li>
-          </ol><a class="sw-toc-top" href="#software-content">Back to top ↑</a></nav>
-        </aside>
+
       </div>
     </main>
 
