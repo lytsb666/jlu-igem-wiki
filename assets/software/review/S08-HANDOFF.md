@@ -1,4 +1,4 @@
-# S08 Software 交接报告（交 00）
+# S08 Software / Model 交接报告（交 00）
 
 工作区：D:/JLU—Wiki/IGEMwiki/worktrees/08-instrument
 分支：codex/08-instrument
@@ -6,7 +6,61 @@
 任务单：../_task-briefs/2026-10-03-software-protocol-46368360/08-software-task.md
 初次完成日期：2026-10-03；手册增补日期：2026-10-06。最新提交编号由完成消息提供，可用 git log -1 查询。
 
-## 2026-10-06 手册增补（当前交接状态）
+## 2026-10-06 两页文档修订（当前交接状态）
+
+用户已明确恢复 Software 和 Model 两页修改。当前基线为 `004393822cc66ea69bcba631179405153d81e1e5`，仅在上述工作区、上述分支实施；最终提交号见完成消息或本分支 `git log -1`。未合并其他 Agent，未推送、未修改主仓库。Model 的本次授权来自用户“继续两个页面的修改”，覆盖此前暂停及职责限制。
+
+### 资料来源及落实
+
+- Software 以 `C:/Users/UserTech/Desktop/software最新修改.docx` 为最高优先级；架构和复用正文采用 `Software_Wiki_Page_English(1).docx`，原 APP 流程图来自 `手机APP2.pdf`。最新中文功能指南作为补充，未把其与最新修改单冲突的三章目录或新增功能写入页面。文件完整 SHA256 和截图裁剪记录分别保存在已有资料审计及 `latest-revision-manifest.json`。
+- 软件页面保留六章和旧片段地址；封面采用其他页面相同的 16:9 桌面、4:5 手机比例，左侧卷轴目录、棕色定位状态、平滑滚动和键盘焦点跟随；移动端目录横向滑动。数据流加入箭头，手机纵排时为向下箭头。
+- 四张应用截图只裁掉顶部 80 像素状态栏，保留图内温度、曲线、坐标轴及结果日期；原图未改。删去要求删除的绿底提示、图注末句、连接图播放器原图入口、页尾核对日期/commit 句。APP 图仅裁去 PDF 空白页边；正文恢复提供的架构、三个案例和复用说明。
+- 两代 PDF、APK、Hardware 手册及视频暂存入口不变；手册字节核对通过。Hardware 两入口仍为 `../Instrument/hardware.html` 并标注 `(to be added)`，最终地址由 00 提供。
+- Model 以用户提供的 `D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/msg/file/2026-10/model.docx` 为准，SHA256 `667692f852dbb569db68fdb969fa766c4cb77f77b1ac559aced18e32fdd71360`。五条批注分别落实为四个编号问题、两个编号模块、三个可展开的伪代码框（默认展开）。
+- Model 正文、六表、七图、十五条参考文献同步新文档。73 个 OMML 对象中 71 个转为原生 MathML，两个矩阵按批注呈现为伪代码；校对覆盖所有非空文档文字片段。前六图与原素材逐字节核对相同，第七图直接来自此次 Model 文档。重复的“Figure 5”统一编号为 Figure 7。
+- Model 移除新文档不再包含的空间传质/效能因子旧正文，原片段 ID 保留为方程区域的兼容锚点；TOC 的 PDE system 改为中性的 Kinetic equations。仅在 Model 专用 CSS 修复模板手机编号框窄列、代码换行和公式局部横向滚动。
+
+### 设备、软件和 Model 架构
+
+Android Java 客户端负责连接、计时、温控/机械控制指令、曲线、图像及结果显示；`NetworkService` 处理 TCP，`MainActivity` 处理交互。AI Box 负责设备端控制、光学采集和图像分析。通信保留八字节大端消息头及 UTF-8 JSON 的文档描述。未填入缺失的器件型号、固件、服务端部署参数或视频。
+
+Model 是科研模块：四路共享 DNABERT-6 序列输入与十九项数值特征组成候选组合排序模型；动力学部分按提供的质量作用方程、均匀混合假设及 LSODA 描述反应过程，提供 F、Cas12a/crRNA、RT 三参数优化表。Model 的排序指标不作为 APP 荧光图像分类准确率。
+
+### 交叉链接与 Judging 证据对应
+
+- Software 六章原 URL 全部保留，两代指南预览/下载以及匹配 APK 均保留；Hardware 两暂存入口已明确待补充。
+- Software 和 Model 的公共 Navbar 仍保留 Hardware / Software / Model 互链，公共组件字节结构未改。Model 所有原片段 ID 及参考文献内部跳转校对通过。
+- Software 的功能图、连接/温度曲线/五管案例、复用说明、两代手册和开源入口分别提供对应材料；这些页面改动没有增加实机或性能试验结论。
+- Model 的数据划分、模型结构、评价/消融、RSV 候选表、动力学公式和两阶段优化表对应科研文档，实验结果文字依原稿保留。
+- `Judging/hardware.html`、`Judging/model.html` 未改，判奖证据映射和跨模块事实整合交 00。
+
+### 文件清单（本次）
+
+1. `Instrument/software.html`、`Instrument/model.html`
+2. `样式/software.css`、`样式/software.js`
+3. 新增 `样式/instrument-navigation.js`（仅两页使用）、`样式/model-revision.css`、`样式/model-revision.js`
+4. 新增 `assets/software/images/reaction-display.jpg`、`result-display.jpg`、`acquisition-a.jpg`、`acquisition-b.jpg`、`app-operation-flow.png`
+5. 新增 `assets/model/images/simulation-results.jpeg`
+6. 新增 `assets/software/review/apply_latest_revision.py`、`check-navigation.mjs`、`latest-revision-manifest.json`、`latest-http-checks.json`、`latest-browser-checks.json`；调整已有 `check-motion.mjs`；更新本交接文件
+7. 新增 `assets/model/review/build_model_page.py`、`check_revision.py`、`model-source-manifest.json`、`revision-checks.json`
+
+### 验证结果
+
+- Vite 8.1.3 正式构建通过；文档文字、公式、表格行数、七图、五条批注和十五参考条目检查通过。
+- 本次导航测试覆盖平滑/减少动态效果、焦点、滚动途中定位锁定、修饰键、历史去重和计时器清理；已有动画暂停、静态图、恢复和减少动态效果测试通过。
+- 正式预览 `http://127.0.0.1:5199/` 的 29 个页面/资源返回 HTTP 200；两份 PDF SHA256 保持原值。
+- 实际浏览器：两页 1440 桌面及 320/360/390 手机、900 边界宽度均无页面横向溢出、无坏图；长公式/数据表仅区域内横向滚动。Software 手机目录定位到 Validation 顶部约 150 px；Model Introduction 约 168 px，均避开固定导航。Model 手机子章高亮归入其可见主章；三个伪代码框的点击及 Enter 展开/折叠可用。
+- 两页开发/正式页面控制台无 warning/error。Navbar、Loading、页脚结构与基线逐一比较相同；公共样式/脚本、Hardware、Judging、配置/依赖文件均未改。`git diff --check` 通过。
+
+### 材料缺口（交 00，不阻止按用户文稿排版）
+
+- Hardware 完整手册/视频最终入口及 APP 截图与具体发布 APK 的精确版本对应仍缺。第二代源码为五路曲线，而协议/提供截图描述两路；现有两代手册已保留版本差异说明。未声称做过 Android 构建、安装或实机测试。
+- Model 原稿的 Introduction/Method/优化过程仍出现 PDE，System State 与 Simulation 则写均匀 ODE/LSODA；介绍写五参数，详细优化及表格写三参数。
+- Model 仿真文字描述四条曲线与 DNA 早峰，但新文档图只提供 DNA/X 两条线，且 DNA 单调上升；未替作者生成其他曲线或改写仿真数据。
+- 部分 Model 公式在 Word 中是线性文字，原文缺失的运算结构未补造；RT 初始条件与优化表单位差异仍依原文保留。以上差异完整记录在 `model-source-manifest.json`，需 00 协调科研内容确认。
+- 已尝试通过应用查找 00 对话，但接口返回 `Invalid app tool request`，无法完成自动发送；本报告及完成消息供 00 接收整合，不宣称已送达。
+
+## 2026-10-06 手册增补（历史记录）
 
 用户本轮明确要求：根据现有材料整理 A/B 第一代、第二代两份手册；保留缺失信息标记；Hardware 手册及视频暂时链接 `../Instrument/hardware.html` 并标注待补充，最终入口交 00。此次只落实这部分。Model 文档已完成只读核对，Model 页面及 Software 其他界面调整仍暂停；不得据本次提交推断它们已经修改。
 
