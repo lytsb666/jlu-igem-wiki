@@ -6,9 +6,10 @@
 .story-ribbon .world-scene { position: relative; inset: auto; z-index: auto; overflow: hidden; opacity: 1; visibility: visible; transform: none; background: #17110f; }
 .story-ribbon .story-world,
 .story-ribbon .story-world-lights { --world-y: 0px; }
+.world-village-art { position: absolute; z-index: 2; top: 0; left: 50%; display: block; width: var(--story-world-width, 100vw); max-width: none; height: auto; transform: translateX(-50%); mask-image: linear-gradient(#000 0 90%, transparent 100%); pointer-events: none; }
 .story-ribbon .world-intro { z-index: 5; mix-blend-mode: screen; pointer-events: none; }
 .story-ribbon .world-intro-art { top: 0; left: 50%; width: var(--story-world-width, 100vw); transform: translateX(-50%); }
-.story-ribbon .campfire-people { z-index: 6; transition: opacity .35s ease, transform .35s ease; }
+.story-ribbon .campfire-people { z-index: 6; filter: brightness(1.1) contrast(1.04) drop-shadow(0 4px 6px rgba(0, 0, 0, .35)); transition: opacity .35s ease, transform .35s ease; }
 .story-ribbon .story-vignette { z-index: 7; pointer-events: none; }
 .world-room-lit { position: absolute; z-index: 4; left: calc(50% - var(--story-world-width) * .255); bottom: 2.9%; width: calc(var(--story-world-width) * .751); max-width: none; height: auto; opacity: 0; mask-image: radial-gradient(ellipse 40% 47% at 73% 58%, #000 55%, transparent 100%); transition: opacity .35s ease; pointer-events: none; }
 .is-room-lit .world-room-lit { opacity: 1; }
@@ -31,10 +32,13 @@
 .home-chapter--sanitation > img { position: absolute; inset: 0; }
 .home-chapter--sanitation .chapter-continent { z-index: 2; object-fit: contain; opacity: var(--chapter-layer-opacity, 0); transform: translate3d(0, var(--chapter-layer-rise, 30px), 0) scale(var(--chapter-layer-scale, .96)); }
 .home-chapter--sanitation .chapter-message { z-index: 3; inset: 7% auto auto 50%; width: min(56vw, 1080px); height: auto; max-height: 64%; object-fit: contain; transform: translate3d(-50%, var(--chapter-layer-rise, 30px), 0) scale(var(--chapter-layer-scale, .96)); opacity: var(--chapter-layer-opacity, 0); }
-.home-chapter--procession { background: radial-gradient(circle at 50% 18%, #5b321e 0, #2d180f 58%, #1c100c 100%); }
-.home-chapter--procession .chapter-procession-top { position: absolute; inset: 0; clip-path: inset(0 0 65% 0); }
-.home-chapter--procession .chapter-procession-people { position: absolute; z-index: 2; top: 38%; left: 0; width: 160vw; height: 28%; max-width: none; object-fit: fill; transform: translate3d(var(--procession-people-x, -60vw), 0, 0); }
-.home-chapter--procession .chapter-procession-mascot { position: absolute; z-index: 3; inset: auto auto 0 0; width: min(17vw, 260px); height: min(42vh, 430px); object-fit: contain; transform: translate3d(var(--procession-mascot-x, 86vw), 2%, 0); }
+.home-chapter--procession { --procession-mascot-width: min(17vw, 260px); --procession-mascot-height: min(42vh, 430px); --procession-guide-gap: clamp(8px, 2vw, 32px); background: #2d180f; }
+.home-chapter--procession .chapter-procession-top { position: absolute; inset: 0; object-fit: fill; }
+/* Preserve the cutout's proportions and keep its lane above the guide. */
+.home-chapter--procession .chapter-procession-people { position: absolute; z-index: 2; top: 36%; left: 0; width: 160vw; height: 20%; max-width: none; object-fit: contain; object-position: left bottom; transform: translate3d(var(--procession-people-x, -60vw), 0, 0); }
+.procession-guide { position: absolute; z-index: 3; bottom: 0; left: 0; display: flex; align-items: center; gap: var(--procession-guide-gap); width: 100vw; height: var(--procession-mascot-height); transform: translate3d(var(--procession-mascot-x, 86vw), 2%, 0); }
+.home-chapter--procession .chapter-procession-mascot { display: block; flex: none; width: var(--procession-mascot-width); height: 100%; object-fit: contain; }
+.chapter-procession-question { display: block; flex: none; width: calc(100vw - var(--procession-mascot-width) - var(--procession-guide-gap) - 2vw); height: auto; opacity: var(--procession-question-opacity, 1); }
 .home-chapter--door { background: #17152b; }
 .home-chapter--door .detector-entry-world { opacity: 1; }
 .home-chapter--process > img { object-fit: fill; }
@@ -160,7 +164,7 @@
 
 @media (max-width: 720px) {
   .home-chapter--sanitation .chapter-message { width: min(90vw, 1080px); top: 20%; max-height: 48%; }
-  .home-chapter--procession .chapter-procession-mascot { width: min(31vw, 190px); height: min(34vh, 300px); }
+  .home-chapter--procession { --procession-mascot-width: min(31vw, 190px); --procession-mascot-height: min(34vh, 300px); }
   .home-card-hint { left: 0; bottom: 52px; width: 100%; padding: 0 6px; text-align: center; }
   .story-home .home-story-progress { gap: 6px; padding-inline: 9px; }
 }
@@ -168,8 +172,9 @@
 @media (max-width: 720px) and (orientation: portrait) {
   .story-home .instrument-scene::before { content: ''; position: absolute; inset: 0; background: url('../a  图片/home-story/cover-zoom/cover-key-00.webp') center / cover no-repeat; filter: blur(14px) brightness(.36); }
   .story-home .instrument-canvas { width: 100vw; height: 56.6667vw; }
-  .home-chapter--procession .chapter-procession-top { inset: 24% 0 auto; height: 55.9006vw; object-fit: contain; clip-path: inset(0 0 65% 0); }
-  .home-chapter--procession .chapter-procession-people { top: 47%; height: auto; object-fit: contain; }
+  .home-chapter--procession::before { content: ''; position: absolute; inset: -12px; background: url('../a  图片/home-story/revision-2026/procession-background.webp') center / cover no-repeat; filter: blur(12px) brightness(.65); }
+  .home-chapter--procession .chapter-procession-top { inset: 24% 0 auto; height: 55.814vw; object-fit: contain; mask-image: linear-gradient(#000 0 65%, transparent 100%); }
+  .home-chapter--procession .chapter-procession-people { top: 42%; height: 20%; }
   .home-chapter--door .detector-canvas,
   .home-chapter--workflow .workflow-canvas { width: 100vw; height: 55.9006vw; }
   .home-chapter--reach .legacy-canvas { top: 50%; left: 50%; width: 100vw; height: 55.4217vw; }

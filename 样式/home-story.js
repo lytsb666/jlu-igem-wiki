@@ -82,7 +82,7 @@ if (story) {
 
   function setWorld(progress, coverProgress, ribbonY) {
     const active = name => worldActions.has(name) || hoveredActions.has(name)
-    const peopleReveal = active('campfire') ? 1 : smoothstep(range(coverProgress, .915, .985)) * .45
+    const peopleReveal = active('campfire') ? 1 : smoothstep(range(coverProgress, .915, .985)) * .88
     campfirePeople.style.setProperty('--campfire-people-opacity', peopleReveal.toFixed(3))
     campfirePeople.style.setProperty('--campfire-people-scale', reducedMotion.matches ? '1' : (0.965 + peopleReveal * .035).toFixed(4))
     worldIntro.style.setProperty('--world-intro-opacity', (1 - smoothstep(range(progress, .02, .20))).toFixed(3))
@@ -124,6 +124,9 @@ if (story) {
     // depend on the scroll timeline so reversing the journey retraces them.
     chapter.style.setProperty('--procession-people-x', (reduce ? -30 : -60 + travel * 160) + 'vw')
     chapter.style.setProperty('--procession-mascot-x', (reduce ? 0 : 86 - travel * 86) + 'vw')
+    // The question shares the mascot's moving container, so the viewport
+    // reveals the two lines behind it and reverse scrolling draws them back.
+    chapter.style.setProperty('--procession-question-opacity', String(reduce ? entered : 1))
 
     if (chapter === cardsChapter) {
       cardsProgress = localProgress
