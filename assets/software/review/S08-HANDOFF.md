@@ -4,7 +4,33 @@
 分支：codex/08-instrument
 开始基线：8444af2dc4e3b2a7971e111100d3b0e9501e0a3b
 任务单：../_task-briefs/2026-10-03-software-protocol-46368360/08-software-task.md
-完成日期：2026-10-03。最终提交编号由完成消息提供，可用 git log -1 查询。
+初次完成日期：2026-10-03；手册增补日期：2026-10-06。最新提交编号由完成消息提供，可用 git log -1 查询。
+
+## 2026-10-06 手册增补（当前交接状态）
+
+用户本轮明确要求：根据现有材料整理 A/B 第一代、第二代两份手册；保留缺失信息标记；Hardware 手册及视频暂时链接 `../Instrument/hardware.html` 并标注待补充，最终入口交 00。此次只落实这部分。Model 文档已完成只读核对，Model 页面及 Software 其他界面调整仍暂停；不得据本次提交推断它们已经修改。
+
+- 新增两份英文图文 PDF，每份 2 页；保留原 `software-user-guide.pdf` 作为参考，字节未改。
+- `Instrument/software.html` 仅 User Guide 章节变化：A/B 分别为第一代、第二代手册，均有预览、下载和匹配 APK 入口；增加两个注明待补充的 Hardware 链接；通用 quick start 不再写死二代曲线数量。
+- 手册资料来自已提供的 Software Word、原指南、真实截图，以及已读取的 `b06ba6ae99be8757e911f468d2fd0670d99b2e48` 两代 Android `MainActivity.java` 和布局。连接及曲线截图作为共享界面参考，未伪称已确认对应某一发布 APK；第二代结果截图保留原消息日期，PDF 内仅裁去手机顶部状态栏。原始图片未改写。
+- 第一代手册涵盖安装、连接、Ded./Data/Setting、应用计时、两路曲线、两管结果、图像请求及保存、重连。第二代补充五管标签及 Servo 入口。Android 客户端负责交互、通信和显示；图像结果来自设备服务器。手册未新增性能、检测准确率或实机验证结论。
+- 二代资料差异：当前公开 Java 源码接收 `tube1` 至 `tube5` 并绘制五路，旧协议文档/截图描述两路。新手册注明版本差异及缺少精确 APK/截图对应关系；其他章节中的旧表述属于后续文稿修改范围，尚未改动。
+
+本次文件清单：
+
+1. `Instrument/software.html`
+2. `public/software-resources/software-user-guide-first-generation.pdf`
+3. `public/software-resources/software-user-guide-second-generation.pdf`
+4. `assets/software/review/build_generation_manuals.py`
+5. `assets/software/review/generation-manuals.json`
+6. `assets/software/review/generation-manuals-checks.json`
+7. `assets/software/review/S08-HANDOFF.md`
+
+验证结果：Vite 8.1.3 既有构建通过（728 ms），产物两份 PDF 与源文件字节一致；两份手册共 4 页均已渲染并逐页查看，文字及链接批注可读取；页面、两份 PDF、Hardware 临时目标均返回 HTTP 200。1440×1000 桌面双栏正常；320/360/390×844 手机为单栏，页面无横向溢出；手册按钮支持键盘 Tab，下载属性和目标正确；浏览器 warn/error 为零。未安装 APK 或开展实机操作测试。验证详情见 `generation-manuals-checks.json`。页面 User Guide 以外的内容对比提交前字节一致，包括公共 Navbar/Loading/Footer；未改公共样式、脚本或构建配置。
+
+需要 00 补齐：Hardware 手册/视频最终入口，设备网络凭据与兼容关系，设备启动/关闭流程，确认的反应温度和时长，发布 APK 与截图的精确对应，第一代温度按钮与命令的对应，Servo 位置含义，结果阈值及完整测量导出/历史回看说明。现有内容不足的操作未补造。Judging 文件未改动，本次新增证据仅为用户指南和资源入口的可用性，实验性能证据仍由对应科研内容负责。
+
+下面保留 2026-10-03 初次交接记录；其 Manual/Demo 布局和二代曲线描述以本节及用户后续任务要求为准。
 
 本次完成 Instrument/software.html 的英文正文、专用样式和交互、两页英文图文 PDF、真实 Demo 拍摄清单和来源审计资料。没有修改 Hardware、Model、Judging、主仓库、公共文件、构建配置或 package/lock；没有切换分支、合并或 cherry-pick 其他 Agent。此分支由 00 负责整合。
 
