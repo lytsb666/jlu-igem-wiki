@@ -6,8 +6,13 @@
   --sw-paper: #fbf7f0;
 }
 .software-page > .image-page-hero {
-  width: min(var(--wiki-content-max-width), calc(100% - var(--wiki-content-gutter)));
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
   margin-bottom: 36px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 .software-page > .image-page-hero img {
   height: auto;
@@ -87,19 +92,6 @@
   animation: sw-float 6s ease-in-out infinite;
 }
 .software-page .sw-floating-illustration.is-paused img { animation-play-state: paused; }
-.software-page .sw-float-toggle {
-  position: absolute;
-  right: 16px;
-  bottom: 28px;
-  min-height: 44px;
-  padding: 8px 14px;
-  border: 1px solid rgba(255,255,255,.35);
-  border-radius: 8px;
-  background: #171a13;
-  color: #fff;
-  cursor: pointer;
-  font: inherit;
-}
 .software-page .sw-shell { display: grid; grid-template-columns: minmax(300px, 320px) minmax(0, 1fr); gap: var(--wiki-section-gap, 32px); align-items: start; }
 .software-page .sw-article { width: 100%; }
 .software-page .sw-section { padding: clamp(22px, 3vw, 42px); margin-bottom: 32px; border: 1px solid var(--sw-line); border-radius: 18px; background: #ffffff; scroll-margin-top: 88px; }
@@ -108,7 +100,6 @@
 .software-page .sw-section-heading h2 { margin: 0; }
 .software-page .sw-section-number { color: var(--sw-accent); font-weight: 700; flex: 0 0 auto; }
 .software-page .sw-toc { position: sticky; top: 84px; padding: 24px 20px; background: var(--sw-paper); border: 1px solid var(--sw-line); border-radius: 12px; }
-.software-page .sw-toc-title { display: block; color: var(--sw-muted); font-weight: 700; margin-bottom: 20px; }
 .software-page .sw-toc ol { list-style: none; padding: 0; display: grid; gap: 8px; }
 .software-page .sw-toc a { display: flex; align-items: baseline; gap: 10px; padding: 10px 12px; border-left: 3px solid transparent; color: var(--text); text-decoration: none; }
 .software-page .sw-toc a:hover,
@@ -213,7 +204,6 @@
   .software-page .sw-floating-illustration { max-width: 420px; }
   .software-page .sw-shell { display: flex; flex-direction: column; gap: 24px; }
   .software-page .sw-toc { order: -1; position: sticky; top: 60px; z-index: 5; width: 100%; padding: 12px; border-radius: 10px; }
-  .software-page .sw-toc-title,
   .software-page .sw-toc-top { display: none !important; }
   .software-page .sw-toc ol { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 8px; }
   .software-page .sw-toc li { flex: 0 0 auto; }
@@ -222,9 +212,8 @@
   .software-page .sw-section { scroll-margin-top: 150px; }
 }
 @media (max-width: 600px) {
-  .software-page .sw-main,
-  .software-page > .image-page-hero { width: calc(100% - 24px); }
-  .software-page > .image-page-hero { margin-top: 76px; border-radius: 14px; }
+  .software-page .sw-main { width: calc(100% - 24px); }
+  .software-page > .image-page-hero { margin-top: 76px; }
   .software-page > .image-page-hero img { height: auto; aspect-ratio: 4 / 5; object-position: center; }
   .software-page > .image-page-hero .image-page-hero__label { bottom: 24px; }
   .software-page .sw-intro { gap: 28px; margin-bottom: 32px; }
@@ -252,11 +241,9 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .software-page .sw-floating-illustration img { animation: none; transform: none; }
-  .software-page .sw-float-toggle { display: none; }
 }
 @media print {
-  .software-page .sw-toc,
-  .software-page .sw-float-toggle { display: none; }
+  .software-page .sw-toc { display: none; }
   .software-page .sw-shell { display: block; }
   .software-page .sw-section { break-inside: auto; }
   .software-page .sw-detail > div { display: block; }

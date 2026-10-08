@@ -1,4 +1,12 @@
 /* Model-only additions; shared layout and navigation remain upstream. */
+.model-revision-page > .image-page-hero {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
 .model-revision-page .article-flow,
 .model-revision-page .article-flow * { min-width: 0; }
 .model-revision-page .article-flow :is(p, li, td, th) { overflow-wrap: anywhere; }

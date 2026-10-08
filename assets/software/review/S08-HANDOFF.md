@@ -6,7 +6,20 @@
 任务单：../_task-briefs/2026-10-03-software-protocol-46368360/08-software-task.md
 初次完成日期：2026-10-03；手册增补日期：2026-10-06。最新提交编号由完成消息提供，可用 git log -1 查询。
 
-## 2026-10-08 Model 新稿同步（最新补充）
+## 2026-10-08 封面、卷轴与悬浮按钮调整（最新交接状态）
+
+基线：`57712264fe35c6d5a1cec73a8f930db06c1ad80a`。落实用户已确认的界面要求及再次指出的 Model 封面宽度问题，仅在 S08 工作区和 `codex/08-instrument` 分支修改页面专用文件。
+
+- Software、Model 卷轴中的可见 `On this page` 元素删除，Model 的目录无障碍名称改为 `Model sections`；目录内容、选中效果和平滑跳转保留。Hardware 和 Judging/Hardware 当前没有该文字，未修改。
+- Software、Model 顶部封面宽度改为页面可用宽度的 100%，移除左右外边距、边框和圆角，手机端不再缩进封面。正文宽度及公共样式不变。
+- Software 插图右下角 Pause 按钮及专用样式、点击逻辑删除；原图和六秒循环、上下行程 10 px 的悬浮效果保留。减少动态效果时静止，切出页面时自动暂停，恢复后继续。
+- 文件清单：`Instrument/software.html`、`Instrument/model.html`、`样式/software.css`、`样式/software.js`、`样式/model-revision.css`、`assets/software/review/check-motion.mjs`、本交接记录。最终 commit hash 见完成消息或本分支 `git log -1`。
+- 检查通过：既有导航、减少动态效果和后台暂停检查；以 `model(1).docx` 运行全文覆盖、公式、表格、图片、批注呈现、链接及公共组件检查；Vite 正式构建（619 ms）；`git diff --check`。
+- 实际浏览器：两页均检查 1440/900/390/320 宽度，封面和图片左边缘为 0、右边缘贴齐页面可用宽度（测量误差小于 1 px），圆角 0，无页面横向溢出、无已加载坏图；卷轴文字检查均无 On this page。Software 插图按钮数量 0，动画为 `sw-float` 且运行中；Model 两处“模型排名第二”的新稿文字保留。控制台 warning/error 为零，桌面卷轴、插图和手机封面已截图目视检查；临时视口重置、临时标签关闭。
+- Navbar、Loading、Footer、公共样式脚本及主仓库未修改；手册、PDF、图像原字节及跨页/章节入口未变。设备与软件架构无新增变更，Judging 证据整合继续交 00。
+- 三项界面待办现已完成。剩余材料缺口：Hardware 手册/视频正式入口及此前记录的科研文稿口径差异，继续由 00 协调。应用对话接口此前返回 `Invalid app tool request`，本次交接记录供 00 接收，未宣称消息已自动送达。
+
+## 2026-10-08 Model 新稿同步（历史记录）
 
 基线：`22c2d35c593645be085edac78cc0b11a8d6f05fd`。用户要求 Model 页面内容与新稿一致。本次仅同步 Model 正文及其来源、检查和交接记录；最终提交号见完成消息或本分支 `git log -1`。
 

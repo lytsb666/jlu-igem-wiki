@@ -8,24 +8,15 @@ const makeElement = () => ({
   setAttribute(name,value) { this.attrs[name]=value },
   addEventListener(name,callback) { this.events[name]=callback }
 })
-const illustration=makeElement(), pause=makeElement()
-illustration.querySelector=()=>pause
+const illustration=makeElement()
 const root={querySelector:(selector)=>selector==='[data-sw-float]' ? illustration : null,querySelectorAll:()=>[]}
 const media={matches:true,events:{},addEventListener(name,callback){this.events[name]=callback}}
 const document={hidden:false,events:{},querySelector:()=>root,addEventListener(name,callback){this.events[name]=callback}}
 const window={matchMedia:()=>media}
 vm.runInNewContext(code,{document,window,enhanceSectionNavigation(){}})
-assert.equal(pause.hidden,true)
+assert(illustration.classList.values.has('is-paused'))
 media.matches=false
 media.events.change()
-assert.equal(pause.hidden,false)
-assert.equal(pause.attrs['aria-label'],'Pause floating illustration')
-pause.events.click()
-assert.equal(pause.attrs['aria-pressed'],'true')
-assert.equal(pause.attrs['aria-label'],'Resume floating illustration')
-assert(illustration.classList.values.has('is-paused'))
-pause.events.click()
-assert.equal(pause.attrs['aria-pressed'],'false')
 assert(!illustration.classList.values.has('is-paused'))
 document.hidden=true
 document.events.visibilitychange()
@@ -35,5 +26,13 @@ document.events.visibilitychange()
 assert(!illustration.classList.values.has('is-paused'))
 media.matches=true
 media.events.change()
-assert.equal(pause.hidden,true)
-console.log('Floating illustration pause/resume, accessible labels, reduced-motion preference and background pause passed.')
+assert(illustration.classList.values.has('is-paused'))
+document.hidden=true
+document.events.visibilitychange()
+media.matches=false
+media.events.change()
+assert(illustration.classList.values.has('is-paused'))
+document.hidden=false
+document.events.visibilitychange()
+assert(!illustration.classList.values.has('is-paused'))
+console.log('Floating illustration reduced-motion preference and background pause passed without a visible control.')
