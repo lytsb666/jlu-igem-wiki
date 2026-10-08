@@ -154,13 +154,12 @@ body :is(
   }
 }
 
-/* User-specified Chinese type sizes: 小初 = 36pt, 小三 = 15pt,
-   小一 = 24pt. This sheet is only included by subpages, not the home page.
-   Important declarations intentionally supersede the individual page themes. */
+/* Type variables follow the latest supplied 配色.docx. The shared typography
+   layer loaded by style.css also applies this scale to the Homepage. */
 :root {
-  --wiki-body-size: 15pt;
-  --wiki-heading-size: 36pt;
-  --wiki-card-heading-size: 24pt;
+  --wiki-body-size: 12pt;
+  --wiki-heading-size: 22pt;
+  --wiki-card-heading-size: 16pt;
   --wiki-text-leading: 1.3;
 }
 

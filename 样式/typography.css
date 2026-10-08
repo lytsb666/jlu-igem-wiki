@@ -1,0 +1,77 @@
+/* Site-wide type scale from the supplied 配色.docx (2026-10-08).
+   Chapter h2 is level 1, followed by h3/h4/h5; page h1 uses level 1.
+   An important cascade layer takes precedence over older page-local scales. */
+:root {
+  --wiki-body-size: 12pt;
+  --wiki-heading-size: 22pt;
+  --wiki-card-heading-size: 16pt;
+  --wiki-third-heading-size: 14pt;
+  --wiki-fourth-heading-size: 14pt;
+}
+
+@layer wiki-typography {
+  body,
+  body *,
+  body *::before,
+  body *::after {
+    font-family: "Times New Roman", Times, serif !important;
+  }
+
+  body {
+    font-size: var(--wiki-body-size) !important;
+  }
+
+  body :is(p, li, dt, dd, blockquote, figcaption, caption, th, td,
+    label, button, input, select, textarea, summary),
+  body :is(nav, aside) a,
+  body :is(.eyebrow, .hp-p, .section-lead, .section-bridge,
+    .team-hero__stats, .member-card__role, .member-card__hint,
+    .member-card__tag, .member-filter, .home-card-hint,
+    .home-story-progress, [class$="-kicker"], [class$="__kicker"]) {
+    font-size: var(--wiki-body-size) !important;
+  }
+
+  body :is(h1, h2, .hp-h1):not(aside *, nav *) {
+    font-size: var(--wiki-heading-size) !important;
+    font-weight: 700 !important;
+  }
+
+  body :is(h3, .hp-h2, .member-card__name):not(aside *, nav *),
+  body :is(.parts-module, .experiment-card, .stage-panel,
+    .reference-fold, .research-result-stage) > summary,
+  body :is([class~="card"], [class$="-card"], [class*="-card "],
+    .parts-module) :is(h2, h3) {
+    font-size: var(--wiki-card-heading-size) !important;
+    font-weight: 700 !important;
+  }
+
+  body :is(h4, .hp-h3):not(aside *, nav *) {
+    font-size: var(--wiki-third-heading-size) !important;
+    font-weight: 700 !important;
+  }
+
+  body :is(h5, h6):not(aside *, nav *) {
+    font-size: var(--wiki-fourth-heading-size) !important;
+    font-weight: 700 !important;
+  }
+
+  /* Navigation labels describe destinations rather than article levels. */
+  body :is(nav, aside) :is(h1, h2, h3, h4, h5, h6),
+  body .engineering-toc-title {
+    font-size: var(--wiki-body-size) !important;
+    font-weight: 700 !important;
+  }
+
+  body :is(figcaption, caption, .research-table-caption,
+    .engineering-table-caption, .table-caption, .figure-caption) {
+    font-size: var(--wiki-body-size) !important;
+    font-weight: 700 !important;
+  }
+
+  /* Preserve heading/link emphasis and scientific sub/superscript sizing. */
+  body :is(p, li, dt, dd, blockquote, figcaption, caption, th, td,
+    h1, h2, h3, h4, h5, h6, button, summary, .home-story-progress)
+    :is(a, span, strong, b, em, i, code, small) {
+    font-size: inherit !important;
+  }
+}
