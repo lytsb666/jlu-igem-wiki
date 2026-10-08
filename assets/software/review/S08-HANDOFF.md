@@ -6,7 +6,20 @@
 任务单：../_task-briefs/2026-10-03-software-protocol-46368360/08-software-task.md
 初次完成日期：2026-10-03；手册增补日期：2026-10-06。最新提交编号由完成消息提供，可用 git log -1 查询。
 
-## 2026-10-08 封面、卷轴与悬浮按钮调整（最新交接状态）
+## 2026-10-08 卷轴返回顶部入口（最新交接状态）
+
+基线：`e8632d36fe10df206dbc707a28c3488e722865fe`。用户要求逐一检查卷轴底部的 Back to top。发现 Model 缺少入口、Software 手机端隐藏入口，现已补齐。仅在 S08 工作区和 `codex/08-instrument` 分支修改。
+
+- Software、Model 均在卷轴导航下方设置独立的 `Back to top ↑` 链接，置于滚动目录之外；手机端正常显示。目标统一为页面根元素的 `#page-top`，返回封面上方的页面最顶部，不再只返回正文开头。
+- Model 的章节高亮只跟踪目录内的章节链接，不把返回顶部作为章节；保留平滑滚动、焦点跟随及减少动态效果支持。
+- 手机端调整两页章节定位留白，避免加高的目录遮挡标题；Model 将横向滚动限制在章节导航内部，返回入口固定显示在其下方。
+- 文件清单：`Instrument/software.html`、`Instrument/model.html`、`样式/software.css`、`样式/model-revision.css`、`样式/model-revision.js`、`assets/model/review/revision-checks.json`、本交接记录。最终 commit hash 见完成消息或本分支 `git log -1`。
+- 检查通过：既有导航测试；以 `model(1).docx` 运行全文、公式、表格、图片、批注呈现、参考文献、旧片段链接和公共组件检查；Vite 正式构建（598 ms）；`git diff --check`。
+- 实际浏览器：两页各检查 1440/900/390/320 宽度，均有且仅有一个可渲染的返回链接，位于导航下方、滚动导航之外，无页面横向溢出。Model 390、Software 320 的链接均无遮挡，章节顶部分别约 228/220 px，目录下边缘约 200/192 px。Model 桌面链接正常显示。Model 点击、Software Enter 返回后均验证 `scrollY = 0`、URL 为 `#page-top`、焦点在根目标；控制台 warning/error 为零。临时视口重置、临时检查标签关闭。
+- Hardware 和 Judging/Hardware 当前没有卷轴目录，未修改。公共文件、Navbar、Loading、Footer、设备/软件架构、科研正文、手册和素材未变；章节和跨页链接保留，新增顶部片段可用。Judging 证据整合仍交 00，材料缺口仍为 Hardware 手册/视频正式入口及来源清单中的科研文稿口径差异。
+- 应用对话接口此前返回 `Invalid app tool request`，本记录供 00 接收整合，未宣称已自动发送。
+
+## 2026-10-08 封面、卷轴与悬浮按钮调整（历史记录）
 
 基线：`57712264fe35c6d5a1cec73a8f930db06c1ad80a`。落实用户已确认的界面要求及再次指出的 Model 封面宽度问题，仅在 S08 工作区和 `codex/08-instrument` 分支修改页面专用文件。
 

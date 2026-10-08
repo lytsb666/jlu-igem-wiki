@@ -18,14 +18,14 @@
   "references": 15,
   "pages": {
     "Instrument/software.html": {
-      "unique_ids": 16,
+      "unique_ids": 17,
       "local_targets_checked": 20,
       "missing_anchors": [],
       "old_fragment_ids_preserved": true,
       "navbar_loading_footer_unchanged": true
     },
     "Instrument/model.html": {
-      "unique_ids": 58,
+      "unique_ids": 59,
       "local_targets_checked": 14,
       "missing_anchors": [],
       "old_fragment_ids_preserved": true,
