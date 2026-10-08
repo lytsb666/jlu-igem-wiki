@@ -12,19 +12,12 @@ if (softwareRoot) {
   }
 
   const illustration = softwareRoot.querySelector('[data-sw-float]')
-  const pauseButton = illustration?.querySelector('[data-sw-float-pause]')
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
-  let paused = false
 
   function updateMotion() {
-    if (!illustration || !pauseButton) return
-    illustration.classList.toggle('is-paused', paused || document.hidden)
-    pauseButton.hidden = motionPreference.matches
-    pauseButton.setAttribute('aria-pressed', String(paused))
-    pauseButton.textContent = paused ? 'Resume' : 'Pause'
-    pauseButton.setAttribute('aria-label', paused ? 'Resume floating illustration' : 'Pause floating illustration')
+    if (!illustration) return
+    illustration.classList.toggle('is-paused', motionPreference.matches || document.hidden)
   }
-  pauseButton?.addEventListener('click', () => { paused = !paused; updateMotion() })
   motionPreference.addEventListener('change', updateMotion)
   document.addEventListener('visibilitychange', updateMotion)
   updateMotion()
