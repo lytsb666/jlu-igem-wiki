@@ -102,45 +102,10 @@
             <a class="sw-text-link" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software" target="_blank" rel="noopener">View source code <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="sw-animation" data-sw-animation data-stage="0">
-          <div class="sw-animation-top"><span>From connection to results</span><span>8-second loop</span></div>
-          <svg viewBox="0 0 520 340" aria-hidden="true" focusable="false">
-            <rect x="22" y="60" width="174" height="203" rx="18" fill="#e8ded1" stroke="#6f4e37" stroke-width="2"/>
-            <rect x="46" y="90" width="126" height="107" rx="10" fill="#fffaf3"/>
-            <g stroke="#166c66" stroke-width="8" stroke-linecap="round">
-              <path d="M65 112v48"/><path d="M87 112v48"/><path d="M109 112v48"/><path d="M131 112v48"/><path d="M153 112v48"/>
-            </g>
-            <text x="109" y="229" text-anchor="middle" fill="#6f4e37" font-size="22">AI Box</text>
-            <path class="sw-signal" d="M205 133h83m-12-12 12 12-12 12" fill="none" stroke="#166c66" stroke-width="3"/>
-            <path class="sw-signal" d="M215 166h64m-52-12-12 12 12 12" fill="none" stroke="#c27b45" stroke-width="3"/>
-            <text x="248" y="105" text-anchor="middle" fill="#6f4e37" font-size="19">Wi-Fi / TCP</text>
-            <rect x="305" y="22" width="189" height="296" rx="25" fill="#fffaf3" stroke="#6f4e37" stroke-width="3"/>
-            <rect x="363" y="34" width="73" height="6" rx="3" fill="#6f4e37"/>
-            <text x="399" y="78" text-anchor="middle" fill="#6f4e37" font-size="22">Android app</text>
-            <g class="sw-parameter">
-              <rect x="325" y="99" width="150" height="44" rx="8" fill="#e4efea"/>
-              <text x="399" y="127" text-anchor="middle" fill="#166c66" font-size="19">Run configured</text>
-            </g>
-            <g fill="none" stroke-width="3">
-              <path d="M327 226h145M327 226v-65" stroke="#d1c3b2"/>
-              <path class="sw-trace sw-trace-a" d="M330 216C352 209 360 179 384 178S425 157 470 161" stroke="#166c66"/>
-              <path class="sw-trace sw-trace-b" d="M330 216C364 210 379 218 409 212S446 216 470 210" stroke="#c27b45"/>
-            </g>
-            <g class="sw-result">
-              <rect x="325" y="246" width="150" height="42" rx="8" fill="#e4efea"/>
-              <text x="399" y="272" text-anchor="middle" fill="#166c66" font-size="18">Tube labels received</text>
-            </g>
-          </svg>
-          <ol class="sw-animation-steps" aria-label="Illustrated workflow">
-            <li>Connect</li><li>Configure</li><li>Acquire</li><li>Plot</li><li>View results</li>
-          </ol>
-          <div class="sw-animation-controls">
-            <p class="sw-motion-note">Workflow illustration; curves are schematic.</p>
-            <button class="sw-button sw-button-small" type="button" data-sw-pause aria-pressed="false" hidden>Pause animation</button>
-            <button class="sw-button sw-button-small" type="button" data-sw-static aria-pressed="false" hidden>Show static diagram</button>
-          </div>
-          <p class="sw-static-note">Static view: the complete workflow is shown without animation.</p>
-        </div>
+        <figure class="sw-floating-illustration" data-sw-float>
+          <img src="../assets/software/images/device-phone-mascot.jpg" width="1024" height="1024" alt="ByeGerm mascot holding the detector and a phone" decoding="async" />
+          <button class="sw-float-toggle" type="button" data-sw-float-pause aria-label="Pause floating illustration" aria-pressed="false" hidden>Pause</button>
+        </figure>
       </header>
 
       <div class="sw-shell">
@@ -235,10 +200,10 @@
 
           <section class="sw-section" id="software-user-guide" aria-labelledby="sw-guide-heading">
             <div class="sw-section-heading"><span class="sw-section-number">05</span><h2 id="sw-guide-heading">User Guide</h2></div>
-            <p>Choose the illustrated manual for your app generation. Both guides cover the available installation, connection, monitoring, image and recovery instructions, and identify information still to be supplied. Full acquisition and device control require a compatible AI Box server on a network reachable from the phone.</p>
+            <p>Choose the illustrated manual for your app generation. Both eight-page guides cover instrument preparation, app operation, monitoring, result recording, and troubleshooting. Full acquisition and device control require a compatible AI Box server on a network reachable from the phone.</p>
             <div class="sw-guide-grid">
-              <div class="sw-resource-card"><p class="sw-kicker">A · First-generation manual</p><h3>First-generation app</h3><p>A two-page English PDF covers the first-generation connection, two-series data display, image requests, saving and reconnection workflow. Missing device details are marked in the guide.</p><div class="sw-actions"><a class="sw-button" href="../software-resources/software-user-guide-first-generation.pdf" target="_blank" rel="noopener">Preview first-generation manual ↗</a><a class="sw-text-link" href="../software-resources/software-user-guide-first-generation.pdf" download>Download PDF</a></div><a class="sw-text-link" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/first-generation-fluorescent-detection.apk?inline=false">Download first-generation APK ↗</a></div>
-              <div class="sw-resource-card"><p class="sw-kicker">B · Second-generation manual</p><h3>Second-generation app</h3><p>A two-page English PDF covers connection, monitoring, five tube labels, image saving and the Servo screen. Missing device details and the chart-version difference are marked in the guide.</p><div class="sw-actions"><a class="sw-button" href="../software-resources/software-user-guide-second-generation.pdf" target="_blank" rel="noopener">Preview second-generation manual ↗</a><a class="sw-text-link" href="../software-resources/software-user-guide-second-generation.pdf" download>Download PDF</a></div><a class="sw-text-link" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk?inline=false">Download second-generation APK ↗</a></div>
+              <div class="sw-resource-card"><p class="sw-kicker">A · First-generation manual</p><h3>ByeGerm 1.0 User Manual</h3><p>An eight-page illustrated manual covering preparation, sample handling, app setup, reaction monitoring, result recording, and troubleshooting.</p><div class="sw-actions"><a class="sw-button" href="../software-resources/software-user-guide-first-generation.pdf" target="_blank" rel="noopener">Preview first-generation manual ↗</a><a class="sw-text-link" href="../software-resources/software-user-guide-first-generation.pdf" download>Download PDF</a></div><a class="sw-text-link" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/first-generation-fluorescent-detection.apk?inline=false">Download first-generation APK ↗</a></div>
+              <div class="sw-resource-card"><p class="sw-kicker">B · Second-generation manual</p><h3>ByeGerm 2.0 User Manual</h3><p>An eight-page illustrated manual for the second generation, including two loading areas, batch loading, rotation controls, image acquisition, and troubleshooting.</p><div class="sw-actions"><a class="sw-button" href="../software-resources/software-user-guide-second-generation.pdf" target="_blank" rel="noopener">Preview second-generation manual ↗</a><a class="sw-text-link" href="../software-resources/software-user-guide-second-generation.pdf" download>Download PDF</a></div><a class="sw-text-link" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk?inline=false">Download second-generation APK ↗</a></div>
             </div>
             <p><strong>Hardware resources:</strong> <a href="../Instrument/hardware.html">Hardware manual (to be added)</a> · <a href="../Instrument/hardware.html">Hardware operation video (to be added)</a>. These temporary links open the Hardware page; final manual and video entries will be added here.</p>
             <h3>Quick start</h3>

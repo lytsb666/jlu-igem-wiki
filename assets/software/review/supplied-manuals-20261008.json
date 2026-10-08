@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-08",
+  "manuals": [
+    {
+      "generation": "first",
+      "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\msg\\file\\2026-10\\1.0.pdf",
+      "target": "public\\software-resources\\software-user-guide-first-generation.pdf",
+      "pages": 8,
+      "bytes": 28052399,
+      "sha256": "6c44f6ff99b1aa9be471eb88cdcea85ac5b8eeefd0ccaa88eca53a7050eecb1f",
+      "original_bytes_preserved": true
+    },
+    {
+      "generation": "second",
+      "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\msg\\file\\2026-10\\2.0.pdf",
+      "target": "public\\software-resources\\software-user-guide-second-generation.pdf",
+      "pages": 8,
+      "bytes": 28636150,
+      "sha256": "1ba83a1d725af05c9cf5cca78d39c0c6917a16a0713500b1cc671d331fac3831",
+      "original_bytes_preserved": true
+    }
+  ],
+  "illustration": {
+    "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\temp\\RWTemp\\2026-10\\9970455b67d62b112185bf0bd2bccd2a\\68e673a85dc00f6dc861715f0be056cc.jpg",
+    "target": "assets\\software\\images\\device-phone-mascot.jpg",
+    "sha256": "1306b2cb6c9ea6dbbe9fc975daba17d913d8186a14b4e8dff43ce7fa9f8f3ebb",
+    "width": 1024,
+    "height": 1024,
+    "original_bytes_preserved": true,
+    "motion": "CSS 6-second loop, 10px vertical travel; pause/reduced-motion supported"
+  },
+  "unchanged_scope": [
+    "Model",
+    "Hardware",
+    "Judging",
+    "public styles and scripts",
+    "Navbar, Loading and Footer"
+  ],
+  "manual_entry_urls_preserved": true,
+  "hardware_placeholders_preserved": true
+}
