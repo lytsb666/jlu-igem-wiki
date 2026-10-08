@@ -9,20 +9,26 @@
   <link rel="stylesheet" href="../样式/full-width-layout.css">
 
     <style data-engineering-styles>
+      :root body main > .image-page-hero { width: 100%; max-width: none; margin-inline: 0; border: 0; border-radius: 0; }
+      :root body main > .image-page-hero > img { height: auto; }
       .engineering-overview, .engineering-tabs, .engineering-layout { width: var(--wiki-main-width, calc(100% - 48px)); margin: 32px auto; }
       .engineering-overview { padding: clamp(12px, 2vw, 24px); background: #fff; border: 1px solid var(--border); border-radius: 20px; }
       .engineering-overview img { display: block; width: 100%; height: auto; }
       .engineering-original { display: block; width: fit-content; max-width: 100%; margin: 0 auto; border-radius: 8px; }
       .engineering-original:focus-visible, .engineering-tab:focus-visible, .engineering-toc a:focus-visible, .engineering-edge-links a:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
       .engineering-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-      .engineering-tab { display: flex; align-items: center; gap: 14px; padding: 20px 16px; cursor: pointer; color: var(--text); background: #fff; border: 1px solid var(--border); border-radius: 16px; text-align: left; font-size: 1.25rem; font-weight: 700; transition: border-color .15s, background .15s; }
-      .engineering-tab[aria-selected="true"] { border: 2px solid var(--secondary); padding: 19px 15px; background: #f7eee5; }
-      .engineering-tab:hover { background: #f7eee5; }
-      .engineering-tab-icon { display: grid; place-items: center; flex: 0 0 62px; height: 70px; background: #e9cfb5; clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%); }
+      #engineering-tab-wetlab { --engineering-accent: #86ccdc; --engineering-ink: #285a68; --engineering-tint: #eef9fb; }
+      #engineering-tab-drylab { --engineering-accent: #f5a188; --engineering-ink: #854631; --engineering-tint: #fff2ed; }
+      #engineering-tab-hardware { --engineering-accent: #91ceb3; --engineering-ink: #2d6652; --engineering-tint: #eff9f4; }
+      #engineering-tab-human-practices { --engineering-accent: #b7a6df; --engineering-ink: #5a437d; --engineering-tint: #f5f0fc; }
+      .engineering-tab { display: flex; align-items: center; gap: 14px; padding: 20px 16px; cursor: pointer; color: var(--text); background: #fff; border: 1px solid var(--engineering-accent); border-radius: 16px; text-align: left; font-size: 1.25rem; font-weight: 700; transition: border-color .2s, background .2s; }
+      .engineering-tab[aria-selected="true"] { border: 2px solid var(--engineering-ink); padding: 19px 15px; background: var(--engineering-tint); }
+      .engineering-tab:hover { background: var(--engineering-tint); }
+      .engineering-tab-icon { display: grid; place-items: center; flex: 0 0 62px; height: 70px; color: var(--engineering-ink); background: var(--engineering-accent); clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%); }
       .engineering-tab-icon svg { width: 52px; height: 52px; }
       .engineering-layout { display: grid; grid-template-columns: 370px minmax(0, 1fr); align-items: start; gap: 28px; }
       .engineering-directory { position: sticky; top: 98px; min-width: 0; }
-      :root body main .engineering-toc-title { margin: 0 12px 12px; font-size: 1.5rem !important; text-align: center; }
+      :root body main .engineering-toc-title { position: absolute; top: -67px; left: 0; right: 0; z-index: 1; margin: 0; padding: 0 3px; font-size: 1.05rem !important; line-height: 1.15 !important; text-align: center; }
       .engineering-toc { position: relative; height: calc(100svh - 190px); min-height: 430px; }
       :root body .engineering-toc.page-toc { padding: 28px; border-width: 90px 54px; border-image-slice: 400 250 400 250 fill; border-image-width: 90px 54px; }
       :root body .engineering-toc > nav { position: absolute; inset: 20% 12%; margin: 0; max-height: none; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 0 4px; }
@@ -30,7 +36,7 @@
       .engineering-toc-group summary { cursor: pointer; }
       :root body main .engineering-toc-group summary { font-size: 1.05rem !important; font-weight: 700; overflow-wrap: anywhere; }
       .engineering-toc ul { list-style: none; margin: 0; padding: 0; }
-      .engineering-toc a { display: block; padding: 5px 2px; color: var(--text); text-decoration: none; border-radius: 4px; overflow-wrap: anywhere; }
+      .engineering-toc a { display: block; padding: 5px 2px; color: var(--text); text-decoration: none; border-radius: 4px; overflow-wrap: anywhere; transition: background .2s; }
       :root body .engineering-toc a { font-size: .9rem !important; }
       .engineering-toc a:hover, .engineering-toc a[aria-current="location"] { background: rgba(154, 103, 66, .15); }
       .engineering-content { min-width: 0; padding: clamp(18px, 3vw, 42px); background: #fff; border: 1px solid var(--border); border-radius: 20px; }
@@ -54,12 +60,16 @@
       .engineering-table-wrap th { background: #f7eee5; }
       .engineering-table-wrap tr + tr, .engineering-table-wrap tbody tr:first-child { border-top: 1px solid var(--border); }
       .engineering-object h3, .engineering-card, .engineering-figure, .engineering-table-wrap { scroll-margin-top: 110px; }
+      .engineering-panel :is(.engineering-card, .engineering-object > h3, .engineering-figure, .engineering-table-wrap):focus-visible { outline: 2px solid var(--secondary); outline-offset: 4px; }
+      .engineering-arrival { animation: engineering-arrival 2s ease-out; }
+      @keyframes engineering-arrival { 0%, 45% { box-shadow: 0 0 0 3px rgba(154, 103, 66, .25); } 100% { box-shadow: 0 0 0 3px transparent; } }
       .engineering-panel[hidden], .engineering-toc > nav[hidden] { display: none !important; }
       @media (max-width: 1100px) { .engineering-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .engineering-layout { grid-template-columns: 330px minmax(0, 1fr); gap: 20px; } }
       @media (max-width: 900px) {
         .engineering-layout { display: block; }
         .engineering-directory { position: static; margin-bottom: 24px; }
         :root body .engineering-toc.page-toc { height: auto; min-height: 0; padding: 18px; border: 1px solid var(--border); border-image: none; border-radius: 16px; background: #fff; }
+        :root body main .engineering-toc-title { position: static; margin-bottom: 12px; padding: 0; font-size: 1.2rem !important; }
         :root body .engineering-toc > nav { position: static; max-height: 240px; padding: 0 4px; }
         .engineering-tab { gap: 10px; padding: 16px 12px; }
         .engineering-tab[aria-selected="true"] { padding: 15px 11px; }
@@ -73,7 +83,7 @@
         .engineering-tab-icon { flex-basis: auto; width: 48px; }
         .engineering-content { padding: 16px; }
       }
-      @media (prefers-reduced-motion: reduce) { .engineering-tab { transition: none; } }
+      @media (prefers-reduced-motion: reduce) { .engineering-tab, .engineering-toc a { transition: none; } .engineering-arrival { animation: none; } }
     </style>
 </head>
 
@@ -165,7 +175,7 @@
 <button id="engineering-tab-drylab" class="engineering-tab" type="button" role="tab" aria-controls="engineering-drylab" aria-selected="false" tabindex="-1"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m23 20 18 6M22 25l3 18m17-12-10 13"/><circle cx="19" cy="19" r="6"/><circle cx="46" cy="27" r="6"/><circle cx="27" cy="49" r="6"/></svg></span><span>Dry Lab Engineering</span></button>
 <button id="engineering-tab-hardware" class="engineering-tab" type="button" role="tab" aria-controls="engineering-hardware" aria-selected="false" tabindex="-1"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="16" width="38" height="31" rx="4"/><path d="M22 54h20m-10-7v7M20 26h24M20 34h14"/><circle cx="44" cy="39" r="2"/></svg></span><span>Hardware Engineering</span></button>
 <button id="engineering-tab-human-practices" class="engineering-tab" type="button" role="tab" aria-controls="engineering-human-practices" aria-selected="false" tabindex="-1"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="21" r="7"/><path d="M21 48v-5a11 11 0 0 1 22 0v5M17 28a5 5 0 1 1-5-5m35 5a5 5 0 1 0 5-5M12 49v-8a8 8 0 0 1 7-8m33 16v-8a8 8 0 0 0-7-8"/></svg></span><span>Human Practices Engineering</span></button></div>
-<div class="engineering-layout"><div class="engineering-directory"><h2 id="engineering-toc-title" class="engineering-toc-title" aria-live="polite">Wet Lab Engineering</h2><aside class="page-toc engineering-toc" aria-labelledby="engineering-toc-title"><nav id="engineering-toc-wetlab" aria-label="Wet Lab Engineering contents" ><details class="engineering-toc-group" open><summary>Object A: System Configuration</summary><a class="engineering-toc-overview" href="#engineering-object-a">Overview</a><ul><li><a href="#engineering-node-a1" title="Node A1: Initial RPA–Cas12a Detection System">Node A1</a></li><li><a href="#engineering-edge-a1-a2" title="Edge A1 → A2">Edge A1 → A2</a></li><li><a href="#engineering-edge-a1-e1" title="Edge A1 → E1">Edge A1 → E1</a></li><li><a href="#engineering-node-a2" title="Node A2: Reaction Conditions Selected by Fluorescence">Node A2</a></li><li><a href="#engineering-edge-a2-a3" title="Edge A2 → A3">Edge A2 → A3</a></li><li><a href="#engineering-node-a3" title="Node A3: Validation and Transfer of the Detection System">Node A3</a></li></ul></details><details class="engineering-toc-group" open><summary>Object B: Primer and crRNA Selection</summary><a class="engineering-toc-overview" href="#engineering-object-b">Overview</a><ul><li><a href="#engineering-node-b1" title="Node B1: RSV Primer and crRNA Candidate Preparation">Node B1</a></li><li><a href="#engineering-edge-b1-d4" title="Edge B1 → D4">Edge B1 → D4</a></li><li><a href="#engineering-node-b2" title="Node B2: Rank Based Selection of RSV Combinations">Node B2</a></li><li><a href="#engineering-edge-b2-b3" title="Edge B2 → B3">Edge B2 → B3</a></li><li><a href="#engineering-node-b3" title="Node B3: Fluorescence Validation of RSV Combinations">Node B3</a></li><li><a href="#engineering-edge-b3-a2" title="Edge B3 → A2">Edge B3 → A2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object C: Fluorescence Readout</summary><a class="engineering-toc-overview" href="#engineering-object-c">Overview</a><ul><li><a href="#engineering-node-c1" title="Node C1: Initial Fluorescent reporter Readout">Node C1</a></li><li><a href="#engineering-edge-c1-c2" title="Edge C1 → C2">Edge C1 → C2</a></li><li><a href="#engineering-edge-c1-g1" title="Edge C1 → G1">Edge C1 → G1</a></li><li><a href="#engineering-node-c2" title="Node C2: reporter Concentration and Signal Separation">Node C2</a></li><li><a href="#engineering-edge-c2-c3" title="Edge C2 → C3">Edge C2 → C3</a></li><li><a href="#engineering-edge-c2-g1" title="Edge C2 → G1">Edge C2 → G1</a></li><li><a href="#engineering-node-c3" title="Node C3: Multiple Target Reagent Readout">Node C3</a></li><li><a href="#engineering-edge-c3-g2" title="Edge C3 → G2">Edge C3 → G2</a></li></ul></details></nav>
+<div class="engineering-layout"><div class="engineering-directory"><aside class="page-toc engineering-toc" aria-labelledby="engineering-toc-title"><h2 id="engineering-toc-title" class="engineering-toc-title" aria-live="polite">Wet Lab Engineering</h2><nav id="engineering-toc-wetlab" aria-label="Wet Lab Engineering contents" ><details class="engineering-toc-group" open><summary>Object A: System Configuration</summary><a class="engineering-toc-overview" href="#engineering-object-a">Overview</a><ul><li><a href="#engineering-node-a1" title="Node A1: Initial RPA–Cas12a Detection System">Node A1</a></li><li><a href="#engineering-edge-a1-a2" title="Edge A1 → A2">Edge A1 → A2</a></li><li><a href="#engineering-edge-a1-e1" title="Edge A1 → E1">Edge A1 → E1</a></li><li><a href="#engineering-node-a2" title="Node A2: Reaction Conditions Selected by Fluorescence">Node A2</a></li><li><a href="#engineering-edge-a2-a3" title="Edge A2 → A3">Edge A2 → A3</a></li><li><a href="#engineering-node-a3" title="Node A3: Validation and Transfer of the Detection System">Node A3</a></li></ul></details><details class="engineering-toc-group" open><summary>Object B: Primer and crRNA Selection</summary><a class="engineering-toc-overview" href="#engineering-object-b">Overview</a><ul><li><a href="#engineering-node-b1" title="Node B1: RSV Primer and crRNA Candidate Preparation">Node B1</a></li><li><a href="#engineering-edge-b1-d4" title="Edge B1 → D4">Edge B1 → D4</a></li><li><a href="#engineering-node-b2" title="Node B2: Rank Based Selection of RSV Combinations">Node B2</a></li><li><a href="#engineering-edge-b2-b3" title="Edge B2 → B3">Edge B2 → B3</a></li><li><a href="#engineering-node-b3" title="Node B3: Fluorescence Validation of RSV Combinations">Node B3</a></li><li><a href="#engineering-edge-b3-a2" title="Edge B3 → A2">Edge B3 → A2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object C: Fluorescence Readout</summary><a class="engineering-toc-overview" href="#engineering-object-c">Overview</a><ul><li><a href="#engineering-node-c1" title="Node C1: Initial Fluorescent reporter Readout">Node C1</a></li><li><a href="#engineering-edge-c1-c2" title="Edge C1 → C2">Edge C1 → C2</a></li><li><a href="#engineering-edge-c1-g1" title="Edge C1 → G1">Edge C1 → G1</a></li><li><a href="#engineering-node-c2" title="Node C2: reporter Concentration and Signal Separation">Node C2</a></li><li><a href="#engineering-edge-c2-c3" title="Edge C2 → C3">Edge C2 → C3</a></li><li><a href="#engineering-edge-c2-g1" title="Edge C2 → G1">Edge C2 → G1</a></li><li><a href="#engineering-node-c3" title="Node C3: Multiple Target Reagent Readout">Node C3</a></li><li><a href="#engineering-edge-c3-g2" title="Edge C3 → G2">Edge C3 → G2</a></li></ul></details></nav>
 <nav id="engineering-toc-drylab" aria-label="Dry Lab Engineering contents" hidden><details class="engineering-toc-group" open><summary>Object D: Sequence Ranking</summary><a class="engineering-toc-overview" href="#engineering-object-d">Overview</a><ul><li><a href="#engineering-node-d1" title="Node D1: PAM Site Ranking by Cosine Similarity">Node D1</a></li><li><a href="#engineering-edge-d1-d2" title="Edge D1 → D2">Edge D1 → D2</a></li><li><a href="#engineering-node-d2" title="Node D2: Pre-final DNABERT Multilayer Perceptron (MLP) Combination Ranker">Node D2</a></li><li><a href="#engineering-edge-d2-d3" title="Edge D2 → D3">Edge D2 → D3</a></li><li><a href="#engineering-node-d3" title="Node D3: Audit of Candidate Construction">Node D3</a></li><li><a href="#engineering-edge-d3-f3" title="Edge D3 → F3">Edge D3 → F3</a></li><li><a href="#engineering-node-d4" title="Node D4: Groupwise Combination Ranker">Node D4</a></li><li><a href="#engineering-edge-d4-b2" title="Edge D4 → B2">Edge D4 → B2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object E: Reaction Dynamics</summary><a class="engineering-toc-overview" href="#engineering-object-e">Overview</a><ul><li><a href="#engineering-node-e1" title="Node E1: Initial ODE Reaction Formulation">Node E1</a></li><li><a href="#engineering-edge-e1-e2" title="Edge E1 → E2">Edge E1 → E2</a></li><li><a href="#engineering-node-e2" title="Node E2: ODE Dynamics with Substrate Consumption">Node E2</a></li><li><a href="#engineering-edge-e2-e3" title="Edge E2 → E3">Edge E2 → E3</a></li><li><a href="#engineering-node-e3" title="Node E3: Search for Reaction Concentrations">Node E3</a></li><li><a href="#engineering-edge-e3-a2" title="Edge E3 → A2">Edge E3 → A2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object F: Training Data and Candidate Groups</summary><a class="engineering-toc-overview" href="#engineering-object-f">Overview</a><ul><li><a href="#engineering-node-f1" title="Node F1: Short Window Classification Data">Node F1</a></li><li><a href="#engineering-edge-f1-f2" title="Edge F1 → F2">Edge F1 → F2</a></li><li><a href="#engineering-node-f2" title="Node F2: Literature Linked Combination Records">Node F2</a></li><li><a href="#engineering-edge-f2-d2" title="Edge F2 → D2">Edge F2 → D2</a></li><li><a href="#engineering-edge-f2-f3" title="Edge F2 → F3">Edge F2 → F3</a></li><li><a href="#engineering-node-f3" title="Node F3: Enumerated Candidate Groups">Node F3</a></li><li><a href="#engineering-edge-f3-d4" title="Edge F3 → D4">Edge F3 → D4</a></li></ul></details></nav>
 <nav id="engineering-toc-hardware" aria-label="Hardware Engineering contents" hidden><details class="engineering-toc-group" open><summary>Object G: Optical Acquisition and Capacity</summary><a class="engineering-toc-overview" href="#engineering-object-g">Overview</a><ul><li><a href="#engineering-node-g1" title="Node G1: First Portable Optical Readout">Node G1</a></li><li><a href="#engineering-edge-g1-g2" title="Edge G1 → G2">Edge G1 → G2</a></li><li><a href="#engineering-edge-g1-i1" title="Edge G1 → I1">Edge G1 → I1</a></li><li><a href="#engineering-node-g2" title="Node G2: Rotating Chamber for Batch Imaging">Node G2</a></li><li><a href="#engineering-edge-g2-i4" title="Edge G2 → I4">Edge G2 → I4</a></li></ul></details><details class="engineering-toc-group" open><summary>Object H: Temperature Control</summary><a class="engineering-toc-overview" href="#engineering-object-h">Overview</a><ul><li><a href="#engineering-node-h1" title="Node H1: First Generation Temperature Feedback">Node H1</a></li><li><a href="#engineering-edge-h1-h2" title="Edge H1 → H2">Edge H1 → H2</a></li><li><a href="#engineering-node-h2" title="Node H2: Second Generation Thermal Zones">Node H2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object I: Instrument App and Data Display</summary><a class="engineering-toc-overview" href="#engineering-object-i">Overview</a><ul><li><a href="#engineering-node-i1" title="Node I1: Connection and Run Setup">Node I1</a></li><li><a href="#engineering-edge-i1-i2" title="Edge I1 → I2">Edge I1 → I2</a></li><li><a href="#engineering-node-i2" title="Node I2: Run Status, Curves, and Images">Node I2</a></li><li><a href="#engineering-edge-i2-i3" title="Edge I2 → I3">Edge I2 → I3</a></li><li><a href="#engineering-edge-i2-i4" title="Edge I2 → I4">Edge I2 → I4</a></li><li><a href="#engineering-node-i3" title="Node I3: Interruption and Reconnection Checks (Planned)">Node I3</a></li><li><a href="#engineering-node-i4" title="Node I4: Tube Linked Result Recording">Node I4</a></li></ul></details></nav>
 <nav id="engineering-toc-human-practices" aria-label="Human Practices Engineering contents" hidden><details class="engineering-toc-group" open><summary>Object J: Audience Adapted Education</summary><a class="engineering-toc-overview" href="#engineering-object-j">Overview</a><ul><li><a href="#engineering-node-j1" title="Node J1: Audience Adapted Education Design">Node J1</a></li><li><a href="#engineering-edge-j1-j2" title="Edge J1 → J2">Edge J1 → J2</a></li><li><a href="#engineering-edge-j1-i4" title="Edge J1 → I4">Edge J1 → I4</a></li><li><a href="#engineering-node-j2" title="Node J2: Activity Level Feedback and Revision">Node J2</a></li><li><a href="#engineering-edge-j2-j1" title="Edge J2 → J1">Edge J2 → J1</a></li></ul></details></nav></aside></div><article class="engineering-content"><section id="engineering-wetlab" class="engineering-panel" role="tabpanel" aria-labelledby="engineering-tab-wetlab" tabindex="0" >
@@ -627,12 +637,43 @@
       const tocs = tabs.map(tab => document.getElementById(tab.id.replace('tab-', 'toc-')));
       let currentPanel = panels[0];
       let observedHeadings = null;
+      let arrivalTarget = null;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-      function markLocation(id) {
+      function markLocation(id, reveal = false) {
+        let activeLink = null;
         document.querySelectorAll('.engineering-toc a').forEach(link => {
-          if (link.hash === '#' + id) link.setAttribute('aria-current', 'location');
+          if (link.hash === '#' + id) {
+            link.setAttribute('aria-current', 'location');
+            activeLink = link;
+          }
           else link.removeAttribute('aria-current');
         });
+        if (reveal && activeLink) {
+          activeLink.closest('details').open = true;
+          const nav = activeLink.closest('nav');
+          const linkBox = activeLink.getBoundingClientRect();
+          const navBox = nav.getBoundingClientRect();
+          if (linkBox.top < navBox.top || linkBox.bottom > navBox.bottom) {
+            nav.scrollTo({ top: nav.scrollTop + linkBox.top - navBox.top - (nav.clientHeight - linkBox.height) / 2, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+          }
+        }
+      }
+
+      function scrollToTarget(target, smooth = true) {
+        const animate = smooth && !reducedMotion.matches;
+        if (smooth) {
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+        target.scrollIntoView({ block: 'start', behavior: animate ? 'smooth' : 'instant' });
+        arrivalTarget?.classList.remove('engineering-arrival');
+        arrivalTarget = target;
+        if (animate) {
+          void target.offsetWidth;
+          target.classList.add('engineering-arrival');
+        }
+        markLocation(target.id, true);
       }
 
       function observeHeadings(panel) {
@@ -658,19 +699,19 @@
         tocTitle.textContent = tabs[index].textContent.trim();
         if (currentPanel !== panel || !observedHeadings) observeHeadings(panel);
         currentPanel = panel;
-        markLocation(panel.querySelector('.engineering-object > h3').id);
+        markLocation(panel.querySelector('.engineering-object > h3').id, updateAddress);
         if (updateAddress) history.replaceState(null, '', '#' + panel.id);
       }
 
-      function followHash(scroll = false) {
+      function followHash(scroll = false, smooth = true) {
         let id;
         try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
         const target = document.getElementById(id);
         const panel = target?.closest('.engineering-panel');
         if (!panel) return;
         selectPanel(panel);
-        if (scroll && target !== panel) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
-        markLocation(target.id);
+        if (scroll && target !== panel) requestAnimationFrame(() => scrollToTarget(target, smooth));
+        else markLocation(target === panel ? panel.querySelector('.engineering-object > h3').id : target.id, true);
       }
 
       tabs.forEach((tab, index) => {
@@ -697,10 +738,7 @@
         event.preventDefault();
         selectPanel(panel);
         history.pushState(null, '', link.hash);
-        target.scrollIntoView({ block: 'start' });
-        target.setAttribute('tabindex', '-1');
-        target.focus({ preventScroll: true });
-        markLocation(target.id);
+        scrollToTarget(target);
       });
 
       document.querySelectorAll('[data-engineering-original]').forEach(link => {
@@ -712,7 +750,7 @@
       window.addEventListener('hashchange', () => followHash(true));
       window.addEventListener('popstate', () => followHash(true));
       selectPanel(currentPanel);
-      followHash(true);
+      followHash(true, false);
     </script>
   <script data-loading-fallback>
   window.setTimeout(function () {
