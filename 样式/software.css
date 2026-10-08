@@ -71,40 +71,36 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 }
 .software-page .sw-main .sw-button:hover { background: #11564f; }
 .software-page .sw-text-link { display: inline-block; margin: 6px 0; font-weight: 700; }
-.software-page .sw-animation {
-  padding: 24px;
-  border: 1px solid var(--sw-line);
-  border-radius: 20px;
-  background: var(--sw-paper);
+.software-page .sw-floating-illustration {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+  padding: 14px 0;
+  justify-self: center;
 }
-.software-page .sw-animation-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
-  font-weight: 700;
-  color: var(--sw-accent);
+.software-page .sw-floating-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 24px 42px -20px rgba(65, 48, 30, .4);
+  animation: sw-float 6s ease-in-out infinite;
 }
-.software-page .sw-animation svg { display: block; width: 100%; height: auto; margin: 12px 0; }
-.software-page .sw-signal { animation: sw-signal 8s ease infinite; }
-.software-page .sw-parameter { animation: sw-parameter 8s ease infinite; }
-.software-page .sw-trace { stroke-dasharray: 220; stroke-dashoffset: 220; animation: sw-trace 8s linear infinite; }
-.software-page .sw-result { animation: sw-result 8s ease infinite; }
-.software-page .sw-animation-steps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 12px 0;
+.software-page .sw-floating-illustration.is-paused img { animation-play-state: paused; }
+.software-page .sw-float-toggle {
+  position: absolute;
+  right: 16px;
+  bottom: 28px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 8px;
+  background: #171a13;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
 }
-.software-page .sw-animation-steps li { padding: 6px 10px; border: 1px solid var(--sw-line); border-radius: 6px; }
-.software-page .sw-animation-steps .is-current { background: #e4efea; border-color: var(--sw-accent); }
-.software-page .sw-animation-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
-.software-page .sw-animation-controls p { margin: 0; }
-.software-page .sw-main .sw-button-small { padding: 8px 12px; }
-.software-page .sw-static-note { display: none; }
-.software-page .sw-animation.is-paused :is(.sw-signal, .sw-parameter, .sw-trace, .sw-result) { animation-play-state: paused; }
 .software-page .sw-shell { display: grid; grid-template-columns: minmax(300px, 320px) minmax(0, 1fr); gap: var(--wiki-section-gap, 32px); align-items: start; }
 .software-page .sw-article { width: 100%; }
 .software-page .sw-section { padding: clamp(22px, 3vw, 42px); margin-bottom: 32px; border: 1px solid var(--sw-line); border-radius: 18px; background: #ffffff; scroll-margin-top: 88px; }
@@ -187,10 +183,7 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 .software-page .sw-source-link:hover { background: var(--sw-paper); }
 .software-page .sw-source-link span { color: var(--text); }
 .software-page .sw-main [hidden] { display: none !important; }
-@keyframes sw-signal { 0%, 12%, 95%, 100% { opacity: 0.25; } 20%, 88% { opacity: 1; } }
-@keyframes sw-parameter { 0%, 22%, 100% { opacity: 0.25; } 30%, 94% { opacity: 1; } }
-@keyframes sw-trace { 0%, 40%, 100% { stroke-dashoffset: 220; } 74%, 96% { stroke-dashoffset: 0; } }
-@keyframes sw-result { 0%, 72%, 100% { opacity: 0.15; } 82%, 96% { opacity: 1; } }
+@keyframes sw-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @media (min-width: 901px) {
   .software-page .sw-toc {
     isolation: isolate;
@@ -218,7 +211,7 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 }
 @media (max-width: 900px) {
   .software-page .sw-intro { grid-template-columns: 1fr; }
-  .software-page .sw-animation { width: 100%; max-width: 620px; justify-self: center; }
+  .software-page .sw-floating-illustration { max-width: 420px; }
   .software-page .sw-shell { display: flex; flex-direction: column; gap: 24px; }
   .software-page .sw-toc { order: -1; position: sticky; top: 60px; z-index: 5; width: 100%; padding: 12px; border-radius: 10px; }
   .software-page .sw-toc-title,
@@ -236,7 +229,6 @@ html:has(body.software-page) { scroll-behavior: smooth; }
   .software-page > .image-page-hero img { height: auto; aspect-ratio: 4 / 5; object-position: center; }
   .software-page > .image-page-hero .image-page-hero__label { bottom: 24px; }
   .software-page .sw-intro { gap: 28px; margin-bottom: 32px; }
-  .software-page .sw-animation { padding: 18px 14px; }
   .software-page .sw-section { padding: 24px 18px; margin-bottom: 20px; }
   .software-page .sw-section-heading { gap: 12px; flex-wrap: wrap; }
   .software-page .sw-function-grid,
@@ -261,20 +253,17 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 }
 @media (prefers-reduced-motion: reduce) {
   html:has(body.software-page) { scroll-behavior: auto; }
-  .software-page .sw-animation :is(.sw-signal, .sw-parameter, .sw-trace, .sw-result) { animation: none; opacity: 1; stroke-dashoffset: 0; }
-  .software-page .sw-static-note { display: block; }
-  .software-page .sw-animation [data-sw-pause] { display: none; }
+  .software-page .sw-floating-illustration img { animation: none; transform: none; }
+  .software-page .sw-float-toggle { display: none; }
 }
 @media print {
   .software-page .sw-toc,
-  .software-page .sw-animation-controls { display: none; }
+  .software-page .sw-float-toggle { display: none; }
   .software-page .sw-shell { display: block; }
   .software-page .sw-section { break-inside: auto; }
   .software-page .sw-detail > div { display: block; }
-  .software-page .sw-animation :is(.sw-signal, .sw-parameter, .sw-trace, .sw-result) { animation: none; opacity: 1; stroke-dashoffset: 0; }
+  .software-page .sw-floating-illustration img { animation: none; transform: none; }
 }
 
-.software-page .sw-animation.is-static :is(.sw-signal, .sw-parameter, .sw-trace, .sw-result) { animation: none; opacity: 1; stroke-dashoffset: 0; }
-.software-page .sw-animation.is-static .sw-static-note { display: block; }
 .software-page .sw-skip-link { position: absolute; z-index: 10; padding: 12px; background: #fff; transform: translateY(-200vh); }
 .software-page .sw-skip-link:focus { position: fixed; top: 70px; left: 16px; transform: none; }

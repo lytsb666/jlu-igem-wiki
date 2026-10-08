@@ -1,0 +1,32 @@
+{
+  "manuals": [
+    {
+      "url": "http://127.0.0.1:5198/software-resources/software-user-guide-first-generation.pdf",
+      "status": 200,
+      "bytes": 28052399,
+      "sha256_matches_original": true,
+      "pages": 8
+    },
+    {
+      "url": "http://127.0.0.1:5198/software-resources/software-user-guide-second-generation.pdf",
+      "status": 200,
+      "bytes": 28636150,
+      "sha256_matches_original": true,
+      "pages": 8
+    }
+  ],
+  "original_illustration_bytes_preserved": true,
+  "pdf_visual_review": "All 16 pages rendered and inspected; supplied originals not edited.",
+  "browser_widths": [
+    1440,
+    320,
+    360,
+    390,
+    900
+  ],
+  "browser_horizontal_overflow": 0,
+  "broken_images": 0,
+  "floating_pause_resume": "passed",
+  "reduced_motion_and_background_pause": "unit checks passed",
+  "get_started_focus_and_links": "passed"
+}

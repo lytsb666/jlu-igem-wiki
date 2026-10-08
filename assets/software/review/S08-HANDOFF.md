@@ -6,7 +6,43 @@
 任务单：../_task-briefs/2026-10-03-software-protocol-46368360/08-software-task.md
 初次完成日期：2026-10-03；手册增补日期：2026-10-06。最新提交编号由完成消息提供，可用 git log -1 查询。
 
-## 2026-10-06 两页文档修订（当前交接状态）
+## 2026-10-08 原始手册与悬浮插图（当前交接状态）
+
+基线：`a2536237722f644a13c9cf7400507d9c82aed936`。用户提供两份完成版手册及替换插图，明确要求以第三张图替换 Software 开头的流程动画，只做悬浮效果。本次仅修改 Software 专用页面、样式、脚本、素材和手册资源；Model、Hardware、Judging 和所有公共文件未改。
+
+### 来源与变更
+
+- `D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/msg/file/2026-10/1.0.pdf` 对应 byegerm 1.0，8 页，28052399 字节，SHA256 `6c44f6ff99b1aa9be471eb88cdcea85ac5b8eeefd0ccaa88eca53a7050eecb1f`。
+- 同目录 `2.0.pdf` 对应 byegerm 2.0，8 页，28636150 字节，SHA256 `1ba83a1d725af05c9cf5cca78d39c0c6917a16a0713500b1cc671d331fac3831`。
+- 两份 PDF 共 16 页均渲染检查；页面为图片型 PDF，未依据空的文本提取结果推断正文。两份提供的手册包含仪器与手机操作流程。原文件逐字节复制到原先两代手册资源位置，不重排、不修改正文、不压缩。
+- User Guide 章节更新为八页原版手册介绍，A/B 仍对应第一代/第二代；预览、下载 URL 及匹配 APK 不变。已解决此前“只有自行整理两页手册”的缺口。
+- 用户提供的 `68e673a85dc00f6dc861715f0be056cc.jpg`（1024×1024）逐字节复制为 `device-phone-mascot.jpg`，不重绘、不裁剪，保留其黑色背景。完整来源路径与 SHA256 见 `supplied-manuals-20261008.json`。
+- 开头的 SVG 流程动画、阶段标签、静态模式按钮和 JS 阶段计时器移除，改为原图；CSS 六秒循环，上下行程 10 px，配轻微投影。提供暂停/恢复按钮；减少动态效果时为静态图，切出页面时暂停。两代手册的操作说明没有用于新增设备/算法性能结论。
+
+### 本次文件清单
+
+1. `Instrument/software.html`
+2. `样式/software.css`、`样式/software.js`
+3. `public/software-resources/software-user-guide-first-generation.pdf`、`software-user-guide-second-generation.pdf`
+4. 新增 `assets/software/images/device-phone-mascot.jpg`
+5. 新增 `assets/software/review/replace_supplied_manuals.py`、`supplied-manuals-20261008.json`、`supplied-manuals-checks-20261008.json`
+6. 更新 `assets/software/review/check-motion.mjs`、本交接记录
+
+### 测试与入口
+
+- Vite 正式构建通过；Software 新图原字节及两份 PDF SHA256 与来源一致。HTTP 下载两份 PDF 返回 200，内容 SHA256 相同，页数均为 8。
+- 1440 桌面及 320/360/390/900 宽度检查通过，无页面横向溢出、无坏图；原流程动画节点已清除。
+- 浏览器暂停/恢复均可用；恢复后 CSS play state 为 running。减少动态效果、后台暂停与无障碍按钮状态的单元检查通过。Get started 仍平滑跳到 User Guide 并更新键盘焦点。
+- Navbar、Loading、页脚与本次基线比较未变；公共样式/脚本和 Model 未改。原六章、Hardware/Model Navbar 互链、手册与 APK 地址保留。`git diff --check` 通过。
+- 预览：`http://127.0.0.1:5198/Instrument/software.html`。此前本地预览进程已停止，本次从 S08 工作区恢复同端口。
+
+### 交 00 的剩余事项
+
+两份原稿已包含仪器及 APP 联动操作，Hardware 页面是否复用这两份资源及最终入口由 00 协调；当前 Software 的 Hardware 手册和视频两个临时链接仍为 `../Instrument/hardware.html`，注明待补充，未自行替换。独立操作视频仍未提供。Judging 证据映射和跨模块事实整合继续由 00 处理。
+
+应用对话接口本次仍返回 `Invalid app tool request`，自动发送 00 未完成；本报告及最终提交号供 00 接收。此前手册生成记录/哈希属于历史状态，当前提供版以本节和 `supplied-manuals-20261008.json` 为准，勿运行旧生成器覆盖原稿。
+
+## 2026-10-06 两页文档修订（历史记录）
 
 用户已明确恢复 Software 和 Model 两页修改。当前基线为 `004393822cc66ea69bcba631179405153d81e1e5`，仅在上述工作区、上述分支实施；最终提交号见完成消息或本分支 `git log -1`。未合并其他 Agent，未推送、未修改主仓库。Model 的本次授权来自用户“继续两个页面的修改”，覆盖此前暂停及职责限制。
 

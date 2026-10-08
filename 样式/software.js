@@ -11,51 +11,23 @@ if (softwareRoot) {
     sync()
   }
 
-  const animation = softwareRoot.querySelector('[data-sw-animation]')
-  const pauseButton = animation?.querySelector('[data-sw-pause]')
-  const staticButton = animation?.querySelector('[data-sw-static]')
-  const stages = [...(animation?.querySelectorAll('.sw-animation-steps li') || [])]
+  const illustration = softwareRoot.querySelector('[data-sw-float]')
+  const pauseButton = illustration?.querySelector('[data-sw-float-pause]')
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)')
-  let animationTimer = null
-  let stage = 0
   let paused = false
-  let manualStatic = false
 
-  function markStage() {
-    stages.forEach((item, index) => item.classList.toggle('is-current', index === stage))
-    if (animation) animation.dataset.stage = String(stage)
-  }
-  function stopTimer() {
-    if (animationTimer !== null) window.clearInterval(animationTimer)
-    animationTimer = null
-  }
   function updateMotion() {
-    stopTimer()
-    if (!animation || !pauseButton) return
-    const reduced = motionPreference.matches || manualStatic
-    animation.classList.toggle('is-static', reduced)
-    if (staticButton) {
-      staticButton.hidden = motionPreference.matches
-      staticButton.setAttribute('aria-pressed', String(manualStatic))
-      staticButton.textContent = manualStatic ? 'Play workflow' : 'Show static diagram'
-    }
-    animation.classList.toggle('is-paused', paused && !reduced)
-    pauseButton.hidden = reduced
+    if (!illustration || !pauseButton) return
+    illustration.classList.toggle('is-paused', paused || document.hidden)
+    pauseButton.hidden = motionPreference.matches
     pauseButton.setAttribute('aria-pressed', String(paused))
-    pauseButton.textContent = paused ? 'Resume animation' : 'Pause animation'
-    stages.forEach((item) => item.classList.remove('is-current'))
-    if (reduced) return
-    markStage()
-    if (!paused && !document.hidden) {
-      animationTimer = window.setInterval(() => { stage = (stage + 1) % 5; markStage() }, 1600)
-    }
+    pauseButton.textContent = paused ? 'Resume' : 'Pause'
+    pauseButton.setAttribute('aria-label', paused ? 'Resume floating illustration' : 'Pause floating illustration')
   }
   pauseButton?.addEventListener('click', () => { paused = !paused; updateMotion() })
-  staticButton?.addEventListener('click', () => { manualStatic = !manualStatic; if (!manualStatic) paused = false; stage = 0; updateMotion() })
   motionPreference.addEventListener('change', updateMotion)
   document.addEventListener('visibilitychange', updateMotion)
   updateMotion()
 
   enhanceSectionNavigation(softwareRoot, '.sw-toc ol a[href^="#"]')
-  window.addEventListener('pagehide', stopTimer)
 }
