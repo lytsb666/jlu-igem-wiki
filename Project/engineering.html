@@ -7,6 +7,74 @@
     <link rel="stylesheet" href="../样式/style.css" />
       <link rel="stylesheet" href="../样式/loading.css" />
   <link rel="stylesheet" href="../样式/full-width-layout.css">
+
+    <style data-engineering-styles>
+      .engineering-overview, .engineering-tabs, .engineering-layout { width: var(--wiki-main-width, calc(100% - 48px)); margin: 32px auto; }
+      .engineering-overview { padding: clamp(12px, 2vw, 24px); background: #fff; border: 1px solid var(--border); border-radius: 20px; }
+      .engineering-overview img { display: block; width: 100%; height: auto; }
+      .engineering-original { display: block; width: fit-content; max-width: 100%; margin: 0 auto; border-radius: 8px; }
+      .engineering-original:focus-visible, .engineering-tab:focus-visible, .engineering-toc a:focus-visible, .engineering-edge-links a:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+      .engineering-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+      .engineering-tab { display: flex; align-items: center; gap: 14px; padding: 20px 16px; cursor: pointer; color: var(--text); background: #fff; border: 1px solid var(--border); border-radius: 16px; text-align: left; font-size: 1.25rem; font-weight: 700; transition: border-color .15s, background .15s; }
+      .engineering-tab[aria-selected="true"] { border: 2px solid var(--secondary); padding: 19px 15px; background: #f7eee5; }
+      .engineering-tab:hover { background: #f7eee5; }
+      .engineering-tab-icon { display: grid; place-items: center; flex: 0 0 62px; height: 70px; background: #e9cfb5; clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%); }
+      .engineering-tab-icon svg { width: 52px; height: 52px; }
+      .engineering-layout { display: grid; grid-template-columns: 370px minmax(0, 1fr); align-items: start; gap: 28px; }
+      .engineering-directory { position: sticky; top: 98px; min-width: 0; }
+      :root body main .engineering-toc-title { margin: 0 12px 12px; font-size: 1.5rem !important; text-align: center; }
+      .engineering-toc { position: relative; height: calc(100svh - 190px); min-height: 430px; }
+      :root body .engineering-toc.page-toc { padding: 28px; border-width: 90px 54px; border-image-slice: 400 250 400 250 fill; border-image-width: 90px 54px; }
+      :root body .engineering-toc > nav { position: absolute; inset: 20% 12%; margin: 0; max-height: none; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding: 0 4px; }
+      .engineering-toc-group { margin-bottom: 14px; }
+      .engineering-toc-group summary { cursor: pointer; }
+      :root body main .engineering-toc-group summary { font-size: 1.05rem !important; font-weight: 700; overflow-wrap: anywhere; }
+      .engineering-toc ul { list-style: none; margin: 0; padding: 0; }
+      .engineering-toc a { display: block; padding: 5px 2px; color: var(--text); text-decoration: none; border-radius: 4px; overflow-wrap: anywhere; }
+      :root body .engineering-toc a { font-size: .9rem !important; }
+      .engineering-toc a:hover, .engineering-toc a[aria-current="location"] { background: rgba(154, 103, 66, .15); }
+      .engineering-content { min-width: 0; padding: clamp(18px, 3vw, 42px); background: #fff; border: 1px solid var(--border); border-radius: 20px; }
+      .engineering-panel > h2 { margin: 0 0 28px; }
+      .engineering-object + .engineering-object { margin-top: 48px; }
+      .engineering-object > h3 { margin: 0 0 16px; }
+      .engineering-copy, .engineering-iteration { margin: 14px 0; }
+      .engineering-iteration { font-style: italic; }
+      .engineering-card { min-width: 0; margin: 24px 0; padding: clamp(16px, 2vw, 26px); border: 1px solid var(--border); border-radius: 16px; background: #fff; }
+      .engineering-card--node { border-left: 4px solid var(--secondary); }
+      .engineering-card--edge { border-style: dashed; }
+      .engineering-card h4 { margin-bottom: 18px; }
+      .engineering-edge-links { display: flex; align-items: center; gap: 12px; margin: -4px 0 16px; }
+      .engineering-edge-links a { padding: 4px 12px; color: var(--text); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; }
+      .engineering-figure { margin: 24px 0; text-align: center; }
+      .engineering-figure img { display: block; width: auto; height: auto; max-width: min(100%, 16rem); max-height: 12rem; object-fit: contain; }
+      :root body main .engineering-figure figcaption, :root body main .engineering-table-caption { margin: 12px 0; font-size: 1rem !important; }
+      .engineering-table-wrap { width: min(100%, 38rem); margin: 16px auto 24px; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+      .engineering-table-wrap table { width: 100%; border-collapse: collapse; }
+      :root body main .engineering-table-wrap :is(th, td) { padding: 8px 10px; font-size: .9rem !important; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+      .engineering-table-wrap th { background: #f7eee5; }
+      .engineering-table-wrap tr + tr, .engineering-table-wrap tbody tr:first-child { border-top: 1px solid var(--border); }
+      .engineering-object h3, .engineering-card, .engineering-figure, .engineering-table-wrap { scroll-margin-top: 110px; }
+      .engineering-panel[hidden], .engineering-toc > nav[hidden] { display: none !important; }
+      @media (max-width: 1100px) { .engineering-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .engineering-layout { grid-template-columns: 330px minmax(0, 1fr); gap: 20px; } }
+      @media (max-width: 900px) {
+        .engineering-layout { display: block; }
+        .engineering-directory { position: static; margin-bottom: 24px; }
+        :root body .engineering-toc.page-toc { height: auto; min-height: 0; padding: 18px; border: 1px solid var(--border); border-image: none; border-radius: 16px; background: #fff; }
+        :root body .engineering-toc > nav { position: static; max-height: 240px; padding: 0 4px; }
+        .engineering-tab { gap: 10px; padding: 16px 12px; }
+        .engineering-tab[aria-selected="true"] { padding: 15px 11px; }
+        .engineering-tab-icon { flex-basis: 48px; height: 54px; }
+        .engineering-tab-icon svg { width: 42px; height: 42px; }
+      }
+      @media (max-width: 540px) {
+        .engineering-overview, .engineering-tabs, .engineering-layout { margin-top: 24px; margin-bottom: 24px; }
+        .engineering-tabs { gap: 10px; }
+        .engineering-tab { flex-direction: column; text-align: center; font-size: 1.1rem; }
+        .engineering-tab-icon { flex-basis: auto; width: 48px; }
+        .engineering-content { padding: 16px; }
+      }
+      @media (prefers-reduced-motion: reduce) { .engineering-tab { transition: none; } }
+    </style>
 </head>
 
   <body class="loading-lock">
@@ -91,10 +159,445 @@
   <div class="image-page-hero__label"><span>Project</span><h1>Engineering</h1></div>
 </header>
 
-      <article class="content page-intro">
-  <h2>Engineering</h2>
-  <p>Follow our iterative design-build-test-learn process from concept to validated system.</p>
-</article>
+<!-- Engineering body and figures: Engineering_10.6.docx, SHA-256 14d8915bcd99549ccc0672b78e7fd7ee9abc725fc5097b56645700e03f915bd0. Original wording and scientific qualifications retained. -->
+<figure id="engineering-overview" class="engineering-overview" data-source-block="1"><a class="engineering-original" href="../a  图片/engineering-2026-10-08/image1.jpeg" target="_blank" rel="noopener" data-engineering-original aria-label="Open the original engineering figure 1"><img src="../a  图片/engineering-2026-10-08/image1.jpeg" width="1429" height="797" alt="Overview of the Wet Lab, Dry Lab, Hardware and Human Practices engineering objects and nodes, from Engineering_10.6.docx." decoding="async" ></a></figure>
+<div class="engineering-tabs" role="tablist" aria-label="Engineering modules"><button id="engineering-tab-wetlab" class="engineering-tab" type="button" role="tab" aria-controls="engineering-wetlab" aria-selected="true" tabindex="0"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14h22M26 14v17L15 49a5 5 0 0 0 4 7h26a5 5 0 0 0 4-7L38 31V14M22 42h20"/><circle cx="28" cy="48" r="1.5"/><circle cx="37" cy="47" r="1.5"/></svg></span><span>Wet Lab Engineering</span></button>
+<button id="engineering-tab-drylab" class="engineering-tab" type="button" role="tab" aria-controls="engineering-drylab" aria-selected="false" tabindex="-1"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m23 20 18 6M22 25l3 18m17-12-10 13"/><circle cx="19" cy="19" r="6"/><circle cx="46" cy="27" r="6"/><circle cx="27" cy="49" r="6"/></svg></span><span>Dry Lab Engineering</span></button>
+<button id="engineering-tab-hardware" class="engineering-tab" type="button" role="tab" aria-controls="engineering-hardware" aria-selected="false" tabindex="-1"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="16" width="38" height="31" rx="4"/><path d="M22 54h20m-10-7v7M20 26h24M20 34h14"/><circle cx="44" cy="39" r="2"/></svg></span><span>Hardware Engineering</span></button>
+<button id="engineering-tab-human-practices" class="engineering-tab" type="button" role="tab" aria-controls="engineering-human-practices" aria-selected="false" tabindex="-1"><span class="engineering-tab-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="21" r="7"/><path d="M21 48v-5a11 11 0 0 1 22 0v5M17 28a5 5 0 1 1-5-5m35 5a5 5 0 1 0 5-5M12 49v-8a8 8 0 0 1 7-8m33 16v-8a8 8 0 0 0-7-8"/></svg></span><span>Human Practices Engineering</span></button></div>
+<div class="engineering-layout"><div class="engineering-directory"><h2 id="engineering-toc-title" class="engineering-toc-title" aria-live="polite">Wet Lab Engineering</h2><aside class="page-toc engineering-toc" aria-labelledby="engineering-toc-title"><nav id="engineering-toc-wetlab" aria-label="Wet Lab Engineering contents" ><details class="engineering-toc-group" open><summary>Object A: System Configuration</summary><a class="engineering-toc-overview" href="#engineering-object-a">Overview</a><ul><li><a href="#engineering-node-a1" title="Node A1: Initial RPA–Cas12a Detection System">Node A1</a></li><li><a href="#engineering-edge-a1-a2" title="Edge A1 → A2">Edge A1 → A2</a></li><li><a href="#engineering-edge-a1-e1" title="Edge A1 → E1">Edge A1 → E1</a></li><li><a href="#engineering-node-a2" title="Node A2: Reaction Conditions Selected by Fluorescence">Node A2</a></li><li><a href="#engineering-edge-a2-a3" title="Edge A2 → A3">Edge A2 → A3</a></li><li><a href="#engineering-node-a3" title="Node A3: Validation and Transfer of the Detection System">Node A3</a></li></ul></details><details class="engineering-toc-group" open><summary>Object B: Primer and crRNA Selection</summary><a class="engineering-toc-overview" href="#engineering-object-b">Overview</a><ul><li><a href="#engineering-node-b1" title="Node B1: RSV Primer and crRNA Candidate Preparation">Node B1</a></li><li><a href="#engineering-edge-b1-d4" title="Edge B1 → D4">Edge B1 → D4</a></li><li><a href="#engineering-node-b2" title="Node B2: Rank Based Selection of RSV Combinations">Node B2</a></li><li><a href="#engineering-edge-b2-b3" title="Edge B2 → B3">Edge B2 → B3</a></li><li><a href="#engineering-node-b3" title="Node B3: Fluorescence Validation of RSV Combinations">Node B3</a></li><li><a href="#engineering-edge-b3-a2" title="Edge B3 → A2">Edge B3 → A2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object C: Fluorescence Readout</summary><a class="engineering-toc-overview" href="#engineering-object-c">Overview</a><ul><li><a href="#engineering-node-c1" title="Node C1: Initial Fluorescent reporter Readout">Node C1</a></li><li><a href="#engineering-edge-c1-c2" title="Edge C1 → C2">Edge C1 → C2</a></li><li><a href="#engineering-edge-c1-g1" title="Edge C1 → G1">Edge C1 → G1</a></li><li><a href="#engineering-node-c2" title="Node C2: reporter Concentration and Signal Separation">Node C2</a></li><li><a href="#engineering-edge-c2-c3" title="Edge C2 → C3">Edge C2 → C3</a></li><li><a href="#engineering-edge-c2-g1" title="Edge C2 → G1">Edge C2 → G1</a></li><li><a href="#engineering-node-c3" title="Node C3: Multiple Target Reagent Readout">Node C3</a></li><li><a href="#engineering-edge-c3-g2" title="Edge C3 → G2">Edge C3 → G2</a></li></ul></details></nav>
+<nav id="engineering-toc-drylab" aria-label="Dry Lab Engineering contents" hidden><details class="engineering-toc-group" open><summary>Object D: Sequence Ranking</summary><a class="engineering-toc-overview" href="#engineering-object-d">Overview</a><ul><li><a href="#engineering-node-d1" title="Node D1: PAM Site Ranking by Cosine Similarity">Node D1</a></li><li><a href="#engineering-edge-d1-d2" title="Edge D1 → D2">Edge D1 → D2</a></li><li><a href="#engineering-node-d2" title="Node D2: Pre-final DNABERT Multilayer Perceptron (MLP) Combination Ranker">Node D2</a></li><li><a href="#engineering-edge-d2-d3" title="Edge D2 → D3">Edge D2 → D3</a></li><li><a href="#engineering-node-d3" title="Node D3: Audit of Candidate Construction">Node D3</a></li><li><a href="#engineering-edge-d3-f3" title="Edge D3 → F3">Edge D3 → F3</a></li><li><a href="#engineering-node-d4" title="Node D4: Groupwise Combination Ranker">Node D4</a></li><li><a href="#engineering-edge-d4-b2" title="Edge D4 → B2">Edge D4 → B2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object E: Reaction Dynamics</summary><a class="engineering-toc-overview" href="#engineering-object-e">Overview</a><ul><li><a href="#engineering-node-e1" title="Node E1: Initial ODE Reaction Formulation">Node E1</a></li><li><a href="#engineering-edge-e1-e2" title="Edge E1 → E2">Edge E1 → E2</a></li><li><a href="#engineering-node-e2" title="Node E2: ODE Dynamics with Substrate Consumption">Node E2</a></li><li><a href="#engineering-edge-e2-e3" title="Edge E2 → E3">Edge E2 → E3</a></li><li><a href="#engineering-node-e3" title="Node E3: Search for Reaction Concentrations">Node E3</a></li><li><a href="#engineering-edge-e3-a2" title="Edge E3 → A2">Edge E3 → A2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object F: Training Data and Candidate Groups</summary><a class="engineering-toc-overview" href="#engineering-object-f">Overview</a><ul><li><a href="#engineering-node-f1" title="Node F1: Short Window Classification Data">Node F1</a></li><li><a href="#engineering-edge-f1-f2" title="Edge F1 → F2">Edge F1 → F2</a></li><li><a href="#engineering-node-f2" title="Node F2: Literature Linked Combination Records">Node F2</a></li><li><a href="#engineering-edge-f2-d2" title="Edge F2 → D2">Edge F2 → D2</a></li><li><a href="#engineering-edge-f2-f3" title="Edge F2 → F3">Edge F2 → F3</a></li><li><a href="#engineering-node-f3" title="Node F3: Enumerated Candidate Groups">Node F3</a></li><li><a href="#engineering-edge-f3-d4" title="Edge F3 → D4">Edge F3 → D4</a></li></ul></details></nav>
+<nav id="engineering-toc-hardware" aria-label="Hardware Engineering contents" hidden><details class="engineering-toc-group" open><summary>Object G: Optical Acquisition and Capacity</summary><a class="engineering-toc-overview" href="#engineering-object-g">Overview</a><ul><li><a href="#engineering-node-g1" title="Node G1: First Portable Optical Readout">Node G1</a></li><li><a href="#engineering-edge-g1-g2" title="Edge G1 → G2">Edge G1 → G2</a></li><li><a href="#engineering-edge-g1-i1" title="Edge G1 → I1">Edge G1 → I1</a></li><li><a href="#engineering-node-g2" title="Node G2: Rotating Chamber for Batch Imaging">Node G2</a></li><li><a href="#engineering-edge-g2-i4" title="Edge G2 → I4">Edge G2 → I4</a></li></ul></details><details class="engineering-toc-group" open><summary>Object H: Temperature Control</summary><a class="engineering-toc-overview" href="#engineering-object-h">Overview</a><ul><li><a href="#engineering-node-h1" title="Node H1: First Generation Temperature Feedback">Node H1</a></li><li><a href="#engineering-edge-h1-h2" title="Edge H1 → H2">Edge H1 → H2</a></li><li><a href="#engineering-node-h2" title="Node H2: Second Generation Thermal Zones">Node H2</a></li></ul></details><details class="engineering-toc-group" open><summary>Object I: Instrument App and Data Display</summary><a class="engineering-toc-overview" href="#engineering-object-i">Overview</a><ul><li><a href="#engineering-node-i1" title="Node I1: Connection and Run Setup">Node I1</a></li><li><a href="#engineering-edge-i1-i2" title="Edge I1 → I2">Edge I1 → I2</a></li><li><a href="#engineering-node-i2" title="Node I2: Run Status, Curves, and Images">Node I2</a></li><li><a href="#engineering-edge-i2-i3" title="Edge I2 → I3">Edge I2 → I3</a></li><li><a href="#engineering-edge-i2-i4" title="Edge I2 → I4">Edge I2 → I4</a></li><li><a href="#engineering-node-i3" title="Node I3: Interruption and Reconnection Checks (Planned)">Node I3</a></li><li><a href="#engineering-node-i4" title="Node I4: Tube Linked Result Recording">Node I4</a></li></ul></details></nav>
+<nav id="engineering-toc-human-practices" aria-label="Human Practices Engineering contents" hidden><details class="engineering-toc-group" open><summary>Object J: Audience Adapted Education</summary><a class="engineering-toc-overview" href="#engineering-object-j">Overview</a><ul><li><a href="#engineering-node-j1" title="Node J1: Audience Adapted Education Design">Node J1</a></li><li><a href="#engineering-edge-j1-j2" title="Edge J1 → J2">Edge J1 → J2</a></li><li><a href="#engineering-edge-j1-i4" title="Edge J1 → I4">Edge J1 → I4</a></li><li><a href="#engineering-node-j2" title="Node J2: Activity Level Feedback and Revision">Node J2</a></li><li><a href="#engineering-edge-j2-j1" title="Edge J2 → J1">Edge J2 → J1</a></li></ul></details></nav></aside></div><article class="engineering-content"><section id="engineering-wetlab" class="engineering-panel" role="tabpanel" aria-labelledby="engineering-tab-wetlab" tabindex="0" >
+<h2 data-source-block="2">Wet Lab Engineering</h2>
+<section class="engineering-object" aria-labelledby="engineering-object-a"><h3 id="engineering-object-a" data-source-block="3">Object A: System Configuration</h3>
+<p id="engineering-source-4" class="engineering-iteration" data-source-block="4">Iteration path: A1 → A2 → A3</p>
+<p id="engineering-source-5" class="engineering-copy" data-source-block="5">The working RPA–Cas12a cascade was followed by measured condition selection and system validation.</p>
+<section id="engineering-node-a1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-a1-title"><h4 id="engineering-node-a1-title" data-source-block="6">Node A1: Initial RPA–Cas12a Detection System</h4>
+<p id="engineering-source-7" class="engineering-copy" data-source-block="7"><strong>Background.</strong> Although RPA provides rapid isothermal amplification and Cas12a provides sequence-specific fluorescence reporting, the compatibility between amplification and downstream cleavage introduces multiple coupled variables, including primer concentration, enzyme amount, reaction composition, and reporter conditions.</p>
+<p id="engineering-source-8" class="engineering-copy" data-source-block="8"><strong>Design.</strong> We assembled an RPA amplification module, a Cas12a–crRNA recognition module, and a fluorescent ssDNA reporter module following the pathway: target nucleic acid → amplification → target recognition → fluorescence output.</p>
+<p id="engineering-source-9" class="engineering-copy" data-source-block="9"><strong>Build.</strong> We assembled the RPA amplification module, Cas12a–crRNA recognition module, and fluorescent reporter module into a single-tube reaction, with all components premixed except the template to minimize cross-contamination.</p>
+<p id="engineering-source-10" class="engineering-copy" data-source-block="10"><strong>Test.</strong> We monitored fluorescence, compared target-positive and negative reactions, and examined signal intensity and background. The initial reaction generated target-dependent fluorescence, but changing reagent amounts changed the signal.</p>
+<p id="engineering-source-11" class="engineering-copy" data-source-block="11"><strong>Learn &amp; Outcome.</strong> The working cascade supplied reaction stages for the ordinary differential equation (ODE) model in E1 and a baseline for concentration engineering in A2.</p>
+</section>
+<section id="engineering-edge-a1-a2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-a1-a2-title"><h4 id="engineering-edge-a1-a2-title" data-source-block="12">Edge A1 → A2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-a1">A1</a><span aria-hidden="true">→</span><a href="#engineering-node-a2">A2</a></div>
+<p id="engineering-source-13" class="engineering-copy" data-source-block="13"><strong>Trigger.</strong> A1 produced target-dependent fluorescence, with reagent-dependent signal strength.</p>
+<p id="engineering-source-14" class="engineering-copy" data-source-block="14"><strong>Handoff.</strong> A2 tested reagent and condition gradients.</p>
+</section>
+<section id="engineering-edge-a1-e1" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-a1-e1-title"><h4 id="engineering-edge-a1-e1-title" data-source-block="15">Edge A1 → E1</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-a1">A1</a><span aria-hidden="true">→</span><a href="#engineering-node-e1">E1</a></div>
+<p id="engineering-source-16" class="engineering-copy" data-source-block="16"><strong>Trigger.</strong> The working cascade identified reverse transcription, amplification, Cas12a recognition, and cleavage stages.</p>
+<p id="engineering-source-17" class="engineering-copy" data-source-block="17"><strong>Handoff.</strong> E1 represented their time-dependent concentrations with ODEs.</p>
+</section>
+<section id="engineering-node-a2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-a2-title"><h4 id="engineering-node-a2-title" data-source-block="18">Node A2: Reaction Conditions Selected by Fluorescence</h4>
+<p id="engineering-source-19" class="engineering-copy" data-source-block="19"><strong>Background.</strong> B3 selected respiratory syncytial virus (RSV) Candidate 2; its reaction conditions then required testing for performance evaluation.</p>
+<p id="engineering-source-20" class="engineering-copy" data-source-block="20"><strong>Design.</strong> Guided by E3’s numerical search, we tested an enzyme-mixture gradient of 0.1×, 0.5×, 1.0×, 1.6×, and 2.0× and final primer concentrations of 0.3, 0.4, 0.5, 0.6, 0.8, and 1.0 µM. We then compared temperature (37–42 °C), Mg²⁺ (5–25 mM), reporter (500–2000 nM), and gRNA:Cas12a ratios (3:1 to 1:3), changing one variable at a time and reading positive/negative fluorescence separation.</p>
+<p id="engineering-source-21" class="engineering-copy" data-source-block="21"><strong>Build.</strong> For the RSV N-gene plasmid mimic, we held the remaining reaction components constant in each gradient and recorded fluorescence kinetics. The ODE narrowed a search region; measured fluorescence, rather than the numerical optimum alone, determined the conditions taken forward.</p>
+<p id="engineering-source-22" class="engineering-copy" data-source-block="22"><strong>Test.</strong> The 1.0× and 2.0× enzyme-mixture groups gave similar fluorescence, so 1.0× was chosen with reagent cost in mind; 0.4 µM primers gave the strongest measured response in the tested primer gradient. The source wet-lab engineering record reports 41 °C and 20 mM Mg²⁺ for its gradient comparison. The subsequent Candidate 2 performance evaluation used a separately documented formulation: 0.4 µM of each primer, 20 nM Cas12a–crRNA complex, 2000 nM reporter, 25 mM Mg²⁺, and 40 °C. These formulations describe different experimental stages.</p>
+<p id="engineering-source-23" class="engineering-copy" data-source-block="23"><strong>Learn &amp; Outcome.</strong> E3 predicted 0.71 µM primer for its 10-minute objective, while the measured primer gradient favored 0.4 µM. We carried the documented Candidate 2 performance formulation into A3; there is no documented recalibration of the ODE against A2’s measured fluorescence data; the ODE optimum remained a search hypothesis.</p>
+</section>
+<section id="engineering-edge-a2-a3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-a2-a3-title"><h4 id="engineering-edge-a2-a3-title" data-source-block="24">Edge A2 → A3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-a2">A2</a><span aria-hidden="true">→</span><a href="#engineering-node-a3">A3</a></div>
+<p id="engineering-source-25" class="engineering-copy" data-source-block="25"><strong>Trigger.</strong> The Candidate 2 performance formulation used 0.4 µM of each primer, 2000 nM reporter, and 25 mM Mg²⁺ at 40 °C.</p>
+<p id="engineering-source-26" class="engineering-copy" data-source-block="26"><strong>Handoff.</strong> A3 evaluated sensitivity and specificity under those conditions.</p>
+</section>
+<section id="engineering-node-a3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-a3-title"><h4 id="engineering-node-a3-title" data-source-block="27">Node A3: Validation and Transfer of the Detection System</h4>
+<p id="engineering-source-28" class="engineering-copy" data-source-block="28"><strong>Background.</strong> After parameter engineering in A2, it was necessary to determine whether the final system not only produced a stronger signal but also reliably distinguished positive from negative samples and maintained robust performance under low-copy-number conditions, complex sample matrices, and different operators. Therefore, using the RSV N gene plasmid mimic as an example, we systematically evaluated the optimized RSV N gene plasmid-mimic detection system and transferred the same development framework to other respiratory pathogens.</p>
+<p id="engineering-source-29" class="engineering-copy" data-source-block="29"><strong>Design.</strong> Performance evaluation of the combined RPA/CRISPR system included sensitivity, specificity, repeatability, matrix-interference resistance, and parallel validation against the standard qPCR method. Sensitivity was evaluated using serially diluted plasmid mimics; specificity was assessed using non-target pathogen plasmid mimics as negative controls; repeatability was evaluated through multiple independent experiments performed by different operators on different dates and at different time points; matrix-interference resistance was assessed using a saliva and lysis-buffer system to simulate the environment of actual throat-swab samples; finally, clinically derived nucleic-acid samples handled under appropriate biosafety conditions were compared with standard qPCR results.</p>
+<p id="engineering-source-30" class="engineering-copy" data-source-block="30"><strong>Build.</strong> First, a complete performance evaluation was conducted for the RSV N gene plasmid mimic in the system. The same Design–Build–Test–Learn (DBTL) development logic was then transferred to the human metapneumovirus B (hMPV-B) N, Streptococcus pneumoniae (SPN) lytA, Bordetella pertussis (BP) IS1663, and Haemophilus influenzae (HI) ompP6 targets to establish corresponding RPA-CRISPR/Cas12a detection systems, whose performance was evaluated using the same framework.</p>
+<p id="engineering-source-31" class="engineering-copy" data-source-block="31"><strong>Test.</strong> The RSV plasmid-mimic detection limit was 1.307 × 10² copies/µL; only the target plasmid produced clear signal in the specificity comparison. Six runs by two operators yielded an approximately 5.17% endpoint coefficient of variation (CV) at 25 minutes. The saliva and lysis-buffer groups were minimally affected, and ten clinical nucleic-acid samples (five cases and five controls) matched qPCR classification. The hMPV-B, SPN, BP, and HI mimic limits were 1.43 × 10¹, 1.0 × 10², 1.0 × 10¹, and 1.0 × 10³ copies/µL, respectively; their endpoint CVs were approximately 6.83%, 7.44%, 13.07%, and 20.76%.</p>
+<p id="engineering-source-32" class="engineering-copy" data-source-block="32"><strong>Learn &amp; Outcome.</strong> Transfer across targets retained positive/negative discrimination but did not make all reagent systems equivalent: the HI repeatability result calls for another target-specific engineering round. These laboratory results define measured performance boundaries for the portable readout; they do not by themselves validate every field workflow.</p>
+</section>
+</section>
+<section class="engineering-object" aria-labelledby="engineering-object-b"><h3 id="engineering-object-b" data-source-block="33">Object B: Primer and crRNA Selection</h3>
+<p id="engineering-source-34" class="engineering-iteration" data-source-block="34">Iteration path: B1 → B2 → B3</p>
+<p id="engineering-source-35" class="engineering-copy" data-source-block="35">RSV sequence design was narrowed to four combinations, then resolved by fluorescence.</p>
+<section id="engineering-node-b1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-b1-title"><h4 id="engineering-node-b1-title" data-source-block="36">Node B1: RSV Primer and crRNA Candidate Preparation</h4>
+<p id="engineering-source-37" class="engineering-copy" data-source-block="37"><strong>Background.</strong> The detection performance of RPA-CRISPR/Cas12a depends strongly on how well the primers and crRNA match the target region. To proceed to subsequent model screening and wet-lab validation, comparable candidate primer-crRNA combinations first need to be prepared around the RSV N gene.</p>
+<p id="engineering-source-38" class="engineering-copy" data-source-block="38"><strong>Design.</strong> We generated complete primer–crRNA combinations for the RSV target using the F3 candidate-generation procedure.</p>
+<p id="engineering-source-39" class="engineering-copy" data-source-block="39"><strong>Build.</strong> Forward primer, reverse primer, spacer, and amplicon sequences were prepared for scoring by D4.</p>
+<p id="engineering-source-40" class="engineering-copy" data-source-block="40"><strong>Test.</strong> The output of B1 is a standardized set of candidate sequences rather than a final experimental conclusion. In the next stage, all candidate combinations are prioritized by an AI model, after which a limited number are selected for wet-lab experiments.</p>
+<p id="engineering-source-41" class="engineering-copy" data-source-block="41"><strong>Learn &amp; Outcome.</strong> As the number of candidate combinations increased, one-by-one wet-lab screening would have consumed more time and reagents. We therefore treated each forward primer, reverse primer, and crRNA as one comparable design and passed the set to D4 for ranking before B2 chose the wet-lab subset.</p>
+</section>
+<section id="engineering-edge-b1-d4" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-b1-d4-title"><h4 id="engineering-edge-b1-d4-title" data-source-block="42">Edge B1 → D4</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-b1">B1</a><span aria-hidden="true">→</span><a href="#engineering-node-d4">D4</a></div>
+<p id="engineering-source-43" class="engineering-copy" data-source-block="43"><strong>Trigger.</strong> B1 established comparable RSV primer–crRNA combinations, but conventional design alone could not determine which combinations should receive priority in the complete RPA–Cas12a system.</p>
+<p id="engineering-source-44" class="engineering-copy" data-source-block="44"><strong>Handoff.</strong> D4 scored each complete combination with its amplicon context, so B2 could select three leading designs and a lower-ranked comparator for matched fluorescence tests.</p>
+</section>
+<section id="engineering-node-b2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-b2-title"><h4 id="engineering-node-b2-title" data-source-block="45">Node B2: Rank Based Selection of RSV Combinations</h4>
+<p id="engineering-source-46" class="engineering-copy" data-source-block="46"><strong>Background.</strong> To reduce low-value wet-lab experiments, we used DNABERT-6 to comprehensively evaluate and rank candidate RSV-N primer-crRNA combinations, using sequence-level predictions to prioritize wet-lab testing.</p>
+<p id="engineering-source-47" class="engineering-copy" data-source-block="47"><strong>Design.</strong> Using the RSV N gene target as an example, the model scored the candidate combinations and output 10 candidate sequence sets. To evaluate the model’s discriminative ability, wet-lab testing did not select only the top-ranked combination; instead, the top three—Candidate 1, Candidate 2, and Candidate 3—were selected together with the tenth-ranked Candidate 10 as a low-ranking control.</p>
+<p id="engineering-source-48" class="engineering-copy" data-source-block="48"><strong>Build.</strong> The model output was converted into a defined wet-lab validation set: the Top 3 were used to test whether the model could enrich high-performing combinations, while Candidate 10 was used to test whether the model could identify a relatively low-performing combination.</p>
+<p id="engineering-source-49" class="engineering-copy" data-source-block="49"><strong>Test.</strong> The direct outputs of this node are candidate priorities and the validation set. Model predictions themselves are not treated as the final answer; all candidates must still undergo actual fluorescence-kinetics validation under identical reaction conditions.</p>
+<p id="engineering-source-50" class="engineering-copy" data-source-block="50"><strong>Learn &amp; Outcome.</strong> The primary role of ranking was to reduce the search space rather than replace experiments. B3 measured the Top 3 and Candidate 10 under the same comparison conditions before Candidate 2 was carried into reaction engineering.</p>
+</section>
+<section id="engineering-edge-b2-b3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-b2-b3-title"><h4 id="engineering-edge-b2-b3-title" data-source-block="51">Edge B2 → B3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-b2">B2</a><span aria-hidden="true">→</span><a href="#engineering-node-b3">B3</a></div>
+<p id="engineering-source-52" class="engineering-copy" data-source-block="52"><strong>Trigger.</strong> Model ranks 1, 2, 3, and 10 defined the experimental comparison.</p>
+<p id="engineering-source-53" class="engineering-copy" data-source-block="53"><strong>Handoff.</strong> B3 measured the four combinations under matched reaction conditions.</p>
+</section>
+<section id="engineering-node-b3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-b3-title"><h4 id="engineering-node-b3-title" data-source-block="54">Node B3: Fluorescence Validation of RSV Combinations</h4>
+<p id="engineering-source-55" class="engineering-copy" data-source-block="55"><strong>Background.</strong> B2 narrowed the candidate range to four representative combinations. The goal of B3 is to use actual fluorescence kinetics to determine the primer-crRNA combination ultimately used for subsequent system engineering and to assess the consistency between AI ranking and wet-lab performance.</p>
+<p id="engineering-source-56" class="engineering-copy" data-source-block="56"><strong>Design.</strong> Candidate 1, Candidate 2, Candidate 3, and Candidate 10 were tested separately. During the experiments, only the primer-crRNA combination was changed; all other reaction components and conditions were kept constant, with both positive templates and negative controls included. Evaluation metrics included the rate of fluorescence increase, endpoint fluorescence intensity, and the degree of separation between positive and negative signals.</p>
+<p id="engineering-source-57" class="engineering-copy" data-source-block="57"><strong>Build.</strong> Each 15 µL comparison used 0.64 µM of each primer, 0.1 µM reporter, 20 mM Mg²⁺, and a 40 °C reaction.</p>
+<p id="engineering-source-58" class="engineering-copy" data-source-block="58"><strong>Test.</strong> Experiments showed that all three top-ranked combinations produced clear fluorescence in positive samples while negative controls maintained low background. Among them, Candidate 2 showed the strongest endpoint fluorescence and overall signal increase. In contrast, Candidate 10 exhibited a later fluorescence rise, limited signal enhancement, and markedly poorer separation between positive and negative samples. Therefore, Candidate 2 was selected as the RSV primer-crRNA combination for subsequent system engineering.</p>
+<p id="engineering-source-59" class="engineering-table-caption" data-source-block="59">Table. Summary of RSV candidate comparison (data from manuscript 9.22, Figure 3A–D)</p>
+<div id="engineering-table-1" class="engineering-table-wrap" data-source-block="60" role="region" aria-labelledby="engineering-source-59" tabindex="0"><table><thead><tr><th scope="col">Model rank</th><th scope="col">Fluorescence</th><th scope="col">Decision</th></tr></thead><tbody><tr><td>1</td><td>Early onset</td><td>Compared</td></tr><tr><td>2</td><td>Early, relatively high at 30 min</td><td>Selected</td></tr><tr><td>3</td><td>Early onset</td><td>Compared</td></tr><tr><td>10</td><td>Delayed onset</td><td>Comparator</td></tr></tbody></table></div>
+<p id="engineering-source-61" class="engineering-table-caption" data-source-block="61">Table. RSV Candidate 2 oligonucleotides (manuscript 9.22, Table 3)</p>
+<div id="engineering-table-2" class="engineering-table-wrap" data-source-block="62" role="region" aria-labelledby="engineering-source-61" tabindex="0"><table><thead><tr><th scope="col">Component</th><th scope="col">Sequence (5′ to 3′)</th></tr></thead><tbody><tr><td>Forward primer</td><td>ACCATATATTGAACAATCCAAAAGCATCAT</td></tr><tr><td>Reverse primer</td><td>ATTTTCTTTGAGTTGCTCTGCATATGCTTT</td></tr><tr><td>crRNA spacer</td><td>CTAACTTCTCAAGTGTGGTCCT</td></tr></tbody></table></div>
+<figure id="engineering-figure-2" class="engineering-figure" data-source-block="63"><a class="engineering-original" href="../a  图片/engineering-2026-10-08/image2.png" target="_blank" rel="noopener" data-engineering-original aria-label="Open the original engineering figure 2"><img src="../a  图片/engineering-2026-10-08/image2.png" width="888" height="1098" alt="Six panels showing RSV candidate ranks 1, 2, 3 and 10, Candidate 2 sensitivity, and specificity." decoding="async" loading="lazy"></a><figcaption data-source-block="64">Figure. Candidate ranks 1, 2, 3, and 10; Candidate 2 sensitivity and specificity (manuscript 9.22, Figure 3).</figcaption></figure>
+<p id="engineering-source-65" class="engineering-copy" data-source-block="65"><strong>Learn &amp; Outcome.</strong> The top-ranked three collectively developed earlier fluorescence than Candidate 10, while the second-ranked Candidate 2 performed best among the tested designs. This indicates useful enrichment in this four-design experiment, not a measured accuracy rate across all RSV combinations. Candidate 2 passed to A2. The 0.1 µM reporter concentration used in this comparison reflected the initial screening formulation; reporter concentration was later optimized in C2. A further model update was proposed in the wet-lab draft but is not documented as completed.</p>
+</section>
+<section id="engineering-edge-b3-a2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-b3-a2-title"><h4 id="engineering-edge-b3-a2-title" data-source-block="66">Edge B3 → A2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-b3">B3</a><span aria-hidden="true">→</span><a href="#engineering-node-a2">A2</a></div>
+<p id="engineering-source-67" class="engineering-copy" data-source-block="67"><strong>Trigger.</strong> Candidate 2 showed an early response and relatively high signal over 30 minutes.</p>
+<p id="engineering-source-68" class="engineering-copy" data-source-block="68"><strong>Handoff.</strong> A2 used its oligonucleotides for the performance-evaluation formulation.</p>
+</section>
+</section>
+<section class="engineering-object" aria-labelledby="engineering-object-c"><h3 id="engineering-object-c" data-source-block="69">Object C: Fluorescence Readout</h3>
+<p id="engineering-source-70" class="engineering-iteration" data-source-block="70">Iteration path: C1 → C2 → C3</p>
+<p id="engineering-source-71" class="engineering-copy" data-source-block="71">Reporter cleavage was converted into a measured signal and extended to multiple targets.</p>
+<section id="engineering-node-c1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-c1-title"><h4 id="engineering-node-c1-title" data-source-block="72">Node C1: Initial Fluorescent reporter Readout</h4>
+<p id="engineering-source-73" class="engineering-copy" data-source-block="73"><strong>Background.</strong> RPA amplification and Cas12a target recognition must ultimately be converted into a signal that can be read by the instrument. Therefore, a reporter system is needed that can reliably convert Cas12a activation events into real-time fluorescence changes.</p>
+<p id="engineering-source-74" class="engineering-copy" data-source-block="74"><strong>Design.</strong> We used a dual-labeled ssDNA reporter carrying a fluorophore and a quencher at opposite ends. When the reporter is intact, fluorescence is quenched. After Cas12a–crRNA recognizes the target DNA, Cas12a trans-cleavage activity is activated and cleaves the ssDNA reporter, separating the fluorophore from the quencher and generating a fluorescence signal that can be monitored in real time.</p>
+<p id="engineering-source-75" class="engineering-copy" data-source-block="75"><strong>Build.</strong> A trans-cleavage reaction was constructed using target DNA, the corresponding crRNA, recombinant LbCas12a, and the dual-labeled ssDNA reporter, together with a negative control lacking target DNA.</p>
+<p id="engineering-source-76" class="engineering-copy" data-source-block="76"><strong>Test.</strong> Fluorescence intensity was continuously recorded over time for each reaction group. The complete reaction system produced clear target-dependent fluorescence output, while the negative control lacking target DNA maintained low background, demonstrating that the reporter can effectively reflect Cas12a activation.</p>
+<p id="engineering-source-77" class="engineering-copy" data-source-block="77"><strong>Learn &amp; Outcome.</strong> The reporter converted target recognition to real-time fluorescence, but output magnitude and negative background still depended on reporter concentration and its compatibility with the rest of the reaction. Its observed signal gave G1 a concrete optical input, while C2 tested reporter amount.</p>
+</section>
+<section id="engineering-edge-c1-c2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-c1-c2-title"><h4 id="engineering-edge-c1-c2-title" data-source-block="78">Edge C1 → C2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-c1">C1</a><span aria-hidden="true">→</span><a href="#engineering-node-c2">C2</a></div>
+<p id="engineering-source-79" class="engineering-copy" data-source-block="79"><strong>Trigger.</strong> C1 established fluorescence, but reporter amount had not been selected against the measured signal.</p>
+<p id="engineering-source-80" class="engineering-copy" data-source-block="80"><strong>Handoff.</strong> C2 tested a concentration series to separate target-positive from negative reactions.</p>
+</section>
+<section id="engineering-edge-c1-g1" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-c1-g1-title"><h4 id="engineering-edge-c1-g1-title" data-source-block="81">Edge C1 → G1</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-c1">C1</a><span aria-hidden="true">→</span><a href="#engineering-node-g1">G1</a></div>
+<p id="engineering-source-82" class="engineering-copy" data-source-block="82"><strong>Trigger.</strong> C1 generated fluorescence in reaction tubes, which required reproducible excitation and image capture outside the bench reader.</p>
+<p id="engineering-source-83" class="engineering-copy" data-source-block="83"><strong>Handoff.</strong> G1 assembled fixed illumination, filtering, and camera acquisition around the assay.</p>
+</section>
+<section id="engineering-node-c2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-c2-title"><h4 id="engineering-node-c2-title" data-source-block="84">Node C2: reporter Concentration and Signal Separation</h4>
+<p id="engineering-source-85" class="engineering-copy" data-source-block="85"><strong>Background.</strong> To improve the readability of the detection signal, the fluorescence response of positive samples must be increased while maintaining a low negative background. reporter concentration is one of the key variables that directly affects Cas12a trans-cleavage signal output.</p>
+<p id="engineering-source-86" class="engineering-copy" data-source-block="86"><strong>Design.</strong> Using the RSV N gene plasmid mimic as an example, five final reporter concentrations—500, 750, 1000, 1500, and 2000 nM—were tested. With all other conditions held constant, fluorescence curves were collected in real time and the signal increase and positive/negative separation at different concentrations were compared.</p>
+<p id="engineering-source-87" class="engineering-copy" data-source-block="87"><strong>Build.</strong> Different reporter concentrations were individually incorporated into the same RPA-CRISPR/Cas12a cascade system and tested in parallel using the same target, RNP, and amplification conditions, minimizing the influence of other variables on the evaluation of reporter concentration.</p>
+<p id="engineering-source-88" class="engineering-copy" data-source-block="88"><strong>Test.</strong> reporter-concentration engineering showed that 2000 nM produced the best fluorescence output. This condition provided sufficient cleavable substrate and generated a strong positive signal, so it was incorporated into the subsequent optimized system. Real-time fluorescence kinetics and endpoint fluorescence values were then retained as the primary readouts in sensitivity, specificity, repeatability, and matrix-interference experiments.</p>
+<p id="engineering-source-89" class="engineering-copy" data-source-block="89"><strong>Learn &amp; Outcome.</strong> The strongest output in the tested reporter series was at 2000 nM. reporter amount must still be matched to Cas12a/RNP, Mg²⁺, and amplification; the resulting fluorescence range was passed to the portable optical readout and the subsequent performance formulation.</p>
+</section>
+<section id="engineering-edge-c2-c3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-c2-c3-title"><h4 id="engineering-edge-c2-c3-title" data-source-block="90">Edge C2 → C3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-c2">C2</a><span aria-hidden="true">→</span><a href="#engineering-node-c3">C3</a></div>
+<p id="engineering-source-91" class="engineering-copy" data-source-block="91"><strong>Trigger.</strong> C2 found the strongest recorded signal at 2000 nM reporter within the tested range.</p>
+<p id="engineering-source-92" class="engineering-copy" data-source-block="92"><strong>Handoff.</strong> C3 applied the reporter-based readout to the additional pathogen-specific reagent systems.</p>
+</section>
+<section id="engineering-edge-c2-g1" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-c2-g1-title"><h4 id="engineering-edge-c2-g1-title" data-source-block="93">Edge C2 → G1</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-c2">C2</a><span aria-hidden="true">→</span><a href="#engineering-node-g1">G1</a></div>
+<p id="engineering-source-94" class="engineering-copy" data-source-block="94"><strong>Trigger.</strong> C2 established the positive and negative fluorescence range that the portable optical system needed to distinguish.</p>
+<p id="engineering-source-95" class="engineering-copy" data-source-block="95"><strong>Handoff.</strong> G1 acquired tube images under fixed illumination and extracted the signal for mobile display.</p>
+</section>
+<section id="engineering-node-c3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-c3-title"><h4 id="engineering-node-c3-title" data-source-block="96">Node C3: Multiple Target Reagent Readout</h4>
+<p id="engineering-source-97" class="engineering-copy" data-source-block="97"><strong>Background.</strong> After engineering of the single-pathogen fluorescence system, the engineering objective shifted from “whether one target can be read out reliably” to “whether multiple pathogen-detection systems can be integrated into a practical device.” This step determines whether the preceding wet-lab work can truly move into a portable application scenario.</p>
+<p id="engineering-source-98" class="engineering-copy" data-source-block="98"><strong>Design.</strong> The established pathogen-specific RPA-CRISPR/Cas12a reagent systems were integrated with the self-developed portable fluorescence-detection device. The instrument performed real-time fluorescence acquisition, kinetic-curve display, and endpoint signal output during the reaction, followed by validation of simultaneous multi-pathogen detection.</p>
+<p id="engineering-source-99" class="engineering-copy" data-source-block="99"><strong>Build.</strong> The optimized detection-reagent systems were transferred to the portable platform so that the reaction system and the instrument’s fluorescence-detection module could operate together. The previously established detection systems for RSV, hMPV-B, SPN, BP, and HI target-gene plasmid mimics provided the reagent basis for multi-pathogen output.</p>
+<p id="engineering-source-100" class="engineering-copy" data-source-block="100"><strong>Test.</strong> Instrument validation showed that the independently designed detection-reagent systems could operate on the self-developed portable device and successfully demonstrated simultaneous detection of multiple pathogens.</p>
+<p id="engineering-source-101" class="engineering-copy" data-source-block="101"><strong>Learn &amp; Outcome.</strong> The reagent systems were transferred from a single-pathogen reaction to portable multi-pathogen output. This established a need for more loading positions and traceable tube-to-result mapping in G2 and I4; it did not validate every position or the full rotating-device workflow.</p>
+</section>
+<section id="engineering-edge-c3-g2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-c3-g2-title"><h4 id="engineering-edge-c3-g2-title" data-source-block="102">Edge C3 → G2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-c3">C3</a><span aria-hidden="true">→</span><a href="#engineering-node-g2">G2</a></div>
+<p id="engineering-source-103" class="engineering-copy" data-source-block="103"><strong>Trigger.</strong> Five pathogen-specific reactions and controls exceeded a simple fixed-view batch layout.</p>
+<p id="engineering-source-104" class="engineering-copy" data-source-block="104"><strong>Handoff.</strong> G2 provided fifteen tube positions for sequential imaging; whole-device performance on the rotating platform remains to be tested.</p>
+</section>
+</section>
+</section>
+<section id="engineering-drylab" class="engineering-panel" role="tabpanel" aria-labelledby="engineering-tab-drylab" tabindex="0" hidden>
+<h2 data-source-block="105">Dry Lab Engineering</h2>
+<section class="engineering-object" aria-labelledby="engineering-object-d"><h3 id="engineering-object-d" data-source-block="106">Object D: Sequence Ranking</h3>
+<p id="engineering-source-107" class="engineering-iteration" data-source-block="107">Iteration path: D1 → D2 → D3 → D4</p>
+<p id="engineering-source-108" class="engineering-copy" data-source-block="108">The sequence task moved from isolated PAM sites to complete combination ranking and candidate-group testing.</p>
+<section id="engineering-node-d1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-d1-title"><h4 id="engineering-node-d1-title" data-source-block="109">Node D1: PAM Site Ranking by Cosine Similarity</h4>
+<p id="engineering-source-110" class="engineering-copy" data-source-block="110"><strong>Background.</strong> The first model evaluated bacterial PAM sites as short fragments for BP, Group A Streptococcus (GAS), SPN, and HI.</p>
+<p id="engineering-source-111" class="engineering-copy" data-source-block="111"><strong>Design.</strong> We encoded 27-nucleotide TTTN-PAM windows with DNABERT-6. A lower maximum cosine similarity to a non-target comparison sequence meant a more distinct site within that pool.</p>
+<p id="engineering-source-112" class="engineering-copy" data-source-block="112"><strong>Build.</strong> We scanned both strands and constructed target, near, and background windows. Shared windows were flagged for filtering.</p>
+<p id="engineering-source-113" class="engineering-copy" data-source-block="113"><strong>Test.</strong> Nine-class test accuracy was 0.4005; 3,228 of 8,122 non-positive windows were called positive. Strict filtering retained BP, GAS, and HI sites but removed all SPN sites; 36 flagged SPN sites were considered separately.</p>
+<p id="engineering-source-114" class="engineering-table-caption" data-source-block="114">Table. First-stage PAM-site outputs (DNABERT PAM Model v3)</p>
+<div id="engineering-table-3" class="engineering-table-wrap" data-source-block="115" role="region" aria-labelledby="engineering-source-114" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Strict filter</th></tr></thead><tbody><tr><td>BP</td><td>Candidates retained</td></tr><tr><td>GAS</td><td>Candidates retained</td></tr><tr><td>HI</td><td>Candidates retained</td></tr><tr><td>SPN</td><td>No unflagged candidate</td></tr></tbody></table></div>
+<p id="engineering-source-116" class="engineering-copy" data-source-block="116"><strong>Learn &amp; Outcome.</strong> A PAM-site score did not incorporate the primers required for RPA. D2 changed the scored unit to a complete primer–crRNA combination.</p>
+</section>
+<section id="engineering-edge-d1-d2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-d1-d2-title"><h4 id="engineering-edge-d1-d2-title" data-source-block="117">Edge D1 → D2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-d1">D1</a><span aria-hidden="true">→</span><a href="#engineering-node-d2">D2</a></div>
+<p id="engineering-source-118" class="engineering-copy" data-source-block="118"><strong>Trigger.</strong> The cosine score ranked PAM fragments without primer information.</p>
+<p id="engineering-source-119" class="engineering-copy" data-source-block="119"><strong>Handoff.</strong> D2 scored full primer–crRNA combinations.</p>
+</section>
+<section id="engineering-node-d2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-d2-title"><h4 id="engineering-node-d2-title" data-source-block="120">Node D2: Pre-final DNABERT Multilayer Perceptron (MLP) Combination Ranker</h4>
+<p id="engineering-source-121" class="engineering-copy" data-source-block="121"><strong>Background.</strong> The cosine score in D1 compared isolated sites. F2 supplied matched primer, crRNA, and template sequences.</p>
+<p id="engineering-source-122" class="engineering-copy" data-source-block="122"><strong>Design.</strong> We used DNABERT-6 to encode the components and a multilayer perceptron (MLP) to score each complete combination.</p>
+<p id="engineering-source-123" class="engineering-copy" data-source-block="123"><strong>Build.</strong> We trained on source-linked comparisons without the final version’s enumerated, target-specific candidate groups.</p>
+<p id="engineering-source-124" class="engineering-copy" data-source-block="124"><strong>Test.</strong> On the audited held-out split, the pre-final model reached 0.5150 pairwise accuracy; an explicit-feature rule reached 0.6487.</p>
+<p id="engineering-source-125" class="engineering-copy" data-source-block="125"><strong>Learn &amp; Outcome.</strong> The comparison prompted D3 to inspect how candidates and target splits affected the ranking result.</p>
+</section>
+<section id="engineering-edge-d2-d3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-d2-d3-title"><h4 id="engineering-edge-d2-d3-title" data-source-block="126">Edge D2 → D3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-d2">D2</a><span aria-hidden="true">→</span><a href="#engineering-node-d3">D3</a></div>
+<p id="engineering-source-127" class="engineering-copy" data-source-block="127"><strong>Trigger.</strong> The pre-final model scored 0.5150 pairwise accuracy against 0.6487 for an explicit-feature rule.</p>
+<p id="engineering-source-128" class="engineering-copy" data-source-block="128"><strong>Handoff.</strong> D3 inspected candidate construction and target splitting.</p>
+</section>
+<section id="engineering-node-d3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-d3-title"><h4 id="engineering-node-d3-title" data-source-block="129">Node D3: Audit of Candidate Construction</h4>
+<p id="engineering-source-130" class="engineering-copy" data-source-block="130"><strong>Background.</strong> D2 did not outperform the explicit-feature rule on the held-out comparison.</p>
+<p id="engineering-source-131" class="engineering-copy" data-source-block="131"><strong>Design.</strong> We compared sequence and feature inputs and checked whether construction rules made published designs easy to identify.</p>
+<p id="engineering-source-132" class="engineering-copy" data-source-block="132"><strong>Build.</strong> We corrected crRNA-adjacent motif, primer orientation, and coupled primer-length rules. Related targets were kept together across data splits.</p>
+<p id="engineering-source-133" class="engineering-copy" data-source-block="133"><strong>Test.</strong> Before correction, a feature-only probe found the published design in 0.9020 of constructed groups. After correction, Hits@1 (rank-1 retrieval rate) fell to 0 (0 out of 26 groups) against a group-adjusted random value of 0.0154.</p>
+<p id="engineering-source-134" class="engineering-copy" data-source-block="134"><strong>Learn &amp; Outcome.</strong> The drop from 0.9020 to 0 after rule correction indicates that the earlier high value reflected construction bias rather than genuine ranking ability: inconsistent primer and PAM rules had made published designs trivially easy for a feature-only probe to distinguish from generated alternatives. After correction, the task became harder and more representative of real candidate pools. F3 rebuilt the candidate groups with consistent sequence geometry. Generated alternatives remained unmeasured.</p>
+</section>
+<section id="engineering-edge-d3-f3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-d3-f3-title"><h4 id="engineering-edge-d3-f3-title" data-source-block="135">Edge D3 → F3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-d3">D3</a><span aria-hidden="true">→</span><a href="#engineering-node-f3">F3</a></div>
+<p id="engineering-source-136" class="engineering-copy" data-source-block="136"><strong>Trigger.</strong> The feature-only probe’s earlier Hits@1 depended on candidate construction.</p>
+<p id="engineering-source-137" class="engineering-copy" data-source-block="137"><strong>Handoff.</strong> F3 generated alternatives by consistent primer and PAM rules.</p>
+</section>
+<section id="engineering-node-d4" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-d4-title"><h4 id="engineering-node-d4-title" data-source-block="138">Node D4: Groupwise Combination Ranker</h4>
+<p id="engineering-source-139" class="engineering-copy" data-source-block="139"><strong>Background.</strong> F3 supplied target-specific groups containing published designs and enumerated primer–crRNA alternatives.</p>
+<p id="engineering-source-140" class="engineering-copy" data-source-block="140"><strong>Design.</strong> We encoded the amplicon, both primers, and the crRNA spacer separately with a frozen DNABERT-6 encoder and joined them with 19 numerical features in a ranking head.</p>
+<p id="engineering-source-141" class="engineering-copy" data-source-block="141"><strong>Build.</strong> We trained the projections and ranker on comparisons within each candidate group.</p>
+<p id="engineering-source-142" class="engineering-copy" data-source-block="142"><strong>Test.</strong> Published combinations ranked first in 24 of 26 fixed holdout groups (Hits@1 = 0.9231). Removing the reverse-primer length feature reduced this metric to 0.8077. Across 30 matched seeds, a frozen random encoder attained mean Hits@1 = 0.9167 versus 0.8744 for the pretrained encoder.</p>
+<p id="engineering-source-143" class="engineering-table-caption" data-source-block="143">Table. Ranking and ablation (manuscript 9.22, Table 2)</p>
+<div id="engineering-table-4" class="engineering-table-wrap" data-source-block="144" role="region" aria-labelledby="engineering-source-143" tabindex="0"><table><thead><tr><th scope="col">Evaluation</th><th scope="col">Hits@1</th></tr></thead><tbody><tr><td>Reference, 26 fixed holdout groups</td><td>0.9231</td></tr><tr><td>Without reverse-primer length feature</td><td>0.8077</td></tr><tr><td>Pretrained encoder, mean of 30 seeds</td><td>0.8744</td></tr><tr><td>Frozen random encoder, mean of 30 seeds</td><td>0.9167</td></tr></tbody></table></div>
+<p id="engineering-source-145" class="engineering-copy" data-source-block="145"><strong>Learn &amp; Outcome.</strong> The frozen pretrained reference model ranked combinations for the previously unseen RSV target in B2. Notably, the frozen random encoder slightly outperformed the pretrained encoder (0.9167 vs 0.8744 mean Hits@1), suggesting that the sequence patterns distinguishing published designs within a candidate group may be better captured by task-specific projection learning than by general DNA-language pretraining. This counter-intuitive result warrants further investigation across additional target sets.</p>
+</section>
+<section id="engineering-edge-d4-b2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-d4-b2-title"><h4 id="engineering-edge-d4-b2-title" data-source-block="146">Edge D4 → B2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-d4">D4</a><span aria-hidden="true">→</span><a href="#engineering-node-b2">B2</a></div>
+<p id="engineering-source-147" class="engineering-copy" data-source-block="147"><strong>Trigger.</strong> The frozen pretrained reference model ranked RSV combinations for an unseen target.</p>
+<p id="engineering-source-148" class="engineering-copy" data-source-block="148"><strong>Handoff.</strong> B2 selected ranks 1, 2, 3, and 10 for fluorescence testing.</p>
+</section>
+</section>
+<section class="engineering-object" aria-labelledby="engineering-object-e"><h3 id="engineering-object-e" data-source-block="149">Object E: Reaction Dynamics</h3>
+<p id="engineering-source-150" class="engineering-iteration" data-source-block="150">Iteration path: E1 → E2 → E3</p>
+<p id="engineering-source-151" class="engineering-copy" data-source-block="151">The ODE formulation gained substrate consumption before the parameter search.</p>
+<section id="engineering-node-e1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-e1-title"><h4 id="engineering-node-e1-title" data-source-block="152">Node E1: Initial ODE Reaction Formulation</h4>
+<p id="engineering-source-153" class="engineering-copy" data-source-block="153"><strong>Background.</strong> A1 exposed a sequence of reverse transcription, amplification, Cas12a activation, and reporter cleavage steps.</p>
+<p id="engineering-source-154" class="engineering-copy" data-source-block="154"><strong>Design.</strong> We represented primer binding, recombinase loading, strand invasion, extension, and reporter cleavage as ordinary differential equations (ODEs).</p>
+<p id="engineering-source-155" class="engineering-copy" data-source-block="155"><strong>Build.</strong> The first version listed reaction equations, rate constants, and initial reagent concentrations.</p>
+<p id="engineering-source-156" class="engineering-copy" data-source-block="156"><strong>Test.</strong> Its documented output consisted of the equations and parameter tables; a numerical time course is available for the later E2 version.</p>
+<p id="engineering-source-157" class="engineering-copy" data-source-block="157"><strong>Learn &amp; Outcome.</strong> The initial equations established the reaction stages; without a documented numerical time course for E1, the next modeled iteration added finite substrate pools before concentration search.</p>
+</section>
+<section id="engineering-edge-e1-e2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-e1-e2-title"><h4 id="engineering-edge-e1-e2-title" data-source-block="158">Edge E1 → E2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-e1">E1</a><span aria-hidden="true">→</span><a href="#engineering-node-e2">E2</a></div>
+<p id="engineering-source-159" class="engineering-copy" data-source-block="159"><strong>Trigger.</strong> The first ODE formulation did not explicitly consume finite nucleotide and reporter pools.</p>
+<p id="engineering-source-160" class="engineering-copy" data-source-block="160"><strong>Handoff.</strong> E2 tracked these substrates in the reaction dynamics.</p>
+</section>
+<section id="engineering-node-e2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-e2-title"><h4 id="engineering-node-e2-title" data-source-block="161">Node E2: ODE Dynamics with Substrate Consumption</h4>
+<p id="engineering-source-162" class="engineering-copy" data-source-block="162"><strong>Background.</strong> The initial equations did not explicitly track depletion of dNTP and reporter.</p>
+<p id="engineering-source-163" class="engineering-copy" data-source-block="163"><strong>Design.</strong> We added consumption of finite substrates and an efficiency coefficient for unequal primer behavior in a well-mixed ODE system.</p>
+<p id="engineering-source-164" class="engineering-copy" data-source-block="164"><strong>Build.</strong> We set starting concentrations of enzymes, nucleic acids, dNTP, ATP, and reporter and solved the equations with LSODA. Cleaved reporter X was the signal variable.</p>
+<p id="engineering-source-165" class="engineering-copy" data-source-block="165"><strong>Test.</strong> The 30-minute simulation showed DNA accumulation before X rose; X approached a plateau later in the baseline run.</p>
+<figure id="engineering-figure-3" class="engineering-figure" data-source-block="166"><a class="engineering-original" href="../a  图片/engineering-2026-10-08/image3.jpeg" target="_blank" rel="noopener" data-engineering-original aria-label="Open the original engineering figure 3"><img src="../a  图片/engineering-2026-10-08/image3.jpeg" width="1221" height="732" alt="Baseline ODE simulation of DNA and cleaved reporter X concentrations over 30 minutes." decoding="async" loading="lazy"></a><figcaption data-source-block="167">Figure. Baseline ODE time course of DNA and cleaved reporter X (Drylab 9.3).</figcaption></figure>
+<p id="engineering-source-168" class="engineering-copy" data-source-block="168"><strong>Learn &amp; Outcome.</strong> E3 used predicted X at 10 minutes to compare reagent concentrations.</p>
+</section>
+<section id="engineering-edge-e2-e3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-e2-e3-title"><h4 id="engineering-edge-e2-e3-title" data-source-block="169">Edge E2 → E3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-e2">E2</a><span aria-hidden="true">→</span><a href="#engineering-node-e3">E3</a></div>
+<p id="engineering-source-170" class="engineering-copy" data-source-block="170"><strong>Trigger.</strong> The substrate-aware ODE yielded a time course for cleaved reporter X.</p>
+<p id="engineering-source-171" class="engineering-copy" data-source-block="171"><strong>Handoff.</strong> E3 used predicted X at 10 minutes as its search objective.</p>
+</section>
+<section id="engineering-node-e3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-e3-title"><h4 id="engineering-node-e3-title" data-source-block="172">Node E3: Search for Reaction Concentrations</h4>
+<p id="engineering-source-173" class="engineering-copy" data-source-block="173"><strong>Background.</strong> E2 produced a time-dependent reporter-cleavage prediction under specified conditions.</p>
+<p id="engineering-source-174" class="engineering-copy" data-source-block="174"><strong>Design.</strong> We used differential evolution to maximize predicted X at 10 minutes over primer, Cas12a–crRNA, and reverse transcriptase concentrations.</p>
+<p id="engineering-source-175" class="engineering-copy" data-source-block="175"><strong>Build.</strong> A broad numerical search was followed by a finer search around the selected region.</p>
+<p id="engineering-source-176" class="engineering-copy" data-source-block="176"><strong>Test.</strong> The fine search returned 0.71 µM primer, 82 nM Cas12a–crRNA, and 40 µM reverse transcriptase, with predicted X(10 min) = 2.6 × 10⁻⁸ M.</p>
+<p id="engineering-source-177" class="engineering-copy" data-source-block="177"><strong>Learn &amp; Outcome.</strong> A2 tested the primer gradient with measured fluorescence and selected 0.4 µM. The ODE optimum was a search hypothesis, not an experimentally confirmed optimum.</p>
+</section>
+<section id="engineering-edge-e3-a2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-e3-a2-title"><h4 id="engineering-edge-e3-a2-title" data-source-block="178">Edge E3 → A2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-e3">E3</a><span aria-hidden="true">→</span><a href="#engineering-node-a2">A2</a></div>
+<p id="engineering-source-179" class="engineering-copy" data-source-block="179"><strong>Trigger.</strong> E3 predicted 0.71 µM primer from the ODE objective.</p>
+<p id="engineering-source-180" class="engineering-copy" data-source-block="180"><strong>Handoff.</strong> A2 measured a concentration gradient and selected 0.4 µM primer by fluorescence.</p>
+</section>
+</section>
+<section class="engineering-object" aria-labelledby="engineering-object-f"><h3 id="engineering-object-f" data-source-block="181">Object F: Training Data and Candidate Groups</h3>
+<p id="engineering-source-182" class="engineering-iteration" data-source-block="182">Iteration path: F1 → F2 → F3</p>
+<p id="engineering-source-183" class="engineering-copy" data-source-block="183">Short windows were replaced with source-linked combinations and target-specific alternatives.</p>
+<section id="engineering-node-f1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-f1-title"><h4 id="engineering-node-f1-title" data-source-block="184">Node F1: Short Window Classification Data</h4>
+<p id="engineering-source-185" class="engineering-copy" data-source-block="185"><strong>Background.</strong> The first bacterial screening task required target, near, and background examples.</p>
+<p id="engineering-source-186" class="engineering-copy" data-source-block="186"><strong>Design.</strong> We generated labeled 27-nucleotide windows and marked windows shared across categories.</p>
+<p id="engineering-source-187" class="engineering-copy" data-source-block="187"><strong>Build.</strong> The initial table had 45 nonempty records; windowing generated 46,244 sequences and left 42,802 after removal of shared windows.</p>
+<p id="engineering-source-188" class="engineering-copy" data-source-block="188"><strong>Test.</strong> The reported test split contained 13,987 windows, of which 325 began with the PAM motif.</p>
+<p id="engineering-source-189" class="engineering-copy" data-source-block="189"><strong>Learn &amp; Outcome.</strong> F2 recorded whole assays because a window label did not specify a primer pair, spacer, and target template.</p>
+</section>
+<section id="engineering-edge-f1-f2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-f1-f2-title"><h4 id="engineering-edge-f1-f2-title" data-source-block="190">Edge F1 → F2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-f1">F1</a><span aria-hidden="true">→</span><a href="#engineering-node-f2">F2</a></div>
+<p id="engineering-source-191" class="engineering-copy" data-source-block="191"><strong>Trigger.</strong> F1 labeled 27-nucleotide bacterial windows rather than whole assay designs.</p>
+<p id="engineering-source-192" class="engineering-copy" data-source-block="192"><strong>Handoff.</strong> F2 linked primers, spacers, and target templates in literature records.</p>
+</section>
+<section id="engineering-node-f2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-f2-title"><h4 id="engineering-node-f2-title" data-source-block="193">Node F2: Literature Linked Combination Records</h4>
+<p id="engineering-source-194" class="engineering-copy" data-source-block="194"><strong>Background.</strong> A combination ranker needed its primer pair, spacer, and target sequence to refer to one assay.</p>
+<p id="engineering-source-195" class="engineering-copy" data-source-block="195"><strong>Design.</strong> We matched reported oligonucleotides to target templates and retained source study information and within-study comparisons.</p>
+<p id="engineering-source-196" class="engineering-copy" data-source-block="196"><strong>Build.</strong> We checked sequence orientation, primer placement, and whether the spacer lay inside the amplicon.</p>
+<p id="engineering-source-197" class="engineering-copy" data-source-block="197"><strong>Test.</strong> Records failing these sequence checks were excluded from combination scoring.</p>
+<p id="engineering-source-198" class="engineering-copy" data-source-block="198"><strong>Learn &amp; Outcome.</strong> The records supported D2; F3 later generated comparable alternatives on the same template.</p>
+</section>
+<section id="engineering-edge-f2-d2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-f2-d2-title"><h4 id="engineering-edge-f2-d2-title" data-source-block="199">Edge F2 → D2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-f2">F2</a><span aria-hidden="true">→</span><a href="#engineering-node-d2">D2</a></div>
+<p id="engineering-source-200" class="engineering-copy" data-source-block="200"><strong>Trigger.</strong> F2 supplied complete combination records and source-linked comparisons.</p>
+<p id="engineering-source-201" class="engineering-copy" data-source-block="201"><strong>Handoff.</strong> D2 trained a combination-level ranking head.</p>
+</section>
+<section id="engineering-edge-f2-f3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-f2-f3-title"><h4 id="engineering-edge-f2-f3-title" data-source-block="202">Edge F2 → F3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-f2">F2</a><span aria-hidden="true">→</span><a href="#engineering-node-f3">F3</a></div>
+<p id="engineering-source-203" class="engineering-copy" data-source-block="203"><strong>Trigger.</strong> Literature designs often lacked measured alternatives on the same template.</p>
+<p id="engineering-source-204" class="engineering-copy" data-source-block="204"><strong>Handoff.</strong> F3 enumerated candidate primer pairs and spacers per target.</p>
+</section>
+<section id="engineering-node-f3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-f3-title"><h4 id="engineering-node-f3-title" data-source-block="205">Node F3: Enumerated Candidate Groups</h4>
+<p id="engineering-source-206" class="engineering-copy" data-source-block="206"><strong>Background.</strong> Published assays often reported one adopted combination without measured results for many alternatives.</p>
+<p id="engineering-source-207" class="engineering-copy" data-source-block="207"><strong>Design.</strong> For each matched literature design, we used Primer3 to generate alternative RPA primers and enumerated spacers next to TTTV PAMs within the amplicon.</p>
+<p id="engineering-source-208" class="engineering-copy" data-source-block="208"><strong>Build.</strong> Of 200 collected records, 142 matched target templates. Candidate generation yielded 112 groups with 13,552 total combinations: 112 published and 13,440 generated.</p>
+<p id="engineering-source-209" class="engineering-copy" data-source-block="209"><strong>Test.</strong> We checked primer direction, PAM and spacer location, duplicates, and target homology; 26 target groups formed the test set.</p>
+<p id="engineering-source-210" class="engineering-table-caption" data-source-block="210">Table. Groupwise candidate construction (Drylab 9.3)</p>
+<div id="engineering-table-5" class="engineering-table-wrap" data-source-block="211" role="region" aria-labelledby="engineering-source-210" tabindex="0"><table><thead><tr><th scope="col">Stage</th><th scope="col">Count</th></tr></thead><tbody><tr><td>Collected literature records</td><td>200</td></tr><tr><td>Matched designs</td><td>142</td></tr><tr><td>Groups with candidate generation</td><td>112</td></tr><tr><td>Total combinations</td><td>13,552</td></tr></tbody></table></div>
+<p id="engineering-source-212" class="engineering-copy" data-source-block="212"><strong>Learn &amp; Outcome.</strong> The groupwise label asks whether D4 retrieves the published choice. The generated alternatives have no measured activity.</p>
+</section>
+<section id="engineering-edge-f3-d4" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-f3-d4-title"><h4 id="engineering-edge-f3-d4-title" data-source-block="213">Edge F3 → D4</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-f3">F3</a><span aria-hidden="true">→</span><a href="#engineering-node-d4">D4</a></div>
+<p id="engineering-source-214" class="engineering-copy" data-source-block="214"><strong>Trigger.</strong> F3 provided 112 candidate groups and 13,552 combinations.</p>
+<p id="engineering-source-215" class="engineering-copy" data-source-block="215"><strong>Handoff.</strong> D4 trained and tested within-target ranking.</p>
+</section>
+</section>
+</section>
+<section id="engineering-hardware" class="engineering-panel" role="tabpanel" aria-labelledby="engineering-tab-hardware" tabindex="0" hidden>
+<h2 data-source-block="216">Hardware Engineering</h2>
+<section class="engineering-object" aria-labelledby="engineering-object-g"><h3 id="engineering-object-g" data-source-block="217">Object G: Optical Acquisition and Capacity</h3>
+<p id="engineering-source-218" class="engineering-iteration" data-source-block="218">Iteration path: G1 → G2</p>
+<p id="engineering-source-219" class="engineering-copy" data-source-block="219">The fixed optical platform was extended with a rotating reaction chamber for batch imaging.</p>
+<section id="engineering-node-g1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-g1-title"><h4 id="engineering-node-g1-title" data-source-block="220">Node G1: First Portable Optical Readout</h4>
+<p id="engineering-source-221" class="engineering-copy" data-source-block="221"><strong>Background.</strong> The reaction in C1 produced fluorescence that required fixed excitation, imaging, and tube localization outside a bench reader. The first instrument brought those functions into a compact housing with a defined camera-to-tube distance.</p>
+<p id="engineering-source-222" class="engineering-copy" data-source-block="222"><strong>Design.</strong> We arranged the reaction tubes, a blue LED, optical filtering elements, and a USB macro camera in a fixed spatial relationship inside a light-blocking enclosure. Orange Pi 5 Max with RK3588 handled image processing, and Wi-Fi linked the run to the mobile interface.</p>
+<p id="engineering-source-223" class="engineering-copy" data-source-block="223"><strong>Build.</strong> The PET enclosure was designed in SolidWorks and 3D printed. You Only Look Once version 8 nano (YOLOv8n) located tubes in acquired images, while OpenCV extracted information from the corresponding regions for display and recording.</p>
+<p id="engineering-source-224" class="engineering-copy" data-source-block="224"><strong>Test.</strong> We compared camera-to-tube distances of 70, 60, 50, 40, and 30 mm and selected 50 mm as the first-generation mounting distance. Device records also show tube loading, image acquisition, and mobile display as a connected operation.</p>
+<p id="engineering-source-225" class="engineering-copy" data-source-block="225"><strong>Learn &amp; Outcome.</strong> The first instrument joined fixed illumination, tube localization, and mobile records in one enclosure. Its limited observation area prompted a second layout with more positions; camera-distance engineering alone did not establish multi-position uniformity.</p>
+</section>
+<section id="engineering-edge-g1-g2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-g1-g2-title"><h4 id="engineering-edge-g1-g2-title" data-source-block="226">Edge G1 → G2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-g1">G1</a><span aria-hidden="true">→</span><a href="#engineering-node-g2">G2</a></div>
+<p id="engineering-source-227" class="engineering-copy" data-source-block="227"><strong>Trigger.</strong> A fixed optical view limited the number of tube positions.</p>
+<p id="engineering-source-228" class="engineering-copy" data-source-block="228"><strong>Handoff.</strong> G2 added a rotating fifteen-position chamber.</p>
+</section>
+<section id="engineering-edge-g1-i1" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-g1-i1-title"><h4 id="engineering-edge-g1-i1-title" data-source-block="229">Edge G1 → I1</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-g1">G1</a><span aria-hidden="true">→</span><a href="#engineering-node-i1">I1</a></div>
+<p id="engineering-source-230" class="engineering-copy" data-source-block="230"><strong>Trigger.</strong> G1 transferred instrument communication to the mobile app over Wi-Fi.</p>
+<p id="engineering-source-231" class="engineering-copy" data-source-block="231"><strong>Handoff.</strong> I1 handled connection and run parameter entry.</p>
+</section>
+<section id="engineering-node-g2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-g2-title"><h4 id="engineering-node-g2-title" data-source-block="232">Node G2: Rotating Chamber for Batch Imaging</h4>
+<p id="engineering-source-233" class="engineering-copy" data-source-block="233"><strong>Background.</strong> Kindergarten and nursing-home batch scenarios require positions for target reactions, controls, and repeats beyond a limited fixed viewing area. Expansion also creates a need to retain each image’s face and tube position.</p>
+<p id="engineering-source-234" class="engineering-copy" data-source-block="234"><strong>Design.</strong> We designed a three-face rotating chamber with five tube positions on each face, for fifteen loading positions. A drive and position feedback switch faces in front of a fixed camera, which acquires them in sequence. Fifteen positions do not imply fifteen simultaneous optical channels or fifteen complete samples.</p>
+<p id="engineering-source-235" class="engineering-copy" data-source-block="235"><strong>Build.</strong> The larger enclosure separates a front two-position lysis block from the main rotating chamber, with separate loading covers. The camera and image processing follow each face as it enters the viewing position.</p>
+<p id="engineering-source-236" class="engineering-copy" data-source-block="236"><strong>Test.</strong> Images of different tube arrangements show that the expanded layout enters the fixed camera view and that individual tubes can be localized. The material does not quantify performance at every position or demonstrate repeatable rotational alignment, face-to-face illumination uniformity, or absence of neighboring-tube effects.</p>
+<p id="engineering-source-237" class="engineering-table-caption" data-source-block="237">Table. Device generations (ByeGerm Engineering)</p>
+<div id="engineering-table-6" class="engineering-table-wrap" data-source-block="238" role="region" aria-labelledby="engineering-source-237" tabindex="0"><table><thead><tr><th scope="col">Property</th><th scope="col">G1</th><th scope="col">G2</th></tr></thead><tbody><tr><td>Reaction positions</td><td>Fixed view</td><td>Three faces × five positions</td></tr><tr><td>Lysis zone</td><td>Not separate</td><td>Two-position front unit</td></tr><tr><td>Image evidence</td><td>Camera distance test</td><td>Multi-position tube images</td></tr></tbody></table></div>
+<p id="engineering-source-239" class="engineering-copy" data-source-block="239"><strong>Learn &amp; Outcome.</strong> Three faces with five positions each extend loading capacity, but loading positions are not simultaneous optical channels or completed sample results. Repeated positioning, lighting, and face–tube–run association require separate full-device checks in I4.</p>
+</section>
+<section id="engineering-edge-g2-i4" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-g2-i4-title"><h4 id="engineering-edge-g2-i4-title" data-source-block="240">Edge G2 → I4</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-g2">G2</a><span aria-hidden="true">→</span><a href="#engineering-node-i4">I4</a></div>
+<p id="engineering-source-241" class="engineering-copy" data-source-block="241"><strong>Trigger.</strong> The rotating chamber added face and tube positions to the imaging sequence.</p>
+<p id="engineering-source-242" class="engineering-copy" data-source-block="242"><strong>Handoff.</strong> I4 still requires full-device validation to ensure each displayed result matches the correct tube and run.</p>
+</section>
+</section>
+<section class="engineering-object" aria-labelledby="engineering-object-h"><h3 id="engineering-object-h" data-source-block="243">Object H: Temperature Control</h3>
+<p id="engineering-source-244" class="engineering-iteration" data-source-block="244">Iteration path: H1 → H2</p>
+<p id="engineering-source-245" class="engineering-copy" data-source-block="245">Feedback heating in the fixed platform led to separate lysis and reaction zones.</p>
+<section id="engineering-node-h1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-h1-title"><h4 id="engineering-node-h1-title" data-source-block="246">Node H1: First Generation Temperature Feedback</h4>
+<p id="engineering-source-247" class="engineering-copy" data-source-block="247"><strong>Background.</strong> The first optical platform needed a controlled temperature during fluorescence acquisition.</p>
+<p id="engineering-source-248" class="engineering-copy" data-source-block="248"><strong>Design.</strong> We used ceramic heaters, an 18B20 sensor, and proportional-integral-derivative / pulse-width modulation (PID/PWM) feedback to regulate the reaction area.</p>
+<p id="engineering-source-249" class="engineering-copy" data-source-block="249"><strong>Build.</strong> Two heater groups supplied 6 W total; a fan assisted heat removal.</p>
+<p id="engineering-source-250" class="engineering-copy" data-source-block="250"><strong>Test.</strong> First-generation platform records give a control range of 25–95 °C and fluctuation of about ±0.7 °C. This demonstrates feedback temperature control in the tested configuration; the range is not the assay setpoint and does not establish uniform temperature at all positions of the second instrument.</p>
+<p id="engineering-source-251" class="engineering-copy" data-source-block="251"><strong>Learn &amp; Outcome.</strong> The controlled zone supported first-platform runs; H2 separated lysis from the main reaction chamber.</p>
+</section>
+<section id="engineering-edge-h1-h2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-h1-h2-title"><h4 id="engineering-edge-h1-h2-title" data-source-block="252">Edge H1 → H2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-h1">H1</a><span aria-hidden="true">→</span><a href="#engineering-node-h2">H2</a></div>
+<p id="engineering-source-253" class="engineering-copy" data-source-block="253"><strong>Trigger.</strong> The first platform controlled one fixed reaction area.</p>
+<p id="engineering-source-254" class="engineering-copy" data-source-block="254"><strong>Handoff.</strong> H2 separated the lysis block from the main chamber for the second layout.</p>
+</section>
+<section id="engineering-node-h2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-h2-title"><h4 id="engineering-node-h2-title" data-source-block="255">Node H2: Second Generation Thermal Zones</h4>
+<p id="engineering-source-256" class="engineering-copy" data-source-block="256"><strong>Background.</strong> G2 introduced a front lysis area and a larger main chamber in one enclosure.</p>
+<p id="engineering-source-257" class="engineering-copy" data-source-block="257"><strong>Design.</strong> We separated the front two-position lysis block from the fifteen-position main reaction chamber, with distinct support and insulation structures and independent loading access. The aim was to accommodate preparation and amplification in one enclosure without assuming that adjacent heating zones were already thermally independent.</p>
+<p id="engineering-source-258" class="engineering-copy" data-source-block="258"><strong>Build.</strong> The front lid leads to the two-position lysis block, while an upper lid leads to the main reaction chamber. Support and insulation separate the heated metal block from the larger chamber within the same enclosure.</p>
+<p id="engineering-source-259" class="engineering-copy" data-source-block="259"><strong>Test.</strong> The hardware record documents two structurally separate zones. It does not measure thermal coupling during concurrent heating or temperature variation among the fifteen reaction positions.</p>
+<p id="engineering-source-260" class="engineering-copy" data-source-block="260"><strong>Learn &amp; Outcome.</strong> Structural separation addresses access and layout. We still need temperature records for each zone operating alone and both operating together, as well as comparisons among reaction positions and the preparation throughput of the two-position lysis area.</p>
+</section>
+</section>
+<section class="engineering-object" aria-labelledby="engineering-object-i"><h3 id="engineering-object-i" data-source-block="261">Object I: Instrument App and Data Display</h3>
+<p id="engineering-source-262" class="engineering-iteration" data-source-block="262">Iteration path: I1 → I2 → I4; I3 planned</p>
+<p id="engineering-source-263" class="engineering-copy" data-source-block="263">The app connects, displays runs, and records tube-linked results; interruption recovery is scheduled for testing.</p>
+<section id="engineering-node-i1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-i1-title"><h4 id="engineering-node-i1-title" data-source-block="264">Node I1: Connection and Run Setup</h4>
+<p id="engineering-source-265" class="engineering-copy" data-source-block="265"><strong>Background.</strong> Before starting a run, users need to connect to the instrument and set the run conditions. We provide connection, temperature, and time settings in the app to organize the workflow from connection to startup.</p>
+<p id="engineering-source-266" class="engineering-copy" data-source-block="266"><strong>Design.</strong> The workflow proceeds from connection to parameter setup and then to starting the run. After confirming a successful connection, users set the temperature and duration according to the assay protocol. Interface defaults are used only for initialization.</p>
+<p id="engineering-source-267" class="engineering-copy" data-source-block="267"><strong>Build.</strong> After joining the local Wi-Fi network, users enter the Server IP and Port in the app and select Connect to Server. Settings provides access to temperature and duration settings, while Temperature Setting is used to adjust the target temperature.</p>
+<p id="engineering-source-268" class="engineering-copy" data-source-block="268"><strong>Test.</strong> Existing app records show mobile operation after connection to the instrument. In the next iteration, we will check connection messages, parameter settings, and startup feedback, and confirm the operating sequence for the start button.</p>
+<p id="engineering-source-269" class="engineering-copy" data-source-block="269"><strong>Learn &amp; Outcome.</strong> After connecting, users still need to check the run feedback to confirm that the assay has started. The link between submitting parameters and updating the run status requires further integration testing.</p>
+</section>
+<section id="engineering-edge-i1-i2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-i1-i2-title"><h4 id="engineering-edge-i1-i2-title" data-source-block="270">Edge I1 → I2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-i1">I1</a><span aria-hidden="true">→</span><a href="#engineering-node-i2">I2</a></div>
+<p id="engineering-source-271" class="engineering-copy" data-source-block="271"><strong>Trigger.</strong> After connecting and setting parameters, users need to confirm that the run has started.</p>
+<p id="engineering-source-272" class="engineering-copy" data-source-block="272"><strong>Handoff.</strong> The workflow leads to the run and data sections, which display the current temperature, countdown, fluorescence data, and returned images.</p>
+</section>
+<section id="engineering-node-i2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-i2-title"><h4 id="engineering-node-i2-title" data-source-block="273">Node I2: Run Status, Curves, and Images</h4>
+<p id="engineering-source-274" class="engineering-copy" data-source-block="274"><strong>Background.</strong> Once a run starts, users need to follow its progress and view the returned fluorescence data and images. The app needs clear places to access this information.</p>
+<p id="engineering-source-275" class="engineering-copy" data-source-block="275"><strong>Design.</strong> We organize the interface by content: the run section shows temperature and the countdown, the data section shows changes in fluorescence, and the image section shows returned fluorescence images.</p>
+<p id="engineering-source-276" class="engineering-copy" data-source-block="276"><strong>Build.</strong> Current Temp displays the current temperature, Heating countdown displays the countdown, and the Data/curve section shows the fluorescence data received. The app receives and displays fluorescence images for users to view.</p>
+<p id="engineering-source-277" class="engineering-copy" data-source-block="277"><strong>Test.</strong> Existing app records show run information and images displayed on the phone. In the next iteration, we will check the update sequence across these sections and whether their displayed content matches the data returned for the current run.</p>
+<p id="engineering-source-278" class="engineering-copy" data-source-block="278"><strong>Learn &amp; Outcome.</strong> When the interface stops updating, users need to distinguish between data that have not yet arrived and a lost connection. The next iteration will focus on missing data, images that have not arrived, and app behavior after reconnection.</p>
+</section>
+<section id="engineering-edge-i2-i3" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-i2-i3-title"><h4 id="engineering-edge-i2-i3-title" data-source-block="279">Edge I2 → I3</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-i2">I2</a><span aria-hidden="true">→</span><a href="#engineering-node-i3">I3</a></div>
+<p id="engineering-source-280" class="engineering-copy" data-source-block="280"><strong>Trigger.</strong> After establishing information display during normal operation, the interface needs to be checked when the connection is lost or data have not arrived.</p>
+<p id="engineering-source-281" class="engineering-copy" data-source-block="281"><strong>Handoff.</strong> Disconnection and reconnection tests will check updates in each section and guide changes to messages and recovery steps.</p>
+</section>
+<section id="engineering-edge-i2-i4" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-i2-i4-title"><h4 id="engineering-edge-i2-i4-title" data-source-block="282">Edge I2 → I4</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-i2">I2</a><span aria-hidden="true">→</span><a href="#engineering-node-i4">I4</a></div>
+<p id="engineering-source-283" class="engineering-copy" data-source-block="283"><strong>Trigger.</strong> The normal-run app returned fluorescence data and images for the selected run.</p>
+<p id="engineering-source-284" class="engineering-copy" data-source-block="284"><strong>Handoff.</strong> I4 links these returned observations to Tube numbers, channels used, assay controls, and sample records.</p>
+</section>
+<section id="engineering-node-i3" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-i3-title"><h4 id="engineering-node-i3-title" data-source-block="285">Node I3: Interruption and Reconnection Checks (Planned)</h4>
+<p id="engineering-source-286" class="engineering-copy" data-source-block="286"><strong>Background.</strong> This node describes planned validation, not completed work. A run may involve a lost connection, temperature or countdown updates that stop, or images and results that have not arrived. The next iteration will examine app messages and recovery behavior in these situations.</p>
+<p id="engineering-source-287" class="engineering-copy" data-source-block="287"><strong>Design.</strong> We plan to check connection status, run status, and data updates separately, comparing the displayed content before and after reconnection. For blank results and data that have not updated, we will check whether the interface distinguishes them from negative results.</p>
+<p id="engineering-source-288" class="engineering-copy" data-source-block="288"><strong>Build.</strong> The app already provides a Reconnect option. The current user workflow calls for reconnecting after network access is restored, then checking run status and data updates. These steps will form the basis of the planned interruption tests.</p>
+<p id="engineering-source-289" class="engineering-copy" data-source-block="289"><strong>Test.</strong> We plan to disconnect and restore the network during a run, recording updates to temperature, the countdown, curves, images, and results.</p>
+<p id="engineering-source-290" class="engineering-copy" data-source-block="290"><strong>Learn &amp; Outcome.</strong> The planned tests will determine which updates resume after reconnection; I4 already displays results under the tested normal-run conditions.</p>
+</section>
+<section id="engineering-node-i4" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-i4-title"><h4 id="engineering-node-i4-title" data-source-block="291">Node I4: Tube Linked Result Recording</h4>
+<p id="engineering-source-292" class="engineering-copy" data-source-block="292"><strong>Background.</strong> Users need to match the results displayed in the app to their samples and record the run information. The display on different phones must support the same checking procedure.</p>
+<p id="engineering-source-293" class="engineering-copy" data-source-block="293"><strong>Design.</strong> We link result viewing to sample checking. Users match the Tube numbers to the loading record, read the results for the channels used, and record the sample identifiers, assay parameters, and results.</p>
+<p id="engineering-source-294" class="engineering-copy" data-source-block="294"><strong>Build.</strong> The app provides image and result viewing and supports saving records. The user workflow calls for interpreting results alongside run status, fluorescence data, and assay controls. The functions and operating sequence of the image-viewing and interpretation buttons still require confirmation through integration testing.</p>
+<p id="engineering-source-295" class="engineering-copy" data-source-block="295"><strong>Test.</strong> App operation and result display have been recorded on the tested phones running HarmonyOS, HyperOS, ColorOS, and OriginOS. The preliminary test examples showed consistent classifications. These tests cover the specific phones and app versions evaluated.</p>
+<p id="engineering-source-296" class="engineering-copy" data-source-block="296"><strong>Learn &amp; Outcome.</strong> Blank results, unused channels, and data that have not updated cannot be treated as negative results. Results must be read with reference to the channels used and the assay controls.</p>
+</section>
+</section>
+</section>
+<section id="engineering-human-practices" class="engineering-panel" role="tabpanel" aria-labelledby="engineering-tab-human-practices" tabindex="0" hidden>
+<h2 data-source-block="297">Human Practices Engineering</h2>
+<section class="engineering-object" aria-labelledby="engineering-object-j"><h3 id="engineering-object-j" data-source-block="298">Object J: Audience Adapted Education</h3>
+<p id="engineering-source-299" class="engineering-iteration" data-source-block="299">Iteration path: J1 (v1) → J2 → J1 (v2)</p>
+<p id="engineering-source-300" class="engineering-copy" data-source-block="300">Questions from different audiences informed revisions to education materials. This audience feedback also identifies a proposed usability question for I4: whether non-specialists can match displayed Tube numbers, controls, and results to a sample. The app test remains proposed.</p>
+<section id="engineering-node-j1" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-j1-title"><h4 id="engineering-node-j1-title" data-source-block="301">Node J1: Audience Adapted Education Design</h4>
+<p id="engineering-source-302" class="engineering-copy" data-source-block="302"><strong>Background.</strong> Fragmented health information makes a single presentation inadequate for caregivers, young learners, and people who face communication or participation barriers. We treated education as an iterative part of a respiratory-testing project so that each audience could receive information it could understand and use.</p>
+<p id="engineering-source-303" class="engineering-copy" data-source-block="303"><strong>Design.</strong> We organized activities by audience. Health Guardians are caregivers and health decision makers close to vulnerable people; Biotech Explorers engage more deeply through experiments, discussion, and creative work; Diversity Partners may face sensory, communication, or participation barriers. This classification determined the audience, medium, and interaction pattern of each activity.</p>
+<p id="engineering-source-304" class="engineering-copy" data-source-block="304"><strong>Build.</strong> We used leaflets, slides, scripts, and templates in hospital waiting areas and maternity settings, kindergartens, schools, university groups, public spaces, and inclusive activities. The materials formed an initial reusable education toolkit.</p>
+<p id="engineering-source-305" class="engineering-copy" data-source-block="305"><strong>Test.</strong> Activities gathered audience-specific questions, surveys, votes, anonymous comments, and on-site observations. Feedback was grouped by audience and content need rather than evaluated solely by attendance.</p>
+<p id="engineering-source-306" class="engineering-copy" data-source-block="306"><strong>Learn &amp; Outcome.</strong> The audience framework generated specific activities, including the Health Guardians leaflet in J2. Its materials and feedback can be revised as new audiences participate; it is an ongoing education cycle rather than a completed assay or device validation.</p>
+</section>
+<section id="engineering-edge-j1-j2" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-j1-j2-title"><h4 id="engineering-edge-j1-j2-title" data-source-block="307">Edge J1 → J2</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-j1">J1</a><span aria-hidden="true">→</span><a href="#engineering-node-j2">J2</a></div>
+<p id="engineering-source-308" class="engineering-copy" data-source-block="308"><strong>Trigger.</strong> J1 identified parents in hospital settings as Health Guardians who needed concise and accessible information about respiratory health while caring for infants.</p>
+<p id="engineering-source-309" class="engineering-copy" data-source-block="309"><strong>Handoff.</strong> J2 used a short pneumococcal leaflet and one-to-one communication, then gathered the parents’ questions to revise the leaflet and FAQ.</p>
+</section>
+<section id="engineering-edge-j1-i4" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-j1-i4-title"><h4 id="engineering-edge-j1-i4-title" data-source-block="310">Edge J1 → I4</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-j1">J1</a><span aria-hidden="true">→</span><a href="#engineering-node-i4">I4</a></div>
+<p id="engineering-source-311" class="engineering-copy" data-source-block="311"><strong>Trigger.</strong> J1 identified a need for plain-language explanations, while I4 displays technical tube identifiers and controls; their comprehensibility has not been tested with these audiences.</p>
+<p id="engineering-source-312" class="engineering-copy" data-source-block="312"><strong>Handoff.</strong> A proposed usability study could evaluate whether non-specialists can correctly interpret tube-linked results and controls in I4.</p>
+</section>
+<section id="engineering-node-j2" class="engineering-card engineering-card--node" aria-labelledby="engineering-node-j2-title"><h4 id="engineering-node-j2-title" data-source-block="313">Node J2: Activity Level Feedback and Revision</h4>
+<p id="engineering-source-314" class="engineering-copy" data-source-block="314"><strong>Background.</strong> J1’s Health Guardians group included parents in hospital waiting areas who needed brief, understandable information while caring for infants.</p>
+<p id="engineering-source-315" class="engineering-copy" data-source-block="315"><strong>Design.</strong> We prepared a low-interruption illustrated leaflet and one-to-one explanation about pneumococcal risk, infant protection, and vaccination information.</p>
+<p id="engineering-source-316" class="engineering-copy" data-source-block="316"><strong>Build.</strong> The leaflet was displayed in ward and outpatient areas. Team members spoke with parents who were available to talk and recorded questions they volunteered.</p>
+<p id="engineering-source-317" class="engineering-copy" data-source-block="317"><strong>Test.</strong> Parents’ questions were grouped around disease risk, vaccination timing, and safety concerns; those questions, rather than attendance alone, informed the activity review.</p>
+<p id="engineering-source-318" class="engineering-copy" data-source-block="318"><strong>Learn &amp; Outcome.</strong> We used these themes to revise the leaflet and FAQ and considered an audio FAQ to broaden accessibility. The activity illustrates the smaller Design–Build–Test–Learn cycle within J1; its educational feedback does not constitute evidence that the assay or app was already redesigned.</p>
+</section>
+<section id="engineering-edge-j2-j1" class="engineering-card engineering-card--edge" aria-labelledby="engineering-edge-j2-j1-title"><h4 id="engineering-edge-j2-j1-title" data-source-block="319">Edge J2 → J1</h4>
+<div class="engineering-edge-links" aria-label="Linked engineering nodes"><a href="#engineering-node-j2">J2</a><span aria-hidden="true">→</span><a href="#engineering-node-j1">J1</a></div>
+<p id="engineering-source-320" class="engineering-copy" data-source-block="320"><strong>Trigger.</strong> J2 grouped recurring questions about disease risk, vaccination timing, and safety, making the next edits to its educational materials specific.</p>
+<p id="engineering-source-321" class="engineering-copy" data-source-block="321"><strong>Handoff.</strong> J1 incorporated the revised leaflet and FAQ into its reusable toolkit so that the next audience-specific activity could build on the prior feedback.</p>
+<p id="engineering-source-322" class="engineering-copy" data-source-block="322">feedback.</p>
+</section>
+</section>
+</section></article></div>
     </main>
 
     <footer class="site-footer">
@@ -116,6 +619,101 @@
     </footer>
 
     <script type="module" src="../样式/main.js"></script>
+
+    <script type="module" data-engineering-controller>
+      const tabs = Array.from(document.querySelectorAll('.engineering-tab'));
+      const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
+      const tocTitle = document.getElementById('engineering-toc-title');
+      const tocs = tabs.map(tab => document.getElementById(tab.id.replace('tab-', 'toc-')));
+      let currentPanel = panels[0];
+      let observedHeadings = null;
+
+      function markLocation(id) {
+        document.querySelectorAll('.engineering-toc a').forEach(link => {
+          if (link.hash === '#' + id) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }
+
+      function observeHeadings(panel) {
+        observedHeadings?.disconnect();
+        if (!('IntersectionObserver' in window)) return;
+        observedHeadings = new IntersectionObserver(entries => {
+          const entry = entries.find(item => item.isIntersecting);
+          if (entry) markLocation(entry.target.id);
+        }, { rootMargin: '-112px 0px -65% 0px' });
+        panel.querySelectorAll('.engineering-object > h3, .engineering-card').forEach(heading => observedHeadings.observe(heading));
+      }
+
+      function selectPanel(panel, updateAddress = false) {
+        const index = panels.indexOf(panel);
+        if (index < 0) return;
+        panels.forEach((item, i) => {
+          const active = i === index;
+          item.hidden = !active;
+          tocs[i].hidden = !active;
+          tabs[i].setAttribute('aria-selected', String(active));
+          tabs[i].tabIndex = active ? 0 : -1;
+        });
+        tocTitle.textContent = tabs[index].textContent.trim();
+        if (currentPanel !== panel || !observedHeadings) observeHeadings(panel);
+        currentPanel = panel;
+        markLocation(panel.querySelector('.engineering-object > h3').id);
+        if (updateAddress) history.replaceState(null, '', '#' + panel.id);
+      }
+
+      function followHash(scroll = false) {
+        let id;
+        try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+        const target = document.getElementById(id);
+        const panel = target?.closest('.engineering-panel');
+        if (!panel) return;
+        selectPanel(panel);
+        if (scroll && target !== panel) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+        markLocation(target.id);
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectPanel(panels[index], true));
+        tab.addEventListener('keydown', event => {
+          let next;
+          if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+          else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+          else if (event.key === 'Home') next = 0;
+          else if (event.key === 'End') next = tabs.length - 1;
+          else return;
+          event.preventDefault();
+          selectPanel(panels[next], true);
+          tabs[next].focus({ preventScroll: true });
+        });
+      });
+
+      document.querySelector('.engineering-layout').addEventListener('click', event => {
+        const link = event.target.closest('a[href^="#engineering-"]');
+        if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        const target = document.getElementById(link.hash.slice(1));
+        const panel = target?.closest('.engineering-panel');
+        if (!panel) return;
+        event.preventDefault();
+        selectPanel(panel);
+        history.pushState(null, '', link.hash);
+        target.scrollIntoView({ block: 'start' });
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+        markLocation(target.id);
+      });
+
+      document.querySelectorAll('[data-engineering-original]').forEach(link => {
+        const img = link.querySelector('img');
+        const resolveOriginal = () => { link.href = img.currentSrc || img.src; };
+        img.addEventListener('load', resolveOriginal);
+        resolveOriginal();
+      });
+      window.addEventListener('hashchange', () => followHash(true));
+      window.addEventListener('popstate', () => followHash(true));
+      selectPanel(currentPanel);
+      followHash(true);
+    </script>
   <script data-loading-fallback>
   window.setTimeout(function () {
     var loader = document.getElementById('igem-loader');
