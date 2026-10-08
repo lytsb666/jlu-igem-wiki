@@ -33,6 +33,14 @@
 }
 .model-revision-page .drylab-code-fold code { white-space: pre-wrap; color: inherit; }
 .model-revision-page .page-toc nav { overflow-x: hidden; }
+.model-revision-page .page-toc .model-toc-top {
+  display: block;
+  margin-top: 16px;
+  padding: 12px 5px 0;
+  border-top: 1px solid var(--lab-line);
+  font-weight: 700;
+  text-decoration: underline;
+}
 .model-revision-page .drylab-code-fold summary:focus-visible,
 .model-revision-page .model-equation:focus-visible { outline: 3px solid #9a6742; outline-offset: 4px; }
 .model-revision-page .drylab-subsection,
@@ -44,12 +52,14 @@
 .model-revision-page .model-citation { font-size: .85em; text-decoration: none; }
 .model-revision-page .page-toc a[aria-current="location"] { color: #6f4e37; background: #ede2d1; border-color: #9a6742; }
 @media (max-width: 900px) {
-  .model-revision-page .page-toc nav { overflow-x: auto; }
+  .model-revision-page .page-toc { overflow-x: hidden; }
+  .model-revision-page .page-toc nav { width: 100%; overflow-x: auto; }
+  .model-revision-page .page-toc nav > div { flex: 0 0 auto; }
   .model-revision-page .drylab-subsection,
   .model-revision-page .drylab-step-heading,
   .model-revision-page .lab-section,
   .model-revision-page .model-references li,
-  .model-revision-page .model-anchor-alias { scroll-margin-top: 80px; }
+  .model-revision-page .model-anchor-alias { scroll-margin-top: 140px; }
   .model-revision-page .drylab-code-fold pre { padding: 18px 14px; }
 }
 @media (max-width: 680px) {
