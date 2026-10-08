@@ -6,7 +6,20 @@
 任务单：../_task-briefs/2026-10-03-software-protocol-46368360/08-software-task.md
 初次完成日期：2026-10-03；手册增补日期：2026-10-06。最新提交编号由完成消息提供，可用 git log -1 查询。
 
-## 2026-10-08 原始手册与悬浮插图（当前交接状态）
+## 2026-10-08 Model 新稿同步（最新补充）
+
+基线：`22c2d35c593645be085edac78cc0b11a8d6f05fd`。用户要求 Model 页面内容与新稿一致。本次仅同步 Model 正文及其来源、检查和交接记录；最终提交号见完成消息或本分支 `git log -1`。
+
+- 新来源：`D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/msg/file/2026-10/model(1).docx`，SHA256 `028d278917bd7c6c599ed03a4e382a25725a0be523b3cefc4c56fd7be81ac582`。
+- 新旧文档仅两处正文变化：Introduction 的 RSV 实验最佳组合改为模型排名第二；RSV 案例结尾同样改为排名第二，并删除“该组 Hits@1 为 1”的结论。批注要求、六个表格、73 个公式对象和七张图片与旧稿一致，页面保留此前已落实的排版。
+- 修改文件：`Instrument/model.html`、`assets/model/review/model-source-manifest.json`、`assets/model/review/revision-checks.json`、本交接记录。其余页面及公共文件未变，未合并其他 Agent、未推送。
+- 验证：以新稿运行全文覆盖、公式、表格、图片、批注呈现、参考文献、片段链接和公共组件检查，通过；新来源 SHA256 和七张图字节验证通过。页面相对本次基线仅有上述两处正文差异。Vite 正式构建通过（637 ms）。
+- 浏览器：1440 桌面、390 手机均显示两处新稿文字，旧 RSV Hits@1 结论不存在，无页面横向溢出、无已加载坏图，控制台 warning/error 为零。手机结尾段落已截图目视核对；临时视口重置、临时标签关闭。
+- 页面入口和原片段链接保留：`http://127.0.0.1:5198/Instrument/model.html`。软件/设备架构未因本次文稿更改而变化；Judging 证据映射继续交 00，Model 原稿其余内容口径差异仍记录在来源清单中，未自行编造修正。
+- 待办界面要求：Software 封面横向铺满；Software/Model 卷轴删除 On this page；Software 悬浮图删除 Pause 按钮。此次授权针对 Model 新稿正文，这三项仍待后续实施。Hardware 手册及视频正式入口继续待 00 提供。
+- 本次查找 00 对话的应用接口仍返回 `Invalid app tool request`，自动发送未完成；请 00 通过本记录和完成消息接收提交。
+
+## 2026-10-08 原始手册与悬浮插图
 
 基线：`a2536237722f644a13c9cf7400507d9c82aed936`。用户提供两份完成版手册及替换插图，明确要求以第三张图替换 Software 开头的流程动画，只做悬浮效果。本次仅修改 Software 专用页面、样式、脚本、素材和手册资源；Model、Hardware、Judging 和所有公共文件未改。
 
