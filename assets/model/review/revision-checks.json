@@ -1,5 +1,5 @@
 {
-  "model_source_text_fragments": 1877,
+  "model_source_text_fragments": 1882,
   "missing_source_fragments": [],
   "model_math": 71,
   "math_matrices_as_pseudocode": 2,
@@ -19,7 +19,7 @@
   "pages": {
     "Instrument/software.html": {
       "unique_ids": 16,
-      "local_targets_checked": 19,
+      "local_targets_checked": 20,
       "missing_anchors": [],
       "old_fragment_ids_preserved": true,
       "navbar_loading_footer_unchanged": true
