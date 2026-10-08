@@ -50,6 +50,20 @@
 .model-revision-page .model-references li { margin-bottom: 20px; }
 .model-revision-page .model-anchor-alias { display: block; height: 0; scroll-margin-top: 12px; }
 .model-revision-page .model-citation { font-size: .85em; text-decoration: none; }
+/* The research scroll uses an absolutely positioned directory. Reserve its
+   clear lower center for the separate return link delivered by Instrument. */
+@media (min-width: 901px) {
+  :root body.model-revision-page main .page-toc > nav {
+    bottom: calc(20% + 50px);
+  }
+  .model-revision-page .page-toc > .model-toc-top {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: 20%;
+    margin-top: 0;
+  }
+}
 .model-revision-page .page-toc a[aria-current="location"] { color: #6f4e37; background: #ede2d1; border-color: #9a6742; }
 @media (max-width: 900px) {
   .model-revision-page .page-toc { overflow-x: hidden; }
