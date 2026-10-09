@@ -1,0 +1,74 @@
+/* All existing subpage illustrations span the page, like Notebook's banner.
+   Homepage's separate animated scenes and pages without artwork are untouched. */
+@media screen {
+  :root { --wiki-cover-height: clamp(280px, 40vw, 600px); }
+
+  html:root:root body :is(.image-page-hero, .edu-hero, .ihp-hero, .inc-hero) {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: var(--wiki-cover-height);
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    margin: 60px 0 44px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  html:root:root body :is(.image-page-hero, .edu-hero, .ihp-hero, .inc-hero) > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  html:root body :is(.image-page-hero__label, .ihp-hero__label, .inc-hero__label) {
+    left: clamp(24px, 6vw, 88px);
+    right: 24px;
+    bottom: 52px;
+    max-width: min(760px, calc(100% - 48px));
+  }
+
+  html:root body .edu-hero__copy {
+    position: absolute;
+    left: clamp(24px, 6vw, 88px);
+    bottom: 52px;
+    width: min(680px, calc(100% - 48px));
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 680px) {
+    html:root body :is(.image-page-hero__label, .ihp-hero__label, .inc-hero__label, .edu-hero__copy) {
+      left: 20px;
+      right: 20px;
+      bottom: 28px;
+      width: auto;
+      max-width: none;
+    }
+    html:root body .edu-hero__lead { margin-top: 12px; }
+    html:root body .edu-hero__actions { margin-top: 14px; gap: 8px; }
+    html:root body .edu-hero__actions a { min-height: 40px; padding: 0 12px; }
+    /* Education includes actions and statistics: reserve their actual height. */
+    html:root:root body .edu-hero { height: auto; min-height: var(--wiki-cover-height); }
+    html:root body .edu-hero__copy {
+      position: relative;
+      inset: auto;
+      width: calc(100% - 40px);
+      margin: 0 20px;
+      padding: 28px 0;
+    }
+    html:root body :is(.edu-hero__scroll, .ihp-hero__scroll, .inc-hero__scroll) { display: none; }
+  }
+}

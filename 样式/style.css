@@ -2,6 +2,7 @@
 @import './navigation.css';
 @import './footer.css';
 @import './page-theme.css';
+@import './page-covers.css';
 
 /* 全局样式 */
 :root {

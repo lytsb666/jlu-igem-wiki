@@ -22,6 +22,11 @@ if (story) {
   const worldActions = new Set()
   const hoveredActions = new Set()
   const worldButtons = [...worldScene.querySelectorAll('[data-world-action]')]
+  const worldNotes = [
+    { element: worldScene.querySelector('[data-world-note="village"]'), enter: [0, .10], leave: [.19, .33] },
+    { element: worldScene.querySelector('[data-world-note="pcr"]'), enter: [.33, .48], leave: [.59, .73] },
+    { element: worldScene.querySelector('[data-world-note="care"]'), enter: [.73, .83], leave: [1.01, 1.02] },
+  ]
   const workflowChapter = story.querySelector('.home-chapter--workflow')
   const workflowTimer = workflowChapter.querySelector('.workflow-timer')
   const workflowPathogens = [...workflowChapter.querySelectorAll('.workflow-pathogen')]
@@ -73,6 +78,11 @@ if (story) {
       return segment
     })
     stage.style.setProperty('--story-world-width', world.offsetWidth + 'px')
+    worldNotes.forEach(({ element, enter, leave }) => {
+      element.dataset.storyStart = ((coverUnits + worldUnits * enter[0]) / totalUnits).toFixed(6)
+      element.dataset.storyFull = ((coverUnits + worldUnits * enter[1]) / totalUnits).toFixed(6)
+      element.dataset.storyEnd = ((coverUnits + worldUnits * Math.min(1, leave[1])) / totalUnits).toFixed(6)
+    })
     const worldLeft = (viewportWidth - world.offsetWidth) / 2
     campfirePeople.style.setProperty('--campfire-x', worldLeft + world.offsetWidth * .780317 + 'px')
     campfirePeople.style.setProperty('--campfire-y', world.offsetWidth * (1080 / 1935) * .958 + 'px')
@@ -102,6 +112,22 @@ if (story) {
     })
     const visible = coverProgress > .88 && ribbonY < worldHeight
     worldScene.inert = !visible
+    // Each paragraph follows the existing camera pan. No observer or
+    // one-shot timer is involved, so scrolling back restores the same reveal.
+    const noteEntrance = smoothstep(range(coverProgress, .94, 1))
+    const worldExit = 1 - smoothstep(range(ribbonY, worldHeight - viewportHeight, worldHeight - viewportHeight * .80))
+    worldScene.style.setProperty('--world-note-pan', ribbonY + 'px')
+    worldNotes.forEach(({ element, enter, leave }) => {
+      const arrive = smoothstep(range(progress, ...enter))
+      const depart = 1 - smoothstep(range(progress, ...leave))
+      const revealed = noteEntrance * arrive * depart * worldExit
+      const resolved = reducedMotion.matches ? Number(revealed > .05) : revealed
+      element.style.setProperty('--world-note-opacity', resolved.toFixed(4))
+      element.style.setProperty('--world-note-rise', (reducedMotion.matches ? 0 : (1 - arrive) * 22) + 'px')
+      element.style.setProperty('--world-note-scale', String(reducedMotion.matches ? 1 : .985 + arrive * .015))
+      element.dataset.noteProgress = resolved.toFixed(4)
+      element.setAttribute('aria-hidden', String(!visible || resolved <= .01))
+    })
     frame.classList.toggle('is-visible', visible)
     frame.classList.toggle('is-clock-live', visible && !reducedMotion.matches)
     frame.style.opacity = String(visible ? 1 - range(ribbonY, worldHeight - viewportHeight, worldHeight) : 0)

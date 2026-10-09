@@ -48,7 +48,7 @@ const navigationSchema = [
   {
     label: 'Judging',
     items: [
-      ['iHP', '../Judging/iHP.html'],
+      ['iHP', '../Eagagement/iHP.html'],
       ['Hardware', '../Judging/hardware.html'],
       ['Measurement', '../Wet-lab/measurement.html'],
     ],

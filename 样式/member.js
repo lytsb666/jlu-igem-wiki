@@ -150,7 +150,12 @@ function render(group, host, makeCard = memberCard) {
 render(teamFaculty.filter((p) => p.groups.includes('PI')), document.querySelector('#pi-grid'), facultyCard)
 render(teamFaculty.filter((p) => p.groups.includes('Secondary PI')), document.querySelector('#secondary-pi-grid'), facultyCard)
 render(teamMembers.filter((p) => p.groups.includes('Team Leaders')), document.querySelector('#leader-grid'))
-render(teamMembers.filter((p) => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors')), memberGrid)
+const directoryMembers = teamMembers.filter((p) => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors'))
+// Keep the existing order within each group; Visual Design follows the other members.
+render([
+  ...directoryMembers.filter((p) => !p.groups.includes('Visual Design')),
+  ...directoryMembers.filter((p) => p.groups.includes('Visual Design')),
+], memberGrid)
 render(teamMembers.filter((p) => p.groups.includes('Advisors')), document.querySelector('#advisor-grid'))
 const advisorCount = teamMembers.filter((p) => p.groups.includes('Advisors')).length
 document.querySelector('.team-hero__note').textContent = `${teamMembers.length + teamFaculty.length} people · one shared journey`

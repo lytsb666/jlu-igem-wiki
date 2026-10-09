@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pathogen-specific and reusable biological parts for the JLU-SPH RPA-Cas12a detection platform." />
+  <meta name="description" content="LbCas12a biosynthesis and pathogen-specific biological parts for the JLU-SPH RPA-Cas12a detection platform." />
   <title>Parts | JLU-SPH iGEM 2026</title>
   <link rel="stylesheet" href="../样式/style.css" />
   <link rel="stylesheet" href="../样式/loading.css" />
@@ -73,60 +73,81 @@
 <header class="lab-hero"><div class="lab-hero__inner"><h1>Parts</h1></div></header>
 <main class="lab-main" id="main-content" tabindex="-1"><div class="lab-layout"><aside class="page-toc parts-toc" aria-label="On this page"><p class="toc-kicker">Parts</p><nav>
 <div class="parts-toc-group"><div class="parts-toc-row"><button type="button" class="parts-toc-toggle" aria-expanded="true" aria-controls="toc-parts-overview" aria-label="Toggle 1.Design Overview"><span aria-hidden="true">▾</span></button><a data-section-link href="#parts-overview">1.Design Overview</a></div><ul id="toc-parts-overview">
-<li><a data-section-link href="#pathogen-specific-recognition-layer">Pathogen-Specific Recognition Layer</a></li>
-<li><a data-section-link href="#universal-detection-layer">Universal Detection Layer</a></li>
+<li><a data-section-link href="#core-enzyme-biosynthesis-layer">1.1 Core Enzyme Biosynthesis Layer</a></li>
+<li><a data-section-link href="#pathogen-specific-recognition-layer">1.2 Pathogen-Specific Recognition Layer</a></li>
 </ul></div>
 <div class="parts-toc-group"><div class="parts-toc-row"><button type="button" class="parts-toc-toggle" aria-expanded="true" aria-controls="toc-collection" aria-label="Toggle 2. Collection at a Glance"><span aria-hidden="true">▾</span></button><a data-section-link href="#collection">2. Collection at a Glance</a></div><ul id="toc-collection">
-<li><a data-section-link href="#pathogen-specific-parts">2.1 Pathogen-Specific Parts</a></li>
-<li><a data-section-link href="#universal-parts">2.2 Universal Parts</a></li>
-<li><a data-section-link href="#synthetic-targets">2.3 Synthetic Target Templates</a></li>
-<li><a data-section-link href="#rpa-primers">2.4 RPA Primer Parts</a></li>
-<li><a data-section-link href="#crrna-parts">2.5 Cas12a crRNA Parts</a></li>
+<li><a data-section-link href="#core-enzyme-parts">2.1 Core Enzyme Biosynthesis Parts</a></li>
+<li><a data-section-link href="#pathogen-specific-parts">2.2 Pathogen-Specific Parts</a></li>
+<li><a data-section-link href="#lbcas12a-biosynthesis-parts">2.3 LbCas12a Biosynthesis Parts</a></li>
+<li><a data-section-link href="#synthetic-targets">2.4 Synthetic Target Templates</a></li>
+<li><a data-section-link href="#rpa-primers">2.5 RPA Primer Parts</a></li>
+<li><a data-section-link href="#crrna-parts">2.6 Cas12a crRNA Parts</a></li>
 </ul></div>
 <div class="parts-toc-group"><div class="parts-toc-row"><button type="button" class="parts-toc-toggle" aria-expanded="true" aria-controls="toc-functional-classification" aria-label="Toggle Functional Classification"><span aria-hidden="true">▾</span></button><a data-section-link href="#functional-classification">Functional Classification</a></div><ul id="toc-functional-classification">
-<li><a data-section-link href="#recognition-module">3.1 Recognition Module</a></li>
-<li><a data-section-link href="#structural-module">3.2 Structural Module</a></li>
+<li><a data-section-link href="#biosynthesis-module">3.1 Biosynthesis Module</a></li>
+<li><a data-section-link href="#recognition-module">3.2 Target and Recognition Module</a></li>
 <li><a data-section-link href="#amplification-module">3.3 Amplification Module</a></li>
-<li><a data-section-link href="#signal-output-module">3.4 Signal-Output Module</a></li>
 </ul></div>
 <div class="parts-toc-group"><div class="parts-toc-row"><button type="button" class="parts-toc-toggle" aria-expanded="true" aria-controls="toc-modular-toolkit" aria-label="Toggle From Parts to a Modular Detection Toolkit"><span aria-hidden="true">▾</span></button><a data-section-link href="#modular-toolkit">From Parts to a Modular Detection Toolkit</a></div><ul id="toc-modular-toolkit">
-<li><a data-section-link href="#step-1">Step 1 — Select the Pathogen</a></li>
-<li><a data-section-link href="#step-2">Step 2 — Amplify the Target</a></li>
-<li><a data-section-link href="#step-3">Step 3 — Recognize the Amplicon</a></li>
-<li><a data-section-link href="#step-4">Step 4 — Amplify and Process the Signal</a></li>
-<li><a data-section-link href="#step-5">Step 5 — Generate the Output</a></li>
+<li><a data-section-link href="#foundation-step">Foundation Step - Produce the Core Enzyme</a></li>
+<li><a data-section-link href="#step-1">Step 1 - Select the Pathogen</a></li>
+<li><a data-section-link href="#step-2">Step 2 - Amplify the Target</a></li>
+<li><a data-section-link href="#step-3">Step 3 - Recognize the Amplicon</a></li>
 </ul></div>
 </nav></aside><div class="article-flow" data-parts-document>
 <section class="lab-section" id="parts-overview" data-observe-section>
 <h2 data-source-block="1">1.Design Overview</h2>
 <p data-source-block="2">Rapid and specific identification of respiratory pathogens requires molecular components that are not only sensitive, but also modular and reusable.</p>
-<p data-source-block="3">To support our RPA–Cas12a detection platform, we developed a collection of basic parts for pathogen-specific nucleic acid detection, together with several reusable nucleic-acid components for amplification and signal generation.</p>
-<p data-source-block="4">Our collection follows a common molecular workflow:</p>
-<p data-source-block="5">Target Recognition → RPA Amplification → Cas12a Recognition → Signal Generation</p>
-<p data-source-block="6">Instead of treating each pathogen assay as an isolated system, we organized our Parts into two functional layers:</p>
-<h3 data-source-block="7" id="pathogen-specific-recognition-layer">Pathogen-Specific Recognition Layer</h3>
-<p data-source-block="8">This layer determines which pathogen is detected.</p>
-<p data-source-block="9">It includes:</p>
-<p data-source-block="10">Synthetic target templates</p>
-<p data-source-block="11">RPA primer pairs</p>
-<p data-source-block="12">Cas12a crRNAs</p>
-<h3 data-source-block="13" id="universal-detection-layer">Universal Detection Layer</h3>
-<p data-source-block="14">This layer supports how the signal is amplified and generated.</p>
-<p data-source-block="15">It includes:</p>
-<p data-source-block="16">Spacer Strand</p>
-<p data-source-block="17">Circular DNA template</p>
-<p data-source-block="18">Ligation Linker</p>
-<p data-source-block="19">Primer Strand-12</p>
-<p data-source-block="20">ssDNA reporter</p>
-<p data-source-block="21">Together, these Parts form a modular toolkit for expandable nucleic-acid detection.</p>
+<p data-source-block="3">To support our RPA–Cas12a detection platform, we developed a modular Part collection covering the biosynthesis of the core LbCas12a nuclease and pathogen-specific assay components for target amplification and recognition.</p>
+<p data-source-block="4">Once the core LbCas12a nuclease is available, the detection system follows a common molecular workflow: Target Recognition → RPA Amplification → Cas12a Recognition → Signal Generation</p>
+<p data-source-block="5">To organize our Parts according to their roles in the overall platform, we divided the collection into two functional layers:</p>
+<span class="parts-anchor-alias" id="universal-detection-layer" aria-hidden="true"></span>
+<h3 data-source-block="6" id="core-enzyme-biosynthesis-layer">1.1 Core Enzyme Biosynthesis Layer</h3>
+<p data-source-block="7">This layer provides the core LbCas12a nuclease required for the detection platform.</p>
+<p data-source-block="8">It includes:</p>
+<p data-source-block="9">E. coli B codon-optimized LbCas12a CDS</p>
+<p data-source-block="10">T7-driven His₆–TEV–LbCas12a Expression Cassette</p>
+<h3 data-source-block="11" id="pathogen-specific-recognition-layer">1.2 Pathogen-Specific Recognition Layer</h3>
+<p data-source-block="12">This layer determines which pathogen is detected.</p>
+<p data-source-block="13">It includes:</p>
+<p data-source-block="14">Synthetic target templates</p>
+<p data-source-block="15">RPA primer pairs</p>
+<p data-source-block="16">Cas12a crRNAs</p>
+<p data-source-block="17">Together, these Parts form a modular toolkit for expandable nucleic-acid detection.</p>
 </section>
 <section class="lab-section" id="collection" data-observe-section>
-<h2 data-source-block="23">2. Collection at a Glance</h2>
-<h3 data-source-block="24" id="pathogen-specific-parts">2.1 Pathogen-Specific Parts</h3>
-<div class="table-wrap" role="region" aria-labelledby="pathogen-specific-parts" tabindex="0"><table class="data-table" data-source-table="25">
+<h2 data-source-block="18">2. Collection at a Glance</h2>
+<span class="parts-anchor-alias" id="universal-parts" aria-hidden="true"></span>
+<h3 data-source-block="19" id="core-enzyme-parts">2.1 Core Enzyme Biosynthesis Parts</h3>
+<div class="table-wrap" role="region" aria-labelledby="core-enzyme-parts" tabindex="0"><table class="data-table" data-source-table="20">
 <thead>
 <tr>
-<th scope="col"><span data-source-cell="0:0">Pathogen</span></th>
+<th scope="col"><span data-source-cell="0:0">Part</span></th>
+<th scope="col"><span data-source-cell="0:1">Main Role</span></th>
+<th scope="col"><span data-source-cell="0:2">Suggested Type</span></th>
+<th scope="col"><span data-source-cell="0:3">BBa #</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><span data-source-cell="1:0">E. coli B codon-optimized LbCas12a CDS</span></th>
+<td><span data-source-cell="1:1">Core LbCas12a coding sequence</span></td>
+<td><span data-source-cell="1:2">CDS / Basic Part</span></td>
+<td><span data-source-cell="1:3"><a href="https://registry.igem.org/parts/bba-26806tbi" target="_blank" rel="noopener noreferrer">BBa_26806TBI</a></span></td>
+</tr>
+<tr>
+<th scope="row"><span data-source-cell="2:0">T7-driven His6-TEV- LbCas12a</span></th>
+<td><span data-source-cell="2:1">Recombinant LbCas12a production</span></td>
+<td><span data-source-cell="2:2">Engineered Region / Composite Part</span></td>
+<td><span data-source-cell="2:3"><a href="https://registry.igem.org/parts/bba-26ovd7tr" target="_blank" rel="noopener noreferrer">BBa_26OVD7TR</a></span></td>
+</tr>
+</tbody></table></div>
+<h3 data-source-block="21" id="pathogen-specific-parts">2.2 Pathogen-Specific Parts</h3>
+<div class="table-wrap" role="region" aria-labelledby="pathogen-specific-parts" tabindex="0"><table class="data-table" data-source-table="22">
+<thead>
+<tr>
+<th scope="col"><span data-source-cell="0:0">Part</span></th>
 <th scope="col"><span data-source-cell="0:1">Synthetic Target</span></th>
 <th scope="col"><span data-source-cell="0:2">Forward Primer</span></th>
 <th scope="col"><span data-source-cell="0:3">Reverse Primer</span></th>
@@ -136,87 +157,67 @@
 <tbody>
 <tr>
 <th scope="row"><span data-source-cell="1:0">Respiratory syncytial virus</span></th>
-<td><span data-source-cell="1:1">Registry ID</span></td>
-<td><span data-source-cell="1:2"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="1:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="1:4"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="1:1"><a href="https://registry.igem.org/parts/bba-26ritqgc" target="_blank" rel="noopener noreferrer">BBa_26RITQGC</a></span></td>
+<td><span data-source-cell="1:2"><a href="https://registry.igem.org/parts/bba-26m42nda" target="_blank" rel="noopener noreferrer">BBa_26M42NDA</a></span></td>
+<td><span data-source-cell="1:3"><a href="https://registry.igem.org/parts/bba-26ivyhx0" target="_blank" rel="noopener noreferrer">BBa_26IVYHX0</a></span></td>
+<td><span data-source-cell="1:4"><a href="https://registry.igem.org/parts/bba-26lpprqu" target="_blank" rel="noopener noreferrer">BBa_26LPPRQU</a></span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="2:0">Human metapneumovirus</span></th>
-<td><span data-source-cell="2:1"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="2:2"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="2:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="2:4"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<th scope="row"><span data-source-cell="2:0">Human metapneumovirus-B</span></th>
+<td><span data-source-cell="2:1"><a href="https://registry.igem.org/parts/bba-268zomyx" target="_blank" rel="noopener noreferrer">BBa_268ZOMYX</a></span></td>
+<td><span data-source-cell="2:2"><a href="https://registry.igem.org/parts/bba-26c5iqyj" target="_blank" rel="noopener noreferrer">BBa_26C5IQYJ</a></span></td>
+<td><span data-source-cell="2:3"><a href="https://registry.igem.org/parts/bba-26q062xr" target="_blank" rel="noopener noreferrer">BBa_26Q062XR</a></span></td>
+<td><span data-source-cell="2:4"><a href="https://registry.igem.org/parts/bba-269bnb8l" target="_blank" rel="noopener noreferrer">BBa_269BNB8L</a></span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="3:0">Haemophilus influenzae</span></th>
-<td><span data-source-cell="3:1"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="3:2"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="3:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="3:4"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="3:1"><a href="https://registry.igem.org/parts/bba-26g8n35h" target="_blank" rel="noopener noreferrer">BBa_26G8N35H</a></span></td>
+<td><span data-source-cell="3:2"><a href="https://registry.igem.org/parts/bba-26ob5prh" target="_blank" rel="noopener noreferrer">BBa_26OB5PRH</a></span></td>
+<td><span data-source-cell="3:3"><a href="https://registry.igem.org/parts/bba-26e3bkr1" target="_blank" rel="noopener noreferrer">BBa_26E3BKR1</a></span></td>
+<td><span data-source-cell="3:4"><a href="https://registry.igem.org/parts/bba-26ixte4n" target="_blank" rel="noopener noreferrer">BBa_26IXTE4N</a></span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="4:0">Streptococcus pneumoniae</span></th>
-<td><span data-source-cell="4:1"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="4:2"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="4:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="4:4"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="4:1"><a href="https://registry.igem.org/parts/bba-26q36dfe" target="_blank" rel="noopener noreferrer">BBa_26Q36DFE</a></span></td>
+<td><span data-source-cell="4:2"><a href="https://registry.igem.org/parts/bba-26haukyn" target="_blank" rel="noopener noreferrer">BBa_26HAUKYN</a></span></td>
+<td><span data-source-cell="4:3"><a href="https://registry.igem.org/parts/bba-26wqyc45" target="_blank" rel="noopener noreferrer">BBa_26WQYC45</a></span></td>
+<td><span data-source-cell="4:4"><a href="https://registry.igem.org/parts/bba-263aqfbt" target="_blank" rel="noopener noreferrer">BBa_263AQFBT</a></span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="5:0">Bordetella pertussis</span></th>
-<td><span data-source-cell="5:1"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="5:2"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="5:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="5:4"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="5:1"><a href="https://registry.igem.org/parts/bba-260sehai" target="_blank" rel="noopener noreferrer">BBa_260SEHAI</a></span></td>
+<td><span data-source-cell="5:2"><a href="https://registry.igem.org/parts/bba-26h3w838" target="_blank" rel="noopener noreferrer">BBa_26H3W838</a></span></td>
+<td><span data-source-cell="5:3"><a href="https://registry.igem.org/parts/bba-26k5kk6t" target="_blank" rel="noopener noreferrer">BBa_26K5KK6T</a></span></td>
+<td><span data-source-cell="5:4"><a href="https://registry.igem.org/parts/bba-269ue9n9" target="_blank" rel="noopener noreferrer">BBa_269UE9N9</a></span></td>
 </tr>
 </tbody></table></div>
-<h3 data-source-block="27" id="universal-parts">2.2 Universal Parts</h3>
-<div class="table-wrap" role="region" aria-labelledby="universal-parts" tabindex="0"><table class="data-table" data-source-table="28">
+<h3 data-source-block="23" id="lbcas12a-biosynthesis-parts">2.3 LbCas12a Biosynthesis Parts</h3>
+<p data-source-block="24">LbCas12a serves as the shared core nuclease of our RPA–Cas12a detection platform. To support recombinant production of this enzyme, we designed two biosynthesis-related Parts: a codon-optimized LbCas12a CDS and a complete T7-driven expression cassette.</p>
+<div class="table-wrap" role="region" aria-labelledby="lbcas12a-biosynthesis-parts" tabindex="0"><table class="data-table" data-source-table="26">
 <thead>
 <tr>
-<th scope="col"><span data-source-cell="0:0">Part</span></th>
-<th scope="col"><span data-source-cell="0:1">Main Role</span></th>
-<th scope="col"><span data-source-cell="0:2">Suggested Type</span></th>
-<th scope="col"><span data-source-cell="0:3">Part BBa #</span></th>
+<th scope="col"><span data-source-cell="0:0">Part Name</span></th>
+<th scope="col"><span data-source-cell="0:1">Part Type</span></th>
+<th scope="col"><span data-source-cell="0:2">Function</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope="row"><span data-source-cell="1:0">Spacer Strand</span></th>
-<td><span data-source-cell="1:1">Structural connection</span></td>
-<td><span data-source-cell="1:2">Oligo</span></td>
-<td><span data-source-cell="1:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<th scope="row"><span data-source-cell="1:0">E. coli B codon-optimized<br />LbCas12a CDS</span></th>
+<td><span data-source-cell="1:1">CDS / Basic Part</span></td>
+<td><span data-source-cell="1:2">Encodes the LbCas12a nuclease derived from Lachnospiraceae bacterium ND2006. The CDS was codon-optimized for recombinant expression in E. coli and serves as a reusable core nuclease coding module.</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="2:0">Circular DNA Template</span></th>
-<td><span data-source-cell="2:1">RCA scaffold</span></td>
-<td><span data-source-cell="2:2">Engineered Region</span></td>
-<td><span data-source-cell="2:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-</tr>
-<tr>
-<th scope="row"><span data-source-cell="3:0">Ligation Linker</span></th>
-<td><span data-source-cell="3:1">Circular-template preparation</span></td>
-<td><span data-source-cell="3:2">Oligo</span></td>
-<td><span data-source-cell="3:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-</tr>
-<tr>
-<th scope="row"><span data-source-cell="4:0">Primer Strand-12</span></th>
-<td><span data-source-cell="4:1">RCA initiation</span></td>
-<td><span data-source-cell="4:2">Primer</span></td>
-<td><span data-source-cell="4:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-</tr>
-<tr>
-<th scope="row"><span data-source-cell="5:0">ssDNA Reporter</span></th>
-<td><span data-source-cell="5:1">Fluorescent readout</span></td>
-<td><span data-source-cell="5:2">Oligo</span></td>
-<td><span data-source-cell="5:3"></span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<th scope="row"><span data-source-cell="2:0">T7-driven His6-TEV- LbCas12a Expression Cassette</span></th>
+<td><span data-source-cell="2:1">Engineered Region /<br />Composite Part</span></td>
+<td><span data-source-cell="2:2">Provides a complete T7-driven expression unit for recombinant production of LbCas12a in E. coli BL21(DE3), incorporating elements for inducible expression, His₆-mediated affinity purification, and optional TEV-mediated tag removal.</span></td>
 </tr>
 </tbody></table></div>
-<h3 data-source-block="30" id="synthetic-targets">2.3 Synthetic Target Templates</h3>
-<p data-source-block="31">Synthetic target templates provide defined DNA substrates for assay development.</p>
-<p data-source-block="32">They represent selected pathogen-associated genomic regions and can serve as positive-control templates for RPA amplification and downstream Cas12a-based detection.</p>
-<p data-source-block="33">Using synthetic DNA allows the molecular workflow to be developed without requiring intact pathogenic organisms.</p>
-<div class="table-wrap" role="region" aria-labelledby="synthetic-targets" tabindex="0"><table class="data-table" data-source-table="38">
+<h3 data-source-block="27" id="synthetic-targets">2.4 Synthetic Target Templates</h3>
+<p data-source-block="28">Synthetic target templates provide defined DNA substrates for assay development.</p>
+<p data-source-block="29">They represent selected pathogen-associated genomic regions and can serve as positive-control templates for RPA amplification and downstream Cas12a-based detection.</p>
+<p data-source-block="30">Using synthetic DNA allows the molecular workflow to be developed without requiring intact pathogenic organisms.</p>
+<div class="table-wrap" role="region" aria-labelledby="synthetic-targets" tabindex="0"><table class="data-table" data-source-table="32">
 <thead>
 <tr>
 <th scope="col"><span data-source-cell="0:0">Pathogen</span></th>
@@ -228,39 +229,39 @@
 <tbody>
 <tr>
 <th scope="row"><span data-source-cell="1:0">Respiratory syncytial virus (RSV)</span></th>
-<td><span data-source-cell="1:1">HRSV N‑gene Synthetic Target Template</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="1:1">RSV N Gene Synthetic Target Template</span></td>
 <td><span data-source-cell="1:2">PCR product / Basic Part</span></td>
 <td><span data-source-cell="1:3">A synthetic, non-infectious DNA target template containing a conserved region of the HRSV N gene, designed to serve as a positive control for RPA amplification and CRISPR-Cas12a-based nucleic acid detection of HRSV, including subgroup A and subgroup B.</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="2:0">Human metapneumovirus (HMPV)</span></th>
-<td><span data-source-cell="2:1">HMPV Synthetic Target Template</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<th scope="row"><span data-source-cell="2:0">Human metapneumovirus-B (hMPV-B)</span></th>
+<td><span data-source-cell="2:1">hMPV-B N Gene Synthetic Target Template</span></td>
 <td><span data-source-cell="2:2">PCR product / Basic Part</span></td>
-<td><span data-source-cell="2:3">A synthetic, non-infectious DNA target template containing a conserved region of Human metapneumovirus, designed to serve as a positive control for RPA amplification and CRISPR-Cas12a-based nucleic acid detection</span></td>
+<td><span data-source-cell="2:3">A synthetic, non-infectious DNA target template containing a conserved region of Human metapneumovirus-B, designed to serve as a positive control for RPA amplification and CRISPR-Cas12a-based nucleic acid detection</span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="3:0">Haemophilus influenzae (HI)</span></th>
-<td><span data-source-cell="3:1">HI Synthetic Target Template</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="3:1">HI ompP6 Gene Synthetic Target Template</span></td>
 <td><span data-source-cell="3:2">PCR product / Basic Part</span></td>
 <td><span data-source-cell="3:3">A synthetic, non-infectious DNA target template containing a conserved region of Haemophilus influenzae, designed to serve as a positive control for RPA amplification and CRISPR-Cas12a-based nucleic acid detection</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="4:0">Streptococcus pneumoniae</span></th>
-<td><span data-source-cell="4:1">Streptococcus pneumoniae (SPN) Target Amplicon</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<th scope="row"><span data-source-cell="4:0"><em>Streptococcus pneumoniae</em></span></th>
+<td><span data-source-cell="4:1">SPN lytA Gene Synthetic Target Template</span></td>
 <td><span data-source-cell="4:2">PCR product / Basic Part</span></td>
 <td><span data-source-cell="4:3">A 251 bp Streptococcus pneumoniae target amplicon containing the target sequence required for recognition by the SPN-specific Cas12a crRNA. It is intended to serve as the amplification target and positive-control template in an RPA-Cas12a nucleic acid detection system.</span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="5:0">Bordetella pertussis</span></th>
-<td><span data-source-cell="5:1">BP Synthetic target Template</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="5:1">BP IS1663 Gene Synthetic Target Template</span></td>
 <td><span data-source-cell="5:2">PCR product / Basic Part</span></td>
 <td><span data-source-cell="5:3">A synthetic, non-infectious DNA target template containing a selected target region from Bordetella pertussis. It is designed to serve as a positive-control template for RPA isothermal amplification and subsequent CRISPR-Cas12a-based nucleic acid detection.</span></td>
 </tr>
 </tbody></table></div>
-<h3 data-source-block="39" id="rpa-primers">2.4 RPA Primer Parts</h3>
-<p data-source-block="40">Recombinase Polymerase Amplification enables rapid amplification of DNA under isothermal conditions.</p>
-<p data-source-block="41">For each pathogen, a corresponding forward and reverse primer pair forms the amplification component of the pathogen-specific layer.</p>
-<div class="table-wrap" role="region" aria-labelledby="rpa-primers" tabindex="0"><table class="data-table" data-source-table="42">
+<h3 data-source-block="33" id="rpa-primers">2.5 RPA Primer Parts</h3>
+<p data-source-block="34">Recombinase Polymerase Amplification enables rapid amplification of DNA under isothermal conditions.</p>
+<p data-source-block="35">For each pathogen, a corresponding forward and reverse primer pair forms the amplification component of the pathogen-specific layer.</p>
+<div class="table-wrap" role="region" aria-labelledby="rpa-primers" tabindex="0"><table class="data-table" data-source-table="36">
 <thead>
 <tr>
 <th scope="col"><span data-source-cell="0:0">Pathogen</span></th>
@@ -272,61 +273,61 @@
 <tbody>
 <tr>
 <th scope="row" rowspan="2"><span data-source-cell="1:0">Respiratory syncytial virus (RSV)</span></th>
-<td><span data-source-cell="1:1">Forward Primer S1</span></td>
-<td><span data-source-cell="1:2">HRSV universal RPA forward primer S1</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td rowspan="2"><span data-source-cell="1:3">S1/A2 primer pair: amplifies the selected HRSV N‑gene target for downstream Cas12a recognition.</span></td>
+<td><span data-source-cell="1:1">Forward Primer</span></td>
+<td><span data-source-cell="1:2">RSV N Gene  RPA Forward Primer </span></td>
+<td rowspan="2"><span data-source-cell="1:3">RSV N Gene primer pair: amplifies the selected HRSV Ngene target for downstream Cas12a recognition.</span></td>
 </tr>
 <tr>
-<td><span data-source-cell="2:1">Reverse Primer A2</span></td>
-<td><span data-source-cell="2:2">HRSV universal RPA reverse primer A2</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="2:1">Reverse Primer</span></td>
+<td><span data-source-cell="2:2">RSV N Gene  RPA Reverse Primer </span></td>
 </tr>
 <tr>
-<th scope="row" rowspan="2"><span data-source-cell="3:0">Human metapneumovirus (HMPV)</span></th>
-<td><span data-source-cell="3:1">Forward Primer F4</span></td>
-<td><span data-source-cell="3:2">HMPV RPA forward primer F4</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td rowspan="2"><span data-source-cell="3:3">F4/R4 primer pair: form the pathogen‑specific RPA amplification module for HMPV detection.</span></td>
+<th scope="row" rowspan="2"><span data-source-cell="3:0">Human metapneumovirus-B (hMPV-B)</span></th>
+<td><span data-source-cell="3:1">Forward Primer </span></td>
+<td><span data-source-cell="3:2">hMPV-B N Gene RPA Forward Primer </span></td>
+<td rowspan="2"><span data-source-cell="3:3">hMPV-B N Gene primer pair: form the pathogenspecific RPA amplification module for hMPV-B detection.</span></td>
 </tr>
 <tr>
-<td><span data-source-cell="4:1">Reverse Primer R4</span></td>
-<td><span data-source-cell="4:2">HMPV RPA reverse primer R4</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="4:1">Reverse Primer </span></td>
+<td><span data-source-cell="4:2">hMPV-B N Gene RPA Reverse Primer </span></td>
 </tr>
 <tr>
 <th scope="row" rowspan="2"><span data-source-cell="5:0">Haemophilus influenzae (HI)</span></th>
 <td><span data-source-cell="5:1">Forward Primer</span></td>
-<td><span data-source-cell="5:2">HI RPA forward primer</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td rowspan="2"><span data-source-cell="5:3">HI primer pair: amplifies the selected H. influenzae target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
+<td><span data-source-cell="5:2">HI ompP6 Gene RPA Forward Primer</span></td>
+<td rowspan="2"><span data-source-cell="5:3">HI ompP6 Gene primer pair: amplifies the selected H. influenzae target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
 </tr>
 <tr>
 <td><span data-source-cell="6:1">Reverse Primer</span></td>
-<td><span data-source-cell="6:2">HI RPA reverse primer</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="6:2">HI ompP6 Gene RPA Reverse Primer</span></td>
 </tr>
 <tr>
-<th scope="row" rowspan="2"><span data-source-cell="7:0">Streptococcus pneumoniae</span></th>
+<th scope="row" rowspan="2"><span data-source-cell="7:0"><em>Streptococcus pneumoniae</em></span></th>
 <td><span data-source-cell="7:1">Forward Primer</span></td>
-<td><span data-source-cell="7:2">SPN RPA Forward Primer</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td rowspan="2"><span data-source-cell="7:3">SPN primer pair: amplifies the selected 251 bp Streptococcus pneumoniae target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
+<td><span data-source-cell="7:2">SPN lytA Gene RPA Forward Primer</span></td>
+<td rowspan="2"><span data-source-cell="7:3">SPN lytA Gene primer pair: amplifies the selected 251 bp Streptococcus pneumoniae target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
 </tr>
 <tr>
 <td><span data-source-cell="8:1">Reverse Primer</span></td>
-<td><span data-source-cell="8:2">SPN RPA Reverse Primer</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="8:2">SPN lytA Gene RPA Reverse Primer</span></td>
 </tr>
 <tr>
 <th scope="row" rowspan="2"><span data-source-cell="9:0">Bordetella pertussis</span></th>
 <td><span data-source-cell="9:1">Forward Primer</span></td>
-<td><span data-source-cell="9:2">BP RPA forward primer</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td rowspan="2"><span data-source-cell="9:3">BP primer pair: amplifies the selected Bordetella pertussis target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
+<td><span data-source-cell="9:2">BP IS1663 Gene RPA Forward Primer</span></td>
+<td rowspan="2"><span data-source-cell="9:3">BP IS1663 Gene primer pair: amplifies the selected Bordetella pertussis target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
 </tr>
 <tr>
 <td><span data-source-cell="10:1">Reverse Primer</span></td>
-<td><span data-source-cell="10:2">BP RPA reverse primer</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="10:2">BP IS1663 Gene RPA Reverse Primer</span></td>
 </tr>
 </tbody></table></div>
-<h3 data-source-block="43" id="crrna-parts">2.5 Cas12a crRNA Parts</h3>
-<p data-source-block="44">RPA provides target amplification, while Cas12a crRNAs provide sequence-specific recognition.</p>
-<p data-source-block="45">Each crRNA contains a guide region corresponding to the target sequence.</p>
-<p data-source-block="46">Following recognition of the amplified DNA, the Cas12a–crRNA complex activates Cas12a-mediated collateral cleavage for downstream signal generation.</p>
-<p data-source-block="47">Therefore, the crRNA functions as the recognition module of our detection platform.</p>
-<div class="table-wrap" role="region" aria-labelledby="crrna-parts" tabindex="0"><table class="data-table" data-source-table="48">
+<h3 data-source-block="37" id="crrna-parts">2.6 Cas12a crRNA Parts</h3>
+<p data-source-block="38">RPA provides target amplification, while Cas12a crRNAs provide sequence-specific recognition.</p>
+<p data-source-block="39">Each crRNA contains a guide region corresponding to the target sequence.</p>
+<p data-source-block="40">Following recognition of the amplified DNA, the Cas12a–crRNA complex activates Cas12a-mediated collateral cleavage for downstream signal generation.</p>
+<p data-source-block="41">Therefore, the crRNA functions as the recognition module of our detection platform.</p>
+<div class="table-wrap" role="region" aria-labelledby="crrna-parts" tabindex="0"><table class="data-table" data-source-table="42">
 <thead>
 <tr>
 <th scope="col"><span data-source-cell="0:0">Pathogen</span></th>
@@ -337,79 +338,70 @@
 <tbody>
 <tr>
 <th scope="row"><span data-source-cell="1:0">Respiratory syncytial virus (RSV)</span></th>
-<td><span data-source-cell="1:1">HRSV N‑targeting LbCas12a crRNA</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="1:2">This synthetic crRNA contains an LbCas12a‑compatible direct‑repeat region and an HRSV‑specific spacer.It guides LbCas12a toward the selected HRSV target sequence.</span></td>
+<td><span data-source-cell="1:1">RSV N Gene-targeting LbCas12a crRNA</span></td>
+<td><span data-source-cell="1:2">This synthetic crRNA contains an LbCas12acompatible directrepeat region and an HRSVspecific spacer.It guides LbCas12a toward the selected HRSV target sequence.</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="2:0">Human metapneumovirus (HMPV)</span></th>
-<td><span data-source-cell="2:1">HMPV Cas12a crRNA A1</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
-<td><span data-source-cell="2:2">This crRNA guides Cas12a recognition of the HMPV target sequence following RPA amplification.</span></td>
+<th scope="row"><span data-source-cell="2:0">Human metapneumovirus-B (hMPV-B)</span></th>
+<td><span data-source-cell="2:1">hMPV-B N Gene-targeting LbCas12a crRNA</span></td>
+<td><span data-source-cell="2:2">This crRNA guides Cas12a recognition of the hMPV-B target sequence following RPA amplification.</span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="3:0">Haemophilus influenzae (HI)</span></th>
-<td><span data-source-cell="3:1">HI‑targeting crRNA</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="3:1">HI ompP6 Gene-targeting LbCas12a crRNA</span></td>
 <td><span data-source-cell="3:2">This synthetic Cas12a crRNA guides recognition of the selected H. influenzae target following RPA amplification.</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="4:0">Streptococcus pneumoniae</span></th>
-<td><span data-source-cell="4:1">SPN-targeting Cas12a crRNA</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<th scope="row"><span data-source-cell="4:0"><em>Streptococcus pneumoniae</em></span></th>
+<td><span data-source-cell="4:1">SPN lytA Gene-targeting LbCas12a crRNA</span></td>
 <td><span data-source-cell="4:2">This synthetic Cas12a crRNA contains a Cas12a-compatible direct-repeat region and an SPN-specific spacer. It guides Cas12a to recognize the complementary target sequence within the SPN RPA amplicon following RPA amplification.</span></td>
 </tr>
 <tr>
 <th scope="row"><span data-source-cell="5:0">Bordetella pertussis</span></th>
-<td><span data-source-cell="5:1">BP-targeting crRNA</span><span class="status-pending" data-registry-status>Registry ID pending</span></td>
+<td><span data-source-cell="5:1">BP IS1663 Gene-targeting LbCas12a crRNA</span></td>
 <td><span data-source-cell="5:2">This synthetic Cas12a crRNA guides recognition of the selected Bordetella pertussis target following RPA amplification.</span></td>
 </tr>
 </tbody></table></div>
 </section>
 <section class="lab-section" id="functional-classification" data-observe-section>
-<h2 data-source-block="49">Functional Classification</h2>
+<h2 data-source-block="43">Functional Classification</h2>
+<span class="parts-anchor-alias" id="structural-module" aria-hidden="true"></span>
+<span class="parts-anchor-alias" id="signal-output-module" aria-hidden="true"></span>
 <div class="module-grid">
-<details class="parts-module" id="recognition-module"><summary><h3 data-source-block="50">3.1 Recognition Module</h3></summary><div class="parts-module-content">
-<p data-source-block="51">Determines molecular specificity.</p>
-<p data-source-block="52">Includes:</p>
-<p data-source-block="53">Synthetic target templates</p>
-<p data-source-block="54">Pathogen-specific RPA primers</p>
-<p data-source-block="55">Cas12a crRNAs</p>
+<details class="parts-module" id="biosynthesis-module"><summary><h3 data-source-block="44">3.1 Biosynthesis Module</h3></summary><div class="parts-module-content">
+<p data-source-block="45">Provides the core LbCas12a nuclease required for the detection platform.</p>
+<p data-source-block="46">Includes:</p>
+<p data-source-block="47">E. coli B codon-optimized LbCas12a CDS</p>
+<p data-source-block="48"><a href="https://registry.igem.org/parts/bba-26ovd7tr" target="_blank" rel="noopener noreferrer">T7-driven His₆–TEV–LbCas12a Expression Cassette</a></p>
 </div></details>
-<details class="parts-module" id="structural-module"><summary><h3 data-source-block="56">3.2 Structural Module</h3></summary><div class="parts-module-content">
-<p data-source-block="57">Supports molecular positioning and organization.</p>
-<p data-source-block="58">Includes:</p>
-<p data-source-block="59">Spacer Strand</p>
-<p data-source-block="60">Circular DNA structural regions</p>
+<details class="parts-module" id="recognition-module"><summary><h3 data-source-block="49">3.2 Target and Recognition Module</h3></summary><div class="parts-module-content">
+<p data-source-block="50">Determines molecular specificity.</p>
+<p data-source-block="51">Includes:</p>
+<p data-source-block="52">Synthetic target templates</p>
+<p data-source-block="53">Pathogen-specific RPA primers</p>
+<p data-source-block="54">Cas12a crRNAs</p>
 </div></details>
-<details class="parts-module" id="amplification-module"><summary><h3 data-source-block="61">3.3 Amplification Module</h3></summary><div class="parts-module-content">
-<p data-source-block="62">Supports nucleic-acid amplification.</p>
-<p data-source-block="63">Includes:</p>
-<p data-source-block="64">RPA primer pairs</p>
-<p data-source-block="65">Circular DNA template</p>
-<p data-source-block="66">Primer Strand-12</p>
-</div></details>
-<details class="parts-module" id="signal-output-module"><summary><h3 data-source-block="67">3.4 Signal-Output Module</h3></summary><div class="parts-module-content">
-<p data-source-block="68">Converts target recognition into measurable output.</p>
-<p data-source-block="69">Includes:</p>
-<p data-source-block="70">Cas12a–crRNA complexes</p>
-<p data-source-block="71">Signal-related regions of the circular DNA framework</p>
-<p data-source-block="72">ssDNA reporter</p>
+<details class="parts-module" id="amplification-module"><summary><h3 data-source-block="55">3.3 Amplification Module</h3></summary><div class="parts-module-content">
+<p data-source-block="56">Supports pathogen-specific nucleic-acid amplification.</p>
+<p data-source-block="57">Includes:</p>
+<p data-source-block="58">RPA primer pairs</p>
 </div></details>
 </div>
 </section>
 <section class="lab-section" id="modular-toolkit" data-observe-section>
-<h2 data-source-block="74">From Parts to a Modular Detection Toolkit</h2>
-<p data-source-block="75">Our complete design can therefore be summarized as:</p>
-<h3 data-source-block="76" id="step-1">Step 1 — Select the Pathogen</h3>
-<p data-source-block="77">Choose the pathogen-specific target.</p>
-<h3 data-source-block="78" id="step-2">Step 2 — Amplify the Target</h3>
-<p data-source-block="79">Use the corresponding RPA primer pair.</p>
-<h3 data-source-block="80" id="step-3">Step 3 — Recognize the Amplicon</h3>
-<p data-source-block="81">Use the corresponding Cas12a crRNA.</p>
-<h3 data-source-block="82" id="step-4">Step 4 — Amplify and Process the Signal</h3>
-<p data-source-block="83">Use reusable downstream nucleic-acid components where applicable.</p>
-<h3 data-source-block="84" id="step-5">Step 5 — Generate the Output</h3>
-<p data-source-block="85">Convert Cas12a activity into a detectable signal.</p>
-<p data-source-block="86">The key principle is simple:</p>
-<p data-source-block="87">The recognition layer changes.</p>
-<p data-source-block="88">The detection framework can remain largely reusable.</p>
+<h2 data-source-block="59">From Parts to a Modular Detection Toolkit</h2>
+<p data-source-block="60">Our Part collection can therefore be summarized as:</p>
+<h3 data-source-block="61" id="foundation-step">Foundation Step - Produce the Core Enzyme</h3>
+<p data-source-block="62">Use the LbCas12a biosynthesis Parts to support recombinant production of the core LbCas12a nuclease.</p>
+<h3 data-source-block="63" id="step-1">Step 1 - Select the Pathogen</h3>
+<p data-source-block="64">Choose the pathogen-specific target.</p>
+<h3 data-source-block="65" id="step-2">Step 2 - Amplify the Target</h3>
+<p data-source-block="66">Use the corresponding RPA primer pair.</p>
+<h3 data-source-block="67" id="step-3">Step 3 - Recognize the Amplicon</h3>
+<p data-source-block="68">Use the corresponding Cas12a crRNA together with LbCas12a to recognize the amplified target.</p>
+<span class="parts-anchor-alias" id="step-4" aria-hidden="true"></span>
+<span class="parts-anchor-alias" id="step-5" aria-hidden="true"></span>
+<p data-source-block="69">The key principle is simple:The pathogen-specific components change, while the core LbCas12a biosynthesis module can remain reusable across different pathogen-specific assays.</p>
 </section>
 </div></div></main>
 <footer class="site-footer">
