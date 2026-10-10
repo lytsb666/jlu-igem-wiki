@@ -24,7 +24,7 @@
 后续要求：Measurement 的 `#reference` 初始 HTML 虽无 open 属性，但实际测试发现带 `#reference` 进入时锚点脚本会自动展开。已修改页面锚点脚本及公共目录点击处理：进入、刷新和历史恢复时收起，目录/锚点只定位到 Reference，点击标题才展开；参考文献正文保持完整。
 同时发现旧 Vite 预览服务返回已缓存的旧脚本，已重启同端口 5216 的主仓库服务，使当前源码生效。
 
-同时限定公共棕色规则的作用域，让人文页面的深色封面、信息框和结尾区域保留原有对比色；普通正文继续使用棕色。未进行实际浏览器视觉确认。
+同时限定公共棕色规则的作用域，让人文页面的深色封面、信息框和结尾区域保留原有对比色；普通正文继续使用棕色。后续验收修复及实际浏览器局部复验见第 7 节。
 
 ## 3. 一并保留并提交的此前成果
 
@@ -88,9 +88,25 @@
 - 不修改 Navbar 信息架构、Loading、Footer、光标、Homepage 动画、成员数据、科研事实，除非新需求明确涉及。
 - 不重跑旧页面生成器或 `implement_pages.py`，避免恢复旧结构并损坏新成果。
 - 未完成的下一步为浏览器实际验收和五个冲突 worktree 的安全同步；最新六项不需重新实施。
-- 本地预览此前为 `http://127.0.0.1:5216/`，本轮没有通过浏览器确认服务。
+- 本地预览为 `http://127.0.0.1:5216/`，后续已用独立 headless Chrome 确认主工作区服务及第 7 节所列修正。
 - 原 Netlify 项目 `https://prismatic-sfogliatella-cf9000.netlify.app/`；官方 GitLab `https://gitlab.igem.org/2026/jlu-sph`；正式站 `https://2026.igem.wiki/jlu-sph`，均未发布。
 - 官方资源继续遵守 iGEM uploads / static.igem.wiki / Video Universe 限制，不引入外部 CDN、字体或运行依赖。
 
 需求来源仍在本机：`C:\Users\UserTech\Desktop\model页面优化建议.docx`、`二改software.docx`、`Software_System_Architecture_EN.docx`、`Software页面_App与硬件程序补充建议 (2).docx`，以及 `10.5最终版wiki湿实验\10.5最终版wiki湿实验\配色.docx`。Model 原稿映射在 `assets/model/review/model-source-manifest.json`。
 此前原稿抽取在 `D:\JLU—Wiki\IGEMwiki\tmp\requirements-2026-10-09\`；旧导航验收记录在 `tmp\navigation-revision-2026-10-09\REPORT.md`，不能当成本轮最终浏览器验收。
+
+## 7. 验收报告修复（2026-10-10，c2471d2 后续）
+
+依据用户提供的 `D:\JLU—Wiki\acceptance\2026-10-10_c2471d2\本轮改动验收报告.md`，原报告和证据未修改。
+
+- **R02 已修复**：从公共 `样式/main.js` 导入既有 `typography.css`，补齐 iHP / Inclusivity / Education / Entrepreneurship 的图注 12pt 加粗、三级/四级标题 14pt 加粗规则；没有重写页面正文或重新实现已经正常的目录和图库。
+- **R03 已修复**：Software 颜色例外只保留黑底 `pre`；Education 例外只保留反馈区域的深底标题和控制区。白底协议链接、五张浅底反馈卡标题及正文采用棕色，黑底代码和深底标题保留浅色。
+- **R05 已修复**：旧 `Judging/model.html` 使用 `location.replace` 指向 `Instrument/model.html`，保留查询参数和锚点，附 canonical / 无脚本 fallback；后退无循环，Judging 导航仍不含 Model。
+- 用户确认通过的 Model 原图底色及已移除的外围蓝框保持；三个黑底代码区始终展开，Software 新增代码默认收起。
+- 开发版及新构建版分别通过 **59 项**实际 headless Chrome 检查（1440×900 / 390×844），覆盖四页排版、Collaboration 保护、Education 五张卡片和图库、Software 链接和代码开关、Model 图框/代码/目录以及旧 URL 跳转。两版无 JavaScript 页面错误、所检查页面无整页横向溢出。Measurement **21 项**另行回归通过；既有源码保护 **66 项**通过。
+- 新隔离构建：**25 HTML 入口、1313 引用、0 缺失资源**，输出 `D:\JLU—Wiki\IGEMwiki\tmp\format-revision-2026-10-09\build-1791609780445`。主仓库 dist 未覆盖。
+- 复验记录及截图：`D:\JLU—Wiki\acceptance\2026-10-10_c2471d2-followup\复验记录.md`。这次局部修复不代表全站或公网最终验收通过。
+- **R01 待发布**：公网旧版问题不能通过本地改源码关闭；当前仍未 push / 发布 / 官方站部署，待用户明确授权发布目标后使用已验证产物，记录部署版本并复验公网。
+- **R04 / R06 待真实材料**：Hardware / Contribution 的占位内容是现存缺口，没有找到可明确映射到这两页的确认稿；不猜测硬件实验、项目贡献或证据，不用模糊链接替代真实内容。
+
+最新提交及九个 worktree 的再预检 / 安全同步结果继续见 `sync-report.json`；有冲突或未提交修改者跳过，保留分支和现场。

@@ -5,14 +5,15 @@
 @layer wiki-format {
   body main :is(p, li, dt, dd, blockquote, figcaption, caption, th, td,
     h1, h2, h3, h4, h5, h6, summary, label, a, strong, b, em, code, math):not(.image-page-hero *, .page-hero *, .home-story *, .home-cover *,
-      .cover-stage *, .story-stage *, .drylab-code-fold *, .model-terminal *, .sw-code-example *,
+      .cover-stage *, .story-stage *, .drylab-code-fold *, .model-terminal *,
+      .sw-code-example pre, .sw-code-example pre *,
       :is(.ihp-hero, .inc-hero, .edu-hero, .entre-hero, .cl-cover,
         .outcome, .stakeholder-map__center, .survey-summary__number,
         .design-brief article, .cares-shield, .cares-cards b,
         .evidence-principles article, .evidence-bridge a, .inline-resource-link,
         .implementation-card__status, .ihp-closing, .lesson, .braille-feature,
         .inc-closing, .community-card, .science-foundation, .activity-atlas,
-        .dbtl-panel, .feedback-showcase, .continuing-section, .filmstrip__label,
+        .dbtl-panel, .feedback-showcase__heading, .feedback-controls, .continuing-section, .filmstrip__label,
         .bmc-card--proposition, .cl-button),
       :is(.ihp-hero, .inc-hero, .edu-hero, .entre-hero, .cl-cover,
         .outcome, .stakeholder-map__center, .survey-summary__number,
@@ -20,13 +21,13 @@
         .evidence-principles article, .evidence-bridge a, .inline-resource-link,
         .implementation-card__status, .ihp-closing, .lesson, .braille-feature,
         .inc-closing, .community-card, .science-foundation, .activity-atlas,
-        .dbtl-panel, .feedback-showcase, .continuing-section, .filmstrip__label,
+        .dbtl-panel, .feedback-showcase__heading, .feedback-controls, .continuing-section, .filmstrip__label,
         .bmc-card--proposition, .cl-button) *) {
     color: var(--wiki-ink) !important;
   }
   body main :is(p, li, dt, dd, blockquote, figcaption, caption, th, td,
     h1, h2, h3, h4, h5, h6, summary, label, a, strong, b, em, code, math):not(.image-page-hero *, .page-hero *, .home-story *, .home-cover *,
-      .cover-stage *, .story-stage *, .drylab-code-fold *, .sw-code-example *) {
+      .cover-stage *, .story-stage *, .drylab-code-fold *, .sw-code-example pre *) {
     line-height: 1.3 !important;
   }
   body main .wiki-chapter-title {

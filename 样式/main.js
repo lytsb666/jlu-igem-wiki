@@ -1,3 +1,4 @@
+import './typography.css'
 import './loading.css'
 import './navigation.js'
 import './cursor-overlay.js'
