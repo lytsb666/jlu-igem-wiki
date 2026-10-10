@@ -36,6 +36,19 @@
     font-weight: 700 !important;
   }
 
+  /* Banner titles have their own scale; article headings keep the shared scale. */
+  body :is(.image-page-hero, .page-hero, .lab-hero, .team-hero,
+    .ihp-hero, .inc-hero, .edu-hero, .entre-hero, .protocol-page-heading) h1 {
+    font-size: clamp(36px, 5vw, 72px) !important;
+    line-height: 1.08 !important;
+  }
+
+  body :is(.image-page-hero, .page-hero, .lab-hero, .team-hero,
+    .ihp-hero, .inc-hero, .edu-hero, .entre-hero, .protocol-page-heading) h1::after {
+    content: none !important;
+    display: none !important;
+  }
+
   body :is(h3, .hp-h2, .member-card__name):not(aside *, nav *),
   body :is(.parts-module, .experiment-card, .stage-panel,
     .reference-fold, .research-result-stage) > summary,

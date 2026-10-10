@@ -119,3 +119,13 @@
 - 始终先 `npm run build` 成功后上传 `dist/client`；兼容修改仅为原路径资源纳入构建、canonical 避免被转换为原始 HTML 素材、两份 PDF 无损压缩到 Pages 限制以内。网站正文 / 成员数据 / 图像内容均未改变。
 - 发布脚本 `scripts/publish-pages.ps1` 和说明 `DEPLOYMENT_CLOUDFLARE.md`；公网部署及 homepage / Member / 图片 / 跳转实测证据保存至 `D:\JLU—Wiki\IGEMwiki\tmp\cloudflare-pages-2026-10-10\`，以其中的实际部署记录为准。
 - 按用户追加的官方 Agent Setup 安装 Cloudflare skills 并登记 / 授权 Codex Cloudflare MCP；凭据留在用户配置，未进入仓库或 dist。MCP 在重启 Codex 后加载，不阻塞当前 Wrangler 发布。
+
+## 9. 页面优化 10.10（用户确认后实施）
+
+- 用户已授权开始修改，并明确第二项仅删除顶部横幅标题下方的横线；正文章节下划线保留。
+- 公共 `typography.css` 为子页面横幅 h1 单独设置 `clamp(36px, 5vw, 72px)`，移除其 `::after` 横线；正文标题和图注字号不变，Homepage 动画不变。
+- Engineering 全部 29 个 node 的 Design / Build / Test / Learn & Outcome 共 116 个标签改为深棕 `#432b1c`、加粗，并使用用户提供的四张原始 PNG。阶段图标映射为 Design 右上、Build 右下、Test 左下、Learn 左上，匹配文档示意；仅 CSS 显示为小图标，原始文件未修改。
+- 根据用户明确确认，删除 Wet Lab Engineering 的 `engineering-figure-2` 六宫格曲线图及其图注；上方 RSV Candidate 2 表格、其他图片、所有实验正文和模块切换脚本保留。
+- **仍待素材：Engineering 顶部高清替换图。用户要求处理这项时主动向其索取，不自行生成、猜测或用其他图片替换。现有顶图暂时保留。**
+- `npm run build` 成功；构建产物 25 HTML 入口、1427 引用、0 缺失资源、0 超限文件。桌面 1440×900 / 手机 390×844 在新构建版完成 184 项浏览器检查：18 个页面横幅字号 / 横线 / 标题边界、四模块图标与文字颜色、表格保护、模块切换和键盘激活、Measurement 引用默认收起，未发现 JavaScript 错误或失败资源。
+- 本轮修改及发布复验证据存于仓库外 `D:\JLU—Wiki\IGEMwiki\tmp\page-optimization-2026-10-10\`；继续使用第 8 节固定 Cloudflare 项目，不执行 git push。
