@@ -55,21 +55,21 @@
 
 ## 5. Worktree 检查和同步
 
-接管检查时九个开发 worktree 均无未提交修改。同步前须再次检查状态及预合并；实际结果以 `sync-report.json` 为准。
+接管检查及最终同步时九个开发 worktree 均无未提交修改。05 / 06 / 07 / 10 已快进包含新基线，分支名保持不变；其余五个的预合并有冲突，未启动实际合并、未修改文件。完整 hash 和预检输出见 `sync-report.json`。
 
 | Worktree | 分支 | 本轮安全同步策略 |
 | --- | --- | --- |
 | 01-homepage | codex/01-homepage | 预合并有 Homepage HTML / 动画脚本 / CSS 冲突，保留现场，不同步 |
 | 02-team | codex/02-team | 预合并有成员数据、照片映射、HTML / CSS / 脚本冲突，保留现场，不同步 |
 | 03-research | codex/03-research | 预合并 Engineering 冲突，保留现场，不同步 |
-| 04-ihp | codex/04-ihp | 旧 HEAD 预合并树与 00 一致；新基线再次预检一致后正常合并，保留历史 |
-| 05-education | codex/05-education | 无独有提交，干净状态下快进 |
-| 06-inclusivity | codex/06-inclusivity | 无独有提交，干净状态下快进 |
-| 07-entrepreneurship | codex/07-entrepreneurship | 无独有提交，干净状态下快进 |
+| 04-ihp | codex/04-ihp | 与旧 HEAD 预合并一致，但新基线在 Collaboration 目录包装处冲突，保留现场，不同步 |
+| 05-education | codex/05-education | 已快进新基线，工作区干净 |
+| 06-inclusivity | codex/06-inclusivity | 已快进新基线，工作区干净 |
+| 07-entrepreneurship | codex/07-entrepreneurship | 已快进新基线，工作区干净 |
 | 08-instrument | codex/08-instrument | 预合并 Model / Software CSS add/add 冲突，保留现场，不同步 |
-| 10-deploy | codex/10-deploy | 无独有提交，干净状态下快进；不部署 |
+| 10-deploy | codex/10-deploy | 已快进新基线，工作区干净；未部署 |
 
-这些历史分叉包括被 cherry-pick 的等效提交，不能把所有独有提交当作尚未集成。01 / 02 / 03 / 08 暂不能按新公共层基线继续开发；后续需明确处理冲突，保护 00 已集成且更新的内容。
+这些历史分叉包括被 cherry-pick 的等效提交，不能把所有独有提交当作尚未集成。01 / 02 / 03 / 04 / 08 暂不能按新公共层基线继续开发；后续需明确处理冲突，保护 00 已集成且更新的内容。
 
 ## 6. 架构、关键文件与后续入口
 
@@ -83,7 +83,7 @@
 - 素材目录含中文和空格，使用 LiteralPath / 正确引号。
 - 不修改 Navbar 信息架构、Loading、Footer、光标、Homepage 动画、成员数据、科研事实，除非新需求明确涉及。
 - 不重跑旧页面生成器或 `implement_pages.py`，避免恢复旧结构并损坏新成果。
-- 未完成的下一步为浏览器实际验收和四个冲突 worktree 的安全同步；最新六项不需重新实施。
+- 未完成的下一步为浏览器实际验收和五个冲突 worktree 的安全同步；最新六项不需重新实施。
 - 本地预览此前为 `http://127.0.0.1:5216/`，本轮没有通过浏览器确认服务。
 - 原 Netlify 项目 `https://prismatic-sfogliatella-cf9000.netlify.app/`；官方 GitLab `https://gitlab.igem.org/2026/jlu-sph`；正式站 `https://2026.igem.wiki/jlu-sph`，均未发布。
 - 官方资源继续遵守 iGEM uploads / static.igem.wiki / Video Universe 限制，不引入外部 CDN、字体或运行依赖。
