@@ -110,3 +110,12 @@
 - **R04 / R06 待真实材料**：Hardware / Contribution 的占位内容是现存缺口，没有找到可明确映射到这两页的确认稿；不猜测硬件实验、项目贡献或证据，不用模糊链接替代真实内容。
 
 最新提交及九个 worktree 的再预检 / 安全同步结果继续见 `sync-report.json`；有冲突或未提交修改者跳过，保留分支和现场。
+
+## 8. Cloudflare 临时公网预览授权及固定发布入口
+
+用户已明确授权通过 Cloudflare Pages Direct Upload / Wrangler 发布团队临时预览，这项新授权覆盖前文对此临时预览的未发布限制；仍禁止 git push / GitHub 或 GitLab 上传，正式 iGEM 站和原 Netlify 项目不在本次发布范围。
+
+- 固定 Pages 项目 `jlu-igem-wiki-preview` 已创建，Wrangler 已完成浏览器 OAuth；固定地址 `https://jlu-igem-wiki-preview.pages.dev/`，以后更新均使用这个项目和 `--branch main`。
+- 始终先 `npm run build` 成功后上传 `dist/client`；兼容修改仅为原路径资源纳入构建、canonical 避免被转换为原始 HTML 素材、两份 PDF 无损压缩到 Pages 限制以内。网站正文 / 成员数据 / 图像内容均未改变。
+- 发布脚本 `scripts/publish-pages.ps1` 和说明 `DEPLOYMENT_CLOUDFLARE.md`；公网部署及 homepage / Member / 图片 / 跳转实测证据保存至 `D:\JLU—Wiki\IGEMwiki\tmp\cloudflare-pages-2026-10-10\`，以其中的实际部署记录为准。
+- 按用户追加的官方 Agent Setup 安装 Cloudflare skills 并登记 / 授权 Codex Cloudflare MCP；凭据留在用户配置，未进入仓库或 dist。MCP 在重启 Codex 后加载，不阻塞当前 Wrangler 发布。
