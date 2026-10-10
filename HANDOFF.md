@@ -21,7 +21,8 @@
 5. **Parts 目录显示修复**：旧 `.parts-toc-row` 的 28px 第一列挤压文字；公共格式显式改为 block，并将复用的展开按钮移到目录组直接子级。保留原标题、全部层级、跳转与 Parts 模块展开脚本，不重编码正文。
 6. **删除返回顶部**：移除 Software `.sw-toc-top`、Model `.model-toc-top` 节点及公共格式中的对应规则，保留 `page-top` 历史锚点。
 
-后续要求：Measurement 的 `#reference` 原本就是未带 open 属性的 details，保持默认收起及点击展开；显式导航到参考文献时仍可展开定位。
+后续要求：Measurement 的 `#reference` 初始 HTML 虽无 open 属性，但实际测试发现带 `#reference` 进入时锚点脚本会自动展开。已修改页面锚点脚本及公共目录点击处理：进入、刷新和历史恢复时收起，目录/锚点只定位到 Reference，点击标题才展开；参考文献正文保持完整。
+同时发现旧 Vite 预览服务返回已缓存的旧脚本，已重启同端口 5216 的主仓库服务，使当前源码生效。
 
 同时限定公共棕色规则的作用域，让人文页面的深色封面、信息框和结尾区域保留原有对比色；普通正文继续使用棕色。未进行实际浏览器视觉确认。
 
@@ -47,11 +48,12 @@
 - Node VM 导航逻辑检查 **23/23**：文档滚动方向、内部 wheel 不干扰、边界、交互保留、恢复/resize、共享菜单上下文，以及旧 Hardware / iHP URL 保留查询及锚点。
 - 修改过的外部 JavaScript 语法和 Git 空白检查通过。
 - 最终隔离 Vite 构建：**25 HTML 入口、1317 引用、0 缺失资源**。沿用既有 `build.mjs`，输出在仓库外，配置及主仓库 dist 未改。
+- 后续 Measurement 修复通过独立 headless Chrome 实测 **21 项**：1440px 桌面 / 390px 手机的普通进入、带锚点进入和刷新、目录定位、点击/Enter 展开收起、展开后刷新及历史返回，无 JavaScript 页面错误。证据在 `measurement-reference-browser.json` 和两个 `measurement-reference-*-closed.png`；该局部检查不代表全站验收完成。
 
 证据目录：`D:\JLU—Wiki\IGEMwiki\tmp\handoff-2026-10-10\`，含 `before/` 接管现场备份、`initial-status.txt`、`content-checks.json`、`navigation-checks.json`、验证脚本和 `sync-report.json`。
 既有检查及最终构建报告：`D:\JLU—Wiki\IGEMwiki\tmp\format-revision-2026-10-09\source-audit.json`、`build-report.json`。
 
-**仍未完成：实际浏览器/Navbar 和全站桌面/手机视觉验收。** 本轮按 computer-use 技能尝试浏览器验收，工具因不能可靠确认 Windows 浏览器当前 URL 而终止；未绕过安全限制。Node VM 和源码检查不能替代真实浏览器、触摸、键盘菜单、视觉对比度和控制台验收。不要宣称最终全站验收通过。
+**仍未完成：Navbar 和全站桌面/手机视觉验收。** 此前按 computer-use 技能尝试用户 Windows 浏览器验收，工具因不能可靠确认当前 URL 而终止；未绕过安全限制。后续局部测试使用独立 headless Chrome 访问已知本地项目 URL。Measurement 的实测与 Node VM / 源码检查不能替代全站、触摸、键盘菜单、视觉对比度和控制台验收。不要宣称最终全站验收通过。
 
 真实设备演示视频及部分原始验证数据仍缺失，不得虚构。
 

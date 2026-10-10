@@ -1517,6 +1517,11 @@
 <script data-research-fragments>
 (() => {
   const main = document.querySelector('main');
+  const reference = document.getElementById('reference');
+  // Keep references collapsed on entry and history restoration, including
+  // URLs ending in #reference. The summary remains the explicit toggle.
+  reference.open = false;
+  window.addEventListener('pageshow', () => { reference.open = false; });
   // Production builds rename images; original-image links follow the loaded asset.
   main.querySelectorAll('.research-original, .measurement-map__original a').forEach(link => {
     const image = link.querySelector('img') || link.closest('figure')?.querySelector('img');
@@ -1532,12 +1537,22 @@
     const target = document.getElementById(id);
     if (!target || !main.contains(target)) return;
     for (let node = target; node && node !== main; node = node.parentElement) {
-      if (node.tagName === 'DETAILS') node.open = true;
+      if (node.tagName === 'DETAILS' && node !== reference) node.open = true;
     }
     if (scroll) requestAnimationFrame(() => target.scrollIntoView({behavior:'instant',block:'start'}));
   }
   main.addEventListener('click', event => {
     const link = event.target.closest('a[href^="#"]');
+    if (link?.hash === '#reference' && event.button === 0 &&
+        !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+      // Native fragment navigation may also reveal a details element. Scroll
+      // explicitly so locating references does not change their open state.
+      event.preventDefault();
+      if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+      reference.querySelector('summary').focus({ preventScroll: true });
+      reveal(link.hash, true);
+      return;
+    }
     if (link) reveal(link.hash, false);
   });
   window.addEventListener('hashchange', () => reveal(location.hash, true));
