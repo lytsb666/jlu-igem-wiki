@@ -74,4 +74,8 @@
     :is(a, span, strong, b, em, i, code, small) {
     font-size: inherit !important;
   }
+
+  /* Math requires its own glyph layout; the prose remains Times New Roman. */
+  body math,
+  body math * { font-family: "Cambria Math", "STIX Two Math", math !important; }
 }

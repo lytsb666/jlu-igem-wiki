@@ -12,7 +12,7 @@ export function enhanceSectionNavigation(root, selector) {
     let selected = links.find(link => link.hash === '#' + id)
     // Model hides subsection links in its mobile TOC; highlight their chapter.
     if (selected?.getClientRects && selected.getClientRects().length === 0) {
-      selected = selected.closest('nav > div')?.querySelector(':scope > a') || selected
+      selected = selected.closest('.wiki-toc-group, nav > div')?.querySelector(':scope > a') || selected
     }
     for (const link of links) {
       const active = link === selected

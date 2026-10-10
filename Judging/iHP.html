@@ -8,10 +8,11 @@
   <script>
     const destination = new URL('../Eagagement/iHP.html', window.location.href);
     destination.search = window.location.search;
+    destination.searchParams.set('nav', 'judging');
     destination.hash = window.location.hash;
     window.location.replace(destination.href);
   </script>
-  <meta http-equiv="refresh" content="0; url=../Eagagement/iHP.html">
+  <meta http-equiv="refresh" content="0; url=../Eagagement/iHP.html?nav=judging">
 </head>
-<body><p><a href="../Eagagement/iHP.html">Continue to Human Practices</a></p></body>
+<body><p><a href="../Eagagement/iHP.html?nav=judging">Continue to Human Practices</a></p></body>
 </html>

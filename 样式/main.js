@@ -1,6 +1,8 @@
 import './loading.css'
 import './navigation.js'
 import './cursor-overlay.js'
+import './site-format.js'
+import './site-format.css'
 
 const MINIMUM_VISIBLE_TIME = 320
 const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href

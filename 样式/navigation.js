@@ -48,8 +48,8 @@ const navigationSchema = [
   {
     label: 'Judging',
     items: [
-      ['iHP', '../Eagagement/iHP.html'],
-      ['Hardware', '../Judging/hardware.html'],
+      ['iHP', '../Eagagement/iHP.html?nav=judging'],
+      ['Hardware', '../Instrument/hardware.html?nav=judging'],
       ['Measurement', '../Wet-lab/measurement.html'],
     ],
   },
@@ -76,19 +76,21 @@ if (navbar) {
 if (navbar) {
   const TOP_EDGE = 4
   const DIRECTION_THRESHOLD = 10
-  const POINTER_REVEAL_DISTANCE = 40
   const POINTER_TOP_ZONE = 72
   const precisePointer = window.matchMedia('(hover: hover) and (pointer: fine)')
 
-  let lastScrollY = Math.max(window.scrollY, 0)
+  // Only movement of the document changes visibility. Wheel events also fire
+  // inside cards/directories and at scroll boundaries without moving the page.
+  const documentScrollY = () => Math.min(Math.max(window.scrollY, 0),
+    Math.max(0, document.documentElement.scrollHeight - document.documentElement.clientHeight))
+  let lastScrollY = documentScrollY()
   let lastDirection = 0
   let directionDistance = 0
-  let lastPointerY = null
-  let upwardPointerDistance = 0
   let ticking = false
 
   const navigationIsEngaged = () => (
-    navbar.matches(':hover, :focus-within')
+    (precisePointer.matches && navbar.matches(':hover'))
+    || navbar.matches(':focus-within')
     || Boolean(navbar.querySelector('.dropdown.is-open'))
   )
 
@@ -115,10 +117,10 @@ if (navbar) {
   const updateFromScroll = () => {
     ticking = false
 
-    const currentScrollY = Math.max(window.scrollY, 0)
+    const currentScrollY = documentScrollY()
     const deltaY = currentScrollY - lastScrollY
 
-    if (currentScrollY <= TOP_EDGE) {
+    if (currentScrollY <= Math.max(TOP_EDGE, navbar.offsetHeight)) {
       setHidden(false)
       lastDirection = 0
       directionDistance = 0
@@ -135,41 +137,24 @@ if (navbar) {
     window.requestAnimationFrame(updateFromScroll)
   }, { passive: true })
 
-  window.addEventListener('wheel', (event) => {
-    if (Math.abs(event.deltaY) < 3) return
-    reactToDirection(Math.sign(event.deltaY), Math.abs(event.deltaY))
-  }, { passive: true })
-
   window.addEventListener('pointermove', (event) => {
     if (!precisePointer.matches || (event.pointerType && event.pointerType !== 'mouse')) return
 
     if (event.clientY <= POINTER_TOP_ZONE) {
       setHidden(false)
-      upwardPointerDistance = 0
-    }
-
-    if (lastPointerY === null) {
-      lastPointerY = event.clientY
-      return
-    }
-
-    const deltaY = event.clientY - lastPointerY
-    lastPointerY = event.clientY
-
-    if (deltaY < -2) {
-      upwardPointerDistance += Math.abs(deltaY)
-      if (navbar.classList.contains('hide') && upwardPointerDistance >= POINTER_REVEAL_DISTANCE) {
-        setHidden(false)
-        upwardPointerDistance = 0
-      }
-    } else if (deltaY > 2) {
-      upwardPointerDistance = 0
     }
   }, { passive: true })
 
   navbar.addEventListener('focusin', () => setHidden(false))
   navbar.addEventListener('pointerenter', () => setHidden(false))
-  window.addEventListener('pageshow', () => setHidden(false))
+  const resetScrollTracking = () => {
+    lastScrollY = documentScrollY()
+    lastDirection = 0
+    directionDistance = 0
+    setHidden(false)
+  }
+  window.addEventListener('pageshow', resetScrollTracking)
+  window.addEventListener('resize', resetScrollTracking, { passive: true })
 }
 
 function normalizePath(pathname) {
@@ -194,17 +179,26 @@ const sectionLabels = {
   team: 'team',
   judging: 'judging',
 }
+// Carry shared pages' menu context through refresh, history and new tabs.
+const activeSection = ['/eagagement/ihp', '/instrument/hardware'].some(path => currentPath.endsWith(path))
+  && new URLSearchParams(window.location.search).get('nav') === 'judging'
+  ? 'judging'
+  : sectionLabels[currentSection]
 
 document.querySelectorAll('.navbar .dropdown').forEach((group) => {
   const primaryLink = group.querySelector(':scope > .nav-link')
   const groupLabel = primaryLink?.textContent.trim().toLowerCase()
-  const isCurrentGroup = groupLabel === sectionLabels[currentSection]
+  const isCurrentGroup = groupLabel === activeSection
 
   primaryLink?.classList.toggle('active', isCurrentGroup)
+  if (isCurrentGroup) primaryLink?.setAttribute('aria-current', 'page')
+  else primaryLink?.removeAttribute('aria-current')
 
   group.querySelectorAll('.dropdown-content a[href]').forEach((link) => {
     const targetPath = normalizePath(new URL(link.href, window.location.href).pathname)
     link.classList.toggle('active', isCurrentGroup && targetPath === currentPath)
+    if (isCurrentGroup && targetPath === currentPath) link.setAttribute('aria-current', 'page')
+    else link.removeAttribute('aria-current')
   })
 })
 

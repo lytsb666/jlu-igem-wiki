@@ -7,6 +7,9 @@
 }
 
 .protocol-main [hidden] { display: none !important; }
+.protocol-main :is(.protocol-card, .protocol-index-button, .protocol-subsection) {
+  scroll-margin-top: 90px;
+}
 
 .protocol-page-heading {
   padding-block: 0 24px;

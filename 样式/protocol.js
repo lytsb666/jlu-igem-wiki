@@ -2,6 +2,22 @@ const categoryButtons = [...document.querySelectorAll('.protocol-card')]
 const sectionButtons = [...document.querySelectorAll('.protocol-index-button')]
 const panels = [...document.querySelectorAll('.protocol-panel')]
 const directoryLinks = [...document.querySelectorAll('[data-protocol-link]')]
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+function scrollToProtocol(target, { smooth = true, block = 'start' } = {}) {
+  requestAnimationFrame(() => {
+    const rect = target.getBoundingClientRect()
+    const offset = block === 'center'
+      ? (window.innerHeight - rect.height) / 2
+      : parseFloat(getComputedStyle(target).scrollMarginTop) || 90
+    // Apply one offset: scrollIntoView would add the shared root padding to
+    // the section margin and leave an unnecessarily large blank gap.
+    window.scrollTo({
+      top: Math.max(0, window.scrollY + rect.top - offset),
+      behavior: smooth && !reducedMotion.matches ? 'smooth' : 'instant',
+    })
+  })
+}
 
 function hideContent() {
   panels.forEach((panel) => { panel.hidden = true })
@@ -38,7 +54,7 @@ function openPanel(panel) {
   markDirectory(panel.id)
 }
 
-function revealFragment() {
+function revealFragment(smooth = true) {
   let id
   try { id = decodeURIComponent(window.location.hash.slice(1)) } catch { return }
   const target = document.getElementById(id)
@@ -53,7 +69,7 @@ function revealFragment() {
     const category = target.closest('.protocol-category')?.querySelector('.protocol-card')
     if (category) { hideContent(); selectCategory(category); markDirectory(category.id) }
   }
-  requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant', block: 'start' }))
+  scrollToProtocol(target, { smooth })
 }
 
 categoryButtons.forEach((button) => {
@@ -79,7 +95,7 @@ sectionButtons.forEach((button) => {
     openPanel(panel)
     window.history.replaceState(null, '', `#${panel.id}`)
     panel.querySelector('h2').focus({ preventScroll: true })
-    panel.scrollIntoView({ behavior: 'instant', block: 'start' })
+    scrollToProtocol(panel)
   })
 })
 
@@ -91,8 +107,8 @@ document.querySelectorAll('.protocol-back').forEach((button) => {
     selectCategory(category)
     markDirectory(category.id)
     window.history.replaceState(null, '', `#${category.id}`)
-    index.focus()
-    index.scrollIntoView({ behavior: 'instant', block: 'center' })
+    index.focus({ preventScroll: true })
+    scrollToProtocol(index, { block: 'center' })
   })
 })
 
@@ -103,6 +119,6 @@ directoryLinks.forEach((link) => {
     revealFragment()
   })
 })
-window.addEventListener('hashchange', revealFragment)
-window.addEventListener('popstate', revealFragment)
-revealFragment()
+window.addEventListener('hashchange', () => revealFragment())
+window.addEventListener('popstate', () => revealFragment())
+revealFragment(false)
