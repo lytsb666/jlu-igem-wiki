@@ -62,7 +62,7 @@ for start,(anchor,label) in top.items():
     children=[f'<li><a href="#{a}">{escape(t)}</a></li>' for i,(a,t) in sub.items() if start<i<end]
     toc.append(f'<div><a href="#{anchor}">{escape(label)}</a>'+('<ul>'+''.join(children)+'</ul>' if children else '')+'</div>')
 markup=['<header class="hw-intro"><p class="hw-eyebrow">'+escape(blocks[0]['text'])+'</p><h2>'+escape(blocks[1]['text'])+'</h2></header>',
-        '<div class="hw-layout"><aside class="page-toc hw-directory" aria-label="Hardware sections"><nav aria-label="Hardware chapters">'+''.join(toc)+'</nav><a class="hw-backtop" href="#page-top">Back to top ↑</a></aside><article class="hw-article">']
+        '<div class="hw-layout"><aside class="page-toc hw-directory" aria-label="Hardware sections"><nav aria-label="Hardware chapters">'+''.join(toc)+'</nav></aside><article class="hw-article">']
 skip={0,1,173,174,175,182}
 open_section=False
 table_titles={149:'Table 1. Hardware Requirements of the Detection System',153:'Table 3. ByeGerm 1.0 Total Device Cost Summary',

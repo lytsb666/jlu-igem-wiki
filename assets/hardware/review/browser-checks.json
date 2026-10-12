@@ -4,45 +4,317 @@
       "width": 1440,
       "overflow": 0,
       "tocHeading": false,
-      "backToTop": 1,
+      "backToTop": 0,
       "coverLeft": 0,
       "coverRight": 1440,
       "clientWidth": 1440,
       "brokenLoadedImages": [],
-      "bodySize": "16px"
+      "bodySize": "16px",
+      "contentCards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "52px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        }
+      ]
     },
     {
       "width": 900,
       "overflow": 0,
       "tocHeading": false,
-      "backToTop": 1,
+      "backToTop": 0,
       "coverLeft": 0,
       "coverRight": 900,
       "clientWidth": 900,
       "brokenLoadedImages": [],
-      "bodySize": "16px"
+      "bodySize": "16px",
+      "contentCards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "24px",
+          "padding": "36px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        }
+      ]
     },
     {
       "width": 390,
       "overflow": 0,
       "tocHeading": false,
-      "backToTop": 1,
+      "backToTop": 0,
       "coverLeft": 0,
       "coverRight": 390,
       "clientWidth": 390,
       "brokenLoadedImages": [],
-      "bodySize": "16px"
+      "bodySize": "16px",
+      "contentCards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        }
+      ]
     },
     {
       "width": 320,
       "overflow": 0,
       "tocHeading": false,
-      "backToTop": 1,
+      "backToTop": 0,
       "coverLeft": 0,
       "coverRight": 320,
       "clientWidth": 320,
       "brokenLoadedImages": [],
-      "bodySize": "16px"
+      "bodySize": "16px",
+      "contentCards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "radius": "18px",
+          "padding": "24px 19px",
+          "shadow": "rgba(111, 78, 55, 0.12) 0px 18px 48px 0px"
+        }
+      ]
     }
   ],
   "documents": [
@@ -104,10 +376,7 @@
     }
   ],
   "videoPlayback": true,
-  "backToTop": {
-    "scrollY": 0,
-    "hash": "#page-top"
-  },
+  "sidebarBackToTopRemoved": true,
   "judging": {
     "url": "http://127.0.0.1:5208/Instrument/hardware.html?test=1&nav=judging#hw-costs",
     "queryAndHashPreserved": true,

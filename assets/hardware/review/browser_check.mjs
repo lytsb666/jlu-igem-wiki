@@ -26,14 +26,24 @@ try{
       coverLeft:document.querySelector('.image-page-hero').getBoundingClientRect().left,
       coverRight:document.querySelector('.image-page-hero').getBoundingClientRect().right,
       clientWidth:document.documentElement.clientWidth,brokenLoadedImages:[...document.images].filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src),
-      bodySize:getComputedStyle(document.querySelector('.hw-section p')).fontSize}))
+      bodySize:getComputedStyle(document.querySelector('.hw-section p')).fontSize,
+      contentCards:[...document.querySelectorAll('.hw-intro,.hw-section')].map(el=>({
+        background:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).borderRadius,
+        padding:getComputedStyle(el).padding,shadow:getComputedStyle(el).boxShadow}))}))
     if(result.overflow) console.log(JSON.stringify(await page.evaluate(()=>({width:innerWidth,main:getComputedStyle(document.querySelector('main')).width,grid:getComputedStyle(document.querySelector('.hw-layout')).gridTemplateColumns,sheets:[...document.styleSheets].map(s=>s.href),wide:[...document.querySelectorAll('body *')].map(el=>({tag:el.tagName,cls:el.className,right:el.getBoundingClientRect().right,width:el.getBoundingClientRect().width,src:el.getAttribute('src')})).filter(x=>x.right>document.documentElement.clientWidth+2).sort((a,b)=>b.right-a.right).slice(0,12)})),null,2))
-    assert.equal(result.overflow,0);assert.equal(result.tocHeading,false);assert.equal(result.backToTop,1)
+    assert.equal(result.overflow,0);assert.equal(result.tocHeading,false);assert.equal(result.backToTop,0)
+    assert.equal(result.contentCards.length,11)
+    for(const card of result.contentCards){
+      assert.equal(card.background,'rgb(255, 255, 255)');assert(parseFloat(card.radius)>0)
+      assert(parseFloat(card.padding)>0);assert.notEqual(card.shadow,'none')
+    }
     assert.equal(result.brokenLoadedImages.length,0);assert(Math.abs(result.coverRight-result.clientWidth)<1);assert.equal(result.coverLeft,0)
     report.responsive.push(result)
-    if(width===390){await page.locator('#hw-introduction').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(scratch,'mobile-content.png')})}
+    if(width===390){await page.locator('#hw-introduction > h2').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(scratch,'mobile-content.png')})}
   }
   await page.setViewportSize({width:1440,height:1000})
+  await page.locator('#hw-introduction > h2').scrollIntoViewIfNeeded()
+  await page.screenshot({path:resolve(scratch,'desktop-content.png')})
   await page.locator('img[alt^="Figure 2."]').screenshot({path:resolve(scratch,'timeline.png')})
   await page.locator('img[alt^="Figure 23."]').screenshot({path:resolve(scratch,'cost-chart.png')})
   await page.locator('.hw-cost-detail').first().locator('summary').click()
@@ -75,9 +85,7 @@ try{
   await first.evaluate(el=>el.pause())
   report.videoPlayback=true
   for(const [n,v] of report.videos.entries())assert(Math.abs(v.duration-manifest.videos[n].duration_seconds)<.2)
-  await page.locator('.hw-backtop').click()
-  await page.waitForFunction(()=>scrollY===0)
-  report.backToTop={scrollY:await page.evaluate(()=>scrollY),hash:new URL(page.url()).hash}
+  report.sidebarBackToTopRemoved=await page.locator('.hw-backtop').count()===0
   await page.goto(base+'/Judging/hardware.html?test=1#hw-costs',{waitUntil:'domcontentloaded'})
   await page.waitForURL('**/Instrument/hardware.html?test=1&nav=judging#hw-costs')
   await page.locator('#igem-loader').waitFor({state:'hidden',timeout:20000})
@@ -86,5 +94,5 @@ try{
   if(errors.length)console.log(JSON.stringify(report.failedRequests,null,2))
   assert.deepEqual(errors,[])
   writeFileSync(resolve(root,'assets/hardware/review/browser-checks.json'),JSON.stringify(report,null,2)+'\n')
-  console.log('Hardware browser checks passed: four widths, document hashes, inline scroll, video playback, cost disclosure, top link and Judging redirect.')
+  console.log('Hardware browser checks passed: white content cards and no sidebar top link at four widths, document hashes, inline scroll, video playback, cost disclosure and Judging redirect.')
 }finally{await browser.close()}

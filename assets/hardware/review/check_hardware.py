@@ -39,7 +39,7 @@ assert len(page.xpath('//video[@controls and @playsinline and @preload="none"]')
 assert not page.xpath('//main//video[@autoplay]')
 assert len(page.xpath('//div[contains(@class,"hw-pdf-scroll")]'))==2
 assert [len(v.xpath('.//img')) for v in page.xpath('//div[contains(@class,"hw-pdf-scroll")]')]==[6,10]
-assert len(page.xpath('//aside//a[@href="#page-top"]'))==1
+assert not page.xpath('//aside//a[@href="#page-top"]')
 assert 'On this page' not in page.xpath('//aside')[0].text_content()
 ids=page.xpath('//@id');assert len(ids)==len(set(ids))
 assert all(h[1:] in ids for h in page.xpath('//a[starts-with(@href,"#")]/@href'))
@@ -67,7 +67,7 @@ assert all(allowed(name) for name in files),files
 result={'source_paragraphs_verified':coverage,'explicit_editorial_indices':sorted(changed),'source_table_rows':[len(t) for t in source_tables],
  'figures':figure_numbers,'comment_requirements':22,'chapters':9,'references':5,'reproduction_pages':[6,10],
  'user_manual_pages':[4,5],'cost_detail_tables_closed':2,'pending_result_images':2,'videos_complete':3,
- 'pdf_original_hashes_match':True,'local_resources_checked':checked,'unique_ids':len(ids),
+ 'pdf_original_hashes_match':True,'local_resources_checked':checked,'unique_ids':len(ids),'sidebar_back_to_top_removed':True,
  'navbar_loading_footer_unchanged':True,'software_model_and_public_files_unchanged':True,'scope_passed':True}
 (ROOT/'assets/hardware/review/content-checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Complete unchanged prose, all table cells, 23 figures, original PDFs, full videos, comments, links and protected shared components passed.')
