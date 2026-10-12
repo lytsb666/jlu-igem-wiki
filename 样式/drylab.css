@@ -1124,3 +1124,6 @@ body.drylab-page {
   :root body main .page-toc > .toc-kicker { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
   :root body main .page-toc a { overflow-wrap:anywhere; }
 }
+
+/* Reference numbering matches the bracketed citations in the manuscript. */
+body.model-revision-page main .model-references > li::marker { content: "[" counter(list-item) "] "; }
