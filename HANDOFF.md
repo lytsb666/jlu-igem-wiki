@@ -1,12 +1,12 @@
 # JLU-SPH Wiki 项目交接
 
-更新：2026-10-10（Asia/Shanghai）。00 已接管并完成最新六项的代码修改，保留并一并提交此前未提交的公共格式、导航、Model 和 Software 成果。实际基线以 `git rev-parse HEAD`、`git status` 为准。
+更新：2026-10-12（Asia/Shanghai）。最新业务代码基线为 `4b9dc184ea01710f3d778446ed962e78c50fc5bc`，已由 00 同步到 01～08、10 全部独立 worktree，并保留各自分支和历史。本交接的同步状态更新也会提交并同步；最终基线以最新同步报告、`git rev-parse HEAD`、`git status` 为准。
 
 ## 1. 仓库与操作边界
 
 - 主仓库 / 00：`D:\JLU—Wiki\IGEMwiki\Wiki`，分支保持 `feat/wiki-ux-redesign`。
 - 接管时 HEAD：`85a0dfc1cf1fef8f8becb84dd5a3b552867e567d`；它是旧基线，不包含此前工作区成果。
-- 本轮新基线的完整提交 hash 和逐 worktree 同步结果记录在仓库外 `D:\JLU—Wiki\IGEMwiki\tmp\handoff-2026-10-10\sync-report.json`。
+- 最新统一基线的完整提交 hash、恢复 tag 和逐 worktree 同步结果记录在仓库外 `D:\JLU—Wiki\IGEMwiki\tmp\worktree-sync-2026-10-12\sync-report.json`。10 月 10 日的同步报告只保留为历史记录，不代表当前状态。
 - 早于本轮的未跟踪 `JLU_WIKI_CONTROL_LEDGER.md`、`assets/human-practice/review-2026-10-03/` 原样保留，不混入本轮提交。
 - 本轮没有 push、Netlify 发布或官方站部署。
 - 官方仓库 `D:\JLU—Wiki\IGEMwiki\official-jlu-sph` 未动；其维护页任务仍搁置，不能继续上线。
@@ -59,21 +59,25 @@
 
 ## 5. Worktree 检查和同步
 
-接管检查及最终同步时九个开发 worktree 均无未提交修改。05 / 06 / 07 / 10 已快进包含新基线，分支名保持不变；其余五个的预合并有冲突，未启动实际合并、未修改文件。完整 hash 和预检输出见 `sync-report.json`。
+2026-10-12 同步前九个开发 worktree 均无未提交修改。00 已为每个原 HEAD 建立独立恢复 tag，再进行正常合并或快进更新；未执行 reset、clean、stash 或强推。
 
-| Worktree | 分支 | 本轮安全同步策略 |
+01 / 02 / 03 / 04 / 08 的冲突来自此前已 cherry-pick 整合的旧成果及 00 后续修改；00 核对提交映射与预合并后，仅对已审查的冲突文件采用最新集成版本。两代 PDF 保留最新 Pages 兼容压缩版，成员确认信息、首页新叙事、科研与导航修复均保留。旧分支历史和恢复点完整保留。
+
+| Worktree | 分支 | 最新同步结果 |
 | --- | --- | --- |
-| 01-homepage | codex/01-homepage | 预合并有 Homepage HTML / 动画脚本 / CSS 冲突，保留现场，不同步 |
-| 02-team | codex/02-team | 预合并有成员数据、照片映射、HTML / CSS / 脚本冲突，保留现场，不同步 |
-| 03-research | codex/03-research | 预合并 Engineering 冲突，保留现场，不同步 |
-| 04-ihp | codex/04-ihp | 与旧 HEAD 预合并一致，但新基线在 Collaboration 目录包装处冲突，保留现场，不同步 |
-| 05-education | codex/05-education | 已快进新基线，工作区干净 |
-| 06-inclusivity | codex/06-inclusivity | 已快进新基线，工作区干净 |
-| 07-entrepreneurship | codex/07-entrepreneurship | 已快进新基线，工作区干净 |
-| 08-instrument | codex/08-instrument | 预合并 Model / Software CSS add/add 冲突，保留现场，不同步 |
-| 10-deploy | codex/10-deploy | 已快进新基线，工作区干净；未部署 |
+| 01-homepage | codex/01-homepage | 已正常合并，历史保留，工作区干净 |
+| 02-team | codex/02-team | 已正常合并，历史保留，工作区干净 |
+| 03-research | codex/03-research | 已正常合并，历史保留，工作区干净 |
+| 04-ihp | codex/04-ihp | 已正常合并，历史保留，工作区干净 |
+| 05-education | codex/05-education | 已快进更新，工作区干净 |
+| 06-inclusivity | codex/06-inclusivity | 已快进更新，工作区干净 |
+| 07-entrepreneurship | codex/07-entrepreneurship | 已快进更新，工作区干净 |
+| 08-instrument | codex/08-instrument | 已正常合并，历史保留，工作区干净 |
+| 10-deploy | codex/10-deploy | 已快进更新，工作区干净；未部署 |
 
-这些历史分叉包括被 cherry-pick 的等效提交，不能把所有独有提交当作尚未集成。01 / 02 / 03 / 04 / 08 暂不能按新公共层基线继续开发；后续需明确处理冲突，保护 00 已集成且更新的内容。
+每个 worktree 的完整跟踪文件树均与最新主控基线一致，均包含主控基线和各自同步前的 HEAD；因为保留了合并历史，HEAD 可以不同。所有对话现在可以从最新基线继续开发：先重读本文件，保持自己的目录和分支，仅修改获准模块文件；公共层和跨模块整合交 00，不自行合并其他 Agent。
+
+最新业务基线的隔离 Vite 构建通过：25 个 HTML 入口、1427 个引用、0 缺失资源。同步本身不修改页面或设计，也不代表补做了此前未完成的全站视觉验收。本轮没有 push、部署或修改官方仓库。
 
 ## 6. 架构、关键文件与后续入口
 
