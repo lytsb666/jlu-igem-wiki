@@ -7,6 +7,9 @@
 }
 
 .protocol-main [hidden] { display: none !important; }
+.protocol-main :is(.protocol-card, .protocol-index-button, .protocol-subsection) {
+  scroll-margin-top: 90px;
+}
 
 .protocol-page-heading {
   padding-block: 0 24px;
@@ -125,19 +128,20 @@
 }
 
 .protocol-back:hover { background: #f6eee7; }
-.protocol-document { min-width: 0; }
+.protocol-document { min-width: 0; overflow-wrap: anywhere; }
 .protocol-materials { border-bottom: 1px solid var(--border); }
 .protocol-materials summary { padding: 20px 0; cursor: pointer; }
 .protocol-materials ul { columns: 3 220px; padding: 0 0 24px 28px; }
 .protocol-materials li { padding: 4px 14px 4px 0; break-inside: avoid; }
 .protocol-system-heading { margin: 32px 0 20px; }
 .protocol-empty { color: var(--secondary); font-style: italic; margin: 12px 0 24px; }
-.protocol-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+.protocol-table-wrap { width: 100%; max-width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
 .protocol-table-wrap table { width: 100%; min-width: 640px; border-collapse: collapse; }
-.protocol-table-wrap th { background: var(--text); color: #fff; text-align: left; }
+.protocol-table-wrap thead th { background: var(--text); color: #fff; text-align: left; }
+.protocol-table-wrap tbody th { text-align: left; font-weight: 400; }
 .protocol-table-wrap :is(th, td) { padding: 14px 18px; border: 1px solid var(--border); vertical-align: top; }
-.protocol-table-wrap th:nth-child(1) { width: 25%; }
-.protocol-table-wrap th:nth-child(2) { width: 27%; }
+.protocol-reaction-table thead th:nth-child(1) { width: 25%; }
+.protocol-reaction-table thead th:nth-child(2) { width: 27%; }
 .protocol-table-wrap tbody tr:nth-child(even) { background: #f6eee7; }
 .protocol-subsection { margin-top: 36px; padding-top: 30px; border-top: 1px solid var(--border); }
 .protocol-subsection h3 { margin: 0 0 22px; }
@@ -172,3 +176,60 @@
 @media (prefers-reduced-motion: reduce) {
   .protocol-card { transition: none; }
 }
+
+
+/* Research manuscript typography; limited to this page's main content. */
+:root body.research-manuscript main { color:#7D521D; font-family:"Times New Roman",Times,serif; }
+:root body.research-manuscript main :is(p,li,figcaption,th,td,summary) { font-size:1rem !important; line-height:1.65 !important; color:#7D521D; }
+:root body.research-manuscript main h2 { font-size:1.833rem !important; color:#6A3F24; font-weight:700; line-height:1.3 !important; }
+:root body.research-manuscript main :is(h3,.research-result-stage>summary,.research-reference>summary) { font-size:1.333rem !important; color:#843F0B; line-height:1.4 !important; }
+:root body.research-manuscript main h4 { font-size:1.167rem !important; color:#CB8611; line-height:1.4 !important; }
+:root body.research-manuscript main h5 { font-size:1.167rem !important; color:#DEAF81; line-height:1.4 !important; }
+:root body.research-manuscript main .research-figure { margin:1.5rem 0 2rem; text-align:center; }
+:root body.research-manuscript main .research-figure img { display:block; width:auto; height:auto; max-width:100%; max-height:46rem; object-fit:contain; margin:auto; }
+:root body.research-manuscript main .research-chart img { width:auto !important; height:auto; max-width:min(80%,16rem); max-height:12rem; }
+:root body.research-manuscript main :is(.research-figure figcaption,.research-table-caption) { color:#7D521D !important; font-size:1rem !important; font-weight:700; text-align:center !important; margin:.75rem 0; }
+:root body.research-manuscript main .research-table-wrap { max-width:48rem; width:100%; margin:.75rem auto 1.5rem; overflow:auto; border:1px solid #d9c4b4; border-radius:8px; }
+:root body.research-manuscript main .research-table { width:100%; min-width:28rem; border-collapse:collapse; }
+:root body.research-manuscript main .research-table :is(th,td) { padding:.45rem .6rem; font-size:.9375rem !important; border:1px solid #d9c4b4; vertical-align:middle; overflow-wrap:anywhere; }
+:root body.research-manuscript main .research-table thead th { background:#6A3F24; color:#fff; }
+:root body.research-manuscript main .research-table tbody th { background:#f5ece5; color:#7D521D; }
+:root body.research-manuscript main .research-table tbody tr:nth-child(even) td { background:#faf6f2; }
+:root body.research-manuscript main .research-reference { border:1px solid #d9c4b4; border-radius:12px; padding:1rem; background:#fff; }
+:root body.research-manuscript main summary { cursor:pointer; }
+:root body.research-manuscript main .research-original:focus-visible { outline:3px solid #CB8611; outline-offset:4px; }
+:root body.research-manuscript main .research-stage-body { padding:1rem clamp(.75rem,2vw,2rem); }
+:root body.research-manuscript main .research-result-stage { margin:1.25rem 0; }
+:root body.research-manuscript main .research-section>h2 { margin-top:0; }
+:root body.research-manuscript main .legacy-source-anchor { display:block; scroll-margin-top:7rem; }
+:root body.research-manuscript main [id] { scroll-margin-top:7rem; }
+@media(min-width:901px) {
+ :root body.research-manuscript main .lab-layout { grid-template-columns:minmax(330px,370px) minmax(0,1fr); gap:clamp(24px,3vw,48px); }
+ :root body.research-manuscript main .page-toc { padding:28px; border-width:90px 54px; border-image-width:90px 54px; border-image-slice:400 250 400 250 fill; background:transparent; box-shadow:none; backdrop-filter:none; height:calc(100svh - 108px); max-height:none; overflow:visible; }
+ :root body.research-manuscript main .page-toc>nav { position:absolute; inset:20% 12%; margin:0; width:auto; height:auto; max-height:none; overflow-x:hidden; overflow-y:auto; }
+ :root body.research-manuscript main .page-toc>.toc-kicker { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+}
+@media(max-width:900px) { :root body.research-manuscript main .lab-layout { grid-template-columns:1fr; } }
+
+/* Protocol retains its existing selectors and adds the requested scroll directory. */
+.protocol-main .protocol-content { min-width:0; background:#fff; padding:clamp(16px,2vw,32px); border:1px solid #d9c4b4; border-radius:22px; }
+.protocol-main .protocol-card { min-height:120px; padding:24px 30px; }
+:root body.research-manuscript .protocol-main .protocol-card-label { font-size:1.333rem !important; }
+.protocol-main .protocol-grid { gap:18px; }
+.protocol-main .protocol-card-toggle { right:15px; bottom:12px; }
+.protocol-main .protocol-panel { margin-top:2rem; padding:clamp(12px,2vw,24px); }
+.protocol-main .protocol-table-wrap { width:100%; max-width:44rem; margin:1rem auto 1.5rem; }
+:root body.research-manuscript .protocol-main .protocol-table-wrap :is(th,td) { padding:.45rem .6rem; font-size:.9375rem !important; line-height:1.45 !important; }
+.protocol-main .protocol-table-wrap table { min-width:26rem; }
+.protocol-main .protocol-toc a.is-active { color:#843F0B; background:#deaf8150; }
+@media(max-width:900px) { .protocol-main .protocol-toc { position:static; max-height:none; } }
+
+:root body.research-manuscript main .page-toc nav { overflow-x:hidden; }
+:root body.research-manuscript main .page-toc a { overflow-wrap:anywhere; }
+
+:root body.research-manuscript .protocol-main .protocol-table-wrap thead th { color:#fff !important; background:#6A3F24; }
+
+/* Reserve a generous cover area without inventing a manuscript image. */
+.protocol-main { margin-top:72px; }
+.protocol-main .protocol-cover-space { display:flex; align-items:flex-end; min-height:clamp(280px,36vw,520px); padding:32px 0; margin-bottom:36px; }
+@media(max-width:560px) { .protocol-main { margin-top:72px; } .protocol-main .protocol-cover-space { min-height:280px; } }

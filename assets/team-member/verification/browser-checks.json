@@ -1,0 +1,147 @@
+{
+  "desktopFilters": [
+    {
+      "advisors": false,
+      "client": 1425,
+      "count": 6,
+      "flipped": 0,
+      "selected": "Wet Lab",
+      "width": 1425
+    },
+    {
+      "advisors": false,
+      "client": 1425,
+      "count": 5,
+      "flipped": 0,
+      "selected": "Dry Lab",
+      "width": 1425
+    },
+    {
+      "advisors": false,
+      "client": 1425,
+      "count": 8,
+      "flipped": 0,
+      "selected": "Human Practices",
+      "width": 1425
+    },
+    {
+      "advisors": false,
+      "client": 1425,
+      "count": 3,
+      "flipped": 0,
+      "selected": "Hardware & Wiki",
+      "width": 1425
+    },
+    {
+      "advisors": false,
+      "client": 1425,
+      "count": 5,
+      "flipped": 0,
+      "selected": "Visual Design",
+      "width": 1425
+    },
+    {
+      "advisors": true,
+      "client": 1425,
+      "count": 0,
+      "flipped": 0,
+      "selected": "Advisors",
+      "width": 1425
+    },
+    {
+      "advisors": true,
+      "client": 1425,
+      "count": 26,
+      "flipped": 0,
+      "selected": "All",
+      "width": 1425
+    }
+  ],
+  "desktopReading": {
+    "allSpecificTasks": 186,
+    "endVisible": true,
+    "expanded": true,
+    "flipped": true,
+    "overflow": 0,
+    "readingHeight": 651,
+    "returnVisible": true,
+    "scrollHeight": 3133,
+    "scrollTop": 2481.71435546875,
+    "viewport": [
+      1440,
+      900
+    ]
+  },
+  "mobileFilters": [
+    {
+      "selected": "Wet Lab",
+      "count": 6,
+      "advisors": false,
+      "overflow": 0
+    },
+    {
+      "advisors": false,
+      "count": 5,
+      "overflow": 0,
+      "selected": "Dry Lab"
+    },
+    {
+      "advisors": false,
+      "count": 8,
+      "overflow": 0,
+      "selected": "Human Practices"
+    },
+    {
+      "advisors": false,
+      "count": 3,
+      "overflow": 0,
+      "selected": "Hardware & Wiki"
+    },
+    {
+      "advisors": false,
+      "count": 5,
+      "overflow": 0,
+      "selected": "Visual Design"
+    },
+    {
+      "advisors": true,
+      "count": 0,
+      "overflow": 0,
+      "selected": "Advisors"
+    },
+    {
+      "advisors": true,
+      "count": 26,
+      "overflow": 0,
+      "selected": "All"
+    }
+  ],
+  "mobileReading": {
+    "endVisible": true,
+    "expanded": true,
+    "flipped": true,
+    "font": "20px",
+    "height": 554,
+    "overflow": 0,
+    "reducedMotion": false,
+    "reducedRules": [
+      "@media (prefers-reduced-motion: reduce) {\n  .member-card__rotor { transition: none; transform: none !important; }\n  .member-card__back { transform: none; }\n  .member-card__front[aria-hidden=\"true\"], .member-card__back[aria-hidden=\"true\"] { visibility: hidden; }\n  .team-page { scroll-behavior: auto; }\n}"
+    ],
+    "scrollHeight": 3656,
+    "scrollTop": 3101.71435546875,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  "mobileReturn": {
+    "flipped": 0,
+    "focus": "member-card__front",
+    "member": "zhiyuan-jin"
+  },
+  "all41PhotoMappingsMatchBuild": true,
+  "console": [],
+  "keyboard": "Enter and Space open; Tab reaches reading and native summary; Return expands; End/Ctrl+End reaches end; Escape returns focus to front",
+  "reducedMotionValidation": "Loaded Member-specific media rule verified. Browser/system preference emulation is unavailable in this session; reduce-mode runtime has not been claimed.",
+  "touchValidation": "390px click interaction verified; no physical touch device used."
+}

@@ -1,0 +1,59 @@
+{
+  "desktopAnchors": [
+    {
+      "current": "#summits",
+      "focused": "summits",
+      "hash": "#summits",
+      "id": "summits",
+      "navTop": 84,
+      "top": 101.35714721679688
+    },
+    {
+      "current": "#drylab",
+      "focused": "drylab",
+      "hash": "#drylab",
+      "id": "drylab",
+      "navTop": 84,
+      "top": 102.53572082519533
+    },
+    {
+      "current": "#knowledge",
+      "focused": "knowledge",
+      "hash": "#knowledge",
+      "id": "knowledge",
+      "navTop": 84,
+      "top": 102.58036041259766
+    },
+    {
+      "current": "#community",
+      "focused": "community",
+      "hash": "#community",
+      "id": "community",
+      "navTop": 84,
+      "top": 103.83036041259766
+    }
+  ],
+  "tablet1024": {
+    "clientWidth": 1009,
+    "contentLeft": 243.7678680419922,
+    "direction": "column",
+    "documentWidth": 1009,
+    "navRight": 218.16965866088867,
+    "width": 1024,
+    "zjutColumns": "678.482px"
+  },
+  "mobile390DirectLink": {
+    "clientWidth": 375,
+    "current": "#summits",
+    "direction": "row",
+    "documentWidth": 375,
+    "targetTop": 160.10714721679688,
+    "width": 390
+  },
+  "mobileCommunity": {
+    "current": "#community",
+    "hash": "#community",
+    "top": 163.27679443359375
+  },
+  "console": []
+}

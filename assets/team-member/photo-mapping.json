@@ -1,0 +1,1090 @@
+{
+  "photoSource": "C:\\Users\\UserTech\\Desktop\\分组\\个人照分组",
+  "contributionSource": "C:\\Users\\UserTech\\Desktop\\分组\\Team Member Contribution分组",
+  "records": [
+    {
+      "id": "ziqiao-he",
+      "name": "Ziqiao He",
+      "photoFile": "ad/何梓侨（ad）.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/Advisor-何梓侨.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        384,
+        3200,
+        4384
+      ],
+      "originalSize": [
+        3200,
+        4800
+      ],
+      "originalSha256": "5ba26970c80562333994be39111ff676273eeaad75457f3d73c2f28d85adfa71",
+      "webFile": "assets/team-member/portraits/ziqiao-he.webp",
+      "webBytes": 45968
+    },
+    {
+      "id": "lanchao-sun",
+      "name": "Lanchao Sun",
+      "photoFile": "ad/孙兰超（ad）.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/Advisor  孙兰超.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        364,
+        3467,
+        4698
+      ],
+      "originalSize": [
+        3467,
+        5201
+      ],
+      "originalSha256": "ca71ea3f2c45f42b234a1e1e773df27f07980ca25e59adda8aba854d7ee87cbf",
+      "webFile": "assets/team-member/portraits/lanchao-sun.webp",
+      "webBytes": 46748
+    },
+    {
+      "id": "sen-liang",
+      "name": "Sen Liang",
+      "photoFile": "ad/梁森ad.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/梁森.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "47f6f094b2a4ef4c8383de4ef700d366acbbbfc8f70a57dc782af8bd4d9ea6d3",
+      "webFile": "assets/team-member/portraits/sen-liang.webp",
+      "webBytes": 48152
+    },
+    {
+      "id": "hanyu-wang",
+      "name": "Hanyu Wang",
+      "photoFile": "ad/王晗宇ad.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/Advisor王晗宇.doc",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        328,
+        2564,
+        3533
+      ],
+      "originalSize": [
+        2564,
+        4096
+      ],
+      "originalSha256": "c27d9dd03b309d8d9cfb3af6837709e5ae9109ee65526d63ab0c76629b1d248b",
+      "webFile": "assets/team-member/portraits/hanyu-wang.webp",
+      "webBytes": 41220
+    },
+    {
+      "id": "luozhao-wang",
+      "name": "Luozhao Wang",
+      "photoFile": "ad/王洛钊ad.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/advisor王洛钊.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        211,
+        1280,
+        1811
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "3fbf8e9ad08efa34aefcdd0366c3f16ccbe438634761316b1df9761eb7303a90",
+      "webFile": "assets/team-member/portraits/luozhao-wang.webp",
+      "webBytes": 40112
+    },
+    {
+      "id": "feiyue-wang",
+      "name": "Feiyue Wang",
+      "photoFile": "ad/王飞跃ad.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/20260924_王飞跃.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        145,
+        1280,
+        1745
+      ],
+      "originalSize": [
+        1280,
+        1745
+      ],
+      "originalSha256": "7e001b0c675bf408fe3f2829029129eb5dd556e536a42e16f00939a9775989b5",
+      "webFile": "assets/team-member/portraits/feiyue-wang.webp",
+      "webBytes": 47252
+    },
+    {
+      "id": "wang-pengtao",
+      "name": "Wang Pengtao",
+      "photoFile": "ad/王鹏涛（ad）.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/王鹏涛-Team Member Contribution.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "b3bef730eec1b9e51b4ba95cb071189c512fa101a62b36fb65049edb9e3ef6e5",
+      "webFile": "assets/team-member/portraits/wang-pengtao.webp",
+      "webBytes": 52884
+    },
+    {
+      "id": "chen-boyuan",
+      "name": "Chen Boyuan",
+      "photoFile": "ad/陈博远（ad）.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/陈博远-Team Member Contribution(1).docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        192,
+        1280,
+        1792
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "fd6f4029dd640e08c179066df8b73c786b5aa3900dd748ee3a83a276a468db70",
+      "webFile": "assets/team-member/portraits/chen-boyuan.webp",
+      "webBytes": 46180
+    },
+    {
+      "id": "ziyun-ma",
+      "name": "Ziyun Ma",
+      "photoFile": "ad/马子云ad.jpg",
+      "photoFolder": "ad",
+      "contributionFile": "ad/马梓云.docx",
+      "currentGroups": [
+        "Advisors"
+      ],
+      "status": "user-confirmed-alias",
+      "cropPixels": [
+        0,
+        230,
+        1280,
+        1830
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "9bf8f49f82689d0b6c8590495c3f70f66dd0d44c7a2cb20e5389ae9a0abf62c3",
+      "webFile": "assets/team-member/portraits/ziyun-ma.webp",
+      "webBytes": 46150,
+      "previousStatus": "pending-00-alias",
+      "previousWebFile": "assets/team-member/pending/ziyun-ma.webp",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
+    },
+    {
+      "id": "haoyang-liu",
+      "name": "Haoyang Liu",
+      "photoFile": "Dry/刘皓阳.jpg",
+      "photoFolder": "Dry",
+      "contributionFile": "Dry/刘皓阳.docx",
+      "currentGroups": [
+        "Dry Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        192,
+        1280,
+        1792
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "f2b5006eab2605c6552c8cafe4d0289d5a450dd4e3f82c5510aa5ac09eab30a5",
+      "webFile": "assets/team-member/portraits/haoyang-liu.webp",
+      "webBytes": 45992
+    },
+    {
+      "id": "guanbo-yin",
+      "name": "Guanbo Yin",
+      "photoFile": "Dry/尹冠博.jpg",
+      "photoFolder": "Dry",
+      "contributionFile": "Dry/drylab尹冠博.docx",
+      "currentGroups": [
+        "Dry Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        154,
+        1280,
+        1754
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "b4d4d6ad1e2705f1fcd0fd33549ecf4c39d07e1450b8fbf02d53084c032728eb",
+      "webFile": "assets/team-member/portraits/guanbo-yin.webp",
+      "webBytes": 49576
+    },
+    {
+      "id": "botao-zhang",
+      "name": "Botao Zhang",
+      "photoFile": "Dry/张博韬.jpg",
+      "photoFolder": "Dry",
+      "contributionFile": "Dry/Drylab张博韬.docx",
+      "currentGroups": [
+        "Dry Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        557,
+        3712,
+        5197
+      ],
+      "originalSize": [
+        3712,
+        5568
+      ],
+      "originalSha256": "ff888221bce132fafcaaa5231adf4f0369b4c20bfef42b14b90a4eff4f25a3c3",
+      "webFile": "assets/team-member/portraits/botao-zhang.webp",
+      "webBytes": 46176
+    },
+    {
+      "id": "ziyan-qin",
+      "name": "Ziyan Qin",
+      "photoFile": "Dry/秦梓严.jpg",
+      "photoFolder": "Dry",
+      "contributionFile": "Dry/秦梓严.docx",
+      "currentGroups": [
+        "Dry Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        960,
+        1373
+      ],
+      "originalSize": [
+        960,
+        1440
+      ],
+      "originalSha256": "3a7ada230dd1365fa63bc5292d363da9b18f6fae68c22baf4ea5990a8b4f30ee",
+      "webFile": "assets/team-member/portraits/ziyan-qin.webp",
+      "webBytes": 44336
+    },
+    {
+      "id": "bowen-xiao",
+      "name": "Bowen Xiao",
+      "photoFile": "Hardware/肖博文.jpg",
+      "photoFolder": "Hardware",
+      "contributionFile": "Hardware/肖博文_Team_Member_Contribution.docx",
+      "currentGroups": [
+        "Hardware & Wiki"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        1580,
+        0,
+        4780,
+        4000
+      ],
+      "originalSize": [
+        6000,
+        4000
+      ],
+      "originalSha256": "c3c889f5428d52b5428ea0971f471174d8f7d71e5c5a775905324e84ba7217c7",
+      "webFile": "assets/team-member/portraits/bowen-xiao.webp",
+      "webBytes": 45166
+    },
+    {
+      "id": "mo-jin",
+      "name": "Mo Jin",
+      "photoFile": "Hardware/金墨.jpg",
+      "photoFolder": "Hardware",
+      "contributionFile": "Hardware/Dry Lab 金墨.docx",
+      "currentGroups": [
+        "Dry Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        545,
+        3305,
+        4677
+      ],
+      "originalSize": [
+        3305,
+        4958
+      ],
+      "originalSha256": "3fbd79afe003df9867e3ed9cb38847cd09684f3d39cd7279d067a019b8885af9",
+      "webFile": "assets/team-member/portraits/mo-jin.webp",
+      "webBytes": 45948,
+      "groupDecision": {
+        "reviewer": "00",
+        "date": "2026-10-03",
+        "resolution": "Keep existing role and groups; explicit contribution role takes precedence over folder placement.",
+        "evidence": "Hardware/Dry Lab 金墨.docx: Team Role is Dry Lab."
+      },
+      "previousStatus": "pending-00-group; photo filename matched"
+    },
+    {
+      "id": "yirui-lu",
+      "name": "Yirui Lu",
+      "photoFile": "Hardware/鲁怡蕊.jpg",
+      "photoFolder": "Hardware",
+      "contributionFile": "Hardware/hardware鲁怡蕊(1).docx",
+      "currentGroups": [
+        "Hardware & Wiki"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        660,
+        4000,
+        5660
+      ],
+      "originalSize": [
+        4000,
+        6000
+      ],
+      "originalSha256": "83029da7faa3be9e2a19f78eb64a1dd01fee1f9dd0173feb56bb95e165d4f5a9",
+      "webFile": "assets/team-member/portraits/yirui-lu.webp",
+      "webBytes": 123998
+    },
+    {
+      "id": "yu-xia",
+      "name": "Yu Xia",
+      "photoFile": "HP/夏宇.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/HP 夏宇.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        246,
+        2730,
+        3658
+      ],
+      "originalSize": [
+        2730,
+        4096
+      ],
+      "originalSha256": "399a7c0751d801c3016ba32ab20e45200be668b1ec9e4033b117b69a1915c8c9",
+      "webFile": "assets/team-member/portraits/yu-xia.webp",
+      "webBytes": 121858
+    },
+    {
+      "id": "wensong-yao",
+      "name": "Wensong Yao",
+      "photoFile": "HP/姚文松.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/姚文松.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        445,
+        3712,
+        5085
+      ],
+      "originalSize": [
+        3712,
+        5568
+      ],
+      "originalSha256": "deab2aa53e35253f02cd6a57539e5eab4d02e7534c22c8601aa19429e5bd122f",
+      "webFile": "assets/team-member/portraits/wensong-yao.webp",
+      "webBytes": 47106
+    },
+    {
+      "id": "tonghui-yin",
+      "name": "Tonghui Yin",
+      "photoFile": "HP/尹桐辉.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/尹桐辉 Team Member Contribution.docx",
+      "currentGroups": [
+        "Human Practices",
+        "Hardware & Wiki"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        134,
+        1280,
+        1734
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "9fa18eca1b5f5068fac7bdea119241de15b01928ce6616e34646aa2f04c5821c",
+      "webFile": "assets/team-member/portraits/tonghui-yin.webp",
+      "webBytes": 50214
+    },
+    {
+      "id": "shunyao-zhang",
+      "name": "Shunyao Zhang",
+      "photoFile": "HP/张瞬尧.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/HP组  张瞬尧.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        390,
+        3712,
+        5030
+      ],
+      "originalSize": [
+        3712,
+        5568
+      ],
+      "originalSha256": "871654f7cb6e73d98c8ffb08f326fa0e12d839bd903e6c332f7d80479e9b1596",
+      "webFile": "assets/team-member/portraits/shunyao-zhang.webp",
+      "webBytes": 52774
+    },
+    {
+      "id": "yujia-yang",
+      "name": "Yujia Yang",
+      "photoFile": "HP/杨雨佳.png",
+      "photoFolder": "HP",
+      "contributionFile": "HP/杨雨佳team member.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        480,
+        4000,
+        5480
+      ],
+      "originalSize": [
+        4000,
+        6000
+      ],
+      "originalSha256": "56bf1923304a5a5700703d3ab855e7c0f6df0c3aef067637797913f46a9c3355",
+      "webFile": "assets/team-member/portraits/yujia-yang.webp",
+      "webBytes": 65070
+    },
+    {
+      "id": "ruiyao-guo",
+      "name": "Ruiyao Guo",
+      "photoFile": "HP/郭睿垚.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/HP+郭睿垚.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        154,
+        1280,
+        1754
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "46847bf48d4d1b53ccb4cb07feb4c967db13695d492534195b56a8e9474c34bd",
+      "webFile": "assets/team-member/portraits/ruiyao-guo.webp",
+      "webBytes": 48240
+    },
+    {
+      "id": "jiale-wei",
+      "name": "Jiale Wei",
+      "photoFile": "HP/韦佳乐.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/HP韦佳乐.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        360,
+        4000,
+        5360
+      ],
+      "originalSize": [
+        4000,
+        6000
+      ],
+      "originalSha256": "186053e4c0e0bea01e59e1a06628c26b48ffaf764f7eb3b41ca15dcb5d0c9664",
+      "webFile": "assets/team-member/portraits/jiale-wei.webp",
+      "webBytes": 164534
+    },
+    {
+      "id": "wenxian-gao",
+      "name": "Wenxian Gao",
+      "photoFile": "HP/高文娴.jpg",
+      "photoFolder": "HP",
+      "contributionFile": "HP/HP组+高文娴.docx",
+      "currentGroups": [
+        "Human Practices"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        540,
+        4000,
+        5540
+      ],
+      "originalSize": [
+        4000,
+        6000
+      ],
+      "originalSha256": "8ee1debaab06d9b2d712527dd008ceb9fc620acce5b0dd22768b3e0f1537e74c",
+      "webFile": "assets/team-member/portraits/wenxian-gao.webp",
+      "webBytes": 189616
+    },
+    {
+      "id": "jingyi-kang",
+      "name": "Jingyi Kang",
+      "photoFile": "Leader/康靖宜（team leader）.jpg",
+      "photoFolder": "Leader",
+      "contributionFile": "Leader/康靖宜.docx",
+      "currentGroups": [
+        "Team Leaders"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        109,
+        904,
+        1239
+      ],
+      "originalSize": [
+        904,
+        1362
+      ],
+      "originalSha256": "064d487d927354137206e7741e0e1a88352c732c9b675ec99dc4e18858786cab",
+      "webFile": "assets/team-member/portraits/jingyi-kang.webp",
+      "webBytes": 36820
+    },
+    {
+      "id": "xiaojie-meng",
+      "name": "Xiaojie Meng",
+      "photoFile": "Wet/孟小杰.png",
+      "photoFolder": "Wet",
+      "contributionFile": "Wet/wetlab 孟小杰.docx",
+      "currentGroups": [
+        "Wet Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        176,
+        1672,
+        2266
+      ],
+      "originalSize": [
+        1672,
+        2508
+      ],
+      "originalSha256": "74c3ea997228a596b4329495cde992980b4415d50d946f94fe23bbc1e343ef05",
+      "webFile": "assets/team-member/portraits/xiaojie-meng.webp",
+      "webBytes": 149338
+    },
+    {
+      "id": "duo-zhang",
+      "name": "Duo Zhang",
+      "photoFile": "Wet/张朵.jpg",
+      "photoFolder": "Wet",
+      "contributionFile": "Wet/Wetlab 张朵.docx",
+      "currentGroups": [
+        "Wet Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        600,
+        4000,
+        5600
+      ],
+      "originalSize": [
+        4000,
+        6000
+      ],
+      "originalSha256": "e5de4fe2a6abfffb5781a36611a962ced940f4316211aabe2e7e3051ce8f8e94",
+      "webFile": "assets/team-member/portraits/duo-zhang.webp",
+      "webBytes": 144412
+    },
+    {
+      "id": "tong-li",
+      "name": "Tong Li",
+      "photoFile": "Wet/李彤.jpg",
+      "photoFolder": "Wet",
+      "contributionFile": "Wet/wet lab 李彤.docx",
+      "currentGroups": [
+        "Wet Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "e87a9e1a7ebc66bdc78183c3441b642e22a341ecbba80feef3dc7d023a7785a8",
+      "webFile": "assets/team-member/portraits/tong-li.webp",
+      "webBytes": 45698
+    },
+    {
+      "id": "zhiyuan-jin",
+      "name": "Zhiyuan Jin",
+      "photoFile": "Wet/金智媛.jpg",
+      "photoFolder": "Wet",
+      "contributionFile": "Wet/Wetlab 金智媛.docx",
+      "currentGroups": [
+        "Wet Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        540,
+        4000,
+        5540
+      ],
+      "originalSize": [
+        4000,
+        6000
+      ],
+      "originalSha256": "93ec4452046bdeca41b074d64e4792bbf245bb6418ccf39fce625301ca2aaf24",
+      "webFile": "assets/team-member/portraits/zhiyuan-jin.webp",
+      "webBytes": 167068
+    },
+    {
+      "id": "hengqi-deng",
+      "name": "Hengqi Deng",
+      "photoFile": "Wet/邓恒奇.jpg",
+      "photoFolder": "Wet",
+      "contributionFile": "Wet/Wet Lab 邓恒奇.docx",
+      "currentGroups": [
+        "Wet Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        557,
+        3712,
+        5197
+      ],
+      "originalSize": [
+        3712,
+        5568
+      ],
+      "originalSha256": "ccc6c0f81411772c5507439abbe3b3a4576612f9bda86b43eaf6040ab36fa045",
+      "webFile": "assets/team-member/portraits/hengqi-deng.webp",
+      "webBytes": 60394
+    },
+    {
+      "id": "ziyi-dong",
+      "name": "Ziyi Dong",
+      "photoFile": "Wet/董梓伊.jpg",
+      "photoFolder": "Wet",
+      "contributionFile": "Wet/Wetlab 董梓伊.docx",
+      "currentGroups": [
+        "Wet Lab"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        390,
+        3712,
+        5030
+      ],
+      "originalSize": [
+        3712,
+        5568
+      ],
+      "originalSha256": "eaa4da13555ed0b04b025745e282a1786fe227c91a297f24993b81b7433e694a",
+      "webFile": "assets/team-member/portraits/ziyi-dong.webp",
+      "webBytes": 41566
+    },
+    {
+      "id": "jiale-zhang",
+      "name": "Jiale Zhang",
+      "photoFile": "美工/张家乐.jpg",
+      "photoFolder": "美工",
+      "contributionFile": "美工/美工组张家乐(1).doc",
+      "currentGroups": [
+        "Visual Design"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "f86582bdeb5739b7d1e26e83eb8c3fd924695ae07b06c29c33f68c88b31671af",
+      "webFile": "assets/team-member/portraits/jiale-zhang.webp",
+      "webBytes": 42862
+    },
+    {
+      "id": "liuyu-yang",
+      "name": "Liuyu Yang",
+      "photoFile": "美工/杨liu玉.jpg",
+      "photoFolder": "美工",
+      "contributionFile": "美工/Team Member-杨鏐玉.docx",
+      "currentGroups": [
+        "Team Leaders"
+      ],
+      "status": "user-confirmed-alias",
+      "cropPixels": [
+        0,
+        327,
+        2181,
+        3053
+      ],
+      "originalSize": [
+        2181,
+        3271
+      ],
+      "originalSha256": "93edf38b0f1093c858ae11146ab0a60bbb24c0343b237ae6cbee4bf605432a34",
+      "webFile": "assets/team-member/portraits/liuyu-yang.webp",
+      "webBytes": 64564,
+      "previousStatus": "pending-00-alias",
+      "previousWebFile": "assets/team-member/pending/liuyu-yang.webp",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      },
+      "groupDecision": {
+        "reviewer": "00",
+        "date": "2026-10-03",
+        "resolution": "Keep existing role and groups; explicit contribution role takes precedence over folder placement.",
+        "evidence": "美工/Team Member-杨鏐玉.docx: Team Role is Student leader; original identity conflict remains recorded."
+      }
+    },
+    {
+      "id": "qianwen-wang",
+      "name": "Qianwen Wang",
+      "photoFile": "美工/王芊雯.jpg",
+      "photoFolder": "美工",
+      "contributionFile": "美工/美工组 王芊雯.docx",
+      "currentGroups": [
+        "Visual Design"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        399,
+        3671,
+        4988
+      ],
+      "originalSize": [
+        3671,
+        5704
+      ],
+      "originalSha256": "43f9041e318550e5609a0b0d60751ff7301850b4ab9885e813c3019c55c2a4e2",
+      "webFile": "assets/team-member/portraits/qianwen-wang.webp",
+      "webBytes": 163602
+    },
+    {
+      "id": "wenqi-ai",
+      "name": "Wenqi Ai",
+      "photoFile": "美工/艾文琦.jpg",
+      "photoFolder": "美工",
+      "contributionFile": "美工/美工组 艾文琦(1).docx",
+      "currentGroups": [
+        "Visual Design"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        378,
+        3599,
+        4877
+      ],
+      "originalSize": [
+        3599,
+        5401
+      ],
+      "originalSha256": "8bc99dcf2a9978ab39d3f8576eb9ce5cdf2850cfe83bfb8a31c92875a65b7584",
+      "webFile": "assets/team-member/portraits/wenqi-ai.webp",
+      "webBytes": 75470
+    },
+    {
+      "id": "chen-xing",
+      "name": "Chen Xing",
+      "photoFile": "美工/邢辰.jpg",
+      "photoFolder": "美工",
+      "contributionFile": "美工/邢辰Team Member Contribution.docx",
+      "currentGroups": [
+        "Visual Design"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        287,
+        2731,
+        3700
+      ],
+      "originalSize": [
+        2731,
+        4096
+      ],
+      "originalSha256": "439fbcb61441fa8bffc26c4ace7cc681636a47780abba6e85cc99e10d91b9db7",
+      "webFile": "assets/team-member/portraits/chen-xing.webp",
+      "webBytes": 59542
+    },
+    {
+      "id": "qianwen-luo",
+      "name": "Qianwen Luo",
+      "photoFile": "美工/骆茜雯.png",
+      "photoFolder": "美工",
+      "contributionFile": "美工/美工 骆茜雯.docx",
+      "currentGroups": [
+        "Visual Design"
+      ],
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        328,
+        2730,
+        3740
+      ],
+      "originalSize": [
+        2730,
+        4096
+      ],
+      "originalSha256": "d5d79c3882dda0960b6d1f3c4a0c149b62ff3e58b0d3c864478b9b587693b45c",
+      "webFile": "assets/team-member/portraits/qianwen-luo.webp",
+      "webBytes": 96180
+    },
+    {
+      "id": "pi-song-xiuling",
+      "name": "Xiuling Song",
+      "photoFile": "PI/宋秀玲（pi）.jpg",
+      "photoFolder": "PI",
+      "contributionFile": null,
+      "currentGroups": [
+        "PI"
+      ],
+      "status": "photo-filename-basic-information",
+      "cropPixels": [
+        166,
+        461,
+        1139,
+        1677
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "4dd1e6148248af63e21daca8b0e38835fc072234d303f048f340ba75658a8810",
+      "webFile": "assets/team-member/portraits/pi-song-xiuling.webp",
+      "webBytes": 50892,
+      "rawName": "宋秀玲",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
+    },
+    {
+      "id": "pi-pang-bo",
+      "name": "Bo Pang",
+      "photoFile": "PI/庞博（pi）.jpg",
+      "photoFolder": "PI",
+      "contributionFile": null,
+      "currentGroups": [
+        "PI"
+      ],
+      "status": "photo-filename-basic-information",
+      "cropPixels": [
+        0,
+        288,
+        1280,
+        1888
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "e46169de9e9f9c01527d621cd14a24b8ebac40f436612a1f0207b05af0c4a490",
+      "webFile": "assets/team-member/portraits/pi-pang-bo.webp",
+      "webBytes": 50672,
+      "rawName": "庞博",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
+    },
+    {
+      "id": "pi-li-jinhua",
+      "name": "Jinhua Li",
+      "photoFile": "PI/李金华（pi）.jpg",
+      "photoFolder": "PI",
+      "contributionFile": null,
+      "currentGroups": [
+        "PI"
+      ],
+      "status": "photo-filename-basic-information",
+      "cropPixels": [
+        525,
+        0,
+        1549,
+        1280
+      ],
+      "originalSize": [
+        1920,
+        1280
+      ],
+      "originalSha256": "2df409e5f5f86fc6d9a2414c67294b30b9314f7db77bf68d3376633c563cdcfe",
+      "webFile": "assets/team-member/portraits/pi-li-jinhua.webp",
+      "webBytes": 43928,
+      "rawName": "李金华",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
+    },
+    {
+      "id": "secondary-pi-wang-juan",
+      "name": "Juan Wang",
+      "photoFile": "Secondary PI/王娟（secondary Pi.jpg",
+      "photoFolder": "Secondary PI",
+      "contributionFile": null,
+      "currentGroups": [
+        "Secondary PI"
+      ],
+      "status": "photo-filename-basic-information",
+      "cropPixels": [
+        486,
+        0,
+        1510,
+        1280
+      ],
+      "originalSize": [
+        1920,
+        1280
+      ],
+      "originalSha256": "8b993237ab326a57c521eee9ee3e2e9eb492e094936c34fb13305e343b03c230",
+      "webFile": "assets/team-member/portraits/secondary-pi-wang-juan.webp",
+      "webBytes": 41068,
+      "rawName": "王娟",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
+    },
+    {
+      "id": "secondary-pi-su-guofan",
+      "name": "Guofan Su",
+      "photoFile": "Secondary PI/苏国范（secondary pi）.jpg",
+      "photoFolder": "Secondary PI",
+      "contributionFile": null,
+      "currentGroups": [
+        "Secondary PI"
+      ],
+      "status": "photo-filename-basic-information",
+      "cropPixels": [
+        506,
+        0,
+        1530,
+        1280
+      ],
+      "originalSize": [
+        1920,
+        1280
+      ],
+      "originalSha256": "726731ad19496cf7a1d77026ebf90fd7a93723213fd8c5f4ebe168f32e50b3cf",
+      "webFile": "assets/team-member/portraits/secondary-pi-su-guofan.webp",
+      "webBytes": 38320,
+      "rawName": "苏国范",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
+    },
+    {
+      "id": "secondary-pi-zhao-chao",
+      "name": "Chao Zhao",
+      "photoFile": "Secondary PI/赵超（secondary Pi）.jpg",
+      "photoFolder": "Secondary PI",
+      "contributionFile": null,
+      "currentGroups": [
+        "Secondary PI"
+      ],
+      "status": "photo-filename-basic-information",
+      "cropPixels": [
+        154,
+        403,
+        1126,
+        1619
+      ],
+      "originalSize": [
+        1280,
+        1920
+      ],
+      "originalSha256": "1566de36519d9e70823c9e59fbad4c0fa357d38ff73e23f2683904720e0f5290",
+      "webFile": "assets/team-member/portraits/secondary-pi-zhao-chao.webp",
+      "webBytes": 57564,
+      "rawName": "赵超",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
+    }
+  ],
+  "userConfirmedAliases": {
+    "liuyu-yang": {
+      "authority": "human user",
+      "date": "2026-10-03",
+      "answer": "两张都对应原成员"
+    },
+    "ziyun-ma": {
+      "authority": "human user",
+      "date": "2026-10-03",
+      "answer": "两张都对应原成员"
+    }
+  }
+}

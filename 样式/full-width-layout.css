@@ -1,4 +1,27 @@
+@import './page-theme.css';
+@import './page-covers.css';
+@import './scroll-navigation.css';
+
 /* Full-width layout and typography shared by every wiki subpage. */
+
+/* Suppress only the ten shared captions; Parts and Our journey keep theirs.
+   Page-owned HTML and navigation accessible names remain intact. */
+body:is([data-page="description"], [data-page="design"], [data-page="safety"], [data-page="measurement"], [data-page="notebook"], [data-page="results"], [data-page="model"]) .page-toc > .toc-kicker,
+body :is(.ihp-toc, .edu-toc) > p,
+body .hp-toc > .hp-toc-title { display: none; }
+
+body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a {
+  transition: color .18s ease, background .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a:is(:hover, :focus-visible) {
+  color: #6f4e37; background: #f7e9d6; box-shadow: inset 3px 0 #9a6742; transform: none;
+}
+body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a:is(.is-active, .active, [aria-current="location"], [aria-current="true"], [aria-current="page"]) {
+  color: #fffaf5; background: #6f4e37; box-shadow: inset 3px 0 #d4a276; transform: none;
+}
+body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a:focus-visible {
+  outline: 2px solid #6f4e37; outline-offset: -2px;
+}
 
 /* Shared desktop frame for in-page navigation. The supplied artwork and its
    reference screenshot identify this asset as the subpage navigation scroll. */
@@ -10,26 +33,42 @@
 
   body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) {
     isolation: isolate;
-    padding: 28px;
+    padding: 18px 12px;
     overflow: visible;
-    border: 90px solid transparent;
+    border: 72px solid transparent;
     border-radius: 0;
-    border-width: 90px 54px;
+    border-width: 72px 38px;
     border-image-source: url('../a  图片/navigation/scroll-frame.png');
     border-image-slice: 400 250 400 250 fill;
-    border-image-width: 90px 54px;
+    border-image-width: 72px 38px;
     border-image-repeat: stretch;
     background: transparent;
     box-shadow: none;
     backdrop-filter: none;
+    top: 84px;
+    max-height: calc(100dvh - 104px);
+    align-self: start;
   }
 
   body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) > nav {
-    max-height: calc(100vh - 480px);
+    max-height: calc(100dvh - 284px);
+    min-height: 64px;
+    width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
     overscroll-behavior: contain;
     scrollbar-width: thin;
+    scrollbar-color: #9a6742 #ead5c2;
+    scrollbar-gutter: stable;
   }
+  body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a {
+    white-space: normal; overflow-wrap: anywhere; min-width: 0;
+  }
+  body :is(.parts-toc, .inc-toc) > nav { max-height: calc(100dvh - 344px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body :is(.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc) a { transition: none; }
 }
 
 body :is(
@@ -117,13 +156,12 @@ body :is(
   }
 }
 
-/* User-specified Chinese type sizes: 小初 = 36pt, 小三 = 15pt,
-   小一 = 24pt. This sheet is only included by subpages, not the home page.
-   Important declarations intentionally supersede the individual page themes. */
+/* Type variables follow the latest supplied 配色.docx. The shared typography
+   layer loaded by style.css also applies this scale to the Homepage. */
 :root {
-  --wiki-body-size: 15pt;
-  --wiki-heading-size: 36pt;
-  --wiki-card-heading-size: 24pt;
+  --wiki-body-size: 12pt;
+  --wiki-heading-size: 22pt;
+  --wiki-card-heading-size: 16pt;
   --wiki-text-leading: 1.3;
 }
 

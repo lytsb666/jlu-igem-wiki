@@ -1,4 +1,5 @@
 /* Software-only presentation. Shared typography, navigation and loading stay upstream. */
+html:has(body.software-page) { scroll-behavior: smooth; }
 .software-page {
   --sw-accent: #166c66;
   --sw-muted: #695c4e;
@@ -239,6 +240,7 @@
   .software-page .sw-actions .sw-button { flex: 1 1 auto; }
 }
 @media (prefers-reduced-motion: reduce) {
+  html:has(body.software-page) { scroll-behavior: auto; }
   .software-page .sw-floating-illustration img { animation: none; transform: none; }
 }
 @media print {
@@ -251,3 +253,19 @@
 
 .software-page .sw-skip-link { position: absolute; z-index: 10; padding: 12px; background: #fff; transform: translateY(-200vh); }
 .software-page .sw-skip-link:focus { position: fixed; top: 70px; left: 16px; transform: none; }
+
+/* The mascot now carries real alpha instead of a black image rectangle. */
+.software-page .sw-floating-illustration img { border-radius: 0; box-shadow: none; background: transparent; }
+.software-page .sw-evidence-case { grid-template-columns: minmax(0, 1fr); }
+.software-page .sw-response-example {
+  margin: 16px 0;
+  padding: 16px 20px;
+  border: 1px solid #d9c1ad;
+  border-radius: 8px;
+  background: #fbf4eb;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+.software-page .sw-code-example pre { background: #080808; color: #eee; }
+.software-page .sw-code-example pre code { color: inherit; }
+.software-page #software-architecture h3 { scroll-margin-top: 110px; }

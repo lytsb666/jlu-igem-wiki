@@ -58,7 +58,17 @@ function setupToc() {
   const activate = (id) => {
     tocLinks.forEach((link) => link.classList.toggle('active', link.hash === `#${id}`))
     const active = linkById.get(id)
-    if (active && toc) active.scrollIntoView({ block: 'nearest', behavior: reducedMotion.matches ? 'auto' : 'smooth' })
+    const nav = active?.closest('nav')
+    if (nav?.clientHeight) {
+      const linkBox = active.getBoundingClientRect()
+      const navBox = nav.getBoundingClientRect()
+      if (linkBox.top < navBox.top || linkBox.bottom > navBox.bottom) {
+        nav.scrollTo({
+          top: nav.scrollTop + linkBox.top - navBox.top - (nav.clientHeight - linkBox.height) / 2,
+          behavior: reducedMotion.matches ? 'instant' : 'smooth',
+        })
+      }
+    }
   }
 
   const observer = new IntersectionObserver(

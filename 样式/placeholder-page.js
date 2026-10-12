@@ -16,7 +16,10 @@ const coverMarkup = coverAssets[cover]
   : ''
 const contentHeadingTag = coverAssets[cover] ? 'h2' : 'h1'
 
-root.innerHTML = `
+if (section === 'Team' && title === 'Attribution') {
+  window.location.replace(new URL('../Team/member.html', window.location.href).href)
+} else {
+  root.innerHTML = `
   <nav class="navbar" aria-label="Primary navigation">
     <div class="nav-links">
       <div class="dropdown nav-home"><a href="../homepage/index.html" class="nav-link">Home</a></div>
@@ -53,7 +56,7 @@ root.innerHTML = `
       </div>
       <div class="dropdown">
         <a href="../Team/member.html" class="nav-link">Team</a>
-        <div class="dropdown-content"><a href="../Team/member.html">Member</a><a href="../Team/attribution.html">Attribution</a></div>
+        <div class="dropdown-content"><a href="../Team/member.html">Member</a></div>
       </div>
       <div class="dropdown">
         <a href="../Eagagement/iHP.html" class="nav-link">Judging</a>
@@ -88,4 +91,5 @@ root.innerHTML = `
     </div>
   </footer>`
 
-await import('./main.js')
+  await import('./main.js')
+}

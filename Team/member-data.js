@@ -1,12 +1,11 @@
-// Generated from the supplied team member Word documents and then normalized.
-// Keep one object per person so future additions do not require HTML changes.
+// Original contribution records preserved; photos mapped from supplied filenames.
 export const teamMembers = [
   {
     "id": "liuyu-yang",
     "name": "Liuyu Yang",
-    "role": "Team Leader",
+    "role": "Visual Design",
     "groups": [
-      "Team Leaders"
+      "Visual Design"
     ],
     "quote": "",
     "introduction": "Hi! I’m Liuyu Yang. This is my second iGEM journey. I’m excited to keep exploring, growing, and creating with my teammates. See you at the Jamboree!",
@@ -34,7 +33,7 @@ export const teamMembers = [
         "detail": "Contributed to the research design and technical roadmap, helping refine the project framework and optimize the overall research strategy."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/liuyu-yang.webp",
     "source": {
       "file": "Team Member-杨鏐玉.docx",
       "rawName": "Jingyi Kang",
@@ -53,7 +52,29 @@ export const teamMembers = [
         "sourceValue": "The Quote field contains a self-introduction and no separate quote.",
         "resolution": "The text is retained as the introduction; quote remains empty."
       }
-    ]
+    ],
+    "photoSource": {
+      "file": "美工/杨liu玉.jpg",
+      "status": "user-confirmed-alias",
+      "cropPixels": [
+        0,
+        327,
+        2181,
+        3053
+      ],
+      "originalSha256": "93edf38b0f1093c858ae11146ab0a60bbb24c0343b237ae6cbee4bf605432a34",
+      "groupReview": "Resolved by 00: original contribution role and groups retained.",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
+    },
+    "roleCorrection": {
+      "date": "2026-10-04",
+      "source": "10.4需求以及改动.docx / user instruction",
+      "note": "Latest user correction supersedes earlier retained source grouping; biography and contribution records are unchanged."
+    }
   },
   {
     "id": "jingyi-kang",
@@ -112,13 +133,24 @@ export const teamMembers = [
         "detail": "Contributed to evaluation forms and application materials, experimental documentation, version control, and coordination of project materials and milestones."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/jingyi-kang.webp",
     "source": {
       "file": "康靖宜.docx",
       "rawName": "Jingyi Kang",
       "rawRole": "Student leader"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Leader/康靖宜（team leader）.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        109,
+        904,
+        1239
+      ],
+      "originalSha256": "064d487d927354137206e7741e0e1a88352c732c9b675ec99dc4e18858786cab"
+    }
   },
   {
     "id": "hengqi-deng",
@@ -171,13 +203,24 @@ export const teamMembers = [
         "detail": "Organized experimental records and raw data, maintained structured datasets for subsequent analysis, and assisted in compiling experimental results for project documentation and presentation."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/hengqi-deng.webp",
     "source": {
       "file": "Wet Lab 邓恒奇.docx",
       "rawName": "Hengqi Deng",
       "rawRole": "Wetlab）"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Wet/邓恒奇.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        557,
+        3712,
+        5197
+      ],
+      "originalSha256": "ccc6c0f81411772c5507439abbe3b3a4576612f9bda86b43eaf6040ab36fa045"
+    }
   },
   {
     "id": "tong-li",
@@ -230,13 +273,24 @@ export const teamMembers = [
         "detail": "Kept laboratory records, documented experimental optimization records and meeting notes during the whole journey."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/tong-li.webp",
     "source": {
       "file": "wet lab 李彤.docx",
       "rawName": "Tong Li",
       "rawRole": "Wetlab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Wet/李彤.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSha256": "e87a9e1a7ebc66bdc78183c3441b642e22a341ecbba80feef3dc7d023a7785a8"
+    }
   },
   {
     "id": "ziyi-dong",
@@ -283,18 +337,29 @@ export const teamMembers = [
         "detail": "Joined project outreach and communication activities, introducing the principle and public health value of our rapid detection technology to the public."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/ziyi-dong.webp",
     "source": {
       "file": "Wetlab 董梓伊.docx",
       "rawName": "Ziyi Dong",
       "rawRole": "Wetlab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Wet/董梓伊.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        390,
+        3712,
+        5030
+      ],
+      "originalSha256": "eaa4da13555ed0b04b025745e282a1786fe227c91a297f24993b81b7433e694a"
+    }
   },
   {
     "id": "zhiyuan-jin",
     "name": "Zhiyuan Jin",
-    "role": "Wet Lab Leader",
+    "role": "Wet Lab",
     "groups": [
       "Wet Lab"
     ],
@@ -342,7 +407,7 @@ export const teamMembers = [
         "detail": "As a core member carrying out wet-lab operations, I continuously documented the reaction system and experimental results for every trial, and analyzed the outcomes obtained on the same day of each experiment."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/zhiyuan-jin.webp",
     "source": {
       "file": "Wetlab 金智媛.docx",
       "rawName": "Zhiyuan Jin",
@@ -355,7 +420,23 @@ export const teamMembers = [
         "sourceValue": "Member",
         "resolution": "Normalized to Wet Lab Leader from the filename and introduction."
       }
-    ]
+    ],
+    "photoSource": {
+      "file": "Wet/金智媛.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        540,
+        4000,
+        5540
+      ],
+      "originalSha256": "93ec4452046bdeca41b074d64e4792bbf245bb6418ccf39fce625301ca2aaf24"
+    },
+    "roleCorrection": {
+      "date": "2026-10-04",
+      "source": "10.4需求以及改动.docx / user instruction",
+      "note": "Latest user correction supersedes earlier retained source grouping; biography and contribution records are unchanged."
+    }
   },
   {
     "id": "xiaojie-meng",
@@ -402,13 +483,24 @@ export const teamMembers = [
         "detail": "Sorted out iGEM safety rules and institutional biosafety requirements, and assisted in checking the compliance of project activities with relevant safety standards."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/xiaojie-meng.webp",
     "source": {
       "file": "wetlab 孟小杰.docx",
       "rawName": "Xiaojie Meng",
       "rawRole": "Wetlab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Wet/孟小杰.png",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        176,
+        1672,
+        2266
+      ],
+      "originalSha256": "74c3ea997228a596b4329495cde992980b4415d50d946f94fe23bbc1e343ef05"
+    }
   },
   {
     "id": "duo-zhang",
@@ -455,20 +547,31 @@ export const teamMembers = [
         "detail": "Contributed to the writing and organization of the Wiki Safety section, including laboratory safety, self-checks, product safety, and other relevant safety information."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/duo-zhang.webp",
     "source": {
       "file": "Wetlab 张朵.docx",
       "rawName": "Duo Zhang",
       "rawRole": "Wetlab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Wet/张朵.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        600,
+        4000,
+        5600
+      ],
+      "originalSha256": "e5de4fe2a6abfffb5781a36611a962ced940f4316211aabe2e7e3051ce8f8e94"
+    }
   },
   {
     "id": "mo-jin",
     "name": "Mo Jin",
-    "role": "Dry Lab",
+    "role": "Hardware & Wiki",
     "groups": [
-      "Dry Lab"
+      "Hardware & Wiki"
     ],
     "quote": "Every step counts.",
     "introduction": "Hi everyone. I am Jin Mo from the School of Public Health at Jilin University. This is my first time participating in iGEM. This competition has been a rewarding journey full of exploration and growth for me. iGEM provides a fantastic platform for me to communicate with iGEMers from different countries and universities. It is inspiring to discuss synthetic biology together with all these passionate minds. I would like to express my sincere gratitude to our instructors for their patient guidance, and to all my teammates for their continuous support, close cooperation and persistent efforts. I look forward to exchanging ideas, learning and growing together with everyone in the iGEM community. See you in Paris!",
@@ -514,7 +617,7 @@ export const teamMembers = [
         "detail": "Contributed to the organization and presentation of analytical and software-related components within the overall detection workflow."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/mo-jin.webp",
     "source": {
       "file": "Dry Lab 金墨.docx",
       "rawName": "Mo Jin",
@@ -527,7 +630,24 @@ export const teamMembers = [
         "sourceValue": "Team Member says 'Mo Jin'; introduction says 'Jin Mo'.",
         "resolution": "Display name follows the Team Member field: Mo Jin."
       }
-    ]
+    ],
+    "photoSource": {
+      "file": "Hardware/金墨.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        545,
+        3305,
+        4677
+      ],
+      "originalSha256": "3fbd79afe003df9867e3ed9cb38847cd09684f3d39cd7279d067a019b8885af9",
+      "groupReview": "Resolved by 00: original contribution role and groups retained."
+    },
+    "roleCorrection": {
+      "date": "2026-10-04",
+      "source": "10.4需求以及改动.docx / user instruction",
+      "note": "Latest user correction supersedes earlier retained source grouping; biography and contribution records are unchanged."
+    }
   },
   {
     "id": "guanbo-yin",
@@ -562,13 +682,24 @@ export const teamMembers = [
         "detail": "contributed to modifying the code for the enzyme-kinetic model and adjusting portions of experimental data."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/guanbo-yin.webp",
     "source": {
       "file": "drylab尹冠博.docx",
       "rawName": "Guanbo Yin",
       "rawRole": "Drylab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Dry/尹冠博.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        154,
+        1280,
+        1754
+      ],
+      "originalSha256": "b4d4d6ad1e2705f1fcd0fd33549ecf4c39d07e1450b8fbf02d53084c032728eb"
+    }
   },
   {
     "id": "botao-zhang",
@@ -621,13 +752,24 @@ export const teamMembers = [
         "detail": "Help draft popular science content, prepare presentation materials, and introduce the application value of our rapid pathogen detection project to the public."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/botao-zhang.webp",
     "source": {
       "file": "Drylab张博韬.docx",
       "rawName": "Botao Zhang",
       "rawRole": "Drylab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Dry/张博韬.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        557,
+        3712,
+        5197
+      ],
+      "originalSha256": "ff888221bce132fafcaaa5231adf4f0369b4c20bfef42b14b90a4eff4f25a3c3"
+    }
   },
   {
     "id": "ziyan-qin",
@@ -682,13 +824,24 @@ export const teamMembers = [
         "detail": "I collected and filtered literature-sourced datasets from GenBank, and computed features as well as annotated metadata for model training."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/ziyan-qin.webp",
     "source": {
       "file": "秦梓严.docx",
       "rawName": "Ziyan Qin",
       "rawRole": "Drylab"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Dry/秦梓严.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        960,
+        1373
+      ],
+      "originalSha256": "3a7ada230dd1365fa63bc5292d363da9b18f6fae68c22baf4ea5990a8b4f30ee"
+    }
   },
   {
     "id": "haoyang-liu",
@@ -729,7 +882,7 @@ export const teamMembers = [
         "detail": "Contributed to the development and application of computational tools for data processing and model-assisted analysis, supporting the integration and optimization of the dry–wet lab workflow."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/haoyang-liu.webp",
     "source": {
       "file": "刘皓阳.docx",
       "rawName": "Haoyang Liu",
@@ -748,7 +901,18 @@ export const teamMembers = [
         "sourceValue": "Member",
         "resolution": "Normalized to Dry Lab from software, model, and data contributions."
       }
-    ]
+    ],
+    "photoSource": {
+      "file": "Dry/刘皓阳.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        192,
+        1280,
+        1792
+      ],
+      "originalSha256": "f2b5006eab2605c6552c8cafe4d0289d5a450dd4e3f82c5510aa5ac09eab30a5"
+    }
   },
   {
     "id": "yu-xia",
@@ -801,13 +965,24 @@ export const teamMembers = [
         "detail": "Took primary responsibility for the design and written development of the entrepreneurship section, helping organize business-oriented ideas, refine relevant materials, and present the project’s potential value and application in a clear and coherent manner."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/yu-xia.webp",
     "source": {
       "file": "HP 夏宇.docx",
       "rawName": "Yu Xia",
       "rawRole": "HP"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/夏宇.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        246,
+        2730,
+        3658
+      ],
+      "originalSha256": "399a7c0751d801c3016ba32ab20e45200be668b1ec9e4033b117b69a1915c8c9"
+    }
   },
   {
     "id": "ruiyao-guo",
@@ -842,13 +1017,24 @@ export const teamMembers = [
         "detail": "Participated in nearly all Human Practices offline activities and communicated synthetic biology concepts to the public."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/ruiyao-guo.webp",
     "source": {
       "file": "HP+郭睿垚.docx",
       "rawName": "Ruiyao Guo",
       "rawRole": "HP"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/郭睿垚.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        154,
+        1280,
+        1754
+      ],
+      "originalSha256": "46847bf48d4d1b53ccb4cb07feb4c967db13695d492534195b56a8e9474c34bd"
+    }
   },
   {
     "id": "jiale-wei",
@@ -901,13 +1087,24 @@ export const teamMembers = [
         "detail": "Participate in the planning and pre-event preparation of multiple public engagement activities, and organize post-event materials and documentation for Wiki archiving."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/jiale-wei.webp",
     "source": {
       "file": "HP韦佳乐.docx",
       "rawName": "Jiale Wei",
       "rawRole": "HP"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/韦佳乐.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        360,
+        4000,
+        5360
+      ],
+      "originalSha256": "186053e4c0e0bea01e59e1a06628c26b48ffaf764f7eb3b41ca15dcb5d0c9664"
+    }
   },
   {
     "id": "shunyao-zhang",
@@ -960,13 +1157,24 @@ export const teamMembers = [
         "detail": "Assisted in producing HP‑related presentation slides, sorted activity photos and made graphic materials for Wiki pages."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/shunyao-zhang.webp",
     "source": {
       "file": "HP组  张瞬尧.docx",
       "rawName": "Shunyao Zhang",
       "rawRole": "HP Member"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/张瞬尧.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        390,
+        3712,
+        5030
+      ],
+      "originalSha256": "871654f7cb6e73d98c8ffb08f326fa0e12d839bd903e6c332f7d80479e9b1596"
+    }
   },
   {
     "id": "wenxian-gao",
@@ -1031,13 +1239,24 @@ export const teamMembers = [
         "detail": "Contributed to exploring the project's social impact and entrepreneurial potential, including its application model for rapid on-site detection in resource-limited and community settings."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/wenxian-gao.webp",
     "source": {
       "file": "HP组+高文娴.docx",
       "rawName": "Wenxian Gao",
       "rawRole": "HP"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/高文娴.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        540,
+        4000,
+        5540
+      ],
+      "originalSha256": "8ee1debaab06d9b2d712527dd008ceb9fc620acce5b0dd22768b3e0f1537e74c"
+    }
   },
   {
     "id": "yujia-yang",
@@ -1090,13 +1309,24 @@ export const teamMembers = [
         "detail": "Assisted in the planning of Education and HP activities, helping transform project ideas into accessible engagement content for students, community participants, and broader public audiences."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/yujia-yang.webp",
     "source": {
       "file": "杨雨佳team member.docx",
       "rawName": "Yujia Yang",
       "rawRole": "Human Practices"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/杨雨佳.png",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        480,
+        4000,
+        5480
+      ],
+      "originalSha256": "56bf1923304a5a5700703d3ab855e7c0f6df0c3aef067637797913f46a9c3355"
+    }
   },
   {
     "id": "wensong-yao",
@@ -1149,13 +1379,24 @@ export const teamMembers = [
         "detail": "Contributed to the drafting of the business plan, focusing on market pain points and sales strategies."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/wensong-yao.webp",
     "source": {
       "file": "姚文松.docx",
       "rawName": "Wensong Yao",
       "rawRole": "HP"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/姚文松.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        445,
+        3712,
+        5085
+      ],
+      "originalSha256": "deab2aa53e35253f02cd6a57539e5eab4d02e7534c22c8601aa19429e5bd122f"
+    }
   },
   {
     "id": "tonghui-yin",
@@ -1192,13 +1433,24 @@ export const teamMembers = [
         "detail": "Responsible for organizing activities related to HP and education."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/tonghui-yin.webp",
     "source": {
       "file": "尹桐辉 Team Member Contribution.docx",
       "rawName": "Tonghui Yin",
       "rawRole": "HP and instrument"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "HP/尹桐辉.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        134,
+        1280,
+        1734
+      ],
+      "originalSha256": "9fa18eca1b5f5068fac7bdea119241de15b01928ce6616e34646aa2f04c5821c"
+    }
   },
   {
     "id": "yirui-lu",
@@ -1241,13 +1493,24 @@ export const teamMembers = [
         "detail": "Contributed to the software-related work of the detection device, including organizing software materials, preparing introductory and explanatory scripts, planning the presentation of software functions and user guidance, and integrating software-related content into the team Wiki."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/yirui-lu.webp",
     "source": {
       "file": "hardware鲁怡蕊(1).docx",
       "rawName": "Yirui Lu",
       "rawRole": "Wiki ; Hardware"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Hardware/鲁怡蕊.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        660,
+        4000,
+        5660
+      ],
+      "originalSha256": "83029da7faa3be9e2a19f78eb64a1dd01fee1f9dd0173feb56bb95e165d4f5a9"
+    }
   },
   {
     "id": "bowen-xiao",
@@ -1294,13 +1557,24 @@ export const teamMembers = [
         "detail": "Created the hardware architecture diagrams, circuit schematics, and system workflow diagrams used in the wiki and presentations."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/bowen-xiao.webp",
     "source": {
       "file": "肖博文_Team_Member_Contribution.docx",
       "rawName": "Bowen Xiao (肖博文)",
       "rawRole": "hardware"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "Hardware/肖博文.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        1580,
+        0,
+        4780,
+        4000
+      ],
+      "originalSha256": "c3c889f5428d52b5428ea0971f471174d8f7d71e5c5a775905324e84ba7217c7"
+    }
   },
   {
     "id": "qianwen-luo",
@@ -1341,13 +1615,24 @@ export const teamMembers = [
         "detail": "Actively take part in offline science communication activities, including fun science classes and knowledge-sharing sessions at special education schools. Through accessible explanations and interactive experiences, spread synthetic biology knowledge to the public."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/qianwen-luo.webp",
     "source": {
       "file": "美工 骆茜雯.docx",
       "rawName": "Qianwen Luo",
       "rawRole": "Visual Designer"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "美工/骆茜雯.png",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        328,
+        2730,
+        3740
+      ],
+      "originalSha256": "d5d79c3882dda0960b6d1f3c4a0c149b62ff3e58b0d3c864478b9b587693b45c"
+    }
   },
   {
     "id": "wenqi-ai",
@@ -1388,13 +1673,24 @@ export const teamMembers = [
         "detail": "Designed activity posters and offline materials for diverse audiences (e. g., maternal and child health, respiratory health). Supported the translation of complex scientific concepts into easy-to-understand visual content for broader community outreach."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/wenqi-ai.webp",
     "source": {
       "file": "美工组 艾文琦(1).docx",
       "rawName": "Wenqi Ai",
       "rawRole": "Designer"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "美工/艾文琦.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        378,
+        3599,
+        4877
+      ],
+      "originalSha256": "8bc99dcf2a9978ab39d3f8576eb9ce5cdf2850cfe83bfb8a31c92875a65b7584"
+    }
   },
   {
     "id": "qianwen-wang",
@@ -1429,13 +1725,24 @@ export const teamMembers = [
         "detail": "Actively took part in public-oriented science-popularization activities. We promoted our project and shared health knowledge at nursing homes and maternal-and-child health centers. Coordinated design-related tasks with university teams, including collaborating with Tsinghua University on the special modified mod for Plants vs. Zombies."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/qianwen-wang.webp",
     "source": {
       "file": "美工组 王芊雯.docx",
       "rawName": "Qianwen Wang",
       "rawRole": "Designer"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "美工/王芊雯.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        399,
+        3671,
+        4988
+      ],
+      "originalSha256": "43f9041e318550e5609a0b0d60751ff7301850b4ab9885e813c3019c55c2a4e2"
+    }
   },
   {
     "id": "jiale-zhang",
@@ -1476,13 +1783,24 @@ export const teamMembers = [
         "detail": "Took charge of most of the project's visual deliverables, including wiki homepage design, interaction design, page animations and loading animations, team uniform and flag design, presentation video production, peripheral products, and model diagrams for the HP section. Also completed logo draft design and custom emoji assets for the team."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/jiale-zhang.webp",
     "source": {
       "file": "美工组张家乐(1).doc",
       "rawName": "Jiale Zhang",
       "rawRole": "Designer"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "美工/张家乐.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSha256": "f86582bdeb5739b7d1e26e83eb8c3fd924695ae07b06c29c33f68c88b31671af"
+    }
   },
   {
     "id": "chen-xing",
@@ -1535,13 +1853,273 @@ export const teamMembers = [
         "detail": "Created visual posters and infographics for science-popularization activities, helping the public better understand our public-health-oriented project."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/chen-xing.webp",
     "source": {
       "file": "邢辰Team Member Contribution.docx",
       "rawName": "Chen Xing",
       "rawRole": "Designer"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "美工/邢辰.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        287,
+        2731,
+        3700
+      ],
+      "originalSha256": "439fbcb61441fa8bffc26c4ace7cc681636a47780abba6e85cc99e10d91b9db7"
+    }
+  },
+  {
+    "id": "luozhao-wang",
+    "name": "Luozhao Wang",
+    "role": "Advisor",
+    "groups": [
+      "Advisors"
+    ],
+    "quote": "Every time you fall is a chance to get back up.",
+    "introduction": "Hi everyone. I'm Wang Luozhao from the School of Public Health at Jilin University. I'm really happy to join iGEM as an advisor. I believe this will be a valuable learning experience, and I also hope to contribute to the team. Alone you go fast, but together you go far. I look forward to making progress with my teammates, and I also hope to learn and grow together with other teams in the iGEM community.",
+    "generalTasks": [
+      "1",
+      "3",
+      "9",
+      "11"
+    ],
+    "contributionCategories": [
+      "Background Research",
+      "Analysis",
+      "Data Curation",
+      "Project Administration",
+      "Scientific Support"
+    ],
+    "tasks": [
+      {
+        "category": "Background Research",
+        "detail": "Conduct literature reviews and background research to clarify the scientific context, identify existing approaches and their limitations, and help the team define the significance and objectives of the project.2. Data"
+      },
+      {
+        "category": "Analysis",
+        "detail": "Organize and analyze experimental and research data, identify meaningful trends and relationships, and provide evidence-based interpretations to support project development and decision-making."
+      },
+      {
+        "category": "Data Curation",
+        "detail": "Collect, organize, verify, and standardize relevant scientific data and literature. I also help ensure that the sources of key information are properly documented and that the data used by the team are reliable and traceable."
+      },
+      {
+        "category": "Project Administration",
+        "detail": "Assist with project planning, task coordination, documentation, and progress tracking. I help maintain communication among team members and ensure that research, experimental work, and project documentation progress according to the team's timeline."
+      },
+      {
+        "category": "Scientific Support",
+        "detail": "Provide feedback on experimental design, interpretation of results, and project direction when needed, and help the team identify potential scientific or organizational issues at an early stage."
+      }
+    ],
+    "photo": "../assets/team-member/portraits/luozhao-wang.webp",
+    "source": {
+      "file": "advisor王洛钊.docx",
+      "rawName": "Luozhao Wang",
+      "rawRole": "Advisor"
+    },
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/王洛钊ad.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        211,
+        1280,
+        1811
+      ],
+      "originalSha256": "3fbf8e9ad08efa34aefcdd0366c3f16ccbe438634761316b1df9761eb7303a90"
+    }
+  },
+  {
+    "id": "lanchao-sun",
+    "name": "Lanchao Sun",
+    "role": "Advisor",
+    "groups": [
+      "Advisors"
+    ],
+    "quote": "Good science is driven by curiosity and rigorous thinking.",
+    "introduction": "Hi everyone. I am Lanchao Sun from the School of Public Health. As an advisor for this iGEM team, I provide academic guidance for their synthetic-biology project. My research mainly focuses on computational toxicology. I offer suggestions on experimental schemes, data interpretation and project logic, and support teammates to solve research challenges throughout the competition.",
+    "generalTasks": [
+      "1",
+      "2",
+      "3",
+      "8",
+      "11"
+    ],
+    "contributionCategories": [
+      "Analysis",
+      "Conceptualization",
+      "Background Research",
+      "Safety",
+      "Project Administration"
+    ],
+    "tasks": [
+      {
+        "category": "Analysis",
+        "detail": "Provided guidance for teammates to interpret experimental and modelling data, assisted in evaluating result reliability and analyzing potential sources of error from the perspective of computational toxicology."
+      },
+      {
+        "category": "Conceptualization",
+        "detail": "Offered academic advice on project conception and technical route design, helped revise the overall research framework of this synthetic-biology project combined with toxicological assessment demands."
+      },
+      {
+        "category": "Background Research",
+        "detail": "Guided team members to screen and read relevant literature in synthetic biology and toxicology, gave suggestions for sorting out research background and identifying existing research gaps."
+      },
+      {
+        "category": "Safety",
+        "detail": "Supervised biosafety compliance, reviewed experimental operation schemes, and gave instructions to ensure all work follows iGEM and institutional safety requirements."
+      },
+      {
+        "category": "Project Administration",
+        "detail": "Participated in reviewing project milestones, gave feedback on Wiki and competition materials, coordinated progress and gave suggestions for team problem-solving."
+      }
+    ],
+    "photo": "../assets/team-member/portraits/lanchao-sun.webp",
+    "source": {
+      "file": "Advisor  孙兰超.docx",
+      "rawName": "Lanchao Sun",
+      "rawRole": "Advisor）"
+    },
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/孙兰超（ad）.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        364,
+        3467,
+        4698
+      ],
+      "originalSha256": "ca71ea3f2c45f42b234a1e1e773df27f07980ca25e59adda8aba854d7ee87cbf"
+    }
+  },
+  {
+    "id": "ziqiao-he",
+    "name": "Ziqiao He",
+    "role": "Advisor",
+    "groups": [
+      "Advisors"
+    ],
+    "quote": "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.",
+    "introduction": "Hi everyone. I am Ziqiao He from the School of Public Health at Jilin University. This year is my first time participating in iGEM and serving as an advisor. My research focus is environmental toxicology, exploring the harmful effects, mechanisms and risks of environmental pollutants and other exogenous factors on organisms and ecosystems. I also use computational toxicology to predict toxicity, exposure and risks through models, algorithms and molecular simulations, providing scientific basis for environmental health risk assessment and control. I look forward to learning, communicating and constantly improving together with every member, and seeing you at the Jamboree!",
+    "generalTasks": [
+      "3",
+      "4",
+      "7",
+      "8",
+      "13"
+    ],
+    "contributionCategories": [
+      "Background Research",
+      "Investigation",
+      "Writing",
+      "Safety",
+      "Public Engagement"
+    ],
+    "tasks": [
+      {
+        "category": "Background Research",
+        "detail": "Guided the team’s literature review and conceptual framing, helping identify key knowledge gaps and define the rationale that shaped the research design and technical approach."
+      },
+      {
+        "category": "Investigation",
+        "detail": "Building on this foundation, advised on research design, technical roadmap, experimental documentation, data organization and analysis, candidate comparison, and iterative refinement, supporting interpretation of results and validation of the approach."
+      },
+      {
+        "category": "Writing",
+        "detail": "Reviewed and edited the team’s wiki, judging materials, evaluation forms, application documents, data visualizations, workflow diagrams, and presentation scripts, ensuring coherence across background research, investigation, and safety documentation."
+      },
+      {
+        "category": "Safety",
+        "detail": "Provided oversight on experimental standardization, biosafety documentation, and responsible conduct, helping integrate safe and standardized practices into the procedures described in the investigation and written deliverables."
+      },
+      {
+        "category": "Public Engagement",
+        "detail": "Supported project presentations, defense preparation, and outreach activities, helping the team communicate the work clearly and responsibly and connect it to broader scientific and societal considerations."
+      }
+    ],
+    "photo": "../assets/team-member/portraits/ziqiao-he.webp",
+    "source": {
+      "file": "Advisor-何梓侨.docx",
+      "rawName": "Ziqiao He",
+      "rawRole": "Advisor"
+    },
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/何梓侨（ad）.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        384,
+        3200,
+        4384
+      ],
+      "originalSha256": "5ba26970c80562333994be39111ff676273eeaad75457f3d73c2f28d85adfa71"
+    }
+  },
+  {
+    "id": "hanyu-wang",
+    "name": "Hanyu Wang",
+    "role": "Advisor",
+    "groups": [
+      "Advisors"
+    ],
+    "quote": "What we seek shapes what we see.",
+    "introduction": "Hi everyone. I am Hanyu Wang from the School of Public Health at Jilin University, and I am very happy to serve as an Advisor for our iGEM team this year. I am glad to have the opportunity to support the team with my research experience, discuss ideas with our team members, and work together to improve the project throughout this journey. I would like to express my sincere appreciation to our instructors for their guidance and support, as well as to all of our team members for their creativity, dedication, and hard work. Being part of the team has also been a valuable learning experience for me. I look forward to continuing to learn, explore, and grow together with everyone in the iGEM community.",
+    "generalTasks": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "contributionCategories": [
+      "Analysis",
+      "Conceptualization",
+      "Investigation",
+      "Visualization"
+    ],
+    "tasks": [
+      {
+        "category": "Analysis",
+        "detail": "Guided organization, interpretation and presentation of experimental and modeling data. Reviewed primer–crRNA candidate comparisons, aided interpretation of performance trends and evaluation of the detection system."
+      },
+      {
+        "category": "Conceptualization",
+        "detail": "Advised on research design and technical roadmap, including RPA primer–crRNA co-design, AI-aided performance prediction, and dry-lab modeling coupled with wet-lab validation."
+      },
+      {
+        "category": "Investigation",
+        "detail": "Assisted literature review and research planning for RPA–CRISPR diagnostics, nucleic acid probe design and AI-enabled biosensing tools. Provided input on experimental recording, result analysis and study optimization."
+      },
+      {
+        "category": "Visualization",
+        "detail": "Advised visual design for experimental data, AI pipelines and research frameworks; revised figures, workflow schematics and slides to enhance scientific readability, logic and visual consistency."
+      }
+    ],
+    "photo": "../assets/team-member/portraits/hanyu-wang.webp",
+    "source": {
+      "file": "Advisor王晗宇.doc",
+      "rawName": "Hanyu Wang",
+      "rawRole": "Advisor"
+    },
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/王晗宇ad.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        328,
+        2564,
+        3533
+      ],
+      "originalSha256": "c27d9dd03b309d8d9cfb3af6837709e5ae9109ee65526d63ab0c76629b1d248b"
+    }
   },
   {
     "id": "feiyue-wang",
@@ -1594,218 +2172,24 @@ export const teamMembers = [
         "detail": "Guided project presentations and defense preparation, highlighting the potential of the platform for rapid on-site detection of respiratory pathogens and its public health significance."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/feiyue-wang.webp",
     "source": {
       "file": "20260924_王飞跃.docx",
       "rawName": "Feiyue Wang",
       "rawRole": "Advisor"
     },
-    "dataIssues": []
-  },
-  {
-    "id": "lanchao-sun",
-    "name": "Lanchao Sun",
-    "role": "Advisor",
-    "groups": [
-      "Advisors"
-    ],
-    "quote": "Good science is driven by curiosity and rigorous thinking.",
-    "introduction": "Hi everyone. I am Lanchao Sun from the School of Public Health. As an advisor for this iGEM team, I provide academic guidance for their synthetic-biology project. My research mainly focuses on computational toxicology. I offer suggestions on experimental schemes, data interpretation and project logic, and support teammates to solve research challenges throughout the competition.",
-    "generalTasks": [
-      "1",
-      "2",
-      "3",
-      "8",
-      "11"
-    ],
-    "contributionCategories": [
-      "Analysis",
-      "Conceptualization",
-      "Background Research",
-      "Safety",
-      "Project Administration"
-    ],
-    "tasks": [
-      {
-        "category": "Analysis",
-        "detail": "Provided guidance for teammates to interpret experimental and modelling data, assisted in evaluating result reliability and analyzing potential sources of error from the perspective of computational toxicology."
-      },
-      {
-        "category": "Conceptualization",
-        "detail": "Offered academic advice on project conception and technical route design, helped revise the overall research framework of this synthetic-biology project combined with toxicological assessment demands."
-      },
-      {
-        "category": "Background Research",
-        "detail": "Guided team members to screen and read relevant literature in synthetic biology and toxicology, gave suggestions for sorting out research background and identifying existing research gaps."
-      },
-      {
-        "category": "Safety",
-        "detail": "Supervised biosafety compliance, reviewed experimental operation schemes, and gave instructions to ensure all work follows iGEM and institutional safety requirements."
-      },
-      {
-        "category": "Project Administration",
-        "detail": "Participated in reviewing project milestones, gave feedback on Wiki and competition materials, coordinated progress and gave suggestions for team problem-solving."
-      }
-    ],
-    "photo": null,
-    "source": {
-      "file": "Advisor  孙兰超.docx",
-      "rawName": "Lanchao Sun",
-      "rawRole": "Advisor）"
-    },
-    "dataIssues": []
-  },
-  {
-    "id": "ziqiao-he",
-    "name": "Ziqiao He",
-    "role": "Advisor",
-    "groups": [
-      "Advisors"
-    ],
-    "quote": "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.",
-    "introduction": "Hi everyone. I am Ziqiao He from the School of Public Health at Jilin University. This year is my first time participating in iGEM and serving as an advisor. My research focus is environmental toxicology, exploring the harmful effects, mechanisms and risks of environmental pollutants and other exogenous factors on organisms and ecosystems. I also use computational toxicology to predict toxicity, exposure and risks through models, algorithms and molecular simulations, providing scientific basis for environmental health risk assessment and control. I look forward to learning, communicating and constantly improving together with every member, and seeing you at the Jamboree!",
-    "generalTasks": [
-      "3",
-      "4",
-      "7",
-      "8",
-      "13"
-    ],
-    "contributionCategories": [
-      "Background Research",
-      "Investigation",
-      "Writing",
-      "Safety",
-      "Public Engagement"
-    ],
-    "tasks": [
-      {
-        "category": "Background Research",
-        "detail": "Guided the team’s literature review and conceptual framing, helping identify key knowledge gaps and define the rationale that shaped the research design and technical approach."
-      },
-      {
-        "category": "Investigation",
-        "detail": "Building on this foundation, advised on research design, technical roadmap, experimental documentation, data organization and analysis, candidate comparison, and iterative refinement, supporting interpretation of results and validation of the approach."
-      },
-      {
-        "category": "Writing",
-        "detail": "Reviewed and edited the team’s wiki, judging materials, evaluation forms, application documents, data visualizations, workflow diagrams, and presentation scripts, ensuring coherence across background research, investigation, and safety documentation."
-      },
-      {
-        "category": "Safety",
-        "detail": "Provided oversight on experimental standardization, biosafety documentation, and responsible conduct, helping integrate safe and standardized practices into the procedures described in the investigation and written deliverables."
-      },
-      {
-        "category": "Public Engagement",
-        "detail": "Supported project presentations, defense preparation, and outreach activities, helping the team communicate the work clearly and responsibly and connect it to broader scientific and societal considerations."
-      }
-    ],
-    "photo": null,
-    "source": {
-      "file": "Advisor-何梓侨.docx",
-      "rawName": "Ziqiao He",
-      "rawRole": "Advisor"
-    },
-    "dataIssues": []
-  },
-  {
-    "id": "hanyu-wang",
-    "name": "Hanyu Wang",
-    "role": "Advisor",
-    "groups": [
-      "Advisors"
-    ],
-    "quote": "What we seek shapes what we see.",
-    "introduction": "Hi everyone. I am Hanyu Wang from the School of Public Health at Jilin University, and I am very happy to serve as an Advisor for our iGEM team this year. I am glad to have the opportunity to support the team with my research experience, discuss ideas with our team members, and work together to improve the project throughout this journey. I would like to express my sincere appreciation to our instructors for their guidance and support, as well as to all of our team members for their creativity, dedication, and hard work. Being part of the team has also been a valuable learning experience for me. I look forward to continuing to learn, explore, and grow together with everyone in the iGEM community.",
-    "generalTasks": [
-      "1",
-      "2",
-      "4",
-      "8"
-    ],
-    "contributionCategories": [
-      "Analysis",
-      "Conceptualization",
-      "Investigation",
-      "Visualization"
-    ],
-    "tasks": [
-      {
-        "category": "Analysis",
-        "detail": "Guided organization, interpretation and presentation of experimental and modeling data. Reviewed primer–crRNA candidate comparisons, aided interpretation of performance trends and evaluation of the detection system."
-      },
-      {
-        "category": "Conceptualization",
-        "detail": "Advised on research design and technical roadmap, including RPA primer–crRNA co-design, AI-aided performance prediction, and dry-lab modeling coupled with wet-lab validation."
-      },
-      {
-        "category": "Investigation",
-        "detail": "Assisted literature review and research planning for RPA–CRISPR diagnostics, nucleic acid probe design and AI-enabled biosensing tools. Provided input on experimental recording, result analysis and study optimization."
-      },
-      {
-        "category": "Visualization",
-        "detail": "Advised visual design for experimental data, AI pipelines and research frameworks; revised figures, workflow schematics and slides to enhance scientific readability, logic and visual consistency."
-      }
-    ],
-    "photo": null,
-    "source": {
-      "file": "Advisor王晗宇.doc",
-      "rawName": "Hanyu Wang",
-      "rawRole": "Advisor"
-    },
-    "dataIssues": []
-  },
-  {
-    "id": "luozhao-wang",
-    "name": "Luozhao Wang",
-    "role": "Advisor",
-    "groups": [
-      "Advisors"
-    ],
-    "quote": "Every time you fall is a chance to get back up.",
-    "introduction": "Hi everyone. I'm Wang Luozhao from the School of Public Health at Jilin University. I'm really happy to join iGEM as an advisor. I believe this will be a valuable learning experience, and I also hope to contribute to the team. Alone you go fast, but together you go far. I look forward to making progress with my teammates, and I also hope to learn and grow together with other teams in the iGEM community.",
-    "generalTasks": [
-      "1",
-      "3",
-      "9",
-      "11"
-    ],
-    "contributionCategories": [
-      "Background Research",
-      "Analysis",
-      "Data Curation",
-      "Project Administration",
-      "Scientific Support"
-    ],
-    "tasks": [
-      {
-        "category": "Background Research",
-        "detail": "Conduct literature reviews and background research to clarify the scientific context, identify existing approaches and their limitations, and help the team define the significance and objectives of the project.2. Data"
-      },
-      {
-        "category": "Analysis",
-        "detail": "Organize and analyze experimental and research data, identify meaningful trends and relationships, and provide evidence-based interpretations to support project development and decision-making."
-      },
-      {
-        "category": "Data Curation",
-        "detail": "Collect, organize, verify, and standardize relevant scientific data and literature. I also help ensure that the sources of key information are properly documented and that the data used by the team are reliable and traceable."
-      },
-      {
-        "category": "Project Administration",
-        "detail": "Assist with project planning, task coordination, documentation, and progress tracking. I help maintain communication among team members and ensure that research, experimental work, and project documentation progress according to the team's timeline."
-      },
-      {
-        "category": "Scientific Support",
-        "detail": "Provide feedback on experimental design, interpretation of results, and project direction when needed, and help the team identify potential scientific or organizational issues at an early stage."
-      }
-    ],
-    "photo": null,
-    "source": {
-      "file": "advisor王洛钊.docx",
-      "rawName": "Luozhao Wang",
-      "rawRole": "Advisor"
-    },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/王飞跃ad.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        145,
+        1280,
+        1745
+      ],
+      "originalSha256": "7e001b0c675bf408fe3f2829029129eb5dd556e536a42e16f00939a9775989b5"
+    }
   },
   {
     "id": "sen-liang",
@@ -1852,13 +2236,24 @@ export const teamMembers = [
         "detail": "Provided guidance on the design and practical implementation of the detection device developed for the respiratory pathogen detection system. Offered suggestions on its functional integration with the RPA-CRISPR workflow and supported the team in improving the usability and feasibility of the device for on-site detection applications."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/sen-liang.webp",
     "source": {
       "file": "梁森.docx",
       "rawName": "Sen Liang",
       "rawRole": "Advisor"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/梁森ad.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSha256": "47f6f094b2a4ef4c8383de4ef700d366acbbbfc8f70a57dc782af8bd4d9ea6d3"
+    }
   },
   {
     "id": "wang-pengtao",
@@ -1899,13 +2294,24 @@ export const teamMembers = [
         "detail": "Followed laboratory safety protocols strictly, ensured all experimental operations comply with safety requirements of Jilin University, iGEM and relevant national regulations."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/wang-pengtao.webp",
     "source": {
       "file": "王鹏涛-Team Member Contribution.docx",
       "rawName": "Wang Pengtao",
       "rawRole": "Advisor"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/王鹏涛（ad）.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        173,
+        1280,
+        1773
+      ],
+      "originalSha256": "b3bef730eec1b9e51b4ba95cb071189c512fa101a62b36fb65049edb9e3ef6e5"
+    }
   },
   {
     "id": "chen-boyuan",
@@ -1946,13 +2352,24 @@ export const teamMembers = [
         "detail": "Followed laboratory safety protocols strictly, ensured all experimental operations comply with safety requirements of Jilin University, iGEM and relevant national regulations."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/chen-boyuan.webp",
     "source": {
       "file": "陈博远-Team Member Contribution(1).docx",
       "rawName": "Chen Boyuan",
       "rawRole": "Advisor"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/陈博远（ad）.jpg",
+      "status": "filename-match",
+      "cropPixels": [
+        0,
+        192,
+        1280,
+        1792
+      ],
+      "originalSha256": "fd6f4029dd640e08c179066df8b73c786b5aa3900dd748ee3a83a276a468db70"
+    }
   },
   {
     "id": "ziyun-ma",
@@ -1999,13 +2416,29 @@ export const teamMembers = [
         "detail": "Sorted, cleaned and annotated raw experimental data, organizing datasets for team sharing and future reference."
       }
     ],
-    "photo": null,
+    "photo": "../assets/team-member/portraits/ziyun-ma.webp",
     "source": {
       "file": "马梓云.docx",
       "rawName": "Ziyun Ma",
       "rawRole": "Advisor"
     },
-    "dataIssues": []
+    "dataIssues": [],
+    "photoSource": {
+      "file": "ad/马子云ad.jpg",
+      "status": "user-confirmed-alias",
+      "cropPixels": [
+        0,
+        230,
+        1280,
+        1830
+      ],
+      "originalSha256": "9bf8f49f82689d0b6c8590495c3f70f66dd0d44c7a2cb20e5389ae9a0abf62c3",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
+    }
   }
 ]
 
@@ -2057,5 +2490,209 @@ export const memberDataIssues = [
     "field": "role",
     "sourceValue": "Member",
     "resolution": "Normalized to Dry Lab from software, model, and data contributions."
+  }
+]
+
+// Faculty: English display names use pinyin; raw Chinese names and source roles remain recorded.
+export const teamFaculty = [
+  {
+    "id": "pi-song-xiuling",
+    "name": "Xiuling Song",
+    "role": "PI",
+    "groups": [
+      "PI"
+    ],
+    "photo": "../assets/team-member/portraits/pi-song-xiuling.webp",
+    "source": {
+      "file": "PI/宋秀玲（pi）.jpg",
+      "rawName": "宋秀玲",
+      "rawRole": "PI"
+    },
+    "introduction": "",
+    "quote": "",
+    "generalTasks": [],
+    "contributionCategories": [],
+    "tasks": [],
+    "dataIssues": [],
+    "profileStatus": "basic-information-only",
+    "missingFields": [
+      "Verified English name",
+      "Institution and title",
+      "Introduction",
+      "Quote",
+      "Contributions"
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "宋秀玲",
+      "preferredEnglishSpellingVerified": false
+    },
+    "framingPhoto": "../assets/team-member/portraits/pi-song-xiuling-source.jpg"
+  },
+  {
+    "id": "pi-pang-bo",
+    "name": "Bo Pang",
+    "role": "PI",
+    "groups": [
+      "PI"
+    ],
+    "photo": "../assets/team-member/portraits/pi-pang-bo.webp",
+    "source": {
+      "file": "PI/庞博（pi）.jpg",
+      "rawName": "庞博",
+      "rawRole": "PI"
+    },
+    "introduction": "",
+    "quote": "",
+    "generalTasks": [],
+    "contributionCategories": [],
+    "tasks": [],
+    "dataIssues": [],
+    "profileStatus": "basic-information-only",
+    "missingFields": [
+      "Verified English name",
+      "Institution and title",
+      "Introduction",
+      "Quote",
+      "Contributions"
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "庞博",
+      "preferredEnglishSpellingVerified": false
+    }
+  },
+  {
+    "id": "pi-li-jinhua",
+    "name": "Jinhua Li",
+    "role": "PI",
+    "groups": [
+      "PI"
+    ],
+    "photo": "../assets/team-member/portraits/pi-li-jinhua.webp",
+    "source": {
+      "file": "PI/李金华（pi）.jpg",
+      "rawName": "李金华",
+      "rawRole": "PI"
+    },
+    "introduction": "",
+    "quote": "",
+    "generalTasks": [],
+    "contributionCategories": [],
+    "tasks": [],
+    "dataIssues": [],
+    "profileStatus": "basic-information-only",
+    "missingFields": [
+      "Verified English name",
+      "Institution and title",
+      "Introduction",
+      "Quote",
+      "Contributions"
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "李金华",
+      "preferredEnglishSpellingVerified": false
+    }
+  },
+  {
+    "id": "secondary-pi-wang-juan",
+    "name": "Juan Wang",
+    "role": "Secondary PI",
+    "groups": [
+      "Secondary PI"
+    ],
+    "photo": "../assets/team-member/portraits/secondary-pi-wang-juan.webp",
+    "source": {
+      "file": "Secondary PI/王娟（secondary Pi.jpg",
+      "rawName": "王娟",
+      "rawRole": "Secondary PI"
+    },
+    "introduction": "",
+    "quote": "",
+    "generalTasks": [],
+    "contributionCategories": [],
+    "tasks": [],
+    "dataIssues": [],
+    "profileStatus": "basic-information-only",
+    "missingFields": [
+      "Verified English name",
+      "Institution and title",
+      "Introduction",
+      "Quote",
+      "Contributions"
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "王娟",
+      "preferredEnglishSpellingVerified": false
+    }
+  },
+  {
+    "id": "secondary-pi-su-guofan",
+    "name": "Guofan Su",
+    "role": "Secondary PI",
+    "groups": [
+      "Secondary PI"
+    ],
+    "photo": "../assets/team-member/portraits/secondary-pi-su-guofan.webp",
+    "source": {
+      "file": "Secondary PI/苏国范（secondary pi）.jpg",
+      "rawName": "苏国范",
+      "rawRole": "Secondary PI"
+    },
+    "introduction": "",
+    "quote": "",
+    "generalTasks": [],
+    "contributionCategories": [],
+    "tasks": [],
+    "dataIssues": [],
+    "profileStatus": "basic-information-only",
+    "missingFields": [
+      "Verified English name",
+      "Institution and title",
+      "Introduction",
+      "Quote",
+      "Contributions"
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "苏国范",
+      "preferredEnglishSpellingVerified": false
+    }
+  },
+  {
+    "id": "secondary-pi-zhao-chao",
+    "name": "Chao Zhao",
+    "role": "Secondary PI",
+    "groups": [
+      "Secondary PI"
+    ],
+    "photo": "../assets/team-member/portraits/secondary-pi-zhao-chao.webp",
+    "source": {
+      "file": "Secondary PI/赵超（secondary Pi）.jpg",
+      "rawName": "赵超",
+      "rawRole": "Secondary PI"
+    },
+    "introduction": "",
+    "quote": "",
+    "generalTasks": [],
+    "contributionCategories": [],
+    "tasks": [],
+    "dataIssues": [],
+    "profileStatus": "basic-information-only",
+    "missingFields": [
+      "Verified English name",
+      "Institution and title",
+      "Introduction",
+      "Quote",
+      "Contributions"
+    ],
+    "nameSource": {
+      "method": "Pinyin romanization",
+      "rawName": "赵超",
+      "preferredEnglishSpellingVerified": false
+    },
+    "framingPhoto": "../assets/team-member/portraits/secondary-pi-zhao-chao-source.jpg"
   }
 ]
