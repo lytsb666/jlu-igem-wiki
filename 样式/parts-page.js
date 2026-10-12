@@ -20,14 +20,5 @@ document.querySelectorAll('.parts-toc a[href^="#"]').forEach((link) => {
 window.addEventListener('hashchange', () => revealModule(window.location.hash))
 revealModule(window.location.hash)
 
-// Only actual Registry IDs become external links; pending values have no destination.
-document.querySelectorAll('[data-source-cell]').forEach((cell) => {
-  const id = cell.textContent.trim()
-  if (!/^BBa_[A-Za-z]+\d+$/.test(id)) return
-  const link = document.createElement('a')
-  link.href = `https://parts.igem.org/Part:${encodeURIComponent(id)}`
-  link.textContent = cell.textContent
-  link.target = '_blank'
-  link.rel = 'noopener noreferrer'
-  cell.replaceChildren(link)
-})
+// Registry destinations are explicit links from the supplied Parts manuscript.
+// Keep them in the HTML so the new Registry IDs remain usable without JavaScript.

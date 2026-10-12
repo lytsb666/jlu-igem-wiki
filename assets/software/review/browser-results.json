@@ -1,0 +1,126 @@
+{
+  "desktop": {
+    "documentWidth": 1425,
+    "duration": "8s",
+    "fonts": {
+      "body": "\"Times New Roman\", Times, serif",
+      "bodySize": "20px",
+      "cardHeading": "32px",
+      "h2": "48px"
+    },
+    "images": [
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:5198/assets/BCuVRtVF.jpeg"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:5198/assets/CMpych12.jpeg"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:5198/assets/-zg-Y64I.jpg"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:5198/assets/BluT2dXB.jpeg"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:5198/assets/BcRDO8Xz.jpeg"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:5198/assets/GPNwYeqv.jpeg"
+      }
+    ],
+    "scrollWidth": 1425,
+    "toc": "sticky",
+    "viewport": [
+      1440,
+      1000
+    ]
+  },
+  "tocKeyboard": [
+    {
+      "current": "#software-overview",
+      "hash": "#software-overview",
+      "id": "software-overview",
+      "top": 87.81250762939453
+    },
+    {
+      "current": "#software-architecture",
+      "hash": "#software-architecture",
+      "id": "software-architecture",
+      "top": 88.01786041259766
+    },
+    {
+      "current": "#software-validation",
+      "hash": "#software-validation",
+      "id": "software-validation",
+      "top": 88.11607360839844
+    },
+    {
+      "current": "#software-reusability",
+      "hash": "#software-reusability",
+      "id": "software-reusability",
+      "top": 88.0089340209961
+    },
+    {
+      "current": "#software-user-guide",
+      "hash": "#software-user-guide",
+      "id": "software-user-guide",
+      "top": 87.93750762939453
+    },
+    {
+      "current": "#software-open-source",
+      "hash": "#software-open-source",
+      "id": "software-open-source",
+      "top": 87.98214721679688
+    }
+  ],
+  "mobile": [
+    {
+      "client": 305,
+      "escaped": [],
+      "hash": "#software-architecture",
+      "headingTop": 150.25894165039062,
+      "mainWidth": 281.14288330078125,
+      "overflow": 0,
+      "page": 305,
+      "tocScroll": true,
+      "tocWidth": 281.14288330078125,
+      "viewport": 320
+    },
+    {
+      "client": 345,
+      "escaped": [],
+      "hash": "#software-architecture",
+      "headingTop": 150.13394165039062,
+      "mainWidth": 321.14288330078125,
+      "overflow": 0,
+      "page": 345,
+      "tocScroll": true,
+      "tocWidth": 321.14288330078125,
+      "viewport": 360
+    },
+    {
+      "client": 375,
+      "escaped": [],
+      "hash": "#software-architecture",
+      "headingTop": 149.83929443359375,
+      "mainWidth": 351.4285888671875,
+      "overflow": 0,
+      "page": 375,
+      "tocScroll": true,
+      "tocWidth": 351.4285888671875,
+      "viewport": 390
+    }
+  ],
+  "console": [],
+  "finalInteractions": {
+    "pauseToStaticToPlay": "running; paused=false; static=false",
+    "skipLink": "hash=#software-navigation; focused navigation"
+  },
+  "reducedMotion": "script preference initialization/change verified in check-motion.mjs; CSS static output and manual static browser mode verified; OS preference was not emulated"
+}

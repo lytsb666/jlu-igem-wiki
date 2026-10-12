@@ -1,0 +1,114 @@
+/* Model-only additions; shared layout and navigation remain upstream. */
+.model-revision-page > .image-page-hero {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.model-revision-page .article-flow,
+.model-revision-page .article-flow * { min-width: 0; }
+.model-revision-page .article-flow :is(p, li, td, th) { overflow-wrap: anywhere; }
+.model-revision-page .model-equation {
+  max-width: 100%;
+  padding: 18px 14px;
+  margin: 18px 0;
+  overflow-x: auto;
+  background: #f7f8fa;
+  border: 1px solid #dce2e9;
+  border-radius: 10px;
+}
+.model-revision-page .model-equation math { font-size: 1.12em; }
+.model-revision-page .article-flow p math { vertical-align: middle; }
+.model-revision-page .drylab-code-fold pre {
+  margin: 0;
+  padding: 22px;
+  color: #edf2fa;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 4;
+  font-size: 15pt;
+  line-height: 1.4;
+}
+.model-revision-page .drylab-code-fold code { white-space: pre-wrap; color: inherit; }
+.model-revision-page .page-toc nav { overflow-x: hidden; }
+.model-revision-page .page-toc .model-toc-top {
+  display: block;
+  margin-top: 16px;
+  padding: 12px 5px 0;
+  border-top: 1px solid var(--lab-line);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.model-revision-page .drylab-code-fold summary:focus-visible,
+.model-revision-page .model-equation:focus-visible { outline: 3px solid #9a6742; outline-offset: 4px; }
+.model-revision-page .drylab-subsection,
+.model-revision-page .drylab-step-heading,
+.model-revision-page .lab-section,
+.model-revision-page .model-references li { scroll-margin-top: 12px; }
+.model-revision-page .model-references li { margin-bottom: 20px; }
+.model-revision-page .model-anchor-alias { display: block; height: 0; scroll-margin-top: 12px; }
+.model-revision-page .model-citation { font-size: .85em; text-decoration: none; }
+/* The research scroll uses an absolutely positioned directory. Reserve its
+   clear lower center for the separate return link delivered by Instrument. */
+@media (min-width: 901px) {
+  :root body.model-revision-page main .page-toc > nav {
+    bottom: calc(20% + 50px);
+  }
+  .model-revision-page .page-toc > .model-toc-top {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: 20%;
+    margin-top: 0;
+  }
+}
+.model-revision-page .page-toc a[aria-current="location"] { color: #6f4e37; background: #ede2d1; border-color: #9a6742; }
+@media (max-width: 900px) {
+  .model-revision-page .page-toc { overflow-x: hidden; }
+  .model-revision-page .page-toc nav { width: 100%; overflow-x: auto; }
+  .model-revision-page .page-toc nav > div { flex: 0 0 auto; }
+  .model-revision-page .drylab-subsection,
+  .model-revision-page .drylab-step-heading,
+  .model-revision-page .lab-section,
+  .model-revision-page .model-references li,
+  .model-revision-page .model-anchor-alias { scroll-margin-top: 140px; }
+  .model-revision-page .drylab-code-fold pre { padding: 18px 14px; }
+}
+@media (max-width: 680px) {
+  .model-revision-page .challenge-list li { grid-template-columns: minmax(0, 1fr); }
+  .model-revision-page .lab-main { width: calc(100% - 24px); }
+}
+@media print {
+  .model-revision-page .model-equation { overflow: visible; }
+}
+
+/* Presentation revision: keep the supplied prose and scientific data intact. */
+.model-revision-page .model-prose-list { list-style: decimal; margin: 20px 0; padding-left: 26px; }
+.model-revision-page .model-prose-list > li { padding-left: 5px; margin: 14px 0; }
+.model-revision-page .model-prose-list p { margin: 8px 0; }
+.model-revision-page .model-figure {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.model-revision-page .model-figure img { border: 0; border-radius: 0; box-shadow: none; }
+.model-revision-page .model-figure figcaption { padding: 12px 0 0; }
+.model-revision-page .model-terminal { border: 1px solid #242424; background: #080808; box-shadow: none; border-radius: 10px; }
+.model-revision-page .model-terminal-title { padding: 16px 22px; margin: 0; border-bottom: 1px solid #303030; background: #080808; color: #eee; }
+.model-revision-page .model-terminal .code-window { margin: 0; padding: 0; background: #080808; box-shadow: none; border: 0; }
+.model-revision-page .model-terminal :is(pre, code) { background: #080808; color: #eee; }
+.model-revision-page .model-equation {
+  border: 1px solid #9a6742;
+  background: #fbf4eb;
+  color: #6f4e37;
+  text-align: center !important;
+  text-align-last: center !important;
+}
+.model-revision-page .model-equation math { display: inline math; white-space: nowrap; }
+.model-revision-page .drylab-table thead th { background: #ead5c2; color: #6f4e37; }
+:root body.model-revision-page .drylab-table :is(th, td) { padding: 8px 12px !important; line-height: 1.3 !important; border-color: #d9c1ad; }
+.model-revision-page .drylab-table tbody tr:nth-child(odd) :is(th, td) { background: #fbf4eb; }
+.model-revision-page .drylab-table tbody tr:nth-child(even) :is(th, td) { background: #f2e3d1; }

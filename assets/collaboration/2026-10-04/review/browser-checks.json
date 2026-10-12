@@ -1,0 +1,171 @@
+{
+  "lightboxes": [
+    {
+      "image": "ccic-auditorium.jpg",
+      "passed": true
+    },
+    {
+      "image": "ccic-teams.jpg",
+      "passed": true
+    },
+    {
+      "image": "ccic-exchange.jpg",
+      "passed": true
+    },
+    {
+      "image": "ccic-presentation.jpg",
+      "passed": true
+    },
+    {
+      "image": "apic-group.jpg",
+      "passed": true
+    },
+    {
+      "image": "apic-poster.jpg",
+      "passed": true
+    },
+    {
+      "image": "bioai-meeting.jpg",
+      "passed": true
+    },
+    {
+      "image": "bioai-platform.png",
+      "passed": true
+    },
+    {
+      "image": "drylab-course.jpg",
+      "passed": true
+    },
+    {
+      "image": "drylab-workshop.jpg",
+      "passed": true
+    },
+    {
+      "image": "protein-visualization.jpg",
+      "passed": true
+    },
+    {
+      "image": "zjut-dialogue.jpg",
+      "passed": true
+    },
+    {
+      "image": "zjut-whiteboard.jpg",
+      "passed": true
+    },
+    {
+      "image": "zjut-poster.jpg",
+      "passed": true
+    },
+    {
+      "image": "inclusion-hike-group.jpg",
+      "passed": true
+    },
+    {
+      "image": "inclusion-hike-support.jpg",
+      "passed": true
+    }
+  ],
+  "mobileGalleries": [
+    {
+      "gallery": "ccic-photos",
+      "endStatus": "Photo 4 of 4 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 4 · Select a photo to enlarge."
+    },
+    {
+      "gallery": "apic-photos",
+      "endStatus": "Photo 2 of 2 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 2 · Select a photo to enlarge."
+    },
+    {
+      "gallery": "drylab-photos",
+      "endStatus": "Photo 5 of 5 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 5 · Select a photo to enlarge."
+    },
+    {
+      "gallery": "hike-photos",
+      "endStatus": "Photo 2 of 2 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 2 · Select a photo to enlarge."
+    }
+  ],
+  "desktopProductionGalleries": [
+    {
+      "id": "ccic-photos",
+      "endStatus": "Photo 4 of 4 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 4 · Select a photo to enlarge."
+    },
+    {
+      "id": "apic-photos",
+      "endStatus": "Photo 2 of 2 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 2 · Select a photo to enlarge."
+    },
+    {
+      "id": "drylab-photos",
+      "endStatus": "Photo 5 of 5 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 5 · Select a photo to enlarge."
+    },
+    {
+      "id": "hike-photos",
+      "endStatus": "Photo 2 of 2 · Select a photo to enlarge.",
+      "homeStatus": "Photo 1 of 2 · Select a photo to enlarge."
+    }
+  ],
+  "settledAnchors": [
+    {
+      "current": "#summits",
+      "hash": "#summits",
+      "id": "summits",
+      "navBottom": 150,
+      "top": 156.10714721679688
+    },
+    {
+      "current": "#drylab",
+      "hash": "#drylab",
+      "id": "drylab",
+      "navBottom": 150,
+      "top": 162.75894165039062
+    },
+    {
+      "current": "#knowledge",
+      "hash": "#knowledge",
+      "id": "knowledge",
+      "navBottom": 150,
+      "top": 162.8482208251953
+    },
+    {
+      "current": "#community",
+      "hash": "#community",
+      "id": "community",
+      "navBottom": 150,
+      "top": 163.8482208251953
+    }
+  ],
+  "narrow320": {
+    "clientWidth": 305,
+    "documentWidth": 305,
+    "overflow": [],
+    "viewport": 320
+  },
+  "desktopKnowledge": {
+    "desktopRail": "block",
+    "reached": 5,
+    "svgReached": 10
+  },
+  "mobileKnowledge": {
+    "clientWidth": 375,
+    "documentWidth": 375,
+    "reached": 5,
+    "svgReached": 10,
+    "verticalRail": "block"
+  },
+  "productionGameDeepLink": {
+    "hash": "#game",
+    "open": true,
+    "top": 160.16964721679688
+  },
+  "hikeKeyboard": {
+    "closed": true,
+    "reopened": true
+  },
+  "console": [],
+  "reducedMotion": "CSS and JS branches reviewed; browser preference was not emulated."
+}

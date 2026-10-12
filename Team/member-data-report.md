@@ -164,3 +164,34 @@ Evidence: `assets/team-member/crop-review.jpg`, `verification/browser-checks.jso
 Changed: `Team/member.html`, `Team/member-data.js`, `Team/member-data-report.md`, `样式/member.js`, `样式/member.css`. Added: `assets/team-member/` (41 connected portraits, two pending alias portraits, mapping with crop/source hashes, preparation/verification scripts, crop contact sheet, validation evidence).
 
 No Navbar, Loading, Footer, cursor, global stylesheet, shared assets, Homepage, build config or deployment config changes. Public Navbar retains its existing horizontal internal scroll strip on a 390px screen; the Member page itself has no horizontal overflow. This is recorded for 00/10's shared-UI review, not changed here. No build/asset configuration problem was found, so no config patch for 10 is required. Cross-module integration and the pending photo aliases/group decisions are exclusively for 00. No other agent branch was switched or merged.
+
+## 2026-10-03 controller integration and confirmed aliases
+
+The controller reviewed source commit `d641423e56e57fc5bdb527856897f15af8b2c4d6` and integrated it as `3442513d9b0c8f52230517847c90d2375d8ba0ce` on `feat/wiki-ux-redesign`. The 02 worktree remains unchanged on its own branch. This section supersedes the earlier pending-photo and pending-group decisions; earlier validation evidence remains evidence for the original 02 commit only.
+
+The user explicitly confirmed that both candidate photos correspond to their original members: `美工/杨liu玉.jpg` is Liuyu Yang / 杨鏐玉, and `ad/马子云ad.jpg` is Ziyun Ma / 马梓云. Their already-reviewed WebP files were copied into the connected portrait directory and attached to the original identities. Names, roles, groups, biographies, quotes, 186 task records and six original identity/conflict records are unchanged. The old pending WebP copies and all original desktop photos are retained. Current totals: 37 original member portraits plus six faculty portraits, 43 displayed people, 43 connected photos, zero initials placeholders.
+
+The controller checked the original contribution documents. `Hardware/Dry Lab 金墨.docx` explicitly says `Team Role: Dry Lab`; Mo Jin therefore remains in Dry Lab. `美工/Team Member-杨鏐玉.docx` explicitly says `Team Role: Student leader`; Liuyu Yang remains a Team Leader. Folder placement does not override these explicit roles. Tonghui Yin remains one person with both existing groups. Photo aliases and group resolutions are recorded in `photo-mapping.json`. The initial-import photo generator now refuses to overwrite a mapping containing confirmed aliases.
+
+Attribution retirement is handled by 00 separately from the Member implementation. The controller removed its shared navigation entry and added an old-address redirect to Member. Following this public HTML handoff, only the static Attribution link in Member's Navbar was removed; the remaining public HTML and Footer are unchanged. Other page owners must hand off their public HTML before the controller cleans corresponding static links.
+
+Controller evidence is saved outside the repository at `D:/JLU—Wiki/acceptance/2026-10-03_member-d641423-controller/`. The data-preservation verifier passes with all 37 portraits connected. All 43 development portrait URLs return HTTP 200 with bytes equal to the reviewed WebP files; all original SHA-256 hashes remain unchanged and all connected images are 800×1000 without EXIF. Desktop 1440×900 and narrow 390×844 checks confirm the expected filters, in-place flipping, internal profile reading, keyboard navigation and zero document horizontal overflow. Production build/public release of the controller's final version is not claimed here and remains for 10.
+
+Remaining content gaps: the six faculty still lack verified English names, institution/title, biography, quote and contributions. Physical-device touch/scroll and OS reduced-motion runtime still need final spot checks; available browser checks do not substitute for them. Public narrow Navbar scrolling is an existing shared-UI issue, not a Member regression repaired by this task.
+
+## 2026-10-03 faculty English display and section navigation
+
+At the user's request, faculty display names now follow the same given-name/surname presentation as the student cards: Xiuling Song, Bo Pang, Jinhua Li, Juan Wang, Guofan Su and Chao Zhao. These are pinyin romanizations of the supplied Chinese names, not claims that preferred professional English spellings have been verified. Original Chinese names, source filenames, portraits, IDs and PI/Secondary PI roles remain unchanged. The verified-English-name gap remains in the source metadata; biographies and other missing faculty fields are not invented.
+
+The user clarified that abrupt navigation refers to Member's PI/Secondary PI/Team Leaders/Members/Advisors section links. Member-specific CSS now enables native smooth scrolling on this page's root scroll container. The existing anchor links, hashes, browser history, header clearance and Advisors filter restoration are retained. Reduced-motion preference uses immediate scrolling instead. No shared navigation or global stylesheet was changed.
+
+
+## 2026-10-04 user corrections
+
+- Liuyu Yang: Visual Design; Jingyi Kang remains Team Leader.
+- Zhiyuan Jin: display Wet Lab, without the group-specific Leader label.
+- Mo Jin: Hardware & Wiki, preserving the existing name and portrait.
+- Feiyue Wang and Luozhao Wang exchange display positions; other advisor order is retained.
+- Six faculty portraits are static cards; Xiuling Song and Chao Zhao use page-only framing parameters. Their `framingPhoto` files are byte-for-byte copies of the supplied original JPGs, retaining the upper background needed for consistent head/shoulder framing. Original desktop photos and the existing 43 WebP portraits are unchanged.
+- Latest user corrections supersede previous grouping decisions; source biographies, contribution records and historical import issues are retained.
+- Counts: 43 unique people = 6 faculty + 1 team leader + 27 directory members + 9 advisors.

@@ -1,0 +1,86 @@
+/* The ornaments extend inside the nine-slice border. The insets below map the
+   clear source rectangle 436..1099 / 820..1891 in the 1536x2712 frame, after
+   applying its existing 400/250/400/250 slices. Only the directory scrolls. */
+@media screen and (min-width: 901px) {
+  :root body :is(.ihp-toc, .inc-toc, .hp-toc, .cl-toc) {
+    display: block;
+    position: sticky;
+    top: 84px;
+    align-self: start;
+    box-sizing: border-box;
+    height: calc(100svh - 112px);
+    min-height: 0;
+    max-height: none;
+    padding: 0;
+    overflow: visible;
+    isolation: isolate;
+    border: solid transparent;
+    border-width: 72px 38px;
+    border-radius: 0;
+    border-image: url('../a  图片/navigation/scroll-frame.png') 400 250 400 250 fill / 72px 38px / 0 stretch;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  :root body :is(.ihp-toc, .inc-toc, .hp-toc, .cl-toc) > nav {
+    position: absolute;
+    inset: 22% 18%;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    padding: 0 4px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    align-content: start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #9a6742 #ead5c2;
+    scrollbar-gutter: stable;
+  }
+
+  :root body :is(.ihp-toc, .inc-toc, .hp-toc, .cl-toc) a {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  :root body .inc-toc > p {
+    position: absolute;
+    top: -56px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  :root body :is(.ihp-toc__progress, .inc-toc__progress, .hp-toc__progress) {
+    top: 22%;
+    bottom: 22%;
+    left: calc(18% - 4px);
+    height: auto;
+    width: 2px;
+    pointer-events: none;
+  }
+
+  :root body .cl-main {
+    grid-template-columns: minmax(300px, 320px) minmax(0, 1fr);
+  }
+}
+
+/* Keep the existing sticky mobile directory attached to the full article. */
+@media (max-width: 900px) {
+  .cl-toc { display: contents; }
+}
+
+@media print {
+  .cl-toc { display: none; }
+}

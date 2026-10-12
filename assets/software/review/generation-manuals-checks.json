@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-06",
+  "scope": "Generation-specific manuals and Software User Guide only",
+  "build": {
+    "result": "pass",
+    "vite": "8.1.3",
+    "duration_ms": 728,
+    "pdf_copy_byte_equal": true
+  },
+  "http": [
+    {
+      "path": "/Instrument/software.html",
+      "status": 200,
+      "bytes": 34203,
+      "type": "text/html"
+    },
+    {
+      "path": "/software-resources/software-user-guide-first-generation.pdf",
+      "status": 200,
+      "bytes": 502623,
+      "type": "application/pdf",
+      "sha256": "6c03bb66612a4527adc507c8ab75a45bfc911c0bffe189318c09b6bdb671420b"
+    },
+    {
+      "path": "/software-resources/software-user-guide-second-generation.pdf",
+      "status": 200,
+      "bytes": 1187346,
+      "type": "application/pdf",
+      "sha256": "feee86d6e605a791d47d94ee5a6dcdd586cb96b56d64ecbdf541bcc3d72d0d3a"
+    },
+    {
+      "path": "/Instrument/hardware.html",
+      "status": 200,
+      "bytes": 6217,
+      "type": "text/html"
+    }
+  ],
+  "pdf": {
+    "pages_per_manual": 2,
+    "all_four_pages_rendered_and_visually_reviewed": true,
+    "text_and_link_annotations_checked": true,
+    "original_reference_pdf_unchanged": true
+  },
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "document_scroll_width": 1425,
+    "card_width": 491,
+    "result": "pass"
+  },
+  "mobile": [
+    {
+      "viewport": [
+        320,
+        844
+      ],
+      "document_scroll_width": 305,
+      "card_width": 244
+    },
+    {
+      "viewport": [
+        360,
+        844
+      ],
+      "document_scroll_width": 345,
+      "card_width": 284
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "document_scroll_width": 375,
+      "card_width": 314.2857360839844
+    }
+  ],
+  "keyboard": {
+    "preview_to_download_tab": "pass",
+    "download_attribute_present": true
+  },
+  "console_warnings_and_errors": [],
+  "scope_checks": {
+    "all_page_content_outside_user_guide_unchanged": true,
+    "no_shared_files_changed": true
+  },
+  "limits": [
+    "No APK installation or live device test",
+    "Hardware links intentionally target the common Hardware page; manual/video details are pending 00",
+    "Browser download was checked through URL, attribute and matching HTTP bytes; no download saved outside the worktree"
+  ]
+}

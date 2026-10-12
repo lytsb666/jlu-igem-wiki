@@ -305,7 +305,7 @@ document.querySelectorAll('.page-toc a[href^="#"], .pathogen-card__links a[href^
   link.addEventListener('click', () => {
     const target = document.querySelector(link.getAttribute('href'))
     const parentDetails = target?.closest('details')
-    if (parentDetails) parentDetails.open = true
+    if (parentDetails && !parentDetails.matches('.measurement-page #reference')) parentDetails.open = true
   })
 })
 

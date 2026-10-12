@@ -14,6 +14,9 @@ repo = root.parent.parent
 photo_source = Path('C:/Users/UserTech/Desktop/分组/个人照分组')
 doc_source = Path('C:/Users/UserTech/Desktop/分组/Team Member Contribution分组')
 data_file = repo / 'Team/member-data.js'
+mapping_file = root / 'photo-mapping.json'
+if mapping_file.exists() and json.loads(mapping_file.read_text(encoding='utf-8')).get('userConfirmedAliases'):
+    raise SystemExit('Photo aliases have been confirmed by the user. Keep approved mappings; this initial-import generator must not overwrite them.')
 text = data_file.read_text(encoding='utf-8')
 members = json.loads(re.search(r'export const teamMembers =\s*(\[.*?\])\s*(?=export const memberDataIssues)', text, re.S).group(1))
 issues = json.loads(re.search(r'export const memberDataIssues =\s*(\[.*?\])\s*(?:export|$)', text, re.S).group(1))

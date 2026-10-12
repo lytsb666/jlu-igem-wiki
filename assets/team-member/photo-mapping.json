@@ -203,7 +203,7 @@
       "currentGroups": [
         "Advisors"
       ],
-      "status": "pending-00-alias",
+      "status": "user-confirmed-alias",
       "cropPixels": [
         0,
         230,
@@ -215,8 +215,15 @@
         1920
       ],
       "originalSha256": "9bf8f49f82689d0b6c8590495c3f70f66dd0d44c7a2cb20e5389ae9a0abf62c3",
-      "webFile": "assets/team-member/pending/ziyun-ma.webp",
-      "webBytes": 46150
+      "webFile": "assets/team-member/portraits/ziyun-ma.webp",
+      "webBytes": 46150,
+      "previousStatus": "pending-00-alias",
+      "previousWebFile": "assets/team-member/pending/ziyun-ma.webp",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      }
     },
     {
       "id": "haoyang-liu",
@@ -347,7 +354,7 @@
       "currentGroups": [
         "Dry Lab"
       ],
-      "status": "pending-00-group; photo filename matched",
+      "status": "filename-match",
       "cropPixels": [
         0,
         545,
@@ -360,7 +367,14 @@
       ],
       "originalSha256": "3fbd79afe003df9867e3ed9cb38847cd09684f3d39cd7279d067a019b8885af9",
       "webFile": "assets/team-member/portraits/mo-jin.webp",
-      "webBytes": 45948
+      "webBytes": 45948,
+      "groupDecision": {
+        "reviewer": "00",
+        "date": "2026-10-03",
+        "resolution": "Keep existing role and groups; explicit contribution role takes precedence over folder placement.",
+        "evidence": "Hardware/Dry Lab 金墨.docx: Team Role is Dry Lab."
+      },
+      "previousStatus": "pending-00-group; photo filename matched"
     },
     {
       "id": "yirui-lu",
@@ -780,7 +794,7 @@
       "currentGroups": [
         "Team Leaders"
       ],
-      "status": "pending-00-alias",
+      "status": "user-confirmed-alias",
       "cropPixels": [
         0,
         327,
@@ -792,8 +806,21 @@
         3271
       ],
       "originalSha256": "93edf38b0f1093c858ae11146ab0a60bbb24c0343b237ae6cbee4bf605432a34",
-      "webFile": "assets/team-member/pending/liuyu-yang.webp",
-      "webBytes": 64564
+      "webFile": "assets/team-member/portraits/liuyu-yang.webp",
+      "webBytes": 64564,
+      "previousStatus": "pending-00-alias",
+      "previousWebFile": "assets/team-member/pending/liuyu-yang.webp",
+      "aliasConfirmation": {
+        "authority": "human user",
+        "date": "2026-10-03",
+        "answer": "两张都对应原成员"
+      },
+      "groupDecision": {
+        "reviewer": "00",
+        "date": "2026-10-03",
+        "resolution": "Keep existing role and groups; explicit contribution role takes precedence over folder placement.",
+        "evidence": "美工/Team Member-杨鏐玉.docx: Team Role is Student leader; original identity conflict remains recorded."
+      }
     },
     {
       "id": "qianwen-wang",
@@ -893,7 +920,7 @@
     },
     {
       "id": "pi-song-xiuling",
-      "name": "宋秀玲",
+      "name": "Xiuling Song",
       "photoFile": "PI/宋秀玲（pi）.jpg",
       "photoFolder": "PI",
       "contributionFile": null,
@@ -913,11 +940,13 @@
       ],
       "originalSha256": "4dd1e6148248af63e21daca8b0e38835fc072234d303f048f340ba75658a8810",
       "webFile": "assets/team-member/portraits/pi-song-xiuling.webp",
-      "webBytes": 50892
+      "webBytes": 50892,
+      "rawName": "宋秀玲",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
     },
     {
       "id": "pi-pang-bo",
-      "name": "庞博",
+      "name": "Bo Pang",
       "photoFile": "PI/庞博（pi）.jpg",
       "photoFolder": "PI",
       "contributionFile": null,
@@ -937,11 +966,13 @@
       ],
       "originalSha256": "e46169de9e9f9c01527d621cd14a24b8ebac40f436612a1f0207b05af0c4a490",
       "webFile": "assets/team-member/portraits/pi-pang-bo.webp",
-      "webBytes": 50672
+      "webBytes": 50672,
+      "rawName": "庞博",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
     },
     {
       "id": "pi-li-jinhua",
-      "name": "李金华",
+      "name": "Jinhua Li",
       "photoFile": "PI/李金华（pi）.jpg",
       "photoFolder": "PI",
       "contributionFile": null,
@@ -961,11 +992,13 @@
       ],
       "originalSha256": "2df409e5f5f86fc6d9a2414c67294b30b9314f7db77bf68d3376633c563cdcfe",
       "webFile": "assets/team-member/portraits/pi-li-jinhua.webp",
-      "webBytes": 43928
+      "webBytes": 43928,
+      "rawName": "李金华",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
     },
     {
       "id": "secondary-pi-wang-juan",
-      "name": "王娟",
+      "name": "Juan Wang",
       "photoFile": "Secondary PI/王娟（secondary Pi.jpg",
       "photoFolder": "Secondary PI",
       "contributionFile": null,
@@ -985,11 +1018,13 @@
       ],
       "originalSha256": "8b993237ab326a57c521eee9ee3e2e9eb492e094936c34fb13305e343b03c230",
       "webFile": "assets/team-member/portraits/secondary-pi-wang-juan.webp",
-      "webBytes": 41068
+      "webBytes": 41068,
+      "rawName": "王娟",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
     },
     {
       "id": "secondary-pi-su-guofan",
-      "name": "苏国范",
+      "name": "Guofan Su",
       "photoFile": "Secondary PI/苏国范（secondary pi）.jpg",
       "photoFolder": "Secondary PI",
       "contributionFile": null,
@@ -1009,11 +1044,13 @@
       ],
       "originalSha256": "726731ad19496cf7a1d77026ebf90fd7a93723213fd8c5f4ebe168f32e50b3cf",
       "webFile": "assets/team-member/portraits/secondary-pi-su-guofan.webp",
-      "webBytes": 38320
+      "webBytes": 38320,
+      "rawName": "苏国范",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
     },
     {
       "id": "secondary-pi-zhao-chao",
-      "name": "赵超",
+      "name": "Chao Zhao",
       "photoFile": "Secondary PI/赵超（secondary Pi）.jpg",
       "photoFolder": "Secondary PI",
       "contributionFile": null,
@@ -1033,7 +1070,21 @@
       ],
       "originalSha256": "1566de36519d9e70823c9e59fbad4c0fa357d38ff73e23f2683904720e0f5290",
       "webFile": "assets/team-member/portraits/secondary-pi-zhao-chao.webp",
-      "webBytes": 57564
+      "webBytes": 57564,
+      "rawName": "赵超",
+      "nameSource": "Pinyin romanization; preferred English spelling remains unverified."
     }
-  ]
+  ],
+  "userConfirmedAliases": {
+    "liuyu-yang": {
+      "authority": "human user",
+      "date": "2026-10-03",
+      "answer": "两张都对应原成员"
+    },
+    "ziyun-ma": {
+      "authority": "human user",
+      "date": "2026-10-03",
+      "answer": "两张都对应原成员"
+    }
+  }
 }

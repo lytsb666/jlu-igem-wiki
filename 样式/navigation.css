@@ -235,14 +235,29 @@
   .navbar {
     --navigation-primary-size: 0.9375rem;
     justify-content: flex-start;
-    overflow-x: auto;
+    overflow: visible;
   }
 
   .nav-links {
-    width: max-content;
-    min-width: 100%;
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
     gap: 22px;
     padding: 0 16px;
+    overflow-x: auto;
+  }
+
+  .nav-links > .dropdown {
+    flex-shrink: 0;
+  }
+
+  .dropdown-content {
+    position: fixed;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    max-height: calc(100dvh - 76px);
+    overflow-y: auto;
   }
 }
 

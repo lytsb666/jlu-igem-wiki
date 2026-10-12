@@ -1,0 +1,79 @@
+{
+  "priority_document": "software最新修改.docx",
+  "priority_document_sha256": "0ab391130a4cc331851b6a38a2e1231e4dfaf303da46b7e4df41ccfe691f77d6",
+  "architecture_reuse_text_source": "Software_Wiki_Page_English(1).docx",
+  "architecture_reuse_text_source_sha256": "51495d085cc61aab1db538e1fe4e8d2c09893a83314b7830a2cef3f7b6ec0b39",
+  "crops": [
+    {
+      "source": "assets\\software\\originals\\doc1-image2.jpeg",
+      "source_sha256": "fb4888f6322252ca24d0ae7a7abfaf495df15ac8637f9c3a494f877a53b709c2",
+      "target": "assets\\software\\images\\reaction-display.jpg",
+      "box": [
+        0,
+        80,
+        1600,
+        2560
+      ],
+      "sha256": "07b019c5d74841409375cf184681591e881afc5ccd8abe4cdfc2e37fc3ddf161"
+    },
+    {
+      "source": "assets\\software\\originals\\doc1-image8.jpeg",
+      "source_sha256": "22e332a7d7519510f02847d39ec724150d94fce2787f4a27a5162860859d4ff4",
+      "target": "assets\\software\\images\\result-display.jpg",
+      "box": [
+        0,
+        80,
+        1600,
+        2560
+      ],
+      "sha256": "7de914bb0cd6eae52d3a17229be7557093aff223a2b9b9f56fde9f10f47c4f9c"
+    },
+    {
+      "source": "assets\\software\\originals\\doc1-image6.jpeg",
+      "source_sha256": "6406157f0acddbb4ce6cd3fb905daa6756d8d36e2be83c6a719a2fd697e27d30",
+      "target": "assets\\software\\images\\acquisition-a.jpg",
+      "box": [
+        0,
+        80,
+        1600,
+        2560
+      ],
+      "sha256": "c3e53ea1867f0c87ca4c7b742dfcdc3a99735c2fdc88d1c09f041c0b2f6e4656"
+    },
+    {
+      "source": "assets\\software\\originals\\doc1-image7.jpeg",
+      "source_sha256": "260c0aaac4764c40ae387e3e07a2a69700803695847398582a9305b19f25889b",
+      "target": "assets\\software\\images\\acquisition-b.jpg",
+      "box": [
+        0,
+        80,
+        1600,
+        2560
+      ],
+      "sha256": "d3d99a9716d2e0a31d1ecb2d716c4cf08d2ac697cafa247eac93297f236d250d"
+    }
+  ],
+  "diagram_source": "手机APP2.pdf",
+  "diagram_empty_margin_crop": [
+    150,
+    195,
+    1115,
+    907
+  ],
+  "diagram_sha256": "b64760692136fecd51ec4d3ba983bee22a430b66bcf6f14d816b85f4fe83759b",
+  "preserved": [
+    "Six chapters and existing section fragments",
+    "Original screenshots, numerical values, plot axes and in-app result timestamp",
+    "Both generation manuals and APK links",
+    "Hardware manual/video placeholders"
+  ],
+  "changes": [
+    "Left scroll TOC",
+    "Data-flow arrows",
+    "Remove three green notes",
+    "Remove requested final caption sentences",
+    "Use supplied APP operation diagram and original prose",
+    "Connection screenshot has no clickable player/original link",
+    "Remove footer audit date/commit sentence"
+  ]
+}

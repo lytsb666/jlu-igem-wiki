@@ -416,3 +416,61 @@
   .measurement-jump-menu__panel { display: none; }
   .measurement-references { border: 0; }
 }
+
+
+/* Research manuscript typography; limited to this page's main content. */
+:root body.research-manuscript main { color:#7D521D; font-family:"Times New Roman",Times,serif; }
+:root body.research-manuscript main :is(p,li,figcaption,th,td,summary) { font-size:1rem !important; line-height:1.65 !important; color:#7D521D; }
+:root body.research-manuscript main h2 { font-size:1.833rem !important; color:#6A3F24; font-weight:700; line-height:1.3 !important; }
+:root body.research-manuscript main :is(h3,.research-result-stage>summary,.research-reference>summary) { font-size:1.333rem !important; color:#843F0B; line-height:1.4 !important; }
+:root body.research-manuscript main h4 { font-size:1.167rem !important; color:#CB8611; line-height:1.4 !important; }
+:root body.research-manuscript main h5 { font-size:1.167rem !important; color:#DEAF81; line-height:1.4 !important; }
+:root body.research-manuscript main .research-figure { margin:1.5rem 0 2rem; text-align:center; }
+:root body.research-manuscript main .research-figure img { display:block; width:auto; height:auto; max-width:100%; max-height:46rem; object-fit:contain; margin:auto; }
+:root body.research-manuscript main .research-chart img { width:auto !important; height:auto; max-width:min(80%,16rem); max-height:12rem; }
+:root body.research-manuscript main :is(.research-figure figcaption,.research-table-caption) { color:#7D521D !important; font-size:1rem !important; font-weight:700; text-align:center !important; margin:.75rem 0; }
+:root body.research-manuscript main .research-table-wrap { max-width:48rem; width:100%; margin:.75rem auto 1.5rem; overflow:auto; border:1px solid #d9c4b4; border-radius:8px; }
+:root body.research-manuscript main .research-table { width:100%; min-width:28rem; border-collapse:collapse; }
+:root body.research-manuscript main .research-table :is(th,td) { padding:.45rem .6rem; font-size:.9375rem !important; border:1px solid #d9c4b4; vertical-align:middle; overflow-wrap:anywhere; }
+:root body.research-manuscript main .research-table thead th { background:#6A3F24; color:#fff; }
+:root body.research-manuscript main .research-table tbody th { background:#f5ece5; color:#7D521D; }
+:root body.research-manuscript main .research-table tbody tr:nth-child(even) td { background:#faf6f2; }
+:root body.research-manuscript main .research-reference { border:1px solid #d9c4b4; border-radius:12px; padding:1rem; background:#fff; }
+:root body.research-manuscript main summary { cursor:pointer; }
+:root body.research-manuscript main .research-original:focus-visible { outline:3px solid #CB8611; outline-offset:4px; }
+:root body.research-manuscript main .research-stage-body { padding:1rem clamp(.75rem,2vw,2rem); }
+:root body.research-manuscript main .research-result-stage { margin:1.25rem 0; }
+:root body.research-manuscript main .research-section>h2 { margin-top:0; }
+:root body.research-manuscript main .legacy-source-anchor { display:block; scroll-margin-top:7rem; }
+:root body.research-manuscript main [id] { scroll-margin-top:7rem; }
+@media(min-width:901px) {
+ :root body.research-manuscript main .lab-layout { grid-template-columns:minmax(330px,370px) minmax(0,1fr); gap:clamp(24px,3vw,48px); }
+ :root body.research-manuscript main .page-toc { padding:28px; border-width:90px 54px; border-image-width:90px 54px; border-image-slice:400 250 400 250 fill; background:transparent; box-shadow:none; backdrop-filter:none; height:calc(100svh - 108px); max-height:none; overflow:visible; }
+ :root body.research-manuscript main .page-toc>nav { position:absolute; inset:20% 12%; margin:0; width:auto; height:auto; max-height:none; overflow-x:hidden; overflow-y:auto; }
+ :root body.research-manuscript main .page-toc>.toc-kicker { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+}
+@media(max-width:900px) { :root body.research-manuscript main .lab-layout { grid-template-columns:1fr; } }
+
+/* Confirmed October manuscript presentation. Only BOX gets special framing. */
+:root body.research-manuscript main .measurement-box { padding:clamp(24px,3vw,44px); margin-block:2rem; border:2px solid #DEAF81; border-radius:22px; background:#fffaf5; box-shadow:6px 6px 0 #deaf8140; }
+:root body.research-manuscript main .measurement-box>h2 { padding-bottom:1rem; border-bottom:1px solid #DEAF81; }
+:root body.research-manuscript main .measurement-workflow { background:#fff; }
+:root body.research-manuscript main .document-link { color:#843F0B; font-weight:700; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:.2em; }
+:root body.research-manuscript main .document-link:hover { color:#6A3F24; background:#f4e4d5; }
+:root body.research-manuscript main .document-link:focus-visible { outline:3px solid #CB8611; outline-offset:3px; }
+:root body.research-manuscript main .measurement-map__canvas { width:100%; }
+:root body.research-manuscript main .measurement-map__canvas>img { display:block; width:100%; max-height:none; }
+:root body.research-manuscript main .measurement-map__hotspot { border:2px solid transparent; cursor:pointer; }
+:root body.research-manuscript main .measurement-map__hotspot:hover,
+:root body.research-manuscript main .measurement-map__hotspot:focus-visible { border-color:#843F0B; background:#cb861133; box-shadow:0 0 0 3px #ffffffb3; outline:none; }
+:root body.research-manuscript main .measurement-map__original { text-align:center !important; }
+
+:root body.research-manuscript main .page-toc nav { overflow-x:hidden; }
+:root body.research-manuscript main .page-toc a { overflow-wrap:anywhere; }
+
+.measurement-map-links { display:none; text-align:left; }
+@media(max-width:680px) {
+  .measurement-map-links { display:block; margin:1rem 0; }
+  .measurement-map-links li { margin:.5rem 0; }
+  .measurement-map-links a { display:inline-block; padding:.5rem 0; }
+}
