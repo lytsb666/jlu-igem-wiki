@@ -61,6 +61,14 @@
   :root body main table thead :is(th, td) * { color: #fffaf5 !important; }
 }
 </style>
+<style data-research-heading-spacing>
+/* A blank body-text line between article headings and adjacent content. */
+@layer wiki-format {
+  :root body main .notebook-document :is(h2,h3,h4,h5,h6):not(summary *) {
+    margin-block:24px !important;
+  }
+}
+</style>
 </head>
 <body class="research-manuscript wetlab-page loading-lock" data-page="notebook">
 <a class="skip-link" href="#main-content">Skip to main content</a>

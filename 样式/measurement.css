@@ -498,3 +498,11 @@
   .measurement-related-pages__mobile a:nth-child(3) { background: #f3effc; }
   .measurement-page .measurement-hero-keywords { position: static; max-width: none; justify-content: flex-start; margin-top: 28px; }
 }
+
+/* A blank body-text line between article headings and adjacent content. */
+@layer wiki-format {
+  :root body main .article-flow :is(h2,h3,h4,h5,h6):not(summary *),
+  :root body main .protocol-content :is(h2,h3,h4,h5,h6):not(summary *) {
+    margin-block:24px !important;
+  }
+}
