@@ -1,4 +1,4 @@
-/* Protocol follows the shared wiki type scale, with no sidebar or hero card. */
+/* Protocol follows the shared wiki type scale and article directory. */
 .protocol-main {
   width: var(--wiki-main-width);
   margin: 108px auto 96px;
@@ -233,3 +233,13 @@
 .protocol-main { margin-top:72px; }
 .protocol-main .protocol-cover-space { display:flex; align-items:flex-end; min-height:clamp(280px,36vw,520px); padding:32px 0; margin-bottom:36px; }
 @media(max-width:560px) { .protocol-main { margin-top:72px; } .protocol-main .protocol-cover-space { min-height:280px; } }
+
+/* Continuous protocols; equipment and reagents retain native disclosures. */
+.protocol-main { padding-inline: 0; }
+.protocol-main .protocol-pathogen + .protocol-pathogen { margin-top: 48px; }
+.protocol-main .protocol-pathogen { min-width: 0; }
+.protocol-main .protocol-panel { margin: 28px 0; padding: 0; border-top: 0; }
+.protocol-main .protocol-panel-header { margin-bottom: 20px; }
+.protocol-main .protocol-panel-header h3 { margin-top: 12px; }
+.protocol-main .protocol-panel-header h3:focus { outline: none; }
+.protocol-main .legacy-source-anchor { display: block; height: 0; scroll-margin-top: 90px; }
