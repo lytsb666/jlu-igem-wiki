@@ -126,6 +126,6 @@
 - 公共 `typography.css` 为子页面横幅 h1 单独设置 `clamp(36px, 5vw, 72px)`，移除其 `::after` 横线；正文标题和图注字号不变，Homepage 动画不变。
 - Engineering 全部 29 个 node 的 Design / Build / Test / Learn & Outcome 共 116 个标签改为深棕 `#432b1c`、加粗，并使用用户提供的四张原始 PNG。阶段图标映射为 Design 右上、Build 右下、Test 左下、Learn 左上，匹配文档示意；仅 CSS 显示为小图标，原始文件未修改。
 - 根据用户明确确认，删除 Wet Lab Engineering 的 `engineering-figure-2` 六宫格曲线图及其图注；上方 RSV Candidate 2 表格、其他图片、所有实验正文和模块切换脚本保留。
-- **仍待素材：Engineering 顶部高清替换图。用户要求处理这项时主动向其索取，不自行生成、猜测或用其他图片替换。现有顶图暂时保留。**
+- **高清总览图已补齐（2026-10-12）**：用户提供的 `e67ea3baa57a58f3ffa06dd1e6dbafe5.png` 是四模块总览图，对应正文顶部 `#engineering-overview`，并非横幅插画。已以原始 2752×1536 PNG 替换原 1429×797 JPEG，页面显示和“查看原图”链接均指向 `assets/engineering/overview-2026-10-12.png`；原图片保留，横幅插画不变。用户提供的图中文字原样保留，不据此改写实验正文。
 - `npm run build` 成功；构建产物 25 HTML 入口、1427 引用、0 缺失资源、0 超限文件。桌面 1440×900 / 手机 390×844 在新构建版完成 184 项浏览器检查：18 个页面横幅字号 / 横线 / 标题边界、四模块图标与文字颜色、表格保护、模块切换和键盘激活、Measurement 引用默认收起，未发现 JavaScript 错误或失败资源。
 - 本轮修改及发布复验证据存于仓库外 `D:\JLU—Wiki\IGEMwiki\tmp\page-optimization-2026-10-10\`；继续使用第 8 节固定 Cloudflare 项目，不执行 git push。
