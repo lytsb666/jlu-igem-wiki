@@ -133,3 +133,13 @@
 - **高清总览图已补齐（2026-10-12）**：用户提供的 `e67ea3baa57a58f3ffa06dd1e6dbafe5.png` 是四模块总览图，对应正文顶部 `#engineering-overview`，并非横幅插画。已以原始 2752×1536 PNG 替换原 1429×797 JPEG，页面显示和“查看原图”链接均指向 `assets/engineering/overview-2026-10-12.png`；原图片保留，横幅插画不变。用户提供的图中文字原样保留，不据此改写实验正文。
 - `npm run build` 成功；构建产物 25 HTML 入口、1427 引用、0 缺失资源、0 超限文件。桌面 1440×900 / 手机 390×844 在新构建版完成 184 项浏览器检查：18 个页面横幅字号 / 横线 / 标题边界、四模块图标与文字颜色、表格保护、模块切换和键盘激活、Measurement 引用默认收起，未发现 JavaScript 错误或失败资源。
 - 本轮修改及发布复验证据存于仓库外 `D:\JLU—Wiki\IGEMwiki\tmp\page-optimization-2026-10-10\`；继续使用第 8 节固定 Cloudflare 项目，不执行 git push。
+
+## 10. 08 Hardware 整合及固定预览更新（2026-10-12）
+
+- 用户明确要求将 08 改动整合到主控并更新既有 Cloudflare 站。整合前主控为 `40e3b3b`，08 为 `4e97a27`；两边均无未提交跟踪修改，主控原有两项未跟踪材料保留。
+- 主控已快进整合 08 的 `fa1bfd3`（Hardware 正文和资源）及 `4e97a27`（白色内容框、删除侧栏返回顶部）。保留完整 Git 历史，没有重放旧 Software / Model 修改，也未合并 03 或其他 worktree 的新任务。
+- Hardware 新增九章正文、五张原稿表和一张规格表、Fig1–23、四份原 PDF（复现指南 6/10 页、手册 4/5 页）、三段完整网页视频、两份复现指南滚动阅读及跨页面链接。保留源稿限定和两处待补实验结果图；详细资料冲突及缺口见 `assets/hardware/review/S08-HARDWARE-HANDOFF.md`，没有虚构性能、固件、CAD/Gerber 或采购证据。
+- Judging Hardware 继续共享 `Instrument/hardware.html?nav=judging`，旧入口保留查询参数及片段；不复制第二套内容。Hardware 原版手册与 Software 当前八页手册并存，未覆盖 Software 资源。
+- 构建资源检查发现 public 目录内两份 `.gitattributes` 被 Vite 拷入产物。仅在构建输出中移除 Git 元数据，源码文件保留，网站内容和资源不受影响。
+- 主控整合版已完成正文、表格、原 PDF 哈希、视频长度、导航/Loading/Footer 保护核对；浏览器 1440/900/390/320 宽度的 11 个白色内容框、局部表格滚动、成本折叠、指南键盘滚动、原 PDF 下载、视频元数据和实际播放、旧 Judging 跳转通过。最新构建及最终公网结果以本轮证据记录为准，不代表补齐实机或全站最终验收。
+- 证据目录：`D:\JLU—Wiki\IGEMwiki\tmp\integrate-08-2026-10-12\`。发布沿用固定项目 `jlu-igem-wiki-preview`、`--branch main` 和第 8 节命令，仅上传成功构建的 `dist/client`，不执行 git push、不发布正式站。

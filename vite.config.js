@@ -64,6 +64,16 @@ function copyLinkedAssets(clientDirectory) {
   }
 }
 
+// public/ contains Git attributes for binary PDFs/videos. Keep repository
+// metadata local even when Vite copies that directory into the client build.
+function removeGitMetadata(directory) {
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const file = resolve(directory, entry.name)
+    if (entry.isDirectory()) removeGitMetadata(file)
+    else if (['.gitattributes', '.gitignore', '.gitkeep'].includes(entry.name)) rmSync(file)
+  }
+}
+
 function sitesOutput() {
   return {
     name: 'sites-output',
@@ -72,7 +82,9 @@ function sitesOutput() {
       rmSync(resolve(root, 'dist'), { recursive: true, force: true })
     },
     closeBundle() {
-      copyLinkedAssets(resolve(root, 'dist', 'client'))
+      const clientDirectory = resolve(root, 'dist', 'client')
+      copyLinkedAssets(clientDirectory)
+      removeGitMetadata(clientDirectory)
       const serverDirectory = resolve(root, 'dist', 'server')
       const metadataDirectory = resolve(root, 'dist', '.openai')
 

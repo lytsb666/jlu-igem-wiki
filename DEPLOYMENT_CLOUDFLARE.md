@@ -30,10 +30,11 @@ npx --yes wrangler@4.149.0 pages deploy dist/client --project-name jlu-igem-wiki
 - 保留既有 Sites 包装结构；Pages 只需要 `dist/client` 中的静态网页、脚本、图片、视频和手册。
 - Vite 构建会复制 HTML 中仍保留原路径的资源（例如 `data-full-src` 原图）；缺失文件让构建失败，避免上线后出现原图打不开。
 - 旧 Judging 三个入口的 canonical 标记使用 `vite-ignore`，保持正常页面地址，避免把目标原始 HTML 作为素材发布。
+- 构建结束时移除 public 目录随拷贝进入产物的 `.gitattributes` / `.gitignore` / `.gitkeep`，这些 Git 元数据继续保留在本地。
 - 两代 Software 手册超过 Pages 单文件 25 MiB 上限，因此只优化 PDF 图像压缩编码。每份 8 页：尺寸、文字、链接及 120 DPI 全页像素均与原件相同；原件备份保存在仓库外部署证据目录。
 - 页面 HTML/CSS/JS 必须作为浏览器运行产物公开；未上传 Git 历史、项目源目录、源映射、依赖目录、环境文件或服务器包装配置。没有接入 GitHub/GitLab，也不执行 `git push`。
 
-部署、构建及公网检查记录：`D:\JLU—Wiki\IGEMwiki\tmp\cloudflare-pages-2026-10-10\`。公网预览不是正式 iGEM 站；Hardware / Contribution 现存内容缺口维持原状。
+初次部署、构建及公网检查记录：`D:\JLU—Wiki\IGEMwiki\tmp\cloudflare-pages-2026-10-10\`。后续各次更新使用各自证据目录。公网预览不是正式 iGEM 站；2026-10-12 Hardware 已接入 08 提供的正文、四份原 PDF 和三段视频，仍有两处实验结果图及资料口径待补；Contribution 现存内容缺口仍待真实材料。
 
 ## 官方 Agent Setup
 
