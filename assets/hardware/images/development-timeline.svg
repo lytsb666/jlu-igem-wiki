@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title"><title id="title">ByeGerm instrument development timeline</title><rect width="100%" height="100%" fill="white"/>
+<rect x="41.311" y="58.7539" width="1171.2" height="46.08" rx="0" fill="none" stroke="none"/>
+<text x="626.911" y="92.6739" font-family="Times New Roman,serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#4B3327">ByeGerm Instrument Development Timeline</text>
+<rect x="401.28" y="129.6" width="161.28" height="38.4" rx="0" fill="#EDE1D0" stroke="none"/>
+<rect x="401.28" y="130.56" width="161.28" height="35.52" rx="0" fill="none" stroke="none"/>
+<text x="481.92" y="154.213" font-family="Times New Roman,serif" font-size="17.3333" font-weight="bold" text-anchor="middle" fill="#4B3327">June</text>
+<line x1="405.851" y1="175.141" x2="405.851" y2="653.221" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="562.56" y="129.6" width="161.28" height="38.4" rx="0" fill="#F8F1E8" stroke="none"/>
+<rect x="562.56" y="130.56" width="161.28" height="35.52" rx="0" fill="none" stroke="none"/>
+<text x="643.2" y="154.213" font-family="Times New Roman,serif" font-size="17.3333" font-weight="bold" text-anchor="middle" fill="#4B3327">July</text>
+<line x1="562.56" y1="172.8" x2="562.56" y2="650.88" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="723.96" y="129.6" width="161.28" height="38.4001" rx="0" fill="#EDE1D0" stroke="none"/>
+<text x="804.6" y="154.693" font-family="Times New Roman,serif" font-size="17.3333" font-weight="bold" text-anchor="middle" fill="#4B3327">August</text>
+<line x1="723.84" y1="172.8" x2="723.84" y2="650.88" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="885.12" y="129.6" width="161.28" height="38.4" rx="0" fill="#F8F1E8" stroke="none"/>
+<rect x="885.12" y="130.56" width="161.28" height="35.52" rx="0" fill="none" stroke="none"/>
+<text x="965.76" y="154.213" font-family="Times New Roman,serif" font-size="17.3333" font-weight="bold" text-anchor="middle" fill="#4B3327">September</text>
+<line x1="885.12" y1="172.8" x2="885.12" y2="650.88" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="1046.4" y="129.6" width="161.28" height="38.4" rx="0" fill="#EDE1D0" stroke="none"/>
+<rect x="1046.4" y="130.56" width="161.28" height="35.52" rx="0" fill="none" stroke="none"/>
+<text x="1127.04" y="154.213" font-family="Times New Roman,serif" font-size="17.3333" font-weight="bold" text-anchor="middle" fill="#4B3327">October</text>
+<line x1="1046.4" y1="172.8" x2="1046.4" y2="650.88" stroke="#DDD0C1" stroke-width="1"/>
+<line x1="1207.68" y1="172.8" x2="1207.68" y2="650.88" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="39.84" y="172.8" width="1171.2" height="42.24" rx="0" fill="#F5ECE1" stroke="none"/>
+<rect x="72.7313" y="177.061" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="201.701" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Enclosure design (7–10 days)</text>
+<rect x="406.118" y="183.84" width="56.448" height="20.16" rx="6" fill="#885D3F" stroke="none"/>
+<line x1="41.311" y1="215.04" x2="1209.6" y2="215.04" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="62.7313" y="219.301" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="225.451" y="234.981" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Five modules: design and fabrication</text>
+<text x="225.451" y="252.901" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">(3–5 days each)</text>
+<rect x="462.566" y="226.08" width="140.313" height="20.1601" rx="6" fill="#885D3F" stroke="none"/>
+<line x1="53.76" y1="257.28" x2="1209.6" y2="257.28" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="39.84" y="257.28" width="1171.2" height="42.24" rx="0" fill="#F5ECE1" stroke="none"/>
+<rect x="66.7313" y="261.541" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="229.451" y="277.221" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Assembly, testing and circuit schematic</text>
+<text x="229.451" y="295.141" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">(~1 week)</text>
+<rect x="591.59" y="269.053" width="64.0881" height="19.427" rx="6" fill="#885D3F" stroke="none"/>
+<line x1="41.311" y1="298.187" x2="1209.6" y2="300.728" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="72.7313" y="303.781" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="328.421" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Integrated module testing (~20 days)</text>
+<rect x="657.496" y="310.56" width="112.896" height="20.16" rx="6" fill="#885D3F" stroke="none"/>
+<line x1="53.76" y1="420.962" x2="1209.6" y2="420.962" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="39.84" y="420.962" width="1171.2" height="42.24" rx="0" fill="#F5ECE1" stroke="none"/>
+<rect x="72.7313" y="425.223" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="449.863" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Channel redesign (~1 month)</text>
+<rect x="889.92" y="432.002" width="153.6" height="20.16" rx="6" fill="#A07A50" stroke="none"/>
+<line x1="41.311" y1="463.202" x2="1209.6" y2="463.202" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="72.7313" y="467.463" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="483.143" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Circuit board redesign and testing (~2</text>
+<text x="235.451" y="501.063" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">months)</text>
+<rect x="892.8" y="474.242" width="303.36" height="20.16" rx="6" fill="#A07A50" stroke="none"/>
+<line x1="53.76" y1="505.442" x2="1209.6" y2="505.442" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="39.84" y="505.442" width="1171.2" height="42.24" rx="0" fill="#F5ECE1" stroke="none"/>
+<rect x="72.7313" y="509.703" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="534.343" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">App requirements and interface design</text>
+<rect x="404.506" y="516.482" width="137.088" height="20.16" rx="6" fill="#B56B3F" stroke="none"/>
+<line x1="53.76" y1="547.682" x2="1209.6" y2="547.682" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="72.7313" y="551.943" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="567.623" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Core App development and Gen 1</text>
+<text x="235.451" y="585.543" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">integration</text>
+<rect x="510.951" y="555.655" width="357.849" height="23.2267" rx="6" fill="#B56B3F" stroke="none"/>
+<line x1="53.76" y1="589.922" x2="1209.6" y2="589.922" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="39.84" y="589.922" width="1171.2" height="42.24" rx="0" fill="#F5ECE1" stroke="none"/>
+<rect x="72.7313" y="594.183" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="618.823" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Gen 2 adaptation and integration</text>
+<rect x="890.88" y="600.962" width="310.08" height="20.16" rx="6" fill="#B56B3F" stroke="none"/>
+<line x1="41.311" y1="632.162" x2="1209.6" y2="632.162" stroke="#DDD0C1" stroke-width="1"/>
+<line x1="41.311" y1="170.88" x2="1209.6" y2="170.88" stroke="#DDD0C1" stroke-width="1"/>
+<rect x="67.2" y="671.002" width="211.2" height="24" rx="0" fill="none" stroke="none"/>
+<text x="73.2" y="688.442" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="start" fill="#885D3F">Gen 1 hardware</text>
+<rect x="500.16" y="672.06" width="187.2" height="24" rx="0" fill="none" stroke="none"/>
+<text x="506.16" y="689.5" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="start" fill="#A07A50">Gen 2 hardware</text>
+<rect x="703.36" y="672.06" width="170.88" height="24" rx="0" fill="none" stroke="none"/>
+<text x="709.36" y="689.5" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="start" fill="#B56B3F">Software / App</text>
+<rect x="39.84" y="342.493" width="1171.2" height="42.24" rx="0" fill="#F5ECE1" stroke="none"/>
+<rect x="72.7313" y="344.301" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="368.941" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Site visits: identify throughput needs</text>
+<rect x="72.7313" y="386.939" width="325.44" height="38.4" rx="0" fill="none" stroke="none"/>
+<text x="235.451" y="411.579" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4A382C">Expert consultation: shape redesign</text>
+<rect x="770.392" y="350.842" width="98.4081" height="20.16" rx="6" fill="#6F5146" stroke="none"/>
+<rect x="844.8" y="393.082" width="91.8649" height="19.7386" rx="6" fill="#6F5146" stroke="none"/>
+<rect x="235.451" y="673.98" width="206.894" height="19.3875" rx="0" fill="none" stroke="none"/>
+<text x="241.451" y="680.154" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="start" fill="#6F5146">Integrated Human</text>
+<text x="241.451" y="698.074" font-family="Times New Roman,serif" font-size="16" font-weight="bold" text-anchor="start" fill="#6F5146">Practices</text>
+</svg>

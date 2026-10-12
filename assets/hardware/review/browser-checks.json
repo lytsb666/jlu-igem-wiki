@@ -1,0 +1,152 @@
+{
+  "responsive": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "tocHeading": false,
+      "backToTop": 1,
+      "coverLeft": 0,
+      "coverRight": 1440,
+      "clientWidth": 1440,
+      "brokenLoadedImages": [],
+      "bodySize": "16px"
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "tocHeading": false,
+      "backToTop": 1,
+      "coverLeft": 0,
+      "coverRight": 900,
+      "clientWidth": 900,
+      "brokenLoadedImages": [],
+      "bodySize": "16px"
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "tocHeading": false,
+      "backToTop": 1,
+      "coverLeft": 0,
+      "coverRight": 390,
+      "clientWidth": 390,
+      "brokenLoadedImages": [],
+      "bodySize": "16px"
+    },
+    {
+      "width": 320,
+      "overflow": 0,
+      "tocHeading": false,
+      "backToTop": 1,
+      "coverLeft": 0,
+      "coverRight": 320,
+      "clientWidth": 320,
+      "brokenLoadedImages": [],
+      "bodySize": "16px"
+    }
+  ],
+  "documents": [
+    {
+      "url": "http://127.0.0.1:5208/hardware-resources/reproduction-first-generation.pdf",
+      "status": 200,
+      "sha256Matches": true,
+      "pages": 6
+    },
+    {
+      "url": "http://127.0.0.1:5208/hardware-resources/reproduction-second-generation.pdf",
+      "status": 200,
+      "sha256Matches": true,
+      "pages": 10
+    },
+    {
+      "url": "http://127.0.0.1:5208/hardware-resources/user-manual-first-generation.pdf",
+      "status": 200,
+      "sha256Matches": true,
+      "pages": 4
+    },
+    {
+      "url": "http://127.0.0.1:5208/hardware-resources/user-manual-second-generation.pdf",
+      "status": 200,
+      "sha256Matches": true,
+      "pages": 5
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "costAccordion": {
+    "clickOpens": true,
+    "enterCloses": true,
+    "totalTablesAlwaysVisible": true
+  },
+  "pdfScrollReaders": {
+    "count": 2,
+    "keyboardScroll": true,
+    "pageImages": 16
+  },
+  "videos": [
+    {
+      "duration": 22.268005,
+      "width": 1280,
+      "height": 720,
+      "controls": true
+    },
+    {
+      "duration": 122.333333,
+      "width": 1280,
+      "height": 720,
+      "controls": true
+    },
+    {
+      "duration": 77.182993,
+      "width": 1280,
+      "height": 720,
+      "controls": true
+    }
+  ],
+  "videoPlayback": true,
+  "backToTop": {
+    "scrollY": 0,
+    "hash": "#page-top"
+  },
+  "judging": {
+    "url": "http://127.0.0.1:5208/Instrument/hardware.html?test=1&nav=judging#hw-costs",
+    "queryAndHashPreserved": true,
+    "links": [
+      {
+        "text": "Home",
+        "classes": "nav-link",
+        "ariaCurrent": null
+      },
+      {
+        "text": "Project▾",
+        "classes": "nav-link",
+        "ariaCurrent": null
+      },
+      {
+        "text": "Engagement▾",
+        "classes": "nav-link",
+        "ariaCurrent": null
+      },
+      {
+        "text": "Wetlab▾",
+        "classes": "nav-link",
+        "ariaCurrent": null
+      },
+      {
+        "text": "Instrument▾",
+        "classes": "nav-link",
+        "ariaCurrent": null
+      },
+      {
+        "text": "Team▾",
+        "classes": "nav-link",
+        "ariaCurrent": null
+      },
+      {
+        "text": "Judging▾",
+        "classes": "nav-link active",
+        "ariaCurrent": "page"
+      }
+    ]
+  }
+}

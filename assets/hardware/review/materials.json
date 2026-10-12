@@ -1,0 +1,676 @@
+{
+  "source_directory": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2",
+  "images": [
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image22.png",
+      "source_sha256": "f0eca63618bfbd1b66ea12285d26e3ff8a1e039df3a9e2f0d6808d91a998190b",
+      "target": "assets\\hardware\\images\\image22.png",
+      "sha256": "f0eca63618bfbd1b66ea12285d26e3ff8a1e039df3a9e2f0d6808d91a998190b",
+      "size": [
+        1068,
+        545
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image23.png",
+      "source_sha256": "eb7066dbf58ff459189eb73441454603b8f0f9677973d83e6151df8e21ac863b",
+      "target": "assets\\hardware\\images\\image23.png",
+      "sha256": "eb7066dbf58ff459189eb73441454603b8f0f9677973d83e6151df8e21ac863b",
+      "size": [
+        2662,
+        1464
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image25.png",
+      "source_sha256": "47dbc31e6aada42f50d5c26d3d1e6d2ebf9c1af6bae8a1430e8ba3d9f6f29675",
+      "target": "assets\\hardware\\images\\image25.png",
+      "sha256": "47dbc31e6aada42f50d5c26d3d1e6d2ebf9c1af6bae8a1430e8ba3d9f6f29675",
+      "size": [
+        798,
+        871
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image26.tiff",
+      "source_sha256": "0b871285b7d1085b8b97bf190f9363f45f5461de2012d565025a5ddbf5383ae0",
+      "target": "assets\\hardware\\images\\image26.png",
+      "sha256": "312a538af463d985da76098d1529ba398596de4a744355ef9e39ba7bb3cfd193",
+      "size": [
+        885,
+        507
+      ],
+      "original_bytes_preserved": false
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image12.png",
+      "source_sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+      "target": "assets\\hardware\\images\\image12.png",
+      "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+      "size": [
+        5953,
+        7071
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image1.jpeg",
+      "source_sha256": "2432c277f5b95be8f40cc29ad325f53dba27a8ab994cde09104ffd38b49481fd",
+      "target": "assets\\hardware\\images\\image1.jpeg",
+      "sha256": "2432c277f5b95be8f40cc29ad325f53dba27a8ab994cde09104ffd38b49481fd",
+      "size": [
+        1269,
+        714
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image2.tiff",
+      "source_sha256": "bb14ccf1d38c77257214b30f0c3379fcd79a8ceb24af95fcc22f48ee8d9be66b",
+      "target": "assets\\hardware\\images\\image2.png",
+      "sha256": "ca2cdc3b0ef08d445bf59fcea3737efbcf71167e1985a4905de752653b17899e",
+      "size": [
+        720,
+        1280
+      ],
+      "original_bytes_preserved": false
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image3.tiff",
+      "source_sha256": "15fdac8805eed23ca3133f9b592d142510a3ad1f9cec0b2b12817f239c5d662b",
+      "target": "assets\\hardware\\images\\image3.png",
+      "sha256": "a9f112807e3b63f1e450b760cb702b95b8e0e70b2b1647b4b950d78d31807831",
+      "size": [
+        1268,
+        713
+      ],
+      "original_bytes_preserved": false
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image4.jpeg",
+      "source_sha256": "a77dba23d8664a514d847b7c8b011f4f4b7290284bcefffbf2080d547fa38707",
+      "target": "assets\\hardware\\images\\image4.jpeg",
+      "sha256": "a77dba23d8664a514d847b7c8b011f4f4b7290284bcefffbf2080d547fa38707",
+      "size": [
+        1144,
+        1375
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image5.png",
+      "source_sha256": "9fd5522ae19ec713a8824ccbc8501ca240826f29322255e949f5420ccc07311e",
+      "target": "assets\\hardware\\images\\image5.png",
+      "sha256": "9fd5522ae19ec713a8824ccbc8501ca240826f29322255e949f5420ccc07311e",
+      "size": [
+        1617,
+        973
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image6.jpeg",
+      "source_sha256": "cc8ae11b1cf5581992f79260ca2610807e83bf2cc6f6046c75bbf971d1529126",
+      "target": "assets\\hardware\\images\\image6.jpeg",
+      "sha256": "cc8ae11b1cf5581992f79260ca2610807e83bf2cc6f6046c75bbf971d1529126",
+      "size": [
+        960,
+        1280
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image7.jpeg",
+      "source_sha256": "2e1903856735842404fee24e3192e686b2bc31e566a8b1440ee1a21f524a7d9c",
+      "target": "assets\\hardware\\images\\image7.jpeg",
+      "sha256": "2e1903856735842404fee24e3192e686b2bc31e566a8b1440ee1a21f524a7d9c",
+      "size": [
+        559,
+        593
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image8.jpeg",
+      "source_sha256": "c7f9819567613ec2ee4e2ff420d878c8bfc5d217abd72e9828a7d5506cfb2d48",
+      "target": "assets\\hardware\\images\\image8.jpeg",
+      "sha256": "c7f9819567613ec2ee4e2ff420d878c8bfc5d217abd72e9828a7d5506cfb2d48",
+      "size": [
+        1024,
+        467
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image9.jpeg",
+      "source_sha256": "86540a2d6710647670a8745f7f5389e20cff5d318277314f4dc82ee8f169d2a0",
+      "target": "assets\\hardware\\images\\image9.jpeg",
+      "sha256": "86540a2d6710647670a8745f7f5389e20cff5d318277314f4dc82ee8f169d2a0",
+      "size": [
+        1280,
+        1707
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image10.jpeg",
+      "source_sha256": "57776304a84dcfee92f1247cbdd6b8f7b25a851624faa2db614f0a0381a7da83",
+      "target": "assets\\hardware\\images\\image10.jpeg",
+      "sha256": "57776304a84dcfee92f1247cbdd6b8f7b25a851624faa2db614f0a0381a7da83",
+      "size": [
+        1280,
+        1707
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image11.jpeg",
+      "source_sha256": "f7ad58316a3661ac295cfe23f8f0b853c551a686b46021c7d7bea59eede49848",
+      "target": "assets\\hardware\\images\\image11.jpeg",
+      "sha256": "f7ad58316a3661ac295cfe23f8f0b853c551a686b46021c7d7bea59eede49848",
+      "size": [
+        1707,
+        1280
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image24.png",
+      "source_sha256": "654a5c0620716caafe471f2a01f1c3823a1200fb99e24dc65f21e3ae00bef51b",
+      "target": "assets\\hardware\\images\\image24.png",
+      "sha256": "654a5c0620716caafe471f2a01f1c3823a1200fb99e24dc65f21e3ae00bef51b",
+      "size": [
+        754,
+        345
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image13.png",
+      "source_sha256": "2afa29bcd04854013e4dfe8dac55f37d0098eb2768b0122219e315d0b16bdc94",
+      "target": "assets\\hardware\\images\\image13.png",
+      "sha256": "2afa29bcd04854013e4dfe8dac55f37d0098eb2768b0122219e315d0b16bdc94",
+      "size": [
+        5383,
+        6532
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image14.png",
+      "source_sha256": "20e2634436ec70fad4bac8aa57c0df9cadbd80fe2b7ad9840b1c088d326b0a5e",
+      "target": "assets\\hardware\\images\\image14.png",
+      "sha256": "20e2634436ec70fad4bac8aa57c0df9cadbd80fe2b7ad9840b1c088d326b0a5e",
+      "size": [
+        2440,
+        1346
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image15.png",
+      "source_sha256": "6c7abae524003f2a69e022f1b3683e94ee506210c41f364ffe5038c621582e75",
+      "target": "assets\\hardware\\images\\image15.png",
+      "sha256": "6c7abae524003f2a69e022f1b3683e94ee506210c41f364ffe5038c621582e75",
+      "size": [
+        5954,
+        1243
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image16.png",
+      "source_sha256": "985634d9d8d965a1583a399ab66e6e79e1b2e551c551d4d57f3e9711ea5d20e5",
+      "target": "assets\\hardware\\images\\image16.png",
+      "sha256": "985634d9d8d965a1583a399ab66e6e79e1b2e551c551d4d57f3e9711ea5d20e5",
+      "size": [
+        913,
+        590
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image17.png",
+      "source_sha256": "71843d086975cc9d278711f9d9aaeddcd991f30ccb1b2cd3d512997d15f58105",
+      "target": "assets\\hardware\\images\\image17.png",
+      "sha256": "71843d086975cc9d278711f9d9aaeddcd991f30ccb1b2cd3d512997d15f58105",
+      "size": [
+        603,
+        591
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image18.jpeg",
+      "source_sha256": "24082bf4b886cc678e3db2353a69e9e4f616c4f7c43f1397d711c1aa9e985bee",
+      "target": "assets\\hardware\\images\\image18.jpeg",
+      "sha256": "24082bf4b886cc678e3db2353a69e9e4f616c4f7c43f1397d711c1aa9e985bee",
+      "size": [
+        690,
+        388
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image19.jpeg",
+      "source_sha256": "9a23da6b24baeb93554450713548f96d476fd019776390020a6a66920c02679e",
+      "target": "assets\\hardware\\images\\image19.jpeg",
+      "sha256": "9a23da6b24baeb93554450713548f96d476fd019776390020a6a66920c02679e",
+      "size": [
+        742,
+        413
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image20.png",
+      "source_sha256": "5c5b84ff96e7e1f6759189ef5c138edb7fb9d94912f1108be4de9af1f62bbd99",
+      "target": "assets\\hardware\\images\\image20.png",
+      "sha256": "5c5b84ff96e7e1f6759189ef5c138edb7fb9d94912f1108be4de9af1f62bbd99",
+      "size": [
+        571,
+        595
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx!word/media/image21.jpeg",
+      "source_sha256": "7018312d3b5366c3f3df4f6b6584d68496348a888e452d420478f8a87f2cc624",
+      "target": "assets\\hardware\\images\\image21.jpeg",
+      "sha256": "7018312d3b5366c3f3df4f6b6584d68496348a888e452d420478f8a87f2cc624",
+      "size": [
+        1024,
+        332
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\图表\\1 流程.png",
+      "source_sha256": "671a940d188d3706ee52e3ebd62d5182187c842a278a4d00741c24009bf9cd97",
+      "target": "assets\\hardware\\images\\workflow-1.png",
+      "sha256": "671a940d188d3706ee52e3ebd62d5182187c842a278a4d00741c24009bf9cd97",
+      "size": [
+        2172,
+        724
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\图表\\2 流程.png",
+      "source_sha256": "4e9b613b6e11020c603b8bcb7539e32bc5bb1e12a62c2486e11899aa5839dcfa",
+      "target": "assets\\hardware\\images\\workflow-2.png",
+      "sha256": "4e9b613b6e11020c603b8bcb7539e32bc5bb1e12a62c2486e11899aa5839dcfa",
+      "size": [
+        2172,
+        724
+      ],
+      "original_bytes_preserved": true
+    }
+  ],
+  "pdfs": [
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Reproduction Guide\\Byegerm1.0 Reproduction Guide.pdf",
+      "target": "public\\hardware-resources\\reproduction-first-generation.pdf",
+      "sha256": "fcb4f03a8d0d59a5e91fb75c5983e047f97268af5cb9c953d34d6c33d13e353c",
+      "bytes": 607896,
+      "pages": 6,
+      "previews": [
+        {
+          "page": 1,
+          "target": "assets\\hardware\\images\\reproduction-1\\page-01.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 2,
+          "target": "assets\\hardware\\images\\reproduction-1\\page-02.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 3,
+          "target": "assets\\hardware\\images\\reproduction-1\\page-03.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 4,
+          "target": "assets\\hardware\\images\\reproduction-1\\page-04.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 5,
+          "target": "assets\\hardware\\images\\reproduction-1\\page-05.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 6,
+          "target": "assets\\hardware\\images\\reproduction-1\\page-06.webp",
+          "size": [
+            920,
+            1300
+          ]
+        }
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Reproduction Guide\\Byegerm2.0 Reproduction Guide.pdf",
+      "target": "public\\hardware-resources\\reproduction-second-generation.pdf",
+      "sha256": "751aa7390b29fadc9bcf9b32ba51fd5af5816978f07ab875b90e492500bcb6dd",
+      "bytes": 1051725,
+      "pages": 10,
+      "previews": [
+        {
+          "page": 1,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-01.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 2,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-02.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 3,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-03.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 4,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-04.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 5,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-05.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 6,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-06.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 7,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-07.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 8,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-08.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 9,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-09.webp",
+          "size": [
+            920,
+            1300
+          ]
+        },
+        {
+          "page": 10,
+          "target": "assets\\hardware\\images\\reproduction-2\\page-10.webp",
+          "size": [
+            920,
+            1300
+          ]
+        }
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\User manual\\1.0 说明书.pdf",
+      "target": "public\\hardware-resources\\user-manual-first-generation.pdf",
+      "sha256": "c2592302a142dd96925c7c81fa5331087e1dba30346a233628ef597a61e51b6c",
+      "bytes": 1612352,
+      "pages": 4,
+      "previews": [
+        {
+          "page": 1,
+          "target": "assets\\hardware\\images\\manual-1\\page-01.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 2,
+          "target": "assets\\hardware\\images\\manual-1\\page-02.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 3,
+          "target": "assets\\hardware\\images\\manual-1\\page-03.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 4,
+          "target": "assets\\hardware\\images\\manual-1\\page-04.webp",
+          "size": [
+            798,
+            1300
+          ]
+        }
+      ],
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\User manual\\2.0说明书.pdf",
+      "target": "public\\hardware-resources\\user-manual-second-generation.pdf",
+      "sha256": "09c1797cebc139cf2a66875a6bde2a7abc88501d91dff28a5d7aa728df01533a",
+      "bytes": 2369164,
+      "pages": 5,
+      "previews": [
+        {
+          "page": 1,
+          "target": "assets\\hardware\\images\\manual-2\\page-01.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 2,
+          "target": "assets\\hardware\\images\\manual-2\\page-02.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 3,
+          "target": "assets\\hardware\\images\\manual-2\\page-03.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 4,
+          "target": "assets\\hardware\\images\\manual-2\\page-04.webp",
+          "size": [
+            798,
+            1300
+          ]
+        },
+        {
+          "page": 5,
+          "target": "assets\\hardware\\images\\manual-2\\page-05.webp",
+          "size": [
+            798,
+            1300
+          ]
+        }
+      ],
+      "original_bytes_preserved": true
+    }
+  ],
+  "editable_figures": [
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\图表\\Fig1.Technical_Specifications.pptx",
+      "sha256": "a1c3ddfe373deaa698bc20642b5e3108a289dbd72729b00adf32efaf4ef4c4d7"
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\图表\\Fig2.Development_Timeline.pptx",
+      "sha256": "7b916396b72a7dbc9149ddaccd8a0f7dba1ea5fcb271902982884675e02d5c01"
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\图表\\Fig23.Equipment_Cost.pptx",
+      "sha256": "6229890c6b14924db52e1d3665b4434c05935d0c97d45be9c7339e42f82c7a5e"
+    }
+  ],
+  "primary_document": {
+    "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx",
+    "sha256": "3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2"
+  },
+  "specification_rows": [
+    [
+      "Specification",
+      "First generation",
+      "Second generation"
+    ],
+    [
+      "Overall dimensions",
+      "Approx. 7.5 × 14 × 11 cm",
+      "Approx. 15 × 30 × 20 cm"
+    ],
+    [
+      "Reaction area",
+      "Fixed observation area; total tube capacity not specified in the source.",
+      "Three-sided rotating chamber; five tube slots per side, 15 positions in total. The camera images them sequentially."
+    ],
+    [
+      "Dedicated lysis area",
+      "No separate lysis area.",
+      "Independent front heating zone with two tube positions, separate from the main reaction area."
+    ],
+    [
+      "Heating and temperature control",
+      "Two ceramic heaters, 6 W total; 18B20 sensor; PID/PWM regulation; fan-assisted cooling.",
+      "Separate heating structures and temperature feedback for the lysis and main reaction areas. Power and measured temperature-control values were not provided."
+    ],
+    [
+      "Fluorescence acquisition",
+      "Blue LED, optical filter and USB macro camera; enclosed housing blocks ambient light.",
+      "Fixed camera captures the rotating chamber faces in sequence. Multi-position images and region annotations are documented."
+    ],
+    [
+      "Power and ports",
+      "Lithium battery pack with charging, protection and charge-level indicator circuits.",
+      "Power board: 12 V input; 5 V and 3.3 V outputs. Rear: USB Type-A, RJ45, USB Type-C, DC 12 V and power switch. Removable battery compartment at the bottom."
+    ],
+    [
+      "Computing and control",
+      "Raspberry Pi for image computation.",
+      "RK3588 for image processing; STM32F407ZGT6 controller on the main board."
+    ],
+    [
+      "Image processing",
+      "YOLOv8n locates reaction tubes; OpenCV extracts and analyzes image regions.",
+      "Existing image-analysis pipeline adapted to multiple observation faces and tube positions."
+    ],
+    [
+      "Communication and mobile interface",
+      "Wi-Fi; Android client for task setup, information viewing and record storage.",
+      "Mobile interface adapted to face switching and multi-position records. App tests documented on HarmonyOS, HyperOS, ColorOS and OriginOS devices."
+    ]
+  ],
+  "cost_chart_values_cny": [
+    4428.33,
+    3980.0,
+    158300.0
+  ],
+  "video_duplicate": {
+    "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\视频3 (2).mp4",
+    "same_bytes_as": "视频3.mp4",
+    "sha256": "d8ac25187e91357a7e168ad90198754df61e7651a3c255e02f29d92c2cd59675"
+  },
+  "videos": [
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\视频1.mp4",
+      "source_sha256": "23aa78aee148ef652286af78d1c86bb393f5d26bf359a01702b406d6bba5bdd2",
+      "original_bytes": 50380494,
+      "target": "public\\hardware-resources\\video-1.mp4",
+      "sha256": "d8b9f0ab6fa117a58378b2e40f982c6969e24d93335b5b4704812b23f7cd7d49",
+      "bytes": 6779615,
+      "duration_seconds": 22.27,
+      "web_duration_seconds": 22.27,
+      "bitrate_kbps": 2300,
+      "poster": "assets\\hardware\\images\\video-1-poster.jpg",
+      "transformation": "Complete video and audio; H.264/AAC, max 1280px width, faststart, below 25 MiB. No cuts."
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\视频2.mp4",
+      "source_sha256": "88b5e5b5bd33ed256885dcd8bce4e696b44823fa6892c1036a8c7c865e6b4469",
+      "original_bytes": 136464985,
+      "target": "public\\hardware-resources\\video-2.mp4",
+      "sha256": "3024ec8e70fb548d1e05750c2d254a1f0280b774429c6e6b121c1eccac6f4a36",
+      "bytes": 22559008,
+      "duration_seconds": 122.33,
+      "web_duration_seconds": 122.33,
+      "bitrate_kbps": 1352,
+      "poster": "assets\\hardware\\images\\video-2-poster.jpg",
+      "transformation": "Complete video and audio; H.264/AAC, max 1280px width, faststart, below 25 MiB. No cuts."
+    },
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\视频3.mp4",
+      "source_sha256": "d8ac25187e91357a7e168ad90198754df61e7651a3c255e02f29d92c2cd59675",
+      "original_bytes": 48242261,
+      "target": "public\\hardware-resources\\video-3.mp4",
+      "sha256": "5c26f9daaa52528428eff8b87f9d32f79239bccfb69a981bd4cafa4a7efe62a3",
+      "bytes": 22309952,
+      "duration_seconds": 77.18,
+      "web_duration_seconds": 77.18,
+      "bitrate_kbps": 2235,
+      "poster": "assets\\hardware\\images\\video-3-poster.jpg",
+      "transformation": "Complete video and audio; H.264/AAC, max 1280px width, faststart, below 25 MiB. No cuts."
+    }
+  ]
+}

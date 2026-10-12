@@ -1,0 +1,3587 @@
+[
+  {
+    "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx",
+    "sha256": "3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2",
+    "blocks": [
+      {
+        "index": 0,
+        "kind": "p",
+        "style": "",
+        "text": "ByeGerm Hardware",
+        "images": []
+      },
+      {
+        "index": 1,
+        "kind": "p",
+        "style": "",
+        "text": "From Detection Requirements to a Complete Instrument",
+        "images": []
+      },
+      {
+        "index": 2,
+        "kind": "p",
+        "style": "2",
+        "text": "01 Introducing ByeGerm",
+        "images": [
+          "media/image1.jpeg"
+        ]
+      },
+      {
+        "index": 3,
+        "kind": "p",
+        "style": "",
+        "text": "ByeGerm is a portable fluorescence platform developed for RT-RPA and CRISPR-Cas12a detection workflows, integrating temperature control, imaging, image processing, and record keeping on a mobile device. ByeGerm 1.0 establishes a detection and readout architecture with a fixed observation area. ByeGerm 2.0 adds a two-position sample pretreatment area and a rotating reaction chamber with fifteen tube positions to address the capacity requirements of centralized screening.",
+        "images": []
+      },
+      {
+        "index": 4,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 5,
+        "kind": "p",
+        "style": "3",
+        "text": " Key Technical Specifications",
+        "images": []
+      },
+      {
+        "index": 6,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image2.tiff"
+        ]
+      },
+      {
+        "index": 7,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 1. Key technical specifications of the two generations of ByeGerm instruments.",
+        "images": []
+      },
+      {
+        "index": 8,
+        "kind": "p",
+        "style": "3",
+        "text": " Development Timeline",
+        "images": []
+      },
+      {
+        "index": 9,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image3.tiff"
+        ]
+      },
+      {
+        "index": 10,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 2. Development timeline for the ByeGerm instruments and app",
+        "images": []
+      },
+      {
+        "index": 11,
+        "kind": "p",
+        "style": "",
+        "text": "Starting in June, we designed the enclosure and five functional modules of ByeGerm 1.0. In July, we completed module assembly, preliminary testing, and the overall circuit schematic. Software development proceeded in parallel, progressing from app functionality and interface design to integrated hardware and software testing.",
+        "images": []
+      },
+      {
+        "index": 12,
+        "kind": "p",
+        "style": "",
+        "text": "After completing integration testing of the ByeGerm 1.0 modules in August, we took the device back to nursing homes and kindergartens to consult frontline staff and caregivers.",
+        "images": []
+      },
+      {
+        "index": 13,
+        "kind": "p",
+        "style": "",
+        "text": "The limited number of reaction positions made it difficult to meet centralized screening needs, prompting the team to adopt a design with multiple tube positions. ",
+        "images": []
+      },
+      {
+        "index": 14,
+        "kind": "p",
+        "style": "",
+        "text": "To translate these requirements into an implementable structural design, we further consulted Professor Ying Mou of Zhejiang University and subsequently advanced improvements to the rotating channel, pretreatment area layout, and circuit boards. As the second-generation instrument was developed, the app was progressively adapted to image acquisition across multiple tube positions and the display of corresponding results.",
+        "images": []
+      },
+      {
+        "index": 15,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 16,
+        "kind": "p",
+        "style": "2",
+        "text": " 02 Hardware Requirements of the Detection System",
+        "images": []
+      },
+      {
+        "index": 17,
+        "kind": "p",
+        "style": "",
+        "text": "The detection system requires a stable reaction environment and consistent readout conditions. We implemented these requirements through the following components and control functions.",
+        "images": []
+      },
+      {
+        "index": 18,
+        "kind": "p",
+        "style": "af1",
+        "text": "Table 1. Hardware Requirements of the Detection System",
+        "images": []
+      },
+      {
+        "index": 19,
+        "kind": "tbl",
+        "style": "",
+        "text": "Detection and Operational RequirementsIssues to Be Addressed by the HardwareCorresponding DesignStable reaction environmentThe temperature in the reaction area varies over time,and temperature differences may occur between tube positions.Heating components, closed-loop control with temperature feedback, separation of temperature zones, and control of isothermal conditionsReproducible fluorescence acquisitionAmbient light, excitation light, and imaging position affect image quality.Controlled illumination, optical filtering, a light-shielding enclosure, and fixed mounting positions for optical componentsSpatial organization for multiple-sample detectionMultiple samples and their associated reactions require clearly defined positions and an acquisition sequence.A single-face layout with five tube positions, a three-face rotating reaction chamber, and position feedbackPresentation of visual resultsRaw images must be linked to reaction positions and signal records.Image localization, signal analysis, and display on a mobile devicePortable operation and maintenanceHeating, imaging, and computation require a shared power supply, and internal connections must be accessible for inspection.Battery power, separate functional boards, centralized interfaces, and removable enclosure components",
+        "images": [],
+        "rows": [
+          [
+            "Detection and Operational Requirements",
+            "Issues to Be Addressed by the Hardware",
+            "Corresponding Design"
+          ],
+          [
+            "Stable reaction environment",
+            "The temperature in the reaction area varies over time,and temperature differences may occur between tube positions.",
+            "Heating components, closed-loop control with temperature feedback, separation of temperature zones, and control of isothermal conditions"
+          ],
+          [
+            "Reproducible fluorescence acquisition",
+            "Ambient light, excitation light, and imaging position affect image quality.",
+            "Controlled illumination, optical filtering, a light-shielding enclosure, and fixed mounting positions for optical components"
+          ],
+          [
+            "Spatial organization for multiple-sample detection",
+            "Multiple samples and their associated reactions require clearly defined positions and an acquisition sequence.",
+            "A single-face layout with five tube positions, a three-face rotating reaction chamber, and position feedback"
+          ],
+          [
+            "Presentation of visual results",
+            "Raw images must be linked to reaction positions and signal records.",
+            "Image localization, signal analysis, and display on a mobile device"
+          ],
+          [
+            "Portable operation and maintenance",
+            "Heating, imaging, and computation require a shared power supply, and internal connections must be accessible for inspection.",
+            "Battery power, separate functional boards, centralized interfaces, and removable enclosure components"
+          ]
+        ]
+      },
+      {
+        "index": 20,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 21,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 22,
+        "kind": "p",
+        "style": "2",
+        "text": " 03 ByeGerm 1.0 Detection and Readout Platform",
+        "images": []
+      },
+      {
+        "index": 23,
+        "kind": "p",
+        "style": "3",
+        "text": " 3.1 Overall Architecture of the Detection Platform",
+        "images": []
+      },
+      {
+        "index": 24,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image4.jpeg"
+        ]
+      },
+      {
+        "index": 25,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 3. Schematic of the ByeGerm 1.0 detection and readout platform.",
+        "images": []
+      },
+      {
+        "index": 26,
+        "kind": "p",
+        "style": "",
+        "text": "A: Detection workflow; B: Schematic of the RPA-CRISPR/Cas12a reaction used in the detection system;C: Instrument, mobile client, and control unit;",
+        "images": []
+      },
+      {
+        "index": 27,
+        "kind": "p",
+        "style": "",
+        "text": " D: Workflow for reaction tube localization and fluorescence image analysis.",
+        "images": []
+      },
+      {
+        "index": 28,
+        "kind": "p",
+        "style": "3",
+        "text": " 3.2 Device Structure and Module Composition",
+        "images": []
+      },
+      {
+        "index": 29,
+        "kind": "p",
+        "style": "",
+        "text": "ByeGerm 1.0 is compact and lightweight, allowing it to be carried by one person. It consists primarily of five internal modules (Figure 4): an optical unit for fluorescence sensing and signal amplification; a temperature control unit for precise temperature regulation; a power management unit optimized for energy efficiency; an AI data processing module that processes image data using artificial intelligence; and a Wi-Fi communication unit that connects to the mobile app for data transmission and wireless operation. The design and refinement of these modules enabled constant-temperature reagent heating over a temperature range of approximately 25–95 °C, stable fluorescence image acquisition, intelligent analysis of reaction progress and results, and data transmission[1]. The AI data processing module incorporates a high-performance Raspberry Pi single-board computer suitable for computer vision and machine learning inference.",
+        "images": []
+      },
+      {
+        "index": 30,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image5.png"
+        ]
+      },
+      {
+        "index": 31,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 4. Structural schematic of ByeGerm 1.0, showing the five functional modules and their mounting positions.",
+        "images": []
+      },
+      {
+        "index": 32,
+        "kind": "p",
+        "style": "4",
+        "text": " 3.2.1 Temperature Control Module",
+        "images": []
+      },
+      {
+        "index": 33,
+        "kind": "p",
+        "style": "",
+        "text": "The heating platform uses two sets of high-precision ceramic heating cores with a total power of 6 W, distributed evenly around the PCR tube wells to ensure a uniform thermal field. The main controller acquires data from an 18B20 temperature sensor in real time and dynamically adjusts the PWM output through an incremental PID algorithm. This precisely regulates the power of the ceramic heating cores, maintaining temperature fluctuations within ±0.7 °C. In addition, a direct current fan with dual ball bearings operating at 3,000 rpm is integrated on the right side of the heating platform to rapidly cool the metal heating block and prevent interference from thermal inertia. The assembly of the temperature control and optical components is shown in Figure 5.",
+        "images": []
+      },
+      {
+        "index": 34,
+        "kind": "p",
+        "style": "4",
+        "text": " 3.2.2 Optical Module and Light-Shielding Structure",
+        "images": []
+      },
+      {
+        "index": 35,
+        "kind": "p",
+        "style": "",
+        "text": "A 1 W blue LED is installed beneath each PCR tube well to excite fluorescence. A 48-megapixel ultra-macro lens on a USB industrial camera module is mounted directly in front of the PCR sample wells. A bandpass filter with a center wavelength of 530 nm and a bandwidth of ±20 nm is placed in front of the lens. The filter blocks the 480 nm excitation light while transmitting green fluorescence signals at 500–550 nm, enabling clear capture of fluorescence signals. The light-shielding enclosure fixes the relative positions of the light sources, reaction tubes, and camera, reducing the effects of ambient light and repeated assembly.",
+        "images": []
+      },
+      {
+        "index": 36,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image6.jpeg"
+        ]
+      },
+      {
+        "index": 37,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 5. Photograph of the temperature control and optical components of ByeGerm 1.0. Left: Metal reaction tube support block, cooling fan, and optical filter components.",
+        "images": []
+      },
+      {
+        "index": 38,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image7.jpeg"
+        ]
+      },
+      {
+        "index": 39,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 6. Camera acquisition interface and fluorescence images of reaction tubes in ByeGerm 1.0",
+        "images": []
+      },
+      {
+        "index": 40,
+        "kind": "p",
+        "style": "",
+        "text": "After comparing five imaging distances of 70, 60, 50, 40, and 30 mm, we selected 50 mm as the fixed camera mounting distance for ByeGerm 1.0 (Figure 7).",
+        "images": []
+      },
+      {
+        "index": 41,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image8.jpeg"
+        ]
+      },
+      {
+        "index": 42,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 7. Comparison of fluorescence images acquired at five imaging distances. The selected distance of 50 mm is highlighted in red",
+        "images": []
+      },
+      {
+        "index": 43,
+        "kind": "p",
+        "style": "4",
+        "text": " 3.2.3 Wi-Fi Communication Module",
+        "images": []
+      },
+      {
+        "index": 44,
+        "kind": "p",
+        "style": "",
+        "text": "The Raspberry Pi 5 core board includes an onboard Wi-Fi module compliant with IEEE 802.11ac, supporting both the 2.4 GHz and 5 GHz bands with a maximum transmission rate of 867 Mbps. It provides relatively stable bandwidth and low-latency data transmission. A persistent connection is established using TCP/IP to transmit images, temperature data, and analysis results. The transmission interval is configurable from 100 ms to 10 s, and the average network latency is <80 ms at a distance of 10 m. A high-speed USB 3.0 interface provides a transmission bandwidth of 5 Gbps, supporting low-latency image data transfer with a single-frame transmission latency of <15 ms. Socket communication with the Android client enables recognition results to be retrieved in real time, facilitating access to and analysis of experimental data on a mobile device. Figure 8 shows the layout of the internal boards and wiring harnesses.",
+        "images": []
+      },
+      {
+        "index": 45,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image9.jpeg"
+        ]
+      },
+      {
+        "index": 46,
+        "kind": "p",
+        "style": "af1",
+        "text": "Figure 8. Photograph of the internal layout of ByeGerm 1.0.",
+        "images": []
+      },
+      {
+        "index": 47,
+        "kind": "p",
+        "style": "af1",
+        "text": "Showing Boards, wiring harnesses, and support structures.",
+        "images": []
+      },
+      {
+        "index": 48,
+        "kind": "p",
+        "style": "4",
+        "text": " 3.2.4 Image Computing Module",
+        "images": []
+      },
+      {
+        "index": 49,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image10.jpeg"
+        ]
+      },
+      {
+        "index": 50,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 9. Raspberry Pi single-board computer and its interface layout.",
+        "images": []
+      },
+      {
+        "index": 51,
+        "kind": "p",
+        "style": "",
+        "text": "The Raspberry Pi uses a high-performance 2.4 GHz 64-bit ARM-based system-on-chip and incorporates the trained YOLOv8n model and an OpenCV image processing program (Figure 9). The device runs the trained YOLOv8n model to locate reaction tubes, then uses OpenCV to extract and analyze the corresponding image regions before transmitting the results to the app.",
+        "images": []
+      },
+      {
+        "index": 52,
+        "kind": "p",
+        "style": "4",
+        "text": " 3.2.5 Power Supply Structure and Device Assembly",
+        "images": []
+      },
+      {
+        "index": 53,
+        "kind": "p",
+        "style": "",
+        "text": "To achieve rapid, stable heating while maintaining a small, compact device, the power module was optimized to use a three-cell lithium battery pack (QISUO, 3,400 mAh) with a balancing and protection circuit supporting overcharge, overdischarge, overcurrent, and short-circuit protection. The intelligent power management system prioritizes power delivery to the main control unit, optical module, and Wi-Fi 6E communication module. It integrates a PD 140 W bidirectional fast-charging power bank module supporting multiple fast-charging protocols, including PD 3.1 and QC 4.0. In addition, the module uses transistors to drive a four-level LED indicator that displays the remaining battery charge in real time, allowing users to readily assess the device's remaining battery life.",
+        "images": []
+      },
+      {
+        "index": 54,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image11.jpeg"
+        ]
+      },
+      {
+        "index": 55,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 10. Photograph of the reaction area assembly in ByeGerm 1.0.",
+        "images": []
+      },
+      {
+        "index": 56,
+        "kind": "p",
+        "style": "",
+        "text": "We designed the enclosure and support components in SolidWorks, sliced the models, and 3D-printed them using PET[2]. During assembly, the reaction tubes, heating components, and optical components were secured first, followed by the computing and power supply components. The wiring harnesses were routed away from the camera's field of view, the fan, and the heat dissipation channels.",
+        "images": []
+      },
+      {
+        "index": 57,
+        "kind": "p",
+        "style": "",
+        "text": "Further details are provided in the reproduction guide.",
+        "images": []
+      },
+      {
+        "index": 58,
+        "kind": "p",
+        "style": "3",
+        "text": " 3.3 Image Recognition and Analysis",
+        "images": []
+      },
+      {
+        "index": 59,
+        "kind": "p",
+        "style": "",
+        "text": "During conventional analysis of fluorescence images using software such as ImageJ and Color Picker, different fluorescence thresholds may yield different detection results [3]. Threshold selection is also subject to variation among operators. Therefore, replacing manual image analysis with machine learning can reduce the influence of subjective factors and improve detection efficiency[4].",
+        "images": []
+      },
+      {
+        "index": 60,
+        "kind": "p",
+        "style": "",
+        "text": "We use YOLOv8n to locate reaction tubes and OpenCV to extract fluorescence signals from images, then transmit the results to the mobile client (Figure 11). ",
+        "images": []
+      },
+      {
+        "index": 61,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image12.png"
+        ]
+      },
+      {
+        "index": 62,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.",
+        "images": []
+      },
+      {
+        "index": 63,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 64,
+        "kind": "p",
+        "style": "",
+        "text": "Details of model training and image processing are provided on the Model page.",
+        "images": []
+      },
+      {
+        "index": 65,
+        "kind": "p",
+        "style": "3",
+        "text": "3.4 Mobile App Development",
+        "images": []
+      },
+      {
+        "index": 66,
+        "kind": "p",
+        "style": "",
+        "text": "We developed a companion app that brings connection management, parameter settings, monitoring of reaction progress, and result recording together on a mobile phone, making instrument operation more intuitive and testing more convenient[5]. ",
+        "images": []
+      },
+      {
+        "index": 67,
+        "kind": "p",
+        "style": "",
+        "text": "The Fluorescent detection app was developed in Java using Android Studio and is compatible with Android and subsequent operating systems. It includes four types of interfaces: Wi-Fi connection, fluorescence image acquisition and analysis, fluorescence curve display, and reaction parameter settings (Figure 12). ",
+        "images": []
+      },
+      {
+        "index": 68,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image13.png"
+        ]
+      },
+      {
+        "index": 69,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 12. Overview of the Fluorescent detection mobile app.",
+        "images": []
+      },
+      {
+        "index": 70,
+        "kind": "p",
+        "style": "",
+        "text": "(A) App design architecture. (B) App interfaces, including (i) the Wi-Fi connection page, (ii) the fluorescence image acquisition and risk classification page, (iii) the fluorescence curve page, and (iv) the reaction condition settings page.",
+        "images": []
+      },
+      {
+        "index": 71,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 72,
+        "kind": "p",
+        "style": "",
+        "text": "Compatibility results for the tested systems are provided in Section 6.2, and technical details are available on the Software page.",
+        "images": []
+      },
+      {
+        "index": 73,
+        "kind": "p",
+        "style": "3",
+        "text": " 3.5 Device Operation Workflow",
+        "images": []
+      },
+      {
+        "index": 74,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image14.png"
+        ]
+      },
+      {
+        "index": 75,
+        "kind": "p",
+        "style": "ae",
+        "text": "Sample pretreatment: Extract DNA by lysis in advance and prepare the single-tube RPA-CRISPR/Cas12a reaction system.",
+        "images": []
+      },
+      {
+        "index": 76,
+        "kind": "p",
+        "style": "ae",
+        "text": "Device startup: Press the power button. The device automatically preheats, switches on the lights, and broadcasts a Wi-Fi hotspot.",
+        "images": []
+      },
+      {
+        "index": 77,
+        "kind": "p",
+        "style": "ae",
+        "text": "Sample reaction: Connect to the hotspot using the mobile app and set the reaction time and heating temperature for the specific reaction. Centrifuge the samples, place the tubes in the heating wells, and tap the corresponding control in the app to initiate fluorescence curve acquisition.",
+        "images": []
+      },
+      {
+        "index": 78,
+        "kind": "p",
+        "style": "ae",
+        "text": "Result readout: Once the reaction is complete, the detection results and the full fluorescence curve are displayed in the app.",
+        "images": []
+      },
+      {
+        "index": 79,
+        "kind": "p",
+        "style": "ae",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 80,
+        "kind": "p",
+        "style": "",
+        "text": "Detailed operating instructions will be provided in a separate user manual.",
+        "images": []
+      },
+      {
+        "index": 81,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image15.png"
+        ]
+      },
+      {
+        "index": 82,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 13. Example of ByeGerm 1.0 in use, showing reaction tube preparation and loading, device operation, and viewing results on a mobile device.",
+        "images": []
+      },
+      {
+        "index": 83,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 84,
+        "kind": "p",
+        "style": "2",
+        "text": " 04 From ByeGerm 1.0 to ByeGerm 2.0",
+        "images": []
+      },
+      {
+        "index": 85,
+        "kind": "p",
+        "style": "",
+        "text": "The first generation integrates reaction management, fluorescence readout, and app interaction into a portable device, making it more suitable for small-scale testing at home.",
+        "images": []
+      },
+      {
+        "index": 86,
+        "kind": "p",
+        "style": "",
+        "text": "When the application shifts to centralized testing in kindergartens and nursing homes, each testing round must accommodate more detection reactions, controls, and replicates. The limited number of reaction positions in the first generation increases the number of separate runs required. The second generation therefore focuses on addressing insufficient throughput while also considering the hardware requirements for sample pretreatment, the arrangement of multiple reaction positions, and the association of data with those positions.",
+        "images": []
+      },
+      {
+        "index": 87,
+        "kind": "p",
+        "style": "",
+        "text": "The second-generation design was developed in three directions: adding a separate lysis temperature zone to provide an internal heating position for sample pretreatment; replacing the fixed observation area with a three-face rotating reaction chamber to increase reaction capacity; and retaining the interaction framework of the first-generation app while modifying the control and acquisition programs to coordinate switching between observation faces, imaging across multiple tube positions, and record keeping on the mobile device.",
+        "images": []
+      },
+      {
+        "index": 88,
+        "kind": "p",
+        "style": "2",
+        "text": " 05 ByeGerm 2.0 Detection Platform with Multiple Tube Positions",
+        "images": []
+      },
+      {
+        "index": 89,
+        "kind": "p",
+        "style": "3",
+        "text": " 5.1 Overall Device Architecture and Main Modules",
+        "images": []
+      },
+      {
+        "index": 90,
+        "kind": "p",
+        "style": "",
+        "text": "ByeGerm 2.0 measures approximately 15 × 30 × 20 cm and consists of six components: device control, AI data processing, temperature control, optics, power supply, and mechanical control. The added lysis area and rotating reaction chamber are connected through the power board, mechanical board, core board, and control board. Acquisition across multiple tube positions is managed through the existing app (Figure 14).",
+        "images": []
+      },
+      {
+        "index": 91,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 14. Exploded structural view of ByeGerm 2.0, showing the assembly relationships among the enclosure, rotating reaction chamber, optical components, and internal modules.",
+        "images": [
+          "media/image16.png"
+        ]
+      },
+      {
+        "index": 92,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 93,
+        "kind": "p",
+        "style": "",
+        "text": "The front hinged lid provides access to the lysis area, and the upper hinged lid provides access to the main reaction chamber. External interfaces are grouped at the rear, and a removable battery compartment is located at the bottom (Figure 15).",
+        "images": []
+      },
+      {
+        "index": 94,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image17.png"
+        ]
+      },
+      {
+        "index": 95,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 15. Exterior and dimensional views of ByeGerm 2.0, showing the enclosure, front and rear panels, and top and bottom structures.",
+        "images": []
+      },
+      {
+        "index": 96,
+        "kind": "p",
+        "style": "",
+        "text": "ByeGerm 2.0 retains the fluorescence acquisition and mobile interaction framework of ByeGerm 1.0. The following sections describe the added structures and programs.",
+        "images": []
+      },
+      {
+        "index": 97,
+        "kind": "p",
+        "style": "4",
+        "text": " 5.1.1 Independent Sample Pretreatment Module",
+        "images": []
+      },
+      {
+        "index": 98,
+        "kind": "p",
+        "style": "",
+        "text": "The independent sample pretreatment module has two tube positions and a designed heating temperature of 90 °C (Figure 16). Because the module generates substantial heat during operation, it is housed in a separate cavity that provides physical isolation. To prevent thermal damage to the enclosure and other internal components, the space between this cavity and the main enclosure is filled with flexible polymer insulation. This creates an effective thermal barrier, ensuring structural integrity and safety during prolonged operation at high temperatures.",
+        "images": []
+      },
+      {
+        "index": 99,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image18.jpeg"
+        ]
+      },
+      {
+        "index": 100,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 16. Structural view of the front lysis area in ByeGerm 2.0, showing the two tube positions in the metal support block.",
+        "images": []
+      },
+      {
+        "index": 101,
+        "kind": "p",
+        "style": "4",
+        "text": " 5.1.2 Reactions and Control across Multiple Tube Positions",
+        "images": []
+      },
+      {
+        "index": 102,
+        "kind": "p",
+        "style": "",
+        "text": "The main reaction chamber is located beneath the top hinged lid and uses a rotating heating platform designed to operate at 43 °C (Figure 17). The chamber is arranged across three faces, each with five tube positions, providing fifteen reaction positions in total. As the chamber rotates, each observation face enters the fixed camera's field of view in sequence.",
+        "images": []
+      },
+      {
+        "index": 103,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image19.jpeg"
+        ]
+      },
+      {
+        "index": 104,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 17. Structural view of the main reaction chamber in ByeGerm 2.0, showing the top loading opening and internal arrangement for accommodating reaction tubes.",
+        "images": []
+      },
+      {
+        "index": 105,
+        "kind": "p",
+        "style": "",
+        "text": "The PCB architecture of the device control system (Figure 18) consists of seven functional modules: the peripheral control board core module, the peripheral control board control module, the triangular rotation module, the power module, the power protection module, the charging module, and the 18650 batteries. These modules work together to provide system control, power, and charging functions. ",
+        "images": []
+      },
+      {
+        "index": 106,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image20.png"
+        ]
+      },
+      {
+        "index": 107,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 18. Connection diagram of the control and power supply systems in ByeGerm 2.0, showing the relationships among the control, rotation, power management, and battery units.",
+        "images": []
+      },
+      {
+        "index": 108,
+        "kind": "p",
+        "style": "",
+        "text": "Further details are provided in the reproduction guide.",
+        "images": []
+      },
+      {
+        "index": 109,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 110,
+        "kind": "p",
+        "style": "3",
+        "text": " 5.2 Multicolor Fluorescence Image Analysis",
+        "images": []
+      },
+      {
+        "index": 111,
+        "kind": "p",
+        "style": "",
+        "text": "In this study, fluorescence images of reaction tubes from the one-step RPA-CRISPR/Cas12a system were used as the underlying dataset to develop a CNN-based fluorescence classification model. The key steps in its training process are shown in Figure 19. Details of the training methods and evaluation results are provided on the Model page.",
+        "images": []
+      },
+      {
+        "index": 112,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 113,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image21.jpeg"
+        ]
+      },
+      {
+        "index": 114,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 19. Schematic of the processing workflow for the multicolor fluorescence image classification model.",
+        "images": []
+      },
+      {
+        "index": 115,
+        "kind": "p",
+        "style": "3",
+        "text": " 5.3 Program Upgrades for Operation across Multiple Tube Positions",
+        "images": []
+      },
+      {
+        "index": 116,
+        "kind": "p",
+        "style": "",
+        "text": "The program retains the mobile client, wireless communication, YOLOv8n, and OpenCV. After each switch between observation faces, the device captures an image containing multiple tube positions, locates each tube, and extracts its corresponding region. The app centrally manages tasks and results. The hardware and software interaction architecture is shown in Figure 20.",
+        "images": []
+      },
+      {
+        "index": 117,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 20. The coordinated hardware and software architecture of ByeGerm 2.0 includes the mobile app, a Windows training host, an STM32 AI vision main control board, an RGB LED array, an STM32 temperature control main control board, a power management module, and a camera module. Data exchange and control are implemented through Wi-Fi and hardware interfaces.",
+        "images": [
+          "media/image22.png"
+        ]
+      },
+      {
+        "index": 118,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 119,
+        "kind": "p",
+        "style": "",
+        "text": "Further technical details are provided on the Software and Model pages.",
+        "images": []
+      },
+      {
+        "index": 120,
+        "kind": "p",
+        "style": "3",
+        "text": " 5.4 Device Operation Workflow",
+        "images": []
+      },
+      {
+        "index": 121,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image23.png"
+        ]
+      },
+      {
+        "index": 122,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image24.png"
+        ]
+      },
+      {
+        "index": 123,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 21. Photographs of integrated testing of the ByeGerm 2.0 device and mobile client, showing connection, operation of the front area, operation of the upper area, and the results interface in sequence.",
+        "images": []
+      },
+      {
+        "index": 124,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 125,
+        "kind": "p",
+        "style": "",
+        "text": "Operation proceeds through connection, loading, running the device, and viewing results. Detailed steps will be provided in a separate user manual.",
+        "images": []
+      },
+      {
+        "index": 126,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 127,
+        "kind": "p",
+        "style": "2",
+        "text": " 06 Functional Validation and Design Evaluation",
+        "images": []
+      },
+      {
+        "index": 128,
+        "kind": "p",
+        "style": "3",
+        "text": " 6.1 Data Acquisition Compatibility across Mobile Operating Systems",
+        "images": []
+      },
+      {
+        "index": 129,
+        "kind": "p",
+        "style": "",
+        "text": "To accommodate users' existing phones, we tested device connection, acquisition requests, and data display on different operating systems. The instrument acquires temperature data and fluorescence images, which the app receives wirelessly and uses to display results.",
+        "images": []
+      },
+      {
+        "index": 130,
+        "kind": "p",
+        "style": "",
+        "text": "The tested devices running HarmonyOS, HyperOS, ColorOS, and OriginOS all completed data acquisition, analysis, and display, and produced consistent classification results for the test examples (Figure 22).",
+        "images": []
+      },
+      {
+        "index": 131,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image25.png"
+        ]
+      },
+      {
+        "index": 132,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 22. Records of data acquisition and result display using ByeGerm 2.0 on four tested mobile operating systems.",
+        "images": []
+      },
+      {
+        "index": 133,
+        "kind": "p",
+        "style": "",
+        "text": "These conclusions apply to the phones and app versions actually tested. Continuous acquisition, reconnection, and record completeness will be included in subsequent evaluations.",
+        "images": []
+      },
+      {
+        "index": 134,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 135,
+        "kind": "p",
+        "style": "3",
+        "text": " 6.3 Performance Results for Five Pathogen Detection Systems",
+        "images": []
+      },
+      {
+        "index": 136,
+        "kind": "p",
+        "style": "",
+        "text": "Confirmation against experimental records is pending.",
+        "images": []
+      },
+      {
+        "index": 137,
+        "kind": "p",
+        "style": "",
+        "text": "The five corresponding detection systems for RSV, hMPV-B, SPN, BP, and HI produced distinguishable signals for the tested targets and non-target controls.",
+        "images": []
+      },
+      {
+        "index": 138,
+        "kind": "p",
+        "style": "2",
+        "text": " 07 Assembly and Reproduction",
+        "images": []
+      },
+      {
+        "index": 139,
+        "kind": "p",
+        "style": "",
+        "text": "Assembly procedures, circuit connections, structural design files, and the bill of materials will be compiled in a separate reproduction guide.",
+        "images": []
+      },
+      {
+        "index": 140,
+        "kind": "p",
+        "style": "2",
+        "text": " 08 Cost Estimation and Comparison with qPCR ",
+        "images": []
+      },
+      {
+        "index": 141,
+        "kind": "p",
+        "style": "3",
+        "text": " 8.1 Scope and Method of Cost Estimation",
+        "images": []
+      },
+      {
+        "index": 142,
+        "kind": "p",
+        "style": "",
+        "text": "Costs for both generations are estimated as the sum of component and fabrication costs, assembly and testing, transportation and spare materials, and contingency, with all amounts expressed in Chinese yuan (CNY). ",
+        "images": []
+      },
+      {
+        "index": 143,
+        "kind": "p",
+        "style": "",
+        "text": "For ByeGerm 1.0, the existing component selection list was used, with the battery quantity adjusted to three cells. The subtotal for components and fabrication is CNY 3,573.33, and the total device budget is CNY 4,428.33. ByeGerm 2.0 retains the budget for producing one unit in a small batch, with component and fabrication costs of CNY 3,165 and a total device budget of CNY 3,980.",
+        "images": []
+      },
+      {
+        "index": 144,
+        "kind": "p",
+        "style": "",
+        "text": "The estimates exclude reused terminal devices, testing consumables, early-stage research and development, certification, and after-sales services. The per-unit allocation of bulk materials and prototyping costs in the first-generation list still requires verification. Therefore, the current subtotals are not used directly to compare per-unit prices between the two generations.",
+        "images": []
+      },
+      {
+        "index": 145,
+        "kind": "p",
+        "style": "3",
+        "text": "8.2 ByeGerm 1.0 Cost Estimate",
+        "images": []
+      },
+      {
+        "index": 146,
+        "kind": "p",
+        "style": "4",
+        "text": " Component and Fabrication Cost Breakdown",
+        "images": []
+      },
+      {
+        "index": 147,
+        "kind": "p",
+        "style": "",
+        "text": "The battery cost is calculated as three cells at CNY 5.60 per cell, totaling CNY 16.80. Quantities and unit prices for all other items are retained from the component selection list.",
+        "images": []
+      },
+      {
+        "index": 148,
+        "kind": "p",
+        "style": "af1",
+        "text": "Table 2. ByeGerm 1.0 Component and Fabrication Cost Breakdown",
+        "images": []
+      },
+      {
+        "index": 149,
+        "kind": "tbl",
+        "style": "",
+        "text": "Component or Fabrication ItemQuantity Used in the EstimateUnit Price (CNY)Subtotal (CNY)AI main control board1719.00719.00Camera1762.58762.58Resistor pack322.0066.00Capacitor pack246.0092.00470 nm blue LED 1201.1022.00470 nm blue LED 2201.9438.80470 nm blue LED 313.003.003D printing materials755.00385.00Power management board1255.00255.0018650 battery35.6016.80PCB prototyping620.00120.00Orange optical filter15.005.00Brass standoff16.996.99Brass standoff15.145.14Brass standoff13.683.68Brass standoff14.884.88Brass standoff13.453.45Brass standoff15.405.40Heat-set insert15.805.80Heat-set insert12.982.98Heat-set insert12.232.23High-temperature ceramic heating rod826.00208.00Switch28.0016.00Connector211.8023.60Cooling fan210.0020.00CNC prototyping3260.00780.00Component and fabrication subtotal——3,573.33",
+        "images": [],
+        "rows": [
+          [
+            "Component or Fabrication Item",
+            "Quantity Used in the Estimate",
+            "Unit Price (CNY)",
+            "Subtotal (CNY)"
+          ],
+          [
+            "AI main control board",
+            "1",
+            "719.00",
+            "719.00"
+          ],
+          [
+            "Camera",
+            "1",
+            "762.58",
+            "762.58"
+          ],
+          [
+            "Resistor pack",
+            "3",
+            "22.00",
+            "66.00"
+          ],
+          [
+            "Capacitor pack",
+            "2",
+            "46.00",
+            "92.00"
+          ],
+          [
+            "470 nm blue LED 1",
+            "20",
+            "1.10",
+            "22.00"
+          ],
+          [
+            "470 nm blue LED 2",
+            "20",
+            "1.94",
+            "38.80"
+          ],
+          [
+            "470 nm blue LED 3",
+            "1",
+            "3.00",
+            "3.00"
+          ],
+          [
+            "3D printing materials",
+            "7",
+            "55.00",
+            "385.00"
+          ],
+          [
+            "Power management board",
+            "1",
+            "255.00",
+            "255.00"
+          ],
+          [
+            "18650 battery",
+            "3",
+            "5.60",
+            "16.80"
+          ],
+          [
+            "PCB prototyping",
+            "6",
+            "20.00",
+            "120.00"
+          ],
+          [
+            "Orange optical filter",
+            "1",
+            "5.00",
+            "5.00"
+          ],
+          [
+            "Brass standoff",
+            "1",
+            "6.99",
+            "6.99"
+          ],
+          [
+            "Brass standoff",
+            "1",
+            "5.14",
+            "5.14"
+          ],
+          [
+            "Brass standoff",
+            "1",
+            "3.68",
+            "3.68"
+          ],
+          [
+            "Brass standoff",
+            "1",
+            "4.88",
+            "4.88"
+          ],
+          [
+            "Brass standoff",
+            "1",
+            "3.45",
+            "3.45"
+          ],
+          [
+            "Brass standoff",
+            "1",
+            "5.40",
+            "5.40"
+          ],
+          [
+            "Heat-set insert",
+            "1",
+            "5.80",
+            "5.80"
+          ],
+          [
+            "Heat-set insert",
+            "1",
+            "2.98",
+            "2.98"
+          ],
+          [
+            "Heat-set insert",
+            "1",
+            "2.23",
+            "2.23"
+          ],
+          [
+            "High-temperature ceramic heating rod",
+            "8",
+            "26.00",
+            "208.00"
+          ],
+          [
+            "Switch",
+            "2",
+            "8.00",
+            "16.00"
+          ],
+          [
+            "Connector",
+            "2",
+            "11.80",
+            "23.60"
+          ],
+          [
+            "Cooling fan",
+            "2",
+            "10.00",
+            "20.00"
+          ],
+          [
+            "CNC prototyping",
+            "3",
+            "260.00",
+            "780.00"
+          ],
+          [
+            "Component and fabrication subtotal",
+            "—",
+            "—",
+            "3,573.33"
+          ]
+        ]
+      },
+      {
+        "index": 150,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 151,
+        "kind": "p",
+        "style": "4",
+        "text": "Total Device Cost Summary",
+        "images": []
+      },
+      {
+        "index": 152,
+        "kind": "p",
+        "style": "af1",
+        "text": "Table 3. ByeGerm 1.0 Total Device Cost Summary",
+        "images": []
+      },
+      {
+        "index": 153,
+        "kind": "tbl",
+        "style": "",
+        "text": "Cost ItemCalculation MethodAmount (CNY)Components and fabricationSubtotal of the list above; per-unit allocation pending verification3,573.33Assembly and basic testingLabor hours × hourly rate300.00Transportation and a small quantity of spare materialsAllocated per unit150.00ContingencyApproximately 10% of the sum of the first three items, rounded405.00Total device production costSum of the four items above4,428.33",
+        "images": [],
+        "rows": [
+          [
+            "Cost Item",
+            "Calculation Method",
+            "Amount (CNY)"
+          ],
+          [
+            "Components and fabrication",
+            "Subtotal of the list above; per-unit allocation pending verification",
+            "3,573.33"
+          ],
+          [
+            "Assembly and basic testing",
+            "Labor hours × hourly rate",
+            "300.00"
+          ],
+          [
+            "Transportation and a small quantity of spare materials",
+            "Allocated per unit",
+            "150.00"
+          ],
+          [
+            "Contingency",
+            "Approximately 10% of the sum of the first three items, rounded",
+            "405.00"
+          ],
+          [
+            "Total device production cost",
+            "Sum of the four items above",
+            "4,428.33"
+          ]
+        ]
+      },
+      {
+        "index": 154,
+        "kind": "p",
+        "style": "",
+        "text": "The listed component and fabrication costs total CNY 3,573.33. The total device cost per unit will be established after the allocation of bulk materials and the remaining costs have been confirmed.",
+        "images": []
+      },
+      {
+        "index": 155,
+        "kind": "p",
+        "style": "3",
+        "text": " 8.3 ByeGerm 2.0 Cost Estimate",
+        "images": []
+      },
+      {
+        "index": 156,
+        "kind": "p",
+        "style": "4",
+        "text": " Component and Fabrication Cost Breakdown",
+        "images": []
+      },
+      {
+        "index": 157,
+        "kind": "p",
+        "style": "af1",
+        "text": "Table 3 ByeGerm 2.0 Component and Fabrication Cost Breakdown",
+        "images": []
+      },
+      {
+        "index": 158,
+        "kind": "tbl",
+        "style": "",
+        "text": "Component or Fabrication ItemQuantity Used in the EstimateUnit Price (CNY)Subtotal (CNY)RK3588 image computing board1 board700.00700.00Storage medium1 unit80.0080.00USB macro camera with lens1 set300.00300.00Excitation LEDs and LED board1 set80.0080.00Optical filter components1 set300.00300.00Camera and light source mounting brackets1 set60.0060.00Heating components for the main reaction area1 set100.00100.00Heating components for the independent lysis area1 set60.0060.00Temperature sensors and mounting accessories1 set80.0080.00Machining of metal components for the reaction area1 set220.00220.00Thermal insulation and heat-conducting materials1 set70.0070.00Servo or corresponding drive actuator1 set80.0080.00Bearings, couplings, and positioning accessories1 set70.0070.00Power board with soldered components1 board100.00100.00Mechanical board with soldered components1 board80.0080.00Core board with controller and soldered components1 board150.00150.00Control board with soldered components1 board100.00100.0018650 battery cells6 cells20.00120.00Battery protection and connectors1 set50.0050.00External power adapter and cables1 set100.00100.00Cooling fan1 unit25.0025.003D printing of the enclosure and support components1 set160.00160.00Wiring harnesses, plug connectors, and switches1 set50.0050.00Screws, brass standoffs, and other fasteners1 set30.0030.00Total component and fabrication costs——3,165.00",
+        "images": [],
+        "rows": [
+          [
+            "Component or Fabrication Item",
+            "Quantity Used in the Estimate",
+            "Unit Price (CNY)",
+            "Subtotal (CNY)"
+          ],
+          [
+            "RK3588 image computing board",
+            "1 board",
+            "700.00",
+            "700.00"
+          ],
+          [
+            "Storage medium",
+            "1 unit",
+            "80.00",
+            "80.00"
+          ],
+          [
+            "USB macro camera with lens",
+            "1 set",
+            "300.00",
+            "300.00"
+          ],
+          [
+            "Excitation LEDs and LED board",
+            "1 set",
+            "80.00",
+            "80.00"
+          ],
+          [
+            "Optical filter components",
+            "1 set",
+            "300.00",
+            "300.00"
+          ],
+          [
+            "Camera and light source mounting brackets",
+            "1 set",
+            "60.00",
+            "60.00"
+          ],
+          [
+            "Heating components for the main reaction area",
+            "1 set",
+            "100.00",
+            "100.00"
+          ],
+          [
+            "Heating components for the independent lysis area",
+            "1 set",
+            "60.00",
+            "60.00"
+          ],
+          [
+            "Temperature sensors and mounting accessories",
+            "1 set",
+            "80.00",
+            "80.00"
+          ],
+          [
+            "Machining of metal components for the reaction area",
+            "1 set",
+            "220.00",
+            "220.00"
+          ],
+          [
+            "Thermal insulation and heat-conducting materials",
+            "1 set",
+            "70.00",
+            "70.00"
+          ],
+          [
+            "Servo or corresponding drive actuator",
+            "1 set",
+            "80.00",
+            "80.00"
+          ],
+          [
+            "Bearings, couplings, and positioning accessories",
+            "1 set",
+            "70.00",
+            "70.00"
+          ],
+          [
+            "Power board with soldered components",
+            "1 board",
+            "100.00",
+            "100.00"
+          ],
+          [
+            "Mechanical board with soldered components",
+            "1 board",
+            "80.00",
+            "80.00"
+          ],
+          [
+            "Core board with controller and soldered components",
+            "1 board",
+            "150.00",
+            "150.00"
+          ],
+          [
+            "Control board with soldered components",
+            "1 board",
+            "100.00",
+            "100.00"
+          ],
+          [
+            "18650 battery cells",
+            "6 cells",
+            "20.00",
+            "120.00"
+          ],
+          [
+            "Battery protection and connectors",
+            "1 set",
+            "50.00",
+            "50.00"
+          ],
+          [
+            "External power adapter and cables",
+            "1 set",
+            "100.00",
+            "100.00"
+          ],
+          [
+            "Cooling fan",
+            "1 unit",
+            "25.00",
+            "25.00"
+          ],
+          [
+            "3D printing of the enclosure and support components",
+            "1 set",
+            "160.00",
+            "160.00"
+          ],
+          [
+            "Wiring harnesses, plug connectors, and switches",
+            "1 set",
+            "50.00",
+            "50.00"
+          ],
+          [
+            "Screws, brass standoffs, and other fasteners",
+            "1 set",
+            "30.00",
+            "30.00"
+          ],
+          [
+            "Total component and fabrication costs",
+            "—",
+            "—",
+            "3,165.00"
+          ]
+        ]
+      },
+      {
+        "index": 159,
+        "kind": "p",
+        "style": "",
+        "text": "Board costs include soldered components. Each item will be checked when settling procurement costs to remove duplicate charges.",
+        "images": []
+      },
+      {
+        "index": 160,
+        "kind": "p",
+        "style": "4",
+        "text": " Total Device Cost Summary",
+        "images": []
+      },
+      {
+        "index": 161,
+        "kind": "p",
+        "style": "af1",
+        "text": "Table 4. ByeGerm 2.0 Total Device Cost Summary",
+        "images": []
+      },
+      {
+        "index": 162,
+        "kind": "tbl",
+        "style": "",
+        "text": "Cost ItemCalculation MethodAmount (CNY)Components and fabricationTotal from the table above3,165.00Assembly and basic testingBudgeted at 6 labor hours × CNY 50300.00Transportation and a small quantity of spare materialsBudget per unit150.00ContingencyApproximately 10% of the sum of the first three items, rounded365.00Total device production budgetSum of the four items3,980.00",
+        "images": [],
+        "rows": [
+          [
+            "Cost Item",
+            "Calculation Method",
+            "Amount (CNY)"
+          ],
+          [
+            "Components and fabrication",
+            "Total from the table above",
+            "3,165.00"
+          ],
+          [
+            "Assembly and basic testing",
+            "Budgeted at 6 labor hours × CNY 50",
+            "300.00"
+          ],
+          [
+            "Transportation and a small quantity of spare materials",
+            "Budget per unit",
+            "150.00"
+          ],
+          [
+            "Contingency",
+            "Approximately 10% of the sum of the first three items, rounded",
+            "365.00"
+          ],
+          [
+            "Total device production budget",
+            "Sum of the four items",
+            "3,980.00"
+          ]
+        ]
+      },
+      {
+        "index": 163,
+        "kind": "p",
+        "style": "",
+        "text": "The main expenditures are concentrated in computing, imaging and optical filtering, reaction area machining, and supporting circuit boards.",
+        "images": []
+      },
+      {
+        "index": 164,
+        "kind": "p",
+        "style": "3",
+        "text": "8.4 Comparison with qPCR Instruments",
+        "images": []
+      },
+      {
+        "index": 165,
+        "kind": "p",
+        "style": "",
+        "text": "The production budget for the ByeGerm 2.0 prototype is CNY 3,980, and the production budget for the ByeGerm 2.0 prototype is CNY 3,980. A publicly reported procurement unit price for a commercial FQD-96C real-time fluorescence quantitative PCR instrument is CNY 158,300 (Figure 23).",
+        "images": []
+      },
+      {
+        "index": 166,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image26.tiff"
+        ]
+      },
+      {
+        "index": 167,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 23. Comparison of the prototype production budgets for ByeGerm 1.0 and ByeGerm 2.0 with a reference procurement price for a qPCR instrument.",
+        "images": []
+      },
+      {
+        "index": 168,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 169,
+        "kind": "p",
+        "style": "",
+        "text": "This comparison is based on a prototype budget and a single commercial procurement example; it does not imply equivalent throughput, performance, or services.",
+        "images": []
+      },
+      {
+        "index": 170,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 171,
+        "kind": "p",
+        "style": "2",
+        "text": " 09 The ByeGerm Story Continues",
+        "images": []
+      },
+      {
+        "index": 172,
+        "kind": "p",
+        "style": "",
+        "text": "ByeGerm 1.0 was initially designed for small-scale testing at home. ByeGerm 2.0 adds an independent sample pretreatment area and a reaction chamber with multiple tube positions to address centralized testing needs in settings such as kindergartens and nursing homes. Each iteration stems from a deeper understanding of users' needs. The device still requires further refinement of operation across multiple tube positions, coordination between temperature zones, and validation of stability in real-world settings. We will continue to improve operation and result presentation based on feedback from the target users. For the next generation, we hope to explore internet connectivity and use in primary healthcare centers. Subject to privacy protection, clearly defined permissions for data use, and compliance with relevant requirements, we aim to enable secure aggregation and standardized reporting of testing records to support preliminary screening in primary care and disease control surveillance. From homes to care institutions and, ultimately, primary-level public health networks, we hope that each engineering improvement will bring testing closer to the people who need it.",
+        "images": []
+      },
+      {
+        "index": 173,
+        "kind": "p",
+        "style": "",
+        "text": "SoftwareSoftwareModelModelUser ManualUser ManualReproduction GuideReproduction Guide",
+        "images": []
+      },
+      {
+        "index": 174,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 175,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 176,
+        "kind": "p",
+        "style": "",
+        "text": "Reference",
+        "images": []
+      },
+      {
+        "index": 177,
+        "kind": "p",
+        "style": "13",
+        "text": "[1]S. Zhang et al., ‘Current status of recombinase polymerase amplification technologies for the detection of pathogenic microorganisms’, Diagn. Microbiol. Infect. Dis., vol. 108, no. 1, p. 116097, Jan. 2024, doi: 10.1016/j.diagmicrobio.2023.116097.",
+        "images": []
+      },
+      {
+        "index": 178,
+        "kind": "p",
+        "style": "13",
+        "text": "[2]Y. Zhao, Y. Wei, C. Ye, J. Cao, X. Zhou, and M. Xie, ‘Application of recombinase polymerase amplification with lateral flow assay to pathogen point-of-care diagnosis’, Front. Cell. Infect. Microbiol., vol. 14, Nov. 2024, doi: 10.3389/fcimb.2024.1475922.",
+        "images": []
+      },
+      {
+        "index": 179,
+        "kind": "p",
+        "style": "13",
+        "text": "[3]A. I. Alam et al., ‘In-situ particle analysis with heterogeneous background: a machine learning approach’, Sci. Rep., vol. 14, no. 1, p. 10609, May 2024, doi: 10.1038/s41598-024-59558-7.",
+        "images": []
+      },
+      {
+        "index": 180,
+        "kind": "p",
+        "style": "13",
+        "text": "[4]X. Li et al., ‘Rapid, portable, and sensitive detection of CaMV35S by RPA-CRISPR/Cas12a-G4 colorimetric assays with high accuracy deep learning object recognition and classification’, Talanta, vol. 278, p. 126441, Oct. 2024, doi: 10.1016/j.talanta.2024.126441.",
+        "images": []
+      },
+      {
+        "index": 181,
+        "kind": "p",
+        "style": "13",
+        "text": "[5]Q. Wang et al., ‘Cas14a1-advanced LAMP for ultrasensitive and visual Pathogen diagnostic’, Talanta, vol. 269, p. 125458, Mar. 2024, doi: 10.1016/j.talanta.2023.125458.",
+        "images": []
+      },
+      {
+        "index": 182,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 183,
+        "kind": "sectPr",
+        "style": "",
+        "text": "",
+        "images": []
+      }
+    ],
+    "comments": [
+      {
+        "id": "0",
+        "text": "所有表格需要替换配色复现手册实际位于protocol，说明书位于software，但本页面对应链接及按钮均需要一次性打开",
+        "anchor": "Hardware",
+        "body_index": 0
+      },
+      {
+        "id": "1",
+        "text": "视频1",
+        "anchor": "",
+        "body_index": 2
+      },
+      {
+        "id": "2",
+        "text": "有可编辑ppt版本，原图清晰度不够高",
+        "anchor": "",
+        "body_index": 6
+      },
+      {
+        "id": "3",
+        "text": "有可编辑ppt版本，原图清晰度不够高",
+        "anchor": "",
+        "body_index": 9
+      },
+      {
+        "id": "4",
+        "text": "看情况内容可进一步精简",
+        "anchor": "Design",
+        "body_index": 19
+      },
+      {
+        "id": "5",
+        "text": "跳转1.0 reproduction guide PDF文档",
+        "anchor": "reproduction",
+        "body_index": 57
+      },
+      {
+        "id": "6",
+        "text": "跳转model页面",
+        "anchor": "page",
+        "body_index": 64
+      },
+      {
+        "id": "7",
+        "text": "跳转 software文档",
+        "anchor": "page",
+        "body_index": 72
+      },
+      {
+        "id": "8",
+        "text": "视频2",
+        "anchor": "",
+        "body_index": 74
+      },
+      {
+        "id": "9",
+        "text": "点击跳转1代说明书pdf",
+        "anchor": "manual",
+        "body_index": 80
+      },
+      {
+        "id": "10",
+        "text": "跳转2.0 reproduction guide PDF文档",
+        "anchor": "reproduction",
+        "body_index": 108
+      },
+      {
+        "id": "11",
+        "text": "跳转model页面",
+        "anchor": "page",
+        "body_index": 111
+      },
+      {
+        "id": "12",
+        "text": "跳转页面",
+        "anchor": "Model",
+        "body_index": 119
+      },
+      {
+        "id": "13",
+        "text": "视频3",
+        "anchor": "",
+        "body_index": 121
+      },
+      {
+        "id": "14",
+        "text": "跳转2代用户手册pdf",
+        "anchor": "manual",
+        "body_index": 125
+      },
+      {
+        "id": "15",
+        "text": "待插入结果·，预留两张图片位置",
+        "anchor": "Systems",
+        "body_index": 135
+      },
+      {
+        "id": "16",
+        "text": "插入两代复现手册，展示两个pdf页面，可以直接滑动看的",
+        "anchor": "guide",
+        "body_index": 139
+      },
+      {
+        "id": "17",
+        "text": "该表格折叠 点击打开",
+        "anchor": "Breakdown",
+        "body_index": 148
+      },
+      {
+        "id": "18",
+        "text": "该表格直接展示，不折叠",
+        "anchor": "Summary",
+        "body_index": 152
+      },
+      {
+        "id": "19",
+        "text": "该表格折叠 点击打开",
+        "anchor": "Breakdown",
+        "body_index": 157
+      },
+      {
+        "id": "20",
+        "text": "该表格直接展示，不折叠",
+        "anchor": "Summary",
+        "body_index": 161
+      },
+      {
+        "id": "21",
+        "text": "分别跳转对应pdf及页面",
+        "anchor": "it",
+        "body_index": 172
+      }
+    ],
+    "math_objects": 0,
+    "media": [
+      {
+        "path": "word/media/image22.png",
+        "bytes": 105197,
+        "sha256": "f0eca63618bfbd1b66ea12285d26e3ff8a1e039df3a9e2f0d6808d91a998190b"
+      },
+      {
+        "path": "word/media/image23.png",
+        "bytes": 218382,
+        "sha256": "eb7066dbf58ff459189eb73441454603b8f0f9677973d83e6151df8e21ac863b"
+      },
+      {
+        "path": "word/media/image25.png",
+        "bytes": 606836,
+        "sha256": "47dbc31e6aada42f50d5c26d3d1e6d2ebf9c1af6bae8a1430e8ba3d9f6f29675"
+      },
+      {
+        "path": "word/media/image26.tiff",
+        "bytes": 50506,
+        "sha256": "0b871285b7d1085b8b97bf190f9363f45f5461de2012d565025a5ddbf5383ae0"
+      },
+      {
+        "path": "word/media/image12.png",
+        "bytes": 2997672,
+        "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c"
+      },
+      {
+        "path": "word/media/image1.jpeg",
+        "bytes": 41267,
+        "sha256": "2432c277f5b95be8f40cc29ad325f53dba27a8ab994cde09104ffd38b49481fd"
+      },
+      {
+        "path": "word/media/image2.tiff",
+        "bytes": 222712,
+        "sha256": "bb14ccf1d38c77257214b30f0c3379fcd79a8ceb24af95fcc22f48ee8d9be66b"
+      },
+      {
+        "path": "word/media/image3.tiff",
+        "bytes": 158292,
+        "sha256": "15fdac8805eed23ca3133f9b592d142510a3ad1f9cec0b2b12817f239c5d662b"
+      },
+      {
+        "path": "word/media/image4.jpeg",
+        "bytes": 1462170,
+        "sha256": "a77dba23d8664a514d847b7c8b011f4f4b7290284bcefffbf2080d547fa38707"
+      },
+      {
+        "path": "word/media/image5.png",
+        "bytes": 1658876,
+        "sha256": "9fd5522ae19ec713a8824ccbc8501ca240826f29322255e949f5420ccc07311e"
+      },
+      {
+        "path": "word/media/image6.jpeg",
+        "bytes": 90536,
+        "sha256": "cc8ae11b1cf5581992f79260ca2610807e83bf2cc6f6046c75bbf971d1529126"
+      },
+      {
+        "path": "word/media/image7.jpeg",
+        "bytes": 22181,
+        "sha256": "2e1903856735842404fee24e3192e686b2bc31e566a8b1440ee1a21f524a7d9c"
+      },
+      {
+        "path": "word/media/image8.jpeg",
+        "bytes": 205412,
+        "sha256": "c7f9819567613ec2ee4e2ff420d878c8bfc5d217abd72e9828a7d5506cfb2d48"
+      },
+      {
+        "path": "word/media/image9.jpeg",
+        "bytes": 179149,
+        "sha256": "86540a2d6710647670a8745f7f5389e20cff5d318277314f4dc82ee8f169d2a0"
+      },
+      {
+        "path": "word/media/image10.jpeg",
+        "bytes": 236024,
+        "sha256": "57776304a84dcfee92f1247cbdd6b8f7b25a851624faa2db614f0a0381a7da83"
+      },
+      {
+        "path": "word/media/image11.jpeg",
+        "bytes": 209692,
+        "sha256": "f7ad58316a3661ac295cfe23f8f0b853c551a686b46021c7d7bea59eede49848"
+      },
+      {
+        "path": "word/media/image24.png",
+        "bytes": 231492,
+        "sha256": "654a5c0620716caafe471f2a01f1c3823a1200fb99e24dc65f21e3ae00bef51b"
+      },
+      {
+        "path": "word/media/image13.png",
+        "bytes": 1334994,
+        "sha256": "2afa29bcd04854013e4dfe8dac55f37d0098eb2768b0122219e315d0b16bdc94"
+      },
+      {
+        "path": "word/media/image14.png",
+        "bytes": 180957,
+        "sha256": "20e2634436ec70fad4bac8aa57c0df9cadbd80fe2b7ad9840b1c088d326b0a5e"
+      },
+      {
+        "path": "word/media/image15.png",
+        "bytes": 7485164,
+        "sha256": "6c7abae524003f2a69e022f1b3683e94ee506210c41f364ffe5038c621582e75"
+      },
+      {
+        "path": "word/media/image16.png",
+        "bytes": 174505,
+        "sha256": "985634d9d8d965a1583a399ab66e6e79e1b2e551c551d4d57f3e9711ea5d20e5"
+      },
+      {
+        "path": "word/media/image17.png",
+        "bytes": 116205,
+        "sha256": "71843d086975cc9d278711f9d9aaeddcd991f30ccb1b2cd3d512997d15f58105"
+      },
+      {
+        "path": "word/media/image18.jpeg",
+        "bytes": 16135,
+        "sha256": "24082bf4b886cc678e3db2353a69e9e4f616c4f7c43f1397d711c1aa9e985bee"
+      },
+      {
+        "path": "word/media/image19.jpeg",
+        "bytes": 31897,
+        "sha256": "9a23da6b24baeb93554450713548f96d476fd019776390020a6a66920c02679e"
+      },
+      {
+        "path": "word/media/image20.png",
+        "bytes": 308628,
+        "sha256": "5c5b84ff96e7e1f6759189ef5c138edb7fb9d94912f1108be4de9af1f62bbd99"
+      },
+      {
+        "path": "word/media/image21.jpeg",
+        "bytes": 73366,
+        "sha256": "7018312d3b5366c3f3df4f6b6584d68496348a888e452d420478f8a87f2cc624"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Reproduction Guide\\Byegerm1.0 Reproduction Guide.docx",
+    "sha256": "a80dd63a6f61836b5c53df45e5ae95adff7ca75149baf4f5b19be1187f4f76a1",
+    "blocks": [
+      {
+        "index": 0,
+        "kind": "p",
+        "style": "af4",
+        "text": "Byegerm1.0 Reproduction Guide",
+        "images": []
+      },
+      {
+        "index": 1,
+        "kind": "p",
+        "style": "af4",
+        "text": "Fixed dual-tube instrument: fabrication, assembly and system commissioning",
+        "images": []
+      },
+      {
+        "index": 2,
+        "kind": "p",
+        "style": "1",
+        "text": "1 Technical field",
+        "images": []
+      },
+      {
+        "index": 3,
+        "kind": "p",
+        "style": "",
+        "text": "Byegerm1.0 combines temperature control, fluorescence imaging, image analysis and wireless communication in a portable enclosure. This manual describes the components of each module and explains how to replicate the instrument, from structural fabrication and electrical connections to optical setup and system commissioning.",
+        "images": []
+      },
+      {
+        "index": 4,
+        "kind": "p",
+        "style": "1",
+        "text": "2 Background",
+        "images": []
+      },
+      {
+        "index": 5,
+        "kind": "p",
+        "style": "",
+        "text": "Portable testing requires stable reaction conditions and consistent imaging conditions. Designed for home use, byegerm1.0 has two fixed tube positions and a mobile app that makes temperatures, images and test records easier to view, reducing reliance on a computer during operation.",
+        "images": []
+      },
+      {
+        "index": 6,
+        "kind": "p",
+        "style": "1",
+        "text": "3 System design",
+        "images": []
+      },
+      {
+        "index": 7,
+        "kind": "p",
+        "style": "",
+        "text": "The instrument measures approximately 7.5 × 14 × 11 cm and is compact enough for one person to carry. Its internal components are arranged in five modules: optics, temperature control, power management, AI data processing and Wi-Fi communication.",
+        "images": []
+      },
+      {
+        "index": 8,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 9,
+        "kind": "tbl",
+        "style": "",
+        "text": "ModuleMain components and functionsOpticsA 1 W blue LED sits below each tube slot. A camera, lens and optical filter components are positioned in front to capture fluorescence images.Temperature controlTwo ceramic heater cores with a combined power of 6 W work with temperature feedback, PID control and a DC fan to provide heating and cooling.Power managementA lithium battery, balancing and protection components, and charging management components supply power to the modules. LEDs indicate the remaining battery charge.AI data processingAn Orange Pi 5 Max with an RK3588 processor runs YOLOv8n and OpenCV to locate tube positions and analyze images.Wi-Fi communicationA TCP/IP connection to a socket on the phone carries images, temperatures and analysis results.",
+        "images": [],
+        "rows": [
+          [
+            "Module",
+            "Main components and functions"
+          ],
+          [
+            "Optics",
+            "A 1 W blue LED sits below each tube slot. A camera, lens and optical filter components are positioned in front to capture fluorescence images."
+          ],
+          [
+            "Temperature control",
+            "Two ceramic heater cores with a combined power of 6 W work with temperature feedback, PID control and a DC fan to provide heating and cooling."
+          ],
+          [
+            "Power management",
+            "A lithium battery, balancing and protection components, and charging management components supply power to the modules. LEDs indicate the remaining battery charge."
+          ],
+          [
+            "AI data processing",
+            "An Orange Pi 5 Max with an RK3588 processor runs YOLOv8n and OpenCV to locate tube positions and analyze images."
+          ],
+          [
+            "Wi-Fi communication",
+            "A TCP/IP connection to a socket on the phone carries images, temperatures and analysis results."
+          ]
+        ]
+      },
+      {
+        "index": 10,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 11,
+        "kind": "p",
+        "style": "1",
+        "text": "4 Figures",
+        "images": []
+      },
+      {
+        "index": 12,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 1 shows the instrument structure and computing board. Figures 2 and 3 show photographs of the components and assembly. Figure 4 covers the interfaces, temperature sensing and lighting circuits. Figure 5 compares camera mounting distances, and Figure 6 shows the app's image display. The figures appear alongside the relevant steps.",
+        "images": []
+      },
+      {
+        "index": 13,
+        "kind": "p",
+        "style": "",
+        "text": "Before fabrication, prepare the structural parts, circuit boards, wiring harnesses and fasteners, along with screwdrivers, a multimeter, soldering tools and tools for preparing the wiring harnesses. Perform a trial assembly without power, then connect and test each module.",
+        "images": []
+      },
+      {
+        "index": 14,
+        "kind": "p",
+        "style": "1",
+        "text": "5 Implementation",
+        "images": []
+      },
+      {
+        "index": 15,
+        "kind": "p",
+        "style": "21",
+        "text": "5.1 Structural fabrication and module assembly",
+        "images": []
+      },
+      {
+        "index": 16,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 17,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image1.png"
+        ]
+      },
+      {
+        "index": 18,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 19,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 1  Exploded view of the instrument modules",
+        "images": []
+      },
+      {
+        "index": 20,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 21,
+        "kind": "p",
+        "style": "",
+        "text": "1  Fabricate the structural parts. Model the enclosure, brackets and working chamber in SolidWorks 2024. Check the hole positions and interfaces, and confirm that the cover opens and closes properly. Export and slice the models, then 3D-print the parts. Remove the supports and perform a trial assembly before installing the internal components.",
+        "images": []
+      },
+      {
+        "index": 22,
+        "kind": "p",
+        "style": "",
+        "text": "2  Assemble the temperature-control components. Secure the dual-tube metal block to its support. Fit the two ceramic heater cores closely around the tube-slot cavity, and secure the sensor at the designated temperature measurement point. Position the fan on the right and install the insulation as shown in Figure 1, keeping the airflow path clear.",
+        "images": []
+      },
+      {
+        "index": 23,
+        "kind": "p",
+        "style": "",
+        "text": "3  Install the computing and power modules. Secure the computing board, battery and power management components separately, leaving room for cooling and connector access. Fit the camera bracket loosely, then tighten it after setting the imaging position in Section 5.3.",
+        "images": []
+      },
+      {
+        "index": 24,
+        "kind": "p",
+        "style": "31",
+        "text": "Physical components and assembly reference",
+        "images": []
+      },
+      {
+        "index": 25,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 2 shows the temperature-control and optical components and their locations inside the enclosure, as described on the preceding page. Figure 3 shows the reaction-area assembly being secured to the enclosure. Refer to Figure 1 to check how the parts fit together.",
+        "images": []
+      },
+      {
+        "index": 26,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 27,
+        "kind": "p",
+        "style": "",
+        "text": "    ",
+        "images": [
+          "media/image2.jpeg",
+          "media/image3.jpeg",
+          "media/image4.jpeg"
+        ]
+      },
+      {
+        "index": 28,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 2  Photographs of the internal components of byegerm1.0. Left: circuit boards and wiring layout. Center: dual-tube metal block, fan and optical filter assembly. Right: circuit board on the back of the camera and its bracket.",
+        "images": []
+      },
+      {
+        "index": 29,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 30,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image5.jpeg"
+        ]
+      },
+      {
+        "index": 31,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 3  Photograph of the byegerm1.0 reaction-area assembly, showing how the support plate, metal support block, fan and enclosure are secured together.",
+        "images": []
+      },
+      {
+        "index": 32,
+        "kind": "p",
+        "style": "21",
+        "text": "5.2 Electrical connections and power supply",
+        "images": []
+      },
+      {
+        "index": 33,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 34,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image6.png"
+        ]
+      },
+      {
+        "index": 35,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 4  Expansion interfaces and working-chamber circuits. A: expansion interfaces. B: LED power supply. C: temperature-sensing interfaces. D: heating and lighting connections.",
+        "images": []
+      },
+      {
+        "index": 36,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 37,
+        "kind": "p",
+        "style": "",
+        "text": "The functional modules connect through wiring harnesses with terminal connectors. Use the net names in Figure 4 to check the power, signal and ground connections, then confirm the orientation and pin 1 position of each connector. Route the wiring neatly to reduce assembly errors and simplify later troubleshooting and maintenance.",
+        "images": []
+      },
+      {
+        "index": 38,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 39,
+        "kind": "p",
+        "style": "",
+        "text": "1  Connect the working chamber. Connect the heaters, temperature sensors, fan and LEDs to their corresponding driver or expansion interfaces. Power the heating elements and LED boards through the driver circuits, not directly from the computing board's GPIO pins. Keep the harnesses clear of the tube openings, fan and camera field of view.",
+        "images": []
+      },
+      {
+        "index": 40,
+        "kind": "p",
+        "style": "",
+        "text": "2  Connect the camera and power supply. Connect the camera to the computing board via USB. Keep the battery disconnected while checking the power assembly's inputs, outputs and common ground. Use a multimeter to confirm that the polarity and voltage match the ratings of the boards and loads.",
+        "images": []
+      },
+      {
+        "index": 41,
+        "kind": "p",
+        "style": "",
+        "text": "3  Power up the components in sequence. Start the computing board and read the raw images and temperatures first. Then enable the lighting, fan and heating in that order. Confirm that each control operates the intended component and that the power supply is stable before securing the harnesses.",
+        "images": []
+      },
+      {
+        "index": 42,
+        "kind": "p",
+        "style": "21",
+        "text": "5.3 Optical installation and image acquisition settings",
+        "images": []
+      },
+      {
+        "index": 43,
+        "kind": "p",
+        "style": "",
+        "text": "Install a blue LED below each of the two tube slots. Position a USB industrial camera with an ultra-macro lens directly in front of the slots. Fit suitable optical filter components in front of the lens to suppress excitation light and capture fluorescence.",
+        "images": []
+      },
+      {
+        "index": 44,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image7.jpeg"
+        ]
+      },
+      {
+        "index": 45,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 5  Comparison of images captured at different distances between the camera and tube positions",
+        "images": []
+      },
+      {
+        "index": 46,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 47,
+        "kind": "p",
+        "style": "",
+        "text": "1  Adjust the imaging position. Use the 50 mm setup in Figure 5 as a reference. Adjust the bracket and focus until the reading regions of both tubes are fully visible and sharp. Close the cover and check for light leakage, then tighten the bracket once the position is set.",
+        "images": []
+      },
+      {
+        "index": 48,
+        "kind": "p",
+        "style": "",
+        "text": "2  Set consistent acquisition conditions. Use the same reference object to adjust exposure, gain and white balance, checking for reflections and overexposure. Save images of the empty chamber and images with the lights off and on. Capture a continuous sequence to confirm image stability.",
+        "images": []
+      },
+      {
+        "index": 49,
+        "kind": "p",
+        "style": "21",
+        "text": "5.4 Image processing and communication setup",
+        "images": []
+      },
+      {
+        "index": 50,
+        "kind": "p",
+        "style": "",
+        "text": "The Raspberry Pi uses a high-performance 2.4 GHz 64-bit ARM-based SoC and runs the trained YOLOv8n model and an OpenCV image-processing program. The instrument uses the trained YOLOv8n model to locate the reaction tubes, then uses OpenCV to extract and analyze the corresponding image regions before sending the results to the app.",
+        "images": []
+      },
+      {
+        "index": 51,
+        "kind": "p",
+        "style": "21",
+        "text": "5.5 App connection and system commissioning",
+        "images": []
+      },
+      {
+        "index": 52,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image8.jpeg"
+        ]
+      },
+      {
+        "index": 53,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 6  Example of the app displaying received images and device information",
+        "images": []
+      },
+      {
+        "index": 54,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 55,
+        "kind": "p",
+        "style": "",
+        "text": "1  Establish the connection. Start the instrument and connect it and the phone to the same local network. Enter the instrument's Server IP and Port in the app, select Connect to Server, and confirm that new data arrive.",
+        "images": []
+      },
+      {
+        "index": 56,
+        "kind": "p",
+        "style": "",
+        "text": "2  Configure settings and acquire images. Check the temperature and time settings under Settings, then send an image request. Verify the acquisition time, left and right tube positions, and saved records. Test continuous acquisition and reconnection after a dropped connection.",
+        "images": []
+      },
+      {
+        "index": 57,
+        "kind": "p",
+        "style": "",
+        "text": "3  Test temperature control and imaging together. At the fixed measurement point, compare the software reading with a reference thermometer. Check the temperature response during warm-up, steady operation and after stopping. Capture images again while temperature control is running to confirm stable lighting, power and imaging.",
+        "images": []
+      },
+      {
+        "index": 58,
+        "kind": "p",
+        "style": "",
+        "text": "When commissioning is complete, save the raw images, temperature records and instrument configuration as a reference for maintenance. Restart the instrument and check that the configuration is restored and that communication and acquisition work. After replacing a camera, sensor or heating component, recommission the affected module.",
+        "images": []
+      },
+      {
+        "index": 59,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 60,
+        "kind": "tbl",
+        "style": "",
+        "text": "SymptomItems to checkInstrument will not startInput power, switch, protection components and power to the computing boardAbnormal temperatureSensor wiring, mounting position and software input channelImage too dark or overexposedLighting, optical filter components, focus and exposure settingsNo new data in the appLocal network, address and port, communication service and response time",
+        "images": [],
+        "rows": [
+          [
+            "Symptom",
+            "Items to check"
+          ],
+          [
+            "Instrument will not start",
+            "Input power, switch, protection components and power to the computing board"
+          ],
+          [
+            "Abnormal temperature",
+            "Sensor wiring, mounting position and software input channel"
+          ],
+          [
+            "Image too dark or overexposed",
+            "Lighting, optical filter components, focus and exposure settings"
+          ],
+          [
+            "No new data in the app",
+            "Local network, address and port, communication service and response time"
+          ]
+        ]
+      },
+      {
+        "index": 61,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 62,
+        "kind": "sectPr",
+        "style": "",
+        "text": "",
+        "images": []
+      }
+    ],
+    "comments": [],
+    "math_objects": 0,
+    "media": [
+      {
+        "path": "word/media/image1.png",
+        "bytes": 1658876,
+        "sha256": "9fd5522ae19ec713a8824ccbc8501ca240826f29322255e949f5420ccc07311e"
+      },
+      {
+        "path": "word/media/image2.jpeg",
+        "bytes": 179149,
+        "sha256": "86540a2d6710647670a8745f7f5389e20cff5d318277314f4dc82ee8f169d2a0"
+      },
+      {
+        "path": "word/media/image3.jpeg",
+        "bytes": 90536,
+        "sha256": "cc8ae11b1cf5581992f79260ca2610807e83bf2cc6f6046c75bbf971d1529126"
+      },
+      {
+        "path": "word/media/image4.jpeg",
+        "bytes": 236024,
+        "sha256": "57776304a84dcfee92f1247cbdd6b8f7b25a851624faa2db614f0a0381a7da83"
+      },
+      {
+        "path": "word/media/image5.jpeg",
+        "bytes": 209692,
+        "sha256": "f7ad58316a3661ac295cfe23f8f0b853c551a686b46021c7d7bea59eede49848"
+      },
+      {
+        "path": "word/media/image6.png",
+        "bytes": 152467,
+        "sha256": "026f322a745bd667e93b2bc1a715d591f8f210d4c6999783ba52aa10c8eb101b"
+      },
+      {
+        "path": "word/media/image7.jpeg",
+        "bytes": 205412,
+        "sha256": "c7f9819567613ec2ee4e2ff420d878c8bfc5d217abd72e9828a7d5506cfb2d48"
+      },
+      {
+        "path": "word/media/image8.jpeg",
+        "bytes": 234881,
+        "sha256": "9e46003904d82c4e87d7721c6ebd2f73714fae1f425681406309517cff43c065"
+      }
+    ]
+  },
+  {
+    "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Reproduction Guide\\Byegerm2.0 Reproduction Guide.docx",
+    "sha256": "09115c0b132a88fc07ec9d9ba268ab4508af3b3fd800f72addd74d602d2c6171",
+    "blocks": [
+      {
+        "index": 0,
+        "kind": "p",
+        "style": "af4",
+        "text": "Byegerm2.0 Reproduction Guide",
+        "images": []
+      },
+      {
+        "index": 1,
+        "kind": "p",
+        "style": "af1",
+        "text": "Rotating multi-tube instrument: fabrication, assembly and system commissioning",
+        "images": []
+      },
+      {
+        "index": 2,
+        "kind": "p",
+        "style": "1",
+        "text": "1 Technical field",
+        "images": []
+      },
+      {
+        "index": 3,
+        "kind": "p",
+        "style": "",
+        "text": "Byegerm2.0 combines temperature control for multiple tube positions, rotary switching, fluorescence imaging and communication with a mobile device. This manual explains how the structure, circuit boards and control program work together, and describes how to replicate the instrument through fabrication, assembly, wiring and integrated testing.",
+        "images": []
+      },
+      {
+        "index": 4,
+        "kind": "p",
+        "style": "1",
+        "text": "2 Background",
+        "images": []
+      },
+      {
+        "index": 5,
+        "kind": "p",
+        "style": "",
+        "text": "To address the limited throughput of the dual-tube instrument, byegerm2.0 increases capacity for settings such as kindergartens and nursing homes. The main chamber has a rotating structure with three faces, each holding five tubes. Each face rotates into the same imaging field of view in turn. A separate temperature-controlled zone at the front holds two tubes.",
+        "images": []
+      },
+      {
+        "index": 6,
+        "kind": "p",
+        "style": "1",
+        "text": "3 System design",
+        "images": []
+      },
+      {
+        "index": 7,
+        "kind": "p",
+        "style": "",
+        "text": "The instrument measures approximately 15 × 30 × 20 cm and has six modules: main control, AI, temperature control, optics, power management and mechanical control. The RK3588 handles imaging, analysis and communication, while the STM32F407ZGT6 controls the peripherals.",
+        "images": []
+      },
+      {
+        "index": 8,
+        "kind": "p",
+        "style": "",
+        "text": "The functional circuits are separate units connected by wiring harnesses with terminal connectors. This simplifies hardware assembly, troubleshooting and maintenance. The circuits are grouped by three functions, main control, peripherals and power, and implemented on the following four PCBs.",
+        "images": []
+      },
+      {
+        "index": 9,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 10,
+        "kind": "tbl",
+        "style": "",
+        "text": "BoardMain functionsCore boardSTM32 minimum system, inter-board connections, debugging and communicationControl boardReceives control signals and connects to the heating, lighting, temperature-sensing and rotary actuation componentsMechanical boardConnects the main chamber's six temperature-sensing channels, three lighting groups and heating elementsPower boardVoltage conversion, filtering and power distribution to the functional boards",
+        "images": [],
+        "rows": [
+          [
+            "Board",
+            "Main functions"
+          ],
+          [
+            "Core board",
+            "STM32 minimum system, inter-board connections, debugging and communication"
+          ],
+          [
+            "Control board",
+            "Receives control signals and connects to the heating, lighting, temperature-sensing and rotary actuation components"
+          ],
+          [
+            "Mechanical board",
+            "Connects the main chamber's six temperature-sensing channels, three lighting groups and heating elements"
+          ],
+          [
+            "Power board",
+            "Voltage conversion, filtering and power distribution to the functional boards"
+          ]
+        ]
+      },
+      {
+        "index": 11,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 12,
+        "kind": "p",
+        "style": "1",
+        "text": "4 Figures",
+        "images": []
+      },
+      {
+        "index": 13,
+        "kind": "p",
+        "style": "",
+        "text": "Figure 1 shows an exploded view of the modules. Figures 2 to 4 show the core circuits and main control boards. Figure 5 shows the actuator drive circuits. Figures 6 and 7 show the mechanical board, and Figures 8 and 9 show the power board. Figure 10 covers the temperature-sensing and power interfaces. Figures 11 and 12 show photographs of the supporting modules. Figure 13 shows the workflow between the app and instrument, and Figure 14 shows photographs of integrated system testing.",
+        "images": []
+      },
+      {
+        "index": 14,
+        "kind": "p",
+        "style": "",
+        "text": "Prepare the structural parts, four PCBs, computing board, temperature-control and optical components, actuators, battery and management components. Also prepare screwdrivers, a multimeter, soldering tools and tools for preparing the wiring harnesses.",
+        "images": []
+      },
+      {
+        "index": 15,
+        "kind": "p",
+        "style": "1",
+        "text": "5 Implementation",
+        "images": []
+      },
+      {
+        "index": 16,
+        "kind": "p",
+        "style": "21",
+        "text": "5.1 Structural fabrication and component installation",
+        "images": []
+      },
+      {
+        "index": 17,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image1.png"
+        ]
+      },
+      {
+        "index": 18,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 1  Assembly arrangement of the front temperature-controlled zone, rotating working chamber and internal functional modules",
+        "images": []
+      },
+      {
+        "index": 19,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 20,
+        "kind": "p",
+        "style": "",
+        "text": "1  Fabricate the structural parts. Create the models in SolidWorks 2024 and check for assembly interference. Import the models into PrusaSlicer to generate the print files. Print the structural parts in PETG on an SK1 FDM printer, remove the supports and perform a trial assembly. Install insulation in the heating areas as designed to prevent heat from passing directly to the enclosure.",
+        "images": []
+      },
+      {
+        "index": 21,
+        "kind": "p",
+        "style": "",
+        "text": "2  Assemble the two temperature-controlled zones. Secure the front dual-tube metal block and main-chamber heating assembly separately. Fit the heating elements closely against their contact surfaces and secure the temperature sensors. Keep the two zones separate, label their harnesses individually and leave the fan outlets clear.",
+        "images": []
+      },
+      {
+        "index": 22,
+        "kind": "p",
+        "style": "",
+        "text": "3  Install the rotation mechanism. Connect the actuator to the three-sided working chamber, then check for collisions and binding throughout its permitted travel. Label the three viewing faces A, B and C, and label the tube positions on each face 1 to 5 so they can be matched to the acquisition records.",
+        "images": []
+      },
+      {
+        "index": 23,
+        "kind": "p",
+        "style": "",
+        "text": "4  Install the optical components. Position the USB camera, lens and optical filter components in front of the viewing face, with blue LEDs for image acquisition. Check each face to confirm that all five tube positions are fully visible, in focus and unobstructed. Secure the bracket and leave enough slack in the moving harnesses.",
+        "images": []
+      },
+      {
+        "index": 24,
+        "kind": "p",
+        "style": "21",
+        "text": "5.2 Main control board fabrication and installation",
+        "images": []
+      },
+      {
+        "index": 25,
+        "kind": "p",
+        "style": "",
+        "text": "Create the schematics and PCB layouts in JLCEDA, then export the Gerber and drill files to fabricate the core, control, mechanical and power boards. Before assembly, check the component packages, polarity and connector orientation. Complete the soldering checks on each board first.",
+        "images": []
+      },
+      {
+        "index": 26,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 27,
+        "kind": "p",
+        "style": "",
+        "text": " ",
+        "images": [
+          "media/image2.png",
+          "media/image3.png"
+        ]
+      },
+      {
+        "index": 28,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 2  Inter-board connectors and STM32 core circuit",
+        "images": []
+      },
+      {
+        "index": 29,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image4.png"
+        ]
+      },
+      {
+        "index": 30,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 3  Connector side and component side of the core-board PCB",
+        "images": []
+      },
+      {
+        "index": 31,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image5.png"
+        ]
+      },
+      {
+        "index": 32,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 4  Interface and driver layout on the control-board PCB",
+        "images": []
+      },
+      {
+        "index": 33,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 34,
+        "kind": "p",
+        "style": "",
+        "text": "The core board contains the STM32F407ZGT6 and its power, clock and reset circuits. It connects to the control board through inter-board connectors U2 and U3. Check pin 1 and connector orientation against Figure 2. Secure the board with insulating supports before mating the connectors to prevent misalignment.",
+        "images": []
+      },
+      {
+        "index": 35,
+        "kind": "p",
+        "style": "",
+        "text": "The SWD interface CN1 has the following pinout: pin 1, 3V3; pin 2, SWDIO; pin 3, SWCLK; pin 4, GND. Connect a compatible programmer, confirm the target device and boot configuration, then flash the firmware. Verify temperature sensing and serial communication first.",
+        "images": []
+      },
+      {
+        "index": 36,
+        "kind": "p",
+        "style": "21",
+        "text": "5.3 Heating and lighting drivers",
+        "images": []
+      },
+      {
+        "index": 37,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image6.png"
+        ]
+      },
+      {
+        "index": 38,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 5  Heating circuits for the two temperature-controlled zones, three lighting channels and actuator interfaces",
+        "images": []
+      },
+      {
+        "index": 39,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 40,
+        "kind": "p",
+        "style": "",
+        "text": "The control board sends signals from the core board to MOS driver circuits that separately regulate heating in the main chamber and front zone, and the three lighting channels. The driver supply is selected with 0 Ω resistors. Choose the appropriate branch for the actual load's rated voltage before soldering. Never fit both selection resistors in the same group.",
+        "images": []
+      },
+      {
+        "index": 41,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 42,
+        "kind": "tbl",
+        "style": "",
+        "text": "Output netSelection branch 1Selection branch 2Main chamber BANGR30 → 12 VR31 → 5 VFront zone BANG1R4 → 12 VR5 → 5 VLighting DENG1R21 → 5 VR22 → 3V3Lighting DENG2R23 → 5 VR24 → 3V3Lighting DENG3R25 → 3V3R26 → 5 V",
+        "images": [],
+        "rows": [
+          [
+            "Output net",
+            "Selection branch 1",
+            "Selection branch 2"
+          ],
+          [
+            "Main chamber BANG",
+            "R30 → 12 V",
+            "R31 → 5 V"
+          ],
+          [
+            "Front zone BANG1",
+            "R4 → 12 V",
+            "R5 → 5 V"
+          ],
+          [
+            "Lighting DENG1",
+            "R21 → 5 V",
+            "R22 → 3V3"
+          ],
+          [
+            "Lighting DENG2",
+            "R23 → 5 V",
+            "R24 → 3V3"
+          ],
+          [
+            "Lighting DENG3",
+            "R25 → 3V3",
+            "R26 → 5 V"
+          ]
+        ]
+      },
+      {
+        "index": 43,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 44,
+        "kind": "p",
+        "style": "",
+        "text": "The resistor arrangement for the third lighting channel is reversed relative to the first two; identify the branches by their net names. Disconnect the loads and check the output voltage and polarity first. Then connect the heating elements, LED boards and actuators, confirming each controlled component in turn.",
+        "images": []
+      },
+      {
+        "index": 45,
+        "kind": "p",
+        "style": "21",
+        "text": "5.4 Mechanical board and peripheral connections",
+        "images": []
+      },
+      {
+        "index": 46,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image7.png"
+        ]
+      },
+      {
+        "index": 47,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 6  Six temperature-sensing channels, three lighting groups and main-chamber heating circuits on the mechanical board",
+        "images": []
+      },
+      {
+        "index": 48,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 49,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image8.png"
+        ]
+      },
+      {
+        "index": 50,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 7  Routing side and component side of the mechanical-board PCB",
+        "images": []
+      },
+      {
+        "index": 51,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 52,
+        "kind": "p",
+        "style": "",
+        "text": "The mechanical board has six NTC temperature-sensing branches and three groups of five LEDs. The sensor voltage-divider signals feed into the control board, and each lighting group corresponds to a viewing face. The three heater connectors share the BANG net and receive power from the same driver branch.",
+        "images": []
+      },
+      {
+        "index": 53,
+        "kind": "p",
+        "style": "",
+        "text": "1  Secure the board and connect the wiring. Mount the mechanical board as shown in Figures 6 and 7. Label the sensors and harnesses NTC1 through NTC6, and connect the corresponding heating elements and lighting groups. Keep the board and wiring clear of the tube loading and unloading path and the camera field of view.",
+        "images": []
+      },
+      {
+        "index": 54,
+        "kind": "p",
+        "style": "",
+        "text": "2  Check clearance for rotation. Route the harnesses along the bracket and secure them at their base, leaving enough length for rotation. Rotate through each face and confirm that the wires do not pull on the connectors, wind around the shaft or obstruct the tube positions.",
+        "images": []
+      },
+      {
+        "index": 55,
+        "kind": "p",
+        "style": "21",
+        "text": "5.5 Power components and supply checks",
+        "images": []
+      },
+      {
+        "index": 56,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image9.png"
+        ]
+      },
+      {
+        "index": 57,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 8  Power-board input, voltage conversion, filtering and output nets",
+        "images": []
+      },
+      {
+        "index": 58,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image10.png"
+        ]
+      },
+      {
+        "index": 59,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 9  Power-board PCB routing and component placement",
+        "images": []
+      },
+      {
+        "index": 60,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 61,
+        "kind": "p",
+        "style": "",
+        "text": "The battery, balancing and protection components, charging management components and power board work together to supply the computing, temperature-control and optical modules. Secure each component in its designated position. Keep the battery disconnected while checking input polarity, the protection path and the output nets.",
+        "images": []
+      },
+      {
+        "index": 62,
+        "kind": "p",
+        "style": "",
+        "text": "The pin order of CN1 on the power board differs from that of the power connector on the control board. Wire them according to the table below. Before applying power, check for unintended shorts between each supply rail and ground. Measure the outputs without a load before connecting the functional boards.",
+        "images": []
+      },
+      {
+        "index": 63,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 64,
+        "kind": "tbl",
+        "style": "",
+        "text": "Power-board CN1NetControl-board power connectorPin 4+5 VPin 1Pin 2 or 3GNDPin 2 or 3Pin 13V3Pin 4",
+        "images": [],
+        "rows": [
+          [
+            "Power-board CN1",
+            "Net",
+            "Control-board power connector"
+          ],
+          [
+            "Pin 4",
+            "+5 V",
+            "Pin 1"
+          ],
+          [
+            "Pin 2 or 3",
+            "GND",
+            "Pin 2 or 3"
+          ],
+          [
+            "Pin 1",
+            "3V3",
+            "Pin 4"
+          ]
+        ]
+      },
+      {
+        "index": 65,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 66,
+        "kind": "p",
+        "style": "",
+        "text": "Power up in this order: logic boards, camera and sensors, lighting, actuators, then heating. Check the supply and operating status each time a load is added. If the voltage drops or the instrument restarts, disconnect that branch and investigate it first.",
+        "images": []
+      },
+      {
+        "index": 67,
+        "kind": "p",
+        "style": "21",
+        "text": "5.6 Inter-board wiring and control mapping",
+        "images": []
+      },
+      {
+        "index": 68,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 69,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image11.png"
+        ]
+      },
+      {
+        "index": 70,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 10  Control-board temperature inputs and power-connector pin definitions",
+        "images": []
+      },
+      {
+        "index": 71,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 72,
+        "kind": "p",
+        "style": "",
+        "text": "The table below lists the connections by schematic pin number. Before crimping, check the viewing side of each connector, identify pin 1 and verify continuity. Wire by net name; the arrows do not indicate direct connections between identically numbered pins.",
+        "images": []
+      },
+      {
+        "index": 73,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 74,
+        "kind": "tbl",
+        "style": "",
+        "text": "CircuitConnectionsTemperature-sensing group 1Mechanical-board Temperature pins 1/2/3, carrying NTC1/2/3, → control-board Temperature 1 pins 5/4/3, respectively; mechanical-board pin 5 GND → control-board pin 1 GND.Temperature-sensing group 2Mechanical-board Temperature 1 pins 1/2/3, carrying NTC4/5/6, → control-board Temperature 2 pins 5/4/3, respectively; mechanical-board pin 5 GND → control-board pin 1 GND.Temperature-sensing supplyBoth groups on the mechanical board use pin 4 for 3.3V; both groups on the control board use pin 2 for 3V3-1. Verify the reference relationship between these two nets before wiring.Main-chamber heatingControl-board Attach the sub-board 1 and mechanical-board Input: pin 1 BANG, pin 2 GND.Three lighting groupsControl-board Attach the sub-board and mechanical-board LED Power Input: pin 1 DENG3, pin 2 DENG2, pin 3 DENG1, pin 4 GND.Front zone and servoFront-zone heating: pin 1 BANG1, pin 2 GND. Servo: pin 3 +5V, pin 2 DUOJI, pin 1 GND.Computing-board serial portAI Core Board interface: pin 1 RXD2, pin 2 TXD2. Connect these to the computing board's TX/RX, respectively, and check the signal levels and common ground.",
+        "images": [],
+        "rows": [
+          [
+            "Circuit",
+            "Connections"
+          ],
+          [
+            "Temperature-sensing group 1",
+            "Mechanical-board Temperature pins 1/2/3, carrying NTC1/2/3, → control-board Temperature 1 pins 5/4/3, respectively; mechanical-board pin 5 GND → control-board pin 1 GND."
+          ],
+          [
+            "Temperature-sensing group 2",
+            "Mechanical-board Temperature 1 pins 1/2/3, carrying NTC4/5/6, → control-board Temperature 2 pins 5/4/3, respectively; mechanical-board pin 5 GND → control-board pin 1 GND."
+          ],
+          [
+            "Temperature-sensing supply",
+            "Both groups on the mechanical board use pin 4 for 3.3V; both groups on the control board use pin 2 for 3V3-1. Verify the reference relationship between these two nets before wiring."
+          ],
+          [
+            "Main-chamber heating",
+            "Control-board Attach the sub-board 1 and mechanical-board Input: pin 1 BANG, pin 2 GND."
+          ],
+          [
+            "Three lighting groups",
+            "Control-board Attach the sub-board and mechanical-board LED Power Input: pin 1 DENG3, pin 2 DENG2, pin 3 DENG1, pin 4 GND."
+          ],
+          [
+            "Front zone and servo",
+            "Front-zone heating: pin 1 BANG1, pin 2 GND. Servo: pin 3 +5V, pin 2 DUOJI, pin 1 GND."
+          ],
+          [
+            "Computing-board serial port",
+            "AI Core Board interface: pin 1 RXD2, pin 2 TXD2. Connect these to the computing board's TX/RX, respectively, and check the signal levels and common ground."
+          ]
+        ]
+      },
+      {
+        "index": 75,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 76,
+        "kind": "p",
+        "style": "",
+        "text": "Schematic pin mapping: main-chamber heating, PA0; front-zone heating, PB11; lighting channels 1 to 3, PB3, PE13 and PE14; servo, PB10; NTC1 through NTC6, PA1 through PA6; NTC7, PA7; RXD2, PD6; TXD2, PD5.",
+        "images": []
+      },
+      {
+        "index": 77,
+        "kind": "p",
+        "style": "31",
+        "text": "Supporting modules and interface identification",
+        "images": []
+      },
+      {
+        "index": 78,
+        "kind": "p",
+        "style": "",
+        "text": "Use the following photographs to identify the supporting modules and their interfaces for the second-generation instrument. Before connecting them, match the board markings and component specifications to the corresponding software readout method.",
+        "images": []
+      },
+      {
+        "index": 79,
+        "kind": "p",
+        "style": "",
+        "text": "  ",
+        "images": [
+          "media/image12.jpeg",
+          "media/image13.jpeg"
+        ]
+      },
+      {
+        "index": 80,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 11  Photographs of the second-generation temperature-sensing and lighting modules. Left: temperature-sensing module with VCC, DQ and GND terminals. Right: RGB LED module with GND, R, G and B terminals.",
+        "images": []
+      },
+      {
+        "index": 81,
+        "kind": "p",
+        "style": "",
+        "text": "DQ on the temperature-sensing module is a digital signal interface and requires the appropriate readout program. Do not apply the NTC voltage-divider wiring shown in Figure 6 directly to this module. Identify the RGB module's individual color channels, and check its intended use separately from the excitation-lighting circuits in Figure 5.",
+        "images": []
+      },
+      {
+        "index": 82,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image14.jpeg"
+        ]
+      },
+      {
+        "index": 83,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 12  Photograph of the second-generation USB-to-serial module and Dupont jumper wires, showing the USB connector, pin header and detachable wiring harness.",
+        "images": []
+      },
+      {
+        "index": 84,
+        "kind": "p",
+        "style": "",
+        "text": "For serial connections, check the module's signal levels and pin-header definitions. Cross-connect TX and RX to the target device and connect their grounds. Use the USB-to-serial module separately from the SWD programming interface in Section 5.2. Determine the specific configuration from the component and program versions.",
+        "images": []
+      },
+      {
+        "index": 85,
+        "kind": "p",
+        "style": "21",
+        "text": "5.7 Software setup and app connection",
+        "images": []
+      },
+      {
+        "index": 86,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image15.png"
+        ]
+      },
+      {
+        "index": 87,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 13  Control, acquisition and data-storage workflow between the app and instrument",
+        "images": []
+      },
+      {
+        "index": 88,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 89,
+        "kind": "p",
+        "style": "",
+        "text": "1  Configure the embedded controller. Map temperature sensing, heating in both zones, the three lighting channels, the servo and the serial port in the STM32 program. Confirm that the channels can be read and the actuator outputs can be controlled before connecting the program running on the RK3588.",
+        "images": []
+      },
+      {
+        "index": 90,
+        "kind": "p",
+        "style": "",
+        "text": "2  Configure image processing. Connect the USB camera to the computing board and acquire raw images first. Then integrate YOLOv8n and OpenCV for localization and signal extraction. Deploy the model through the PT → ONNX → RKNN conversion path, keeping input preprocessing and output labels consistent.",
+        "images": []
+      },
+      {
+        "index": 91,
+        "kind": "p",
+        "style": "",
+        "text": "3  Connect the mobile device. Connect the phone and instrument to the same local network. Enter Server IP and Port in the app, then select Connect to Server. Once new data arrive, check the temperature, time and current viewing face before sending an acquisition request.",
+        "images": []
+      },
+      {
+        "index": 92,
+        "kind": "p",
+        "style": "",
+        "text": "4  Link positions to records. Associate faces A/B/C and tube positions 1 to 5 on each face with the image records. Acquire an image after each face has reached its position. Save the time, face identifier, raw image and analysis results, avoiding cached data from the previous face.",
+        "images": []
+      },
+      {
+        "index": 93,
+        "kind": "p",
+        "style": "",
+        "text": "5  Check mobile-device compatibility. On each phone operating system intended for use, check connection, control, acquisition and saving. Test reconnection after a dropped connection and configuration restoration after a restart. Confirm that records continue to update.",
+        "images": []
+      },
+      {
+        "index": 94,
+        "kind": "p",
+        "style": "21",
+        "text": "5.8 Integrated system testing and maintenance",
+        "images": []
+      },
+      {
+        "index": 95,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": [
+          "media/image16.png"
+        ]
+      },
+      {
+        "index": 96,
+        "kind": "p",
+        "style": "a7",
+        "text": "Figure 14  Photographs of integrated testing of byegerm2.0 with a mobile device. A: connecting the instrument and mobile device. B: operation at the front. C: operation at the top. D: viewing the results screen.",
+        "images": []
+      },
+      {
+        "index": 97,
+        "kind": "p",
+        "style": "",
+        "text": "1  Verify the temperature channels. Start with readings at room temperature. Match each sensor to its software channel and compare each measurement point with a reference thermometer. Enable heating only after confirming the wiring, mounting positions and conversion calculations.",
+        "images": []
+      },
+      {
+        "index": 98,
+        "kind": "p",
+        "style": "",
+        "text": "2  Test the two temperature-controlled zones. Check warm-up, steady operation and the response after stopping for the main chamber and front zone separately, then run both together. Confirm that setting changes affect the intended zone without causing power problems or interference between channels.",
+        "images": []
+      },
+      {
+        "index": 99,
+        "kind": "p",
+        "style": "",
+        "text": "3  Check positioning repeatability. Switch to faces A, B and C in sequence, then return to the starting face. Compare focus and full visibility across the five tube positions on each face. After repeated switching, the physical position should match the recorded face identifier. Wait until movement has stopped and the chamber is stable before acquiring an image.",
+        "images": []
+      },
+      {
+        "index": 100,
+        "kind": "p",
+        "style": "",
+        "text": "4  Complete integrated acquisition. Keep the reference object, exposure and lighting conditions fixed while running temperature control, rotation and imaging together. Check localization at each tube position and the file numbering. Save the temperatures, images and program configuration as the maintenance baseline for this instrument.",
+        "images": []
+      },
+      {
+        "index": 101,
+        "kind": "tbl",
+        "style": "",
+        "text": "SymptomCheck firstInstrument will not start or restarts during operationInput power, output voltages, common ground and newly added loadsAbnormal temperature or mismatched channelsNTC voltage dividers, reversed connector pin order, mounting points and software channelsWrong heater or lighting group operatesBANG/BANG1 and DENG1 to DENG3 harnesses, and firmware mappingRotation binds or images shiftMechanical interference, moving harnesses, actuator mounting and positioning parametersImage does not match the face identifierPositioning and acquisition sequence, timestamps, cache and record numberingNo new data in the appLocal network, address and port, instrument services and serial communication",
+        "images": [],
+        "rows": [
+          [
+            "Symptom",
+            "Check first"
+          ],
+          [
+            "Instrument will not start or restarts during operation",
+            "Input power, output voltages, common ground and newly added loads"
+          ],
+          [
+            "Abnormal temperature or mismatched channels",
+            "NTC voltage dividers, reversed connector pin order, mounting points and software channels"
+          ],
+          [
+            "Wrong heater or lighting group operates",
+            "BANG/BANG1 and DENG1 to DENG3 harnesses, and firmware mapping"
+          ],
+          [
+            "Rotation binds or images shift",
+            "Mechanical interference, moving harnesses, actuator mounting and positioning parameters"
+          ],
+          [
+            "Image does not match the face identifier",
+            "Positioning and acquisition sequence, timestamps, cache and record numbering"
+          ],
+          [
+            "No new data in the app",
+            "Local network, address and port, instrument services and serial communication"
+          ]
+        ]
+      },
+      {
+        "index": 102,
+        "kind": "p",
+        "style": "",
+        "text": "",
+        "images": []
+      },
+      {
+        "index": 103,
+        "kind": "p",
+        "style": "",
+        "text": "Stop the instrument and disconnect power before maintenance. After replacing temperature-control, imaging or rotation components, recheck the affected modules. Then acquire images from all three faces and test the two temperature-controlled zones together.",
+        "images": []
+      },
+      {
+        "index": 104,
+        "kind": "sectPr",
+        "style": "",
+        "text": "",
+        "images": []
+      }
+    ],
+    "comments": [],
+    "math_objects": 0,
+    "media": [
+      {
+        "path": "word/media/image1.png",
+        "bytes": 174505,
+        "sha256": "985634d9d8d965a1583a399ab66e6e79e1b2e551c551d4d57f3e9711ea5d20e5"
+      },
+      {
+        "path": "word/media/image2.png",
+        "bytes": 85841,
+        "sha256": "8de95830732226f1a25304313acce4772cc78c68df4779b2313a9d8126ee320c"
+      },
+      {
+        "path": "word/media/image3.png",
+        "bytes": 123155,
+        "sha256": "9bc5b611a6b6c195577f4decb7a21a12024787130effa400cb236d343956e34d"
+      },
+      {
+        "path": "word/media/image4.png",
+        "bytes": 139290,
+        "sha256": "3d796a7e8f20ce59f35e47371ecb8c63ea49a1e2841a41d5d3a02fd1968c4bac"
+      },
+      {
+        "path": "word/media/image5.png",
+        "bytes": 121216,
+        "sha256": "5227e87a53a74074bdacf01abcb51841e5d8b431edf3c7e49d7278fee77b0994"
+      },
+      {
+        "path": "word/media/image6.png",
+        "bytes": 92045,
+        "sha256": "470e3f1d99ecc8ed67d76d560d5b6c2fc058c860cbc99fb2bca28016990e5c4b"
+      },
+      {
+        "path": "word/media/image7.png",
+        "bytes": 117052,
+        "sha256": "6d4fa9b0f1fce3ab1296dcccab39d69443f0259c3f7dc3105e8be2e5f2eb598c"
+      },
+      {
+        "path": "word/media/image11.png",
+        "bytes": 48363,
+        "sha256": "e5b0a793e14188f4dffbb456ed7209aa57f06f9739258d5f2f4c1f0e9f29201a"
+      },
+      {
+        "path": "word/media/image12.jpeg",
+        "bytes": 367860,
+        "sha256": "aa1c08bb15a9d25bc59f14d8c9a21ac5c2feda3216524a3532f42b61a304e3ee"
+      },
+      {
+        "path": "word/media/image13.jpeg",
+        "bytes": 361126,
+        "sha256": "8fea5a830e809c5420c50638137cba4193f641e2e74711896df8785b4df9565a"
+      },
+      {
+        "path": "word/media/image14.jpeg",
+        "bytes": 385007,
+        "sha256": "280421ad2f8cc1ef701359df97fb5a25c03e99e5c791c369c84c98d2eae9f36b"
+      },
+      {
+        "path": "word/media/image15.png",
+        "bytes": 74088,
+        "sha256": "c4ec59853b8c355dea5c7db49a736a8f846f05990836918b9fb3c5aec19061b2"
+      },
+      {
+        "path": "word/media/image16.png",
+        "bytes": 231492,
+        "sha256": "654a5c0620716caafe471f2a01f1c3823a1200fb99e24dc65f21e3ae00bef51b"
+      },
+      {
+        "path": "word/media/image8.png",
+        "bytes": 164940,
+        "sha256": "db1d3fb6cb00f25417166d707298e967f1d63e6d149f5c691cb32b46f8ff2d16"
+      },
+      {
+        "path": "word/media/image10.png",
+        "bytes": 115853,
+        "sha256": "a99196eaff7e9a6ee61f20dd9189d368e08f662e8777ac0957a09f28f435e032"
+      },
+      {
+        "path": "word/media/image9.png",
+        "bytes": 76485,
+        "sha256": "2b64f62532933c04ce01301d4a5da42985a3df0dd825ee2dd579ee6f997ad21e"
+      }
+    ]
+  }
+]

@@ -1,0 +1,313 @@
+{
+  "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx",
+  "source_sha256": "3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2",
+  "baseline": "9d72d2f",
+  "chapters": 9,
+  "references": 5,
+  "figures": [
+    {
+      "number": 1,
+      "source": "Fig1.Technical_Specifications.pptx",
+      "rendering": "Native HTML table; all editable-source rows retained."
+    },
+    {
+      "number": 2,
+      "source": "Fig2.Development_Timeline.pptx",
+      "rendering": "SVG conversion of editable shapes and text."
+    },
+    {
+      "number": 3,
+      "source": [
+        "media/image4.jpeg"
+      ]
+    },
+    {
+      "number": 4,
+      "source": [
+        "media/image5.png"
+      ]
+    },
+    {
+      "number": 5,
+      "source": [
+        "media/image6.jpeg"
+      ]
+    },
+    {
+      "number": 6,
+      "source": [
+        "media/image7.jpeg"
+      ]
+    },
+    {
+      "number": 7,
+      "source": [
+        "media/image8.jpeg"
+      ]
+    },
+    {
+      "number": 8,
+      "source": [
+        "media/image9.jpeg"
+      ]
+    },
+    {
+      "number": 9,
+      "source": [
+        "media/image10.jpeg"
+      ]
+    },
+    {
+      "number": 10,
+      "source": [
+        "media/image11.jpeg"
+      ]
+    },
+    {
+      "number": 11,
+      "source": [
+        "media/image12.png"
+      ]
+    },
+    {
+      "number": 12,
+      "source": [
+        "media/image13.png"
+      ]
+    },
+    {
+      "number": 13,
+      "source": [
+        "media/image15.png"
+      ]
+    },
+    {
+      "number": 14,
+      "source": [
+        "media/image16.png"
+      ]
+    },
+    {
+      "number": 15,
+      "source": [
+        "media/image17.png"
+      ]
+    },
+    {
+      "number": 16,
+      "source": [
+        "media/image18.jpeg"
+      ]
+    },
+    {
+      "number": 17,
+      "source": [
+        "media/image19.jpeg"
+      ]
+    },
+    {
+      "number": 18,
+      "source": [
+        "media/image20.png"
+      ]
+    },
+    {
+      "number": 19,
+      "source": [
+        "media/image21.jpeg"
+      ]
+    },
+    {
+      "number": 20,
+      "source": [
+        "media/image22.png"
+      ]
+    },
+    {
+      "number": 21,
+      "source": [
+        "media/image24.png"
+      ]
+    },
+    {
+      "number": 22,
+      "source": [
+        "media/image25.png"
+      ]
+    },
+    {
+      "number": 23,
+      "source": "Fig23.Equipment_Cost.pptx",
+      "rendering": "SVG chart with original editable-source cached values."
+    }
+  ],
+  "source_comments": [
+    {
+      "id": "0",
+      "text": "所有表格需要替换配色复现手册实际位于protocol，说明书位于software，但本页面对应链接及按钮均需要一次性打开",
+      "anchor": "Hardware",
+      "body_index": 0
+    },
+    {
+      "id": "1",
+      "text": "视频1",
+      "anchor": "",
+      "body_index": 2
+    },
+    {
+      "id": "2",
+      "text": "有可编辑ppt版本，原图清晰度不够高",
+      "anchor": "",
+      "body_index": 6
+    },
+    {
+      "id": "3",
+      "text": "有可编辑ppt版本，原图清晰度不够高",
+      "anchor": "",
+      "body_index": 9
+    },
+    {
+      "id": "4",
+      "text": "看情况内容可进一步精简",
+      "anchor": "Design",
+      "body_index": 19
+    },
+    {
+      "id": "5",
+      "text": "跳转1.0 reproduction guide PDF文档",
+      "anchor": "reproduction",
+      "body_index": 57
+    },
+    {
+      "id": "6",
+      "text": "跳转model页面",
+      "anchor": "page",
+      "body_index": 64
+    },
+    {
+      "id": "7",
+      "text": "跳转 software文档",
+      "anchor": "page",
+      "body_index": 72
+    },
+    {
+      "id": "8",
+      "text": "视频2",
+      "anchor": "",
+      "body_index": 74
+    },
+    {
+      "id": "9",
+      "text": "点击跳转1代说明书pdf",
+      "anchor": "manual",
+      "body_index": 80
+    },
+    {
+      "id": "10",
+      "text": "跳转2.0 reproduction guide PDF文档",
+      "anchor": "reproduction",
+      "body_index": 108
+    },
+    {
+      "id": "11",
+      "text": "跳转model页面",
+      "anchor": "page",
+      "body_index": 111
+    },
+    {
+      "id": "12",
+      "text": "跳转页面",
+      "anchor": "Model",
+      "body_index": 119
+    },
+    {
+      "id": "13",
+      "text": "视频3",
+      "anchor": "",
+      "body_index": 121
+    },
+    {
+      "id": "14",
+      "text": "跳转2代用户手册pdf",
+      "anchor": "manual",
+      "body_index": 125
+    },
+    {
+      "id": "15",
+      "text": "待插入结果·，预留两张图片位置",
+      "anchor": "Systems",
+      "body_index": 135
+    },
+    {
+      "id": "16",
+      "text": "插入两代复现手册，展示两个pdf页面，可以直接滑动看的",
+      "anchor": "guide",
+      "body_index": 139
+    },
+    {
+      "id": "17",
+      "text": "该表格折叠 点击打开",
+      "anchor": "Breakdown",
+      "body_index": 148
+    },
+    {
+      "id": "18",
+      "text": "该表格直接展示，不折叠",
+      "anchor": "Summary",
+      "body_index": 152
+    },
+    {
+      "id": "19",
+      "text": "该表格折叠 点击打开",
+      "anchor": "Breakdown",
+      "body_index": 157
+    },
+    {
+      "id": "20",
+      "text": "该表格直接展示，不折叠",
+      "anchor": "Summary",
+      "body_index": 161
+    },
+    {
+      "id": "21",
+      "text": "分别跳转对应pdf及页面",
+      "anchor": "it",
+      "body_index": 172
+    }
+  ],
+  "editorial_changes": [
+    "Corrected compatibility cross-reference to the existing 6.1 section.",
+    "Renumbered pathogen results 6.3 to 6.2; no missing section fabricated.",
+    "Removed verbatim duplicated ByeGerm 2.0 budget clause; no comparison value changed.",
+    "Duplicate source cost table labels renumbered 1..5.",
+    "Supplied manuals and reproduction guides replace stale future-tense availability text."
+  ],
+  "source_issues": [
+    "Primary prose / editable specifications identify Raspberry Pi in generation 1; reproduction guide system table identifies Orange Pi 5 Max / RK3588 and later repeats Raspberry Pi. No silent substitution.",
+    "Generation-2 Figure 20 caption describes STM32 AI vision control; reproduction guide and BOM separate RK3588 image processing from STM32F407ZGT6 peripheral control.",
+    "The provided generation-2 user manual cover repeats 7.5 x 14 x 11 cm, while the hardware draft and reproduction guide give 15 x 30 x 20 cm. Original PDF is unchanged.",
+    "Primary paragraph describes 802.11ac and later Wi-Fi 6E; no exact installed wireless variant or raw latency/thermal test records supplied.",
+    "Hardware draft refers fluorescence CNN training to Model; current Model page covers primer-crRNA ranking and reaction kinetics. Cross-module clarification belongs to 00.",
+    "Two pathogen-performance result images explicitly pending in comment 15; no results or accuracy were fabricated.",
+    "Raw CAD, Gerber, firmware, model weights and itemized procurement evidence are not present; reproduction guides describe fabrication but are not source-design downloads.",
+    "qPCR procurement example has no procurement URL in the supplied materials; retained as a source comparison, not an independently verified current market price.",
+    "Protocol and Software resource placement and final cross-module manual versions are for 00; Hardware opens its supplied PDFs directly."
+  ],
+  "cost_table_row_counts": [
+    6,
+    28,
+    6,
+    26,
+    6
+  ],
+  "scope": [
+    "Instrument/hardware.html",
+    "Dedicated Hardware CSS/JS/assets/resources/review files only"
+  ],
+  "crosslinks": [
+    "../Instrument/software.html",
+    "../Instrument/model.html",
+    "Direct generation-specific user manual and reproduction guide PDFs"
+  ],
+  "judging_mapping": "Existing Judging/hardware.html redirects to Instrument/hardware.html?nav=judging; redirect unchanged."
+}
