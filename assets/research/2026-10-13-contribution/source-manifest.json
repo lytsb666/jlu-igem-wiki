@@ -1,0 +1,116 @@
+{
+  "documents": [
+    {
+      "source": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "sha256": "37b20cd6211b33266757db91d985632b134cb89b950535ee5adab04bde60a499"
+    },
+    {
+      "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\msg\\file\\2026-10\\description第一二段内容删减.docx",
+      "sha256": "61febc71366507351a3faaaa574b6c09ddec5bd15a2dde6dcb351e0224246d0e"
+    }
+  ],
+  "media": [
+    {
+      "name": "image1.png",
+      "size": [
+        1366,
+        455
+      ],
+      "sha256": "430cd33b4798c6aa365eccabd92c50971f6d32b1ae97dd381f38137d477e8925",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image1.png"
+    },
+    {
+      "name": "image2.png",
+      "size": [
+        1241,
+        693
+      ],
+      "sha256": "b15856662512f7272c74d91955bf4db3396693f79bcd6c92c1d64e7c8a8c852c",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image2.png"
+    },
+    {
+      "name": "image3.png",
+      "size": [
+        1617,
+        973
+      ],
+      "sha256": "9fd5522ae19ec713a8824ccbc8501ca240826f29322255e949f5420ccc07311e",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image3.png"
+    },
+    {
+      "name": "image4.png",
+      "size": [
+        913,
+        590
+      ],
+      "sha256": "985634d9d8d965a1583a399ab66e6e79e1b2e551c551d4d57f3e9711ea5d20e5",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image4.png"
+    },
+    {
+      "name": "image5.jpeg",
+      "size": [
+        1280,
+        1280
+      ],
+      "sha256": "220d8d5b9304f1235b489207aca0c80c99c6ffc1ca43053791ffa33b35fb10cc",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image5.jpeg"
+    },
+    {
+      "name": "image6.png",
+      "size": [
+        964,
+        526
+      ],
+      "sha256": "b38c5a3f0dd058c220cf09841893100e421a15f64389fa1df939041b97e21e46",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image6.png"
+    },
+    {
+      "name": "image7.png",
+      "size": [
+        1267,
+        676
+      ],
+      "sha256": "dc1cabf09121206b2b69fd6a43d78d0056de398dbdac4b6e560ab069521f49af",
+      "source_document": "C:\\Users\\UserTech\\Desktop\\contribution。.docx",
+      "source_media": "word/media/image7.png"
+    },
+    {
+      "name": "software-demonstration.mp4",
+      "source": "C:\\Users\\UserTech\\Desktop\\contribution\\bfa917cbab32dcea76f92d2723d47d73.mp4",
+      "sha256": "7713c4f4e370696a7e15ff1b04723e4ca151a645cfb22746e767cd1f38b9297f",
+      "bytes": 51840391
+    }
+  ],
+  "notes": [
+    {
+      "description_old_reference_to_new": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16
+      },
+      "removed_uncited_references": []
+    },
+    "The merged first section retains the existing Background and Challenges title; legacy section/table anchors resolve to it.",
+    "All eight Description images remain; captions and in-text Figure labels already run consecutively from 1 to 8.",
+    "Contribution paragraph 71 is a video placement instruction, not website prose. All other source text, images and table values are preserved."
+  ]
+}
