@@ -147,7 +147,13 @@
   box-shadow: none;
 }
 .model-revision-page .model-figure__link:hover img { transform: none; }
-.model-revision-page .model-result-figure img { max-width: min(80%,16rem); max-height: 12rem; }
+/* Match Measurement's first single result frame; combined panels stay one image. */
+.model-revision-page .model-result-figure .model-figure__link {
+  display: block;
+  width: min(100%, 373.2216px);
+  margin-inline: auto;
+}
+.model-revision-page .model-result-figure img { display: block; width: 100%; height: auto; max-width: 100%; max-height: none; }
 .model-revision-page .model-figure figcaption {
   margin: .75rem 0;
   padding: 0;

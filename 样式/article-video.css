@@ -1,0 +1,16 @@
+.wiki-video-player { position: relative; width: fit-content; max-width: 100%; margin-inline: auto; }
+.wiki-video-player .wiki-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 20px;
+  border: 1px solid #d4a276;
+  border-radius: 999px;
+  background: #6f4e37;
+  color: #fffaf5;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.wiki-video-play[hidden] { display: none !important; }
+.wiki-video-play:focus-visible { outline: 3px solid #cb8611; outline-offset: 4px; }

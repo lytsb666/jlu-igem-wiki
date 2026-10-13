@@ -60,7 +60,8 @@
     color: #fffaf5 !important;
     background: #6f4e37 !important;
   }
-  :root body .wiki-directory a { text-decoration: underline !important; text-underline-offset: .18em; }
+  :root body :is(.navbar, .wiki-directory, .team-jumps) a[href] { text-decoration: none !important; }
+  :root body .navbar .nav-link::after { content: none !important; display: none !important; }
   :root body main a.wiki-jump-link,
   :root body footer a.wiki-jump-link {
     font-size: var(--wiki-link-size, 18px) !important;
@@ -171,7 +172,7 @@
     :root body main .wiki-pdf-fold > summary { font-size: 14pt !important; }
   }
 }
-body .navbar a[href] { text-decoration: underline; text-underline-offset: .18em; font-weight: 700; }
+body .navbar a[href] { text-decoration: none; font-weight: 700; }
 
 /* Independent translate preserves figure controls and existing scene transforms. */
 body img:not(.loading-video), .wiki-table-scroll {

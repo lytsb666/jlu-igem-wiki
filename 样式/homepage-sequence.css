@@ -53,7 +53,7 @@
    size supplied to the shared typography layer. */
 .world-note p { margin: 0; width: 100%; font-size: var(--wiki-body-size); font-weight: 700; line-height: 1.42; text-align: center; overflow-wrap: normal; }
 .world-note--pcr p,
-.world-note--care p { font-style: italic; }
+.world-note--care p { font-style: normal; }
 .world-note--village { --note-top: calc(var(--story-viewport-height) * .21); left: 6.5vw; width: min(46vw, 860px); }
 .world-note--pcr { --wiki-body-size: clamp(26px, 1.45vw, 40px); --note-top: calc(var(--story-viewport-height) * .50); left: 55vw; width: min(26vw, var(--story-viewport-height) * .66); }
 .world-note--care { --note-top: calc(var(--story-viewport-height) * .24); left: 7vw; width: min(45vw, 860px); }

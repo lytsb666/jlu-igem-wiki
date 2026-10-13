@@ -1,0 +1,104 @@
+/* Shared numeric prose layout. Each box retains the existing item background. */
+@layer wiki-format {
+  :root body main .wiki-numbered-list {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 24px 0 !important;
+  }
+  :root body main .wiki-numbered-item {
+    --step-circle: 48px;
+    --step-connector: 76px;
+    display: grid !important;
+    grid-template-columns: var(--step-circle) var(--step-connector) minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 0 !important;
+    min-width: 0;
+    padding: 0 !important;
+    margin: 24px 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+  :root body main .wiki-numbered-list > .wiki-numbered-item { margin: 0 !important; }
+  :root body main .wiki-numbered-item::before,
+  :root body main .wiki-numbered-item::after,
+  :root body main .wiki-numbered-item::marker { content: none !important; }
+  :root body main .wiki-numbered-item > .wiki-step-number {
+    display: grid !important;
+    place-items: center;
+    box-sizing: border-box;
+    width: var(--step-circle) !important;
+    height: var(--step-circle) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 1.5px solid #cb8611;
+    border-radius: 50%;
+    background: #6f4e37;
+    color: #fffaf5 !important;
+    line-height: 1 !important;
+    letter-spacing: normal !important;
+  }
+  :root body main .wiki-step-number::before { content: attr(data-number); color: #fffaf5 !important; }
+  :root body main .wiki-numbered-item > .wiki-step-dots {
+    display: flex !important;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  :root body main .wiki-step-dots > i {
+    display: block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cb8611;
+  }
+  :root body main .wiki-step-dots > i:first-child { background: #9a6742; }
+  :root body main .wiki-numbered-item > .wiki-step-content {
+    box-sizing: border-box;
+    display: flow-root;
+    min-width: 0;
+    width: 100%;
+    padding: 20px 24px !important;
+    border: 3px solid var(--wiki-rule, #9a6742) !important;
+    border-radius: 22px !important;
+    background: var(--wiki-step-background, transparent) !important;
+    overflow-wrap: anywhere;
+  }
+  :root body main .wiki-step-content > :first-child { margin-top: 0 !important; }
+  :root body main .wiki-step-content > :last-child { margin-bottom: 0 !important; }
+  :root body main .wiki-step-source-number {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+  :root body main .type-cards:has(.wiki-numbered-item) { grid-template-columns: minmax(0, 1fr) !important; }
+  :root body main .technical-path .wiki-numbered-item > .wiki-step-content {
+    display: grid;
+    grid-template-columns: minmax(130px, .6fr) minmax(0, 1.4fr);
+    align-items: start;
+  }
+  @media (max-width: 600px) {
+    :root body main .wiki-numbered-item { --step-circle: clamp(28px, 8.7vw, 34px); --step-connector: clamp(28px, 10.2vw, 40px); margin: 18px 0 !important; }
+    :root body main .wiki-numbered-list { gap: 18px !important; }
+    :root body main .wiki-numbered-item > .wiki-step-content { padding: 14px 10px !important; border-width: 2px !important; border-radius: 16px !important; }
+    :root body main .wiki-step-dots > i { flex-basis: 4px; width: 4px; height: 4px; }
+    :root body main .technical-path .wiki-numbered-item > .wiki-step-content { grid-template-columns: minmax(0, 1fr); }
+  }
+}
+@layer wiki-typography {
+  :root body main .wiki-step-number::before { font-size: 26px !important; font-weight: 700 !important; line-height: 1 !important; }
+  @media (max-width: 600px) { :root body main .wiki-step-number::before { font-size: 21px !important; } }
+}

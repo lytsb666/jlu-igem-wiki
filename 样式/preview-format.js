@@ -152,7 +152,7 @@ function enhancePdfs() {
 
 function enhanceLinks() {
   document.querySelectorAll('main a[href], footer a[href]').forEach(link => {
-    if (link.closest('.wiki-directory, video') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
+    if (link.closest('.wiki-directory, .team-jumps, video') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
     link.style.setProperty('--wiki-link-size', `${(parseFloat(getComputedStyle(link).fontSize)||16)+2}px`)
     link.classList.add('wiki-jump-link')
   })
@@ -160,11 +160,6 @@ function enhanceLinks() {
 
 const articleVideos = [...document.querySelectorAll('main video')]
 for (const video of articleVideos) {
-  video.autoplay = true; video.muted = true; video.defaultMuted = true; video.playsInline = true; video.preload = 'auto'
-  video.setAttribute('autoplay',''); video.setAttribute('muted',''); video.setAttribute('playsinline','')
-  // Muted playback follows browser autoplay requirements; controls retain sound.
-  video.play().catch(()=>undefined)
-  video.addEventListener('loadeddata',()=>video.play().catch(()=>undefined),{once:true})
   const figure = video.closest('figure')
   figure?.querySelectorAll('figcaption a').forEach(a=>{if (/open video/i.test(a.textContent)) {const previous=a.previousSibling;if(previous?.nodeType===Node.TEXT_NODE)previous.textContent=previous.textContent.replace(/\s*·\s*$/,'');a.remove()}})
 }

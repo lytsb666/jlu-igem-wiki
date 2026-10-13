@@ -6,6 +6,10 @@ import './site-format.js'
 import './site-format.css'
 import './preview-format.css'
 import './preview-format.js'
+import './numbered-content.css'
+import './numbered-content.js'
+import './article-video.css'
+import './article-video.js'
 
 const MINIMUM_VISIBLE_TIME = 320
 const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href
