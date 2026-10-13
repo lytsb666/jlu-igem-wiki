@@ -4,7 +4,15 @@
 
 ## 最新版本核对
 
-已读取当前 `HANDOFF.md`，按 00 的最新统一模板继续；未自行合并其他分支。Software/Model 的 RSV 排名第二正文、旧片段链接、无 On this page/Pause、平滑导航及自动减少动态效果检查通过；两代 Software PDF 均仍为八页，采用已同步的 Pages 兼容压缩版。当前浅色折叠目录、统一字号及移除 Software/Model 返回顶部是最新主控基线的记录，与 10 月 8 日历史交接不同。本次没有恢复旧界面，也未修改 Software/Model。Hardware 左侧 Back to top 已按用户最新要求删除。
+已读取当前 `HANDOFF.md`，按 00 的最新统一模板继续；未自行合并其他分支。Software/Model 的 RSV 排名第二正文、旧片段链接、无 On this page/Pause、平滑导航及自动减少动态效果检查通过；两代 Software PDF 本轮按用户新材料换为4/5页原版，与 Hardware 手册字节一致。当前浅色折叠目录、统一字号及移除 Software/Model 返回顶部是最新主控基线的记录，与 10 月 8 日历史交接不同。本次没有恢复旧界面，也未修改 Software/Model。Hardware 左侧 Back to top 已按用户最新要求删除。
+
+## 2026-10-13：Loading 分层修复
+
+用户报告“页面分层”。已复现 Hardware 专用 `.hardware-page video` 误选共享 Loading 视频：其高度被限制为540px，下半屏露出加载海报，形成上下重复画面。仅把规则（含打印规则）限定为 `.hardware-page .hw-main video`，公共 Loading 及 Hardware 加载标记完全未改；正文视频外观不变。
+
+加入现有 Hardware 浏览器检查：延迟封面加载以实测显示中的加载动画，桌面1440和手机390宽度均要求覆盖完整视口、没有 `max-height`/`aspect-ratio` 限制、视频推进时间、自动退出与解除滚动锁。修复后两宽度视频高1004px、覆盖1000px高视口，检查通过。此前的正文、白框、手册、视频、成本和 Judging 检查继续通过。正式构建831ms通过，Software本轮换入同版4/5页原始说明书；完整来源、文件清单、交叉链接和检查见 Software 本轮交接。
+
+本轮 Hardware 变化只在专用 CSS 和 review 检查/记录，`Instrument/hardware.html` 原字节保持。没有操作主仓库、共享文件或合并分支。
 
 ## 本轮界面调整（2026-10-12）
 
@@ -79,6 +87,6 @@ Hardware 页面内原稿要求的位置直接打开两代 reproduction / user ma
 6. 批注15要求的两张病原检测性能结果图及其原始记录仍待补，页面已预留两处并保留原稿待确认说明。
 7. 未提供 CAD、Gerber、固件、权重及采购凭证；复现指南不能替代这些源设计文件。
 8. qPCR单一采购参考没有对应采购URL，保留原稿比较限定条件，未声称是当前市场价格或同等性能。
-9. 批注要求复现资料最终由 Protocol 承载、说明书由 Software 承载；本次仅 Hardware 直接接入新4/5页说明书和6/10页复现指南，没有覆盖 Software 当前8页版。资源归属和最终链接由 00 整合。Entrepreneurship 成本口径同样交 00，未跨模块自行改写。
+9. 批注要求复现资料最终由 Protocol 承载、说明书由 Software 承载；Hardware 初版直接接入4/5页说明书和6/10页复现指南；2026-10-13用户再提供同一4/5页说明书，Software已按最新授权更新，原PDF与Hardware相同。资源归属和最终链接由 00 整合。Entrepreneurship 成本口径同样交 00，未跨模块自行改写。
 
 已尝试读取00对话及打开应用预览，两工具仍返回 `Invalid app tool request`。未能自动发送，不宣称已送达；本交接及最终提交号供00接收。没有 merge、cherry-pick、push 或部署。

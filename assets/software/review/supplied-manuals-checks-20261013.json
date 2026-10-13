@@ -1,0 +1,115 @@
+{
+  "responsive": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "cards": [
+        {
+          "x": 471,
+          "y": 304.828125,
+          "width": 433,
+          "bottom": 1068.875
+        },
+        {
+          "x": 928,
+          "y": 304.828125,
+          "width": 433,
+          "bottom": 1068.875
+        }
+      ],
+      "brokenImages": 0
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "cards": [
+        {
+          "x": 50.5,
+          "y": 289.21875,
+          "width": 387.5,
+          "bottom": 1053.265625
+        },
+        {
+          "x": 462,
+          "y": 289.21875,
+          "width": 387.5,
+          "bottom": 1053.265625
+        }
+      ],
+      "brokenImages": 0
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "cards": [
+        {
+          "x": 31,
+          "y": 370.125,
+          "width": 328,
+          "bottom": 1146.96875
+        },
+        {
+          "x": 31,
+          "y": 1170.96875,
+          "width": 328,
+          "bottom": 1947.8125
+        }
+      ],
+      "brokenImages": 0
+    },
+    {
+      "width": 320,
+      "overflow": 0,
+      "cards": [
+        {
+          "x": 31,
+          "y": 411.078125,
+          "width": 258,
+          "bottom": 1278.03125
+        },
+        {
+          "x": 31,
+          "y": 1302.03125,
+          "width": 258,
+          "bottom": 2168.984375
+        }
+      ],
+      "brokenImages": 0
+    }
+  ],
+  "pdfs": [
+    {
+      "url": "http://127.0.0.1:5208/software-resources/software-user-guide-first-generation.pdf",
+      "pages": 4,
+      "bytes": 1612352,
+      "sha256MatchesSource": true,
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5208/software-resources/software-user-guide-second-generation.pdf",
+      "pages": 5,
+      "bytes": 2369164,
+      "sha256MatchesSource": true,
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "keyboardPreview": {
+    "opensOriginalPDF": true,
+    "url": "http://127.0.0.1:5208/software-resources/software-user-guide-first-generation.pdf"
+  },
+  "download": {
+    "correctURL": true,
+    "suggestedFilename": "software-user-guide-second-generation.pdf"
+  },
+  "content_preservation": {
+    "baseline": "4e97a27",
+    "software_except_manual_cards_and_page_favicon_unchanged": true,
+    "hardware_markup_unchanged": true,
+    "navbar_loading_footer_unchanged": true,
+    "source_worktree_build_pdf_bytes_match": true,
+    "pdfs_visually_reviewed": 9,
+    "favicon_404_fixed_with_page_asset": true
+  }
+}
