@@ -1,0 +1,12 @@
+{
+  "source_sha256": "7713c4f4e370696a7e15ff1b04723e4ca151a645cfb22746e767cd1f38b9297f",
+  "source_bytes": 51840391,
+  "source_git_commit": "044d6d5",
+  "original_duration_seconds": 509.92,
+  "web_path": "assets/research/2026-10-13-contribution/software-demonstration.mp4",
+  "web_sha256": "40f28b80fc70c8fdc6f6f57272a9b741de603aa206b5bb8f78b7613938e8df1b",
+  "web_bytes": 18082087,
+  "web_duration_seconds": 509.93,
+  "encoding": "H.264/AAC, max 1280px width, full duration, faststart",
+  "reason": "Public preview compatibility with the 25 MiB per-file limit; original retained in Git history and local source worktree."
+}

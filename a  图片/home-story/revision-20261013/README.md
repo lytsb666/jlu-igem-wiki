@@ -35,4 +35,3 @@ Use case: precise-object-edit. Edit target: supplied four-card illustration. Rem
 测试脚本与截图：D:/JLU—Wiki/IGEMwiki/tmp/homepage-review-20261013/。
 
 已有未提交封面和final-20261012素材保留。本次未发布或合并主控。
-
