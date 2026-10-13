@@ -26,3 +26,20 @@ assets/*.docx
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Cloudflare local state and local secrets
+.wrangler/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+!.dev.vars.*.example
+*.key
+*.pem
+
+# Local checks, caches and coverage
+.cache/
+coverage/
+test-results/
+playwright-report/
+__pycache__/
+*.pyc

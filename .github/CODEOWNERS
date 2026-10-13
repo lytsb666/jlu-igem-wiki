@@ -1,0 +1,5 @@
+# Account binding pending; no GitHub identities have been invented.
+# Fill .github/owners.json and run node scripts/configure-codeowners.mjs.
+# Until then, 00 owns shared components and 10 owns build/deployment by policy.
+# This commented file does not enable GitHub's required code-owner reviews.
+# See CONTRIBUTING.md and docs/COLLABORATION_SETUP.md.

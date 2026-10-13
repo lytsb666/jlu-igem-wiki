@@ -1,7 +1,15 @@
 # Cloudflare Pages 团队临时预览
 
 固定项目：`jlu-igem-wiki-preview`。固定地址：`https://jlu-igem-wiki-preview.pages.dev/`。
-使用 Pages Direct Upload；生产部署标识为 `main`，与本地 Git 分支名独立。以后始终传同一项目名及 `--branch main`，更新这个固定地址，不另建项目。
+使用 Pages Direct Upload；生产部署标识为 `main`。团队协作配置从 2026-10-13 起将 Git `main` 对应固定地址，功能分支对应独立预览。保持同一项目，不另建项目。
+
+## GitHub 自动部署（2026-10-13）
+
+已通过 Cloudflare API 只读核实：项目未连接 Git 来源（`source: null`），生产分支 `main`；最近成功部署 `2054433b-d322-4c4e-b17c-d45f1239f7c0` 对应 `2207cd49cbb76c006f871e76d92e8e921c37acf1`，2026-10-12 19:11:55（Asia/Shanghai）创建，上传标记 `commit_dirty: true`。该标记不能保证线上逐文件等于 Git 树，首次自动发布前仍需预览核对。
+
+`.github/workflows/wiki.yml` 已配置构建检查和 Direct Upload：合并到 `main` 后更新固定地址；同仓库非草稿 PR 使用 `pr-<编号>` 上传，隔离于固定地址。自动部署需管理员设置 `PAGES_DEPLOY_ENABLED=true` 才启用。具体 GitHub 权限、Environment、API token 和首次上线步骤见 [管理员配置指南](docs/COLLABORATION_SETUP.md)。本次未上传网站或变更远程配置。
+
+现有 Direct Upload 项目不能直接改为 Git 集成；保留项目与地址，使用 GitHub Actions 上传即可实现自动部署。如未来需要 Cloudflare 原生 GitHub App 的 PR 评论与构建服务，需要另建 Git 集成项目并单独规划迁移。依据：[Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/) 和 [CI 上传指南](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/)。
 
 ## 重新发布
 
@@ -12,7 +20,9 @@ Set-Location -LiteralPath 'D:\JLU—Wiki\IGEMwiki\Wiki'
 .\scripts\publish-pages.ps1
 ```
 
-脚本先执行 `npm run build`，构建失败立即停止；再检查单文件大小，然后用固定版本 Wrangler 上传 **dist/client**。它不会推送 Git、上传仓库、创建新项目或部署 `dist/server`、`dist/.openai`。
+默认命令将当前功能分支上传为预览，不更新固定地址。发布固定地址须在**干净的 `main`** 中明确执行 `.\scripts\publish-pages.ps1 -Production`，且已经过审核；未跟踪资料也算非干净状态，不得删除资料来绕过检查。
+
+脚本先执行 `npm run build` 和 `node scripts/check-build.mjs`，失败立即停止；再检查单文件大小，然后用固定版本 Wrangler 上传 **dist/client**。它不会推送 Git、上传仓库、创建新项目或部署 `dist/server`、`dist/.openai`。
 当前机器只有 Codex 自带 Node，脚本可使用仓库外 `../tmp/cloudflare-pages-2026-10-10` 下补齐的 npm/Wrangler；其他机器已有 npm 时也可通过 npx 运行。
 
 有正常 Node/npm 环境时，等效命令为：
@@ -20,7 +30,10 @@ Set-Location -LiteralPath 'D:\JLU—Wiki\IGEMwiki\Wiki'
 ```powershell
 npm run build
 if ($LASTEXITCODE -ne 0) { throw 'Build failed' }
-npx --yes wrangler@4.149.0 pages deploy dist/client --project-name jlu-igem-wiki-preview --branch main --commit-dirty=true
+node scripts/check-build.mjs
+if ($LASTEXITCODE -ne 0) { throw 'Output verification failed' }
+# Use the guarded script for either a feature preview or an explicit production upload.
+.\scripts\publish-pages.ps1
 ```
 
 若授权过期，运行 `npx --yes wrangler@4.149.0 login --scopes account:read user:read pages:write`，在浏览器确认后重新发布。OAuth 凭据保存在本机 Wrangler 用户配置中，未写入源码或产物。
