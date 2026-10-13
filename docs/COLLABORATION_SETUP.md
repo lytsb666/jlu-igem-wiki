@@ -104,3 +104,29 @@ Private 仓库若当前套餐不提供保护或 Environment 审核，使用支�
 - 证据：`build-check-after.json`、`validation.json`、`npm-audit-after.json`、`build-output-equivalence.json`，位于上述仓库外目录。验证是在本机 Windows 上执行；GitHub Ubuntu runner 的首次实际运行仍须管理员在上云后核实。
 - 本地 main 正常快进到本次协作配置提交，与 `feat/00-github-collaboration` 相同；`feat/wiki-ux-redesign` 仍保留 `2207cd4`，其余旧分支和 worktree 未改。主工作区现有预览服务、dist 与 node_modules 未替换；新克隆或下次 `npm ci` 才会安装新锁定依赖。
 - GitHub 仓库、成员邀请、真实 CODEOWNERS 绑定、分支保护、Environment 和 token 仍需登录后的管理员配置；本次未 push、未创建远程 PR、未部署，Pages 固定地址及官方 iGEM 站保持既有版本。这些本地验证不代表全站视觉验收通过。
+
+## 6. GitHub 接入实际执行记录（2026-10-13）
+
+上一节的本地验证已在上云阶段兑现，实际结果与限制如下，未完成的授权项单独标注。
+
+| 项目 | 实际结果 |
+| --- | --- |
+| 仓库 | `https://github.com/lytsb666/jlu-igem-wiki`（Private，个人账号，无组织） |
+| 默认分支 / 发布 commit | `main` / `ddfa64c1e904a523b9b78958778afdca481d697f` |
+| CODEOWNERS | 00 与 10 均绑定 `@lytsb666`，`configure-codeowners.mjs --check` 通过 |
+| 首次构建 | Actions run `38345743867`，`wiki-build` 在 `ubuntu-latest` 43 秒成功 |
+| Actions Variables | `CLOUDFLARE_ACCOUNT_ID`、`PAGES_PROJECT_NAME` 已设置；`PAGES_DEPLOY_ENABLED=false` |
+| Environments | `pages-production`、`pages-preview` 已创建 |
+| 账号套餐 | GitHub Free（个人账号） |
+
+Free 套餐在 **Private** 仓库下的实际限制，已用 API 逐项核实，不是文档推断：
+
+- 分支保护：`403 Upgrade to GitHub Pro or make this repository public`。**当前无法为 `main` 启用审核保护、必需状态检查或禁止强推。**
+- Environment 必需审核人：`422 ... billing plan supports the required reviewers protection rule`。**无法设置人工发布审批。**
+- Environment 部署分支策略：`404`，**无法把 `pages-production` 限制到 `main`**。
+- Environment Secret：可用（实测创建返回 201）。部署令牌可继续按环境存放。
+- 因此 `pages-production` 只能靠工作流本身的 `github.ref == 'refs/heads/main'` 条件限制发布来源。
+
+要补齐分支保护与人工发布审批，二选一：升级账号到 GitHub Pro / Team，或把仓库改为 Public。在补齐之前，任何具备 Write 权限的成员都能直接向 `main` 推送，请勿宣称已启用服务端保护。
+
+部署令牌 `CLOUDFLARE_API_TOKEN` 仍需管理员在 Cloudflare 创建后，手动写入上面两个 Environment 的 Secret；在此之前保持 `PAGES_DEPLOY_ENABLED=false`。
