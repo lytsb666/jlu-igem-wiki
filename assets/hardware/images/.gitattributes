@@ -1,0 +1,2 @@
+# Preserve the exact bytes recorded for the self-contained workflow views.
+workflow-*-clean.svg binary

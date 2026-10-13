@@ -23,7 +23,15 @@
 .hardware-page .hw-section p { margin: 16px 0; }
 .hardware-page .hw-figure, .hardware-page .hw-video { margin: 24px 0 32px; }
 .hardware-page .hw-figure a { display: block; }
-.hardware-page .hw-figure img { display: block; max-width: 100%; width: 100%; height: auto; object-fit: contain; }
+.hardware-page .hw-figure img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: min(360px,42svh);
+  margin-inline: auto;
+  object-fit: contain;
+}
 .hardware-page .hw-figure-images { display: grid; gap: 16px; }
 .hardware-page figcaption { margin-top: 12px; }
 .hardware-page .hw-main video { display: block; width: 100%; max-height: 540px; background: #17120e; aspect-ratio: 16/9; }

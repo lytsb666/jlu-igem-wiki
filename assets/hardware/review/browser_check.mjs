@@ -55,6 +55,7 @@ try{
       coverRight:document.querySelector('.image-page-hero').getBoundingClientRect().right,
       clientWidth:document.documentElement.clientWidth,brokenLoadedImages:[...document.images].filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src),
       bodySize:getComputedStyle(document.querySelector('.hw-section p')).fontSize,
+      emptyFigureBoxes:[...document.querySelectorAll('.hw-figure img')].filter(img=>!img.getBoundingClientRect().width||!img.getBoundingClientRect().height).map(img=>img.alt),
       contentCards:[...document.querySelectorAll('.hw-intro,.hw-section')].map(el=>({
         background:getComputedStyle(el).backgroundColor,radius:getComputedStyle(el).borderRadius,
         padding:getComputedStyle(el).padding,shadow:getComputedStyle(el).boxShadow}))}))
@@ -66,6 +67,7 @@ try{
       assert(parseFloat(card.padding)>0);assert.notEqual(card.shadow,'none')
     }
     assert.equal(result.brokenLoadedImages.length,0);assert(Math.abs(result.coverRight-result.clientWidth)<1);assert.equal(result.coverLeft,0)
+    assert.deepEqual(result.emptyFigureBoxes,[])
     report.responsive.push(result)
     if(width===390){await page.locator('#hw-introduction > h2').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(scratch,'mobile-content.png')})}
   }

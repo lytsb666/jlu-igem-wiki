@@ -10,6 +10,7 @@
       "clientWidth": 1440,
       "brokenLoadedImages": [],
       "bodySize": "16px",
+      "emptyFigureBoxes": [],
       "contentCards": [
         {
           "background": "rgb(255, 255, 255)",
@@ -89,6 +90,7 @@
       "clientWidth": 900,
       "brokenLoadedImages": [],
       "bodySize": "16px",
+      "emptyFigureBoxes": [],
       "contentCards": [
         {
           "background": "rgb(255, 255, 255)",
@@ -168,6 +170,7 @@
       "clientWidth": 390,
       "brokenLoadedImages": [],
       "bodySize": "16px",
+      "emptyFigureBoxes": [],
       "contentCards": [
         {
           "background": "rgb(255, 255, 255)",
@@ -247,6 +250,7 @@
       "clientWidth": 320,
       "brokenLoadedImages": [],
       "bodySize": "16px",
+      "emptyFigureBoxes": [],
       "contentCards": [
         {
           "background": "rgb(255, 255, 255)",

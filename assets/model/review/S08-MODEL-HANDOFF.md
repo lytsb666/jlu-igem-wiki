@@ -41,3 +41,9 @@ Headless Chrome 1440/900/390/320视口：整页无横向溢出；59条完整公�
 预览：`http://127.0.0.1:5208/Instrument/model.html`。
 
 00对话工具本轮仍返回 `Invalid app tool request`，无法自动发送，不宣称送达；本交接和最终提交号供00接收。
+
+## 2026-10-13 后续：仅移除公式滚动条
+
+按用户后续要求，在 `样式/model-revision.css` 中对 `.model-equation` 设置 scrollbar-width:none 并隐藏 WebKit 滚动条。36组公式的右侧/底部滚动条不再显示，横向触摸和键盘阅读仍保留。Model HTML、71个MathML对象、公式内容/字号/居中、引用、表格、图与原图入口全部不改。
+
+联动检查在 Hardware 本轮 `image-revision-checks-20261013.json` 中：滚动条计算样式为none、ArrowRight仍可阅读宽公式、MathML数量71。完整来源、文件清单、Hardware图片与已批准文稿修补见同日 Hardware 最新交接；公共样式与脚本未改，跨模块整合仍交00。

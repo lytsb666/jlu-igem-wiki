@@ -35,6 +35,9 @@ assert len(page.xpath('//details[contains(@class,"hw-cost-detail") and not(@open
 assert len(page.xpath('//details//table'))==2
 assert len(page.xpath('//div[contains(@class,"hw-pending-image")]'))==2
 assert 'Confirmation against experimental records is pending.' in main.text_content()
+assert 'Operation proceeds through connection, loading, running the device, and viewing results.' in main.text_content()
+reproduction_text=page.xpath('//*[@id="hw-reproduction"]/p')[0].text_content().lower()
+assert all(point in reproduction_text for point in ('assembly procedures','circuit connections','structural design files','bill of materials'))
 assert len(page.xpath('//video[@controls and @playsinline and @preload="none"]'))==3
 assert not page.xpath('//main//video[@autoplay]')
 assert len(page.xpath('//div[contains(@class,"hw-pdf-scroll")]'))==2
@@ -62,12 +65,12 @@ for selector in ('//nav[contains(@class,"navbar")]','//*[@id="igem-loader"]','//
     assert E.tostring(page.xpath(selector)[0])==E.tostring(before.xpath(selector)[0]),selector
 assert subprocess.check_output(['git','branch','--show-current'],cwd=ROOT).decode().strip()=='codex/08-instrument'
 files=subprocess.check_output(['git','-c','core.quotepath=false','diff','HEAD','--name-only'],cwd=ROOT).decode().splitlines()
-allowed=lambda name:name in ('Instrument/hardware.html','Instrument/software.html','样式/hardware.css','样式/hardware.js','样式/software.css','样式/software.js') or name.startswith(('assets/hardware/','public/hardware-resources/','assets/software/','public/software-resources/'))
+allowed=lambda name:name in ('Instrument/hardware.html','Instrument/software.html','样式/hardware.css','样式/hardware.js','样式/software.css','样式/software.js','样式/model-revision.css') or name.startswith(('assets/hardware/','public/hardware-resources/','assets/software/','public/software-resources/','assets/model/review/'))
 assert all(allowed(name) for name in files),files
 result={'source_paragraphs_verified':coverage,'explicit_editorial_indices':sorted(changed),'source_table_rows':[len(t) for t in source_tables],
  'figures':figure_numbers,'comment_requirements':22,'chapters':9,'references':5,'reproduction_pages':[6,10],
  'user_manual_pages':[4,5],'cost_detail_tables_closed':2,'pending_result_images':2,'videos_complete':3,
  'pdf_original_hashes_match':True,'local_resources_checked':checked,'unique_ids':len(ids),'sidebar_back_to_top_removed':True,
- 'navbar_loading_footer_unchanged':True,'model_and_shared_files_unchanged':True,'software_manual_update_in_scope':'Instrument/software.html' in files,'scope_passed':True}
+ 'navbar_loading_footer_unchanged':True,'model_markup_and_shared_files_unchanged':True,'software_manual_update_in_scope':'Instrument/software.html' in files,'scope_passed':True}
 (ROOT/'assets/hardware/review/content-checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print('Complete unchanged prose, all table cells, 23 figures, original PDFs, full videos, comments, links and protected shared components passed.')

@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-13",
+  "images": [
+    {
+      "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\temp\\RWTemp\\2026-10\\62d2b5bca42c1049994e5d295315eb73\\90f9f8308cd53dda01e04af269c274f8.jpg",
+      "source_sha256": "f719bd06c968c2ec3d159ce1662dd63dfd03d57acee0640a33a5fe18f89d184c",
+      "target": "assets/hardware/images/fluorescence-interface-high-resolution.jpg",
+      "sha256": "f719bd06c968c2ec3d159ce1662dd63dfd03d57acee0640a33a5fe18f89d184c",
+      "size": [
+        5953,
+        6330
+      ],
+      "figure": 6,
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\temp\\RWTemp\\2026-10\\62d2b5bca42c1049994e5d295315eb73\\d3d64dc7892e954c72cd8ad4b81af86e.jpg",
+      "source_sha256": "69c3ba6529824c4c3349e5318670d2946bca3ccdb33b6897de7cea087be837d2",
+      "target": "assets/hardware/images/imaging-distances-high-resolution.jpg",
+      "sha256": "69c3ba6529824c4c3349e5318670d2946bca3ccdb33b6897de7cea087be837d2",
+      "size": [
+        5953,
+        2720
+      ],
+      "figure": 7,
+      "original_bytes_preserved": true
+    },
+    {
+      "source": "assets/hardware/images/workflow-1.png",
+      "source_sha256": "671a940d188d3706ee52e3ebd62d5182187c842a278a4d00741c24009bf9cd97",
+      "target": "assets/hardware/images/workflow-1-clean.svg",
+      "sha256": "99fc76de0dabeabb90ece6c0f853d169882a248d706ba1ba009f1ef4b0120be0",
+      "size": [
+        2172,
+        553
+      ],
+      "original_bytes_embedded": true,
+      "viewbox": [
+        0,
+        83,
+        2172,
+        553
+      ],
+      "label_mask": [
+        0,
+        83,
+        74,
+        61
+      ],
+      "method": "Native SVG viewport crop and vector mask; raster artwork is unchanged."
+    },
+    {
+      "source": "assets/hardware/images/workflow-2.png",
+      "source_sha256": "4e9b613b6e11020c603b8bcb7539e32bc5bb1e12a62c2486e11899aa5839dcfa",
+      "target": "assets/hardware/images/workflow-2-clean.svg",
+      "sha256": "6e2514273d3703b85180e4d1bbb5f1f60ec38f6e21940c6061f742964a7de8b4",
+      "size": [
+        2172,
+        724
+      ],
+      "original_bytes_embedded": true,
+      "viewbox": [
+        0,
+        0,
+        2172,
+        724
+      ],
+      "label_mask": [
+        0,
+        0,
+        76,
+        76
+      ],
+      "method": "Native SVG viewport crop and vector mask; raster artwork is unchanged."
+    }
+  ],
+  "source_document": "C:/Users/UserTech/Desktop/Hardware 1012/Hardware/Hardware页面.docx",
+  "document_sha256": "3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2",
+  "document_same_as_previous": true,
+  "user_decision": "Restore second-generation operation overview and four reproduction-documentation points, while preserving available resource links and prior numbering/duplicate corrections.",
+  "image_display": "Hardware body figures keep aspect ratio, centered, max height min(360px,42svh). Hero, manuals and loading media retain their existing presentation.",
+  "model_change": "Only formula scrollbar visuals are hidden; complete MathML and keyboard/touch scrolling remain."
+}

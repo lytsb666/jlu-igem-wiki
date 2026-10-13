@@ -24,6 +24,12 @@ sub={5:('hw-specifications','Specifications'),8:('hw-development','Development T
      141:('hw-cost-scope','Scope and Method'),145:('hw-gen1-costs','1.0 Cost Estimate'),
      155:('hw-gen2-costs','2.0 Cost Estimate'),164:('hw-qpcr-comparison','qPCR Comparison')}
 changes=[]
+image_aliases={
+ 'image7.jpeg':'fluorescence-interface-high-resolution.jpg',
+ 'image8.jpeg':'imaging-distances-high-resolution.jpg',
+ 'workflow-1.png':'workflow-1-clean.svg',
+ 'workflow-2.png':'workflow-2-clean.svg',
+}
 def cited(text):
     text=escape(text)
     return re.sub(r'\[(\d+)\]',lambda m:f'<a href="#hw-reference-{m[1]}">[{m[1]}]</a>',text)
@@ -40,6 +46,7 @@ def table(rows,caption):
     return '<div class="hw-table-wrap" role="region" tabindex="0" aria-label="Scrollable table: '+escape(caption)+'"><table><caption>'+escape(caption)+'</caption><thead>'+rendered[0]+'</thead><tbody>'+''.join(rendered[1:])+'</tbody></table></div>'
 def image(path,alt):
     if path.endswith(('.tif','.tiff')):path=str(Path(path).with_suffix('.png'))
+    path=image_aliases.get(Path(path).name,path)
     source='../assets/hardware/images/'+Path(path).name
     record=next((x for x in materials['images'] if x['target'].endswith(Path(path).name)),None)
     size=record['size'] if record else [1280,720]
@@ -135,9 +142,12 @@ for i,b in enumerate(blocks):
         text=text.replace('Section 6.2','Section 6.1');markup.append('<p>'+cited(text).replace('Software page','<a href="../Instrument/software.html">Software page</a>')+'</p>');changes.append('Corrected compatibility cross-reference to the existing 6.1 section.');continue
     if i in (80,125):
         n=2 if i==80 else 3
-        markup.append('<p>Detailed operating instructions are provided in the '+pdf_link(n,'ByeGerm 1.0 user manual' if n==2 else 'ByeGerm 2.0 user manual')+'.</p>');continue
+        overview='Operation proceeds through connection, loading, running the device, and viewing results. ' if i==125 else ''
+        if i==125:changes.append('Restored the second-generation connection/loading/run/result overview with user confirmation; existing manual link retained.')
+        markup.append('<p>'+overview+'Detailed operating instructions are provided in the '+pdf_link(n,'ByeGerm 1.0 user manual' if n==2 else 'ByeGerm 2.0 user manual')+'.</p>');continue
     if i==139:
-        markup.append('<p>Assembly procedures, circuit connections, structural fabrication and commissioning are described in the supplied reproduction guides. Read either guide directly below or open its original PDF.</p>')
+        markup.append('<p>The reproduction documentation is intended to compile assembly procedures, circuit connections, structural design files, and the bill of materials. Read either supplied reproduction guide directly below or open its original PDF.</p>')
+        changes.append('Restored all four reproduction-documentation points with user confirmation; supplied guide links retained without claiming source-design files have been released.')
         markup.append('<div class="hw-guides">'+reader(0,'ByeGerm 1.0 Reproduction Guide')+reader(1,'ByeGerm 2.0 Reproduction Guide')+'</div>')
         markup.append('<h3 id="hw-user-manuals">User Manuals</h3><div class="hw-manuals">'+''.join(f'<article><h4>ByeGerm {gen}.0 User Manual</h4><p>{pdfs[n]["pages"]} pages</p><p>'+pdf_link(n,'Open user manual')+f' · <a href="{pdf_href(n)}" download>Download PDF</a></p></article>' for gen,n in [(1,2),(2,3)])+'</div>')
         continue

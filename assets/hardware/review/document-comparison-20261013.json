@@ -1,0 +1,23 @@
+{
+  "baseline": "a1ef65666042b1f69196c2d53c8370446254598b",
+  "document_source": "C:/Users/UserTech/Desktop/Hardware 1012/Hardware/Hardware页面.docx",
+  "document_sha256": "3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2",
+  "document_identical_to_previous_source": true,
+  "user_confirmed_paragraph_changes": [
+    {
+      "before": "Detailed operating instructions are provided in the ByeGerm 2.0 user manual ↗.",
+      "after": "Operation proceeds through connection, loading, running the device, and viewing results. Detailed operating instructions are provided in the ByeGerm 2.0 user manual ↗."
+    },
+    {
+      "before": "Assembly procedures, circuit connections, structural fabrication and commissioning are described in the supplied reproduction guides. Read either guide directly below or open its original PDF.",
+      "after": "The reproduction documentation is intended to compile assembly procedures, circuit connections, structural design files, and the bill of materials. Read either supplied reproduction guide directly below or open its original PDF."
+    }
+  ],
+  "all_other_paragraphs_preserved": true,
+  "all_table_cells_preserved": true,
+  "figure_captions_and_ids_preserved": true,
+  "source_photographs_preserved_byte_for_byte": true,
+  "workflow_png_bytes_unchanged_inside_svg": true,
+  "model_markup_unchanged": true,
+  "navbar_loading_footer_unchanged": true
+}

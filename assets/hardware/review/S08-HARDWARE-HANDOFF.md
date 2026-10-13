@@ -6,6 +6,26 @@
 
 已读取当前 `HANDOFF.md`，按 00 的最新统一模板继续；未自行合并其他分支。Software/Model 的 RSV 排名第二正文、旧片段链接、无 On this page/Pause、平滑导航及自动减少动态效果检查通过；两代 Software PDF 本轮按用户新材料换为4/5页原版，与 Hardware 手册字节一致。当前浅色折叠目录、统一字号及移除 Software/Model 返回顶部是最新主控基线的记录，与 10 月 8 日历史交接不同。本次没有恢复旧界面，也未修改 Software/Model。Hardware 左侧 Back to top 已按用户最新要求删除。
 
+## 2026-10-13：高清图片、流程图清理与文档对齐
+
+本轮基线 `a1ef65666042b1f69196c2d53c8370446254598b`。用户提供桌面 `Hardware 1012/Hardware/Hardware页面.docx`，SHA256为 `3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2`，与此前实际建页文稿完全同字节；没有新增正文版本。已报告既有链接/编号/重复句处理，以及二代操作概述省略、复现段落要点改写两处差异。用户明确选择“②③恢复原稿要点，保留现有资料链接和①的纠错”。
+
+据此仅修改两个正文段落：补回二代“connection, loading, running the device, and viewing results”的操作概述，并保留已提供手册入口；复现说明恢复 assembly procedures、circuit connections、structural design files、bill of materials 四项要点，以资料汇编意图表述，保留现有原PDF入口，不宣称 CAD/固件等源文件已经发布。其余所有段落、六张表、图号/图注、参考文献、锚点均与本轮基线保持。
+
+用户两张高分辨率JPEG分别对应 Figure6（采集界面/两组管图，5953×6330）和 Figure7（70/60/50/40/30mm对照，5953×2720）。文件逐字节复制为 `fluorescence-interface-high-resolution.jpg` 与 `imaging-distances-high-resolution.jpg`；保留旧图片来源。源路径与SHA256见 `image-revision-20261013.json`。未裁剪、重绘或改写截图里的数值。
+
+流程图使用当前较高分辨率的原始 `workflow-1.png` / `workflow-2.png`（均2172×724）嵌入独立SVG，原PNG字节完整保留。第一代 viewBox=0,83,2172,553 去除上下黑边；仅在原 A 位置用74×61白色向量遮罩。第二代保留原画布，用76×76遮罩覆盖 B。设备、手势、箭头和英文步骤保持原像素，未生成新科学图。页面和打开原图入口均指向清理后的SVG。该方法为原生SVG裁边/遮罩，无生成模型重绘。
+
+Hardware 正文图片最大高度为 min(360px,42svh)，按原比例显示且居中；全屏封面、Loading、视频、PDF阅读区不受这条规则影响。为保证首次滚动时的懒加载占位，图像框宽度保留100%、用 object-fit:contain 维持实际图片比例与高度上限，避免尚未解码的图像出现零尺寸。原图可单独打开。Model 仅在专用CSS隐藏36个公式区域的滚动条，保留全部71个MathML对象和键盘/触摸横向阅读；Model HTML本轮未改。
+
+文件清单：修改 `Instrument/hardware.html`、`样式/hardware.css`、`样式/model-revision.css`；Hardware review 下的 `build_hardware.py`、`check_hardware.py`、`browser_check.mjs`、`materials.json`、`page-source-manifest.json`、`content-checks.json`、`browser-checks.json`、本交接；更新 Model 专用交接。新增两张高分辨率JPEG、两张清理后的SVG，以及 `assets/hardware/images/.gitattributes`（仅这两个SVG按binary图像资产处理，确保嵌入的原始位图和记录的字节哈希跨检出保持），`apply_image_revision_20261013.py`、`image-revision-20261013.json`、`image-revision-checks-20261013.json`、`document-comparison-20261013.json`。没有修改原始PNG/JPEG、PDF/MP4、Software、Model正文、共享文件或其他模块。
+
+验证：正式构建通过（820ms）；1440×900、1280×720、390×844、320×568下所有24张正文图片均不超过360px/42%视口高，无横向溢出或坏图。新4素材通过HTTP200、字节哈希及原图入口检查；两张JPEG与用户原文件相同，SVG嵌入PNG解码后与原文件完全相同。已目视核查去黑边/A/B、两张新截图及桌面/手机缩放。已有完整检查同时通过加载动画播放/全屏退出、正文白框、懒加载非零尺寸占位、手册哈希与阅读区滚动、三视频播放、成本展开、Judging参数/锚点和导航。Model滚动条隐藏及隐藏后的键盘滚动通过。两个浏览器检查控制台错误、失败资源请求为零。普通及暂存Git差异格式检查通过。
+
+原缺口（两张病原检测图、计算板口径、源设计文件等）沿用早前记录；新Figure6/7是采集/成像资料，不替代病原检测验证图。跨模块链接、Judging证据入口保持，最终整合交00，未自行合并或部署。
+
+本轮00对话接口仍返回 `Invalid app tool request`；未自动送达。最终完整commit hash见完成消息及本分支最新提交。
+
 ## 2026-10-13：Loading 分层修复
 
 用户报告“页面分层”。已复现 Hardware 专用 `.hardware-page video` 误选共享 Loading 视频：其高度被限制为540px，下半屏露出加载海报，形成上下重复画面。仅把规则（含打印规则）限定为 `.hardware-page .hw-main video`，公共 Loading 及 Hardware 加载标记完全未改；正文视频外观不变。
