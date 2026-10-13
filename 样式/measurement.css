@@ -506,3 +506,11 @@
     margin-block:24px !important;
   }
 }
+
+/* Manuscript-requested Design-style keywords, scoped to Measurement's cover. */
+.measurement-page .measurement-hero-keywords { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); width:min(880px,80%); max-width:none; gap:12px; }
+.measurement-page .measurement-hero-keywords li { display:grid; place-items:center; min-height:62px; padding:14px 18px; color:#fff; font-size:clamp(14px,1.1vw,17px); font-weight:800; letter-spacing:.08em; text-align:center; text-transform:uppercase; background:rgba(0,0,0,.72); border:1px solid rgba(255,255,255,.28); border-radius:999px; backdrop-filter:blur(9px); }
+@media(max-width:680px) {
+ .measurement-page .measurement-hero-keywords { width:100%; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+ .measurement-page .measurement-hero-keywords li { min-height:58px; padding:12px; font-size:14px; letter-spacing:.03em; }
+}

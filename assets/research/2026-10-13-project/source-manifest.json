@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-13",
+  "sources": {
+    "project": {
+      "path": "C:\\Users\\UserTech\\Desktop\\project.docx",
+      "sha256": "868b16bc4c12c9f8b9e8a5abfd4ae3dbf234bf317803bcd2d80801196ed2dc25",
+      "revisions": {
+        "insertions": 0,
+        "deletions": 0
+      }
+    },
+    "10.12description": {
+      "path": "C:\\Users\\UserTech\\Desktop\\10.12description.docx",
+      "sha256": "88e4431842fbbef2db5ca7b683cde2663c0d60893641a92785604be4958d432e",
+      "revisions": {
+        "insertions": 477,
+        "deletions": 228
+      }
+    },
+    "Safety Wiki配图(1)(1)(2)": {
+      "path": "C:\\Users\\UserTech\\Desktop\\Safety Wiki配图(1)(1)(2).docx",
+      "sha256": "1b7d8190031908220941fdd0079cd3d4fa563d1a73f06f18858adb5967d45baa",
+      "revisions": {
+        "insertions": 0,
+        "deletions": 0
+      }
+    },
+    "额外修改": {
+      "path": "C:\\Users\\UserTech\\Desktop\\额外修改.docx",
+      "sha256": "616522bf5b05344417295370023b1d6e3ae8c3f7b54c0cdb9f0053c813e902e4",
+      "revisions": {
+        "insertions": 0,
+        "deletions": 0
+      }
+    }
+  },
+  "assets": {
+    "safety-figure-1.jpeg": {
+      "source": "Safety Wiki配图(1)(1)(2)\\image1.jpeg",
+      "sha256": "2ae12d1664addf263b8ac373829d2f3fabeceea97bb128e578db0d67c4440a42",
+      "processing": "Original bytes copied; no image editing"
+    },
+    "safety-figure-2.png": {
+      "source": "Safety Wiki配图(1)(1)(2)\\image2.png",
+      "sha256": "de578a4820de5d9d76dd316525e7e00d63e5d23b6dd0c2f7aed65bbc111e3123",
+      "processing": "Original bytes copied; no image editing"
+    },
+    "safety-figure-3.jpeg": {
+      "source": "Safety Wiki配图(1)(1)(2)\\image3.jpeg",
+      "sha256": "90e2b56ea86e1e73a76e340ce89f33af7708885cfe7a61fb970a3ea47f8bc5e2",
+      "processing": "Original bytes copied; no image editing"
+    },
+    "safety-figure-4.png": {
+      "source": "Safety Wiki配图(1)(1)(2)\\image4.png",
+      "sha256": "1881beb646e38c39c4e115bf15391326bd54daf3f6d8462ba24faadbfdfb862b",
+      "processing": "Original bytes copied; no image editing"
+    },
+    "safety-figure-5.png": {
+      "source": "Safety Wiki配图(1)(1)(2)\\image5.png",
+      "sha256": "cd9e3226636005847d4576ba928142ddcc1985fcef96a2b23ac94ea7dd660668",
+      "processing": "Original bytes copied; no image editing"
+    },
+    "safety-figure-6.png": {
+      "source": "Safety Wiki配图(1)(1)(2)\\image6.png",
+      "sha256": "4f8c2769cdc084d166c1197140204da67237e299139ce761e47d0aec79254d58",
+      "processing": "Original bytes copied; no image editing"
+    },
+    "contribution-cover.png": {
+      "source": "project\\image9.png",
+      "sha256": "72f359fcec4f238cf59b51fb4da5b8302a80375b02b7d25bed27f35d8b3e72d6",
+      "processing": "Original bytes copied; no image editing"
+    }
+  },
+  "description_caption_sources": {
+    "description-figure-42": "Source: team-provided second-generation design rendering, September 2026.",
+    "description-figure-46": "Source: team single-channel instrument manuscript, Figure 2A.",
+    "description-figure-51": "Source: team single-channel instrument supplementary material, Figure S19.",
+    "description-figure-55": "Source: team multi-channel instrument development record, Figure 3.21.",
+    "description-figure-58": "Source: team-provided design rendering, September 2026.",
+    "description-figure-64": "Source: team multi-channel instrument development record, Figure 3.45."
+  },
+  "description_text_corrections": {
+    "an additional important in clinical practice respiratory virus": "an additional respiratory virus important in clinical practice",
+    "an related to antimicrobial resistance bacterial pathogen": "a bacterial pathogen associated with antimicrobial resistance",
+    "We developed describes": "We developed",
+    "enough few steps": "few enough steps",
+    "workflow.The": "workflow. The",
+    "fluorescencesignal": "fluorescence signal",
+    "indepth": "in-depth",
+    "fieldscale": "field-scale",
+    "Missing space after superscript citation": ".Therefore → . Therefore"
+  },
+  "description_reference_mapping": {
+    "1": 1,
+    "5": 2,
+    "6": 3,
+    "7": 4,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "8": 8,
+    "14": 9,
+    "9": 10,
+    "10": 11,
+    "15": 12,
+    "16": 13,
+    "11": 14,
+    "12": 15,
+    "13": 16
+  },
+  "figure37_caption": {
+    "page": "Wet-lab/measurement.html",
+    "id": "measurement-figure-356",
+    "source": "User message, 2026-10-13",
+    "text": "Figure 37. Overall structure, hardware components, and control circuit of the device.(A) Exploded view showing the functional modules, including the RK3588 SoC–based artificial intelligence module, AP6256 Wi‑Fi/Bluetooth communication module, optical module (camera and filter), LED chip, temperature module (heating plate and heating element), and power module (lithium battery and charging chip); (B) front (left) and back (right) views of the RK3588 core control board; (C) photograph and dimensions of the assembled device (14 cm × 7.5 cm × 11 cm); and (D) schematic diagram of the temperature-module drive and control circuit.",
+    "image": "existing manuscript original; unchanged"
+  },
+  "scope_notes": [
+    "10.11description replaced by 10.12description final accepted revision view",
+    "Only Description spelling/spacing and RT notation normalized; scientific values retained",
+    "Description source-credit clauses removed from visible captions; credit and existing image bytes preserved here",
+    "Safety figure 6 caption kept exactly as provided, including manuscript wording",
+    "Other pages and shared modules unchanged"
+  ],
+  "description_rendering_labels": {
+    "description-figure-42": "Design rendering. (type retained from original source clause and D01)",
+    "description-figure-58": "Design rendering. (type retained from original source clause)"
+  },
+  "contribution_layout": "Scoped max-width for existing placeholder card to prevent inherited 4px overflow at 390px; shared styles and Navbar untouched"
+}

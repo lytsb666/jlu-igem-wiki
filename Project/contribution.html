@@ -1,5 +1,17 @@
 <!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contribution | JLU-SPH</title><link rel="stylesheet" href="../样式/style.css"><link rel="stylesheet" href="../样式/loading.css"><link rel="stylesheet" href="../样式/placeholder-page.css">  <link rel="stylesheet" href="../样式/full-width-layout.css">
+<style data-research-contribution-layout>
+body[data-cover="contribution"] .placeholder-main .placeholder-card { max-width:100%; }
+</style>
 </head>
-<body class="loading-lock" data-section="Project" data-title="Contribution" data-cover="contribution" data-description="This page is ready for the team's project contributions. Content can be added here without changing the shared navigation."><div id="placeholder-root"></div><script type="module" src="../样式/placeholder-page.js"></script></body></html>
+<body class="loading-lock" data-section="Project" data-title="Contribution" data-cover="contribution" data-description="This page is ready for the team's project contributions. Content can be added here without changing the shared navigation."><div id="placeholder-root"></div><script type="module">
+import '../样式/placeholder-page.js';
+const cover = document.querySelector('#placeholder-root .image-page-hero > img');
+if (cover) {
+  cover.src = new URL("../assets/research/2026-10-13-project/contribution-cover.png", import.meta.url).href;
+  cover.width = 1253;
+  cover.height = 699;
+  cover.alt = 'ByeGerm and team members sharing synthetic biology work at an iGEM gathering';
+}
+</script></body></html>
