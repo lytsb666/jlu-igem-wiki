@@ -1,5 +1,9 @@
 # JLU-SPH Wiki 项目交接
 
+**2026-10-13 最新授权与状态**：用户已明确要求整合各部分修改并上传 GitHub，覆盖下文早期针对 GitHub / git push 的禁止约定。仓库为 `https://github.com/lytsb666/jlu-igem-wiki`，当前整合分支为 `feat/00-integrate-20261013`，以实际 Git 状态为准。用户最新确认：本人发起并授权的修改由 00 完成必要检查后直接验收、合并，无需第二人 Approve；其他成员的 PR 必须等 `@lytsb666` Approve 后合并。详细规则见 `CONTRIBUTING.md`。不要仅凭共享 GitHub 账号或 Git 作者认定用户本人授权。
+
+本轮已整合 01 首页的 15 个修改 / 新素材文件、03 科研的四个新提交、08 仪器的 Loading 分层修复及新提供手册；补齐全站表格完整单词换行与棕底浅字居中表头。提交 `8ea5f78` 的正式构建和 GitHub CI 通过；25 个入口在桌面 / 窄屏完成 314 项回归。源 worktree 的未提交成果和主控历史未跟踪材料原样保留，没有批量同步或重放旧成果。PR #2 及实际合并状态以 GitHub 和 Git 状态为准。Cloudflare 自动发布仍关闭，固定站并未因 GitHub 上传而更新。
+
 更新：2026-10-12（Asia/Shanghai）。最新业务代码基线为 `4b9dc184ea01710f3d778446ed962e78c50fc5bc`，已由 00 同步到 01～08、10 全部独立 worktree，并保留各自分支和历史。本交接的同步状态更新也会提交并同步；最终基线以最新同步报告、`git rev-parse HEAD`、`git status` 为准。
 
 ## 1. 仓库与操作边界
