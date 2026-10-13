@@ -1,15 +1,32 @@
 import './main.js'
-import { teamMembers, teamFaculty } from '../Team/member-data.js'
+import { teamMembers, teamFaculty, memberPresentation } from '../Team/member-data.js'
 
-// Static glob resolves portraits in development and in Vite's hashed builds.
+// Eager URL imports let the same portraits resolve in development and hashed builds.
 const portraits = import.meta.glob('../assets/team-member/portraits/*.{webp,jpg}', {
   eager: true, query: '?url', import: 'default',
 })
-const memberGrid = document.querySelector('#member-grid')
-const advisorSection = document.querySelector('#advisor-section')
-const resultStatus = document.querySelector('#team-results')
-const filters = [...document.querySelectorAll('.team-filter')]
-let openedCard = null
+const page = document.querySelector('.team-page')
+const carousel = page.querySelector('.team-carousel')
+const stage = page.querySelector('.team-avatar-stage')
+const deck = page.querySelector('.team-deck')
+const profile = page.querySelector('.team-profile')
+const filters = [...page.querySelectorAll('.team-filter')]
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)')
+const leaderRoles = new Map(memberPresentation.leaders.map(p => [p.id, p.role]))
+const leaders = memberPresentation.leaders.map(p => teamMembers.find(member => member.id === p.id))
+const directory = teamMembers.filter(p => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors'))
+const previousPageOrder = [
+  ...teamMembers.filter(p => p.groups.includes('Team Leaders')),
+  ...directory.filter(p => !p.groups.includes('Visual Design')),
+  ...directory.filter(p => p.groups.includes('Visual Design')),
+]
+const allMembers = [...leaders, ...previousPageOrder.filter(p => !leaderRoles.has(p.id))]
+let people = allMembers, buttons = [], selected = 0, phase = 0, pitch = 180, buttonWidth = 164
+let hoveredPhoto = false, isVisible = false, frame = 0, lastTime = 0, openAdvisor = null
+
+// Shared article decoration runs first. Only these four page-owned headings
+// use the user's centered frames; public formatting remains untouched.
+page.querySelectorAll('.team-section-heading h2').forEach(h => h.classList.remove('wiki-chapter-title'))
 
 function element(tag, className, text) {
   const node = document.createElement(tag)
@@ -18,194 +35,269 @@ function element(tag, className, text) {
   return node
 }
 
-function portrait(person) {
+function photo(person, eager = false) {
   const host = element('span', 'member-photo')
-  const photo = person.framingPhoto || person.photo
-  if (photo && portraits[photo]) {
+  const path = person.framingPhoto || person.photo
+  if (path && portraits[path]) {
     const image = element('img')
-    image.src = portraits[photo]
+    image.src = portraits[path]
     image.alt = `${person.name} portrait`
     image.width = 800
     image.height = 1000
-    image.loading = 'lazy'
+    image.loading = eager ? 'eager' : 'lazy'
     image.decoding = 'async'
+    image.draggable = false
     host.append(image)
   } else {
     host.classList.add('member-photo--placeholder')
-    const initials = person.name.split(/\s+/).slice(0, 2).map((p) => p[0]).join('').toUpperCase()
-    const monogram = element('span', 'member-photo__initials', initials)
-    monogram.setAttribute('aria-hidden', 'true')
-    host.append(monogram)
+    host.append(element('span', '', person.name.split(/\s+/).map(p => p[0]).join('')))
   }
   return host
 }
 
-function setFlipped(card, flipped, restoreFocus = true) {
-  const front = card.querySelector('.member-card__front')
-  const back = card.querySelector('.member-card__back')
-  card.classList.toggle('is-flipped', flipped)
-  front.setAttribute('aria-expanded', String(flipped))
-  front.setAttribute('aria-hidden', String(flipped))
-  front.inert = flipped
-  back.setAttribute('aria-hidden', String(!flipped))
-  back.inert = !flipped
-  if (flipped) {
-    if (openedCard && openedCard !== card) setFlipped(openedCard, false, false)
-    openedCard = card
-    card.querySelector('.member-card__return').focus({ preventScroll: true })
-  } else {
-    if (openedCard === card) openedCard = null
-    if (restoreFocus) front.focus({ preventScroll: true })
+function biography(person, showRole = false) {
+  const content = element('div', 'team-biography')
+  if (showRole) {
+    content.append(element('h4', 'team-profile-role', leaderRoles.get(person.id) || person.role))
+    if (person.groups.length > 1) content.append(element('p', 'team-profile-groups', person.groups.join(' · ')))
   }
+  if (person.introduction) content.append(element('p', 'team-profile-bio', person.introduction))
+  if (person.quote) content.append(element('blockquote', 'team-profile-quote', `“${person.quote}”`))
+  return content
 }
 
-function addProfile(back, person) {
-  const scroll = element('div', 'member-card__reading')
-  scroll.tabIndex = 0
-  scroll.setAttribute('role', 'region')
-  scroll.setAttribute('aria-label', `${person.name} biography and contributions`)
-  scroll.append(element('h3', 'member-card__back-name', person.name))
-  scroll.append(element('p', 'member-card__back-role', person.role))
-  if (person.introduction) {
-    scroll.append(element('h4', 'profile-heading', 'About Me'), element('p', 'profile-text', person.introduction))
+function contribution(person) {
+  const details = element('details', 'team-contribution')
+  details.append(element('summary', '', 'Read full contribution'))
+  const content = element('div', 'team-contribution-body')
+  if (person.contributionCategories.length) {
+    const tags = element('div', 'team-contribution-tags')
+    person.contributionCategories.forEach(category => tags.append(element('span', '', category)))
+    content.append(tags)
   }
-  if (person.quote) scroll.append(element('blockquote', 'profile-quote', `“${person.quote}”`))
-  if (person.profileStatus === 'basic-information-only') {
-    scroll.append(element('p', 'profile-text', 'Biography and contributions to follow.'))
-  } else {
-    scroll.append(element('h4', 'profile-heading', 'Contributions'))
-    const tags = element('div', 'profile-tags')
-    person.contributionCategories.forEach((category) => tags.append(element('span', '', category)))
-    scroll.append(tags)
-    const details = element('details', 'profile-details')
-    details.append(element('summary', 'profile-expand', 'Read full contribution'))
-    if (person.generalTasks.length) {
-      details.append(element('h4', 'profile-heading', 'General Tasks'))
-      details.append(element('p', 'profile-text', `Source indices: ${person.generalTasks.join(' · ')}`))
-    }
-    details.append(element('h4', 'profile-heading', 'Specific Tasks'))
-    person.tasks.forEach((task) => {
-      const entry = element('section', 'profile-task')
-      entry.append(element('h5', '', task.category), element('p', 'profile-text', task.detail))
-      details.append(entry)
+  if (person.generalTasks.length) {
+    content.append(element('h4', '', 'General Tasks'), element('p', '', `Source indices: ${person.generalTasks.join(' · ')}`))
+  }
+  content.append(element('h4', '', 'Specific Tasks'))
+  person.tasks.forEach(task => {
+    const entry = element('section', 'team-task')
+    entry.append(element('h5', '', task.category), element('p', '', task.detail))
+    content.append(entry)
+  })
+  content.append(element('p', 'team-profile-end', 'End of profile'))
+  details.append(content)
+  return details
+}
+
+function draw() {
+  const avatar = parseFloat(getComputedStyle(page).getPropertyValue('--team-avatar'))
+  buttonWidth = avatar + 32
+  pitch = avatar + 48
+  const width = carousel.clientWidth, origin = (width - buttonWidth) / 2
+  const cycle = people.length * pitch
+  // Start the new group's first portrait at the center, with empty space to
+  // its left. Recycle a portrait only after it has exited, preserving order.
+  const positions = buttons.map((button, index) => {
+    let x = origin + index * pitch - phase
+    if (x < -buttonWidth) x += Math.ceil((-buttonWidth - x) / cycle) * cycle
+    return { button, x, index }
+  })
+  const visible = new Set(positions.filter(p => p.x > -buttonWidth && p.x < width)
+    .sort((a, b) => a.x - b.x).slice(0, 6).map(p => p.index))
+  positions.forEach(({ button, x, index }) => {
+    button.style.transform = `translateX(${x}px)`
+    button.style.visibility = visible.has(index) ? 'visible' : 'hidden'
+    button.tabIndex = visible.has(index) ? 0 : -1
+  })
+}
+
+function choose(index, animate = true, moveFocus = false) {
+  selected = (index % people.length + people.length) % people.length
+  const person = people[selected]
+  deck.hidden = false
+  profile.dataset.memberId = person.id
+  page.querySelector('.team-profile-photo').replaceWith(Object.assign(photo(person, true), { className: 'member-photo team-profile-photo' }))
+  page.querySelector('#selected-member-name').textContent = person.name
+  page.querySelector('.team-profile-copy').replaceChildren(biography(person, true))
+  page.querySelector('.team-contribution-host').replaceChildren(contribution(person))
+  buttons.forEach((button, i) => {
+    button.setAttribute('aria-pressed', String(i === selected))
+    button.setAttribute('aria-expanded', String(i === selected))
+  })
+  page.querySelector('.team-member-index').textContent = `${String(selected + 1).padStart(2, '0')} / ${people.length}`
+  page.querySelector('#team-selection-status').textContent = `${person.name}, ${leaderRoles.get(person.id) || person.role}. Profile displayed below the portraits.`
+  profile.getAnimations().forEach(animation => animation.cancel())
+  if (animate && !reduce.matches) {
+    profile.animate([
+      { transform: 'translate(-38px, 12px) rotate(-2.5deg)', opacity: .4 },
+      { transform: 'translate(5px, -2px) rotate(.4deg)', opacity: 1, offset: .8 },
+      { transform: 'none', opacity: 1 },
+    ], { duration: 440, easing: 'cubic-bezier(.2,.75,.2,1)' })
+  }
+  if (moveFocus) page.querySelector('.team-profile-return').focus({ preventScroll: true })
+}
+
+function centerSelected() {
+  phase = selected * pitch
+  draw()
+}
+
+function closeMember() {
+  deck.hidden = true
+  buttons.forEach(button => {
+    button.setAttribute('aria-expanded', 'false')
+    button.setAttribute('aria-pressed', 'false')
+  })
+  centerSelected()
+  buttons[selected].focus({ preventScroll: true })
+  page.querySelector('#team-selection-status').textContent = 'Returned to portraits.'
+}
+
+function tick(time) {
+  if (lastTime) {
+    phase += Math.min(time - lastTime, 50) * .035
+    draw()
+  }
+  lastTime = time
+  frame = requestAnimationFrame(tick)
+}
+
+function syncMotion() {
+  cancelAnimationFrame(frame)
+  frame = 0
+  lastTime = 0
+  if (isVisible && !hoveredPhoto && !reduce.matches && !document.hidden) frame = requestAnimationFrame(tick)
+}
+
+function applyFilter(group) {
+  filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === group)))
+  people = allMembers.filter(person => group === 'All' || person.groups.includes(group))
+  stage.replaceChildren()
+  hoveredPhoto = false
+  phase = 0
+  buttons = people.map((person, index) => {
+    const button = element('button', 'team-avatar')
+    button.type = 'button'
+    button.dataset.memberId = person.id
+    button.setAttribute('aria-label', `View ${person.name}'s profile`)
+    button.setAttribute('aria-controls', 'selected-member')
+    const image = photo(person, true)
+    const imageNode = image.querySelector('img')
+    if (imageNode) imageNode.alt = ''
+    image.addEventListener('pointerenter', event => {
+      if (event.pointerType === 'mouse') { hoveredPhoto = true; syncMotion() }
     })
-    scroll.append(details)
-  }
-  scroll.append(element('p', 'profile-end', 'End of profile'))
-  back.append(scroll)
-}
-
-function memberCard(person) {
-  const card = element('article', 'member-card')
-  card.dataset.memberId = person.id
-  card.dataset.groups = person.groups.join('|')
-  const rotor = element('div', 'member-card__rotor')
-  const front = element('button', 'member-card__front')
-  front.type = 'button'
-  front.setAttribute('aria-label', `Flip ${person.name}'s card to read their profile`)
-  front.setAttribute('aria-expanded', 'false')
-  front.setAttribute('aria-controls', `profile-${person.id}`)
-  front.setAttribute('aria-hidden', 'false')
-  const body = element('span', 'member-card__body')
-  body.append(element('span', 'member-card__name', person.name), element('span', 'member-card__role', person.role))
-  if (person.groups.length > 1) body.append(element('span', 'member-card__groups', person.groups.join(' · ')))
-  body.append(element('span', 'member-card__hint', 'Flip to explore ↻'))
-  front.append(portrait(person), body)
-  const back = element('section', 'member-card__back')
-  back.id = `profile-${person.id}`
-  back.setAttribute('aria-hidden', 'true')
-  back.inert = true
-  const returnButton = element('button', 'member-card__return', '↶ Back to photo')
-  returnButton.type = 'button'
-  returnButton.setAttribute('aria-label', `Return to ${person.name}'s photo`)
-  back.append(returnButton)
-  addProfile(back, person)
-  front.addEventListener('click', () => setFlipped(card, true))
-  returnButton.addEventListener('click', () => setFlipped(card, false))
-  rotor.append(front, back)
-  card.append(rotor)
-  return card
-}
-
-function facultyCard(person) {
-  const card = element('article', 'member-card faculty-card')
-  card.dataset.memberId = person.id
-  const front = element('div', 'member-card__front')
-  const body = element('div', 'member-card__body')
-  const name = element('span', 'member-card__name', person.name)
-  name.setAttribute('role', 'heading')
-  name.setAttribute('aria-level', '3')
-  body.append(name, element('span', 'member-card__role', person.role))
-  if (person.introduction) body.append(element('p', 'profile-text', person.introduction))
-  front.append(portrait(person), body)
-  card.append(front)
-  return card
-}
-
-function render(group, host, makeCard = memberCard) {
-  const fragment = document.createDocumentFragment()
-  group.forEach((person) => fragment.append(makeCard(person)))
-  host.append(fragment)
-}
-render(teamFaculty.filter((p) => p.groups.includes('PI')), document.querySelector('#pi-grid'), facultyCard)
-render(teamFaculty.filter((p) => p.groups.includes('Secondary PI')), document.querySelector('#secondary-pi-grid'), facultyCard)
-render(teamMembers.filter((p) => p.groups.includes('Team Leaders')), document.querySelector('#leader-grid'))
-const directoryMembers = teamMembers.filter((p) => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors'))
-// Keep the existing order within each group; Visual Design follows the other members.
-render([
-  ...directoryMembers.filter((p) => !p.groups.includes('Visual Design')),
-  ...directoryMembers.filter((p) => p.groups.includes('Visual Design')),
-], memberGrid)
-render(teamMembers.filter((p) => p.groups.includes('Advisors')), document.querySelector('#advisor-grid'))
-const advisorCount = teamMembers.filter((p) => p.groups.includes('Advisors')).length
-document.querySelector('.team-hero__note').textContent = `${teamMembers.length + teamFaculty.length} people · one shared journey`
-
-function applyFilter(filter) {
-  // Synchronous filtering avoids stale animation completions hiding a new selection.
-  if (openedCard) setFlipped(openedCard, false, false)
-  filters.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)))
-  let count = 0
-  memberGrid.querySelectorAll('.member-card').forEach((card) => {
-    const show = filter === 'All' || (filter !== 'Advisors' && card.dataset.groups.split('|').includes(filter))
-    card.hidden = !show
-    if (show) count++
+    image.addEventListener('pointerleave', () => { hoveredPhoto = false; syncMotion() })
+    button.append(image, element('span', 'team-avatar-name', person.name))
+    button.addEventListener('click', () => choose(index, true, true))
+    stage.append(button)
+    return button
   })
-  advisorSection.hidden = filter !== 'All' && filter !== 'Advisors'
-  resultStatus.textContent = filter === 'All'
-    ? `Showing ${count} members · ${advisorCount} advisors. Team leaders and PIs appear above.`
-    : filter === 'Advisors' ? `Showing ${advisorCount} advisors below. Team leaders and PIs appear above.`
-      : `Showing ${count} ${filter} member${count === 1 ? '' : 's'}. Team leaders and PIs appear above.`
+  page.querySelector('#team-results').textContent = `${people.length} ${group === 'All' ? 'members' : `${group} members`} · select a portrait to explore`
+  draw()
+  choose(0, false)
+  syncMotion()
 }
-filters.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.filter)))
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && openedCard) {
+
+filters.forEach(button => button.addEventListener('click', () => applyFilter(button.dataset.filter)))
+page.querySelector('.team-profile-return').addEventListener('click', closeMember)
+function step(direction, focusPhoto = false) {
+  choose(selected + direction)
+  centerSelected()
+  if (focusPhoto) buttons[selected].focus({ preventScroll: true })
+}
+page.querySelector('.team-previous').addEventListener('click', () => step(-1))
+page.querySelector('.team-next').addEventListener('click', () => step(1))
+carousel.addEventListener('keydown', event => {
+  if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
     event.preventDefault()
-    setFlipped(openedCard, false)
+    if (event.key === 'Home' || event.key === 'End') {
+      choose(event.key === 'Home' ? 0 : people.length - 1)
+      centerSelected()
+      buttons[selected].focus({ preventScroll: true })
+    } else step(event.key === 'ArrowRight' ? 1 : -1, true)
   }
 })
-document.querySelector('a[href="#advisors-title"]').addEventListener('click', () => {
-  if (advisorSection.hidden) applyFilter('All')
-})
-applyFilter('All')
 
-// Track the existing section anchors without replacing native hash navigation.
-const sectionLinks = [...document.querySelectorAll('.team-jumps a')]
-let sectionUpdatePending = false
-function updateCurrentSection() {
-  sectionUpdatePending = false
-  const visible = sectionLinks.filter(link => !document.querySelector(link.hash).closest('[hidden]'))
-  const current = visible.filter(link => document.querySelector(link.hash).getBoundingClientRect().top <= 150).at(-1) || visible[0]
-  sectionLinks.forEach(link => {
-    if (link === current) link.setAttribute('aria-current', 'location')
-    else link.removeAttribute('aria-current')
-  })
+function staticPerson(person, isAdvisor = false) {
+  const card = element('article', 'team-static-person')
+  card.dataset.memberId = person.id
+  if (isAdvisor) {
+    const button = element('button', 'team-advisor-photo')
+    button.type = 'button'
+    button.setAttribute('aria-label', `View ${person.name}'s profile`)
+    button.setAttribute('aria-expanded', 'false')
+    button.setAttribute('aria-controls', `advisor-profile-${person.id}`)
+    button.append(photo(person))
+    const reading = element('section', 'team-advisor-reading')
+    reading.id = `advisor-profile-${person.id}`
+    reading.hidden = true
+    const back = element('button', 'team-advisor-return', '↶ Back to photo')
+    back.type = 'button'
+    reading.append(back, biography(person), contribution(person))
+    const close = () => {
+      reading.hidden = true
+      button.setAttribute('aria-expanded', 'false')
+      openAdvisor = null
+      button.focus({ preventScroll: true })
+    }
+    back.addEventListener('click', close)
+    button.addEventListener('click', () => {
+      if (!reading.hidden) { close(); return }
+      if (openAdvisor) openAdvisor.close()
+      reading.hidden = false
+      button.setAttribute('aria-expanded', 'true')
+      openAdvisor = { close }
+      back.focus({ preventScroll: true })
+    })
+    card.append(button, element('h3', '', person.name), reading)
+  } else {
+    card.append(photo(person), element('h3', '', person.name))
+    const note = memberPresentation.facultyNotes[person.id]
+    if (note) card.append(element('p', 'team-faculty-note', note.text))
+  }
+  return card
 }
-function requestSectionUpdate() {
-  if (sectionUpdatePending) return
-  sectionUpdatePending = true
-  requestAnimationFrame(updateCurrentSection)
+function renderPeople(list, id, advisors = false) {
+  page.querySelector(id).replaceChildren(...list.map(person => staticPerson(person, advisors)))
 }
-window.addEventListener('scroll', requestSectionUpdate, { passive: true })
-window.addEventListener('resize', requestSectionUpdate)
-filters.forEach(button => button.addEventListener('click', requestSectionUpdate))
-updateCurrentSection()
+renderPeople(teamFaculty.filter(p => p.groups.includes('PI')), '#pi-grid')
+renderPeople(teamFaculty.filter(p => p.groups.includes('Secondary PI')), '#secondary-pi-grid')
+renderPeople(teamMembers.filter(p => p.groups.includes('Advisors')), '#advisor-grid', true)
+
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return
+  if (openAdvisor) { event.preventDefault(); openAdvisor.close() }
+  else if (!deck.hidden && page.querySelector('.team-directory').contains(document.activeElement)) {
+    event.preventDefault()
+    closeMember()
+  }
+})
+new IntersectionObserver(entries => {
+  isVisible = entries[0].isIntersecting
+  syncMotion()
+}).observe(carousel)
+document.addEventListener('visibilitychange', syncMotion)
+reduce.addEventListener('change', () => {
+  if (reduce.matches) profile.getAnimations().forEach(animation => animation.cancel())
+  syncMotion()
+})
+
+// Native page scrolling lets the photo shrink from one screen to half a screen.
+let heroFrame = 0
+function renderHero() {
+  heroFrame = 0
+  const height = window.innerHeight
+  const progress = Math.min(1, Math.max(0, window.scrollY / (height * .8)))
+  page.style.setProperty('--team-screen-height', `${height}px`)
+  page.style.setProperty('--team-navigation-height', `${document.querySelector('.navbar')?.getBoundingClientRect().height || 60}px`)
+  page.style.setProperty('--team-hero-height', `${height * (1 - progress * .5)}px`)
+}
+function requestHero() {
+  if (!heroFrame) heroFrame = requestAnimationFrame(renderHero)
+}
+window.addEventListener('scroll', requestHero, { passive: true })
+window.addEventListener('resize', () => { renderHero(); draw() })
+new ResizeObserver(draw).observe(carousel)
+applyFilter('All')
+renderHero()

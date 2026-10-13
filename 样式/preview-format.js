@@ -152,7 +152,7 @@ function enhancePdfs() {
 
 function enhanceLinks() {
   document.querySelectorAll('main a[href], footer a[href]').forEach(link => {
-    if (link.closest('.wiki-directory, .team-jumps, video') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
+    if (link.closest('.wiki-directory, .team-jumps, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
     link.style.setProperty('--wiki-link-size', `${(parseFloat(getComputedStyle(link).fontSize)||16)+2}px`)
     link.classList.add('wiki-jump-link')
   })

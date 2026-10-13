@@ -1,0 +1,230 @@
+<div id="jlu-team-concept-v1" aria-label="JLU-SPH Team design preview">
+  <style>
+    #jlu-team-concept-v1 { --jlu-ink:#6f4e37; --jlu-tan:#e0c1a6; --jlu-paper:#fbf5ef; --jlu-line:#a97652; --jlu-brown:#9a6742; --jlu-view-height:680px; --jlu-avatar:132px; --jlu-title-border:2px; color:var(--jlu-ink); font:16px/1.6 "Times New Roman",Times,serif; width:100%; container-type:inline-size; }
+    #jlu-team-concept-v1 * { box-sizing:border-box; }
+    #jlu-team-concept-v1 button,#jlu-team-concept-v1 a,#jlu-team-concept-v1 summary { font:inherit; }
+    #jlu-team-concept-v1 button { cursor:pointer; }
+    #jlu-team-concept-v1 img { display:block; max-width:100%; }
+    #jlu-team-concept-v1 .jlu-scroll { position:relative; height:var(--jlu-view-height); overflow-y:auto; overflow-x:hidden; background:var(--jlu-tan); scrollbar-color:var(--jlu-brown) var(--jlu-tan); scroll-behavior:smooth; scroll-padding-top:72px; }
+    #jlu-team-concept-v1 .jlu-nav { position:sticky; top:0; z-index:30; height:54px; margin-bottom:-54px; display:flex; align-items:center; justify-content:center; gap:clamp(12px,2cqw,30px); padding:0 18px; background:#8d6b50; color:#fffaf5; white-space:nowrap; overflow:auto; }
+    #jlu-team-concept-v1 .jlu-nav span { padding:12px 0 8px; }
+    #jlu-team-concept-v1 .jlu-nav .jlu-nav-active { border-bottom:1px solid #f3d6ad; }
+    #jlu-team-concept-v1 .jlu-hero-runway { height:calc(var(--jlu-view-height) * 1.38); }
+    #jlu-team-concept-v1 .jlu-hero { position:sticky; top:0; height:var(--jlu-hero-height,var(--jlu-view-height)); overflow:hidden; isolation:isolate; background:#c6a58b; }
+    #jlu-team-concept-v1 .jlu-group-backdrop { position:absolute; inset:-30px; width:calc(100% + 60px); height:calc(100% + 60px); object-fit:cover; filter:blur(24px); opacity:.45; z-index:-1; }
+    #jlu-team-concept-v1 .jlu-group-photo { width:100%; height:calc(100% - 54px); margin-top:54px; object-fit:contain; object-position:center; }
+    #jlu-team-concept-v1 .jlu-hero-shade { position:absolute; inset:0; background:linear-gradient(180deg,rgba(41,26,17,.12),transparent 35%,transparent 60%,rgba(41,26,17,.66)); pointer-events:none; }
+    #jlu-team-concept-v1 .jlu-hero-title { position:absolute; bottom:24px; left:clamp(22px,5cqw,72px); color:#fffaf5; margin:0; }
+    #jlu-team-concept-v1 .jlu-hero-title span { display:block; font-size:16px; letter-spacing:.16em; }
+    #jlu-team-concept-v1 .jlu-hero-title h1 { margin:5px 0 0; font-size:clamp(36px,5cqw,72px); line-height:1.08; font-weight:700; letter-spacing:.01em; }
+    #jlu-team-concept-v1 .jlu-scroll-hint { position:absolute; bottom:28px; right:clamp(22px,5cqw,72px); padding:8px 0; color:#fffaf5; border:0; border-bottom:1px solid #fffaf5; background:transparent; }
+    #jlu-team-concept-v1 .jlu-section { padding:76px clamp(18px,6cqw,80px) 24px; }
+    #jlu-team-concept-v1 .jlu-heading { display:flex; justify-content:center; margin-bottom:38px; }
+    #jlu-team-concept-v1 .jlu-heading h2 { display:inline-block; margin:0; padding:10px 38px; border:var(--jlu-title-border) solid var(--jlu-ink); color:var(--jlu-ink); font-size:29.333px; line-height:1.25; font-weight:700; text-align:center; background:var(--jlu-tan); }
+    #jlu-team-concept-v1 .jlu-members { padding-inline:0; }
+    #jlu-team-concept-v1 .jlu-filters { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 14px; padding:0 18px; margin:0 0 22px; }
+    #jlu-team-concept-v1 .jlu-filter { border:0; background:transparent; color:var(--jlu-ink); padding:5px 3px; border-bottom:1px solid transparent; }
+    #jlu-team-concept-v1 .jlu-filter[aria-pressed="true"] { border-bottom-color:var(--jlu-ink); font-weight:700; }
+    #jlu-team-concept-v1 .jlu-carousel { position:relative; min-width:0; height:calc(var(--jlu-avatar) + 77px); overflow:hidden; touch-action:pan-y; }
+    #jlu-team-concept-v1 .jlu-avatar-stage { height:100%; position:relative; }
+    #jlu-team-concept-v1 .jlu-carousel::before,#jlu-team-concept-v1 .jlu-carousel::after { content:""; position:absolute; width:24px; top:0; bottom:0; z-index:2; pointer-events:none; }
+    #jlu-team-concept-v1 .jlu-carousel::before { left:0; background:linear-gradient(90deg,var(--jlu-tan),transparent); }
+    #jlu-team-concept-v1 .jlu-carousel::after { right:0; background:linear-gradient(-90deg,var(--jlu-tan),transparent); }
+    #jlu-team-concept-v1 .jlu-avatar { position:absolute; top:5px; left:0; display:flex; flex-direction:column; align-items:center; gap:10px; width:calc(var(--jlu-avatar) + 32px); background:transparent; color:var(--jlu-ink); border:0; padding:4px 10px; }
+    #jlu-team-concept-v1 .jlu-avatar img { width:var(--jlu-avatar); height:var(--jlu-avatar); border-radius:50%; border:2px solid rgba(111,78,55,.27); object-fit:cover; object-position:50% 28%; }
+    #jlu-team-concept-v1 .jlu-avatar[aria-pressed="true"] img { border-color:var(--jlu-ink); outline:1px solid var(--jlu-ink); outline-offset:4px; }
+    #jlu-team-concept-v1 .jlu-avatar span { text-align:center; font-size:16px; line-height:1.4; white-space:normal; }
+    #jlu-team-concept-v1 .jlu-selection-controls { margin:6px auto 32px; display:flex; justify-content:center; align-items:center; gap:18px; color:var(--jlu-ink); }
+    #jlu-team-concept-v1 .jlu-selection-controls button { width:44px; height:44px; padding:0; border:1px solid rgba(111,78,55,.4); background:transparent; color:var(--jlu-ink); border-radius:50%; font-size:22px; }
+    #jlu-team-concept-v1 .jlu-selection-controls .jlu-play { width:auto; min-width:72px; font-size:16px; border:0; border-radius:0; }
+    #jlu-team-concept-v1 .jlu-index { font-variant-numeric:tabular-nums; white-space:nowrap; }
+    #jlu-team-concept-v1 .jlu-deck { position:relative; width:min(840px,calc(100% - 64px)); margin:0 auto 28px; isolation:isolate; }
+    #jlu-team-concept-v1 .jlu-deck::before,#jlu-team-concept-v1 .jlu-deck::after { position:absolute; content:""; inset:0; border:1px solid rgba(111,78,55,.4); border-radius:22px; z-index:-1; background:#ebd6c4; pointer-events:none; }
+    #jlu-team-concept-v1 .jlu-deck::before { transform:translate(9px,10px) rotate(1.5deg); }
+    #jlu-team-concept-v1 .jlu-deck::after { transform:translate(-7px,5px) rotate(-1deg); background:#f1e0d1; }
+    #jlu-team-concept-v1 .jlu-deck:has(details[open])::before { transform:translate(8px,8px); }
+    #jlu-team-concept-v1 .jlu-deck:has(details[open])::after { transform:translate(-6px,4px); }
+    #jlu-team-concept-v1 .jlu-profile { position:relative; padding:30px; background:var(--jlu-paper); border:2px solid var(--jlu-ink); border-radius:22px; box-shadow:0 16px 36px rgba(74,45,28,.1); }
+    #jlu-team-concept-v1 .jlu-profile-layout { display:grid; grid-template-columns:minmax(180px,.85fr) minmax(0,1.5fr); gap:32px; align-items:start; }
+    #jlu-team-concept-v1 .jlu-identity { min-width:0; }
+    #jlu-team-concept-v1 .jlu-profile-photo { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:14px; }
+    #jlu-team-concept-v1 .jlu-profile-name { margin:18px 0 0; color:var(--jlu-ink); font-size:21.333px; line-height:1.2; text-align:center; font-weight:700; }
+    #jlu-team-concept-v1 .jlu-profile-copy { min-width:0; }
+    #jlu-team-concept-v1 .jlu-profile-role { margin:0 0 16px; font-weight:700; font-size:18.667px; color:var(--jlu-brown); }
+    #jlu-team-concept-v1 .jlu-profile-bio { margin:0; font-size:16px; line-height:1.75; overflow-wrap:anywhere; }
+    #jlu-team-concept-v1 .jlu-profile-quote { margin:20px 0 0; padding-left:16px; border-left:2px solid var(--jlu-line); font-size:16px; line-height:1.7; font-style:italic; }
+    #jlu-team-concept-v1 .jlu-profile-quote[hidden] { display:none; }
+    #jlu-team-concept-v1 .jlu-contribution { margin-top:24px; border-top:1px solid rgba(111,78,55,.26); }
+    #jlu-team-concept-v1 .jlu-contribution > summary { color:var(--jlu-ink); padding:14px 0 0; cursor:pointer; }
+    #jlu-team-concept-v1 .jlu-contribution h4 { font-size:18.667px; margin:22px 0 8px; line-height:1.35; font-weight:700; }
+    #jlu-team-concept-v1 .jlu-contribution p { font-size:16px; line-height:1.75; margin:0; overflow-wrap:anywhere; }
+    #jlu-team-concept-v1 .jlu-task { padding:14px 0; border-top:1px solid rgba(111,78,55,.18); }
+    #jlu-team-concept-v1 .jlu-task h5 { font-size:18.667px; line-height:1.4; margin:0 0 8px; }
+    #jlu-team-concept-v1 .jlu-people-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; width:min(960px,100%); margin:0 auto; }
+    #jlu-team-concept-v1 .jlu-static-person { min-width:0; text-align:center; }
+    #jlu-team-concept-v1 .jlu-static-person > img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:14px; border:1px solid rgba(111,78,55,.28); }
+    #jlu-team-concept-v1 .jlu-static-person h3 { font-size:21.333px; font-weight:700; margin:15px 0 4px; line-height:1.25; }
+    #jlu-team-concept-v1 .jlu-static-person p { font-size:16px; margin:0; }
+    #jlu-team-concept-v1 .jlu-advisors { padding-bottom:84px; }
+    #jlu-team-concept-v1 .jlu-footer { padding:34px 22px; text-align:center; background:var(--jlu-ink); color:#f7e7d8; font-size:16px; }
+    #jlu-team-concept-v1 .jlu-footer p { margin:0; }
+    @container (max-width:600px) {
+      #jlu-team-concept-v1 { --jlu-avatar:112px; }
+      #jlu-team-concept-v1 .jlu-nav { justify-content:flex-start; gap:18px; font-size:16px; }
+      #jlu-team-concept-v1 .jlu-hero-title { bottom:24px; }
+      #jlu-team-concept-v1 .jlu-scroll-hint { bottom:30px; }
+      #jlu-team-concept-v1 .jlu-hero-title h1 { font-size:36px; }
+      #jlu-team-concept-v1 .jlu-section { padding-top:58px; }
+      #jlu-team-concept-v1 .jlu-heading h2 { padding:9px 24px; }
+      #jlu-team-concept-v1 .jlu-deck { width:calc(100% - 42px); }
+      #jlu-team-concept-v1 .jlu-profile { padding:22px; border-radius:18px; }
+      #jlu-team-concept-v1 .jlu-profile-layout { grid-template-columns:1fr; gap:22px; }
+      #jlu-team-concept-v1 .jlu-identity { display:grid; grid-template-columns:112px minmax(0,1fr); align-items:center; gap:16px; }
+      #jlu-team-concept-v1 .jlu-profile-name { margin:0; text-align:left; }
+      #jlu-team-concept-v1 .jlu-profile-copy { padding:0; }
+      #jlu-team-concept-v1 .jlu-people-grid { grid-template-columns:1fr; max-width:280px; gap:32px; }
+      #jlu-team-concept-v1 .jlu-static-person > img { aspect-ratio:4/4.5; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      #jlu-team-concept-v1 .jlu-scroll { scroll-behavior:auto; }
+    }
+  </style>
+  <div class="jlu-scroll" aria-label="Team page preview">
+    <nav class="jlu-nav" aria-label="Site navigation preview">
+      <span>Home</span><span>Project</span><span>Engagement</span><span>Wetlab</span><span>Instrument</span><span class="jlu-nav-active">Team</span><span>Judging</span>
+    </nav>
+    <div class="jlu-hero-runway">
+      <header class="jlu-hero" aria-label="Team group photo">
+        <img class="jlu-group-backdrop" alt="" aria-hidden="true">
+        <img class="jlu-group-photo" alt="JLU-SPH team group photograph">
+        <div class="jlu-hero-shade"></div>
+        <div class="jlu-hero-title"><span>JLU-SPH · iGEM 2026</span><h1>OUR TEAM</h1></div>
+        <button type="button" class="jlu-scroll-hint" aria-label="Explore members">Explore ↓</button>
+      </header>
+    </div>
+    <main>
+      <section class="jlu-section jlu-members" aria-labelledby="jlu-members-title">
+        <div class="jlu-heading"><h2 id="jlu-members-title">Members</h2></div>
+        <div class="jlu-filters" aria-label="Member groups">
+          <button class="jlu-filter" type="button" data-group="All" aria-pressed="true">All</button>
+          <button class="jlu-filter" type="button" data-group="Wet Lab" aria-pressed="false">Wet Lab</button>
+          <button class="jlu-filter" type="button" data-group="Dry Lab" aria-pressed="false">Dry Lab</button>
+          <button class="jlu-filter" type="button" data-group="Human Practices" aria-pressed="false">Human Practices</button>
+          <button class="jlu-filter" type="button" data-group="Hardware &amp; Wiki" aria-pressed="false">Hardware &amp; Wiki</button>
+          <button class="jlu-filter" type="button" data-group="Visual Design" aria-pressed="false">Visual Design</button>
+        </div>
+        <div class="jlu-carousel" aria-label="Scrolling member portraits"><div class="jlu-avatar-stage"></div></div>
+        <div class="jlu-selection-controls">
+          <button class="jlu-prev" type="button" aria-label="Previous member">‹</button>
+          <span class="jlu-index">01 / 28</span>
+          <button class="jlu-next" type="button" aria-label="Next member">›</button>
+          <button class="jlu-play" type="button" aria-pressed="false">Pause</button>
+        </div>
+        <div class="jlu-deck" aria-label="Selected member information">
+          <article class="jlu-profile" aria-labelledby="jlu-profile-name">
+            <div class="jlu-profile-layout">
+              <div class="jlu-identity"><img class="jlu-profile-photo" alt=""><h3 class="jlu-profile-name" id="jlu-profile-name"></h3></div>
+              <div class="jlu-profile-copy"><h4 class="jlu-profile-role"></h4><p class="jlu-profile-bio"></p><blockquote class="jlu-profile-quote"></blockquote></div>
+            </div>
+            <details class="jlu-contribution"><summary>Full contribution</summary><div class="jlu-contribution-body"></div></details>
+          </article>
+        </div>
+        <span class="jlu-status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></span>
+      </section>
+      <section class="jlu-section" aria-labelledby="jlu-pi-title"><div class="jlu-heading"><h2 id="jlu-pi-title">PI</h2></div><div class="jlu-people-grid" data-people="pi"></div></section>
+      <section class="jlu-section" aria-labelledby="jlu-secondary-title"><div class="jlu-heading"><h2 id="jlu-secondary-title">Secondary PI</h2></div><div class="jlu-people-grid" data-people="secondary"></div></section>
+      <section class="jlu-section jlu-advisors" aria-labelledby="jlu-advisors-title"><div class="jlu-heading"><h2 id="jlu-advisors-title">Advisors</h2></div><div class="jlu-people-grid" data-people="advisors"></div></section>
+    </main>
+    <footer class="jlu-footer"><p>JLU-SPH iGEM Team · Jilin University</p></footer>
+  </div>
+  <script type="application/json" id="jlu-team-concept-data">__JLU_TEAM_DATA__</script>
+  <script>
+  (() => {
+    const root = document.getElementById('jlu-team-concept-v1');
+    const data = JSON.parse(root.querySelector('#jlu-team-concept-data').textContent);
+    const scroller = root.querySelector('.jlu-scroll');
+    const carousel = root.querySelector('.jlu-carousel');
+    const stage = root.querySelector('.jlu-avatar-stage');
+    const profile = root.querySelector('.jlu-profile');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const design = {avatarSize:132, borderWidth:2};
+    let people = [...data.members], selected = 0, phase = 0, lastTime = 0, paused = false, hovered = false, focused = false;
+    let avatarButtons = [], isVisible = false, frame = 0, drag = null;
+    const create = (tag, cls, text) => { const e = document.createElement(tag); if(cls) e.className=cls; if(text!==undefined)e.textContent=text; return e; };
+    root.querySelectorAll('.jlu-group-photo,.jlu-group-backdrop').forEach(img => img.src = data.groupPhoto);
+    const normalMod = (n, mod) => (n % mod + mod) % mod;
+    function draw() {
+      if(!avatarButtons.length) return;
+      const avatar = parseFloat(getComputedStyle(root).getPropertyValue('--jlu-avatar')) || design.avatarSize;
+      const pitch = avatar + 48, width = carousel.clientWidth, cycle = people.length * pitch;
+      avatarButtons.forEach((button, i) => {
+        const x = normalMod(i*pitch - phase + pitch, cycle) - pitch + 20;
+        const visible = x > -pitch && x < width;
+        button.style.transform = `translateX(${x}px)`;
+        button.style.visibility = visible?'visible':'hidden';
+        button.tabIndex = visible?0:-1;
+      });
+    }
+    function fillProfile(person) {
+      root.querySelector('.jlu-profile-photo').src = person.image;
+      root.querySelector('.jlu-profile-photo').alt = `${person.name} portrait`;
+      root.querySelector('.jlu-profile-name').textContent = person.name;
+      root.querySelector('.jlu-profile-role').textContent = person.previewRole || person.role;
+      root.querySelector('.jlu-profile-bio').textContent = person.introduction;
+      const quote = root.querySelector('.jlu-profile-quote'); quote.textContent = person.quote?`“${person.quote}”`:''; quote.hidden=!person.quote;
+      const details = root.querySelector('.jlu-contribution'); details.open=false;
+      const body = root.querySelector('.jlu-contribution-body'); body.replaceChildren();
+      if(person.generalTasks.length) body.append(create('h4','', 'General Tasks'), create('p','', `Source indices: ${person.generalTasks.join(' · ')}`));
+      body.append(create('h4','','Specific Tasks'));
+      person.tasks.forEach(task=>{const item=create('section','jlu-task');item.append(create('h5','',task.category),create('p','',task.detail));body.append(item);});
+    }
+    function choose(index, animate=true) {
+      selected=normalMod(index,people.length); const person=people[selected];
+      fillProfile(person);
+      avatarButtons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===selected)));
+      root.querySelector('.jlu-index').textContent=`${String(selected+1).padStart(2,'0')} / ${people.length}`;
+      root.querySelector('.jlu-status').textContent=`${person.name}, ${person.previewRole||person.role}`;
+      profile.getAnimations().forEach(a=>a.cancel());
+      if(animate && !reduce.matches)profile.animate([
+        {transform:'translate(-46px, 14px) rotate(-3deg)',opacity:.45},
+        {transform:'translate(7px, -2px) rotate(.5deg)',opacity:1,offset:.78},
+        {transform:'translate(0, 0) rotate(0)',opacity:1}
+      ],{duration:440,easing:'cubic-bezier(.2,.75,.2,1)'});
+    }
+    function buildAvatars() {
+      stage.replaceChildren(); avatarButtons=[];
+      people.forEach((person,i)=>{const b=create('button','jlu-avatar');b.type='button';b.dataset.personId=person.id;b.setAttribute('aria-label',`View ${person.name}`);b.setAttribute('aria-controls','jlu-profile-name');
+        const image=create('img');image.src=person.image;image.alt='';image.draggable=false; b.append(image,create('span','',person.name));
+        b.addEventListener('click',()=>{if(drag?.moved)return;choose(i);});stage.append(b);avatarButtons.push(b);
+      });
+      phase=0; selected=0; draw();choose(0,false);
+    }
+    root.querySelectorAll('.jlu-filter').forEach(b=>b.addEventListener('click',()=>{
+      root.querySelectorAll('.jlu-filter').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+      people=data.members.filter(p=>b.dataset.group==='All'||p.groups.includes(b.dataset.group));buildAvatars();
+    }));
+    root.querySelector('.jlu-prev').addEventListener('click',()=>{choose(selected-1);phase=selected*((parseFloat(getComputedStyle(root).getPropertyValue('--jlu-avatar'))||132)+48);draw();});
+    root.querySelector('.jlu-next').addEventListener('click',()=>{choose(selected+1);phase=selected*((parseFloat(getComputedStyle(root).getPropertyValue('--jlu-avatar'))||132)+48);draw();});
+    const play = root.querySelector('.jlu-play');
+    play.addEventListener('click',()=>{paused=!paused;play.textContent=paused?'Play':'Pause';play.setAttribute('aria-pressed',String(paused));});
+    carousel.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')hovered=true;});
+    carousel.addEventListener('pointerleave',()=>{hovered=false;});
+    carousel.addEventListener('focusin',()=>{focused=true;});carousel.addEventListener('focusout',()=>{focused=false;});
+    carousel.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();choose(selected+(e.key==='ArrowRight'?1:-1));}});
+    carousel.addEventListener('pointerdown',e=>{if(!e.isPrimary||e.button!==0)return;drag={x:e.clientX,y:e.clientY,start:phase,moved:false};});
+    carousel.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)>9&&Math.abs(dx)>Math.abs(dy)){drag.moved=true;phase=drag.start-dx;draw();}});
+    carousel.addEventListener('pointerup',()=>{if(drag?.moved){const old=drag;setTimeout(()=>{if(drag===old)drag=null;},0);}else drag=null;});
+    carousel.addEventListener('pointercancel',()=>{drag=null;});
+    const observer=new IntersectionObserver(entries=>{isVisible=entries[0].isIntersecting;},{root:scroller});observer.observe(carousel);
+    function tick(time){if(lastTime && isVisible && !paused && !hovered && !focused && !drag && !reduce.matches && !document.hidden){phase+=(time-lastTime)*.025;draw();}lastTime=time;frame=requestAnimationFrame(tick);}
+    function renderHero(){const h=scroller.clientHeight||680;root.style.setProperty('--jlu-view-height',`${h}px`);const progress=Math.min(1,Math.max(0,scroller.scrollTop/(h*.78)));root.style.setProperty('--jlu-hero-height',`${h*(1-.5*progress)}px`);}
+    scroller.addEventListener('scroll',renderHero,{passive:true});
+    root.querySelector('.jlu-scroll-hint').addEventListener('click',()=>{scroller.scrollTo({top:scroller.clientHeight*1.3,behavior:reduce.matches?'instant':'smooth'});});
+    function staticPeople(list,kind){const host=root.querySelector(`[data-people="${kind}"]`);list.forEach(p=>{const item=create('article','jlu-static-person'),img=create('img');img.src=p.image;img.alt=`${p.name} portrait`;item.append(img,create('h3','',p.name),create('p','',p.role));host.append(item);});}
+    staticPeople(data.pi,'pi');staticPeople(data.secondary,'secondary');staticPeople(data.advisors,'advisors');
+    function renderDesign(){root.style.setProperty('--jlu-avatar',`${design.avatarSize}px`);root.style.setProperty('--jlu-title-border',`${design.borderWidth}px`);draw();}
+    buildAvatars();renderHero();renderDesign();new ResizeObserver(()=>{renderHero();draw();}).observe(scroller);frame=requestAnimationFrame(tick);
+    if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:renderDesign});tweak.addSlider(design,'avatarSize',{label:'头像尺寸',min:104,max:160,step:4,unit:'px'});tweak.addSlider(design,'borderWidth',{label:'标题框线条',min:1,max:3,step:1,unit:'px'});}
+  })();
+  </script>
+</div>

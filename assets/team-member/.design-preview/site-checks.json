@@ -1,0 +1,17 @@
+{
+  "url": "http://127.0.0.1:5202/",
+  "status": 200,
+  "initial": {
+    "hero": 900,
+    "viewport": 900,
+    "people": 28
+  },
+  "narrow": {
+    "width": 390,
+    "scrollWidth": 390,
+    "viewport": 844
+  },
+  "photoClick": "pass",
+  "consoleErrors": [],
+  "productionUnchanged": true
+}

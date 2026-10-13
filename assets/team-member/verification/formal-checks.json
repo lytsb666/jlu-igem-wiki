@@ -1,0 +1,437 @@
+{
+  "url": "http://127.0.0.1:5202/Team/member.html",
+  "date": "2026-10-13",
+  "sizes": [
+    {
+      "width": 1440,
+      "height": 900,
+      "initial": {
+        "hero": 900,
+        "order": [
+          "mo-jin",
+          "jingyi-kang",
+          "zhiyuan-jin",
+          "ziyan-qin",
+          "yujia-yang",
+          "wenxian-gao",
+          "tonghui-yin",
+          "xiaojie-meng",
+          "chen-xing",
+          "hengqi-deng",
+          "tong-li",
+          "ziyi-dong",
+          "duo-zhang",
+          "guanbo-yin",
+          "botao-zhang",
+          "haoyang-liu",
+          "yu-xia",
+          "ruiyao-guo",
+          "jiale-wei",
+          "shunyao-zhang",
+          "wensong-yao",
+          "yirui-lu",
+          "bowen-xiao",
+          "liuyu-yang",
+          "qianwen-luo",
+          "wenqi-ai",
+          "qianwen-wang",
+          "jiale-zhang"
+        ],
+        "headings": [
+          "Members",
+          "PI",
+          "Secondary PI",
+          "Advisors"
+        ],
+        "cue": {
+          "x": 1076.5625,
+          "y": 793.921875,
+          "width": 317.359375,
+          "height": 60,
+          "top": 793.921875,
+          "right": 1393.921875,
+          "bottom": 853.921875,
+          "left": 1076.5625
+        },
+        "font": "16px"
+      },
+      "groupResults": {
+        "All": {
+          "total": 28,
+          "firstCenter": 720,
+          "center": 720,
+          "visible": 4
+        },
+        "Wet Lab": {
+          "total": 6,
+          "firstCenter": 720,
+          "center": 720,
+          "visible": 4
+        },
+        "Dry Lab": {
+          "total": 4,
+          "firstCenter": 719.4085083007812,
+          "center": 720,
+          "visible": 4
+        },
+        "Human Practices": {
+          "total": 8,
+          "firstCenter": 720,
+          "center": 720,
+          "visible": 4
+        },
+        "Hardware & Wiki": {
+          "total": 4,
+          "firstCenter": 720,
+          "center": 720,
+          "visible": 4
+        },
+        "Visual Design": {
+          "total": 6,
+          "firstCenter": 720,
+          "center": 720,
+          "visible": 4
+        }
+      },
+      "continuousScrolling": true,
+      "photoOnlyHoverPause": true,
+      "dealingAnimationObserved": true,
+      "keyboardAndFocusReturn": true,
+      "longSourceTasks": 6,
+      "longSize": {
+        "height": 1567,
+        "scroll": 1567
+      },
+      "advisorReadingAndFocus": true,
+      "reducedMotion": true,
+      "horizontalOverflow": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "initial": {
+        "hero": 844,
+        "order": [
+          "mo-jin",
+          "jingyi-kang",
+          "zhiyuan-jin",
+          "ziyan-qin",
+          "yujia-yang",
+          "wenxian-gao",
+          "tonghui-yin",
+          "xiaojie-meng",
+          "chen-xing",
+          "hengqi-deng",
+          "tong-li",
+          "ziyi-dong",
+          "duo-zhang",
+          "guanbo-yin",
+          "botao-zhang",
+          "haoyang-liu",
+          "yu-xia",
+          "ruiyao-guo",
+          "jiale-wei",
+          "shunyao-zhang",
+          "wensong-yao",
+          "yirui-lu",
+          "bowen-xiao",
+          "liuyu-yang",
+          "qianwen-luo",
+          "wenqi-ai",
+          "qianwen-wang",
+          "jiale-zhang"
+        ],
+        "headings": [
+          "Members",
+          "PI",
+          "Secondary PI",
+          "Advisors"
+        ],
+        "cue": {
+          "x": 89.671875,
+          "y": 770,
+          "width": 280.328125,
+          "height": 56,
+          "top": 770,
+          "right": 370,
+          "bottom": 826,
+          "left": 89.671875
+        },
+        "font": "16px"
+      },
+      "groupResults": {
+        "All": {
+          "total": 28,
+          "firstCenter": 195,
+          "center": 195,
+          "visible": 2
+        },
+        "Wet Lab": {
+          "total": 6,
+          "firstCenter": 195,
+          "center": 195,
+          "visible": 2
+        },
+        "Dry Lab": {
+          "total": 4,
+          "firstCenter": 195,
+          "center": 195,
+          "visible": 2
+        },
+        "Human Practices": {
+          "total": 8,
+          "firstCenter": 195,
+          "center": 195,
+          "visible": 2
+        },
+        "Hardware & Wiki": {
+          "total": 4,
+          "firstCenter": 195,
+          "center": 195,
+          "visible": 2
+        },
+        "Visual Design": {
+          "total": 6,
+          "firstCenter": 195,
+          "center": 195,
+          "visible": 2
+        }
+      },
+      "continuousScrolling": true,
+      "photoOnlyHoverPause": true,
+      "dealingAnimationObserved": true,
+      "keyboardAndFocusReturn": true,
+      "longSourceTasks": 6,
+      "longSize": {
+        "height": 2300,
+        "scroll": 2300
+      },
+      "advisorReadingAndFocus": true,
+      "reducedMotion": true,
+      "horizontalOverflow": 0
+    }
+  ],
+  "consoleErrors": [],
+  "failedResources": [],
+  "all37ProfilesAnd186TasksReachable": true,
+  "maximumVisible": 6,
+  "builtImageRequests": [
+    {
+      "id": "liuyu-yang",
+      "url": "http://127.0.0.1:5202/assets/BGCy6VbT.webp",
+      "status": 200
+    },
+    {
+      "id": "jingyi-kang",
+      "url": "http://127.0.0.1:5202/assets/B5uz8_HJ.webp",
+      "status": 200
+    },
+    {
+      "id": "hengqi-deng",
+      "url": "http://127.0.0.1:5202/assets/BQkLoLYu.webp",
+      "status": 200
+    },
+    {
+      "id": "tong-li",
+      "url": "http://127.0.0.1:5202/assets/BSO2Z50X.webp",
+      "status": 200
+    },
+    {
+      "id": "ziyi-dong",
+      "url": "http://127.0.0.1:5202/assets/Dh-_ue1r.webp",
+      "status": 200
+    },
+    {
+      "id": "zhiyuan-jin",
+      "url": "http://127.0.0.1:5202/assets/BGO0Wj6U.webp",
+      "status": 200
+    },
+    {
+      "id": "xiaojie-meng",
+      "url": "http://127.0.0.1:5202/assets/XUGJpGfq.webp",
+      "status": 200
+    },
+    {
+      "id": "duo-zhang",
+      "url": "http://127.0.0.1:5202/assets/DTSTsbjp.webp",
+      "status": 200
+    },
+    {
+      "id": "mo-jin",
+      "url": "http://127.0.0.1:5202/assets/YD99hSAR.webp",
+      "status": 200
+    },
+    {
+      "id": "guanbo-yin",
+      "url": "http://127.0.0.1:5202/assets/BUJS91li.webp",
+      "status": 200
+    },
+    {
+      "id": "botao-zhang",
+      "url": "http://127.0.0.1:5202/assets/CKz3vjoc.webp",
+      "status": 200
+    },
+    {
+      "id": "ziyan-qin",
+      "url": "http://127.0.0.1:5202/assets/CBeHx-Z2.webp",
+      "status": 200
+    },
+    {
+      "id": "haoyang-liu",
+      "url": "http://127.0.0.1:5202/assets/BMLzLKru.webp",
+      "status": 200
+    },
+    {
+      "id": "yu-xia",
+      "url": "http://127.0.0.1:5202/assets/cRH7nYp-.webp",
+      "status": 200
+    },
+    {
+      "id": "ruiyao-guo",
+      "url": "http://127.0.0.1:5202/assets/Y_cr43On.webp",
+      "status": 200
+    },
+    {
+      "id": "jiale-wei",
+      "url": "http://127.0.0.1:5202/assets/C8X93zGf.webp",
+      "status": 200
+    },
+    {
+      "id": "shunyao-zhang",
+      "url": "http://127.0.0.1:5202/assets/C5q-LAh5.webp",
+      "status": 200
+    },
+    {
+      "id": "wenxian-gao",
+      "url": "http://127.0.0.1:5202/assets/CGpwTmyd.webp",
+      "status": 200
+    },
+    {
+      "id": "yujia-yang",
+      "url": "http://127.0.0.1:5202/assets/BWJrf49l.webp",
+      "status": 200
+    },
+    {
+      "id": "wensong-yao",
+      "url": "http://127.0.0.1:5202/assets/CVZN5_O8.webp",
+      "status": 200
+    },
+    {
+      "id": "tonghui-yin",
+      "url": "http://127.0.0.1:5202/assets/hPzplx1n.webp",
+      "status": 200
+    },
+    {
+      "id": "yirui-lu",
+      "url": "http://127.0.0.1:5202/assets/DSvIbc8S.webp",
+      "status": 200
+    },
+    {
+      "id": "bowen-xiao",
+      "url": "http://127.0.0.1:5202/assets/CocISxy2.webp",
+      "status": 200
+    },
+    {
+      "id": "qianwen-luo",
+      "url": "http://127.0.0.1:5202/assets/sez3nNgi.webp",
+      "status": 200
+    },
+    {
+      "id": "wenqi-ai",
+      "url": "http://127.0.0.1:5202/assets/BMqxzirF.webp",
+      "status": 200
+    },
+    {
+      "id": "qianwen-wang",
+      "url": "http://127.0.0.1:5202/assets/CFDdgrFa.webp",
+      "status": 200
+    },
+    {
+      "id": "jiale-zhang",
+      "url": "http://127.0.0.1:5202/assets/DjjTfWK6.webp",
+      "status": 200
+    },
+    {
+      "id": "chen-xing",
+      "url": "http://127.0.0.1:5202/assets/NXAV-LUt.webp",
+      "status": 200
+    },
+    {
+      "id": "luozhao-wang",
+      "url": "http://127.0.0.1:5202/assets/C2-ucitR.webp",
+      "status": 200
+    },
+    {
+      "id": "lanchao-sun",
+      "url": "http://127.0.0.1:5202/assets/Bu9WMeUj.webp",
+      "status": 200
+    },
+    {
+      "id": "ziqiao-he",
+      "url": "http://127.0.0.1:5202/assets/WOK7vvjQ.webp",
+      "status": 200
+    },
+    {
+      "id": "hanyu-wang",
+      "url": "http://127.0.0.1:5202/assets/DkoLuYlT.webp",
+      "status": 200
+    },
+    {
+      "id": "feiyue-wang",
+      "url": "http://127.0.0.1:5202/assets/C_5AYQz5.webp",
+      "status": 200
+    },
+    {
+      "id": "sen-liang",
+      "url": "http://127.0.0.1:5202/assets/CF0jrt3_.webp",
+      "status": 200
+    },
+    {
+      "id": "wang-pengtao",
+      "url": "http://127.0.0.1:5202/assets/5_7Swdiz.webp",
+      "status": 200
+    },
+    {
+      "id": "chen-boyuan",
+      "url": "http://127.0.0.1:5202/assets/C2yDR8OT.webp",
+      "status": 200
+    },
+    {
+      "id": "ziyun-ma",
+      "url": "http://127.0.0.1:5202/assets/CDvwT9g1.webp",
+      "status": 200
+    },
+    {
+      "id": "pi-song-xiuling",
+      "url": "http://127.0.0.1:5202/assets/BpfmfxWO.jpg",
+      "status": 200
+    },
+    {
+      "id": "pi-pang-bo",
+      "url": "http://127.0.0.1:5202/assets/BL5jn70z.webp",
+      "status": 200
+    },
+    {
+      "id": "pi-li-jinhua",
+      "url": "http://127.0.0.1:5202/assets/D4POB8Ky.webp",
+      "status": 200
+    },
+    {
+      "id": "secondary-pi-wang-juan",
+      "url": "http://127.0.0.1:5202/assets/B-Fst0Rn.webp",
+      "status": 200
+    },
+    {
+      "id": "secondary-pi-su-guofan",
+      "url": "http://127.0.0.1:5202/assets/jMHE8h84.webp",
+      "status": 200
+    },
+    {
+      "id": "secondary-pi-zhao-chao",
+      "url": "http://127.0.0.1:5202/assets/CfVwXluD.jpg",
+      "status": 200
+    }
+  ],
+  "responsiveCovers": 3,
+  "touchEmulation": true
+}
