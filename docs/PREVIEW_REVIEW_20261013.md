@@ -41,3 +41,11 @@
 第二轮复验：构建通过；25 个入口在 1440px / 320px 下 266 项检查通过，覆盖正文保护、导航、编号内容框、移动布局、图片实际尺寸与资源；四段视频在桌面 / 390px 下 104 项播放状态检查通过，另用未产生用户操作的浏览器会话完成 12 项有声播放限制 / 点击播放检查。最后另有 9 项专项检查通过，覆盖 iHP 技术路径避免重复可见编号、展开导航无下划线、Measurement Reference 在进入 / 刷新时默认收起及原有未跟踪材料哈希保全。证据为 `round2-results.json`、`round2-video-results.json`、`round2-autoplay-policy-results.json`、`round2-final-results.json` 和 `round2-*.png`；早期静音自动播放检查记录仅代表上一轮要求。
 
 本轮继续保留在本地分支，没有 push、PR 或 Cloudflare 部署。其他工作区没有同步或覆盖；02 Team 在此前保全快照后独立产生 `9eaedea`，该新成员布局待后续明确整合，不计入此版。
+
+## 顶部插画替换
+
+用户提供五张原图，按顺序用于 Protocol、Notebook、Measurement、Safety、Parts，保存为 `a  图片/page-covers/revision-20261013/` 下的 `protocol.png`、`notebook.jpg`、`measurement.jpg`、`safety.png`、`parts.png`。原图字节未重绘、裁切或压缩；网页仍沿用原封面区域的居中覆盖显示，旧资源保留。
+
+原页面标题、说明、信息卡、关键词及正文保持原文；字体、颜色、位置、封面尺寸保持替换前状态。Notebook / Measurement / Parts 沿用原深色渐变配色作为图片遮罩，维持既有白色文字可读；Safety 保留其原有遮罩与标签。Protocol 在原预留区域填入插画，不改标题位置。
+
+构建通过，659 个构建文件、25 个入口、本地引用无缺失 / 超限 / 不安全文件。五页在 1440px / 390px 下完成 60 项实际浏览器对照检查：文字和正文一致，文字样式与位置、封面尺寸一致，无横向溢出、脚本或资源错误，加载图片与用户提供原图的字节哈希一致。证据为 `covers-before.json`、`covers-results.json`、`covers-assets.json`、`covers-build.log` 和 `cover-*.png`，位于同一本地证据目录。仍未上传或部署。

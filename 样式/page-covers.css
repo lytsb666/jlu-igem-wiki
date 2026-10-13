@@ -3,6 +3,26 @@
 @media screen {
   :root { --wiki-cover-height: clamp(280px, 40vw, 600px); }
 
+  /* Supplied artwork fills the existing covers; text and geometry stay intact. */
+  :root body .protocol-main .protocol-cover-space {
+    background: url('../a  图片/page-covers/revision-20261013/protocol.png') center / cover no-repeat;
+  }
+  :root body[data-page='notebook'] .lab-hero {
+    background:
+      linear-gradient(128deg, rgba(0, 0, 0, .60), rgba(111, 78, 55, .52) 54%, rgba(0, 0, 0, .60)),
+      url('../a  图片/page-covers/revision-20261013/notebook.jpg') center / cover no-repeat;
+  }
+  :root body[data-page='measurement'] .measurement-hero {
+    background:
+      linear-gradient(125deg, rgba(17, 31, 57, .62), rgba(29, 63, 110, .52) 58%, rgba(36, 95, 131, .55)),
+      url('../a  图片/page-covers/revision-20261013/measurement.jpg') center / cover no-repeat;
+  }
+  :root body[data-page='parts'] .lab-hero {
+    background:
+      linear-gradient(128deg, rgba(0, 0, 0, .60), rgba(111, 78, 55, .52) 54%, rgba(0, 0, 0, .60)),
+      url('../a  图片/page-covers/revision-20261013/parts.png') center / cover no-repeat;
+  }
+
   html:root:root body :is(.image-page-hero, .edu-hero, .ihp-hero, .inc-hero) {
     position: relative;
     width: 100%;
