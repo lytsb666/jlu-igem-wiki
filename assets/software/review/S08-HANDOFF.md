@@ -1,5 +1,26 @@
 # S08 Software / Model 交接报告（交 00）
 
+## 2026-10-13：Software 原版说明书与 Hardware Loading 修复
+
+本轮基线 `4e97a27f74a21557524482c2d5681f9d39564f0f`，工作目录 `D:/JLU—Wiki/IGEMwiki/worktrees/08-instrument`，分支 `codex/08-instrument`。最终提交号见完成消息及 `git log -1`，未操作主仓库、其他分支或自行合并。
+
+来源为用户本轮指定的 `C:/Users/UserTech/Desktop/1.0 说明书.pdf`（4页，1,612,352字节，SHA256 c2592302a142dd96925c7c81fa5331087e1dba30346a233628ef597a61e51b6c）与 `C:/Users/UserTech/Desktop/2.0说明书.pdf`（5页，2,369,164字节，SHA256 09c1797cebc139cf2a66875a6bde2a7abc88501d91dff28a5d7aa728df01533a）。两份与 Hardware 现有4/5页手册字节一致；按用户授权替换 Software 原来的八页版，保持已有两个 `software-user-guide-*-generation.pdf` 地址。原 PDF 字节不改，第一页完整渲染为 WebP 封面，不裁切。旧生成器、2026-10-08等手册哈希属于历史记录，不可运行旧脚本覆盖最新提供版。
+
+Software User Guide 桌面两列卡片、手机单列：一代蓝封面，二代绿封面，分别标明4/5页；点击封面或 Preview 打开原 PDF，Download PDF 下载同一份，原 APK 链接保留。介绍与摘要依据两份原稿，不添加设备参数、准确率或验证结论。除手册卡片和本页图标入口外 Software 内容完全相同，Navbar/Loading/Footer 逐项比较相同。补上本页已有吉祥物作为 favicon，消除默认 favicon.ico 的404。
+
+Hardware 用户报告“页面分层”，复现为 `.hardware-page video` 把共享加载动画也限制为540px高，并露出其下的全屏海报，造成上下两层 Loading。仅将 Hardware 专用视频规则限定到 `.hw-main video`（打印规则同步限定）；没有编辑共享 Loading 样式/脚本或加载标记。正文视频仍保持原尺寸。修复后1440/390宽度下加载视频高1004px、覆盖整个1000px视口，`max-height:none`、`aspect-ratio:auto`，播放推进、正常退出与解除滚动锁均通过。源码/生成器 Hardware HTML 本轮未改。
+
+修改文件：`Instrument/software.html`、`样式/software.css`、`样式/hardware.css`、`public/software-resources/software-user-guide-first-generation.pdf`、`public/software-resources/software-user-guide-second-generation.pdf`、`assets/hardware/review/browser_check.mjs`、`check_hardware.py`、`browser-checks.json`、`content-checks.json`、`S08-HARDWARE-HANDOFF.md`、本交接。新增：`assets/software/images/user-manual-1-cover.webp`、`user-manual-2-cover.webp`，`assets/software/review/supplied-manuals-20261013.json`、`supplied-manuals-checks-20261013.json`。公共文件、Model、Judging 路由及原 Hardware PDF/视频未改。
+
+验证：正式构建通过（831ms）；1440/900/390/320宽度下两列/单列与无横向溢出通过；原PDF来源/工作区/构建/HTTP哈希相同；两说明书9页渲染审阅，封面、键盘 Enter 预览、下载事件、既有 APK 入口检查通过。Hardware 全正文/表格/23图/资料链接、视频播放、复现指南滚动、白框、Judging跳转继续通过；两个浏览器检查均无控制台错误与失败资源请求。本轮未重新验证设备参数或性能。
+
+交叉链接：Software 两个稳定 PDF 地址已更新；Hardware 相应两份手册原文件一致且入口不变。Software 的 Hardware 暂定入口仍保留原要求，Protocol最终入口和跨模块整合交00；没有自行更改其他模块。Judging 已有跳转与证据位置沿用 Hardware 交接。
+
+材料缺口沿用 Hardware 报告：二代原PDF封面尺寸及第2页重复段落、两张检测结果图、计算板名称和训练模型口径、源设计文件等尚待作者/00协调。原 PDF 未替用户改稿，也未编造验证结论。
+
+预览：[Software](http://127.0.0.1:5208/Instrument/software.html#software-user-guide)，[Hardware](http://127.0.0.1:5208/Instrument/hardware.html)。
+
+
 工作区：D:/JLU—Wiki/IGEMwiki/worktrees/08-instrument
 分支：codex/08-instrument
 开始基线：8444af2dc4e3b2a7971e111100d3b0e9501e0a3b

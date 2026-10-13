@@ -345,6 +345,40 @@
   ],
   "errors": [],
   "failedRequests": [],
+  "loading": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "video": {
+        "left": -2,
+        "top": -2,
+        "right": 1442,
+        "bottom": 1002,
+        "height": 1004,
+        "maxHeight": "none",
+        "aspectRatio": "auto"
+      },
+      "playing": true,
+      "locked": true,
+      "dismissedAndUnlocked": true
+    },
+    {
+      "width": 390,
+      "height": 1000,
+      "video": {
+        "left": -2,
+        "top": -2,
+        "right": 392,
+        "bottom": 1002,
+        "height": 1004,
+        "maxHeight": "none",
+        "aspectRatio": "auto"
+      },
+      "playing": true,
+      "locked": true,
+      "dismissedAndUnlocked": true
+    }
+  ],
   "costAccordion": {
     "clickOpens": true,
     "enterCloses": true,

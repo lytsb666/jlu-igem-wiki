@@ -37,3 +37,19 @@ body[data-page="parts"] .data-table a { text-underline-offset: 3px; }
   :root body main .page-toc > .toc-kicker { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
   :root body main .page-toc a { overflow-wrap:anywhere; }
 }
+/* User-supplied plasmid map placed before the biosynthesis collection table. */
+.parts-plasmid-figure { margin: 24px auto; text-align: center; }
+.parts-plasmid-figure img { display: block; width: min(100%, 418px); height: auto; max-width: 100%; max-height: 36rem; margin: auto; object-fit: contain; }
+.parts-plasmid-figure a:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+
+/* A blank body-text line between article headings and adjacent content. */
+@layer wiki-format {
+  :root body main .article-flow :is(h2,h3,h4,h5,h6):not(summary *),
+  :root body main .protocol-content :is(h2,h3,h4,h5,h6):not(summary *) {
+    margin-block:24px !important;
+  }
+}
+
+/* Functional Classification remains three independent disclosure rows. */
+body[data-page="parts"] #functional-classification .module-grid { grid-template-columns:minmax(0,1fr); }
+.parts-plasmid-figure figcaption { margin-top:12px; font-weight:700; }

@@ -20,11 +20,13 @@
 .world-hotspot--room { left: calc(50% + var(--story-world-width) * .26); top: 77%; width: calc(var(--story-world-width) * .38); height: 21%; }
 /* Reference narration appears directly over the original scene. Text shadow
    supplies contrast without adding a panel or replacing any illustration. */
+.world-pcr-mark { position: absolute; z-index: 3; top: 33.333333%; left: 50%; width: calc(var(--story-world-width) * .22); height: calc(var(--story-world-width) * .26); object-fit: contain; transform: translateX(-50%); opacity: var(--pcr-mark-opacity, 0); pointer-events: none; }
 .world-note {
   position: absolute;
   z-index: 8;
   box-sizing: border-box;
   color: #fff1dd;
+  top: calc(var(--world-note-pan, 0px) + var(--note-top));
   text-shadow: 0 1px 2px rgba(20, 12, 8, .96), 0 0 6px rgba(20, 12, 8, .60);
   opacity: var(--world-note-opacity, 0);
   transform: translateY(var(--world-note-rise, 22px)) scale(var(--world-note-scale, .985));
@@ -32,15 +34,15 @@
   pointer-events: none;
   will-change: opacity, transform;
 }
-.world-note p { margin: 0; width: 100%; font-size: 12pt; font-weight: 400; line-height: 1.42; text-align: center; overflow-wrap: normal; }
-.world-note--village { top: 13.5%; left: calc(50% - var(--story-world-width) * .36); width: max(280px, calc(var(--story-world-width) * .225)); }
-.world-note--pcr {
-  top: 46%; left: calc(50% - var(--story-world-width) * .05);
-  width: calc(var(--story-world-width) * .36);
-}
-.world-note--care { top: 77%; left: calc(50% - var(--story-world-width) * .35); width: max(300px, calc(var(--story-world-width) * .275)); }
-.world-note--pcr p,
-.world-note--care p { font-style: italic; }
+.world-note-art { display: block; width: 100%; height: auto; filter: drop-shadow(0 2px 3px rgba(20, 12, 8, .8)); }
+/* Retain the text for assistive technology; only the supplied lettering is
+   visible on desktop, so the old paragraph cannot overlap the new artwork. */
+.world-note p { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.world-note--village { --note-top: calc(var(--story-viewport-height) * .21); left: 6.5vw; width: min(46vw, 860px); }
+.world-note--pcr { --note-top: calc(var(--story-viewport-height) * .42); left: 44vw; width: min(50vw, 960px); }
+.world-note--care { --note-top: calc(var(--story-viewport-height) * .24); left: 7vw; width: min(45vw, 860px); }
+.story-home .cover-scroll-cue { right: clamp(20px, 3.2vw, 54px); bottom: max(76px, 9vh); gap: 20px; padding: 18px 26px; border: 2px solid rgba(255, 223, 157, .85); background: rgba(79, 51, 23, .8); color: #fff6de; font-size: clamp(18px, 1.55vw, 28px); font-weight: 800; letter-spacing: .15em; box-shadow: 0 4px 24px rgba(0, 0, 0, .45); }
+.story-home .cover-scroll-cue i { width: 28px; height: 42px; border-width: 2px; border-color: #fff6de; }
 .world-frame-overlay { position: absolute; inset: 0; z-index: 29; visibility: hidden; pointer-events: none; }
 .world-frame-overlay.is-visible { visibility: visible; }
 .world-clock { position: absolute; z-index: 30; right: .35%; bottom: .1%; width: 16.6%; aspect-ratio: 1502 / 1534; }
@@ -90,6 +92,8 @@
   transform: scale(var(--workflow-background-scale, 1.035));
   transform-origin: center;
 }
+
+.workflow-caption { position: absolute; z-index: 4; top: 10%; left: 12%; width: 76%; margin: 0; color: #fff; font-size: clamp(18px, 1.45vw, 28px); font-weight: 700; line-height: 1.35; text-align: center; text-shadow: 0 2px 5px rgba(20, 20, 20, .9); opacity: var(--workflow-caption-opacity, 0); transform: translateY(var(--workflow-caption-rise, 14px)); }
 
 .workflow-timer,
 .workflow-pathogen {
@@ -162,7 +166,11 @@
 .home-flip-card.is-flipped .home-flip-card__inner { transform: rotateY(180deg); }
 .home-flip-card.is-scroll-turning .home-flip-card__inner { transform: rotateY(var(--scroll-flip-angle,0deg)); transition: none; }
 .home-flip-card__face { position: absolute; inset: 0; display: block; overflow: hidden; border-radius: inherit; -webkit-backface-visibility: hidden; backface-visibility: hidden; background-repeat: no-repeat; box-shadow: 0 .18rem .45rem rgba(58, 30, 22, .16); }
-.home-flip-card__front { background-image: url('../a  图片/home-story/cards/cards-front.webp'); background-size: var(--front-size) 119.70509%; background-position: var(--front-x) 52.04082%; transform: rotateY(0deg) translateZ(.1px); }
+.home-flip-card__front { background-size: 100% 100%; background-position: center; transform: rotateY(0deg) translateZ(.1px); }
+.home-flip-card:nth-child(1) .home-flip-card__front { background-image: url('../a  图片/home-story/final-20261012/card-hospital.webp'); }
+.home-flip-card:nth-child(2) .home-flip-card__front { background-image: url('../a  图片/home-story/final-20261012/card-care-home.webp'); }
+.home-flip-card:nth-child(3) .home-flip-card__front { background-image: url('../a  图片/home-story/final-20261012/card-kindergarten.webp'); }
+.home-flip-card:nth-child(4) .home-flip-card__front { background-image: url('../a  图片/home-story/final-20261012/card-home.webp'); }
 .home-flip-card__back { background-image: url('../a  图片/home-story/cards/cards-back.jpg'); background-size: var(--back-size) 120.18779%; background-position: var(--back-x) 50.69767%; transform: rotateY(180deg) translateZ(.1px); }
 .home-flip-card:nth-child(1) { --card-left: 3.375%; --card-width: 23.25%; --front-size: 430.10753%; --front-x: 4.39739%; --back-size: 432.01507%; --back-x: 4.42428%; }
 .home-flip-card:nth-child(2) { --card-left: 26.875%; --card-width: 23.1875%; --front-size: 431.26685%; --front-x: 34.98779%; --back-size: 432.01507%; --back-x: 34.94044%; }
@@ -191,10 +199,14 @@
   .world-note--village,
   .world-note--pcr,
   .world-note--care {
-    top: calc(var(--world-note-pan, 0px) + max(82px, var(--story-viewport-height) * .24));
-    left: 50%; width: min(600px, calc(100vw - 56px));
+    top: calc(var(--world-note-pan, 0px) + max(86px, var(--story-viewport-height) * .19));
+    left: 50%; width: min(600px, calc(100vw - 48px));
     transform: translateX(-50%) translateY(var(--world-note-rise, 22px));
   }
+  /* Reflow the same content on phones rather than shrinking the long, fixed
+     image lines until they become unreadable. */
+  .world-note-art { display: none; }
+  .story-home .world-note p { position: static; width: 100%; height: auto; margin: 0; overflow: visible; clip-path: none; white-space: normal; color: #ffead0; font-size: clamp(17px, 2.2vw, 22px); font-weight: 900; font-style: italic; line-height: 1.32; text-align: center; text-transform: uppercase; }
 }
 
 @media (max-width: 900px) and (max-height: 540px) {
@@ -208,6 +220,8 @@
   .home-chapter--procession { --procession-mascot-width: min(31vw, 190px); --procession-mascot-height: min(34vh, 300px); }
   .home-card-hint { left: 0; bottom: 52px; width: 100%; padding: 0 6px; text-align: center; }
   .story-home .home-story-progress { gap: 6px; padding-inline: 9px; }
+  .story-home .cover-scroll-cue { right: 16px; bottom: max(76px, 10vh); max-width: calc(100vw - 32px); padding: 12px 16px; gap: 12px; font-size: 14px; letter-spacing: .1em; }
+  .story-home .cover-scroll-cue i { width: 24px; height: 36px; }
 }
 
 @media (max-width: 720px) and (orientation: portrait) {
@@ -218,9 +232,10 @@
   .home-chapter--procession .chapter-procession-people { top: 42%; height: 20%; }
   .home-chapter--door .detector-canvas,
   .home-chapter--workflow .workflow-canvas { width: 100vw; height: 55.9006vw; }
+  .home-chapter--workflow .workflow-caption { top: auto; bottom: calc(100% + 18px); left: 6%; width: 88%; font-size: 16px; }
   .home-chapter--reach .legacy-canvas { top: 50%; left: 50%; width: 100vw; height: 55.4217vw; }
   .home-chapter--reach .legacy-backdrop { filter: brightness(.64) saturate(.88) blur(10px); transform: scale(1.08); }
-  .home-chapter--process::before { content: ''; position: absolute; inset: -10px; background: url('../a  图片/home-story/sequence/07-process.webp') center / cover no-repeat; filter: blur(10px) brightness(.7); }
+  .home-chapter--process::before { content: ''; position: absolute; inset: -10px; background: url('../a  图片/home-story/final-20261012/rpa-crispr-design.webp') center / cover no-repeat; filter: blur(10px) brightness(.7); }
   .home-chapter--process > img { position: relative; object-fit: contain; }
   .home-cards { inset: auto; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(92vw, calc((var(--story-viewport-height) - 152px) * .499 + 12px)); }
   .home-flip-card:nth-child(n) { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: .499; }

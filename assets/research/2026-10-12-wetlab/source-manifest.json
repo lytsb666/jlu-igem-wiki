@@ -1,0 +1,68 @@
+{
+  "document": "C:/Users/UserTech/Desktop/wetlab.docx",
+  "document_sha256": "a1416bd9ab07d70ab0c51db06e6d5fe54b3e79cba7e1a6d63c758a8569dfd3e4",
+  "assets": {
+    "measurement-roadmap.png": {
+      "source": "word/media/image6.png",
+      "sha256": "40443682ef96f80620dfd12620252c2cc3696f313d40ff5365f8b2a4da2ad096",
+      "size": [
+        1267,
+        800
+      ],
+      "processing": "byte-for-byte original; no curve, legend, label or color edits"
+    },
+    "measurement-page-links.png": {
+      "source": "word/media/image7.png",
+      "sha256": "44b67c2ed4533e083e79979bca719576d70bc46d3fe8d7ab4098bd58348303a8",
+      "size": [
+        1264,
+        421
+      ],
+      "processing": "byte-for-byte original; no curve, legend, label or color edits"
+    },
+    "measurement-figure-36.png": {
+      "source": "codex-clipboard-09dcba65-3dec-4d10-b695-54219a1c86cd.png",
+      "sha256": "db56289c3b42290951d3b42564a30fc5fb2849b35996ea4a35756f03a22c5848",
+      "size": [
+        580,
+        485
+      ],
+      "processing": "byte-for-byte original; no curve, legend, label or color edits"
+    }
+  },
+  "layout": {
+    "single_plot_reference": "Measurement Figure 6; axes fit 260 × 210 CSS px",
+    "four_panel_reference": "Measurement Figure 5; axes union fits 317 × 253 CSS px",
+    "six_panel_reference": "axes union fits 420 × 270 CSS px; retain six panels",
+    "method": "CSS viewport and proportional scaling; axes horizontally centered; all nonwhite source pixels included; mobile scales to article width; full originals remain linked"
+  },
+  "figure31": {
+    "source": "wetlab.docx word/media/image3.tiff",
+    "page_image": "a  图片/research-2026-10-05/measurement/image34.png",
+    "verification": "decoded RGB pixel-identical to document TIFF; retain existing PNG and full-image link; crop exterior pure-white space only in CSS"
+  },
+  "figure36": {
+    "source": "user-supplied clipboard PNG (2026-10-12)",
+    "replaces": "Measurement Figure 36 only",
+    "document_image4": "Not used: wrong RSV plot in the requirement document; user provided corrected HI-ompP6 plot"
+  },
+  "parts_plasmid": {
+    "source": "Measurement Figure 3, existing original",
+    "path": "a  图片/research-2026-10-05/measurement/image4.jpeg",
+    "size": [
+      965,
+      1126
+    ],
+    "sha256": "fa527278da73ed61e8ae8118e60873e0480310382344ae0b5fe82d0625702ede"
+  },
+  "result_units": {
+    "sections": [
+      "2.3.1",
+      "3.3.1",
+      "4.3.1",
+      "5.3.1",
+      "6.3.1"
+    ],
+    "change": "Append ΔRFU after mean and standard deviation only; values, exponents and CVs preserved; matches Measurement manuscript"
+  }
+}

@@ -6,6 +6,7 @@ if (story) {
   const worldScene = story.querySelector('.world-scene')
   const world = story.querySelector('.story-world')
   const worldIntro = story.querySelector('.world-intro')
+  const pcrMark = story.querySelector('.world-pcr-mark')
   const campfirePeople = story.querySelector('.campfire-people')
   const campfirePeopleSource = story.querySelector('.campfire-people-source')
   const instrumentScene = story.querySelector('.instrument-scene')
@@ -23,12 +24,13 @@ if (story) {
   const hoveredActions = new Set()
   const worldButtons = [...worldScene.querySelectorAll('[data-world-action]')]
   const worldNotes = [
-    { element: worldScene.querySelector('[data-world-note="village"]'), enter: [0, .10], leave: [.19, .33] },
-    { element: worldScene.querySelector('[data-world-note="pcr"]'), enter: [.33, .48], leave: [.59, .73] },
-    { element: worldScene.querySelector('[data-world-note="care"]'), enter: [.73, .83], leave: [1.01, 1.02] },
+    { element: worldScene.querySelector('[data-world-note="village"]'), enter: [0, .06], leave: [.27, .35] },
+    { element: worldScene.querySelector('[data-world-note="pcr"]'), enter: [.35, .42], leave: [.62, .70] },
+    { element: worldScene.querySelector('[data-world-note="care"]'), enter: [.70, .78], leave: [1.01, 1.02] },
   ]
   const workflowChapter = story.querySelector('.home-chapter--workflow')
   const workflowTimer = workflowChapter.querySelector('.workflow-timer')
+  const workflowCaption = workflowChapter.querySelector('.workflow-caption')
   const workflowPathogens = [...workflowChapter.querySelectorAll('.workflow-pathogen')]
   const cardsChapter = story.querySelector('.home-chapter--cards')
   const cards = [...cardsChapter.querySelectorAll('.home-flip-card')]
@@ -56,6 +58,7 @@ if (story) {
   let totalUnits = 1
   let chapterRanges = []
   let worldReady = false
+  let pcrRevealStart = .42
   let pending = false
   let renderedCoverProgress = null
   let lastCoverFrameTime = null
@@ -66,7 +69,10 @@ if (story) {
     stage.style.setProperty('--story-viewport-height', viewportHeight + 'px')
     worldHeight = Math.max(viewportHeight, world.offsetHeight)
     worldScene.style.height = worldHeight + 'px'
-    worldUnits = Math.max(2.2, (worldHeight - viewportHeight) / viewportHeight * 3.6)
+    worldUnits = Math.max(3, (worldHeight - viewportHeight) / viewportHeight * 4.6)
+    // Wait until the lighthouse panel's bottom has reached the viewport.
+    // The portrait layout already contains it, but its narrative turn is later.
+    pcrRevealStart = Math.max(.42, clamp((worldHeight * 2 / 3 - viewportHeight) / Math.max(1, worldHeight - viewportHeight)))
     totalUnits = coverUnits + worldUnits + chapterWeights.reduce((sum, weight) => sum + weight, 0)
     story.style.height = (totalUnits + 1) * viewportHeight + 'px'
     let start = coverUnits + worldUnits
@@ -81,8 +87,11 @@ if (story) {
     worldNotes.forEach(({ element, enter, leave }) => {
       element.dataset.storyStart = ((coverUnits + worldUnits * enter[0]) / totalUnits).toFixed(6)
       element.dataset.storyFull = ((coverUnits + worldUnits * enter[1]) / totalUnits).toFixed(6)
+      element.dataset.storyHoldEnd = ((coverUnits + worldUnits * leave[0]) / totalUnits).toFixed(6)
       element.dataset.storyEnd = ((coverUnits + worldUnits * Math.min(1, leave[1])) / totalUnits).toFixed(6)
     })
+    pcrMark.dataset.storyStart = ((coverUnits + worldUnits * pcrRevealStart) / totalUnits).toFixed(6)
+    pcrMark.dataset.storyFull = ((coverUnits + worldUnits * (pcrRevealStart + .09)) / totalUnits).toFixed(6)
     const worldLeft = (viewportWidth - world.offsetWidth) / 2
     campfirePeople.style.setProperty('--campfire-x', worldLeft + world.offsetWidth * .780317 + 'px')
     campfirePeople.style.setProperty('--campfire-y', world.offsetWidth * (1080 / 1935) * .958 + 'px')
@@ -123,11 +132,14 @@ if (story) {
       const revealed = noteEntrance * arrive * depart * worldExit
       const resolved = reducedMotion.matches ? Number(revealed > .05) : revealed
       element.style.setProperty('--world-note-opacity', resolved.toFixed(4))
-      element.style.setProperty('--world-note-rise', (reducedMotion.matches ? 0 : (1 - arrive) * 22) + 'px')
+      const follow = range(progress, enter[1], leave[0])
+      element.style.setProperty('--world-note-rise', (reducedMotion.matches ? 0 : -(1 - arrive) * 14 + follow * Math.min(76, viewportHeight * .09)) + 'px')
       element.style.setProperty('--world-note-scale', String(reducedMotion.matches ? 1 : .985 + arrive * .015))
       element.dataset.noteProgress = resolved.toFixed(4)
       element.setAttribute('aria-hidden', String(!visible || resolved <= .01))
     })
+    const pcrReveal = smoothstep(range(progress, pcrRevealStart, pcrRevealStart + .09))
+    pcrMark.style.setProperty('--pcr-mark-opacity', String(reducedMotion.matches ? Number(pcrReveal > .05) : pcrReveal))
     frame.classList.toggle('is-visible', visible)
     frame.classList.toggle('is-clock-live', visible && !reducedMotion.matches)
     frame.style.opacity = String(visible ? 1 - range(ribbonY, worldHeight - viewportHeight, worldHeight) : 0)
@@ -182,8 +194,13 @@ if (story) {
       const backgroundArrival = smoothstep(range(localProgress, .12, .34))
       chapter.style.setProperty('--workflow-background-brightness', (.66 + backgroundArrival * .34).toFixed(3))
       chapter.style.setProperty('--workflow-background-scale', String(reduce ? 1 : 1.045 - backgroundArrival * .045))
+      const caption = smoothstep(range(localProgress, .24, .36)) * (1 - smoothstep(range(localProgress, .54, .62)))
+      const captionOpacity = reduce ? Number(caption > .05) : caption
+      workflowCaption.style.setProperty('--workflow-caption-opacity', String(captionOpacity))
+      workflowCaption.style.setProperty('--workflow-caption-rise', (reduce ? 0 : (1 - smoothstep(range(localProgress, .24, .36))) * 14) + 'px')
+      workflowCaption.setAttribute('aria-hidden', String(!isOnscreen || captionOpacity <= .01))
       const setWorkflowLayer = (layer, reveal) => {
-        const resolved = reduce ? entered : reveal
+        const resolved = reduce ? Number(reveal > .05) : reveal
         layer.style.setProperty('--workflow-layer-opacity', resolved.toFixed(3))
         layer.style.setProperty('--workflow-layer-rise', (reduce ? 0 : (1 - resolved) * 28) + 'px')
         layer.style.setProperty('--workflow-layer-scale', String(reduce ? 1 : .8 + resolved * .2))
@@ -191,8 +208,8 @@ if (story) {
       }
       setWorkflowLayer(workflowTimer, smoothstep(range(localProgress, .28, .46)))
       workflowPathogens.forEach((pathogen, index) => {
-        const start = .38 + index * .065
-        setWorkflowLayer(pathogen, smoothstep(range(localProgress, start, start + .17)))
+        const start = .62 + index * .045
+        setWorkflowLayer(pathogen, smoothstep(range(localProgress, start, start + .12)))
       })
       chapter.classList.toggle('is-motion-live', isOnscreen && !reduce)
     }
@@ -552,12 +569,17 @@ if (story) {
   })
 
   const cardsFront = new Image()
-  cardsFront.src = new URL('../a  图片/home-story/cards/cards-front.webp', import.meta.url).href
+  cardsFront.src = new URL('../a  图片/home-story/final-20261012/card-hospital.webp', import.meta.url).href
+  const cardsFrontOthers = [
+    new URL('../a  图片/home-story/final-20261012/card-care-home.webp', import.meta.url),
+    new URL('../a  图片/home-story/final-20261012/card-kindergarten.webp', import.meta.url),
+    new URL('../a  图片/home-story/final-20261012/card-home.webp', import.meta.url),
+  ].map(url => { const image = new Image(); image.src = url.href; return image })
   const cardsBack = new Image()
   cardsBack.src = new URL('../a  图片/home-story/cards/cards-back.jpg', import.meta.url).href
   chapters.forEach(chapter => {
     const images = [...chapter.querySelectorAll('img')]
-    if (chapter.classList.contains('home-chapter--cards')) images.push(cardsFront, cardsBack)
+    if (chapter.classList.contains('home-chapter--cards')) images.push(cardsFront, ...cardsFrontOthers, cardsBack)
     Promise.all(images.map(decodeImage)).then(() => {
       if (!images.every(image => image.naturalWidth > 0)) chapter.classList.add('is-media-error')
       chapterReady.add(chapter)

@@ -194,5 +194,19 @@
   :root body :is(.stakeholder-part, .stakeholder-layout > *) { min-width: 0; }
   :root body .stakeholder-chapter { box-sizing: border-box; width: 100%; margin-inline: 0; }
 }
+/* Tables keep complete words together and use one legible header treatment.
+   Their existing wrappers remain responsible for narrow-screen scrolling. */
+:root body main table :is(th, td) {
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+:root body main table thead th {
+  color: #fffaf5 !important;
+  background: #6a3f24 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+:root body main table thead th * { color: inherit !important; }
 @media print { :root body .wiki-directory { display: none !important; } }
 }

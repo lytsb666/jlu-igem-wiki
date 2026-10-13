@@ -1,0 +1,20 @@
+{
+  "measurement-roadmap.png": {
+    "document": "wetlab.docx",
+    "original_media": "word/media/image2.png",
+    "sha256": "24a21f77393ec28cd88d36cada118ef93e3c066b448030387c84a33ca6069075",
+    "document_sha256": "cb663289da26ea473933d12b0bc6a3a14818ec117e4a4f8c38b625fabf3dcdd4"
+  },
+  "measurement-page-links.png": {
+    "document": "wetlab.docx",
+    "original_media": "word/media/image3.png",
+    "sha256": "2947a2c8139c605c869945bc55bcdc79ecb45c347d245581efa3809e0be54fba",
+    "document_sha256": "cb663289da26ea473933d12b0bc6a3a14818ec117e4a4f8c38b625fabf3dcdd4"
+  },
+  "parts-lbcas12a-plasmid.jpeg": {
+    "document": "10.10湿实验建议.docx",
+    "original_media": "word/media/image3.jpeg",
+    "sha256": "d13565cef3a8d3c8b1cab954125ceb830c10fabca84996b575864d7657d5b66a",
+    "document_sha256": "99232bc6568d8b2aa42550b70e77422c1529970c6dcb1119804fb21c72f8efe6"
+  }
+}

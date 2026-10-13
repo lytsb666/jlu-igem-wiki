@@ -193,6 +193,7 @@
   "unique_ids": 36,
   "sidebar_back_to_top_removed": true,
   "navbar_loading_footer_unchanged": true,
-  "software_model_and_public_files_unchanged": true,
+  "model_and_shared_files_unchanged": true,
+  "software_manual_update_in_scope": true,
   "scope_passed": true
 }

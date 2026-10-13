@@ -474,3 +474,43 @@
   .measurement-map-links li { margin:.5rem 0; }
   .measurement-map-links a { display:inline-block; padding:.5rem 0; }
 }
+
+/* October 12: supplied roadmap and the three linked page cards. */
+.measurement-related-pages { margin: .25rem auto 1rem; width: min(100%, 54rem); }
+.measurement-related-pages__canvas { position: relative; }
+:root body.research-manuscript main .measurement-related-pages__canvas > img { display: block; width: 100%; height: auto; max-width: 100%; max-height: none; }
+.measurement-related-pages__mobile { display: none; }
+:root body.research-manuscript main .measurement-process-links { width: min(100%, 38rem); }
+@layer wiki-format {
+  :root body.measurement-page main .measurement-process-link strong { color: #fffaf5 !important; }
+  :root body.measurement-page main .measurement-process-link > span { color: var(--process-color) !important; }
+  :root body.measurement-page main td.measurement-result--positive { background: #e3f2d9 !important; text-align: center !important; }
+  :root body.measurement-page main td.measurement-result--negative { background: #e7e7e7 !important; text-align: center !important; }
+}
+.measurement-page .measurement-hero { position: relative; }
+.measurement-page .measurement-hero-keywords { position: absolute; right: clamp(24px, 4vw, 64px); bottom: 24px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px 24px; max-width: 70%; margin: 0; padding: 0; list-style: none; color: #fffaf5; }
+.measurement-page .measurement-hero-keywords li { color: inherit; font-size: 1rem; }
+@media (max-width: 680px) {
+  .measurement-related-pages__mobile { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .measurement-related-pages__mobile a { display: grid; place-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid #d9c4b4; border-radius: 8px; text-decoration: none; }
+  .measurement-related-pages__mobile a:nth-child(1) { background: #eaf7fb; }
+  .measurement-related-pages__mobile a:nth-child(2) { background: #fff0e9; }
+  .measurement-related-pages__mobile a:nth-child(3) { background: #f3effc; }
+  .measurement-page .measurement-hero-keywords { position: static; max-width: none; justify-content: flex-start; margin-top: 28px; }
+}
+
+/* A blank body-text line between article headings and adjacent content. */
+@layer wiki-format {
+  :root body main .article-flow :is(h2,h3,h4,h5,h6):not(summary *),
+  :root body main .protocol-content :is(h2,h3,h4,h5,h6):not(summary *) {
+    margin-block:24px !important;
+  }
+}
+
+/* Manuscript-requested Design-style keywords, scoped to Measurement's cover. */
+.measurement-page .measurement-hero-keywords { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); width:min(880px,80%); max-width:none; gap:12px; }
+.measurement-page .measurement-hero-keywords li { display:grid; place-items:center; min-height:62px; padding:14px 18px; color:#fff; font-size:clamp(14px,1.1vw,17px); font-weight:800; letter-spacing:.08em; text-align:center; text-transform:uppercase; background:rgba(0,0,0,.72); border:1px solid rgba(255,255,255,.28); border-radius:999px; backdrop-filter:blur(9px); }
+@media(max-width:680px) {
+ .measurement-page .measurement-hero-keywords { width:100%; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+ .measurement-page .measurement-hero-keywords li { min-height:58px; padding:12px; font-size:14px; letter-spacing:.03em; }
+}

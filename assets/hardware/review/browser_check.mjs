@@ -16,6 +16,34 @@ const base='http://127.0.0.1:5208',report={responsive:[],documents:[],errors}
 report.failedRequests=[]
 page.on('response',response=>{if(response.status()>=400)report.failedRequests.push({url:response.url(),status:response.status()})})
 try{
+  report.loading=[]
+  // Hold the cover image briefly so the loading video can be measured while visible.
+  // Article video sizing must never constrain the shared full-screen loading video.
+  for(const width of [1440,390]){
+    await page.setViewportSize({width,height:1000})
+    await page.route('**/*',async route=>{
+      if(route.request().resourceType()==='image'&&/\/hardware-[^/]+\.webp$/.test(new URL(route.request().url()).pathname))
+        await new Promise(resolve=>setTimeout(resolve,2500))
+      await route.continue()
+    })
+    await page.goto(base+'/Instrument/hardware.html',{waitUntil:'domcontentloaded'})
+    await page.waitForFunction(()=>document.querySelector('#igem-loader .loading-video')?.currentTime>.05)
+    const result=await page.evaluate(()=>{
+      const video=document.querySelector('#igem-loader .loading-video'),box=video.getBoundingClientRect(),css=getComputedStyle(video)
+      return {width:innerWidth,height:innerHeight,video:{left:box.left,top:box.top,right:box.right,bottom:box.bottom,height:box.height,maxHeight:css.maxHeight,aspectRatio:css.aspectRatio},
+        playing:!video.paused&&video.currentTime>0,locked:document.body.classList.contains('loading-lock')}
+    })
+    assert.equal(result.video.maxHeight,'none');assert.equal(result.video.aspectRatio,'auto')
+    assert(result.video.left<=0&&result.video.top<=0&&result.video.right>=result.width&&result.video.bottom>=result.height)
+    assert(result.playing&&result.locked)
+    await page.screenshot({path:resolve(scratch,`loading-after-${width}.png`)})
+    await page.locator('#igem-loader').waitFor({state:'detached',timeout:6000})
+    assert.equal(await page.locator('body.loading-lock').count(),0)
+    result.dismissedAndUnlocked=true
+    report.loading.push(result)
+    await page.unrouteAll({behavior:'wait'})
+  }
+  await page.setViewportSize({width:1440,height:1000})
   await page.goto(base+'/Instrument/hardware.html',{waitUntil:'domcontentloaded'})
   await page.locator('#igem-loader').waitFor({state:'hidden',timeout:20000})
   await page.screenshot({path:resolve(scratch,'desktop-cover.png')})
@@ -94,5 +122,5 @@ try{
   if(errors.length)console.log(JSON.stringify(report.failedRequests,null,2))
   assert.deepEqual(errors,[])
   writeFileSync(resolve(root,'assets/hardware/review/browser-checks.json'),JSON.stringify(report,null,2)+'\n')
-  console.log('Hardware browser checks passed: white content cards and no sidebar top link at four widths, document hashes, inline scroll, video playback, cost disclosure and Judging redirect.')
+  console.log('Hardware browser checks passed: full-screen loading playback and dismissal, white content cards and no sidebar top link at four widths, document hashes, inline scroll, video playback, cost disclosure and Judging redirect.')
 }finally{await browser.close()}

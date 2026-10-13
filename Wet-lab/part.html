@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="../样式/wetlab-pages.css" />
   <link rel="stylesheet" href="../样式/full-width-layout.css">
   <link rel="stylesheet" href="../样式/parts-page.css" />
+<style data-research-table-update>
+@layer wiki-format {
+  :root body main :is(.table-wrap, .protocol-table-wrap) { min-width: 0; max-width: 100%; overflow-x: auto; }
+  :root body main table { table-layout: auto !important; min-width: min-content !important; }
+  :root body main table :is(th, td, th *, td *) { overflow-wrap: normal !important; word-break: normal !important; hyphens: none !important; }
+  :root body main table thead :is(th, td) { background: #6f4e37 !important; color: #fffaf5 !important; text-align: center !important; text-align-last: center !important; vertical-align: middle !important; }
+  :root body main table thead :is(th, td) * { color: #fffaf5 !important; }
+}
+</style>
 </head>
 <body class="wetlab-page loading-lock" data-page="parts">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -193,6 +202,7 @@
 </tbody></table></div>
 <h3 data-source-block="23" id="lbcas12a-biosynthesis-parts">2.3 LbCas12a Biosynthesis Parts</h3>
 <p data-source-block="24">LbCas12a serves as the shared core nuclease of our RPA–Cas12a detection platform. To support recombinant production of this enzyme, we designed two biosynthesis-related Parts: a codon-optimized LbCas12a CDS and a complete T7-driven expression cassette.</p>
+<figure id="parts-lbcas12a-plasmid" class="parts-plasmid-figure"><a href="../a  图片/research-2026-10-05/measurement/image4.jpeg" target="_blank" rel="noopener" aria-label="Open original pET28a-TEV-LbCas12a plasmid map"><img src="../a  图片/research-2026-10-05/measurement/image4.jpeg" width="965" height="1126" alt="pET28a-TEV-LbCas12a plasmid map supplied in the wet lab suggestions" loading="lazy" decoding="async"></a><figcaption>Figure 1  pET28a-TEV-LbCas12a Plasmid Map</figcaption></figure>
 <div class="table-wrap" role="region" aria-labelledby="lbcas12a-biosynthesis-parts" tabindex="0"><table class="data-table" data-source-table="26">
 <thead>
 <tr>
@@ -246,7 +256,7 @@
 <td><span data-source-cell="3:3">A synthetic, non-infectious DNA target template containing a conserved region of Haemophilus influenzae, designed to serve as a positive control for RPA amplification and CRISPR-Cas12a-based nucleic acid detection</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="4:0"><em>Streptococcus pneumoniae</em></span></th>
+<th scope="row"><span data-source-cell="4:0">Streptococcus pneumoniae</span></th>
 <td><span data-source-cell="4:1">SPN lytA Gene Synthetic Target Template</span></td>
 <td><span data-source-cell="4:2">PCR product / Basic Part</span></td>
 <td><span data-source-cell="4:3">A 251 bp Streptococcus pneumoniae target amplicon containing the target sequence required for recognition by the SPN-specific Cas12a crRNA. It is intended to serve as the amplification target and positive-control template in an RPA-Cas12a nucleic acid detection system.</span></td>
@@ -302,7 +312,7 @@
 <td><span data-source-cell="6:2">HI ompP6 Gene RPA Reverse Primer</span></td>
 </tr>
 <tr>
-<th scope="row" rowspan="2"><span data-source-cell="7:0"><em>Streptococcus pneumoniae</em></span></th>
+<th scope="row" rowspan="2"><span data-source-cell="7:0">Streptococcus pneumoniae</span></th>
 <td><span data-source-cell="7:1">Forward Primer</span></td>
 <td><span data-source-cell="7:2">SPN lytA Gene RPA Forward Primer</span></td>
 <td rowspan="2"><span data-source-cell="7:3">SPN lytA Gene primer pair: amplifies the selected 251 bp Streptococcus pneumoniae target sequence and generates the substrate for downstream Cas12a recognition.</span></td>
@@ -352,7 +362,7 @@
 <td><span data-source-cell="3:2">This synthetic Cas12a crRNA guides recognition of the selected H. influenzae target following RPA amplification.</span></td>
 </tr>
 <tr>
-<th scope="row"><span data-source-cell="4:0"><em>Streptococcus pneumoniae</em></span></th>
+<th scope="row"><span data-source-cell="4:0">Streptococcus pneumoniae</span></th>
 <td><span data-source-cell="4:1">SPN lytA Gene-targeting LbCas12a crRNA</span></td>
 <td><span data-source-cell="4:2">This synthetic Cas12a crRNA contains a Cas12a-compatible direct-repeat region and an SPN-specific spacer. It guides Cas12a to recognize the complementary target sequence within the SPN RPA amplicon following RPA amplification.</span></td>
 </tr>
@@ -372,7 +382,7 @@
 <p data-source-block="45">Provides the core LbCas12a nuclease required for the detection platform.</p>
 <p data-source-block="46">Includes:</p>
 <p data-source-block="47">E. coli B codon-optimized LbCas12a CDS</p>
-<p data-source-block="48"><a href="https://registry.igem.org/parts/bba-26ovd7tr" target="_blank" rel="noopener noreferrer">T7-driven His₆–TEV–LbCas12a Expression Cassette</a></p>
+<p data-source-block="48">T7-driven His₆–TEV–LbCas12a Expression Cassette</p>
 </div></details>
 <details class="parts-module" id="recognition-module"><summary><h3 data-source-block="49">3.2 Target and Recognition Module</h3></summary><div class="parts-module-content">
 <p data-source-block="50">Determines molecular specificity.</p>

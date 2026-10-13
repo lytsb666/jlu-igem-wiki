@@ -26,7 +26,7 @@
 .hardware-page .hw-figure img { display: block; max-width: 100%; width: 100%; height: auto; object-fit: contain; }
 .hardware-page .hw-figure-images { display: grid; gap: 16px; }
 .hardware-page figcaption { margin-top: 12px; }
-.hardware-page video { display: block; width: 100%; max-height: 540px; background: #17120e; aspect-ratio: 16/9; }
+.hardware-page .hw-main video { display: block; width: 100%; max-height: 540px; background: #17120e; aspect-ratio: 16/9; }
 .hardware-page .hw-video figcaption a { white-space: nowrap; }
 .hardware-page .hw-table-wrap { max-width: 100%; overflow: auto; margin: 18px 0; border: 1px solid var(--hw-line); border-radius: 8px; }
 .hardware-page table { width: 100%; border-collapse: collapse; }
@@ -66,7 +66,7 @@
   .hardware-page .hw-pdf-scroll { height: 580px; }
 }
 @media print {
-  .hardware-page .hw-directory, .hardware-page video { display: none; }
+  .hardware-page .hw-directory, .hardware-page .hw-main video { display: none; }
   .hardware-page .hw-layout { display: block; }
   .hardware-page .hw-pdf-scroll { height: auto; max-height: none; overflow: visible; }
 }

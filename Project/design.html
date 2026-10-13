@@ -47,6 +47,24 @@
 :root body.research-manuscript main .page-toc nav { overflow-x:hidden; }
 :root body.research-manuscript main .page-toc a { overflow-wrap:anywhere; }
 </style>
+<style data-research-table-update>
+@layer wiki-format {
+  :root body main :is(.table-wrap, .protocol-table-wrap) { min-width: 0; max-width: 100%; overflow-x: auto; }
+  :root body main table { table-layout: auto !important; min-width: min-content !important; }
+  :root body main table :is(th, td, th *, td *) { overflow-wrap: normal !important; word-break: normal !important; hyphens: none !important; }
+  :root body main table thead :is(th, td) { background: #6f4e37 !important; color: #fffaf5 !important; text-align: center !important; text-align-last: center !important; vertical-align: middle !important; }
+  :root body main table thead :is(th, td) * { color: #fffaf5 !important; }
+}
+</style>
+<style data-research-cover-keywords>
+.image-page-hero .lab-cover-note { width:min(660px,58%); gap:12px; }
+.image-page-hero .lab-cover-note span { display:grid; place-items:center; min-height:62px; padding:14px 18px; font-size:clamp(14px,1.1vw,17px); }
+</style>
+<style data-research-reference-format>
+@layer wiki-format {
+  :root body main .research-reference-entry { padding-left:2.2em !important; text-indent:-2.2em !important; text-align:left !important; overflow-wrap:anywhere; }
+}
+</style>
 </head>
 <body class="research-manuscript wetlab-page loading-lock" data-page="design">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -128,7 +146,7 @@
 </section>
 <section class="lab-section research-section" data-observe-section>
 <h2 id="design-2-design-requirements" data-toc-level="1" data-source-block="7">2. Design Requirements</h2>
-<div class="table-wrap research-table-wrap" tabindex="0" role="region" aria-label="design manuscript table 1"><table class="data-table research-table" data-source-block="8"><thead>
+<div class="table-wrap research-table-wrap" tabindex="0" role="region" aria-label="design manuscript table 1"><table class="data-table research-table" data-source-block="8"><colgroup><col style="width:14rem"><col><col></colgroup><thead>
 <tr>
 <th scope="col">Design requirement</th>
 <th scope="col">Constraint / challenge</th>
@@ -187,7 +205,11 @@
 <p data-source-block="15">The candidate primer sequences, amplicon target regions, and matching crRNA spacer sequences are then encoded with DNABERT-6. In our workflow, DNABERT-6 does not replace standard sequence-design rules or wet-lab validation. Rather, it serves as a sequence-context representation module, whose embeddings are integrated with conventional design features and further processed by a ranking model to prioritize candidate primer–crRNA combinations.</p>
 <p data-source-block="16">This strategy reduces a large candidate set into a smaller set of top-ranked designs for experimental validation. Importantly, RPA amplification and CRISPR recognition are therefore designed together from the sequence-design stage. The primer pair defines the amplicon boundaries, while the crRNA spacer recognizes a pathogen-specific sequence within that amplicon. A candidate is kept only when the primer pair can support target amplification and the resulting amplicon contains an appropriate Cas12a recognition site.</p>
 <p data-source-block="17">During detection, RPA first enriches the target sequence under isothermal conditions. The resulting amplicon is then tested by the Cas12a-crRNA ribonucleoprotein complex. Only when the amplified sequence matches the matching crRNA and satisfies the Cas12a activation requirements is Cas12a trans-cleavage activated. RPA therefore provides target increase and signal amplification, whereas Cas12a–crRNA provides sequence-specific recognition of the amplified product, adding an additional verification step after amplification.</p>
-<h3 id="design-3-3-fluorescence-reporting-module" data-toc-level="2" data-source-block="18">3.3 Fluorescence Reporting Module</h3>
+<h3 id="design-3-3-proposed-lbcas12a-expression-construct" data-toc-level="2" data-revision-source="design_LbCas12a_Ecoli_expression_final.docx:22"><strong>3.3 Proposed Design of the LbCas12a Expression Construct</strong></h3>
+<p data-revision-source="design_LbCas12a_Ecoli_expression_final.docx:23">To establish a defined Cas12a effector module for the proposed RPA–CRISPR detection workflow, we propose a recombinant expression construct for LbCas12a (LbCpf1) derived from Lachnospiraceae bacterium ND2006. Starting from its 1246-amino-acid sequence, reverse translation and synonymous codon optimization for Escherichia coli would be used to generate a sequence suitable for heterologous expression while preserving the amino acid sequence.</p>
+<p data-revision-source="design_LbCas12a_Ecoli_expression_final.docx:25">The construct, provisionally designated pET28a-TEV-LbCas12a, is planned around a pET28a-derived backbone and a T7/lac-regulated expression cassette. Its proposed elements comprise a ribosome-binding region, an N-terminal His₆ tag, a TEV protease cleavage site, the codon-optimized LbCas12a CDS, and a downstream T7 terminator. The His₆ tag would facilitate subsequent Ni-NTA affinity purification, while the TEV cleavage site would permit optional removal of the fusion tag.</p>
+<p data-revision-source="design_LbCas12a_Ecoli_expression_final.docx:26">This expression construct is designed to support the recombinant production of LbCas12a in Escherichia coli BL21(DE3), a host compatible with the T7-based expression system. Following induction, the His₆-tagged LbCas12a protein would be recovered and purified using Ni-NTA affinity chromatography, with optional removal of the affinity tag through TEV protease cleavage. The identity and purity of the recombinant protein would be assessed, while its functional activity would be evaluated through crRNA-guided, target-dependent cleavage of a fluorescent ssDNA reporter, with appropriate negative controls to assess background activity. Following successful validation, LbCas12a would be assembled with pathogen-specific crRNAs into ribonucleoprotein (RNP) complexes for integration into the RPA–CRISPR/Cas12a detection platform. This proposed workflow provides a testable connection between molecular construct design, recombinant protein production, and downstream diagnostic application.</p>
+<h3 id="design-3-3-fluorescence-reporting-module" data-toc-level="2" data-source-block="18">3.4 Fluorescence Reporting Module</h3>
 <p data-source-block="19">The reporting layer uses a single-stranded DNA fluorescence reporter that can be cleaved by activated Cas12a. In the intact reporter, the fluorophore and quencher remain close together and fluorescence stays low. Once Cas12a is activated, trans-cleavage separates the fluorophore from the quencher, producing a fluorescence signal that can be captured by the optical module.</p>
 </section>
 <section class="lab-section research-section" data-observe-section>
@@ -270,13 +292,13 @@
 </section>
 <section class="lab-section research-section" data-observe-section>
 <details class="reference-fold research-reference" id="design-references"><summary><span data-toc-level="1" data-source-block="52">References</span></summary>
-<p data-source-block="53">1.GBD 2023 Lower Respiratory Infections and Antimicrobial Resistance Collaborators. Global burden of lower respiratory infections and aetiologies, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023. Lancet Infect Dis. 2026;26(4):343-361. doi:10.1016/S1473-3099(25)00689-9. PMID:41412141.</p>
-<p data-source-block="54">2.Lim J, Koprowski K, Stavins R, Xuan N, Hoang TH, Baek J, et al. Point-of-Care Multiplex Detection of Respiratory Viruses. ACS Sens. 2024;9(8):4058-4068. doi:10.1021/acssensors.4c00992. PMID:39101394.</p>
-<p data-source-block="55">3.Lin M, Qiu Z, Hao M, Qi W, Zhang T, Shen Y, et al. Cas12a Cis-cleavage mediated lateral flow assay enables multiplex and ultra-specific nucleic acid detection. Nat Commun. 2025;16(1):5597. doi:10.1038/s41467-025-60917-9. PMID:40593618.</p>
-<p data-source-block="56">4.Chen Y, Wang X, Zhang J, Jiang Q, Qiao B, He B, et al. Split crRNA with CRISPR-Cas12a enabling highly sensitive and multiplexed detection of RNA and DNA. Nat Commun. 2024;15(1):8342. doi:10.1038/s41467-024-52691-x. PMID:39333528.</p>
-<p data-source-block="57">5.Liu H, Yin H, Xiu L, Wu W, Hu Q, Xia Y, et al. One-Pot Isothermal Nucleic Acid Amplification Assisted CRISPR/Cas Detection Technology: Challenges, Strategies, and Perspectives. Adv Sci (Weinh). 2025;12(37). doi:10.1002/advs.202506716. PMID:40884263.</p>
-<p data-source-block="58">6.Cheng ZH, Luo XY, Yu SS, Min D, Zhang SX, Li XF, et al. Tunable control of Cas12 activity promotes universal and fast one-pot nucleic acid detection. Nat Commun. 2025;16(1):1166. doi:10.1038/s41467-025-56516-3. PMID:39885211.</p>
-<p data-source-block="59">7.Huang B, Guo L, Yin H, Wu Y, Zeng Z, Xu S, et al. Deep learning enhancing guide RNA design for CRISPR/Cas12a-based diagnostics. iMeta. 2024;3(4). doi:10.1002/imt2.214. PMID:39135699.</p>
+<p data-source-block="53" class="research-reference-entry">[1] GBD 2023 Lower Respiratory Infections and Antimicrobial Resistance Collaborators. Global burden of lower respiratory infections and aetiologies, 1990-2023: a systematic analysis for the Global Burden of Disease Study 2023. Lancet Infect Dis. 2026;26(4):343-61. doi: 10.1016/S1473-3099(25)00689-9.</p>
+<p data-source-block="54" class="research-reference-entry">[2] Lim J, Koprowski K, Stavins R, Xuan N, Hoang TH, Baek J, et al. Point-of-care multiplex detection of respiratory viruses. ACS Sens. 2024;9(8):4058-68. doi: 10.1021/acssensors.4c00992.</p>
+<p data-source-block="55" class="research-reference-entry">[3] Lin M, Qiu Z, Hao M, Qi W, Zhang T, Shen Y, et al. Cas12a cis-cleavage mediated lateral flow assay enables multiplex and ultra-specific nucleic acid detection. Nat Commun. 2025;16(1):5597. doi: 10.1038/s41467-025-60917-9.</p>
+<p data-source-block="56" class="research-reference-entry">[4] Chen Y, Wang X, Zhang J, Jiang Q, Qiao B, He B, et al. Split crRNA with CRISPR-Cas12a enabling highly sensitive and multiplexed detection of RNA and DNA. Nat Commun. 2024;15(1):8342. doi: 10.1038/s41467-024-52691-x.</p>
+<p data-source-block="57" class="research-reference-entry">[5] Liu H, Yin H, Xiu L, Wu W, Hu Q, Xia Y, et al. One-pot isothermal nucleic acid amplification assisted CRISPR/Cas detection technology: challenges, strategies, and perspectives. Adv Sci (Weinh). 2025;12(37):e06716. doi: 10.1002/advs.202506716.</p>
+<p data-source-block="58" class="research-reference-entry">[6] Cheng ZH, Luo XY, Yu SS, Min D, Zhang SX, Li XF, et al. Tunable control of Cas12 activity promotes universal and fast one-pot nucleic acid detection. Nat Commun. 2025;16(1):1166. doi: 10.1038/s41467-025-56516-3.</p>
+<p data-source-block="59" class="research-reference-entry">[7] Huang B, Guo L, Yin H, Wu Y, Zeng Z, Xu S, et al. Deep learning enhancing guide RNA design for CRISPR/Cas12a-based diagnostics. iMeta. 2024;3(4):e214. doi: 10.1002/imt2.214.</p>
 </details>
 </section>
 </article>

@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-13",
+  "manuals": [
+    {
+      "generation": 1,
+      "source": "C:\\Users\\UserTech\\Desktop\\1.0 说明书.pdf",
+      "target": "public/software-resources/software-user-guide-first-generation.pdf",
+      "pages": 4,
+      "bytes": 1612352,
+      "sha256": "c2592302a142dd96925c7c81fa5331087e1dba30346a233628ef597a61e51b6c",
+      "original_bytes_preserved": true,
+      "cover": "assets/software/images/user-manual-1-cover.webp",
+      "cover_source_page": 1,
+      "cover_size": [
+        614,
+        1000
+      ],
+      "same_as_hardware_manual": true
+    },
+    {
+      "generation": 2,
+      "source": "C:\\Users\\UserTech\\Desktop\\2.0说明书.pdf",
+      "target": "public/software-resources/software-user-guide-second-generation.pdf",
+      "pages": 5,
+      "bytes": 2369164,
+      "sha256": "09c1797cebc139cf2a66875a6bde2a7abc88501d91dff28a5d7aa728df01533a",
+      "original_bytes_preserved": true,
+      "cover": "assets/software/images/user-manual-2-cover.webp",
+      "cover_source_page": 1,
+      "cover_size": [
+        614,
+        1000
+      ],
+      "same_as_hardware_manual": true
+    }
+  ],
+  "layout": "Two illustrated cover cards on desktop, one column on phones; original PDF preview and download, matching APK links retained.",
+  "supersedes": "Software eight-page manuals at the same stable URLs. Old review/generation scripts and manifests are historical and must not overwrite these originals.",
+  "source_issues": [
+    "Second-generation supplied PDF cover retains first-generation dimensions.",
+    "Second-generation supplied PDF page 2 repeats part of Before you begin."
+  ],
+  "source_issues_handling": "Original PDFs are unchanged; existing Hardware material gaps remain for 00 and the author."
+}
