@@ -1,5 +1,51 @@
-# Account binding pending; no GitHub identities have been invented.
-# Fill .github/owners.json and run node scripts/configure-codeowners.mjs.
-# Until then, 00 owns shared components and 10 owns build/deployment by policy.
-# This commented file does not enable GitHub's required code-owner reviews.
-# See CONTRIBUTING.md and docs/COLLABORATION_SETUP.md.
+# Generated from owners.json; last matching pattern wins.
+* @lytsb666
+/homepage/ @lytsb666
+/样式/home-story.js @lytsb666
+/样式/homepage-sequence.css @lytsb666
+/a*/home-story/ @lytsb666
+/Team/ @lytsb666
+/样式/member.css @lytsb666
+/样式/member.js @lytsb666
+/Project/ @lytsb666
+/Wet-lab/ @lytsb666
+/Instrument/model.html @lytsb666
+/样式/drylab.css @lytsb666
+/样式/model-revision.* @lytsb666
+/样式/parts-page.* @lytsb666
+/样式/measurement.css @lytsb666
+/样式/protocol.* @lytsb666
+/assets/model/ @lytsb666
+/Eagagement/iHP.html @lytsb666
+/样式/ihp-* @lytsb666
+/assets/human-practice/ @lytsb666
+/Eagagement/education.html @lytsb666
+/样式/education.* @lytsb666
+/assets/education/ @lytsb666
+/Eagagement/inclusity.html @lytsb666
+/样式/inclusivity.* @lytsb666
+/public/inclusivity-resources/ @lytsb666
+/Eagagement/entrepreneurship.html @lytsb666
+/样式/entrepreneurship.* @lytsb666
+/Instrument/hardware.html @lytsb666
+/Instrument/software.html @lytsb666
+/样式/hardware.* @lytsb666
+/样式/software.* @lytsb666
+/assets/software/ @lytsb666
+/public/software-resources/ @lytsb666
+/public/hardware-resources/ @lytsb666
+/package.json @lytsb666
+/package-lock.json @lytsb666
+/vite.config.js @lytsb666
+/.nvmrc @lytsb666
+/worker/ @lytsb666
+/.openai/ @lytsb666
+/scripts/ @lytsb666
+/.github/workflows/ @lytsb666
+/DEPLOYMENT_CLOUDFLARE.md @lytsb666
+/.github/CODEOWNERS @lytsb666
+/.github/owners.json @lytsb666
+/scripts/configure-codeowners.mjs @lytsb666
+/CONTRIBUTING.md @lytsb666
+/docs/COLLABORATION_SETUP.md @lytsb666
+/.gitignore @lytsb666
