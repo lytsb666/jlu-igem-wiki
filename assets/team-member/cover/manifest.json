@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-13",
+  "sources": {
+    "groupPhoto": {
+      "source": "C:\\Users\\UserTech\\Documents\\Tencent Files\\1043105282\\nt_qq\\nt_data\\Pic\\2026-10\\Ori\\d7bb2edbb14a664e944ec63a92d55710.jpg",
+      "sha256": "c48690824c6f071295f8cb015ea1fa29886c16e76b12a244e335c36ff6a21e88"
+    },
+    "leaderList": {
+      "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\temp\\RWTemp\\2026-10\\b101f6cb78252293104820af9d06fdc5\\dbbeea7bbbcc2d92fa836950ab2f7375.png",
+      "sha256": "7ec6a66cfdba289c4531f0735fceaef52ef5eb6aaac99b500c9c558cce1087fd"
+    }
+  },
+  "originalGroupSize": [
+    6000,
+    4000
+  ],
+  "crop": "none; object-fit: contain retains every person",
+  "webCopies": [
+    {
+      "file": "assets/team-member/cover/group-960.webp",
+      "size": [
+        960,
+        640
+      ],
+      "bytes": 72828,
+      "sha256": "095797b54767228044f32b2afbcd6269140823bcf63badb1f5e9703803651ff0"
+    },
+    {
+      "file": "assets/team-member/cover/group-1920.webp",
+      "size": [
+        1920,
+        1280
+      ],
+      "bytes": 176668,
+      "sha256": "f6218650d9192988ede83eea9c24dae21822b5f522630d9e8b299acd9a3ad070"
+    },
+    {
+      "file": "assets/team-member/cover/group-2880.webp",
+      "size": [
+        2880,
+        1920
+      ],
+      "bytes": 300116,
+      "sha256": "f578859ae8f7f7bb4360b71333ef43541ccf4a487d2ee4b6b625747509b1edcc"
+    }
+  ]
+}

@@ -1,4 +1,36 @@
 // Original contribution records preserved; photos mapped from supplied filenames.
+// Presentation instructions are separate from historical department/source data.
+export const memberPresentation = {
+  date: '2026-10-13',
+  leadershipSource: {
+    file: 'assets/team-member/sources/leader-list.png',
+    originalFile: 'D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/temp/RWTemp/2026-10/b101f6cb78252293104820af9d06fdc5/dbbeea7bbbcc2d92fa836950ab2f7375.png',
+    sha256: '7ec6a66cfdba289c4531f0735fceaef52ef5eb6aaac99b500c9c558cce1087fd',
+    decision: 'User supplied this leader order and these responsibilities; department groups and earlier corrections are retained.',
+  },
+  leaders: [
+    { id: 'mo-jin', role: 'Team Leader', rawText: 'Mo Jin,Team leader' },
+    { id: 'jingyi-kang', role: 'Team Leader', rawText: 'Jingyi Kang,Team leader' },
+    { id: 'zhiyuan-jin', role: 'Wet Lab Leader', rawText: 'Zhiyuan Jin,Wet lab leader' },
+    { id: 'ziyan-qin', role: 'Dry Lab Leader', rawText: 'Ziyan Qin,Dry lab leader' },
+    { id: 'yujia-yang', role: 'iHP Leader', rawText: 'Yujia Yang,iHP leader' },
+    { id: 'wenxian-gao', role: 'Education Leader', rawText: 'Wenxian Gao,Education leader' },
+    { id: 'tonghui-yin', role: 'Hardware Leader', rawText: 'Tonghui yin,Hardware leader' },
+    { id: 'xiaojie-meng', role: 'Part Leader', rawText: 'Xiaojie Meng,Part leader' },
+    { id: 'chen-xing', role: 'Visual Design Leader', rawText: 'Chen Xing,Visual design leader' },
+  ],
+  facultyNotes: {
+    'pi-pang-bo': {
+      text: 'Judge for the 2026 iGEM Competition',
+      source: 'Direct user instruction on 2026-10-13; no inferred biography or institutional title.',
+    },
+    'pi-li-jinhua': {
+      text: 'Instructor of the 2025 iGEM Gold Medal-Winning Team with Two Nominations',
+      source: 'Direct user instruction on 2026-10-13; does not create an Instructor section or person.',
+    },
+  },
+}
+
 export const teamMembers = [
   {
     "id": "liuyu-yang",
