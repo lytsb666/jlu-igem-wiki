@@ -1,5 +1,7 @@
 # JLU-SPH Wiki 项目交接
 
+**Software 顶部样式（2026-10-14）**：封面下的 `.sw-intro` 文字、按钮和吉祥物区域统一包在白色圆角卡片中，边框与内边距沿用 Software 正文卡片风格，手机上保留上下排布。原文、插图、浮动互动及两个入口保持。
+
 **Notebook / iHP 显示修复（2026-10-14）**：截图中的异常来自共用样式覆盖，文本仍为正常 UTF-8。封面下介绍框的居中、内边距和段落宽度不能被未分层的 reset 清零；目录当前组统一棕底浅字；Notebook 深色日历沿用浅色文字及金色装饰线。实验记录、日期、日历跳转和 iHP 原稿均保持。
 
 **Model 后续版式要求（2026-10-14）**：Hardware 模块去掉正文上方重复的“Model for Hardware”标题和“Fluorescence Image Analysis for Respiratory Pathogen Detection”副标题，右侧从 Model Background and Analysis Objectives 正文卡片直接开始，与目录顶部对齐。Measurement 首次打开的外围黑线来自浏览器对锚点模块的默认焦点轮廓；仅去掉 `.model-module-panel` 容器轮廓，保留模块按钮、目录和其他控件的键盘交互与焦点提示。

@@ -49,6 +49,10 @@ html:has(body.software-page) { scroll-behavior: smooth; }
   align-items: center;
   gap: clamp(24px, 4vw, 56px);
   margin: 0 0 64px;
+  padding: clamp(22px, 3vw, 42px);
+  border: 1px solid var(--sw-line);
+  border-radius: 18px;
+  background: #ffffff;
 }
 .software-page .sw-intro h2 { margin: 0; }
 .software-page .sw-actions {
@@ -230,7 +234,7 @@ html:has(body.software-page) { scroll-behavior: smooth; }
   .software-page > .image-page-hero { margin-top: 76px; }
   .software-page > .image-page-hero img { height: auto; aspect-ratio: 4 / 5; object-position: center; }
   .software-page > .image-page-hero .image-page-hero__label { bottom: 24px; }
-  .software-page .sw-intro { gap: 28px; margin-bottom: 32px; }
+  .software-page .sw-intro { gap: 28px; margin-bottom: 32px; padding: 24px 18px; }
   .software-page .sw-section { padding: 24px 18px; margin-bottom: 20px; }
   .software-page .sw-section-heading { gap: 12px; flex-wrap: wrap; }
   .software-page .sw-function-grid,
