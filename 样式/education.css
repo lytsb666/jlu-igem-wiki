@@ -171,7 +171,7 @@ button { font: inherit; }
 .edu-toc__progress { position: absolute; top: 0; left: -1px; width: 1px; height: 100%; overflow: hidden; }
 .edu-toc__progress i { display: block; width: 100%; height: 100%; background: linear-gradient(var(--edu-gold), var(--edu-copper)); transform: scaleY(0); transform-origin: top; }
 
-.edu-content { min-width: 0; }
+.edu-content { min-width: 0; container-type: inline-size; }
 .edu-section { position: relative; padding: 0 0 116px; }
 .edu-section + .edu-section { padding-top: 108px; border-top: 1px solid var(--edu-line); }
 .section-number { position: absolute; top: 0; right: 0; margin: 0; color: rgba(154, 103, 66, .14); font-family: "Fraunces", Georgia, serif; font-size: clamp(4.5rem, 9vw, 8rem); line-height: .7; }
@@ -808,6 +808,7 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
 .feedback-controls span { min-width: 48px; color: rgba(255, 255, 255, .58); font-size: .68rem; text-align: center; }
 .feedback-controls b { color: #FFFFFF; }
 .feedback-viewport {
+  position: relative;
   display: flex;
   gap: 18px;
   overflow-x: auto;
@@ -994,4 +995,43 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
   .resource-download-group ul { grid-template-columns: 1fr; }
   .gene-wars-guides { padding: 20px; }
   .gene-wars-guides ul { grid-template-columns: 1fr; }
+}
+
+/* Match the white content frames used by the other wiki pages. */
+.edu-content > :is(.edu-section, .edu-references) {
+  margin: 0 0 32px;
+  padding: clamp(24px, 3vw, 42px) !important;
+  color: var(--edu-forest);
+  background: #FFFFFF;
+  border: 1px solid var(--edu-line) !important;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(111, 78, 55, .08);
+}
+.edu-content > .edu-section > .section-number { top: 24px; right: 24px; color: rgba(154, 103, 66, .3); }
+.edu-content > .edu-section > .section-heading { padding-right: 40px; }
+.edu-content > .continuing-section .edu-copy { color: var(--edu-forest); }
+.edu-content > .continuing-section .section-heading > p { color: #3F4E38; }
+.edu-content > .edu-references h2 { margin: 0 0 18px; }
+.edu-content > .edu-references:last-child { margin-bottom: 0; }
+.edu-content .feedback-card { flex-basis: min(480px, 100%); }
+
+@media (max-width: 560px) {
+  .edu-content > :is(.edu-section, .edu-references) { padding: 22px 18px !important; border-radius: 18px; }
+  .edu-content > .edu-section > .section-number { top: 22px; right: 18px; }
+}
+
+@media (max-width: 360px) {
+  .edu-content > :is(.edu-section, .edu-references) { padding-inline: 16px !important; }
+}
+
+@container (max-width: 740px) {
+  .activity-card,
+  .activity-card:nth-child(even),
+  .dbtl-experience,
+  .community-grid,
+  .gene-wars-guides { grid-template-columns: 1fr; }
+  .activity-gallery,
+  .activity-card:nth-child(even) .activity-gallery,
+  .activity-card:nth-child(even) .activity-card__body { grid-column: 1; grid-row: auto; }
+  .community-card { min-height: auto; }
 }

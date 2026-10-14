@@ -835,6 +835,28 @@
     "horizontal_page_overflow_px": 0,
     "runtime_errors": [],
     "failed_resource_responses": [],
-    "shared_navigation_and_footer": "Preserved"
+    "shared_navigation_and_footer": "Preserved",
+    "white_content_frames": {
+      "count": 10,
+      "background": "#FFFFFF",
+      "includes": "Nine numbered content sections and the references section",
+      "tested_widths": [
+        320,
+        375,
+        390,
+        768,
+        900,
+        901,
+        1024,
+        1100,
+        1280,
+        1440
+      ],
+      "horizontal_overflow_px": 0,
+      "responsive_cards": "Activity galleries, community cards and DBTL panels adapt to available content width",
+      "feedback_cards": "All five active cards remain fully visible at every tested width; viewport positions are relative to the carousel",
+      "visual_review": "Desktop and 390px screenshots inspected",
+      "normal_motion_keyboard": "Left/Right/Home/End feedback controls and mobile photo dialog verified"
+    }
   }
 }
