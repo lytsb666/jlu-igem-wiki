@@ -38,7 +38,7 @@
     inset: auto auto 44px clamp(24px, 6vw, 88px) !important;
     z-index: 2 !important;
     display: block !important;
-    width: 50% !important;
+    width: 38% !important;
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -73,17 +73,22 @@
     inset: auto clamp(24px, 4vw, 64px) 44px auto !important;
     z-index: 2 !important;
     display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-end !important;
-    align-items: flex-end !important;
+    flex-flow: row nowrap !important;
+    justify-content: safe flex-end !important;
+    align-items: stretch !important;
     gap: 12px !important;
-    width: min(500px, 39%) !important;
+    width: max-content !important;
+    max-width: calc(50% - 24px) !important;
     margin: 0 !important;
     padding: 0 !important;
     list-style: none !important;
   }
   :root:root body .wiki-headpage .lab-cover-note > span {
-    display: block !important;
+    display: flex !important;
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
     padding: 13px 19px !important;
     color: #fffaf5 !important;
     background: rgba(0, 0, 0, .86) !important;
@@ -131,6 +136,23 @@
   }
   :root:root body .edu-cover-context .edu-stats { margin-top: 24px; }
   :root:root body .edu-cover-context .edu-stats dt { color: #6f4e37 !important; }
+  @media (max-width: 1200px) {
+    :root:root body .wiki-headpage .wiki-headpage__title {
+      width: calc(100% - 2 * clamp(24px, 6vw, 88px)) !important;
+    }
+    :root:root body .wiki-headpage .lab-cover-note {
+      inset: auto 24px 150px auto !important;
+      max-width: calc(100% - 48px) !important;
+      overflow-x: auto !important;
+      overscroll-behavior-x: contain;
+      scrollbar-width: thin;
+      padding-bottom: 6px !important;
+    }
+    :root:root body .wiki-headpage .lab-cover-note > span {
+      flex-shrink: 0 !important;
+      white-space: nowrap !important;
+    }
+  }
   @media (max-width: 680px) {
     :root:root body .wiki-headpage { height: 460px !important; }
     :root:root body .wiki-headpage .wiki-headpage__title {
@@ -140,6 +162,7 @@
     :root:root body .wiki-headpage .lab-cover-note {
       inset: auto 20px 170px auto !important;
       width: calc(100% - 40px) !important;
+      max-width: calc(100% - 40px) !important;
       gap: 8px !important;
     }
     :root:root body .wiki-headpage .lab-cover-note > span {
