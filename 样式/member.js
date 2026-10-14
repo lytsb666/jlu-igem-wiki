@@ -90,7 +90,8 @@ function contribution(person) {
 }
 
 function draw() {
-  const avatar = parseFloat(getComputedStyle(page).getPropertyValue('--team-avatar'))
+  if (!buttons.length) return
+  const avatar = buttons[0].querySelector('.member-photo').getBoundingClientRect().width
   buttonWidth = avatar + 32
   pitch = avatar + 48
   const width = carousel.clientWidth, origin = (width - buttonWidth) / 2
@@ -223,6 +224,9 @@ function staticPerson(person, isAdvisor = false) {
   const card = element('article', 'team-static-person')
   card.dataset.memberId = person.id
   if (isAdvisor) {
+    card.classList.add('team-advisor-card')
+    const rotor = element('div', 'team-advisor-rotor')
+    const front = element('div', 'team-advisor-front')
     const button = element('button', 'team-advisor-photo')
     button.type = 'button'
     button.setAttribute('aria-label', `View ${person.name}'s profile`)
@@ -231,26 +235,37 @@ function staticPerson(person, isAdvisor = false) {
     button.append(photo(person))
     const reading = element('section', 'team-advisor-reading')
     reading.id = `advisor-profile-${person.id}`
-    reading.hidden = true
+    reading.inert = true
+    reading.setAttribute('aria-hidden', 'true')
     const back = element('button', 'team-advisor-return', '↶ Back to photo')
     back.type = 'button'
-    reading.append(back, biography(person), contribution(person))
+    reading.append(back, element('h3', '', person.name), biography(person), contribution(person))
     const close = () => {
-      reading.hidden = true
+      card.classList.remove('is-flipped')
+      reading.inert = true
+      reading.setAttribute('aria-hidden', 'true')
+      front.inert = false
+      front.removeAttribute('aria-hidden')
       button.setAttribute('aria-expanded', 'false')
       openAdvisor = null
       button.focus({ preventScroll: true })
     }
     back.addEventListener('click', close)
     button.addEventListener('click', () => {
-      if (!reading.hidden) { close(); return }
+      if (card.classList.contains('is-flipped')) { close(); return }
       if (openAdvisor) openAdvisor.close()
-      reading.hidden = false
+      card.classList.add('is-flipped')
+      front.inert = true
+      front.setAttribute('aria-hidden', 'true')
+      reading.inert = false
+      reading.removeAttribute('aria-hidden')
       button.setAttribute('aria-expanded', 'true')
       openAdvisor = { close }
       back.focus({ preventScroll: true })
     })
-    card.append(button, element('h3', '', person.name), reading)
+    front.append(button, element('h3', '', person.name))
+    rotor.append(front, reading)
+    card.append(rotor)
   } else {
     card.append(photo(person), element('h3', '', person.name))
     const note = memberPresentation.facultyNotes[person.id]

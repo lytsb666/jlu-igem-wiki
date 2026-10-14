@@ -36,15 +36,17 @@
 .model-revision-page .model-equation > math:last-child { margin-bottom: 0; }
 .model-revision-page .model-equation > br { display: none; }
 .model-revision-page .model-equation-row {
-  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
   box-sizing: border-box;
   width: max-content;
-  min-width: 100%;
-  padding-inline: 24px;
+  min-width: 0;
+  margin-inline: auto;
 }
 .model-revision-page .model-equation-row + .model-equation-row { margin-top: 1.25rem; }
-.model-revision-page .model-equation-row math { margin-block: 0; }
-.model-revision-page .model-equation-label { position: absolute; left: 0; top: .3em; }
+.model-revision-page .model-equation-row math { margin: 0; }
+.model-revision-page .model-equation-label { flex: 0 0 auto; white-space: nowrap; }
 .model-revision-page .article-flow p math { vertical-align: middle; }
 /* Match the shared math font and let its fractions and scripts retain MathML layout. */
 @layer wiki-format {
@@ -52,12 +54,12 @@
 }
 .model-revision-page .drylab-code-fold pre {
   margin: 0;
-  padding: 22px;
+  padding: 18px;
   color: #edf2fa;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   tab-size: 4;
-  font-size: 15pt;
+  font-size: 13pt;
   line-height: 1.4;
 }
 .model-revision-page .drylab-code-fold code { white-space: pre-wrap; color: inherit; }
@@ -161,7 +163,7 @@
   font-weight: 700;
   text-align: center;
 }
-.model-revision-page .model-terminal { border: 1px solid #242424; background: #080808; box-shadow: none; border-radius: 10px; }
+.model-revision-page .model-terminal { width: min(90%, 780px); margin: 28px auto; border: 1px solid #242424; background: #080808; border-radius: 14px; overflow: hidden; }
 .model-revision-page .model-terminal-title { padding: 16px 22px; margin: 0; border-bottom: 1px solid #303030; background: #080808; color: #eee; }
 .model-revision-page .model-terminal .code-window { margin: 0; padding: 0; background: #080808; box-shadow: none; border: 0; }
 .model-revision-page .model-terminal :is(pre, code) { background: #080808; color: #eee; }
@@ -172,3 +174,44 @@
 .model-revision-page .drylab-table-wrap { overflow-x: auto; }
 .model-revision-page .model-abbreviation-table { min-width: 460px; }
 .model-revision-page .model-rate-table { min-width: 640px; }
+
+/* Close-fit frames crop only each schematic's exterior white canvas. The
+   source diagrams, their colored backgrounds and full-size links stay intact. */
+.model-revision-page .model-figure__link {
+  display: block; width: min(100%, 860px); margin-inline: auto;
+  border: 1px solid #9a6742; border-radius: 14px; overflow: hidden;
+  box-sizing: border-box; padding: 0; background: transparent;
+}
+.model-revision-page .model-result-figure .model-figure__link { box-sizing: content-box; width: min(100%, 373.2216px); }
+.model-revision-page .model-mechanism {
+  position: relative;
+  aspect-ratio: var(--model-crop-ratio);
+}
+.model-revision-page .model-mechanism-01 { --model-crop-ratio: 924 / 616; --model-crop-width: 100.8658%; --model-crop-left: -.8658%; --model-crop-top: -1.2987%; border-color: #bd731f; }
+.model-revision-page .model-mechanism-02 { --model-crop-ratio: 950 / 653; --model-crop-width: 100.7368%; --model-crop-left: -.7368%; --model-crop-top: -1.5314%; border-color: #3f662d; }
+.model-revision-page .model-mechanism-03 { --model-crop-ratio: 986 / 620; --model-crop-width: 101.0142%; --model-crop-left: -1.0142%; --model-crop-top: -1.9355%; border-color: #355e83; }
+.model-revision-page .model-mechanism-04 { --model-crop-ratio: 875 / 571; --model-crop-width: 101.1429%; --model-crop-left: -1.1429%; --model-crop-top: -1.9264%; border-color: #4a344f; border-radius: 3% / 4.6%; }
+.model-revision-page .model-mechanism img {
+  position: absolute; top: var(--model-crop-top); left: var(--model-crop-left);
+  width: var(--model-crop-width); max-width: none; height: auto;
+  max-height: none; margin: 0; border-radius: 0;
+}
+@layer wiki-format {
+  :root body.model-revision-page main :is(.model-figure__link, .model-terminal) {
+    box-shadow: 0 12px 28px rgba(74,45,28,.16) !important;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  :root body.model-revision-page main .model-figure .model-figure__link img {
+    box-shadow: none !important; transform: none !important;
+    /* Keep the individual translate through CSS compilation: the shared
+       hover rule uses this property separately from transform. */
+    translate: var(--model-inner-translate, 0px 0px) !important;
+  }
+  :root body.model-revision-page main :is(.model-figure__link, .model-terminal):is(:hover, :focus-visible, :focus-within) {
+    transform: translateY(-4px); box-shadow: 0 18px 36px rgba(74,45,28,.24) !important;
+  }
+}
+@media (max-width: 680px) { .model-revision-page .model-terminal { width: 100%; } }
+@media (prefers-reduced-motion: reduce) {
+  :root body.model-revision-page main :is(.model-figure__link, .model-terminal) { transition: none; transform: none !important; }
+}

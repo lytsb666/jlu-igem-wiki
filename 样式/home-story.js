@@ -17,6 +17,22 @@ if (story) {
   const coverKeyframes = [...story.querySelectorAll('.cover-keyframe')]
   const coverFrameReady = coverKeyframes.map(image => image.complete && image.naturalWidth > 0)
   const chapters = [...story.querySelectorAll('[data-chapter]')]
+  // Neighboring scenes meet at a shared tone, feathered over their own art.
+  // Separate decoration avoids replacing scene-specific background layers.
+  const seamTones = ['#3b3025', '#493422', '#342331', '#4c494b', '#abb0af', '#c7b7a2', '#827c63', '#6f4e37']
+  chapters.forEach((chapter, index) => {
+    const seams = document.createElement('div')
+    seams.className = 'home-scene-seams'
+    seams.setAttribute('aria-hidden', 'true')
+    seams.style.setProperty('--seam-entry', seamTones[index])
+    seams.style.setProperty('--seam-exit', seamTones[index + 1])
+    chapter.append(seams)
+  })
+  const worldSeam = document.createElement('div')
+  worldSeam.className = 'home-scene-seams home-scene-seams--exit'
+  worldSeam.setAttribute('aria-hidden', 'true')
+  worldSeam.style.setProperty('--seam-exit', seamTones[0])
+  worldScene.append(worldSeam)
   const frame = story.querySelector('.world-frame-overlay')
   const progressIndicator = story.querySelector('.home-story-progress')
   const progressOutput = progressIndicator?.querySelector('output')

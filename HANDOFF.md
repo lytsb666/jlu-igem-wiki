@@ -1,5 +1,11 @@
 # JLU-SPH Wiki 项目交接
 
+**2026-10-14 最新授权优先**：用户明确要求完成 Team / Measurement / Homepage / Model 本轮修改后上传仓库并更新网站，覆盖下文 10 月 13 日仅本地预览、等待确认的历史门槛。按所有者本人授权的直接验收流程保留 PR、等待 `wiki-build` 通过后合并，再通过现有固定项目 `jlu-igem-wiki-preview` 手动发布。自动发布开关不变；只部署构建并检查通过的 `dist/client`。主控分支以实际 Git 状态为准，本轮继续使用 `feat/00-preview-format-20261013`，保留所有历史整合成果及原未跟踪材料。
+
+本轮完成：Bo Pang 说明改为 `Judge for iGEM Competition`；Haoyang Liu 简介去掉误加的 `Quote：` 标签，独立 quote 字段原已为空；PI / Secondary PI 展开为全称；Team 局部放大照片、文字和资料区、增强按钮状态、九位 Advisors 恢复翻页且完整贡献可自然增高。Measurement Table 2 复制 Model 的 RSV 十组候选表，保留三十条序列与长度且不保留旧质量分数，原来源锚点不变。首页各场景接缝增加渐变。Model 公式标签紧邻公式、三个黑色代码面板缩窄并增加浮动阴影、七张正文图补充贴合图框，四张机制图仅通过 CSS 裁去外围白色画布，原图字节、底色及原图链接保留。详见 `docs/REVISION_REVIEW_20261014.md`。
+
+验证：正式构建 25 页 / 1625 个引用，无缺失、超限或不安全资源；本轮桌面 / 390px / 320px 浏览器 224 项通过，25 入口桌面 / 320px 回归 266 项通过；首页 PCR、卡片与链接交互、Model 图框 / 代码浮动及 Team 按钮状态实测通过；43 人资料、186 项任务、全部肖像、七张科研原图、所有公式与代码通过来源对照。证据在 `D:/JLU—Wiki/IGEMwiki/tmp/revision-20261014/`。发布和 PR 的最终状态以 GitHub、Cloudflare 与实际 Git 为准。
+
 **当前待用户验收的本地预览（2026-10-13）**：用户要求整合最新改动后完成十二项全站展示调整，先提供可预览网站，确认后再上传。这项明确的验收门槛优先于下文“本人授权修改直接合并”的一般流程。本轮分支 `feat/00-preview-format-20261013`；没有 push、创建 PR 或部署。已整合 03 的 Contribution / Description / Measurement / Safety 新增量、07 Entrepreneurship 新增量、08 Model / Hardware 新增量，以及 01 尚未提交的最新首页图稿和 PCR 交互；其他 worktree 原样保留。公共调整、逐项范围及复验结果见 `docs/PREVIEW_REVIEW_20261013.md`。实际 Git 状态和最新复验文件为准。用户确认前继续保留本地，勿自动更新 GitHub 或 Cloudflare。
 
 **同日本地预览第二轮修正**：按用户最新四张截图，取消顶部导航 / 下拉项 / 目录下划线；首页后两段改直体；正文视频进入画面后尝试带声音播放、离开暂停，浏览器拦截时显示播放按钮；Model 结果图按 Measurement 单图宽度、Parts 质粒图按 Measurement 同图显示规格对齐；通过公共 `numbered-content.css/js` 为 8 个正文入口的 463 个数字步骤 / 条目增加圆形编号、四圆点和自适应圆角内容框。参考文献、目录、表格、日期与章节标题不采用步骤组件，正文与原图文件未修改。桌面 / 手机 25 入口复验及视频播放 / 授权限制复验通过，详见同一验收说明。该轮暂未纳入 02 的独立提交 `9eaedea`；现在已按下述后续授权整合。

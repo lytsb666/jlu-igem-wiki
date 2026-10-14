@@ -21,7 +21,7 @@ export const memberPresentation = {
   ],
   facultyNotes: {
     'pi-pang-bo': {
-      text: 'Judge for the 2026 iGEM Competition',
+      text: 'Judge for iGEM Competition',
       source: 'Direct user instruction on 2026-10-13; no inferred biography or institutional title.',
     },
     'pi-li-jinhua': {
@@ -883,7 +883,7 @@ export const teamMembers = [
       "Dry Lab"
     ],
     "quote": "",
-    "introduction": "Quote：Hi! I’m Haoyang Liu. This is my first iGEM journey. I’m excited to learn, explore, embrace new challenges, and create unforgettable memories with my teammates. See you at the Jamboree!",
+    "introduction": "Hi! I’m Haoyang Liu. This is my first iGEM journey. I’m excited to learn, explore, embrace new challenges, and create unforgettable memories with my teammates. See you at the Jamboree!",
     "generalTasks": [
       "1",
       "4",
