@@ -116,10 +116,10 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 .software-page .sw-card-index { color: var(--sw-accent); font-weight: 700; }
 .software-page .sw-function-card p { margin-bottom: 0; }
 .software-page .sw-data-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; gap: 28px; padding: 0; margin: 20px 0; }
-.software-page .sw-data-flow li { position: relative; padding: 16px 12px; border-top: 3px solid var(--sw-accent); background: #edf3ef; overflow-wrap: anywhere; }
+.software-page .sw-data-flow li { position: relative; padding: 16px 12px; border-top: 3px solid var(--sw-accent); background: #ffffff; overflow-wrap: anywhere; }
 .software-page .sw-data-flow li:not(:last-child)::after { content: "→"; position: absolute; right: -25px; top: 50%; color: var(--sw-accent); transform: translateY(-50%); }
 .software-page .sw-data-flow span { display: block; color: var(--sw-accent); font-weight: 700; margin-bottom: 12px; }
-.software-page .sw-note { padding: 20px 22px; border-left: 4px solid var(--sw-accent); background: #edf3ef; margin: 24px 0; }
+.software-page .sw-note { padding: 20px 22px; border-left: 4px solid var(--sw-accent); background: #ffffff; margin: 24px 0; }
 .software-page .sw-development { list-style: none; padding: 0; margin: 20px 0; }
 .software-page .sw-development > li { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--sw-line); }
 .software-page .sw-stage-number { font-weight: 700; color: var(--sw-accent); }
