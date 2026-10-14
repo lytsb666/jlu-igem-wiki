@@ -61,9 +61,23 @@ for (const [index, entry] of entries.entries()) {
 }
 
 document.querySelectorAll('main a[href^="#"]').forEach(link => {
+  if (link.closest('nav,aside,[data-wiki-reference-number]')) return
   const target = document.getElementById(link.getAttribute('href').slice(1))
   if (!target?.hasAttribute('data-wiki-reference-number')) return
-  if (/^\d+$/.test(link.textContent.trim())) link.textContent = `[${link.textContent.trim()}]`
+  const number = link.textContent.trim().match(/^\[?(\d+)\]?$/)?.[1]
+  if (!number) return
+  let mark = link.closest('sup')
+  if (!mark) {
+    mark = document.createElement('sup')
+    link.before(mark)
+    mark.append(link)
+  }
+  mark.classList.add('wiki-citation-mark')
+  const before = document.createRange(), after = document.createRange()
+  before.selectNodeContents(mark); before.setEndBefore(link)
+  after.selectNodeContents(mark); after.setStartAfter(link)
+  const outsideBrackets = /^\s*\[/.test(before.toString()) && /\]\s*$/.test(after.toString())
+  link.textContent = outsideBrackets ? number : `[${number}]`
   link.classList.add('wiki-citation')
 })
 
@@ -73,8 +87,9 @@ const walker = document.createTreeWalker(document.querySelector('main') || docum
 const texts = []
 while (walker.nextNode()) {
   const node = walker.currentNode
-  if (!node.parentElement.closest('p, li, figcaption, blockquote')) continue
-  if (node.parentElement.closest('a, nav, aside, table, math, pre, code, script, style, [data-wiki-reference-number], .wiki-headpage, .home-story, .team-page')) continue
+  if (!node.parentElement.closest('p,li,figcaption,caption,blockquote,h1,h2,h3,h4,h5,h6,dt,dd')) continue
+  if (node.parentElement.closest('table') && !node.parentElement.closest('caption')) continue
+  if (node.parentElement.closest('a, nav, aside, math, pre, code, script, style, [data-wiki-reference-number], .wiki-citation-mark, .wiki-headpage, .home-story, .team-page')) continue
   if (/\[\d+(?:\s*[,–-]\s*\d+)*\]/.test(node.textContent)) texts.push(node)
 }
 for (const text of texts) {
@@ -82,16 +97,30 @@ for (const text of texts) {
   const numbered = bibliographies.get(scope) || new Map()
   const fragment = document.createDocumentFragment()
   let offset = 0
-  for (const match of text.textContent.matchAll(/\[(\d+)\]/g)) {
-    const destination = numbered.get(Number(match[1]))
-    if (!destination) continue
+  for (const match of text.textContent.matchAll(/\[(\d+(?:\s*[,–-]\s*\d+)*)\]/g)) {
+    if (![...match[1].matchAll(/\d+/g)].some(number => numbered.has(Number(number[0])))) continue
     fragment.append(document.createTextNode(text.textContent.slice(offset, match.index)))
-    const link = document.createElement('a')
-    link.className = 'wiki-citation'
-    link.href = `#${destination}`
-    link.textContent = match[0]
-    link.setAttribute('aria-label', `Reference ${match[1]}`)
-    fragment.append(link)
+    const existingMark = text.parentElement.closest('sup')
+    existingMark?.classList.add('wiki-citation-mark')
+    const mark = document.createElement(existingMark ? 'span' : 'sup')
+    if (!existingMark) mark.className = 'wiki-citation-mark'
+    mark.append(document.createTextNode('['))
+    let numberOffset = 0
+    for (const number of match[1].matchAll(/\d+/g)) {
+      mark.append(document.createTextNode(match[1].slice(numberOffset, number.index)))
+      const destination = numbered.get(Number(number[0]))
+      if (destination) {
+        const link = document.createElement('a')
+        link.className = 'wiki-citation'
+        link.href = `#${destination}`
+        link.textContent = number[0]
+        link.setAttribute('aria-label', `Reference ${number[0]}`)
+        mark.append(link)
+      } else mark.append(document.createTextNode(number[0]))
+      numberOffset = number.index + number[0].length
+    }
+    mark.append(document.createTextNode(']'))
+    fragment.append(mark)
     offset = match.index + match[0].length
   }
   if (offset) {

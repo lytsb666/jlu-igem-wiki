@@ -11,6 +11,7 @@ import './numbered-content.js'
 import './article-video.css'
 import './article-video.js'
 import './headpages.css'
+import './captions.js'
 import './references.js'
 
 const MINIMUM_VISIBLE_TIME = 320

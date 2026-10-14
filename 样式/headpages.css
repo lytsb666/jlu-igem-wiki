@@ -182,6 +182,18 @@
   }
 }
 @layer wiki-typography {
+  :root:root body main .wiki-citation-mark {
+    display: inline !important;
+    font-size: .75em !important;
+    line-height: 0 !important;
+    vertical-align: super !important;
+    white-space: nowrap;
+  }
+  :root:root body main .wiki-citation-mark .wiki-citation {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    vertical-align: baseline !important;
+  }
   @media (max-width: 680px) {
     :root:root body .wiki-headpage .wiki-headpage__title h1 {
       font-size: clamp(28px, 7.8vw, 44px) !important;
