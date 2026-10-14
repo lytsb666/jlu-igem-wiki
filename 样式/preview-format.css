@@ -119,6 +119,7 @@
   :root body main .wiki-table-scroll {
     width: 100%;
     max-width: 100%;
+    margin-block: 1.5rem !important;
     overflow-x: auto;
     overscroll-behavior-x: contain;
   }

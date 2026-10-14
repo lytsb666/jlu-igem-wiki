@@ -1,0 +1,49 @@
+{
+  "source": "Current user-confirmed Measurement Table 2 (data-source-block 45)",
+  "target": "Measurement Table 4 (data-source-block 57)",
+  "candidateOrder": [
+    1,
+    2,
+    3,
+    10
+  ],
+  "rows": [
+    {
+      "candidate": 1,
+      "rows": [
+        "<tr><th scope=\"row\" colspan=\"3\">Candidate 1</th></tr>",
+        "<tr><th scope=\"row\">Forward primer F</th><td>ACTGTGTATAGCAGCACTTGTAATAACCAA</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">Reverse primer R</th><td>TGCAATGCCAAAGTGCACAAAAACATCTAT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">crRNA spacer sequence</th><td>GTTATTACAAGTGCTGCTA</td><td>19</td></tr>"
+      ]
+    },
+    {
+      "candidate": 2,
+      "rows": [
+        "<tr><th scope=\"row\" colspan=\"3\">Candidate 2</th></tr>",
+        "<tr><th scope=\"row\">Forward primer F</th><td>ACCATATATTGAACAATCCAAAAGCATCAT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">Reverse primer R</th><td>ATTTTCTTTGAGTTGCTCTGCATATGCTTT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">crRNA spacer sequence</th><td>CTAACTTCTCAAGTGTGGTCCT</td><td>22</td></tr>"
+      ]
+    },
+    {
+      "candidate": 3,
+      "rows": [
+        "<tr><th scope=\"row\" colspan=\"3\">Candidate 3</th></tr>",
+        "<tr><th scope=\"row\">Forward primer F</th><td>ACCATATATTGAACAATCCAAAAGCATCAT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">Reverse primer R</th><td>ATTTTCTTTGAGTTGCTCTGCATATGCTTT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">crRNA spacer sequence</th><td>GCTGCATCATAAAGATCCTG</td><td>20</td></tr>"
+      ]
+    },
+    {
+      "candidate": 10,
+      "rows": [
+        "<tr><th scope=\"row\" colspan=\"3\">Candidate 10</th></tr>",
+        "<tr><th scope=\"row\">Forward primer F</th><td>TATATTGAACAATCCAAAAGCATCATTGCT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">Reverse primer R</th><td>ATTTTCTTTGAGTTGCTCTGCATATGCTTT</td><td>30</td></tr>",
+        "<tr><th scope=\"row\">crRNA spacer sequence</th><td>GCTGCATCATAAAGATCCTGGT</td><td>22</td></tr>"
+      ]
+    }
+  ],
+  "qualityScores": "Old scores removed; no corresponding scores occur in the confirmed Table 2."
+}

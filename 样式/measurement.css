@@ -482,6 +482,10 @@
 .measurement-related-pages__mobile { display: none; }
 :root body.research-manuscript main .measurement-process-links { width: min(100%, 38rem); }
 @layer wiki-format {
+  :root:root body.measurement-page main a.measurement-process-link,
+  :root:root body.measurement-page main a.measurement-process-link :is(strong, span) {
+    text-decoration: none !important;
+  }
   :root body.measurement-page main .measurement-process-link strong { color: #fffaf5 !important; }
   :root body.measurement-page main .measurement-process-link > span { color: var(--process-color) !important; }
   :root body.measurement-page main td.measurement-result--positive { background: #e3f2d9 !important; text-align: center !important; }

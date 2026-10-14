@@ -1,5 +1,7 @@
 # JLU-SPH Wiki 项目交接
 
+**用户后续要求（2026-10-14）**：Measurement Table 4 已按当前 Table 2 的 Candidate 1 / 2 / 3 / 10 同步十二条序列、长度和组件名称，去掉旧质量分数；截图中的四个机制跳转条目去掉文字及编号下划线，保留原颜色、悬停、键盘和跨页跳转。新增全站标准：表格滚动容器上下留出 `1.5rem` 空白，不能紧贴前后内容。用户要求不要反复过度验证：根据本轮影响范围做必要构建和针对性检查，通过后停止重复全站回归。
+
 **2026-10-14 最新本地整合**：00 从已发布 main `d763a43` 建立 `feat/00-headpages-education-20261014`，仅整合 08 的 `a19a7a3` 与 05 的 `48198bf` / `8965820` 新增量。随后按用户新要求统一 18 个静态子页面封面和参考文献链接、打磨 Education、将 Model 做成 Measurement / Hardware 双模块、加入用户提供的 Hardware Model 完整稿及五条文献，并在 Measurement 第一节之前加入 Engineering 白框。原 Model 内容、Measurement 数据与 Reference 默认收起、Team / Homepage 交互保持，所有未提交材料及其他 worktree 成果保留。详见 `docs/INTEGRATION_REVIEW_20261014.md`。本轮已完成本地构建和浏览器验收，未 push 或更新 Cloudflare；正式构建预览 `http://127.0.0.1:5222/Eagagement/education.html`。接管时实读 GitHub 的 `PAGES_DEPLOY_ENABLED=true`，旧的“自动发布关闭”描述不能作为当前事实，上传前须核对实时配置和当轮授权。
 
 **2026-10-14 最新授权优先**：用户明确要求完成 Team / Measurement / Homepage / Model 本轮修改后上传仓库并更新网站，覆盖下文 10 月 13 日仅本地预览、等待确认的历史门槛。按所有者本人授权的直接验收流程保留 PR、等待 `wiki-build` 通过后合并，再通过现有固定项目 `jlu-igem-wiki-preview` 手动发布。自动发布开关不变；只部署构建并检查通过的 `dist/client`。主控分支以实际 Git 状态为准，本轮继续使用 `feat/00-preview-format-20261013`，保留所有历史整合成果及原未跟踪材料。
