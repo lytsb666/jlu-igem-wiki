@@ -38,4 +38,6 @@ Hardware Model 的段落、图号、裁切、图片哈希与五条文献在 `ass
 
 ## 后续发布
 
+后续按用户提供的 1831×859 PNG 替换 Description `#description-figure-18` 与 Measurement `#measurement-figure-4` 的第一张正文原理图，两页共享原始图片，打开原图入口同步更新，原图注、锚点和显示宽度保留。PNG 哈希及替换位置见 `assets/research/2026-10-14-rpa-crispr/source-manifest.json`。正式构建当前为 726 文件、25 入口、1729 引用，缺失 / 超限 / 不安全资源为零；两页在 1440 / 390 / 320px 的六个显示、实际解码及原图 HTTP 字节哈希检查通过。证据在 `D:/JLU—Wiki/IGEMwiki/tmp/rpa-crispr-image-20261014/`。
+
 公网当前基线仍为此前的 `d763a43`。后续用户授权上传时，按所有者直接验收规则保留 PR，等待 `wiki-build`，采用 merge commit，再从干净 main 的发布 worktree 更新固定 `jlu-igem-wiki-preview` 项目。接管时读取的 GitHub `PAGES_DEPLOY_ENABLED` 为 `true`，与旧文档中的关闭记录不同；上传前检查实时配置与当轮发布范围，不能声称自动发布已经关闭。
