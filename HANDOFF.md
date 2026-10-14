@@ -1,5 +1,7 @@
 # JLU-SPH Wiki 项目交接
 
+**Model 后续版式要求（2026-10-14）**：Hardware 模块去掉正文上方重复的“Model for Hardware”标题和“Fluorescence Image Analysis for Respiratory Pathogen Detection”副标题，右侧从 Model Background and Analysis Objectives 正文卡片直接开始，与目录顶部对齐。Measurement 首次打开的外围黑线来自浏览器对锚点模块的默认焦点轮廓；仅去掉 `.model-module-panel` 容器轮廓，保留模块按钮、目录和其他控件的键盘交互与焦点提示。
+
 **Headpage 最新全站要求（2026-10-14）**：右下角的黑色特点圆框统一单排横向排布，不允许堆成多行。桌面留出标题与圆框各自的空间，小屏空间不足时在封面内横向滑动，保留原字号、文字与圆框样式。
 
 **用户后续要求（2026-10-14）**：Measurement Table 4 已按当前 Table 2 的 Candidate 1 / 2 / 3 / 10 同步十二条序列、长度和组件名称，去掉旧质量分数；截图中的四个机制跳转条目去掉文字及编号下划线，保留原颜色、悬停、键盘和跨页跳转。新增全站标准：表格滚动容器上下留出 `1.5rem` 空白，不能紧贴前后内容。用户要求不要反复过度验证：根据本轮影响范围做必要构建和针对性检查，通过后停止重复全站回归。
