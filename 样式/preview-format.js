@@ -175,6 +175,16 @@ function enhanceLinks() {
     if (link.closest('.wiki-directory, .team-jumps, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
     link.style.setProperty('--wiki-link-size', `${(parseFloat(getComputedStyle(link).fontSize)||16)+2}px`)
     link.classList.add('wiki-jump-link')
+    // Keep inline button labels and text arrows in one text run so the flex
+    // gap cannot split the underline. Existing nodes and links stay intact.
+    if (['flex', 'inline-flex'].includes(getComputedStyle(link).display) && link.children.length &&
+        getComputedStyle(link).textDecorationLine.includes('underline') &&
+        [...link.children].every(child => child.matches('span,strong,b,em,i,small') && !child.querySelector('svg,img,div,p,ul,ol'))) {
+      const label = document.createElement('span')
+      label.className = 'wiki-link-label'
+      label.append(...link.childNodes)
+      link.append(label)
+    }
   })
 }
 
