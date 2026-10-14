@@ -1,5 +1,7 @@
 # JLU-SPH Wiki 项目交接
 
+**Notebook / iHP 显示修复（2026-10-14）**：截图中的异常来自共用样式覆盖，文本仍为正常 UTF-8。封面下介绍框的居中、内边距和段落宽度不能被未分层的 reset 清零；目录当前组统一棕底浅字；Notebook 深色日历沿用浅色文字及金色装饰线。实验记录、日期、日历跳转和 iHP 原稿均保持。
+
 **Model 后续版式要求（2026-10-14）**：Hardware 模块去掉正文上方重复的“Model for Hardware”标题和“Fluorescence Image Analysis for Respiratory Pathogen Detection”副标题，右侧从 Model Background and Analysis Objectives 正文卡片直接开始，与目录顶部对齐。Measurement 首次打开的外围黑线来自浏览器对锚点模块的默认焦点轮廓；仅去掉 `.model-module-panel` 容器轮廓，保留模块按钮、目录和其他控件的键盘交互与焦点提示。
 
 **Headpage 最新全站要求（2026-10-14）**：右下角的黑色特点圆框统一单排横向排布，不允许堆成多行。桌面留出标题与圆框各自的空间，小屏空间不足时在封面内横向滑动，保留原字号、文字与圆框样式。

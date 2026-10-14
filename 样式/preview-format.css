@@ -53,7 +53,12 @@
     display: block !important;
   }
   :root body .wiki-directory .wiki-toc-group.is-current > a {
-    background: #ede2d1 !important;
+    --wiki-ink: #fffaf5;
+    color: #fffaf5 !important;
+    background: #6f4e37 !important;
+  }
+  :root body .wiki-directory .wiki-toc-group.is-current > .wiki-toc-toggle {
+    color: #fffaf5 !important;
   }
   :root body .wiki-directory .engineering-toc-group.is-current > summary {
     --wiki-ink: #fffaf5;
