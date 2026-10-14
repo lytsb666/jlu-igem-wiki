@@ -1,0 +1,541 @@
+{
+  "responsive": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": 0,
+      "large": [
+        {
+          "alt": "Figure 3. Schematic of the ByeGerm 1.0 detection and readout platform.",
+          "height": 585,
+          "maxHeight": "585px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.",
+          "height": 585,
+          "maxHeight": "585px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 12. Overview of the Fluorescent detection mobile app.",
+          "height": 585,
+          "maxHeight": "585px",
+          "objectFit": "contain"
+        }
+      ],
+      "normal": [
+        360,
+        360,
+        360,
+        360,
+        360,
+        360,
+        360,
+        360,
+        235.75,
+        193.3125,
+        360,
+        360,
+        360,
+        360,
+        360,
+        300.21875,
+        360,
+        308.65625,
+        360,
+        360,
+        360
+      ],
+      "panels": [
+        {
+          "left": 425,
+          "width": 451,
+          "label": "A  HI"
+        },
+        {
+          "left": 900,
+          "width": 451,
+          "label": "B  BP"
+        },
+        {
+          "left": 425,
+          "width": 451,
+          "label": "C  SPN"
+        },
+        {
+          "left": 900,
+          "width": 451,
+          "label": "D  RSV"
+        },
+        {
+          "left": 425,
+          "width": 451,
+          "label": "E  hMPV"
+        },
+        {
+          "left": 425,
+          "width": 926,
+          "label": "F  HI · BP · SPN · RSV · hMPV"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": 0,
+      "large": [
+        {
+          "alt": "Figure 3. Schematic of the ByeGerm 1.0 detection and readout platform.",
+          "height": 468,
+          "maxHeight": "468px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.",
+          "height": 468,
+          "maxHeight": "468px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 12. Overview of the Fluorescent detection mobile app.",
+          "height": 468,
+          "maxHeight": "468px",
+          "objectFit": "contain"
+        }
+      ],
+      "normal": [
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        197.46875,
+        161.921875,
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        302.390625,
+        251.46875,
+        302.390625,
+        258.53125,
+        302.390625,
+        302.390625,
+        302.390625
+      ],
+      "panels": [
+        {
+          "left": 420.1875,
+          "width": 375.8125,
+          "label": "A  HI"
+        },
+        {
+          "left": 820,
+          "width": 375.8125,
+          "label": "B  BP"
+        },
+        {
+          "left": 420.1875,
+          "width": 375.8125,
+          "label": "C  SPN"
+        },
+        {
+          "left": 820,
+          "width": 375.8125,
+          "label": "D  RSV"
+        },
+        {
+          "left": 420.1875,
+          "width": 375.8125,
+          "label": "E  hMPV"
+        },
+        {
+          "left": 420.1875,
+          "width": 775.625,
+          "label": "F  HI · BP · SPN · RSV · hMPV"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "width": 900,
+      "height": 1000,
+      "overflow": 0,
+      "large": [
+        {
+          "alt": "Figure 3. Schematic of the ByeGerm 1.0 detection and readout platform.",
+          "height": 600,
+          "maxHeight": "600px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.",
+          "height": 600,
+          "maxHeight": "600px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 12. Overview of the Fluorescent detection mobile app.",
+          "height": 600,
+          "maxHeight": "600px",
+          "objectFit": "contain"
+        }
+      ],
+      "normal": [
+        360,
+        360,
+        360,
+        360,
+        356.84375,
+        360,
+        360,
+        360,
+        198.84375,
+        163.046875,
+        360,
+        360,
+        360,
+        360,
+        360,
+        253.203125,
+        360,
+        260.328125,
+        357.34375,
+        360,
+        360
+      ],
+      "panels": [
+        {
+          "left": 59.5,
+          "width": 378.5,
+          "label": "A  HI"
+        },
+        {
+          "left": 462,
+          "width": 378.5,
+          "label": "B  BP"
+        },
+        {
+          "left": 59.5,
+          "width": 378.5,
+          "label": "C  SPN"
+        },
+        {
+          "left": 462,
+          "width": 378.5,
+          "label": "D  RSV"
+        },
+        {
+          "left": 59.5,
+          "width": 378.5,
+          "label": "E  hMPV"
+        },
+        {
+          "left": 59.5,
+          "width": 781,
+          "label": "F  HI · BP · SPN · RSV · hMPV"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": 0,
+      "large": [
+        {
+          "alt": "Figure 3. Schematic of the ByeGerm 1.0 detection and readout platform.",
+          "height": 391.8125,
+          "maxHeight": "548.6px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.",
+          "height": 387.21875,
+          "maxHeight": "548.6px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 12. Overview of the Fluorescent detection mobile app.",
+          "height": 395.578125,
+          "maxHeight": "548.6px",
+          "objectFit": "contain"
+        }
+      ],
+      "normal": [
+        183.375,
+        196.15625,
+        354.46875,
+        346.640625,
+        148.953125,
+        354.46875,
+        354.46875,
+        244.4375,
+        83,
+        68.046875,
+        210.65625,
+        319.5,
+        183.3125,
+        181.4375,
+        339.6875,
+        105.6875,
+        166.34375,
+        108.65625,
+        149.15625,
+        354.46875,
+        185.8125
+      ],
+      "panels": [
+        {
+          "left": 32,
+          "width": 326,
+          "label": "A  HI"
+        },
+        {
+          "left": 32,
+          "width": 326,
+          "label": "B  BP"
+        },
+        {
+          "left": 32,
+          "width": 326,
+          "label": "C  SPN"
+        },
+        {
+          "left": 32,
+          "width": 326,
+          "label": "D  RSV"
+        },
+        {
+          "left": 32,
+          "width": 326,
+          "label": "E  hMPV"
+        },
+        {
+          "left": 32,
+          "width": 326,
+          "label": "F  HI · BP · SPN · RSV · hMPV"
+        }
+      ],
+      "brokenImages": []
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "overflow": 0,
+      "large": [
+        {
+          "alt": "Figure 3. Schematic of the ByeGerm 1.0 detection and readout platform.",
+          "height": 307.6875,
+          "maxHeight": "369.2px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.",
+          "height": 304.0625,
+          "maxHeight": "369.2px",
+          "objectFit": "contain"
+        },
+        {
+          "alt": "Figure 12. Overview of the Fluorescent detection mobile app.",
+          "height": 310.640625,
+          "maxHeight": "369.2px",
+          "objectFit": "contain"
+        }
+      ],
+      "normal": [
+        144,
+        154.03125,
+        238.546875,
+        238.546875,
+        116.96875,
+        238.546875,
+        238.546875,
+        191.953125,
+        65.171875,
+        53.4375,
+        165.421875,
+        238.546875,
+        143.953125,
+        142.484375,
+        238.546875,
+        83,
+        130.625,
+        85.328125,
+        117.125,
+        238.546875,
+        145.90625
+      ],
+      "panels": [
+        {
+          "left": 32,
+          "width": 256,
+          "label": "A  HI"
+        },
+        {
+          "left": 32,
+          "width": 256,
+          "label": "B  BP"
+        },
+        {
+          "left": 32,
+          "width": 256,
+          "label": "C  SPN"
+        },
+        {
+          "left": 32,
+          "width": 256,
+          "label": "D  RSV"
+        },
+        {
+          "left": 32,
+          "width": 256,
+          "label": "E  hMPV"
+        },
+        {
+          "left": 32,
+          "width": 256,
+          "label": "F  HI · BP · SPN · RSV · hMPV"
+        }
+      ],
+      "brokenImages": []
+    }
+  ],
+  "originals": [
+    {
+      "panel": "A",
+      "status": 200,
+      "sha256": "b63f918dc0eb0661eb62042bfe63e9061caca35b050994f0f1a0ae57429d37d7",
+      "originalBytesUnchanged": true
+    },
+    {
+      "panel": "B",
+      "status": 200,
+      "sha256": "e70892f8a5f47a0685d7ff24e2950bb1652a8656847ea39dc9fb69dc3df291bd",
+      "originalBytesUnchanged": true
+    },
+    {
+      "panel": "C",
+      "status": 200,
+      "sha256": "1305735358a958ad927e70b7344ebd5b9f6924508cbce6eaa11975ceb573dafd",
+      "originalBytesUnchanged": true
+    },
+    {
+      "panel": "D",
+      "status": 200,
+      "sha256": "d4a5da89eba1a78c951581a9ac4e536be2e928bc0a7229d55294b67d2e059923",
+      "originalBytesUnchanged": true
+    },
+    {
+      "panel": "E",
+      "status": 200,
+      "sha256": "ab58abe69e8ecbaba68d23e358fe73ccd52500c5802ebd1e6034b5fd7d33faeb",
+      "originalBytesUnchanged": true
+    },
+    {
+      "panel": "F",
+      "status": 200,
+      "sha256": "58ec00b4062a1f58246083d254cdc5929928cf99dadcfa94607dcd81aa029730",
+      "originalBytesUnchanged": true
+    }
+  ],
+  "model": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "presentation": {
+        "image": {
+          "maxWidth": "min(80%, 256px)",
+          "maxHeight": "192px",
+          "objectFit": "contain",
+          "display": "block",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "borderTopWidth": "0px",
+          "boxShadow": "none"
+        },
+        "caption": {
+          "fontFamily": "\"Times New Roman\", Times, serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "textAlign": "center",
+          "color": "rgb(111, 78, 55)",
+          "lineHeight": "20.8px",
+          "marginTop": "12px",
+          "marginBottom": "12px"
+        }
+      },
+      "matchedMeasurement": true,
+      "formulaScrollbarHidden": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "presentation": {
+        "image": {
+          "maxWidth": "min(80%, 256px)",
+          "maxHeight": "192px",
+          "objectFit": "contain",
+          "display": "block",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "borderTopWidth": "0px",
+          "boxShadow": "none"
+        },
+        "caption": {
+          "fontFamily": "\"Times New Roman\", Times, serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "textAlign": "center",
+          "color": "rgb(111, 78, 55)",
+          "lineHeight": "20.8px",
+          "marginTop": "12px",
+          "marginBottom": "12px"
+        }
+      },
+      "matchedMeasurement": true,
+      "formulaScrollbarHidden": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "presentation": {
+        "image": {
+          "maxWidth": "min(80%, 256px)",
+          "maxHeight": "192px",
+          "objectFit": "contain",
+          "display": "block",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "borderTopWidth": "0px",
+          "boxShadow": "none"
+        },
+        "caption": {
+          "fontFamily": "\"Times New Roman\", Times, serif",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "textAlign": "center",
+          "color": "rgb(111, 78, 55)",
+          "lineHeight": "20.8px",
+          "marginTop": "12px",
+          "marginBottom": "12px"
+        }
+      },
+      "matchedMeasurement": true,
+      "formulaScrollbarHidden": true
+    }
+  ],
+  "errors": [],
+  "failedResponses": []
+}

@@ -1,0 +1,203 @@
+/* Shared subpage cover: original artwork, lower-left title and lower-right pills. */
+@layer wiki-format {
+  :root:root body .wiki-headpage {
+    position: relative !important;
+    isolation: isolate;
+    width: 100vw !important;
+    max-width: none !important;
+    height: clamp(380px, 40vw, 620px) !important;
+    min-height: 0 !important;
+    margin: 68px calc(50% - 50vw) 44px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  :root:root body .wiki-headpage > img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    transform: none !important;
+    translate: none !important;
+  }
+  :root:root body .wiki-headpage::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 35%, rgba(0, 0, 0, .62)) !important;
+  }
+  :root:root body .wiki-headpage .wiki-headpage__title {
+    position: absolute !important;
+    inset: auto auto 44px clamp(24px, 6vw, 88px) !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 38% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fffaf5 !important;
+    transform: none !important;
+  }
+  :root:root body .wiki-headpage .wiki-headpage__title :is(h1, p, span, a) {
+    color: #fffaf5 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
+  }
+  :root:root body .wiki-headpage .wiki-headpage__title h1 {
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    letter-spacing: normal !important;
+  }
+  :root:root body .wiki-headpage .wiki-headpage__title h1::after {
+    display: none !important;
+    content: none !important;
+  }
+  :root:root body .wiki-headpage .wiki-headpage__title h1 span {
+    display: inline !important;
+    font-size: inherit !important;
+  }
+  :root:root body .wiki-headpage .wiki-headpage__title > :is(p, span):first-child {
+    display: block;
+    margin: 0;
+    font-weight: 700;
+  }
+  :root:root body .wiki-headpage .lab-cover-note {
+    position: absolute !important;
+    inset: auto clamp(24px, 4vw, 64px) 44px auto !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: safe flex-end !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: max-content !important;
+    max-width: calc(50% - 24px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  :root:root body .wiki-headpage .lab-cover-note > span {
+    display: flex !important;
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    padding: 13px 19px !important;
+    color: #fffaf5 !important;
+    background: rgba(0, 0, 0, .86) !important;
+    border: 1px solid rgba(255, 250, 245, .35) !important;
+    border-radius: 999px !important;
+    font-size: 14pt !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    text-align: center !important;
+  }
+  :root:root body .protocol-main { margin-top: 68px !important; }
+  :root:root body .protocol-main > .wiki-headpage { margin-top: 0 !important; }
+  :root:root body .wiki-headpage :is(.ihp-hero__scroll, .inc-hero__scroll, .edu-hero__scroll) {
+    display: none !important;
+  }
+  :root:root body .wiki-reference-source {
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+  :root:root body .wiki-citation {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    white-space: nowrap;
+  }
+  :root:root body .wiki-headpage-context {
+    box-sizing: border-box;
+    width: var(--wiki-main-width, calc(100% - 48px)) !important;
+    margin: 0 auto 36px !important;
+    padding: 24px 32px !important;
+    color: #6f4e37;
+    background: #fff;
+    border: 1px solid #dfcfbf;
+    border-radius: 20px;
+  }
+  :root:root body .wiki-headpage-context :is(p, h2, dt, dd) {
+    color: #6f4e37 !important;
+  }
+  :root:root body .wiki-headpage-context > p {
+    margin: 0 !important;
+    max-width: none !important;
+    font-size: 12pt !important;
+    line-height: 1.3 !important;
+  }
+  :root:root body .edu-cover-context .edu-hero__actions { margin-top: 20px; }
+  :root:root body .edu-cover-context .edu-hero__actions a {
+    color: #fffaf5 !important;
+    background: #6f4e37 !important;
+    border-color: #6f4e37 !important;
+  }
+  :root:root body .edu-cover-context .edu-stats { margin-top: 24px; }
+  :root:root body .edu-cover-context .edu-stats dt { color: #6f4e37 !important; }
+  @media (max-width: 1200px) {
+    :root:root body .wiki-headpage .wiki-headpage__title {
+      width: calc(100% - 2 * clamp(24px, 6vw, 88px)) !important;
+    }
+    :root:root body .wiki-headpage .lab-cover-note {
+      inset: auto 24px 150px auto !important;
+      max-width: calc(100% - 48px) !important;
+      overflow-x: auto !important;
+      overscroll-behavior-x: contain;
+      scrollbar-width: thin;
+      padding-bottom: 6px !important;
+    }
+    :root:root body .wiki-headpage .lab-cover-note > span {
+      flex-shrink: 0 !important;
+      white-space: nowrap !important;
+    }
+  }
+  @media (max-width: 680px) {
+    :root:root body .wiki-headpage { height: 460px !important; }
+    :root:root body .wiki-headpage .wiki-headpage__title {
+      inset: auto 20px 24px 20px !important;
+      width: auto !important;
+    }
+    :root:root body .wiki-headpage .lab-cover-note {
+      inset: auto 20px 170px auto !important;
+      width: calc(100% - 40px) !important;
+      max-width: calc(100% - 40px) !important;
+      gap: 8px !important;
+    }
+    :root:root body .wiki-headpage .lab-cover-note > span {
+      padding: 10px 14px !important;
+      font-size: 12pt !important;
+    }
+    :root:root body .wiki-headpage-context { padding: 20px !important; }
+    :root:root body .wiki-headpage .wiki-headpage__title > :is(.lab-hero__lead, .ihp-hero__lead, .inc-hero__lead) {
+      display: none !important;
+    }
+  }
+}
+@layer wiki-typography {
+  :root:root body main .wiki-citation-mark {
+    display: inline !important;
+    font-size: .75em !important;
+    line-height: 0 !important;
+    vertical-align: super !important;
+    white-space: nowrap;
+  }
+  :root:root body main .wiki-citation-mark .wiki-citation {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    vertical-align: baseline !important;
+  }
+  @media (max-width: 680px) {
+    :root:root body .wiki-headpage .wiki-headpage__title h1 {
+      font-size: clamp(28px, 7.8vw, 44px) !important;
+      line-height: 1.1 !important;
+    }
+  }
+}

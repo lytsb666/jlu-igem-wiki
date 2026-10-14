@@ -1,3 +1,7 @@
+## 2026-10-14 结果图与 Measurement 一致
+
+本轮只调整 `样式/model-revision.css` 的结果图及图注规则，保留 Model 正文、数据、公式、原始图像与链接。对照本分支只读的 Measurement 页面，在 1440 / 390 / 320 宽度核对居中、比例、宽高上限、无边框阴影、字体字号、加粗、颜色及图注间距一致；完整 Model 展示检查在 1440 / 900 / 390 / 320 通过，公式滚动条继续隐藏。报告见 `presentation-checks-20261014.json` 和 `assets/hardware/review/results-checks-20261014.json`。跨模块最新格式由 00 整合，未改 Measurement 或公共文件。
+
 # S08 Model 排版交接
 
 日期：2026-10-13（Asia/Shanghai）。工作区 `D:/JLU—Wiki/IGEMwiki/worktrees/08-instrument`，分支 `codex/08-instrument`，起始工作区干净；本轮基线 `20e90de1b5304c9b0d2539146bf46d447e36970e`。最终 commit hash 见完成消息及本分支最新提交。未操作主仓库、其他 Agent 分支或自行合并。

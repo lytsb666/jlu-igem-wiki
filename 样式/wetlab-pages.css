@@ -895,6 +895,16 @@ body.wetlab-page {
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
 }
 
+@layer wiki-format {
+  :root body[data-page="notebook"] .notebook-calendar {
+    --wiki-ink: #fffaf5;
+    --wiki-rule: #d4a276;
+  }
+  :root body[data-page="notebook"] .notebook-calendar .section-kicker {
+    color: #e0c1a6 !important;
+  }
+}
+
 .notebook-calendar__header {
   display: flex;
   margin-bottom: 12px;

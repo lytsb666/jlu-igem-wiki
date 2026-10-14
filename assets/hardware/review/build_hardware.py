@@ -9,6 +9,7 @@ records=json.loads((ROOT/'assets/hardware/review/source-docs.json').read_text(en
 doc=next(x for x in records if x['source'].endswith('Hardware页面.docx'))
 blocks=doc['blocks']
 materials=json.loads((ROOT/'assets/hardware/review/materials.json').read_text(encoding='utf-8'))
+results=json.loads((ROOT/'assets/hardware/review/pathogen-results-source-20261014.json').read_text(encoding='utf-8'))
 pdfs=materials['pdfs']
 top={2:('hw-introduction','Introducing ByeGerm'),16:('hw-requirements','Hardware Requirements'),
      22:('hw-first-generation','ByeGerm 1.0'),84:('hw-design-evolution','From 1.0 to 2.0'),
@@ -49,6 +50,7 @@ def image(path,alt):
     path=image_aliases.get(Path(path).name,path)
     source='../assets/hardware/images/'+Path(path).name
     record=next((x for x in materials['images'] if x['target'].endswith(Path(path).name)),None)
+    if not record:record=next((x for x in results['panels'] if x['target'].endswith(Path(path).name)),None)
     size=record['size'] if record else [1280,720]
     return f'<a data-hw-fullimage href="{source}" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="{source}" width="{size[0]}" height="{size[1]}" alt="{escape(alt)}" loading="lazy" decoding="async"/></a>'
 def asset_figure(filename,caption):
@@ -70,7 +72,7 @@ for start,(anchor,label) in top.items():
     toc.append(f'<div><a href="#{anchor}">{escape(label)}</a>'+('<ul>'+''.join(children)+'</ul>' if children else '')+'</div>')
 markup=['<header class="hw-intro"><p class="hw-eyebrow">'+escape(blocks[0]['text'])+'</p><h2>'+escape(blocks[1]['text'])+'</h2></header>',
         '<div class="hw-layout"><aside class="page-toc hw-directory" aria-label="Hardware sections"><nav aria-label="Hardware chapters">'+''.join(toc)+'</nav></aside><article class="hw-article">']
-skip={0,1,173,174,175,182}
+skip={0,1,136,137,173,174,175,182}
 open_section=False
 table_titles={149:'Table 1. Hardware Requirements of the Detection System',153:'Table 3. ByeGerm 1.0 Total Device Cost Summary',
               158:'Table 4. ByeGerm 2.0 Component and Fabrication Cost Breakdown',162:'Table 5. ByeGerm 2.0 Total Device Cost Summary',
@@ -87,10 +89,14 @@ for i,b in enumerate(blocks):
         continue
     if i in sub:
         anchor,label=sub[i];heading=text
-        if i==135:heading=heading.replace('6.3','6.2');changes.append('Renumbered pathogen results 6.3 to 6.2; no missing section fabricated.')
+        if i==135:
+            heading=results['heading']
+            changes.append('Replaced the pending pathogen section with the supplied October 14 English supplement; preserved its section and figure number 6.3.')
         markup.append(f'<h3 id="{anchor}">{escape(heading)}</h3>')
         if i==135:
-            markup.append('<div class="hw-pending-results" aria-label="Two result panels awaiting experimental records"><figure><div class="hw-pending-image">Result image pending</div><figcaption>Detection results · panel 1</figcaption></figure><figure><div class="hw-pending-image">Result image pending</div><figcaption>Detection results · panel 2</figcaption></figure></div>')
+            markup.extend(para(p) for p in results['paragraphs'])
+            panels=''.join('<div class="hw-result-panel"><h4>'+escape(p['label'])+'</h4>'+image(p['target'],p['label']+' — '+('left: sensitivity test; right: specificity test' if p['panel']!='F' else 'left and middle: alternating controls; right: five pathogen assays'))+'</div>' for p in results['panels'])
+            markup.append('<figure class="hw-figure hw-pathogen-results" aria-labelledby="hw-pathogen-results-caption"><div class="hw-result-panels">'+panels+'</div><figcaption id="hw-pathogen-results-caption">'+escape(results['caption'])+'</figcaption></figure>')
         continue
     if b['kind']=='tbl':
         caption=blocks[i-1]['text'].strip()
@@ -129,7 +135,8 @@ for i,b in enumerate(blocks):
             markup.append('<figure class="hw-figure">'+image('workflow-2.png','Supplied ByeGerm 2.0 operation workflow')+'</figure>')
             images=images[1:]  # The commented first picture is the video title placeholder.
         picture_html=''.join(image(path,caption or 'ByeGerm hardware photograph') for path in images)
-        markup.append('<figure class="hw-figure"><div class="hw-figure-images">'+picture_html+'</div>'+('<figcaption>'+escape(caption)+'</figcaption>' if caption else '')+'</figure>')
+        figure_class='hw-figure hw-figure--large' if i in (24,61,68) else 'hw-figure'
+        markup.append('<figure class="'+figure_class+'"><div class="hw-figure-images">'+picture_html+'</div>'+('<figcaption>'+escape(caption)+'</figcaption>' if caption else '')+'</figure>')
         if caption:
             number=re.match(r'Figure (\d+)',caption);figure_records.append({'number':int(number[1]) if number else None,'source':images})
         continue
@@ -182,16 +189,16 @@ issues=[
  'The provided generation-2 user manual cover repeats 7.5 x 14 x 11 cm, while the hardware draft and reproduction guide give 15 x 30 x 20 cm. Original PDF is unchanged.',
  'Primary paragraph describes 802.11ac and later Wi-Fi 6E; no exact installed wireless variant or raw latency/thermal test records supplied.',
  'Hardware draft refers fluorescence CNN training to Model; current Model page covers primer-crRNA ranking and reaction kinetics. Cross-module clarification belongs to 00.',
- 'Two pathogen-performance result images explicitly pending in comment 15; no results or accuracy were fabricated.',
+ 'October 14 supplement supplies the qualitative five-pathogen results and six panels. Its comment notes no concentration series, no diagnostic sensitivity/specificity percentages, unspecified hMPV subtype and non-target identities, and five separate assay tubes rather than single-tube multiplexing.',
  'Raw CAD, Gerber, firmware, model weights and itemized procurement evidence are not present; reproduction guides describe fabrication but are not source-design downloads.',
  'qPCR procurement example has no procurement URL in the supplied materials; retained as a source comparison, not an independently verified current market price.',
  'Protocol and Software resource placement and final cross-module manual versions are for 00; Hardware opens its supplied PDFs directly.',
 ]
-audit={'source':doc['source'],'source_sha256':doc['sha256'],'baseline':'9d72d2f','chapters':9,'references':5,
+audit={'source':doc['source'],'source_sha256':doc['sha256'],'supplement':results,'baseline':'9d72d2f','chapters':9,'references':5,
  'figures':figure_records,'source_comments':doc['comments'],'editorial_changes':changes+['Duplicate source cost table labels renumbered 1..5.','Supplied manuals and reproduction guides replace stale future-tense availability text.'],
  'source_issues':issues,'cost_table_row_counts':[len(b['rows']) for b in blocks if b['kind']=='tbl'],
  'scope':['Instrument/hardware.html','Dedicated Hardware CSS/JS/assets/resources/review files only'],
  'crosslinks':['../Instrument/software.html','../Instrument/model.html','Direct generation-specific user manual and reproduction guide PDFs'],
  'judging_mapping':'Existing Judging/hardware.html redirects to Instrument/hardware.html?nav=judging; redirect unchanged.'}
 (ROOT/'assets/hardware/review/page-source-manifest.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-print('Published nine supplied chapters, 23 numbered figures, five source tables, inline guides and three videos.')
+print('Published nine chapters, 23 original numbered figures, six supplementary result panels, five source tables, inline guides and three videos.')

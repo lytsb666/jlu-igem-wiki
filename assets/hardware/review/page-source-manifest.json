@@ -1,6 +1,89 @@
 {
   "source": "C:\\Users\\UserTech\\Desktop\\Hardware\\Hardware 1012 全 2\\Hardware\\Hardware页面.docx",
   "source_sha256": "3f4280599dda26dc6f4a8aba426fadc88d26fadc2ff7a57cd4c76f6ff31bd0b2",
+  "supplement": {
+    "source": "D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/msg/attach/62d2b5bca42c1049994e5d295315eb73/2026-10/Rec/1534b9ee4fa5b8a9/F/0/Hardware_6.3_中英文精简版_正文明确左右图(1).docx",
+    "source_sha256": "dce661d47cdab4760553ec5701a0cd1f5c7686ec1fe161b614f43c66ceec2677",
+    "language": "English",
+    "heading": "6.3 Detection Results for Five Pathogens",
+    "paragraphs": [
+      "We performed sensitivity and specificity tests for the HI, BP, SPN, RSV, and hMPV assays using ByeGerm 2.0 (Figure 6.3, A–E). In each panel, the left image shows the sensitivity test: all three test tubes containing extracts of the corresponding pathogen showed green fluorescence and positive results in the app. The right image shows the specificity test: all three test tubes containing extracts of other pathogens gave negative results. In each image, the first two tubes were positive and negative controls, followed by three test tubes. All controls gave the expected results.",
+      "We also tested result recognition across five tube positions. The app correctly identified both alternating arrangements of positive and negative controls. Five test tubes placed in the order HI, BP, SPN, RSV, and hMPV all gave positive results (Figure 6.3, F). These tests show that the device can read fluorescence signals from the five assays and display a separate result for each tube in the app."
+    ],
+    "caption": "Figure 6.3. Sensitivity, specificity, and five-tube detection results. A–E: HI, BP, SPN, RSV, and hMPV, respectively. Left: sensitivity tests with extracts of the corresponding pathogen. Right: specificity tests with extracts of other pathogens. In each image, the first two tubes are positive and negative controls, followed by three test tubes. F: the left and middle images show five alternating positive/negative control pairs in total; the right image shows results for HI, BP, SPN, RSV, and hMPV test tubes, in that order.",
+    "panels": [
+      {
+        "panel": "A",
+        "label": "A  HI",
+        "docx_media": "word/media/image1.jpg",
+        "target": "assets/hardware/images/pathogen-results-a.jpg",
+        "size": [
+          2400,
+          1829
+        ],
+        "sha256": "b63f918dc0eb0661eb62042bfe63e9061caca35b050994f0f1a0ae57429d37d7"
+      },
+      {
+        "panel": "B",
+        "label": "B  BP",
+        "docx_media": "word/media/image2.jpg",
+        "target": "assets/hardware/images/pathogen-results-b.jpg",
+        "size": [
+          2400,
+          1829
+        ],
+        "sha256": "e70892f8a5f47a0685d7ff24e2950bb1652a8656847ea39dc9fb69dc3df291bd"
+      },
+      {
+        "panel": "C",
+        "label": "C  SPN",
+        "docx_media": "word/media/image3.jpg",
+        "target": "assets/hardware/images/pathogen-results-c.jpg",
+        "size": [
+          2400,
+          1829
+        ],
+        "sha256": "1305735358a958ad927e70b7344ebd5b9f6924508cbce6eaa11975ceb573dafd"
+      },
+      {
+        "panel": "D",
+        "label": "D  RSV",
+        "docx_media": "word/media/image4.jpg",
+        "target": "assets/hardware/images/pathogen-results-d.jpg",
+        "size": [
+          2400,
+          1829
+        ],
+        "sha256": "d4a5da89eba1a78c951581a9ac4e536be2e928bc0a7229d55294b67d2e059923"
+      },
+      {
+        "panel": "E",
+        "label": "E  hMPV",
+        "docx_media": "word/media/image5.jpg",
+        "target": "assets/hardware/images/pathogen-results-e.jpg",
+        "size": [
+          2400,
+          1829
+        ],
+        "sha256": "ab58abe69e8ecbaba68d23e358fe73ccd52500c5802ebd1e6034b5fd7d33faeb"
+      },
+      {
+        "panel": "F",
+        "label": "F  HI · BP · SPN · RSV · hMPV",
+        "docx_media": "word/media/image6.jpg",
+        "target": "assets/hardware/images/pathogen-results-f.jpg",
+        "size": [
+          2400,
+          1220
+        ],
+        "sha256": "58ec00b4062a1f58246083d254cdc5929928cf99dadcfa94607dcd81aa029730"
+      }
+    ],
+    "source_comments": [
+      "本组照片支持目标提取样的定性检出及对受测非目标样本的区分，未提供浓度梯度，故不据此给出检出限或诊断灵敏度/特异性百分比。五种病原体对应五个独立检测管，并非单管多重检测。hMPV 亚型及各非目标样本身份未注明。"
+    ],
+    "publication": "English prose and caption verbatim; A–E preserve each original left/right pair; F preserves all three original views. No image editing."
+  },
   "baseline": "9d72d2f",
   "chapters": 9,
   "references": 5,
@@ -278,7 +361,7 @@
   "editorial_changes": [
     "Corrected compatibility cross-reference to the existing 6.1 section.",
     "Restored the second-generation connection/loading/run/result overview with user confirmation; existing manual link retained.",
-    "Renumbered pathogen results 6.3 to 6.2; no missing section fabricated.",
+    "Replaced the pending pathogen section with the supplied October 14 English supplement; preserved its section and figure number 6.3.",
     "Restored all four reproduction-documentation points with user confirmation; supplied guide links retained without claiming source-design files have been released.",
     "Removed verbatim duplicated ByeGerm 2.0 budget clause; no comparison value changed.",
     "Duplicate source cost table labels renumbered 1..5.",
@@ -290,7 +373,7 @@
     "The provided generation-2 user manual cover repeats 7.5 x 14 x 11 cm, while the hardware draft and reproduction guide give 15 x 30 x 20 cm. Original PDF is unchanged.",
     "Primary paragraph describes 802.11ac and later Wi-Fi 6E; no exact installed wireless variant or raw latency/thermal test records supplied.",
     "Hardware draft refers fluorescence CNN training to Model; current Model page covers primer-crRNA ranking and reaction kinetics. Cross-module clarification belongs to 00.",
-    "Two pathogen-performance result images explicitly pending in comment 15; no results or accuracy were fabricated.",
+    "October 14 supplement supplies the qualitative five-pathogen results and six panels. Its comment notes no concentration series, no diagnostic sensitivity/specificity percentages, unspecified hMPV subtype and non-target identities, and five separate assay tubes rather than single-tube multiplexing.",
     "Raw CAD, Gerber, firmware, model weights and itemized procurement evidence are not present; reproduction guides describe fabrication but are not source-design downloads.",
     "qPCR procurement example has no procurement URL in the supplied materials; retained as a source comparison, not an independently verified current market price.",
     "Protocol and Software resource placement and final cross-module manual versions are for 00; Hardware opens its supplied PDFs directly."

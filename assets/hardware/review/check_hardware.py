@@ -10,9 +10,10 @@ ROOT=Path(__file__).resolve().parents[3]
 data=json.loads((ROOT/'assets/hardware/review/source-docs.json').read_text(encoding='utf-8'))
 doc=next(x for x in data if x['source'].endswith('Hardware页面.docx'))
 materials=json.loads((ROOT/'assets/hardware/review/materials.json').read_text(encoding='utf-8'))
+supplement=json.loads((ROOT/'assets/hardware/review/pathogen-results-source-20261014.json').read_text(encoding='utf-8'))
 path=ROOT/'Instrument/hardware.html';page=html.fromstring(path.read_text(encoding='utf-8'))
 main=page.xpath('//main')[0];norm=lambda t:re.sub(r'\s+','',t)
-text=norm(main.text_content());changed={57,72,80,108,125,135,139,157,161,165,173}
+text=norm(main.text_content());changed={57,72,80,108,125,135,136,137,139,157,161,165,173}
 coverage=[]
 for b in doc['blocks']:
     source=b['text'].strip()
@@ -29,12 +30,24 @@ for source,table in zip(source_tables,rendered_tables):
     assert actual==[[norm(c) for c in r] for r in source]
 spec_table=page.xpath('//main//table')[0]
 assert [[norm(c.text_content()) for c in row.xpath('./th|./td')] for row in spec_table.xpath('./thead/tr|./tbody/tr')]==[[norm(c) for c in r] for r in materials['specification_rows']]
-figure_numbers=[int(re.match(r'Figure (\d+)',f.text_content())[1]) for f in page.xpath('//main//figcaption') if re.match(r'Figure (\d+)',f.text_content())]
+figure_numbers=[int(re.match(r'Figure (\d+)\.(?!\d)',f.text_content())[1]) for f in page.xpath('//main//figcaption') if re.match(r'Figure (\d+)\.(?!\d)',f.text_content())]
 assert figure_numbers==list(range(1,24)),figure_numbers
 assert len(page.xpath('//details[contains(@class,"hw-cost-detail") and not(@open)]'))==2
 assert len(page.xpath('//details//table'))==2
-assert len(page.xpath('//div[contains(@class,"hw-pending-image")]'))==2
-assert 'Confirmation against experimental records is pending.' in main.text_content()
+assert not page.xpath('//div[contains(@class,"hw-pending-image")]')
+assert 'Confirmation against experimental records is pending.' not in main.text_content()
+heading=page.xpath('//*[@id="hw-pathogen-results"]')[0]
+assert heading.text_content()==supplement['heading']
+assert [heading.getnext().text_content(),heading.getnext().getnext().text_content()]==supplement['paragraphs']
+results_figure=page.xpath('//figure[contains(@class,"hw-pathogen-results")]')[0]
+assert results_figure.xpath('./figcaption')[0].text_content()==supplement['caption']
+result_panels=results_figure.xpath('.//div[@class="hw-result-panel"]')
+assert len(result_panels)==6
+for expected,panel in zip(supplement['panels'],result_panels):
+    assert panel.xpath('./h4')[0].text_content()==expected['label']
+    assert panel.xpath('.//img/@src')==['../'+expected['target']]
+    assert sha256((ROOT/expected['target']).read_bytes()).hexdigest()==expected['sha256']
+assert len(page.xpath('//figure[contains(@class,"hw-figure--large")]'))==3
 assert 'Operation proceeds through connection, loading, running the device, and viewing results.' in main.text_content()
 reproduction_text=page.xpath('//*[@id="hw-reproduction"]/p')[0].text_content().lower()
 assert all(point in reproduction_text for point in ('assembly procedures','circuit connections','structural design files','bill of materials'))
@@ -69,8 +82,9 @@ allowed=lambda name:name in ('Instrument/hardware.html','Instrument/software.htm
 assert all(allowed(name) for name in files),files
 result={'source_paragraphs_verified':coverage,'explicit_editorial_indices':sorted(changed),'source_table_rows':[len(t) for t in source_tables],
  'figures':figure_numbers,'comment_requirements':22,'chapters':9,'references':5,'reproduction_pages':[6,10],
- 'user_manual_pages':[4,5],'cost_detail_tables_closed':2,'pending_result_images':2,'videos_complete':3,
+ 'user_manual_pages':[4,5],'cost_detail_tables_closed':2,'pending_result_images':0,'pathogen_result_panels':6,
+ 'supplement_english_verbatim':True,'supplement_original_image_hashes_match':True,'enlarged_figures':[3,11,12],'videos_complete':3,
  'pdf_original_hashes_match':True,'local_resources_checked':checked,'unique_ids':len(ids),'sidebar_back_to_top_removed':True,
  'navbar_loading_footer_unchanged':True,'model_markup_and_shared_files_unchanged':True,'software_manual_update_in_scope':'Instrument/software.html' in files,'scope_passed':True}
 (ROOT/'assets/hardware/review/content-checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-print('Complete unchanged prose, all table cells, 23 figures, original PDFs, full videos, comments, links and protected shared components passed.')
+print('Unchanged source prose/tables, English supplement, 23 original figures plus six unedited result panels, PDFs, videos, links and protected shared components passed.')

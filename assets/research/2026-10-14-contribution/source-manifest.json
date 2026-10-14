@@ -1,0 +1,18 @@
+{
+  "suppliedFilename": "c739d3551d8dd20731d50dd6e49c2166.mp4",
+  "sourceBytes": 12952192,
+  "sha256": "db94214d88e2eaa6c96fadef199667969a48c65aef835b60c4b320dffd37cbdc",
+  "webPath": "assets/research/2026-10-14-contribution/software-demonstration.mp4",
+  "originalBytesPreserved": true,
+  "transcoded": false,
+  "width": 544,
+  "height": 864,
+  "durationSeconds": 397.811667,
+  "tracks": [
+    "vide",
+    "soun"
+  ],
+  "hasAudio": true,
+  "replaces": "assets/research/2026-10-13-contribution/software-demonstration.mp4",
+  "presentation": "Original proportion; existing 380px width / 38rem height limits, controls and viewport sound behavior retained."
+}

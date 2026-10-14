@@ -1,5 +1,6 @@
 // Apply shared presentation while preserving manuscript text, anchors and data.
 const isMeasurement = /\/wet-lab\/measurement(?:\.html)?\/?$/i.test(location.pathname)
+const keepDownloadLinks = document.body.classList.contains('software-page')
 const directorySelector = '.wiki-directory, .team-jumps'
 const numberPrefix = /^\s*(?:\d+(?:\.\d+)*(?:[.)]\s*|\s+)|[IVX]+[.)]\s*)(?=\S)/
 
@@ -93,6 +94,7 @@ function makePdfFold(href, title) {
   fold.dataset.wikiPdfUrl = href
   const summary = document.createElement('summary')
   summary.textContent = title.replace(/\s*[↗↓]\s*$/,'').replace(/^Open\s+(?:the\s+)?/i,'') || 'PDF document'
+  if (!keepDownloadLinks) summary.textContent = summary.textContent.replace(/^Download\s+(?:the\s+)?/i, '')
   const body = document.createElement('div')
   body.className = 'wiki-pdf-body'
   const reader = document.createElement('iframe')
@@ -100,11 +102,15 @@ function makePdfFold(href, title) {
   reader.title = `${summary.textContent} — PDF reader`
   const actions = document.createElement('p')
   actions.className = 'wiki-pdf-actions'
-  const open = document.createElement('a'), download = document.createElement('a')
-  open.href = download.href = href
+  const open = document.createElement('a')
+  open.href = href
   open.target = '_blank'; open.rel = 'noopener'; open.textContent = 'Open original PDF'
-  download.download = ''; download.textContent = 'Download PDF'
-  actions.append(open, download)
+  actions.append(open)
+  if (keepDownloadLinks) {
+    const download = document.createElement('a')
+    download.href = href; download.download = ''; download.textContent = 'Download PDF'
+    actions.append(download)
+  }
   body.append(reader, actions); fold.append(summary,body)
   fold.addEventListener('toggle',()=>{ if (fold.open && !reader.src) reader.src = href.split('#')[0]+'#toolbar=1&navpanes=0&view=FitH' })
   return fold
@@ -150,11 +156,35 @@ function enhancePdfs() {
   document.querySelectorAll('.hw-pdf-reader').forEach(reader=>reader.remove())
 }
 
+function removeAuxiliaryDownloads() {
+  if (keepDownloadLinks) return
+  // PDF source links are converted first so their original readers remain.
+  document.querySelectorAll('main a[href], footer a[href]').forEach(link => {
+    if (!link.hasAttribute('download') && !/^(?:Download\b|下载)/i.test(link.textContent.trim())) return
+    const parent = link.parentElement
+    const previous = link.previousSibling, next = link.nextSibling
+    if (previous?.nodeType === Node.TEXT_NODE) previous.textContent = previous.textContent.replace(/\s*[·|]\s*$/, '')
+    else if (next?.nodeType === Node.TEXT_NODE) next.textContent = next.textContent.replace(/^\s*[·|]\s*/, '')
+    link.remove()
+    if (parent.matches('p,li') && !parent.children.length && !parent.textContent.trim()) parent.remove()
+  })
+}
+
 function enhanceLinks() {
   document.querySelectorAll('main a[href], footer a[href]').forEach(link => {
     if (link.closest('.wiki-directory, .team-jumps, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
     link.style.setProperty('--wiki-link-size', `${(parseFloat(getComputedStyle(link).fontSize)||16)+2}px`)
     link.classList.add('wiki-jump-link')
+    // Keep inline button labels and text arrows in one text run so the flex
+    // gap cannot split the underline. Existing nodes and links stay intact.
+    if (['flex', 'inline-flex'].includes(getComputedStyle(link).display) && link.children.length &&
+        getComputedStyle(link).textDecorationLine.includes('underline') &&
+        [...link.children].every(child => child.matches('span,strong,b,em,i,small') && !child.querySelector('svg,img,div,p,ul,ol'))) {
+      const label = document.createElement('span')
+      label.className = 'wiki-link-label'
+      label.append(...link.childNodes)
+      link.append(label)
+    }
   })
 }
 
@@ -181,6 +211,7 @@ document.querySelectorAll('main h2,main h3,main h4,main h5,main h6,main details 
 })
 enhanceReferences()
 enhancePdfs()
+removeAuxiliaryDownloads()
 enhanceLinks()
 
 let scheduled = false, directoryEntries = []

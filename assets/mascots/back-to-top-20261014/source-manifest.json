@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-14",
+  "providedBy": "User supplied both PNG sheets in this chat.",
+  "tool": "Built-in image_gen.imagegen via imagegen skill; no CLI/API fallback.",
+  "promptFile": "prompts.md",
+  "processing": "Transparent background extraction derivatives. Original uploads left untouched. CSS frames individual scenes, keeping paired scenes as pairs. Motion is implemented in CSS.",
+  "sources": [
+    {
+      "suppliedFilename": "54a63576db22a091f6e01d846ca05c55.png",
+      "suppliedPath": "D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/temp/RWTemp/2026-10/b101f6cb78252293104820af9d06fdc5/54a63576db22a091f6e01d846ca05c55.png",
+      "originalFileCurrentlyAvailable": false,
+      "sourceNote": "Both original attachments were visually inspected and supplied to the built-in image editing tool. WeChat temporary paths were no longer present when this manifest was written; no source-file hash is invented.",
+      "webAsset": "lab-roles-transparent.png",
+      "webBytes": 2085323,
+      "webSHA256": "39856a4ce85b7a0a73966559b9ac0b65e5958cd98334f6acb4800c9d409830e1",
+      "webSize": [
+        1679,
+        937
+      ],
+      "alpha": true
+    },
+    {
+      "suppliedFilename": "0054f367d10290ecd615ddce5d7d38a2.png",
+      "suppliedPath": "D:/WeChathis/xwechat_files/wxid_te2sfwdnpar522_2c28/temp/RWTemp/2026-10/b101f6cb78252293104820af9d06fdc5/0054f367d10290ecd615ddce5d7d38a2.png",
+      "originalFileCurrentlyAvailable": false,
+      "sourceNote": "Both original attachments were visually inspected and supplied to the built-in image editing tool. WeChat temporary paths were no longer present when this manifest was written; no source-file hash is invented.",
+      "webAsset": "research-roles-transparent.png",
+      "webBytes": 2189504,
+      "webSHA256": "f782ffa46fdfcf7916317a24398f155465ee270e1fbfb28570ef5dfbd01d9fd5",
+      "webSize": [
+        1679,
+        937
+      ],
+      "alpha": true
+    }
+  ],
+  "pageRoleMap": {
+    "/project/description.html": "tubes",
+    "/project/design.html": "researcher",
+    "/project/engineering.html": "reactor",
+    "/project/contribution.html": "books",
+    "/project/safety.html": "handwashing",
+    "/wet-lab/measurement.html": "pipette",
+    "/wet-lab/notebook.html": "recorder",
+    "/wet-lab/protocal.html": "protocol",
+    "/wet-lab/part.html": "beakers",
+    "/wet-lab/result.html": "microscope",
+    "/instrument/hardware.html": "diagnostics",
+    "/instrument/software.html": "computers",
+    "/instrument/model.html": "computers",
+    "/eagagement/ihp.html": "medical",
+    "/eagagement/education.html": "books",
+    "/eagagement/inclusity.html": "surgeon",
+    "/eagagement/entrepreneurship.html": "books",
+    "/eagagement/collaboration.html": "reactor",
+    "/team/member.html": "reactor"
+  },
+  "aliases": {
+    "/Team/attribution.html": "/Team/member.html",
+    "/Judging/iHP.html": "/Eagagement/iHP.html?nav=judging",
+    "/Judging/model.html": "/Instrument/model.html?nav=judging",
+    "/Judging/hardware.html": "/Instrument/hardware.html?nav=judging"
+  },
+  "behavior": "After 240px of scrolling, show only if the entire lower-right button plus safety margin is clear of text, cards, media, controls, decoration and modals. Try smaller sizes, otherwise hide. No reserved layout space. Homepage and redirect source pages are excluded. Native button supports mouse, touch and keyboard. Reduced-motion disables animations and smooth scrolling."
+}

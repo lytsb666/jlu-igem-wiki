@@ -53,7 +53,12 @@
     display: block !important;
   }
   :root body .wiki-directory .wiki-toc-group.is-current > a {
-    background: #ede2d1 !important;
+    --wiki-ink: #fffaf5;
+    color: #fffaf5 !important;
+    background: #6f4e37 !important;
+  }
+  :root body .wiki-directory .wiki-toc-group.is-current > .wiki-toc-toggle {
+    color: #fffaf5 !important;
   }
   :root body .wiki-directory .engineering-toc-group.is-current > summary {
     --wiki-ink: #fffaf5;
@@ -62,6 +67,15 @@
   }
   :root body :is(.navbar, .wiki-directory, .team-jumps) a[href] { text-decoration: none !important; }
   :root body .navbar .nav-link::after { content: none !important; display: none !important; }
+  :root body a[href],
+  :root body a[href] * {
+    text-decoration-style: solid !important;
+    text-decoration-skip-ink: none !important;
+  }
+  :root body a.wiki-jump-link > .wiki-link-label {
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
   :root body main a.wiki-jump-link,
   :root body footer a.wiki-jump-link {
     font-size: var(--wiki-link-size, 18px) !important;
@@ -119,6 +133,7 @@
   :root body main .wiki-table-scroll {
     width: 100%;
     max-width: 100%;
+    margin-block: 1.5rem !important;
     overflow-x: auto;
     overscroll-behavior-x: contain;
   }

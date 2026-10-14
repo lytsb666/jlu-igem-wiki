@@ -1,0 +1,110 @@
+{
+  "responsive": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "equationGroups": 36,
+      "independentFormulas": 59,
+      "fittingFormulasCentered": 58,
+      "wideFormulasInScrollableRegion": 1,
+      "fontFamily": "\"Cambria Math\", \"STIX Two Math\", math",
+      "fontSize": "16px",
+      "lineHeight": "25.6px",
+      "unframedEquations": true,
+      "plainHeadingCount": 15,
+      "superscriptReferenceLinks": 48,
+      "sourceAbbreviations": 33,
+      "abbreviationBrackets": 0,
+      "subscriptBaseline": true
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "equationGroups": 36,
+      "independentFormulas": 59,
+      "fittingFormulasCentered": 58,
+      "wideFormulasInScrollableRegion": 1,
+      "fontFamily": "\"Cambria Math\", \"STIX Two Math\", math",
+      "fontSize": "16px",
+      "lineHeight": "25.6px",
+      "unframedEquations": true,
+      "plainHeadingCount": 15,
+      "superscriptReferenceLinks": 48,
+      "sourceAbbreviations": 33,
+      "abbreviationBrackets": 0,
+      "subscriptBaseline": true
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "equationGroups": 36,
+      "independentFormulas": 59,
+      "fittingFormulasCentered": 38,
+      "wideFormulasInScrollableRegion": 21,
+      "fontFamily": "\"Cambria Math\", \"STIX Two Math\", math",
+      "fontSize": "16px",
+      "lineHeight": "25.6px",
+      "unframedEquations": true,
+      "plainHeadingCount": 15,
+      "superscriptReferenceLinks": 48,
+      "sourceAbbreviations": 33,
+      "abbreviationBrackets": 0,
+      "subscriptBaseline": true
+    },
+    {
+      "width": 320,
+      "overflow": 0,
+      "equationGroups": 36,
+      "independentFormulas": 59,
+      "fittingFormulasCentered": 36,
+      "wideFormulasInScrollableRegion": 23,
+      "fontFamily": "\"Cambria Math\", \"STIX Two Math\", math",
+      "fontSize": "16px",
+      "lineHeight": "25.6px",
+      "unframedEquations": true,
+      "plainHeadingCount": 15,
+      "superscriptReferenceLinks": 48,
+      "sourceAbbreviations": 33,
+      "abbreviationBrackets": 0,
+      "subscriptBaseline": true
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "measurement": {
+    "image": {
+      "maxWidth": "min(80%, 256px)",
+      "maxHeight": "192px",
+      "objectFit": "contain"
+    },
+    "caption": {
+      "fontFamily": "\"Times New Roman\", Times, serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "textAlign": "center"
+    }
+  },
+  "resultFigure": {
+    "image": {
+      "maxWidth": "min(80%, 256px)",
+      "maxHeight": "192px",
+      "objectFit": "contain"
+    },
+    "caption": {
+      "fontFamily": "\"Times New Roman\", Times, serif",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "textAlign": "center"
+    }
+  },
+  "resultOriginal": {
+    "status": 200,
+    "originalBytesUnchanged": true
+  },
+  "wideEquationKeyboardScroll": true,
+  "citationNavigation": {
+    "keyboard": true,
+    "target": "#reference-1",
+    "exists": true
+  }
+}

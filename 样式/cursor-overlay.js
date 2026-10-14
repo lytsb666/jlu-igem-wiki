@@ -106,7 +106,7 @@ const textSelector = [
     pointerX = event.clientX
     pointerY = event.clientY
 
-    const navigationUsesNativeCursor = event.target instanceof Element && Boolean(event.target.closest('.navbar'))
+    const navigationUsesNativeCursor = event.target instanceof Element && Boolean(event.target.closest('.navbar, .wiki-back-to-top'))
     document.documentElement.classList.toggle('navigation-cursor-native', navigationUsesNativeCursor)
 
     if (navigationUsesNativeCursor) {

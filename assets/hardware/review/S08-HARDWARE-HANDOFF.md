@@ -1,3 +1,15 @@
+## 2026-10-14 最新补充：Hardware 3.1/3.3/3.4 图片、6.3 英文结果与 Model 结果图
+
+- 目录与分支复核：仅在 `08-instrument` 工作，保持 `codex/08-instrument`。本次未改主仓库、Measurement、公共样式、Navbar、Loading、Footer、Software、Judging 或其他 Agent 文件。
+- Hardware 3.1 / 3.3 / 3.4 的 Figure 3 / 11 / 12 单独放大，高度上限从 `min(360px,42svh)` 调整至 `min(600px,65svh)`，保持完整比例、原图入口和移动端适配；其他旧图继续使用原上限。
+- 新文档 `Hardware_6.3_中英文精简版_正文明确左右图(1).docx` 的英文标题、两段正文、图注逐字接入，保留新稿的 6.3 和 Figure 6.3 编号。替换旧的待确认文字和两处待补图，不改其他章节。来源和哈希详见 `pathogen-results-source-20261014.json`，文档 SHA256 为 `dce661d47cdab4760553ec5701a0cd1f5c7686ec1fe161b614f43c66ceec2677`。
+- 从该文档提取六张原始 JPEG，不重绘、不裁切、不修改像素。A–E 按 HI / BP / SPN / RSV / hMPV 顺序展示，原图中左侧为 sensitivity、右侧为 specificity；F 保留左、中两个交替对照视图与右侧五种病原体系视图。桌面前五组用两列、F 单独整行；手机全部单列。逐张验证 HTTP 原图入口与文档内图片 SHA256 相同。
+- Model 仅完善自身 `model-revision.css` 中的结果图规则，对齐当前 Measurement 的 `research-chart`：居中、保持比例、最大宽 `min(80%,16rem)`、高 `12rem`、无边框和阴影；图注为 Times New Roman、1rem、加粗居中、棕色。Model 正文、公式、引用和原始结果图未改，公式滚动条继续隐藏。
+- 验证：构建成功；Hardware 来源正文与表格核对、23 张原图编号、6 张新图原始字节、4 份 PDF、3 个视频、所有资源与锚点通过；完整 Loading/资料阅读/视频播放/成本展开/Judging 转接检查通过。Hardware 在 1440×900、1280×720、900×1000、390×844、320×568 无横向溢出或损坏图片。Model 在 1440 / 900 / 390 / 320 宽度通过公式、引用、表格和结果图检查；并在桌面和两种手机宽度与 Measurement 实际渲染规则比较一致。报告为 `results-checks-20261014.json` 和 `assets/model/review/presentation-checks-20261014.json`。截图仅保留在本工作区 `.sites-work/hardware-update-20261014`。
+- 交叉链接沿用 Software / Model 和四份手册、指南，原图可打开。Judging `hardware.html` 转接不改；新增证据对应 `Instrument/hardware.html#hw-pathogen-results` 的目标提取样定性检出、受测非目标样本区分和五管位识别。
+- 原“结果图缺失”已解决。新文档批注仍限定：没有浓度梯度或检出限、没有诊断灵敏度/特异性百分比；hMPV 亚型和各非目标样本身份未注明；五种病原体对应五个独立检测管，并非单管多重检测。现有架构来源差异与 CAD/Gerber/固件/权重等源文件缺口仍由 00 协调，不新增数值或验证结论。
+- 尝试读取 00 对话仍返回 `Invalid app tool request`，本次自动交接无法发送。提交号在最终回复和本工作区的 `.sites-work/hardware-update-20261014/00-handoff.md` 中提供；没有 merge、cherry-pick、push 或部署。
+
 # S08 Hardware 交接记录
 
 日期：2026-10-12，Asia/Shanghai。工作区：`D:/JLU—Wiki/IGEMwiki/worktrees/08-instrument`；分支：`codex/08-instrument`。开始时工作区干净，HEAD 为 00 同步后的 `9d72d2f`；保留此前 `580bb6d` 等提交的祖先历史。最终完整 commit hash 见完成消息及本分支 `git log -1`。
@@ -104,7 +116,7 @@ Hardware 页面内原稿要求的位置直接打开两代 reproduction / user ma
 3. 二代说明书封面仍标一代尺寸 7.5×14×11 cm，正文/复现指南标二代 15×30×20 cm；说明书还重复 Before you begin 的部分文字。原 PDF 不改，交作者提供修正版。
 4. 一代无线段落同时出现 802.11ac 和 Wi-Fi 6E；缺少安装版本与温控/无线延迟原始记录。本次未新增或背书验证结论。
 5. Hardware 文稿将荧光 CNN 训练转到 Model，但当前 Model 是引物/crRNA排序与反应动力学，不能将该排序准确率当作荧光图像分类准确率。需 00 协调科研内容。
-6. 批注15要求的两张病原检测性能结果图及其原始记录仍待补，页面已预留两处并保留原稿待确认说明。
+6. 2026-10-14 新补充稿及六组原始 JPEG 已替换旧待确认文字和两处占位；浓度梯度、检出限、诊断百分比、hMPV 亚型和非目标样本身份未提供，详见最新补充记录。
 7. 未提供 CAD、Gerber、固件、权重及采购凭证；复现指南不能替代这些源设计文件。
 8. qPCR单一采购参考没有对应采购URL，保留原稿比较限定条件，未声称是当前市场价格或同等性能。
 9. 批注要求复现资料最终由 Protocol 承载、说明书由 Software 承载；Hardware 初版直接接入4/5页说明书和6/10页复现指南；2026-10-13用户再提供同一4/5页说明书，Software已按最新授权更新，原PDF与Hardware相同。资源归属和最终链接由 00 整合。Entrepreneurship 成本口径同样交 00，未跨模块自行改写。

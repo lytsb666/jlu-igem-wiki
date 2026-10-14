@@ -1,0 +1,96 @@
+.model-module-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0 0 36px;
+}
+.model-module-tab {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 112px;
+  padding: 22px 26px;
+  color: #6f4e37;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #d8bda6;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background .2s, box-shadow .2s, transform .2s;
+}
+.model-module-tab:hover { background: #fbf4eb; transform: translateY(-3px); box-shadow: 0 10px 24px #6f4e3720; }
+.model-module-tab[aria-selected='true'] { background: #f1e3d4; border-color: #6f4e37; box-shadow: inset 0 0 0 1px #6f4e37; }
+.model-module-icon { display: grid; place-items: center; flex: 0 0 70px; height: 70px; color: #6f4e37; background: #ead1b8; border-radius: 18px; }
+.model-module-icon svg { width: 54px; height: 54px; }
+.model-module-panel { scroll-margin-top: 100px; }
+.model-module-panel:focus { outline: none; }
+.model-module-panel[hidden] { display: none !important; }
+.model-module-panel.is-arriving { animation: model-panel-arrive .3s ease-out; }
+.model-hardware-content { min-width: 0; }
+.model-hardware-section { padding: clamp(22px, 3vw, 40px); margin: 28px 0; background: #fff; border: 1px solid #dfcfbf; border-radius: 22px; }
+.model-hardware-content > .model-hardware-section:first-child { margin-top: 0; }
+.model-hardware-section :is(h2, h3, h4, figure) { scroll-margin-top: 100px; }
+.model-hardware-section h3 { margin-top: 32px; }
+.model-hardware-section h4 { margin-top: 24px; }
+.model-generation-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.model-generation-card { display: block; padding: 22px; border: 1px solid #d8bda6; border-radius: 16px; background: #fbf4eb; text-decoration: none; }
+.model-generation-card > p:first-child { font-weight: 700; }
+.model-generation-card > span { font-weight: 700; text-decoration: underline; }
+.model-generation-card:hover { background: #f1e3d4; }
+.model-hardware-table { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+.model-hardware-table table { width: 100%; border-collapse: collapse; }
+.model-hardware-table :is(th, td) { padding: 12px; border: 1px solid #dfcfbf; }
+.model-hardware-figure { width: min(100%, 780px); margin: 28px auto; padding: 0 !important; border: 0 !important; background: transparent !important; box-shadow: none !important; }
+.model-hardware-figure__images { display: flex; align-items: flex-start; justify-content: center; gap: 16px; }
+.model-hardware-figure__frame {
+  position: relative;
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: var(--figure-native-width);
+  overflow: hidden;
+  aspect-ratio: var(--figure-ratio);
+  background: #fff;
+  border: 1px solid #d8bda6;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px #6f4e3718;
+  transition: transform .22s, box-shadow .22s;
+}
+.model-hardware-figure__frame:hover { transform: translateY(-3px); box-shadow: 0 12px 28px #6f4e372b; }
+.model-hardware-figure figcaption { margin: 14px 0 0; font-weight: 700; text-align: center; }
+.model-hardware-figure:focus-visible { outline: 2px solid #9a6742; outline-offset: 6px; border-radius: 14px; }
+@layer wiki-format {
+  :root:root body.model-revision-page main .model-hardware-figure__frame img {
+    position: absolute !important;
+    left: var(--image-left) !important;
+    top: var(--image-top) !important;
+    width: var(--image-width) !important;
+    height: var(--image-height) !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    translate: none !important;
+  }
+}
+@layer wiki-typography {
+  :root:root body .model-module-tab { font-size: 18pt !important; font-weight: 700; }
+}
+.model-module-tab:focus-visible, .model-generation-card:focus-visible, .model-hardware-figure__frame:focus-visible { outline: 3px solid #9a6742; outline-offset: 4px; }
+@keyframes model-panel-arrive { from { opacity: .4; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+@media (max-width: 680px) {
+  .model-module-tabs { gap: 12px; }
+  .model-module-tab { flex-direction: column; align-items: center; gap: 12px; padding: 16px 12px; text-align: center; }
+  .model-module-icon { flex-basis: auto; width: 56px; height: 56px; }
+  .model-module-icon svg { width: 44px; height: 44px; }
+  .model-hardware-section { padding: 20px 16px; border-radius: 18px; }
+  .model-generation-cards { grid-template-columns: 1fr; }
+  @layer wiki-typography { :root:root body .model-module-tab { font-size: 14pt !important; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .model-module-tab, .model-hardware-figure__frame { transition: none; }
+  .model-module-panel.is-arriving { animation: none; }
+}

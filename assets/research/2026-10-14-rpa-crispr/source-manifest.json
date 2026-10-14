@@ -1,0 +1,13 @@
+{
+  "source": "C:/Users/UserTech/AppData/Local/Temp/codex-clipboard-00e06bbd-7078-471c-b998-2ff6be804a91.png",
+  "recorded_on": "2026-10-14",
+  "asset": "assets/research/2026-10-14-rpa-crispr/rpa-crispr-principle.png",
+  "width": 1831,
+  "height": 859,
+  "sha256": "ec0188b54410066cd9f97ba9b8b7b9335cd9e776e8bd985db25f566e7ccc76c3",
+  "replacements": [
+    { "page": "Project/description.html", "figure": "description-figure-18" },
+    { "page": "Wet-lab/measurement.html", "figure": "measurement-figure-4" }
+  ],
+  "processing": "Original PNG bytes copied unchanged; existing display width, captions and anchors retained."
+}
