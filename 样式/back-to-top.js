@@ -43,7 +43,9 @@ const pageRoles = {
   '/team/member.html': 'reactor',
 }
 
-const roleName = pageRoles[decodeURI(location.pathname).toLowerCase()]
+// Cloudflare Pages redirects .html pages to extensionless URLs.
+const pagePath = decodeURI(location.pathname).toLowerCase().replace(/\/+$/, '')
+const roleName = pageRoles[pagePath.endsWith('.html') ? pagePath : `${pagePath}.html`]
 if (roleName) {
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => createBackToTop(roleName), { once: true })
