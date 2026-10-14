@@ -1,0 +1,135 @@
+/* This control occupies only verified empty canvas; it never changes the
+   article layout or adds a permanent background card to the corner. */
+:root body .wiki-back-to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 900;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: none;
+  color: #6f4e37;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  isolation: isolate;
+}
+:root body .wiki-back-to-top[hidden] { display: none !important; }
+:root body .wiki-back-to-top:focus-visible { outline: 2px solid #6f4e37; outline-offset: 3px; }
+html.navigation-cursor-native body .wiki-back-to-top,
+html.navigation-cursor-native body .wiki-back-to-top * { cursor: pointer !important; }
+.wiki-back-to-top__scene {
+  position: absolute;
+  inset: auto 0 0;
+  height: var(--mascot-scene-height);
+  transform-origin: 50% 100%;
+  animation: mascot-breathe 5s ease-in-out infinite;
+  pointer-events: none;
+}
+.wiki-back-to-top__art { position: absolute; inset: 0; background-repeat: no-repeat; }
+:root body .wiki-back-to-top__arrow {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #9a6742;
+  border-radius: 50%;
+  background: #fffaf5;
+  color: #6f4e37;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  pointer-events: none;
+}
+.wiki-back-to-top__scene i {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #6d9da2;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.wiki-back-to-top__scene i:nth-of-type(2) { animation-delay: 1.2s; }
+.wiki-back-to-top__scene i:nth-of-type(3) { animation-delay: 2.4s; }
+.wiki-back-to-top[data-motion="guide"] .wiki-back-to-top__scene,
+.wiki-back-to-top[data-motion="writing"] .wiki-back-to-top__scene { animation-name: mascot-note; animation-duration: 6s; }
+.wiki-back-to-top[data-motion="guide"] i,
+.wiki-back-to-top[data-motion="writing"] i {
+  left: 72%; top: 58%; width: 8px; height: 1px;
+  border: 0; border-radius: 0; background: #d4a276;
+  animation: mascot-write 4.8s ease-in-out infinite;
+}
+.wiki-back-to-top[data-motion="guide"] i { left: 69%; top: 48%; }
+.wiki-back-to-top[data-motion="writing"] i:nth-of-type(2),
+.wiki-back-to-top[data-motion="guide"] i:nth-of-type(2) { margin-top: 4px; }
+.wiki-back-to-top[data-motion="writing"] i:nth-of-type(3),
+.wiki-back-to-top[data-motion="guide"] i:nth-of-type(3) { margin-top: 8px; }
+.wiki-back-to-top[data-motion="washing"] i,
+.wiki-back-to-top[data-motion="bubbles"] i,
+.wiki-back-to-top[data-motion="mixing"] i,
+.wiki-back-to-top[data-motion="sample"] i {
+  left: 35%; top: 68%;
+  animation: mascot-bubble 4.8s ease-out infinite;
+}
+.wiki-back-to-top[data-motion="washing"] i:nth-of-type(2) { left: 26%; top: 64%; }
+.wiki-back-to-top[data-motion="washing"] i:nth-of-type(3) { left: 39%; top: 62%; }
+.wiki-back-to-top[data-motion="bubbles"] i { left: 51%; top: 69%; border-color: #379d8f; }
+.wiki-back-to-top[data-motion="bubbles"] i:nth-of-type(2) { left: 56%; top: 59%; }
+.wiki-back-to-top[data-motion="bubbles"] i:nth-of-type(3) { left: 48%; top: 57%; }
+.wiki-back-to-top[data-motion="mixing"] i { left: 79%; top: 40%; border-color: #c798ad; }
+.wiki-back-to-top[data-motion="mixing"] i:nth-of-type(2) { left: 84%; top: 34%; border-color: #9cae68; }
+.wiki-back-to-top[data-motion="mixing"] i:nth-of-type(3) { left: 72%; top: 29%; }
+.wiki-back-to-top[data-motion="sample"] i { left: 16%; top: 68%; }
+.wiki-back-to-top[data-motion="sample"] i:nth-of-type(2) { left: 17%; top: 61%; }
+.wiki-back-to-top[data-motion="sample"] i:nth-of-type(3) { left: 16%; top: 55%; }
+.wiki-back-to-top[data-motion="pipette"] .wiki-back-to-top__scene { animation: mascot-pipette 5s ease-in-out infinite; }
+.wiki-back-to-top[data-motion="pipette"] i {
+  left: 72%; top: 80%; background: #9ccdd4;
+  animation: mascot-drop 5s ease-in-out infinite;
+}
+.wiki-back-to-top[data-motion="pipette"] i:nth-of-type(n+2) { display: none; }
+.wiki-back-to-top[data-motion="lens"] i {
+  left: 29%; top: 72%; width: 7px; height: 7px; border: 0;
+  background: #fffaf5; border-radius: 0;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  animation: mascot-glint 5.5s ease-in-out infinite;
+}
+.wiki-back-to-top[data-mascot="researcher"] i { left: 71%; top: 67%; }
+.wiki-back-to-top[data-motion="lens"] i:nth-of-type(n+2) { display: none; }
+.wiki-back-to-top[data-motion="care"] i {
+  left: 23%; top: 53%; width: 7px; height: 7px; border: 0; border-radius: 0;
+  background: #e9f6f4;
+  clip-path: polygon(35% 0, 65% 0, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0 65%, 0 35%, 35% 35%);
+  animation: mascot-glint 6s ease-in-out infinite;
+}
+.wiki-back-to-top[data-mascot="surgeon"] i { left: 49%; top: 46%; }
+.wiki-back-to-top[data-motion="care"] i:nth-of-type(n+2) { display: none; }
+.wiki-back-to-top[data-motion="computing"] i {
+  left: 53%; top: 32%; width: 8px; height: 2px; border: 0; border-radius: 1px;
+  background: #a3d8dc;
+  animation: mascot-screen 5s steps(2, end) infinite;
+}
+.wiki-back-to-top[data-motion="computing"] i:nth-of-type(2) { top: 37%; width: 11px; }
+.wiki-back-to-top[data-motion="computing"] i:nth-of-type(3) { top: 42%; width: 5px; }
+.wiki-back-to-top:is(:hover, :focus-visible) .wiki-back-to-top__scene,
+.wiki-back-to-top:is(:hover, :focus-visible) i { animation-play-state: paused; }
+@keyframes mascot-breathe { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+@keyframes mascot-note { 0%, 70%, 100% { transform: rotate(0); } 35% { transform: rotate(.8deg); } }
+@keyframes mascot-pipette { 0%, 20%, 75%, 100% { transform: translateY(0); } 35%, 55% { transform: translateY(2px) rotate(.6deg); } }
+@keyframes mascot-write { 0%, 65%, 100% { opacity: 0; transform: scaleX(.2); } 25%, 45% { opacity: .65; transform: scaleX(1); } }
+@keyframes mascot-bubble { 0%, 15%, 80%, 100% { opacity: 0; transform: translateY(0) scale(.7); } 35% { opacity: .65; } 70% { opacity: 0; transform: translateY(-10px) scale(1); } }
+@keyframes mascot-drop { 0%, 45%, 80%, 100% { opacity: 0; transform: translateY(-4px) scale(.5); } 55% { opacity: .65; } 70% { opacity: 0; transform: translateY(3px) scale(.8); } }
+@keyframes mascot-glint { 0%, 35%, 70%, 100% { opacity: 0; transform: scale(.5); } 50% { opacity: .65; transform: scale(1); } }
+@keyframes mascot-screen { 0%, 80%, 100% { opacity: 0; } 25%, 60% { opacity: .6; } }
+@media (prefers-reduced-motion: reduce) {
+  .wiki-back-to-top__scene, .wiki-back-to-top__scene i { animation: none !important; }
+}
+@media print { :root body .wiki-back-to-top { display: none !important; } }

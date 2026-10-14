@@ -13,6 +13,7 @@ import './article-video.js'
 import './headpages.css'
 import './captions.js'
 import './references.js'
+import './back-to-top.js'
 
 const MINIMUM_VISIBLE_TIME = 320
 const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href
