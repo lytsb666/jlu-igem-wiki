@@ -1,0 +1,840 @@
+{
+  "source_package": "EDUCATION wiki全内容/56-EDUCATION wiki全内容",
+  "recorded_on": "2026-10-14",
+  "coding_rule": "Existing page IDs are preserved; activity-card filenames are matched by activity title, not by their B-number. HEART-Edu_Loop.docx supplies the page sequence.",
+  "activity_sources": [
+    {
+      "page_code": "H01",
+      "activity_card": "2-活动卡片/H01_肺炎链球菌疫苗防护宣导_1_2_translate_20260904214916.docx",
+      "source_code": "H01",
+      "sha256": "80fea7610fe0ee1632add69d73f112138d94292c77a7a7c130443637b65d9ecc",
+      "planning_goal": "To enhance parents' understanding of respiratory health protection for infants and knowledge related to vaccines, and to provide a starting point for subsequent consultations."
+    },
+    {
+      "page_code": "H08",
+      "activity_card": "2-活动卡片/H08_“给宝宝的第一份安全检测雷达”孕检候诊快闪_1_2_translate_20260904215138.docx",
+      "source_code": "H08",
+      "sha256": "f30a4eb4ea980b482dc2e8aa332061386468ce7ac84f0993e244b90fca289d59",
+      "planning_goal": "To introduce the project's research focus and baseline respiratory health data in a low-intrusive, contactless manner, while listening to the real-life concerns of pregnant families."
+    },
+    {
+      "page_code": "H02",
+      "activity_card": "2-活动卡片/H02_肺炎链球菌疫苗月子中心合作小课堂_1_2_translate_20260904215012.docx",
+      "source_code": "H02",
+      "sha256": "d086f4d935efdecff55b67b1ca35353c8f16a88d569b7b0a9d08d3ade4c6677e",
+      "planning_goal": "To help staff provide more accurate and human-centered communication when addressing parents' questions."
+    },
+    {
+      "page_code": "H03",
+      "activity_card": "2-活动卡片/H03_小手净净・健康同行——幼儿园七步洗手法健康科普教育_1_2_translate_20260904215021.docx",
+      "source_code": "H03",
+      "sha256": "b688534962cbcf3bb70c87f154858e647001e0f37482dd25158a3b31cfd11e6f",
+      "planning_goal": "To encourage children to wash their hands willingly, to teach them the correct way to wash their hands, and to help them remember the key times to wash their hands."
+    },
+    {
+      "page_code": "H04",
+      "activity_card": "2-活动卡片/H04_小手搭生命・模块化黏土工坊_1_2_translate_20260904215031.docx",
+      "source_code": "H04",
+      "sha256": "9a40c032f21a009af32a41686b0ab977f91f5e6594df45d0fbd3862d1fa2c078",
+      "planning_goal": "To help children gain an initial understanding of bacteriophages, antibodies, and functional enzymes through modular creative activities."
+    },
+    {
+      "page_code": "H05",
+      "activity_card": "2-活动卡片/H05_神奇的生物乐高：合成生物学大冒险_1_2_translate_20260904215040.docx",
+      "source_code": "H05",
+      "sha256": "9844df9f87775ee1272e6c12c143bfc4adfc487fd1fa76831109920551db1278",
+      "planning_goal": "Use the \"building with Lego\" analogy to help children gain an initial understanding of DNA, the assembly of life components, and synthetic biology."
+    },
+    {
+      "page_code": "H06",
+      "activity_card": "2-活动卡片/H06_《看得见的防护》——老年专属健康知识宣传_1_2_translate_20260904215051.docx",
+      "source_code": "H06",
+      "sha256": "c96ddfd2846345a22afecb6b5cf12455c3e428e4e1b1052e6f86a104a087faf8",
+      "planning_goal": "To convey basic safety precautions through large-print materials and straightforward explanations, while fostering emotional connection and health awareness through postcards."
+    },
+    {
+      "page_code": "H07",
+      "activity_card": "2-活动卡片/H07_守护银发・基础防护规范培训_1_2_translate_20260904215129.docx",
+      "source_code": "H07",
+      "sha256": "7411d86e536bb327e75b61bebc7779436a288d9de2bbe3c4aa345c19ab37107a",
+      "planning_goal": "Translate key elements—such as hand hygiene, ventilation, cleaning, and documentation—into actionable care practices."
+    },
+    {
+      "page_code": "B01",
+      "activity_card": "2-活动卡片/B01_呼吸的科学密码——手抄报校园巡展.docx",
+      "source_code": "B01",
+      "sha256": "074a49cb146f5a80de84889b4f79e6d699607c39acf1ec74979d128f8d3c9fb1",
+      "planning_goal": "Enable students to understand basic concepts of respiratory protection and detection through hand-drawing, presentation and exhibition visits."
+    },
+    {
+      "page_code": "B02",
+      "activity_card": "2-活动卡片/B02_“呼吸实验室”线上云课堂_1_3_translate_20260904215638.docx",
+      "source_code": "B02",
+      "sha256": "93654c45ad340006f86cbaf277fb316d93bbc8fd4b00bc560c425368144dec89",
+      "planning_goal": "Introduce basic concepts of respiratory health, biosensing and synthetic biology via story-based recorded courses."
+    },
+    {
+      "page_code": "B03",
+      "activity_card": "2-活动卡片/B10_薪续白医红，科创润童心——葛公小学红色支教科普活动_1_2_translate_20260904214605.docx",
+      "source_code": "B10",
+      "sha256": "7efe08446f2365be1bc8a221aa63d5f00cdb87b72404d6ef4750ae874fd78bc0",
+      "planning_goal": "To bridge modern synthetic biology with basic respiratory protection through local narratives of dedicated healthcare professionals, thereby integrating cultural understanding, scientific literacy, and health education."
+    },
+    {
+      "page_code": "B04",
+      "activity_card": "2-活动卡片/B03_隐形的卫士：镜头下的生命与健康_1_2_translate_20260904215335.docx",
+      "source_code": "B03",
+      "sha256": "e154dad4559fdfa24775199473ef1b4a4db72e30984ceecc5fc8bf00c736130e",
+      "planning_goal": "Enable students to connect natural life, daily protection and synthetic biology through image creation."
+    },
+    {
+      "page_code": "B05",
+      "activity_card": "2-活动卡片/B04_呼吸道检测小发明创意设计小课堂_1_3_translate_20260904215435.docx",
+      "source_code": "B04",
+      "sha256": "e20b5a63568de0aa68b4c10de19ef1aa83290798ee72d3c4aad347a5356a5f92",
+      "planning_goal": "Allow students to experience the design process from real-life pain points to conceptual sketches, and pay attention to the needs of diverse user groups."
+    },
+    {
+      "page_code": "B06",
+      "activity_card": "2-活动卡片/B05_“解码生命・智竞未来”青少年合成生物学知识问答竞赛_1_3_translate_20260904215511.docx",
+      "source_code": "B05",
+      "sha256": "096e2638951aa5388e8656d8623ccec381d7b7ad9e8fb75ce0ebfa47a6d2ccb3",
+      "planning_goal": "Help students understand synthetic biology, respiratory detection and daily protection through tiered competition and error-review sessions."
+    },
+    {
+      "page_code": "B07",
+      "activity_card": "2-活动卡片/B06_“合成生物学生态圈”未来职业研讨会_1_3_translate_20260904215528.docx",
+      "source_code": "B06",
+      "sha256": "9071c2cb00276e59afd49d2bab3903c3fe0a8c4655799da005517c6e056bfd8c",
+      "planning_goal": "Demonstrate diverse professional roles required for translating health-related technologies from R&D to real-world application, and help students identify participation pathways matching their strengths."
+    },
+    {
+      "page_code": "B08",
+      "activity_card": "2-活动卡片/B07_追光科创，逐梦归来——全国高中生返校公益宣讲_1_2_translate_20260904214406.docx",
+      "source_code": "B07",
+      "sha256": "23480450d258882391011d99a052c1259472167a97e7bc440f1e8883d8c36b78",
+      "planning_goal": "To bridge the fundamentals of synthetic biology, the insights gained from the iGEM competition, and the pathways for scientific and technological innovation exploration at the high school level through standardized, replicable public outreach events upon returning to school."
+    },
+    {
+      "page_code": "B09",
+      "activity_card": "2-活动卡片/B08_百团纳新合成生物学科普摊位_1_2_translate_20260904214501.docx",
+      "source_code": "B08",
+      "sha256": "4f8392cae699896ca2f32fd03be1daaff2d177c0633f0770a2ea8d4e67635988",
+      "planning_goal": "To introduce synthetic biology, respiratory health, and team-based research themes in a high-traffic campus environment, and to gather frequently asked questions from students across various disciplines."
+    },
+    {
+      "page_code": "B10",
+      "activity_card": "2-活动卡片/B09_晚风愈心绪・科创护呼吸——宿舍楼下 NPC 互动与合成生物轻科普活动_1_2_translate_20260904214523.docx",
+      "source_code": "B09",
+      "sha256": "960571f3fb26df8e61e042def77bcb4fa46a5b436e8d1e1dd4f87bd61b485940",
+      "planning_goal": "To provide non-clinical peer support and a platform for scientific dialogue, introducing basic protection measures and synthetic biology in a relatable, everyday context."
+    },
+    {
+      "page_code": "B11",
+      "activity_card": "2-活动卡片/B11_奔跑逐光・以跑聚力——校园健康跑呼吸道健康科普活动_1_2_translate_20260904214621.docx",
+      "source_code": "B11",
+      "sha256": "a6c42425e61e393b540475a3ac8a60093e349a69fc6b57b2a8ac15110ab1c590",
+      "planning_goal": "To understand the exercise-related respiratory health and family protection needs of young adults in a Health Run context, and to introduce basic care practices as well as research directions for related projects."
+    },
+    {
+      "page_code": "B12",
+      "activity_card": "2-活动卡片/B13_杏花文化节合成生物学科普摊位_1_2_translate_20260904214743.docx",
+      "source_code": "B13",
+      "sha256": "81c8cbbeae5cce948103238a8952f9dad372e9d0a6a1ef9f2a67f409abb377d4",
+      "planning_goal": "Leverage springtime outdoor exhibition opportunities to use a layered instructional approach to lower the barrier to understanding in synthetic biology and detection technologies."
+    },
+    {
+      "page_code": "B13",
+      "activity_card": "2-活动卡片/B12_呼吸道病原检测方式选择——草地音乐节开放场互动投票科普活动_1_2_translate_20260904214732.docx",
+      "source_code": "B12",
+      "sha256": "ec3c4bc39fd520f5e8e647eb7b79484c84e1a47128d9ee78157a91ce0da01b3a",
+      "planning_goal": "To help the public understand the appropriate use cases for different testing methods through voting and comparative demonstrations, while gathering actual user preferences."
+    },
+    {
+      "page_code": "B14",
+      "activity_card": "2-活动卡片/B14_《植物大战僵尸：基因战争》游戏化合成生物学科普企划_1_2_translate_20260904214804.docx",
+      "source_code": "B14",
+      "sha256": "627c3be5e8738100cfbcef7742c3a34fceb656c073859f6c799a7b3e37d782f1",
+      "planning_goal": "Use a boundary-based game analogy to introduce concepts such as CRISPR, RNA interference, drug resistance, biofilms, and immune evasion."
+    },
+    {
+      "page_code": "D01",
+      "activity_card": "2-活动卡片/D01_以艺术疗愈温暖“星星的孩子”——非遗漆扇志愿服务活动_1_2_translate_20260904214854.docx",
+      "source_code": "D01",
+      "sha256": "1138231808bf10af9c7bedacec23411fcfa6ad69a958bf1a7c6684e88e772530",
+      "planning_goal": "Use the traditional craft of making lacquer fans as a medium to convey basic hygiene and respiratory protection information through low-stimulation interactions."
+    },
+    {
+      "page_code": "D02",
+      "activity_card": "2-活动卡片/D02_伴“星”成长，为“星”筑梦——爱徒步・融未来特需青少年社会融合徒步科普活动_1_2_translate_20260904214906.docx",
+      "source_code": "D02",
+      "sha256": "c09f3f262bc8564b0da2457281a208ef6241c8773202b80d251218d5ef399aa9",
+      "planning_goal": "To use a joint hiking activity as a platform to integrate health protection, basic safety measures, accessible science outreach on synthetic biology, and social inclusion."
+    }
+  ],
+  "resources": [
+    {
+      "code": "H01",
+      "kind": "activity plan",
+      "source": "3-策划案/肺炎链球菌疫苗防护宣导策划案(1).pdf",
+      "installed": "a  图片/education/resources/h01-activity-plan.pdf",
+      "sha256": "d2c5863717e7fdf77effb752df564902c9fd8f4a3adf57a8cdde1ab576a46202",
+      "bytes": 674019,
+      "pages": 5
+    },
+    {
+      "code": "H02",
+      "kind": "activity plan",
+      "source": "3-策划案/肺炎链球菌疫苗疫苗月子中心合作小课堂活动.pdf",
+      "installed": "a  图片/education/resources/h02-activity-plan.pdf",
+      "sha256": "da85993850a218294e8920f8efb1df5dedfcbcfe74e46b7d10dd17d000a8fd98",
+      "bytes": 699810,
+      "pages": 5
+    },
+    {
+      "code": "H03",
+      "kind": "activity plan",
+      "source": "3-策划案/幼儿园七步洗手法健康科普教育活动策划案.pdf",
+      "installed": "a  图片/education/resources/h03-activity-plan.pdf",
+      "sha256": "be1b9771335db5f330307900878d88b0209a3cea9717038141207396aca77914",
+      "bytes": 696467,
+      "pages": 7
+    },
+    {
+      "code": "H04",
+      "kind": "activity plan",
+      "source": "3-策划案/模块化黏土·生命科学模型创作——幼儿园科学工坊活动策划案(1).pdf",
+      "installed": "a  图片/education/resources/h04-activity-plan.pdf",
+      "sha256": "752eb2bfc172109ad1b0e96a8204ee0d8eb5df6bda02129d9e35d1310a01a0b3",
+      "bytes": 678639,
+      "pages": 5
+    },
+    {
+      "code": "H05",
+      "kind": "activity plan",
+      "source": "3-策划案/神奇的生物乐高：合成生物学大冒险——科普教育活动策划案.pdf",
+      "installed": "a  图片/education/resources/h05-activity-plan.pdf",
+      "sha256": "7bc8fc7b269891338388abaebed0016e8dddf72406859df9a053b113e954af5b",
+      "bytes": 684007,
+      "pages": 6
+    },
+    {
+      "code": "H06",
+      "kind": "activity plan",
+      "source": "3-策划案/《看得见的防护》——老年专属健康知识宣传策划案(1).pdf",
+      "installed": "a  图片/education/resources/h06-activity-plan.pdf",
+      "sha256": "4d24cc7d3f19b4fcd2ca342b88f87825b7bb56b9ef83759dd6c9fc714e855689",
+      "bytes": 705041,
+      "pages": 5
+    },
+    {
+      "code": "H07",
+      "kind": "activity plan",
+      "source": "3-策划案/守护银发·基础防护规范培训(2).pdf",
+      "installed": "a  图片/education/resources/h07-activity-plan.pdf",
+      "sha256": "b461360869d32a3f927a1f4d37fd0a118d87e9262cf26b1504cedaa9d833f332",
+      "bytes": 636946,
+      "pages": 5
+    },
+    {
+      "code": "H08",
+      "kind": "activity plan",
+      "source": "3-策划案/“给宝宝的第一份安全检测雷达”孕检候诊快.pdf",
+      "installed": "a  图片/education/resources/h08-activity-plan.pdf",
+      "sha256": "ec8816dbf1677eb464ead619697ff67b0bcf7ee9c0577e550ae6b14062e6d3ae",
+      "bytes": 658357,
+      "pages": 4
+    },
+    {
+      "code": "B01",
+      "kind": "activity plan",
+      "source": "3-策划案/呼吸的科学密码——小学生手抄报校园巡展策划案.pdf",
+      "installed": "a  图片/education/resources/b01-activity-plan.pdf",
+      "sha256": "e02712d069aef10eef17f6fd16c7a5fede2759efe95101fc08b4ee23f31e632a",
+      "bytes": 641484,
+      "pages": 5
+    },
+    {
+      "code": "B02",
+      "kind": "activity plan",
+      "source": "3-策划案/“呼吸实验室”线上云课堂活动策划案.pdf",
+      "installed": "a  图片/education/resources/b02-activity-plan.pdf",
+      "sha256": "017779af2168fabe932f52a72c44eeaef013e15e96ebbb21b844104362cf8d54",
+      "bytes": 644302,
+      "pages": 5
+    },
+    {
+      "code": "B03",
+      "kind": "activity plan",
+      "source": "3-策划案/“薪续白医红，科创润童心”宣教.pdf",
+      "installed": "a  图片/education/resources/b03-activity-plan.pdf",
+      "sha256": "0a3f55b4d7523a9b3916eaf547b7a1c349ec5c255169f75dedbddc88959123e7",
+      "bytes": 773978,
+      "pages": 5
+    },
+    {
+      "code": "B04",
+      "kind": "activity plan",
+      "source": "3-策划案/隐形的卫士：镜头下的生命与健康活动策划案.pdf",
+      "installed": "a  图片/education/resources/b04-activity-plan.pdf",
+      "sha256": "cc4048b1e199823d0683a05602017c452978dc8a3f8a9acaeeae916439cee777",
+      "bytes": 668564,
+      "pages": 6
+    },
+    {
+      "code": "B05",
+      "kind": "activity plan",
+      "source": "3-策划案/“呼吸道检测小发明”创意设计小课堂活动策.pdf",
+      "installed": "a  图片/education/resources/b05-activity-plan.pdf",
+      "sha256": "0855d6002abdd8deabcbad64a9aebe47d394acc585e80776788e92561c66cf96",
+      "bytes": 643254,
+      "pages": 5
+    },
+    {
+      "code": "B06",
+      "kind": "activity plan",
+      "source": "3-策划案/“解码生命·智竞未来”青少年合成生物学知识问答竞赛策划案(1).pdf",
+      "installed": "a  图片/education/resources/b06-activity-plan.pdf",
+      "sha256": "4c02f25308b42c22b30ddaa256086979c1980f6899c49c1655d740587bce06fb",
+      "bytes": 641398,
+      "pages": 5
+    },
+    {
+      "code": "B07",
+      "kind": "activity plan",
+      "source": "3-策划案/“合成生物学生态圈”未来职业研讨会策划案(1).pdf",
+      "installed": "a  图片/education/resources/b07-activity-plan.pdf",
+      "sha256": "f87f2d41a8aba728602de482cd56875c13371338748531c3f0b9a86be6914314",
+      "bytes": 657915,
+      "pages": 4
+    },
+    {
+      "code": "B08",
+      "kind": "activity plan",
+      "source": "3-策划案/“追光科创，逐梦归来”高中生全国返校公益.pdf",
+      "installed": "a  图片/education/resources/b08-activity-plan.pdf",
+      "sha256": "668c2e5fa17e4833dc9f1d84e0164ff6ec5600e52a5829a6645de20869238c07",
+      "bytes": 650894,
+      "pages": 5
+    },
+    {
+      "code": "B09",
+      "kind": "activity plan",
+      "source": "3-策划案/a百团纳新合成生物学科普摊位策划案.pdf",
+      "installed": "a  图片/education/resources/b09-activity-plan.pdf",
+      "sha256": "dbea958bad170bb809c2dcdbfe64ea386fd6340b3b2e40ef6638c169af28e89b",
+      "bytes": 623237,
+      "pages": 5
+    },
+    {
+      "code": "B10",
+      "kind": "activity plan",
+      "source": "3-策划案/a晚风愈心绪·科创护呼吸互动.pdf",
+      "installed": "a  图片/education/resources/b10-activity-plan.pdf",
+      "sha256": "75d208274e1b0b28add475348cb71ea472cfdf85f0689e39ec6f435ce571daa3",
+      "bytes": 685931,
+      "pages": 5
+    },
+    {
+      "code": "B11",
+      "kind": "activity plan",
+      "source": "3-策划案/校园健康跑呼吸道健康科普.pdf",
+      "installed": "a  图片/education/resources/b11-activity-plan.pdf",
+      "sha256": "39ba38513033c29b0efb541c414cfdcf1650d0b19d02f5f0107487e394856b35",
+      "bytes": 684944,
+      "pages": 5
+    },
+    {
+      "code": "B12",
+      "kind": "activity plan",
+      "source": "3-策划案/杏花文化节合成生物学科普摊位.pdf",
+      "installed": "a  图片/education/resources/b12-activity-plan.pdf",
+      "sha256": "5e6a93f3d331f70ef34256623d3540a46e7845995ddab6b82dd10170af5a79e8",
+      "bytes": 686515,
+      "pages": 5
+    },
+    {
+      "code": "B13",
+      "kind": "activity plan",
+      "source": "3-策划案/草地音乐节互动投票策划案.pdf",
+      "installed": "a  图片/education/resources/b13-activity-plan.pdf",
+      "sha256": "aad787d9affaa45bd59c5973dec35f22f5891396764115f8946662dfa8c5f07f",
+      "bytes": 684945,
+      "pages": 5
+    },
+    {
+      "code": "B14",
+      "kind": "activity plan",
+      "source": "3-策划案/a游戏化合成生物学科普企划《基因战争》策.pdf",
+      "installed": "a  图片/education/resources/b14-activity-plan.pdf",
+      "sha256": "63546d39bc6317532da7ca273d8b74a3828571481be74388ec8c034b3cf23352",
+      "bytes": 693352,
+      "pages": 8
+    },
+    {
+      "code": "D01",
+      "kind": "activity plan",
+      "source": "3-策划案/a非遗漆扇陪伴式科普策划案.pdf",
+      "installed": "a  图片/education/resources/d01-activity-plan.pdf",
+      "sha256": "063044cd0e5f66f262f7d0ae1a189704df722d1f02673f329426e0594f5ca36f",
+      "bytes": 663162,
+      "pages": 6
+    },
+    {
+      "code": "B14",
+      "kind": "game guide",
+      "source": "3-策划案/清华基因战争游戏说明书/GeneWars_QuickStart_EN.pdf",
+      "installed": "a  图片/education/resources/gene-wars-quickstart-en.pdf",
+      "sha256": "c926d08180140208ebe165b5a1c3224c306e2b7acd49a4bfd29cefb9c5f9f232",
+      "bytes": 194934,
+      "pages": 2
+    },
+    {
+      "code": "B14",
+      "kind": "game guide",
+      "source": "3-策划案/清华基因战争游戏说明书/GeneWars_Manual_EN.pdf",
+      "installed": "a  图片/education/resources/gene-wars-manual-en.pdf",
+      "sha256": "b7fb2a1b0eb0797dd00f9830a746734974d00e39f75f78de2ffa81334823c6ad",
+      "bytes": 254029,
+      "pages": 6
+    },
+    {
+      "code": "B14",
+      "kind": "game guide",
+      "source": "3-策划案/清华基因战争游戏说明书/GeneWars_QuickStart_CN.pdf",
+      "installed": "a  图片/education/resources/gene-wars-quickstart-cn.pdf",
+      "sha256": "9c5cc02abbeaef3c7ade85482a186499ea2141bd308f7e836cbb585e3202b760",
+      "bytes": 347701,
+      "pages": 2
+    },
+    {
+      "code": "B14",
+      "kind": "game guide",
+      "source": "3-策划案/清华基因战争游戏说明书/GeneWars_Manual_CN.pdf",
+      "installed": "a  图片/education/resources/gene-wars-manual-cn.pdf",
+      "sha256": "7c989be48986a0f2a55d05a0eedafc8d3f5a2a052a7555c64e8605e653e951a8",
+      "bytes": 510066,
+      "pages": 6
+    },
+    {
+      "code": "B14",
+      "kind": "prototype image",
+      "source": "1-Edu活动照片/清华合作基因战争游戏/初始页.png",
+      "installed": "a  图片/education/activities/b14-gene-wars-prototype.png",
+      "sha256": "009f43ed6871b15a01d3697d271cb0c168996da3630fa1e25081cd788d89fbdc",
+      "bytes": 3362523
+    }
+  ],
+  "coordination_notes": [
+    "B14 remains in development: the main manuscript and draft-card status disagree about release; prototype materials and v0.9 manuals do not establish public release or educational evaluation.",
+    "The activity cards include unfilled measurement and feedback fields. No new participant counts, learning outcomes, publication links or completed revisions are inferred.",
+    "D02 has an activity-card draft and photographs, but no supplied standalone planning PDF.",
+    "Two B13 Apricot Blossom card drafts are supplied; their design objectives agree. The version without the extra 20260904195226 segment is used."
+  ],
+  "retained_photographs": [
+    {
+      "installed": "a  图片/education/activities/gallery/b01-01.jpg",
+      "source": "1-Edu活动照片/手抄报校园巡展/6966594a9bf01d3d11cf33ecd625a72d.jpeg",
+      "sha256": "c3424ace7f4cfd1f7ff44f62e789bb0b601b2f7f76221a35259203d220fcf795"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b01-02.jpg",
+      "source": "1-Edu活动照片/手抄报校园巡展/a1c738b3218091c47854dc8bef019d53.jpeg",
+      "sha256": "115caed4ae4c50905ddf8979e5e50b3d453cdce37e77c335817ea9bafa58cd28"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b01-03.jpg",
+      "source": "1-Edu活动照片/手抄报校园巡展/d630e7e6579e494204849d7681eb2c01.jpeg",
+      "sha256": "94cab0e4f16e008801a791b1c4491866547aee4d1b2c8d62c1413cc379d00530"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b02-01.jpg",
+      "source": "1-Edu活动照片/线上云课堂/线上云课堂.jpeg",
+      "sha256": "6054c47a0dcb384ad7af6ad7bbad2737fc757372fa16bcdcb931568f649a6e5b"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b02-02.jpg",
+      "source": "1-Edu活动照片/线上云课堂/3d41ef16a3ee697e9b19e42fdb6104ef.jpeg",
+      "sha256": "086e2da3a65a929b003e8e2f05d744176e8ccd713a212a13f020b30baf496262"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b02-03.jpg",
+      "source": "1-Edu活动照片/线上云课堂/dc3d1db937c9ccde8836dab40c83fda1.jpeg",
+      "sha256": "986677f3443b26aa52a4e4876421ad33069c777974d6da6fa5de4ff6730776cb"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b03-01.jpg",
+      "source": "1-Edu活动照片/葛公小学红色支教/0fd8b48bc356f11bced5ecabfe3292d6.jpeg",
+      "sha256": "77d39c0acd110409c448b3ad3feaac2eaf9b32f91e1c408e2d09f6a00195de92"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b03-02.jpg",
+      "source": "1-Edu活动照片/葛公小学红色支教/182fef2649b20315b786097d1f11f95f.jpg",
+      "sha256": "f026696c6a547db3bb895f91ab54b433af6f37cac129ea9c7a39e6c9b17fc2d4"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b03-03.jpg",
+      "source": "1-Edu活动照片/葛公小学红色支教/6be25f375a2f57f04f4135b4b1d67b6e.jpg",
+      "sha256": "35914e24fe32a156df2d5886f5b685c7d946bfa62ccb73cca2214b1458118d5b"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b03-04.jpg",
+      "source": "1-Edu活动照片/葛公小学红色支教/bc52aa07f486c4576e387464b776d434.jpg",
+      "sha256": "a2ed19ee336383eb2e9edfef7d17ed91572270306af1a95064029592727bbda2"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b04-01.jpg",
+      "source": "1-Edu活动照片/镜头下的生命与健康/镜头下的生命与健康.jpeg",
+      "sha256": "4e49399ecdf3d4a80a92ab07fd8c3f06fffa2f430b4bb286e94497f02a289f55"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b04-02.jpg",
+      "source": "1-Edu活动照片/镜头下的生命与健康/26bc0893d1d2c60d1ae5317973e058f3.jpeg",
+      "sha256": "aa2810ea25bebe3b2b5d747186d57a81a1b8499584207e17b643162483ea4fcb"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b04-03.jpg",
+      "source": "1-Edu活动照片/镜头下的生命与健康/dfa16437dfcb2230c5cacd3afa8558df.jpeg",
+      "sha256": "5c63e54d5b1aaa5eeba524743134e81fcf0fa1644448b386bc728869afefda6a"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b05-01.jpg",
+      "source": "1-Edu活动照片/检测小发明设计课堂/检测小发明设计课堂.jpeg",
+      "sha256": "4089b3ccd0f4c3ff833f62317249ec3fc2412dceb514904a5eaf8b81c878ac65"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b05-02.jpg",
+      "source": "1-Edu活动照片/检测小发明设计课堂/1d05e378cf30067b39df4c394497950a.jpeg",
+      "sha256": "350bd1b5add0d5a2c7ddc0ae2cf0487a26dc01ecdbee45716b17b2d5f0b7be46"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b05-03.jpg",
+      "source": "1-Edu活动照片/检测小发明设计课堂/8a3cbdb8688f400cfd8ba4f44e3981e1.jpg",
+      "sha256": "363740af02ab8ed37f3dc50ff3818502eedc6ff4eae8d8d29440c303c8faa09a"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b06-01.jpg",
+      "source": "1-Edu活动照片/合成生物学知识问答竞赛/合成生物学知识问答竞赛.jpeg",
+      "sha256": "47d3d610350d472b8e2fdf867063674d28ebfb7f59f13fa16749bb68ea5ece49"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b06-02.jpg",
+      "source": "1-Edu活动照片/合成生物学知识问答竞赛/12453991b4ed91599371fbb5c90fa60e.jpeg",
+      "sha256": "3ae5bd1728e83d19facb794be7ca4d3c31b09bdf5649a72c681191ca81f9a335"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b06-03.jpg",
+      "source": "1-Edu活动照片/合成生物学知识问答竞赛/6d3fdcbbf773e7c6709038364794562a.jpeg",
+      "sha256": "3b64ad8730c7b68746dbd740cbe5e3dbd401e3e62185039dde0a513b0f92632e"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b06-04.jpg",
+      "source": "1-Edu活动照片/合成生物学知识问答竞赛/b7f12c05f779989f4c4944dcd534bce2.jpeg",
+      "sha256": "e71b399fb5b941748cb22b44a8b6756b11353f33672804dba926ce46e9e4ad62"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b07-01.jpg",
+      "source": "1-Edu活动照片/未来职业研讨会/未来职业研讨会.jpeg",
+      "sha256": "f20854d032e6f259d024e88e36cc37677e93e37bc313ab3575d249cd115671c5"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b07-02.jpg",
+      "source": "1-Edu活动照片/未来职业研讨会/1a0b0373e699fab2e4045577efec046a.jpeg",
+      "sha256": "ebac6a61a0b65a701210bf555e4037fa22fef06c9e485c0a0f8064a83f81c2a9"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b07-03.jpg",
+      "source": "1-Edu活动照片/未来职业研讨会/643a6bca5bf35bcb38c656f8eff07a8f.jpeg",
+      "sha256": "137a1bdfb8e77401625cfc9611251764ba2eeaad6355ba1246e972e01bbb2bf2"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b07-04.jpg",
+      "source": "1-Edu活动照片/未来职业研讨会/ba248df560ddc77acc3d8c6214e24cd0.jpeg",
+      "sha256": "1e66eeab5581b6c3e907dd4fd29511f3e67db9cfca7c13e78c6cd803cdee1497"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b09-01.jpg",
+      "source": "1-Edu活动照片/百团纳新科普摊位/百团纳新科普摊位.jpeg",
+      "sha256": "d74dd1c7a3c9a886bb2728a9c823ed114854e15cdf465303f045b010289d5b3f"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b09-02.jpg",
+      "source": "1-Edu活动照片/百团纳新科普摊位/2500b544b209df2f656fc93b5bc02f47.jpeg",
+      "sha256": "e3aa3d24d12a64df58046ae1affbfa18189bfe64c7fdd58f5c9d7e2074c8cca5"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b09-03.jpg",
+      "source": "1-Edu活动照片/百团纳新科普摊位/710e677230f75d6ea1774a5955ce1ad8.jpeg",
+      "sha256": "641ecba972f0d630910a46a013bd36e8fc02ba7782951dacb67db10fd5944095"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b09-04.jpg",
+      "source": "1-Edu活动照片/百团纳新科普摊位/aa4f09880a3439ac44184994d0134a96.jpeg",
+      "sha256": "c06bd51d3f5cf39dcf02f330d9b1d8ca65d468da6b3b2bb218af4910abdb2536"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b10-01.jpg",
+      "source": "1-Edu活动照片/宿舍NPC互动/宿舍NPC互动.jpeg",
+      "sha256": "9ef1f6ca7e07910c8dd7a59f315d17ea6fef74c28a50cb8a061538bdb6c59b86"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b10-02.jpg",
+      "source": "1-Edu活动照片/宿舍NPC互动/9dde1977eac510a97e43a36f3fde13a1.jpeg",
+      "sha256": "560f5e71046b1245138b1d71c962eafa286434fa91a06edaef75c8d76c4ff7da"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b11-01.jpg",
+      "source": "1-Edu活动照片/校园健康跑/校园健康跑.jpeg",
+      "sha256": "18c97724a9e530f334e033be5f2ca562eab08ac1c32380aa7847d09a857e84fe"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b11-02.jpg",
+      "source": "1-Edu活动照片/校园健康跑/373b39ac394d5945c7bacea2895bbc2c.jpeg",
+      "sha256": "d88b857e8b92de25758ed0cbdfe636b9257391de5b0bb5e72e55c5cba964afc4"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b11-03.jpg",
+      "source": "1-Edu活动照片/校园健康跑/579b98dad5362907791c19e9536b8a96.jpeg",
+      "sha256": "3e4dbcb9c844aafb58141f5119215edc5853dcc0401539a1a30176b9cc917c57"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b11-04.jpg",
+      "source": "1-Edu活动照片/校园健康跑/647b1fc7bd5271a3f228816e400481ab.jpeg",
+      "sha256": "b614f62dcd6f0aaef0052205cee1b441cad58e367d2a6833a41d08d23069c73a"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b12-01.jpg",
+      "source": "1-Edu活动照片/杏花文化节科普摊位/杏花文化节科普摊位.jpeg",
+      "sha256": "a1b0b4ad8a1e3e0331bcca88695b11ea1bca3101c287ad024155dc02f77682b8"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b12-02.jpg",
+      "source": "1-Edu活动照片/杏花文化节科普摊位/39ea4d638b5df04653ed5c904f664753.jpeg",
+      "sha256": "7d230e60ca35a1a0a037c635f05c3409e5563fb8946d2d7a32cf5669e9b1c0ba"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b12-03.jpg",
+      "source": "1-Edu活动照片/杏花文化节科普摊位/a2b61907a9552daecf3046b4edab1f50.jpeg",
+      "sha256": "370c91920fd812f104d5549e5ecfa1d05ac9e86651ac571ae75e219459aae155"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b12-04.jpg",
+      "source": "1-Edu活动照片/杏花文化节科普摊位/d2dc6ab874433e50ba71149ef9410437.jpeg",
+      "sha256": "170ec999287f4736d1b55dcd73d84e2e7af4b85fb7ad64183ea114c132970a5c"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b13-01.jpg",
+      "source": "1-Edu活动照片/草地音乐节互动投票/草地音乐节互动投票.jpeg",
+      "sha256": "ae4cb88844043a22aff93a5ff820b360e096854f500a1c75cbea294a31d2d9b5"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b13-02.jpg",
+      "source": "1-Edu活动照片/草地音乐节互动投票/32f388ce2ffb21403c13b94209916e91.jpeg",
+      "sha256": "63fc7a8533d2564cb6e3eb8f35c1941b78915e91f089d658429bb013cff8dbab"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/b13-03.jpg",
+      "source": "1-Edu活动照片/草地音乐节互动投票/3d62926cb20c005afad032d47decfbd5.jpeg",
+      "sha256": "59f78223e19f439dd88723b1912f1a902c0ec368ddf8582052d27588e84fedc2"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d01-01.jpg",
+      "source": "1-Edu活动照片/非遗漆扇志愿服务/169844458e999e7adb9b7be3a049ad7f.jpg",
+      "sha256": "2d3d8761f01f49bbb6c19174554745ccc98429cfae4d8ff45e02908353f50987"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d01-02.jpg",
+      "source": "1-Edu活动照片/非遗漆扇志愿服务/182eafa70e31ba727f7b4438cc016889.jpg",
+      "sha256": "93fae9c9573de8b0c1301c5337319bf7b8cf4b103c846e1311d9f5c3b64aa63d"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d01-03.jpg",
+      "source": "1-Edu活动照片/非遗漆扇志愿服务/864cbcd529753fdf945766afc8445916.jpg",
+      "sha256": "f0a47d970df899d4273ba13b1a64d31ec6b910a58f875b3ec393fb552571016e"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d01-04.jpg",
+      "source": "1-Edu活动照片/非遗漆扇志愿服务/e0fd4ec7ca20dcc973504b2457f9f002.jpg",
+      "sha256": "76b8209707ec3f54403d215195bfe2347b02f669729ca92d690566df342b4a49"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d02-01.jpg",
+      "source": "1-Edu活动照片/特需青少年融合徒步/特需青少年融合徒步.jpg",
+      "sha256": "250f1e282fd206ffa3004dd377696623c9df22c94c23cf1ca921cafbbfb104a3"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d02-02.jpg",
+      "source": "1-Edu活动照片/特需青少年融合徒步/d453cb888ccd0c68b1b0d50855a1e421.jpg",
+      "sha256": "171882ef473bc8bfdbfffc719c9805e18550bbc9c008d0a5995852066d678761"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/d02-03.jpg",
+      "source": "1-Edu活动照片/特需青少年融合徒步/e4f40de9e55d55de2ea0602adcc46d98.jpg",
+      "sha256": "e1b4c5808ea20f72fa5f50b40b41bbf01a073f530026e37d1c80af04729d872b"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h01-01.jpg",
+      "source": "1-Edu活动照片/肺炎链球菌疫苗宣传/肺炎链球菌疫苗宣传.jpeg",
+      "sha256": "a29d7d0055f9bf2aa9008e3f97423ae647bdc21bfd27dcaad4c37c47e4581a0a"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h01-02.jpg",
+      "source": "1-Edu活动照片/肺炎链球菌疫苗宣传/ae9af54e26dd9fd8ea7a8e6f644a3e79.jpeg",
+      "sha256": "6c0fd5ceba75a81831670ec9197215ffa983b70c9eaeaa8b0d54e53e81377fb9"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h01-03.jpg",
+      "source": "1-Edu活动照片/肺炎链球菌疫苗宣传/e011dcb7b6dfbc44c7f7836aff9e45cc.jpg",
+      "sha256": "3d509b23719589263418562b7d369223e4bc94cd5318479437d8b056568e9375"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h02-01.jpg",
+      "source": "1-Edu活动照片/月子中心合作小课堂/月子中心合作小课堂.jpeg",
+      "sha256": "7f0731ef520eef698dd7b2af7f7f281e196ce093e41fb990778e1aa89f3b51d0"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h02-02.jpg",
+      "source": "1-Edu活动照片/月子中心合作小课堂/27798e213eb3b89206e8493d135e3a6a.jpeg",
+      "sha256": "de17b146151c4b44c786120564e1cb93ff559dad5ff3a50b2b72f9598ee3a84e"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h02-03.jpg",
+      "source": "1-Edu活动照片/月子中心合作小课堂/5ead1c751ac6c4708ae13f83d96568aa.jpeg",
+      "sha256": "909cbbd98e90c094f3d7c642a71b7518bb6872b5eca83615e80ef95f66ec389b"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h02-04.jpg",
+      "source": "1-Edu活动照片/月子中心合作小课堂/7fc837b5f9c64d42084675c2c09d8ecf.jpeg",
+      "sha256": "f8a377ce8abd6ddc7ece9e3834689a6f9c3cd31274b4abeb372041be87ebe1f6"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h03-01.jpg",
+      "source": "1-Edu活动照片/七步洗手法健康科普/七步洗手法健康科普.jpeg",
+      "sha256": "c1d1838152b7e6018c412d960560749d4e13946b53616f6c8f3cc9eb225d7d25"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h03-02.jpg",
+      "source": "1-Edu活动照片/七步洗手法健康科普/1d438298f87000752d4571846f67b73f.jpeg",
+      "sha256": "06c0adee64062e29e59eb730c95e285a295fed9aeb5d30a61b7aa6e9017ce281"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h03-03.jpg",
+      "source": "1-Edu活动照片/七步洗手法健康科普/86f06dbd749ab51f66d2de6334bda5b6.jpeg",
+      "sha256": "35254e595e1b8955637d5fa3ff88bec18d35f272db0f78d6be8dfb407f80f49a"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h04-01.jpg",
+      "source": "1-Edu活动照片/模块化黏土工坊/7abe96a306962bb665ea433921b8fe07.jpg",
+      "sha256": "25a38373ef02149a5016a7351458af447d512e578f9b7ba38023a828cc5a4e49"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h04-02.jpg",
+      "source": "1-Edu活动照片/模块化黏土工坊/870484c059f857635fe52381c785d2d0.jpeg",
+      "sha256": "08209102b48284903f7e849cb81487c1200c80f2e01c9cdd766cd0ca80cbb7bd"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h04-03.jpg",
+      "source": "1-Edu活动照片/模块化黏土工坊/d0be17c6fe1264e3855be5a86e77b646.jpg",
+      "sha256": "95b01aac38eba2c565e8363477eac9dc0e9809c92cf4f4b2cce42ed3ce20dd05"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h04-04.jpg",
+      "source": "1-Edu活动照片/模块化黏土工坊/eab0bad878948a774da98641dea14900.jpg",
+      "sha256": "fb244b1eabb488160d45c1cbd4167888e66f0ff2f0c7d2b61f3af9414c2d75c0"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h05-01.jpg",
+      "source": "1-Edu活动照片/神奇的生物乐高/神奇的生物乐高.jpeg",
+      "sha256": "03f85bc4d82f488fddd0ecfc74008d078307bd42f2f10edd31988e2999545be0"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h05-02.jpg",
+      "source": "1-Edu活动照片/神奇的生物乐高/08b54669fe20531a05b4dfbd08e25083.jpeg",
+      "sha256": "0210a1560ae44de0194aecb5d211961ed521ace20a22790034add23687b91c51"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h05-03.jpg",
+      "source": "1-Edu活动照片/神奇的生物乐高/4a47a62348102002b17bd2d228b50845.jpeg",
+      "sha256": "97acf2c2479523cddedb449145a4bf5a45d63b82194c5b5d3e3693fc41beb5e6"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h06-01.jpg",
+      "source": "1-Edu活动照片/老年专属健康宣传/512ae83c6b7b742e7fa91d94c99a153b.jpg",
+      "sha256": "f6eaa62e39f1374758acd5af3f4da48f8e4f7bde7e09291d41d098fa85e75e53"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h06-02.jpg",
+      "source": "1-Edu活动照片/老年专属健康宣传/89df4a5c4303ef9e0bbaaccc0c361783.jpg",
+      "sha256": "f3b647762db72cc08c451d7e002dd8c5831981a8834f68538c87dfc7437da5ee"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h06-03.jpg",
+      "source": "1-Edu活动照片/老年专属健康宣传/9cdc636a28a51a3dd3309268b3bc2526.jpg",
+      "sha256": "db7c91f893bfef81ac7b4924b57515c423e4d918767cddb206285c9d6ec51bb7"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h07-01.jpg",
+      "source": "1-Edu活动照片/护工基础防护规范培训/0ef72a8b01e0f1fa525de2d96b3edcbf.jpeg",
+      "sha256": "dd87efd698c91222ea6a97d162f87d7d530d193c7b4900419f32c0c87c463065"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h07-02.jpg",
+      "source": "1-Edu活动照片/护工基础防护规范培训/d7748af45b26bb47c34528bc5e0bee84.jpg",
+      "sha256": "2c64d7a505e30b0fb8fc26dad12fbf80bff33489bcccca4570f520f34ae44699"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h07-03.jpg",
+      "source": "1-Edu活动照片/护工基础防护规范培训/da412a7d8bd5de10397814969631946e.jpg",
+      "sha256": "d8ed517f92bf501240137de4598a6168ada0a89d29d5f4e9f772695c8c671d52"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h08-01.jpg",
+      "source": "1-Edu活动照片/孕检候诊快闪/孕检候诊快闪.jpeg",
+      "sha256": "feab8fee2c6097ec461364ba676563a8ebe4e074dc61d5d82d5037f063293250"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h08-02.jpg",
+      "source": "1-Edu活动照片/孕检候诊快闪/6a029ec5ca799540bfb01d07e77685cd.jpg",
+      "sha256": "67f961a54876ab2e7f7c162b61d76ef18d57c67d748d3c2889b757dff6e6347d"
+    },
+    {
+      "installed": "a  图片/education/activities/gallery/h08-03.jpg",
+      "source": "1-Edu活动照片/孕检候诊快闪/b3701a0010777e7ff07668ca99e43fea.jpg",
+      "sha256": "8ad50e98b0d30de0346c19ea7e00bb6ec34b188286f79ece13ad8087cc9a87c3"
+    }
+  ],
+  "manuscript": {
+    "source": "HEART-Edu_Loop.docx",
+    "sha256": "1fe9a2493e438bd8579df6a84be3af97e0bf8545c65873bf20992001087c203d"
+  },
+  "layout_reference": {
+    "source": "edu 布局建议.pdf",
+    "sha256": "9b5273325ec197cc6c8d7e9860d2c77151965418ed24da9ffe1f8e5dc228cfd6"
+  },
+  "validation": {
+    "date": "2026-10-14",
+    "build": "Vite 8.3.4 production build passed",
+    "preserved_activity_titles_dates_and_prose": 24,
+    "preserved_original_photo_hashes": 74,
+    "activity_gallery_groups": 22,
+    "prototype_gallery_groups": 1,
+    "verified_pdf_downloads": 27,
+    "actual_browser_download": "h01-activity-plan.pdf",
+    "widths_tested": [
+      320,
+      375,
+      390,
+      768,
+      1100,
+      1440
+    ],
+    "dbtl_tabs": "All four stages: click, arrows, Home and End passed",
+    "activity_anchors": "24 targets per viewport passed; mobile targets are clear of the contents bar",
+    "feedback_carousel": "Five-card cycling, Left/Right, Home/End passed; normal and reduced motion tested",
+    "photo_dialog": "Group isolation, counters, wraparound, arrows, Escape and focus restoration passed; single-image prototype hides paging controls",
+    "horizontal_page_overflow_px": 0,
+    "runtime_errors": [],
+    "failed_resource_responses": [],
+    "shared_navigation_and_footer": "Preserved"
+  }
+}

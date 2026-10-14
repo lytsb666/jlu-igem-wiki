@@ -99,52 +99,9 @@ document.querySelectorAll('.tree-branch__leaves a').forEach((link) => {
 });
 
 document.querySelectorAll('.activity-card').forEach((card) => {
-  const body = card.querySelector('.activity-card__body');
   const media = card.querySelector('.activity-media');
   const code = card.id.replace('activity-', '').toUpperCase();
-
   if (media) media.dataset.photoCode = code;
-  if (!body || body.querySelector('.activity-card__stories')) return;
-
-  const location = body.querySelector('.activity-card__location');
-  const paragraphs = [...body.children].filter((child) => child.matches('p:not(.activity-card__location)'));
-  if (!location || paragraphs.length === 0) return;
-
-  const stories = document.createElement('div');
-  stories.className = 'activity-card__stories';
-  location.after(stories);
-
-  const addStory = (labels, copy) => {
-    if (copy.length === 0) return;
-    const story = document.createElement('section');
-    story.className = 'activity-story';
-    const labelRow = document.createElement('div');
-    labelRow.className = 'activity-story__labels';
-    labels.forEach((label) => {
-      const span = document.createElement('span');
-      span.textContent = label;
-      labelRow.append(span);
-    });
-    story.append(labelRow, ...copy);
-    stories.append(story);
-  };
-
-  addStory(['Design', 'Build & Test'], paragraphs.slice(0, 1));
-  addStory(['Feedback & Learn'], paragraphs.slice(1));
-
-  const toolkit = document.createElement('div');
-  toolkit.className = 'activity-toolkit';
-  const toolkitLabel = document.createElement('span');
-  toolkitLabel.textContent = 'Open toolkit';
-  const toolkitStatus = document.createElement(card.id === 'activity-b14' ? 'strong' : 'a');
-  if (toolkitStatus instanceof HTMLAnchorElement) {
-    toolkitStatus.href = '#resources';
-    toolkitStatus.textContent = 'View reusable format →';
-  } else {
-    toolkitStatus.textContent = 'In development · not yet released';
-  }
-  toolkit.append(toolkitLabel, toolkitStatus);
-  body.append(toolkit);
 });
 
 const feedbackViewport = document.querySelector('.feedback-viewport');
@@ -166,6 +123,17 @@ function updateFeedback(index, shouldScroll = true) {
 
 document.querySelector('[data-feedback-prev]')?.addEventListener('click', () => updateFeedback(feedbackIndex - 1));
 document.querySelector('[data-feedback-next]')?.addEventListener('click', () => updateFeedback(feedbackIndex + 1));
+
+feedbackViewport?.addEventListener('keydown', (event) => {
+  let nextIndex = null;
+  if (event.key === 'ArrowRight') nextIndex = feedbackIndex + 1;
+  if (event.key === 'ArrowLeft') nextIndex = feedbackIndex - 1;
+  if (event.key === 'Home') nextIndex = 0;
+  if (event.key === 'End') nextIndex = feedbackCards.length - 1;
+  if (nextIndex === null) return;
+  event.preventDefault();
+  updateFeedback(nextIndex);
+});
 
 let feedbackTicking = false;
 feedbackViewport?.addEventListener('scroll', () => {
