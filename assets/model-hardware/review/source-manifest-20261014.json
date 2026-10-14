@@ -1,0 +1,2066 @@
+{
+  "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\msg\\attach\\62d2b5bca42c1049994e5d295315eb73\\2026-10\\Rec\\0d2755d221e135d0\\F\\5\\Hardware的Model竞赛页面.docx",
+  "sha256": "6f5b20469d0ea161abc1e43840ff9526c8f3f3f02828ccb29d7f48dcbf0fcfb5",
+  "assets": [
+    {
+      "file": "assets/model-hardware/images/image1.png",
+      "sha256": "d3914a932185d60cc3407578e9676c698c27d4dff20a3e889f9f983ff9e1b6c2",
+      "width": 1014,
+      "height": 807
+    },
+    {
+      "file": "assets/model-hardware/images/image2.png",
+      "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+      "width": 5953,
+      "height": 7071
+    },
+    {
+      "file": "assets/model-hardware/images/image3.png",
+      "sha256": "c35dfef4ce8300f9ab8e9d2130b2d69a1c1167753f7d01744ef3519a4b58a52f",
+      "width": 1268,
+      "height": 1703
+    },
+    {
+      "file": "assets/model-hardware/images/image4.png",
+      "sha256": "d0cdffb1a301e58a0ac5b1615ae6a1a40f84d000d64536ea2b14b881cfd6fcc6",
+      "width": 1149,
+      "height": 729
+    },
+    {
+      "file": "assets/model-hardware/images/image5.png",
+      "sha256": "9b5287eddf8f4b61392dc63a64494dbb517ea9143699d70fda4b1859c49f26b0",
+      "width": 1262,
+      "height": 741
+    },
+    {
+      "file": "assets/model-hardware/images/image6.png",
+      "sha256": "8dd8ba59996f48c367a2426ed7389bb81b4bc59fbb6237a188c8ad4de934094e",
+      "width": 1268,
+      "height": 504
+    },
+    {
+      "file": "assets/model-hardware/images/image7.png",
+      "sha256": "ecd97f681d0f6d4efc29262d65c66e130c9f316a0ce9057cdb8e3ada3dc45a8e",
+      "width": 1045,
+      "height": 752
+    },
+    {
+      "file": "assets/model-hardware/images/image8.png",
+      "sha256": "164d5dd9a012d69fd1377209623202279c6cb0c057dc7ba8080b2b46adf74fb3",
+      "width": 574,
+      "height": 700
+    },
+    {
+      "file": "assets/model-hardware/images/image9.png",
+      "sha256": "07645602c87fdc6f146f43adf9f2145fd98abd6ee7af73d24a1763d88c633215",
+      "width": 931,
+      "height": 467
+    },
+    {
+      "file": "assets/model-hardware/images/image10.png",
+      "sha256": "abf0d8f57e076c8053fd4b6e601b1b3a555ddc957e7230ab2758beccde05aa67",
+      "width": 768,
+      "height": 590
+    },
+    {
+      "file": "assets/model-hardware/images/image11.png",
+      "sha256": "532b11970f867ded6350d46dddb9d9b62b3d809b01a92b88267e44dbce892d82",
+      "width": 813,
+      "height": 857
+    },
+    {
+      "file": "assets/model-hardware/images/image12.png",
+      "sha256": "4637d28e17265c60bad790131a19fce8f8a4a09da8a105cc55b0811b98a6191c",
+      "width": 677,
+      "height": 701
+    },
+    {
+      "file": "assets/model-hardware/images/image13.png",
+      "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+      "width": 756,
+      "height": 479
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "id": "hardware-model-section-2",
+      "title": "Model Background and Analysis Objectives"
+    },
+    {
+      "level": 1,
+      "id": "hardware-model-section-5",
+      "title": "Model Development and Application Workflow"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-6",
+      "title": "Model Development and Deployment"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-8",
+      "title": "On-Device Image Analysis"
+    },
+    {
+      "level": 1,
+      "id": "hardware-model-section-12",
+      "title": "Key Technical Features"
+    },
+    {
+      "level": 1,
+      "id": "hardware-model-section-16",
+      "title": "Model Overview"
+    },
+    {
+      "level": 1,
+      "id": "hardware-model-generation-1",
+      "title": "ByeGerm 1.0: Reaction Region Localization and Fluorescence Signal Extraction"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-20",
+      "title": "Dataset and Annotation"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-33",
+      "title": "Model Training and Evaluation"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-37",
+      "title": "Initial Model Training"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-43",
+      "title": "Initial Model Outputs"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-48",
+      "title": "Dataset Expansion and Second-Round Training"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-52",
+      "title": "Detection Performance Metrics"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-58",
+      "title": "On-Device Deployment"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-62",
+      "title": "Fluorescence Signal Extraction and Grading"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-66",
+      "title": "Preliminary Fluorescence Intensity Classification"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-70",
+      "title": "Scope of Application"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-72",
+      "title": "ByeGerm 1.0 Supplementary Data"
+    },
+    {
+      "level": 1,
+      "id": "hardware-model-generation-2",
+      "title": "ByeGerm 2.0: Multi-Tube and Multicolor Fluorescence Recognition"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-79",
+      "title": "Recognition Tasks and Data Collection"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-86",
+      "title": "Sample Composition and Tube Position Arrangement"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-93",
+      "title": "Data Annotation and Model Training"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-97",
+      "title": "Training Performance"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-102",
+      "title": "Model Output and Detection Evaluation"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-107",
+      "title": "Validation and Blind Testing"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-113",
+      "title": "Confusion Matrix and Evaluation Curves"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-122",
+      "title": "Multi-Tube Result Recording and Visualization"
+    },
+    {
+      "level": 3,
+      "id": "hardware-model-section-124",
+      "title": "Scope of Application and Future Extensions"
+    },
+    {
+      "level": 2,
+      "id": "hardware-model-section-126",
+      "title": "ByeGerm 2.0 Supplementary Data"
+    },
+    {
+      "level": 1,
+      "id": "hardware-model-references",
+      "title": "References"
+    }
+  ],
+  "figures": [
+    {
+      "number": 1,
+      "caption": "Figure 1. Examples of manual annotations of reaction tube images across different concentration gradients.",
+      "source_block": 31,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image1.png",
+          "sha256": "d3914a932185d60cc3407578e9676c698c27d4dff20a3e889f9f983ff9e1b6c2",
+          "width": 1014,
+          "height": 807,
+          "crop": {},
+          "extent": {
+            "cx": "4283710",
+            "cy": "3407410"
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "caption": "Figure 2. Workflow of data annotation, model training, and on-device testing for reaction tube localization.",
+      "source_block": 35,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "t": "2939",
+            "b": "78521"
+          },
+          "extent": {
+            "cx": "5291455",
+            "cy": "1165225"
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "caption": "Figure 3. Validation bounding box regression loss and normalized confusion matrix.",
+      "source_block": 39,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "l": "1",
+            "t": "24454",
+            "r": "53316",
+            "b": "55644"
+          },
+          "extent": {
+            "cx": "2807970",
+            "cy": "1421765"
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "caption": "Figure 4. Training loss curves and changes in detection performance metrics during initial model training.",
+      "source_block": 41,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image3.png",
+          "sha256": "c35dfef4ce8300f9ab8e9d2130b2d69a1c1167753f7d01744ef3519a4b58a52f",
+          "width": 1268,
+          "height": 1703,
+          "crop": {
+            "l": "2207",
+            "t": "2465",
+            "b": "53396"
+          },
+          "extent": {
+            "cx": "5039995",
+            "cy": "3054350"
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "caption": "Figure 5. Example of reaction region localization and fluorescence intensity measurement using the initial model.",
+      "source_block": 46,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image4.png",
+          "sha256": "d0cdffb1a301e58a0ac5b1615ae6a1a40f84d000d64536ea2b14b881cfd6fcc6",
+          "width": 1149,
+          "height": 729,
+          "crop": {},
+          "extent": {
+            "cx": "5111750",
+            "cy": "3244215"
+          }
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "caption": "Figure 6. Example of reaction region localization following the second round of model training.",
+      "source_block": 50,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image5.png",
+          "sha256": "9b5287eddf8f4b61392dc63a64494dbb517ea9143699d70fda4b1859c49f26b0",
+          "width": 1262,
+          "height": 741,
+          "crop": {},
+          "extent": {
+            "cx": "5111750",
+            "cy": "3001645"
+          }
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "caption": "Figure 7. Relationship between F1-score and confidence threshold, and distribution of annotated bounding box dimensions.",
+      "source_block": 55,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "l": "46679",
+            "t": "24454",
+            "r": "2951",
+            "b": "55644"
+          },
+          "extent": {
+            "cx": "4067810",
+            "cy": "1908810"
+          }
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "caption": "Figure 8. Example of on-device reaction region localization testing.",
+      "source_block": 60,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image6.png",
+          "sha256": "8dd8ba59996f48c367a2426ed7389bb81b4bc59fbb6237a188c8ad4de934094e",
+          "width": 1268,
+          "height": 504,
+          "crop": {},
+          "extent": {
+            "cx": "5759450",
+            "cy": "2287905"
+          }
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "caption": "Figure 9. Comparison of fluorescence signal extraction under different inRange threshold settings.",
+      "source_block": 64,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image7.png",
+          "sha256": "ecd97f681d0f6d4efc29262d65c66e130c9f316a0ce9057cdb8e3ada3dc45a8e",
+          "width": 1045,
+          "height": 752,
+          "crop": {},
+          "extent": {
+            "cx": "4838065",
+            "cy": "3480435"
+          }
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "caption": "Figure 10. ROI fluorescence readings and examples of N and P1–P5 classification.",
+      "source_block": 68,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "l": "4729",
+            "t": "46440"
+          },
+          "extent": {
+            "cx": "4147185",
+            "cy": "2768600"
+          }
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "caption": "Figure 11. Distribution of annotated bounding box center positions and dimensions.",
+      "source_block": 73,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image3.png",
+          "sha256": "c35dfef4ce8300f9ab8e9d2130b2d69a1c1167753f7d01744ef3519a4b58a52f",
+          "width": 1268,
+          "height": 1703,
+          "crop": {
+            "l": "1988",
+            "t": "48318",
+            "b": "25417"
+          },
+          "extent": {
+            "cx": "5327650",
+            "cy": "1917065"
+          }
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "caption": "Figure 12. Example of manual annotation of multicolor fluorescence reaction tube images.",
+      "source_block": 95,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image8.png",
+          "sha256": "164d5dd9a012d69fd1377209623202279c6cb0c057dc7ba8080b2b46adf74fb3",
+          "width": 574,
+          "height": 700,
+          "crop": {},
+          "extent": {
+            "cx": "2699385",
+            "cy": "3288030"
+          }
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "caption": "Figure 13. Changes in training and validation metrics of the multicolor fluorescence detection model.",
+      "source_block": 99,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image9.png",
+          "sha256": "07645602c87fdc6f146f43adf9f2145fd98abd6ee7af73d24a1763d88c633215",
+          "width": 931,
+          "height": 467,
+          "crop": {},
+          "extent": {
+            "cx": "5579745",
+            "cy": "2814955"
+          }
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "caption": "Figure 14. Example of automatic model annotation of multicolor fluorescence reaction tube images.",
+      "source_block": 104,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image10.png",
+          "sha256": "abf0d8f57e076c8053fd4b6e601b1b3a555ddc957e7230ab2758beccde05aa67",
+          "width": 768,
+          "height": 590,
+          "crop": {},
+          "extent": {
+            "cx": "5579745",
+            "cy": "4276090"
+          }
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "caption": "Figure 15. Examples of multicolor fluorescence reaction tube detection in the validation set.",
+      "source_block": 109,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image11.png",
+          "sha256": "532b11970f867ded6350d46dddb9d9b62b3d809b01a92b88267e44dbce892d82",
+          "width": 813,
+          "height": 857,
+          "crop": {},
+          "extent": {
+            "cx": "4427855",
+            "cy": "3461385"
+          }
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "caption": "Figure 16. Examples of multicolor fluorescence reaction tube detection in the blind test dataset.",
+      "source_block": 111,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image12.png",
+          "sha256": "4637d28e17265c60bad790131a19fce8f8a4a09da8a105cc55b0811b98a6191c",
+          "width": 677,
+          "height": 701,
+          "crop": {},
+          "extent": {
+            "cx": "4427855",
+            "cy": "3190875"
+          }
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "caption": "Figure 17. Raw and normalized confusion matrices for multicolor fluorescence reaction tube detection.",
+      "source_block": 115,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "r": "37349",
+            "b": "50800"
+          },
+          "extent": {
+            "cx": "3815715",
+            "cy": "1907540"
+          }
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "caption": "Figure 18. Relationships between F1 score, recall, and confidence threshold.",
+      "source_block": 118,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "t": "50568",
+            "r": "38118"
+          },
+          "extent": {
+            "cx": "4031615",
+            "cy": "2040255"
+          }
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "caption": "Figure 19. Number of annotated instances per class and distributions of bounding box positions and dimensions.",
+      "source_block": 128,
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "l": "62956",
+            "b": "51108"
+          },
+          "extent": {
+            "cx": "2735580",
+            "cy": "2306955"
+          }
+        },
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "l": "62956",
+            "t": "55635"
+          },
+          "extent": {
+            "cx": "2879725",
+            "cy": "2185670"
+          }
+        }
+      ]
+    }
+  ],
+  "reference_order": [
+    {
+      "doi": "10.1016/j.talanta.2024.126441",
+      "title": "Rapid, portable, and sensitive detection of CaMV35S by RPA-CRISPR/Cas12a-G4 colorimetric assays with high accuracy deep learning object recognition and classification",
+      "journal": "Talanta",
+      "volume": "278",
+      "issue": null,
+      "pages": "126441",
+      "article_number": "126441",
+      "year": 2024,
+      "authors": [
+        "Xuheng Li",
+        "Meilin Liu",
+        "Dianhui Men",
+        "Yi Duan",
+        "Liyuan Deng",
+        "Shiying Zhou",
+        "Jingzhou Hou",
+        "Changjun Hou",
+        "Danqun Huo"
+      ],
+      "url": "https://doi.org/10.1016/j.talanta.2024.126441",
+      "metadata_url": "https://api.crossref.org/works/10.1016/j.talanta.2024.126441"
+    },
+    {
+      "doi": "10.1016/j.talanta.2023.125458",
+      "title": "Cas14a1-advanced LAMP for ultrasensitive and visual Pathogen diagnostic",
+      "journal": "Talanta",
+      "volume": "269",
+      "issue": null,
+      "pages": "125458",
+      "article_number": "125458",
+      "year": 2024,
+      "authors": [
+        "Qingwei Wang",
+        "Yihua Ren",
+        "Tian Meng",
+        "Xiufen Yang",
+        "Lin Lu",
+        "Hao Yang",
+        "Hongwei Hou",
+        "Masoud Negahdary",
+        "Yi Wan",
+        "Fengge Song",
+        "Jinghong Li"
+      ],
+      "url": "https://doi.org/10.1016/j.talanta.2023.125458",
+      "metadata_url": "https://api.crossref.org/works/10.1016/j.talanta.2023.125458"
+    },
+    {
+      "doi": "10.1016/j.aca.2023.341956",
+      "title": "Highly specific detection of Neisseria gonorrhoeae based on recombinase polymerase amplification-initiated strand displacement amplification",
+      "journal": "Analytica Chimica Acta",
+      "volume": "1283",
+      "issue": null,
+      "pages": "341956",
+      "article_number": "341956",
+      "year": 2023,
+      "authors": [
+        "Mengnan Fan",
+        "Jianru Yang",
+        "Xiaosu Wang",
+        "Yongjie Xu",
+        "Bing Li",
+        "Hui Yang",
+        "Qin Lu",
+        "Xun Min",
+        "Meirong Huang",
+        "Jian Huang"
+      ],
+      "url": "https://doi.org/10.1016/j.aca.2023.341956",
+      "metadata_url": "https://api.crossref.org/works/10.1016/j.aca.2023.341956"
+    },
+    {
+      "doi": "10.1021/acsnano.3c10181",
+      "title": "Nanomaterial-Based Artificial Vision Systems: From Bioinspired Electronic Eyes to In-Sensor Processing Devices",
+      "journal": "ACS Nano",
+      "volume": "18",
+      "issue": "2",
+      "pages": "1241-1256",
+      "article_number": null,
+      "year": 2024,
+      "authors": [
+        "Changsoon Choi",
+        "Gil Ju Lee",
+        "Sehui Chang",
+        "Young Min Song",
+        "Dae-Hyeong Kim"
+      ],
+      "url": "https://doi.org/10.1021/acsnano.3c10181",
+      "metadata_url": "https://api.crossref.org/works/10.1021/acsnano.3c10181"
+    },
+    {
+      "doi": "10.1038/s41598-024-59558-7",
+      "title": "In-situ particle analysis with heterogeneous background: a machine learning approach",
+      "journal": "Scientific Reports",
+      "volume": "14",
+      "issue": "1",
+      "pages": null,
+      "article_number": "10609",
+      "year": 2024,
+      "authors": [
+        "Adeeb Ibne Alam",
+        "Md Hafizur Rahman",
+        "Akhter Zia",
+        "Nate Lowry",
+        "Prabuddha Chakraborty",
+        "Md Rafiul Hassan",
+        "Bashir Khoda"
+      ],
+      "url": "https://doi.org/10.1038/s41598-024-59558-7",
+      "metadata_url": "https://api.crossref.org/works/10.1038/s41598-024-59558-7"
+    }
+  ],
+  "tables": 3,
+  "blocks": [
+    {
+      "index": 0,
+      "tag": "p",
+      "text": "Model",
+      "images": [],
+      "style": "32"
+    },
+    {
+      "index": 1,
+      "tag": "p",
+      "text": "Fluorescence Image Analysis for Respiratory Pathogen Detection",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 2,
+      "tag": "p",
+      "text": "1. Model Background and Analysis Objectives",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 3,
+      "tag": "p",
+      "text": "ByeGerm is designed for the nucleic acid detection of five respiratory pathogens: respiratory syncytial virus (RSV), human metapneumovirus subtype B (hMPV-B), Streptococcus pneumoniae (SPN), Bordetella pertussis (BP), and Haemophilus influenzae (HI). The system integrates isothermal amplification, CRISPR-Cas12a-based reactions, and fluorescence signal detection.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 4,
+      "tag": "p",
+      "text": "The Model module is responsible for automatically localizing reaction regions, extracting fluorescence intensity measurements or classifying fluorescence signals, and associating the results with their corresponding tube positions and image acquisition timestamps. This process provides traceable image analysis data to support accurate and reliable diagnostic interpretation.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 5,
+      "tag": "p",
+      "text": "2. Model Development and Application Workflow",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 6,
+      "tag": "p",
+      "text": "Model Development and Deployment",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 7,
+      "tag": "p",
+      "text": "Image Acquisition and Manual Annotation → Model Training → Validation and Testing → Device Deployment",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 8,
+      "tag": "p",
+      "text": "On-Device Image Analysis",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 9,
+      "tag": "p",
+      "text": "Fluorescence Image Acquisition → Reaction Region Localization → Fluorescence Signal Analysis → Association with Tube Positions and Acquisition Timestamps → Mobile Application Display",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 10,
+      "tag": "p",
+      "text": "The localization model identifies the reaction regions, while the image processing algorithm extracts fluorescence signals. The second-generation model further incorporates fluorescence classification capabilities.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 11,
+      "tag": "p",
+      "text": "The analysis results are recorded according to the detection task, observation view, tube position, and image acquisition timestamp, and are subsequently transmitted to the mobile application for visualization.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 12,
+      "tag": "p",
+      "text": "3. Key Technical Features",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 13,
+      "tag": "p",
+      "text": "Automated Region Localization and Signal Extraction: ByeGerm 1.0 integrates YOLOv8n with OpenCV for automatic reaction region localization and fluorescence signal extraction. The model is deployed on the Ai BOX in.rknn format.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 14,
+      "tag": "p",
+      "text": "Multicolor Fluorescence Recognition: ByeGerm 2.0 simultaneously identifies reaction region locations and classifies fluorescence signals into different categories.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 15,
+      "tag": "p",
+      "text": "Multi-Tube Result Recording: The system supports three observation views, each containing five tube positions. Analysis results are associated with their corresponding tube positions and actual image acquisition timestamps to ensure data traceability.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 16,
+      "tag": "p",
+      "text": "4 Model Overview",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 17,
+      "tag": "tbl",
+      "text": "ByeGerm 1.0Reaction Region Localization and Fluorescence Signal ExtractionThe YOLOv8n model is employed for automated localization of reaction regions, while OpenCV-based image processing is utilized to extract fluorescence signals, enabling automated region-of-interest (ROI) selection and fluorescence signal acquisition and recording directly on the device.Explore the ByeGerm 1.0 Model Details →ByeGerm 2.0Multi-Tube Localization and Multicolor Fluorescence ClassificationThe model enables automated localization of reaction regions and classification of fluorescence signals, with each detection associated with its corresponding tube position and acquisition timestamp. Validation encompasses fluorescence classes corresponding to RSV, hMPV-B, and SPN, as well as the negative class.Explore the ByeGerm 2.0 Model Details →",
+      "images": [],
+      "style": null,
+      "rows": [
+        [
+          "ByeGerm 1.0Reaction Region Localization and Fluorescence Signal ExtractionThe YOLOv8n model is employed for automated localization of reaction regions, while OpenCV-based image processing is utilized to extract fluorescence signals, enabling automated region-of-interest (ROI) selection and fluorescence signal acquisition and recording directly on the device.Explore the ByeGerm 1.0 Model Details →",
+          "ByeGerm 2.0Multi-Tube Localization and Multicolor Fluorescence ClassificationThe model enables automated localization of reaction regions and classification of fluorescence signals, with each detection associated with its corresponding tube position and acquisition timestamp. Validation encompasses fluorescence classes corresponding to RSV, hMPV-B, and SPN, as well as the negative class.Explore the ByeGerm 2.0 Model Details →"
+        ]
+      ]
+    },
+    {
+      "index": 18,
+      "tag": "p",
+      "text": "ByeGerm 1.0: Reaction Region Localization and Fluorescence Signal Extraction",
+      "images": [],
+      "style": "3"
+    },
+    {
+      "index": 19,
+      "tag": "p",
+      "text": "Automated localization of reaction regions and extraction of fluorescence signals within regions of interest (ROIs), enabling on-device ROI selection, fluorescence signal analysis, and data recording.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 20,
+      "tag": "p",
+      "text": "1. Dataset and Annotation",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 21,
+      "tag": "p",
+      "text": "The dataset comprised a negative control (NC) group and six bacterial concentration groups: 1× 10⁰–1×10¹, 1×10², 1×10³, 1×10⁴， 1×10⁵, and 1×10⁶–1×10⁷CFU/mL. All reaction regions were annotated under a single object class, designated as tube.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 22,
+      "tag": "p",
+      "text": "Each of the seven experimental groups contained 1,000 reaction tubes, yielding a total of 7,000 tubes. Fluorescence images were acquired under 470 nm excitation illumination within the device's enclosed dark chamber, with each image containing two reaction tubes. The dataset was partitioned into training, validation, and test sets at a ratio of 70%, 20%, and 10%, respectively.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 23,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 24,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 25,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 26,
+      "tag": "tbl",
+      "text": "Dataset SubsetNumber of Reaction TubesNumber of ImagesTraining Set4,900 2,450 Validation Set1,400 700 Test Set700 350 Total70003500",
+      "images": [],
+      "style": null,
+      "rows": [
+        [
+          "Dataset Subset",
+          "Number of Reaction Tubes",
+          "Number of Images"
+        ],
+        [
+          "Training Set",
+          "4,900 ",
+          "2,450 "
+        ],
+        [
+          "Validation Set",
+          "1,400 ",
+          "700 "
+        ],
+        [
+          "Test Set",
+          "700 ",
+          "350 "
+        ],
+        [
+          "Total",
+          "7000",
+          "3500"
+        ]
+      ]
+    },
+    {
+      "index": 27,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 28,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 29,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 30,
+      "tag": "p",
+      "text": "Reaction regions were manually annotated with bounding boxes using LabelImg.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 31,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image1.png",
+          "sha256": "d3914a932185d60cc3407578e9676c698c27d4dff20a3e889f9f983ff9e1b6c2",
+          "width": 1014,
+          "height": 807,
+          "crop": {},
+          "extent": {
+            "cx": "4283710",
+            "cy": "3407410"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 32,
+      "tag": "p",
+      "text": "Figure 1. Examples of manual annotations of reaction tube images across different concentration gradients.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 33,
+      "tag": "p",
+      "text": "2. Model Training and Evaluation",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 34,
+      "tag": "p",
+      "text": "The YOLOv8n model was trained using the PyTorch framework and subsequently evaluated on a device equipped with the RK3588 system-on-chip (SoC) following model validation.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 35,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "t": "2939",
+            "b": "78521"
+          },
+          "extent": {
+            "cx": "5291455",
+            "cy": "1165225"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 36,
+      "tag": "p",
+      "text": "Figure 2. Workflow of data annotation, model training, and on-device testing for reaction tube localization.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 37,
+      "tag": "p",
+      "text": "Initial Model Training",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 38,
+      "tag": "p",
+      "text": "The validation bounding box regression loss exhibited an overall decreasing trend, while the normalized confusion matrix showed a diagonal value of 1.00 for the tube class. Recall increased during the early stages of training and subsequently approached 1.0, whereas the bounding box mean average precision at an IoU threshold of 0.50 (mAP50(B)) remained above 0.90 during the later training epochs.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 39,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "l": "1",
+            "t": "24454",
+            "r": "53316",
+            "b": "55644"
+          },
+          "extent": {
+            "cx": "2807970",
+            "cy": "1421765"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 40,
+      "tag": "p",
+      "text": "Figure 3. Validation bounding box regression loss and normalized confusion matrix.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 41,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image3.png",
+          "sha256": "c35dfef4ce8300f9ab8e9d2130b2d69a1c1167753f7d01744ef3519a4b58a52f",
+          "width": 1268,
+          "height": 1703,
+          "crop": {
+            "l": "2207",
+            "t": "2465",
+            "b": "53396"
+          },
+          "extent": {
+            "cx": "5039995",
+            "cy": "3054350"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 42,
+      "tag": "p",
+      "text": "Figure 4. Training loss curves and changes in detection performance metrics during initial model training.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 43,
+      "tag": "p",
+      "text": "Initial Model Outputs",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 44,
+      "tag": "p",
+      "text": "Bounding boxes indicate the detected reaction regions. The numerical values following Tube represent the detection confidence scores, whereas those following Lum indicate the fluorescence intensity readings obtained from the image processing algorithm.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 45,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 46,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image4.png",
+          "sha256": "d0cdffb1a301e58a0ac5b1615ae6a1a40f84d000d64536ea2b14b881cfd6fcc6",
+          "width": 1149,
+          "height": 729,
+          "crop": {},
+          "extent": {
+            "cx": "5111750",
+            "cy": "3244215"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 47,
+      "tag": "p",
+      "text": "Figure 5. Example of reaction region localization and fluorescence intensity measurement using the initial model.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 48,
+      "tag": "p",
+      "text": "Dataset Expansion and Second-Round Training",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 49,
+      "tag": "p",
+      "text": "Pseudo-labels were generated with the assistance of predictions from the initial model, expanding the dataset to approximately 20,000 images for a second round of model training.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 50,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image5.png",
+          "sha256": "9b5287eddf8f4b61392dc63a64494dbb517ea9143699d70fda4b1859c49f26b0",
+          "width": 1262,
+          "height": 741,
+          "crop": {},
+          "extent": {
+            "cx": "5111750",
+            "cy": "3001645"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 51,
+      "tag": "p",
+      "text": "Figure 6. Example of reaction region localization following the second round of model training.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 52,
+      "tag": "p",
+      "text": "Detection Performance Metrics",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 53,
+      "tag": "p",
+      "text": "The F1-score curve shown in the left panel of Figure 7 indicates that the aggregated F1-score across all classes reaches 1.00 at a confidence threshold of 0.874. The right panel illustrates the distribution of annotated bounding box widths and heights.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 54,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 55,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "l": "46679",
+            "t": "24454",
+            "r": "2951",
+            "b": "55644"
+          },
+          "extent": {
+            "cx": "4067810",
+            "cy": "1908810"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 56,
+      "tag": "p",
+      "text": "Figure 7. Relationship between F1-score and confidence threshold, and distribution of annotated bounding box dimensions.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 57,
+      "tag": "p",
+      "text": "The evaluation metrics were calculated based on the localization performance of reaction regions within the images.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 58,
+      "tag": "p",
+      "text": "3. On-Device Deployment",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 59,
+      "tag": "p",
+      "text": "The YOLOv8n model was converted to the .rknn format and deployed on the Ai BOX alongside an OpenCV-based image processing pipeline. As illustrated in Figure 8, the on-device reaction region localization results achieved detection confidence scores ranging from 0.90 to 0.95.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 60,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image6.png",
+          "sha256": "8dd8ba59996f48c367a2426ed7389bb81b4bc59fbb6237a188c8ad4de934094e",
+          "width": 1268,
+          "height": 504,
+          "crop": {},
+          "extent": {
+            "cx": "5759450",
+            "cy": "2287905"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 61,
+      "tag": "p",
+      "text": "Figure 8. Example of on-device reaction region localization testing.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 62,
+      "tag": "p",
+      "text": "4. Fluorescence Signal Extraction and Grading",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 63,
+      "tag": "p",
+      "text": "Following region-of-interest (ROI) extraction, pixel intensities were filtered using the OpenCV inRange function. At this stage, the filtering operation was performed using inRange(roi, 15, 255, mask). Figure 9 presents the image processing results obtained with lower intensity thresholds of 5, 10, 15, and 20, respectively, while maintaining a constant upper threshold of 255.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 64,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image7.png",
+          "sha256": "ecd97f681d0f6d4efc29262d65c66e130c9f316a0ce9057cdb8e3ada3dc45a8e",
+          "width": 1045,
+          "height": 752,
+          "crop": {},
+          "extent": {
+            "cx": "4838065",
+            "cy": "3480435"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 65,
+      "tag": "p",
+      "text": "Figure 9. Comparison of fluorescence signal extraction under different inRange threshold settings.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 66,
+      "tag": "p",
+      "text": "Preliminary Fluorescence Intensity Classification",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 67,
+      "tag": "p",
+      "text": "Figure 10 shows six levels of fluorescence signal output, designated N and P1–P5, corresponding to NC, 1 × 10⁰–1 × 10¹, 1 × 10², 1 × 10³, 1 × 10⁴, and 1 × 10⁵–1 × 10⁷ CFU/mL, respectively. P5 represents a combined presentation of the high-concentration range in the figure. The values in parentheses indicate fluorescence readings and do not represent classification thresholds.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 68,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image2.png",
+          "sha256": "3bda28434cf9ac87484b1569b546fb87c678883ed893c441b4d5e1db157ce09c",
+          "width": 5953,
+          "height": 7071,
+          "crop": {
+            "l": "4729",
+            "t": "46440"
+          },
+          "extent": {
+            "cx": "4147185",
+            "cy": "2768600"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 69,
+      "tag": "p",
+      "text": "Figure 10. ROI fluorescence readings and examples of N and P1–P5 classification.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 70,
+      "tag": "p",
+      "text": "Scope of Application",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 71,
+      "tag": "p",
+      "text": "Target-specific detection thresholds, weak-signal performance, and inter-batch variability should be evaluated separately for each reaction system. When imaging conditions change, the pixel selection thresholds must be reassessed.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 72,
+      "tag": "p",
+      "text": "ByeGerm 1.0 Supplementary Data",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 73,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image3.png",
+          "sha256": "c35dfef4ce8300f9ab8e9d2130b2d69a1c1167753f7d01744ef3519a4b58a52f",
+          "width": 1268,
+          "height": 1703,
+          "crop": {
+            "l": "1988",
+            "t": "48318",
+            "b": "25417"
+          },
+          "extent": {
+            "cx": "5327650",
+            "cy": "1917065"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 74,
+      "tag": "p",
+      "text": "Figure 11. Distribution of annotated bounding box center positions and dimensions.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 75,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": "15"
+    },
+    {
+      "index": 76,
+      "tag": "p",
+      "text": "From left to right: X–Y distribution of bounding box centers, relationship between the center Y-coordinate and bounding box width, and relationship between the center Y-coordinate and bounding box height.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 77,
+      "tag": "p",
+      "text": "ByeGerm 2.0: Multi-Tube and Multicolor Fluorescence Recognition",
+      "images": [],
+      "style": "3"
+    },
+    {
+      "index": 78,
+      "tag": "p",
+      "text": "Fluorescence class recognition was added to the region localization framework to support multi-tube image analysis and result tracking.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 79,
+      "tag": "p",
+      "text": "1. Recognition Tasks and Data Collection",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 80,
+      "tag": "p",
+      "text": "Four class labels were defined according to the reaction systems and fluorescent labeling configurations used in this project.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 81,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 82,
+      "tag": "tbl",
+      "text": "Detection Target or ControlModel LabelAbbreviation Used in Evaluation FiguresRSV(Red Fluorescence)tube_redtrhMPV-B (Blue Fluorescence)tube_bluetbSPN（Green Fluorescence）tube_greentgNegative Controltube_nulltn",
+      "images": [],
+      "style": null,
+      "rows": [
+        [
+          "Detection Target or Control",
+          "Model Label",
+          "Abbreviation Used in Evaluation Figures"
+        ],
+        [
+          "RSV(Red Fluorescence)",
+          "tube_red",
+          "tr"
+        ],
+        [
+          "hMPV-B (Blue Fluorescence)",
+          "tube_blue",
+          "tb"
+        ],
+        [
+          "SPN（Green Fluorescence）",
+          "tube_green",
+          "tg"
+        ],
+        [
+          "Negative Control",
+          "tube_null",
+          "tn"
+        ]
+      ]
+    },
+    {
+      "index": 83,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 84,
+      "tag": "p",
+      "text": "At this stage, multicolor fluorescence recognition validation covered the fluorescence classes corresponding to RSV, hMPV-B, and SPN, as well as the negative class. BP and HI were not included in this validation stage.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 85,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": "168"
+    },
+    {
+      "index": 86,
+      "tag": "p",
+      "text": "Sample Composition and Tube Position Arrangement",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 87,
+      "tag": "p",
+      "text": "A total of 750 reaction tubes were included, comprising 150 positive tubes each for RSV, hMPV-B, and SPN, and 300 negative tubes. The dataset was divided into training, validation, and test sets at a ratio of 60%, 20%, and 20%, respectively.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 88,
+      "tag": "p",
+      "text": "Five tube positions were arranged on each of the three observation faces, and images were acquired using the following five tube arrangement configurations.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 89,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 90,
+      "tag": "tbl",
+      "text": "ArrangementTube Position 1Tube Position 2Tube Position  3Tube Position  4Tube Position  51RSVhMPV-BNCNCSPN2SPNNCRSVhMPV-BNC3hMPV-BNCSPNRSVNC4NCRSVhMPV-BSPNNC5NCSPNNChMPV-BRSV",
+      "images": [],
+      "style": null,
+      "rows": [
+        [
+          "Arrangement",
+          "Tube Position 1",
+          "Tube Position 2",
+          "Tube Position  3",
+          "Tube Position  4",
+          "Tube Position  5"
+        ],
+        [
+          "1",
+          "RSV",
+          "hMPV-B",
+          "NC",
+          "NC",
+          "SPN"
+        ],
+        [
+          "2",
+          "SPN",
+          "NC",
+          "RSV",
+          "hMPV-B",
+          "NC"
+        ],
+        [
+          "3",
+          "hMPV-B",
+          "NC",
+          "SPN",
+          "RSV",
+          "NC"
+        ],
+        [
+          "4",
+          "NC",
+          "RSV",
+          "hMPV-B",
+          "SPN",
+          "NC"
+        ],
+        [
+          "5",
+          "NC",
+          "SPN",
+          "NC",
+          "hMPV-B",
+          "RSV"
+        ]
+      ]
+    },
+    {
+      "index": 91,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 92,
+      "tag": "p",
+      "text": "Images were acquired for each of the five tube arrangement configurations on each observation face, with 200 images per configuration, yielding 1,000 images per observation face and 3,000 images across all three faces. NC denotes the negative control. Repeated imaging of the same reaction tube was not considered an independent experimental replicate.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 93,
+      "tag": "p",
+      "text": "2. Data Annotation and Model Training",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 94,
+      "tag": "p",
+      "text": "Reaction regions were manually annotated with bounding boxes, and fluorescence classes were labeled according to the experimental configuration. Images with bounding box annotations and class labels were used to train the object detection model.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 95,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image8.png",
+          "sha256": "164d5dd9a012d69fd1377209623202279c6cb0c057dc7ba8080b2b46adf74fb3",
+          "width": 574,
+          "height": 700,
+          "crop": {},
+          "extent": {
+            "cx": "2699385",
+            "cy": "3288030"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 96,
+      "tag": "p",
+      "text": "Figure 12. Example of manual annotation of multicolor fluorescence reaction tube images.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 97,
+      "tag": "p",
+      "text": "Training Performance",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 98,
+      "tag": "p",
+      "text": "Across the five recorded points shown in Figure 13, the training and validation losses generally decreased, precision approached 1.00, recall reached 1.00, mAP50(B) was approximately 0.995, and mAP50-95(B) showed an increasing trend.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 99,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image9.png",
+          "sha256": "07645602c87fdc6f146f43adf9f2145fd98abd6ee7af73d24a1763d88c633215",
+          "width": 931,
+          "height": 467,
+          "crop": {},
+          "extent": {
+            "cx": "5579745",
+            "cy": "2814955"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 100,
+      "tag": "p",
+      "text": "Figure 13. Changes in training and validation metrics of the multicolor fluorescence detection model.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 101,
+      "tag": "p",
+      "text": "Panels A–C show the bounding box loss, classification loss, and distribution focal loss (DFL) during training, respectively; panels D and E show precision and recall, respectively; panels F–H show the corresponding validation losses; and panels I and J show mAP50(B) and mAP50-95(B), respectively.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 102,
+      "tag": "p",
+      "text": "3. Model Output and Detection Evaluation",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 103,
+      "tag": "p",
+      "text": "The model outputs bounding boxes, class labels, and detection confidence scores for the reaction regions. The bounding boxes are used to extract regions of interest (ROIs), the class labels correspond to the fluorescence types defined in the experimental configuration, and the confidence scores are used to filter predicted detections.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 104,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image10.png",
+          "sha256": "abf0d8f57e076c8053fd4b6e601b1b3a555ddc957e7230ab2758beccde05aa67",
+          "width": 768,
+          "height": 590,
+          "crop": {},
+          "extent": {
+            "cx": "5579745",
+            "cy": "4276090"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 105,
+      "tag": "p",
+      "text": "Figure 14. Example of automatic model annotation of multicolor fluorescence reaction tube images.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 106,
+      "tag": "p",
+      "text": "tube_green 0.95 indicates that the region was predicted to belong to the green fluorescence class, with a detection confidence score of 0.95. The confidence score does not represent the probability that the sample is positive. Final interpretation should take into account the reaction system, control results, and predefined decision criteria.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 107,
+      "tag": "p",
+      "text": "Validation and Blind Testing",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 108,
+      "tag": "p",
+      "text": "Figures 15 and 16 show representative detection examples from the validation set and blind test dataset, respectively. Each composite figure contains 15 groups of images, with five reaction tubes per group. The predicted class labels and confidence scores are annotated for each reaction region.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 109,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image11.png",
+          "sha256": "532b11970f867ded6350d46dddb9d9b62b3d809b01a92b88267e44dbce892d82",
+          "width": 813,
+          "height": 857,
+          "crop": {},
+          "extent": {
+            "cx": "4427855",
+            "cy": "3461385"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 110,
+      "tag": "p",
+      "text": "Figure 15. Examples of multicolor fluorescence reaction tube detection in the validation set.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 111,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image12.png",
+          "sha256": "4637d28e17265c60bad790131a19fce8f8a4a09da8a105cc55b0811b98a6191c",
+          "width": 677,
+          "height": 701,
+          "crop": {},
+          "extent": {
+            "cx": "4427855",
+            "cy": "3190875"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 112,
+      "tag": "p",
+      "text": "Figure 16. Examples of multicolor fluorescence reaction tube detection in the blind test dataset.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 113,
+      "tag": "p",
+      "text": "Confusion Matrix and Evaluation Curves",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 114,
+      "tag": "p",
+      "text": "In Figure 17, the diagonal counts of the confusion matrix are 165 for each of the tg, tr, and tb classes, and 330 for the tn class. After normalization, the diagonal values for all four classes are 1.00. The abbreviation bg denotes the background class.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 115,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "r": "37349",
+            "b": "50800"
+          },
+          "extent": {
+            "cx": "3815715",
+            "cy": "1907540"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 116,
+      "tag": "p",
+      "text": "Figure 17. Raw and normalized confusion matrices for multicolor fluorescence reaction tube detection.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 117,
+      "tag": "p",
+      "text": "The confusion matrices are based on detection counts and do not represent the number of independent reaction tubes.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 118,
+      "tag": "p",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "t": "50568",
+            "r": "38118"
+          },
+          "extent": {
+            "cx": "4031615",
+            "cy": "2040255"
+          }
+        }
+      ],
+      "style": null
+    },
+    {
+      "index": 119,
+      "tag": "p",
+      "text": "Figure 18. Relationships between F1 score, recall, and confidence threshold.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 120,
+      "tag": "p",
+      "text": "In Figure 18, the overall F1 score across all classes reached 1.00 at a confidence threshold of 0.846, while recall was 1.00 at a confidence threshold of 0.000.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 121,
+      "tag": "p",
+      "text": "The above metrics reflect the image detection performance evaluated in this study. Sample-level detection performance and long-term stability require separate validation.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 122,
+      "tag": "p",
+      "text": "4. Multi-Tube Result Recording and Visualization",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 123,
+      "tag": "p",
+      "text": "Images are acquired sequentially from the three observation faces. The program locates each reaction tube, identifies its fluorescence class, and analyzes the fluorescence signal. It records the detection task, observation face, tube position, and actual acquisition time to organize fluorescence data and generate fluorescence signal curves. The images and analysis results are transmitted to a mobile device, allowing users to view the results by detection task and tube position.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 124,
+      "tag": "p",
+      "text": "Scope of Application and Future Extensions",
+      "images": [],
+      "style": "5"
+    },
+    {
+      "index": 125,
+      "tag": "p",
+      "text": "Cases involving localization failure, overexposure, occlusion, abnormal control results, or insufficient signal should be flagged as abnormal and retested when necessary. Future work will incorporate fluorescence signal configurations and validation data for BP and HI, and evaluate result consistency across batches, observation faces, and tube positions.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 126,
+      "tag": "p",
+      "text": "ByeGerm 2.0 Supplementary Data",
+      "images": [],
+      "style": "4"
+    },
+    {
+      "index": 127,
+      "tag": "p",
+      "text": "The left panel of Figure 19 shows the distributions and relationships of the annotated bounding box center coordinates, widths, and heights. The right panel presents the number of instances per class, the distribution of bounding box center positions, and the relationships between bounding box dimensions. The negative class (tn) has a higher number of instances than the tg, tr, and tb classes.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 128,
+      "tag": "tbl",
+      "text": "",
+      "images": [
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "l": "62956",
+            "b": "51108"
+          },
+          "extent": {
+            "cx": "2735580",
+            "cy": "2306955"
+          }
+        },
+        {
+          "file": "assets/model-hardware/images/image13.png",
+          "sha256": "0c15f685c2955fe5542dfd832be3e1399981897db8087f433ac1d83fab677758",
+          "width": 756,
+          "height": 479,
+          "crop": {
+            "l": "62956",
+            "t": "55635"
+          },
+          "extent": {
+            "cx": "2879725",
+            "cy": "2185670"
+          }
+        }
+      ],
+      "style": null,
+      "rows": [
+        [
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "index": 129,
+      "tag": "p",
+      "text": "Figure 19. Number of annotated instances per class and distributions of bounding box positions and dimensions.",
+      "images": [],
+      "style": "30"
+    },
+    {
+      "index": 130,
+      "tag": "bookmarkEnd",
+      "text": "",
+      "images": [],
+      "style": null
+    },
+    {
+      "index": 131,
+      "tag": "p",
+      "text": "",
+      "images": [],
+      "style": "15"
+    },
+    {
+      "index": 132,
+      "tag": "sectPr",
+      "text": "",
+      "images": [],
+      "style": null
+    }
+  ]
+}

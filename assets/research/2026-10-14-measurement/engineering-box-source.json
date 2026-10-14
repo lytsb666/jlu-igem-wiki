@@ -1,0 +1,55 @@
+{
+  "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\msg\\file\\2026-10\\Measurement_Engineering_box.docx",
+  "sha256": "6af7b4b3ad34e3574d010f8c6510a82708a6eb99858721a151611dafaae1642f",
+  "paragraphs": [
+    {
+      "index": 0,
+      "tag": "p",
+      "text": "How do we achieve the D-B-T-L cycle",
+      "images": 0
+    },
+    {
+      "index": 1,
+      "tag": "p",
+      "text": "Early identification of respiratory pathogens can support timely infection-prevention decisions. We used measurement to guide engineering iterations toward more reliable detection.",
+      "images": 0
+    },
+    {
+      "index": 2,
+      "tag": "p",
+      "text": "1.Wet Lab (A–C). System configuration (A1–A3), primer–crRNA selection (B1–B3), and fluorescence readout (C1–C3) underwent separate iterations. Matched fluorescence tests selected RSV Candidate 2 and guided reaction and reporter conditions.",
+      "images": 0
+    },
+    {
+      "index": 3,
+      "tag": "p",
+      "text": "2.Dry Lab (D–F). Sequence-ranking methods (D1–D4), reaction dynamics (E1–E3), and candidate-data construction (F1–F3) evolved through multiple iterations. The handoffs B1 → D4 → B2 → B3 and A1 → E1 → E2 → E3 → A2 connect modeling to wet-lab tests; experimental measurements, not predictions alone, determined what advanced.",
+      "images": 0
+    },
+    {
+      "index": 4,
+      "tag": "p",
+      "text": "3.Hardware (G–I). Optical acquisition (G1–G2), thermal control (H1–H2), and app readout (I1–I4) were developed through their own stages. Fluorescence readouts informed device design (C2 → G1; C3 → G2); position-level verification and the I3 reconnection checks remain incomplete or planned.",
+      "images": 0
+    },
+    {
+      "index": 5,
+      "tag": "p",
+      "text": "Human Practices (J). Audience feedback prompted educational revisions (J1 → J2 → J1). The proposed app-usability link (J1 → I4) has not yet been experimentally tested.",
+      "images": 0
+    },
+    {
+      "index": 6,
+      "tag": "p",
+      "text": "Sensitivity, specificity, repeatability, and matrix-interference tests establish the system's laboratory performance. These results provide a basis for community screening, although field validation remains necessary.",
+      "images": 0
+    },
+    {
+      "index": 7,
+      "tag": "p",
+      "text": "Explore our Engineering page for detailed DBTL iterations and cross-module connections.",
+      "images": 0
+    }
+  ],
+  "placement": "Immediately before #section-1"
+}

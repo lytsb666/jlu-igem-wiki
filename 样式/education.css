@@ -1035,3 +1035,14 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
   .activity-card:nth-child(even) .activity-card__body { grid-column: 1; grid-row: auto; }
   .community-card { min-height: auto; }
 }
+/* Keep the integrated white cards consistent with the shared article format. */
+.edu-content > .edu-section > .section-number { display: none; }
+.edu-content > .edu-section > .section-heading { padding-right: 0; }
+.edu-cover-context .edu-stats { flex-wrap: wrap; }
+.edu-cover-context .edu-stats > div { min-width: 0; }
+@layer wiki-format {
+  :root:root body .edu-content > .continuing-section :is(h2, h3, p, strong, span, a) {
+    color: #6f4e37 !important;
+  }
+  :root:root body .edu-references a { overflow-wrap: anywhere !important; }
+}

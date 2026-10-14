@@ -64,7 +64,7 @@
       <div class="dropdown-content">
         <a href="../Instrument/hardware.html">Hardware</a>
         <a href="../Instrument/software.html">Software</a>
-        <a href="../Instrument/model.html">Model</a>
+        <a href="../Instrument/model.html#model-for-hardware">Model</a>
       </div>
     </div>
     <div class="dropdown">
@@ -78,7 +78,7 @@
       <a href="../Eagagement/iHP.html" class="nav-link">Judging</a>
       <div class="dropdown-content">
         <a href="../Eagagement/iHP.html">iHP</a>
-        <a href="../Instrument/model.html">Model</a>
+        <a href="../Instrument/model.html#model-for-hardware">Model</a>
         <a href="../Instrument/hardware.html">Hardware</a>
         <a href="../Wet-lab/measurement.html">Measurement</a>
       </div>
@@ -86,10 +86,10 @@
   </div>
 </nav>
 
-    <section class="image-page-hero" aria-label="Hardware cover">
+    <section class="image-page-hero wiki-headpage" aria-label="Hardware cover">
       <img src="../a  图片/page-covers/hardware.webp" width="2752" height="1536" alt="ByeGerm mascot assembling the diagnostic instrument hardware" fetchpriority="high" decoding="async" />
-      <div class="image-page-hero__label"><span>Instrument</span><h1>Hardware</h1></div>
-    </section>
+      <div class="image-page-hero__label wiki-headpage__title"><span>Instrument</span><h1>Hardware</h1></div>
+    <div class="lab-cover-note" aria-label="Page highlights"><span>ByeGerm 1.0</span><span>ByeGerm 2.0</span><span>Portable readout</span></div></section>
 
     <main class="hw-main" id="hardware-content">
 <header class="hw-intro"><p class="hw-eyebrow">ByeGerm Hardware</p><h2>From Detection Requirements to a Complete Instrument</h2></header>
@@ -142,7 +142,7 @@
 <p>During conventional analysis of fluorescence images using software such as ImageJ and Color Picker, different fluorescence thresholds may yield different detection results <a href="#hw-reference-3">[3]</a>. Threshold selection is also subject to variation among operators. Therefore, replacing manual image analysis with machine learning can reduce the influence of subjective factors and improve detection efficiency<a href="#hw-reference-4">[4]</a>.</p>
 <p>We use YOLOv8n to locate reaction tubes and OpenCV to extract fluorescence signals from images, then transmit the results to the mobile client (Figure 11).</p>
 <figure class="hw-figure hw-figure--large"><div class="hw-figure-images"><a data-hw-fullimage href="../assets/hardware/images/image12.png" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="../assets/hardware/images/image12.png" width="5953" height="7071" alt="Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets." loading="lazy" decoding="async"/></a></div><figcaption>Figure 11. Schematic of the image analysis workflow, including manual annotation, model training, and partitioning into training and test sets.</figcaption></figure>
-<p>Details of model training and image processing are provided on the <a href="../Instrument/model.html">Model page</a>.</p>
+<p>Details of model training and image processing are provided on the <a href="../Instrument/model.html#model-for-hardware">Model page</a>.</p>
 <h3 id="hw-gen1-app">3.4 Mobile App Development</h3>
 <p>We developed a companion app that brings connection management, parameter settings, monitoring of reaction progress, and result recording together on a mobile phone, making instrument operation more intuitive and testing more convenient<a href="#hw-reference-5">[5]</a>.</p>
 <p>The Fluorescent detection app was developed in Java using Android Studio and is compatible with Android and subsequent operating systems. It includes four types of interfaces: Wi-Fi connection, fluorescence image acquisition and analysis, fluorescence curve display, and reaction parameter settings (Figure 12).</p>
@@ -178,12 +178,12 @@
 <figure class="hw-figure"><div class="hw-figure-images"><a data-hw-fullimage href="../assets/hardware/images/image20.png" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="../assets/hardware/images/image20.png" width="571" height="595" alt="Figure 18. Connection diagram of the control and power supply systems in ByeGerm 2.0, showing the relationships among the control, rotation, power management, and battery units." loading="lazy" decoding="async"/></a></div><figcaption>Figure 18. Connection diagram of the control and power supply systems in ByeGerm 2.0, showing the relationships among the control, rotation, power management, and battery units.</figcaption></figure>
 <p>Further details are provided in the <a href="../hardware-resources/reproduction-second-generation.pdf" target="_blank" rel="noopener">second-generation reproduction guide ↗</a>.</p>
 <h3 id="hw-gen2-analysis">5.2 Multicolor Fluorescence Image Analysis</h3>
-<p>In this study, fluorescence images of reaction tubes from the one-step RPA-CRISPR/Cas12a system were used as the underlying dataset to develop a CNN-based fluorescence classification model. The key steps in its training process are shown in Figure 19. Details of the training methods and evaluation results are provided on the <a href="../Instrument/model.html">Model page</a>.</p>
+<p>In this study, fluorescence images of reaction tubes from the one-step RPA-CRISPR/Cas12a system were used as the underlying dataset to develop a CNN-based fluorescence classification model. The key steps in its training process are shown in Figure 19. Details of the training methods and evaluation results are provided on the <a href="../Instrument/model.html#model-for-hardware">Model page</a>.</p>
 <figure class="hw-figure"><div class="hw-figure-images"><a data-hw-fullimage href="../assets/hardware/images/image21.jpeg" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="../assets/hardware/images/image21.jpeg" width="1024" height="332" alt="Figure 19. Schematic of the processing workflow for the multicolor fluorescence image classification model." loading="lazy" decoding="async"/></a></div><figcaption>Figure 19. Schematic of the processing workflow for the multicolor fluorescence image classification model.</figcaption></figure>
 <h3 id="hw-gen2-program">5.3 Program Upgrades for Operation across Multiple Tube Positions</h3>
 <p>The program retains the mobile client, wireless communication, YOLOv8n, and OpenCV. After each switch between observation faces, the device captures an image containing multiple tube positions, locates each tube, and extracts its corresponding region. The app centrally manages tasks and results. The hardware and software interaction architecture is shown in Figure 20.</p>
 <figure class="hw-figure"><div class="hw-figure-images"><a data-hw-fullimage href="../assets/hardware/images/image22.png" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="../assets/hardware/images/image22.png" width="1068" height="545" alt="Figure 20. The coordinated hardware and software architecture of ByeGerm 2.0 includes the mobile app, a Windows training host, an STM32 AI vision main control board, an RGB LED array, an STM32 temperature control main control board, a power management module, and a camera module. Data exchange and control are implemented through Wi-Fi and hardware interfaces." loading="lazy" decoding="async"/></a></div><figcaption>Figure 20. The coordinated hardware and software architecture of ByeGerm 2.0 includes the mobile app, a Windows training host, an STM32 AI vision main control board, an RGB LED array, an STM32 temperature control main control board, a power management module, and a camera module. Data exchange and control are implemented through Wi-Fi and hardware interfaces.</figcaption></figure>
-<p>Further technical details are provided on the <a href="../Instrument/software.html">Software</a> and <a href="../Instrument/model.html">Model</a> pages.</p>
+<p>Further technical details are provided on the <a href="../Instrument/software.html">Software</a> and <a href="../Instrument/model.html#model-for-hardware">Model</a> pages.</p>
 <h3 id="hw-gen2-operation">5.4 Device Operation Workflow</h3>
 <figure class="hw-video"><video controls playsinline preload="none" poster="../assets/hardware/images/video-3-poster.jpg" aria-label="ByeGerm 2.0 operation demonstration"><source src="../hardware-resources/video-3.mp4" type="video/mp4"/><a href="../hardware-resources/video-3.mp4">Open video</a></video><figcaption>ByeGerm 2.0 operation demonstration · <a href="../hardware-resources/video-3.mp4" target="_blank" rel="noopener">Open video ↗</a></figcaption></figure>
 <figure class="hw-figure"><a data-hw-fullimage href="../assets/hardware/images/workflow-2-clean.svg" target="_blank" rel="noopener" aria-label="Open figure at full size"><img src="../assets/hardware/images/workflow-2-clean.svg" width="2172" height="724" alt="Supplied ByeGerm 2.0 operation workflow" loading="lazy" decoding="async"/></a></figure>
@@ -236,7 +236,7 @@
 </section>
 <section class="hw-section" id="hw-outlook"><h2>The ByeGerm Story Continues</h2>
 <p>ByeGerm 1.0 was initially designed for small-scale testing at home. ByeGerm 2.0 adds an independent sample pretreatment area and a reaction chamber with multiple tube positions to address centralized testing needs in settings such as kindergartens and nursing homes. Each iteration stems from a deeper understanding of users&#x27; needs. The device still requires further refinement of operation across multiple tube positions, coordination between temperature zones, and validation of stability in real-world settings. We will continue to improve operation and result presentation based on feedback from the target users. For the next generation, we hope to explore internet connectivity and use in primary healthcare centers. Subject to privacy protection, clearly defined permissions for data use, and compliance with relevant requirements, we aim to enable secure aggregation and standardized reporting of testing records to support preliminary screening in primary care and disease control surveillance. From homes to care institutions and, ultimately, primary-level public health networks, we hope that each engineering improvement will bring testing closer to the people who need it.</p>
-<div class="hw-crosslinks"><a href="../Instrument/software.html">Software ↗</a><a href="../Instrument/model.html">Model ↗</a><a href="../hardware-resources/user-manual-first-generation.pdf" target="_blank" rel="noopener">1.0 User Manual ↗</a><a href="../hardware-resources/user-manual-second-generation.pdf" target="_blank" rel="noopener">2.0 User Manual ↗</a><a href="../hardware-resources/reproduction-first-generation.pdf" target="_blank" rel="noopener">1.0 Reproduction Guide ↗</a><a href="../hardware-resources/reproduction-second-generation.pdf" target="_blank" rel="noopener">2.0 Reproduction Guide ↗</a></div>
+<div class="hw-crosslinks"><a href="../Instrument/software.html">Software ↗</a><a href="../Instrument/model.html#model-for-hardware">Model ↗</a><a href="../hardware-resources/user-manual-first-generation.pdf" target="_blank" rel="noopener">1.0 User Manual ↗</a><a href="../hardware-resources/user-manual-second-generation.pdf" target="_blank" rel="noopener">2.0 User Manual ↗</a><a href="../hardware-resources/reproduction-first-generation.pdf" target="_blank" rel="noopener">1.0 Reproduction Guide ↗</a><a href="../hardware-resources/reproduction-second-generation.pdf" target="_blank" rel="noopener">2.0 Reproduction Guide ↗</a></div>
 </section>
 <section class="hw-section" id="hw-references"><h2>Reference</h2>
 <ol class="hw-references">

@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JLU-SPH drylab models for primer-crRNA ranking and RPA-CRISPR/Cas12a reaction-condition optimization." />
-  <title>Drylab Model | JLU-SPH iGEM 2026</title>
+  <meta name="description" content="JLU-SPH models for primer-crRNA ranking, reaction-condition optimization, and on-device fluorescence image analysis." />
+  <title>Model | JLU-SPH iGEM 2026</title>
   <link rel="icon" href="../a  图片/page-covers/model.webp" type="image/webp" />
   <link rel="stylesheet" href="../样式/style.css" />
   <link rel="stylesheet" href="../样式/loading.css" />
   <link rel="stylesheet" href="../样式/wetlab-pages.css" />
   <link rel="stylesheet" href="../样式/drylab.css" />
   <link rel="stylesheet" href="../样式/full-width-layout.css">
-  <link rel="stylesheet" href="../样式/model-revision.css">
+  <link rel="stylesheet" href="../样式/model-modules.css">
+<link rel="stylesheet" href="../样式/model-revision.css">
 </head>
 <body class="wetlab-page drylab-page model-revision-page loading-lock" data-page="model">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -39,12 +40,14 @@
   </div>
 </nav>
 
-<section class="image-page-hero drylab-hero" aria-label="Drylab model cover">
+<section class="image-page-hero drylab-hero wiki-headpage" aria-label="Drylab model cover">
   <img src="../a  图片/page-covers/model.webp" width="2848" height="1600" alt="ByeGerm mascot exploring mathematical models under a starry sky" fetchpriority="high" decoding="async" />
-  <div class="image-page-hero__label"><span>Instrument · Drylab</span><h1>Model</h1></div>
-</section>
+  <div class="image-page-hero__label wiki-headpage__title"><span>Instrument · Drylab</span><h1>Model</h1></div>
+<div class="lab-cover-note" aria-label="Page highlights"><span>Model for Measurement</span><span>Model for Hardware</span></div></section>
 
 <main class="lab-main" id="main-content" tabindex="-1">
+<div class="model-module-tabs" role="tablist" aria-label="Model modules"><button class="model-module-tab" type="button" role="tab" id="model-tab-measurement" aria-controls="model-for-measurement" aria-selected="true" tabindex="0"><span class="model-module-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 46h44M12 42V22m9 20V15m9 27V27m9 15V10M13 33c6-14 10 10 17-3s11-9 20-20"/><path d="M8 52h48"/><circle cx="13" cy="33" r="2"/><circle cx="30" cy="30" r="2"/><circle cx="50" cy="10" r="2"/></svg></span><span>Model for Measurement</span></button><button class="model-module-tab" type="button" role="tab" id="model-tab-hardware" aria-controls="model-for-hardware" aria-selected="false" tabindex="-1"><span class="model-module-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="11" width="50" height="40" rx="6"/><path d="M22 11l3-5h14l3 5M20 23v15a5 5 0 0 0 10 0V23m7 0v15a5 5 0 0 0 10 0V23M18 23h14m3 0h14"/><path d="M17 31h16m2 4h15M9 17h5m-5 0v5m46-5h-5m5 0v5M9 45h5m-5 0v-5m46 5h-5m5 0v-5"/><circle cx="42" cy="33" r="2"/></svg></span><span>Model for Hardware</span></button></div>
+<section class="model-module-panel" id="model-for-measurement" data-model-module="measurement" role="tabpanel" aria-labelledby="model-tab-measurement" tabindex="-1">
   <div class="lab-layout">
     <aside class="page-toc drylab-toc" aria-label="Model sections">
       <nav>
@@ -337,6 +340,512 @@ X_num(c) =
 </section>
     </div>
   </div>
+</section>
+<section class="model-module-panel" id="model-for-hardware" data-model-module="hardware" role="tabpanel" aria-labelledby="model-tab-hardware" tabindex="-1" hidden inert>
+<div class="lab-layout">
+<aside class="page-toc model-hardware-toc" aria-label="Model for Hardware sections">
+<nav>
+<div>
+<a href="#hardware-model-section-2" data-section-link>Model Background and Analysis Objectives</a>
+</div>
+<div>
+<a href="#hardware-model-section-5" data-section-link>Model Development and Application Workflow</a>
+<ul>
+<li>
+<a href="#hardware-model-section-6" data-section-link>Model Development and Deployment</a>
+</li>
+<li>
+<a href="#hardware-model-section-8" data-section-link>On-Device Image Analysis</a>
+</li>
+</ul>
+</div>
+<div>
+<a href="#hardware-model-section-12" data-section-link>Key Technical Features</a>
+</div>
+<div>
+<a href="#hardware-model-section-16" data-section-link>Model Overview</a>
+</div>
+<div>
+<a href="#hardware-model-generation-1" data-section-link>ByeGerm 1.0: Reaction Region Localization and Fluorescence Signal Extraction</a>
+<ul>
+<li>
+<a href="#hardware-model-section-20" data-section-link>Dataset and Annotation</a>
+</li>
+<li>
+<a href="#hardware-model-section-33" data-section-link>Model Training and Evaluation</a>
+<ul>
+<li>
+<a href="#hardware-model-section-37" data-section-link>Initial Model Training</a>
+</li>
+<li>
+<a href="#hardware-model-section-43" data-section-link>Initial Model Outputs</a>
+</li>
+<li>
+<a href="#hardware-model-section-48" data-section-link>Dataset Expansion and Second-Round Training</a>
+</li>
+<li>
+<a href="#hardware-model-section-52" data-section-link>Detection Performance Metrics</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#hardware-model-section-58" data-section-link>On-Device Deployment</a>
+</li>
+<li>
+<a href="#hardware-model-section-62" data-section-link>Fluorescence Signal Extraction and Grading</a>
+<ul>
+<li>
+<a href="#hardware-model-section-66" data-section-link>Preliminary Fluorescence Intensity Classification</a>
+</li>
+<li>
+<a href="#hardware-model-section-70" data-section-link>Scope of Application</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#hardware-model-section-72" data-section-link>ByeGerm 1.0 Supplementary Data</a>
+</li>
+</ul>
+</div>
+<div>
+<a href="#hardware-model-generation-2" data-section-link>ByeGerm 2.0: Multi-Tube and Multicolor Fluorescence Recognition</a>
+<ul>
+<li>
+<a href="#hardware-model-section-79" data-section-link>Recognition Tasks and Data Collection</a>
+<ul>
+<li>
+<a href="#hardware-model-section-86" data-section-link>Sample Composition and Tube Position Arrangement</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#hardware-model-section-93" data-section-link>Data Annotation and Model Training</a>
+<ul>
+<li>
+<a href="#hardware-model-section-97" data-section-link>Training Performance</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#hardware-model-section-102" data-section-link>Model Output and Detection Evaluation</a>
+<ul>
+<li>
+<a href="#hardware-model-section-107" data-section-link>Validation and Blind Testing</a>
+</li>
+<li>
+<a href="#hardware-model-section-113" data-section-link>Confusion Matrix and Evaluation Curves</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#hardware-model-section-122" data-section-link>Multi-Tube Result Recording and Visualization</a>
+<ul>
+<li>
+<a href="#hardware-model-section-124" data-section-link>Scope of Application and Future Extensions</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#hardware-model-section-126" data-section-link>ByeGerm 2.0 Supplementary Data</a>
+</li>
+</ul>
+</div>
+<div>
+<a href="#hardware-model-references" data-section-link>References</a>
+</div>
+</nav>
+</aside>
+<article class="article-flow model-hardware-content">
+<h2 class="model-module-heading">Model for Hardware</h2>
+<p class="model-hardware-lead" data-hardware-model-source="1">Fluorescence Image Analysis for Respiratory Pathogen Detection</p>
+<section class="lab-section model-hardware-section">
+<h2 id="hardware-model-section-2" data-toc-level="1" data-hardware-model-source="2">Model Background and Analysis Objectives</h2>
+<p data-hardware-model-source="3">ByeGerm is designed for the nucleic acid detection of five respiratory pathogens: respiratory syncytial virus (RSV), human metapneumovirus subtype B (hMPV-B), Streptococcus pneumoniae (SPN), Bordetella pertussis (BP), and Haemophilus influenzae (HI). The system integrates isothermal amplification, CRISPR-Cas12a-based reactions, and fluorescence signal detection.</p>
+<p data-hardware-model-source="4">The Model module is responsible for automatically localizing reaction regions, extracting fluorescence intensity measurements or classifying fluorescence signals, and associating the results with their corresponding tube positions and image acquisition timestamps. This process provides traceable image analysis data to support accurate and reliable diagnostic interpretation.</p>
+</section>
+<section class="lab-section model-hardware-section">
+<h2 id="hardware-model-section-5" data-toc-level="1" data-hardware-model-source="5">Model Development and Application Workflow</h2>
+<h3 id="hardware-model-section-6" data-toc-level="2" data-hardware-model-source="6">Model Development and Deployment</h3>
+<p data-hardware-model-source="7">Image Acquisition and Manual Annotation → Model Training → Validation and Testing → Device Deployment</p>
+<h3 id="hardware-model-section-8" data-toc-level="2" data-hardware-model-source="8">On-Device Image Analysis</h3>
+<p data-hardware-model-source="9">Fluorescence Image Acquisition → Reaction Region Localization → Fluorescence Signal Analysis → Association with Tube Positions and Acquisition Timestamps → Mobile Application Display</p>
+<p data-hardware-model-source="10">The localization model identifies the reaction regions, while the image processing algorithm extracts fluorescence signals. The second-generation model further incorporates fluorescence classification capabilities.</p>
+<p data-hardware-model-source="11">The analysis results are recorded according to the detection task, observation view, tube position, and image acquisition timestamp, and are subsequently transmitted to the mobile application for visualization.</p>
+</section>
+<section class="lab-section model-hardware-section">
+<h2 id="hardware-model-section-12" data-toc-level="1" data-hardware-model-source="12">Key Technical Features</h2>
+<p data-hardware-model-source="13">Automated Region Localization and Signal Extraction: ByeGerm 1.0 integrates YOLOv8n with OpenCV for automatic reaction region localization and fluorescence signal extraction. The model is deployed on the Ai BOX in.rknn format.</p>
+<p data-hardware-model-source="14">Multicolor Fluorescence Recognition: ByeGerm 2.0 simultaneously identifies reaction region locations and classifies fluorescence signals into different categories.</p>
+<p data-hardware-model-source="15">Multi-Tube Result Recording: The system supports three observation views, each containing five tube positions. Analysis results are associated with their corresponding tube positions and actual image acquisition timestamps to ensure data traceability.</p>
+</section>
+<section class="lab-section model-hardware-section">
+<h2 id="hardware-model-section-16" data-toc-level="1" data-hardware-model-source="16">Model Overview</h2>
+<div class="model-generation-cards" data-hardware-model-source="17">
+<a class="model-generation-card" href="#hardware-model-generation-1" data-hardware-model-source-cell="0">
+<p>ByeGerm 1.0</p>
+<p>Reaction Region Localization and Fluorescence Signal Extraction</p>
+<p>The YOLOv8n model is employed for automated localization of reaction regions, while OpenCV-based image processing is utilized to extract fluorescence signals, enabling automated region-of-interest (ROI) selection and fluorescence signal acquisition and recording directly on the device.</p>
+<span>Explore the ByeGerm 1.0 Model Details →</span>
+</a>
+<a class="model-generation-card" href="#hardware-model-generation-2" data-hardware-model-source-cell="1">
+<p>ByeGerm 2.0</p>
+<p>Multi-Tube Localization and Multicolor Fluorescence Classification</p>
+<p>The model enables automated localization of reaction regions and classification of fluorescence signals, with each detection associated with its corresponding tube position and acquisition timestamp. Validation encompasses fluorescence classes corresponding to RSV, hMPV-B, and SPN, as well as the negative class.</p>
+<span>Explore the ByeGerm 2.0 Model Details →</span>
+</a>
+</div>
+</section>
+<section class="lab-section model-hardware-section">
+<h2 id="hardware-model-generation-1" data-toc-level="1" data-hardware-model-source="18">ByeGerm 1.0: Reaction Region Localization and Fluorescence Signal Extraction</h2>
+<p data-hardware-model-source="19">Automated localization of reaction regions and extraction of fluorescence signals within regions of interest (ROIs), enabling on-device ROI selection, fluorescence signal analysis, and data recording.</p>
+<h3 id="hardware-model-section-20" data-toc-level="2" data-hardware-model-source="20">Dataset and Annotation</h3>
+<p data-hardware-model-source="21">The dataset comprised a negative control (NC) group and six bacterial concentration groups: 1× 10⁰–1×10¹, 1×10², 1×10³, 1×10⁴， 1×10⁵, and 1×10⁶–1×10⁷CFU/mL. All reaction regions were annotated under a single object class, designated as tube.</p>
+<p data-hardware-model-source="22">Each of the seven experimental groups contained 1,000 reaction tubes, yielding a total of 7,000 tubes. Fluorescence images were acquired under 470 nm excitation illumination within the device&#x27;s enclosed dark chamber, with each image containing two reaction tubes. The dataset was partitioned into training, validation, and test sets at a ratio of 70%, 20%, and 10%, respectively.</p>
+<div class="model-hardware-table" data-hardware-model-source="26" role="region" aria-label="Scrollable Hardware Model table 1" tabindex="0">
+<table>
+<thead>
+<tr>
+<th scope="col">Dataset Subset</th>
+<th scope="col">Number of Reaction Tubes</th>
+<th scope="col">Number of Images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training Set</td>
+<td>4,900</td>
+<td>2,450</td>
+</tr>
+<tr>
+<td>Validation Set</td>
+<td>1,400</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Test Set</td>
+<td>700</td>
+<td>350</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>7000</td>
+<td>3500</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-hardware-model-source="30">Reaction regions were manually annotated with bounding boxes using LabelImg.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-1" data-hardware-model-source="31">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1014.0px;--figure-ratio:1014.0/807.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image1.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 1">
+<img src="../assets/model-hardware/images/image1.png" width="1014" height="807" alt="Figure 1. Examples of manual annotations of reaction tube images across different concentration gradients." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="32">Figure 1. Examples of manual annotations of reaction tube images across different concentration gradients.</figcaption>
+</figure>
+<h3 id="hardware-model-section-33" data-toc-level="2" data-hardware-model-source="33">Model Training and Evaluation</h3>
+<p data-hardware-model-source="34">The YOLOv8n model was trained using the PyTorch framework and subsequently evaluated on a device equipped with the RK3588 system-on-chip (SoC) following model validation.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-2" data-hardware-model-source="35">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:5953.0px;--figure-ratio:5953.0/1310.9634;--image-width:100.00000000%;--image-height:539.37432578%;--image-left:-0.00000000%;--image-top:-15.85221143%;" href="../assets/model-hardware/images/image2.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 2">
+<img src="../assets/model-hardware/images/image2.png" width="5953" height="7071" alt="Figure 2. Workflow of data annotation, model training, and on-device testing for reaction tube localization." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="36">Figure 2. Workflow of data annotation, model training, and on-device testing for reaction tube localization.</figcaption>
+</figure>
+<h4 id="hardware-model-section-37" data-toc-level="3" data-hardware-model-source="37">Initial Model Training</h4>
+<p data-hardware-model-source="38">The validation bounding box regression loss exhibited an overall decreasing trend, while the normalized confusion matrix showed a diagonal value of 1.00 for the tube class. Recall increased during the early stages of training and subsequently approached 1.0, whereas the bounding box mean average precision at an IoU threshold of 0.50 (mAP50(B)) remained above 0.90 during the later training epochs.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-3" data-hardware-model-source="39">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:2779.0389900000005px;--figure-ratio:2779.0389900000005/1407.2704199999998;--image-width:214.21074053%;--image-height:502.46206411%;--image-left:-0.00214211%;--image-top:-122.87207316%;" href="../assets/model-hardware/images/image2.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 3">
+<img src="../assets/model-hardware/images/image2.png" width="5953" height="7071" alt="Figure 3. Validation bounding box regression loss and normalized confusion matrix." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="40">Figure 3. Validation bounding box regression loss and normalized confusion matrix.</figcaption>
+</figure>
+<figure class="model-hardware-figure" id="hardware-model-figure-4" data-hardware-model-source="41">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1240.01524px;--figure-ratio:1240.01524/751.6871700000002;--image-width:102.25680775%;--image-height:226.55701307%;--image-left:-2.25680775%;--image-top:-5.58463037%;" href="../assets/model-hardware/images/image3.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 4">
+<img src="../assets/model-hardware/images/image3.png" width="1268" height="1703" alt="Figure 4. Training loss curves and changes in detection performance metrics during initial model training." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="42">Figure 4. Training loss curves and changes in detection performance metrics during initial model training.</figcaption>
+</figure>
+<h4 id="hardware-model-section-43" data-toc-level="3" data-hardware-model-source="43">Initial Model Outputs</h4>
+<p data-hardware-model-source="44">Bounding boxes indicate the detected reaction regions. The numerical values following Tube represent the detection confidence scores, whereas those following Lum indicate the fluorescence intensity readings obtained from the image processing algorithm.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-5" data-hardware-model-source="46">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1149.0px;--figure-ratio:1149.0/729.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image4.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 5">
+<img src="../assets/model-hardware/images/image4.png" width="1149" height="729" alt="Figure 5. Example of reaction region localization and fluorescence intensity measurement using the initial model." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="47">Figure 5. Example of reaction region localization and fluorescence intensity measurement using the initial model.</figcaption>
+</figure>
+<h4 id="hardware-model-section-48" data-toc-level="3" data-hardware-model-source="48">Dataset Expansion and Second-Round Training</h4>
+<p data-hardware-model-source="49">Pseudo-labels were generated with the assistance of predictions from the initial model, expanding the dataset to approximately 20,000 images for a second round of model training.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-6" data-hardware-model-source="50">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1262.0px;--figure-ratio:1262.0/741.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image5.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 6">
+<img src="../assets/model-hardware/images/image5.png" width="1262" height="741" alt="Figure 6. Example of reaction region localization following the second round of model training." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="51">Figure 6. Example of reaction region localization following the second round of model training.</figcaption>
+</figure>
+<h4 id="hardware-model-section-52" data-toc-level="3" data-hardware-model-source="52">Detection Performance Metrics</h4>
+<p data-hardware-model-source="53">The F1-score curve shown in the left panel of Figure 7 indicates that the aggregated F1-score across all classes reaches 1.00 at a confidence threshold of 0.874. The right panel illustrates the distribution of annotated bounding box widths and heights.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-7" data-hardware-model-source="55">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:2998.5260999999996px;--figure-ratio:2998.5260999999996/1407.2704199999998;--image-width:198.53087155%;--image-height:502.46206411%;--image-left:-92.67222553%;--image-top:-122.87207316%;" href="../assets/model-hardware/images/image2.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 7">
+<img src="../assets/model-hardware/images/image2.png" width="5953" height="7071" alt="Figure 7. Relationship between F1-score and confidence threshold, and distribution of annotated bounding box dimensions." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="56">Figure 7. Relationship between F1-score and confidence threshold, and distribution of annotated bounding box dimensions.</figcaption>
+</figure>
+<p data-hardware-model-source="57">The evaluation metrics were calculated based on the localization performance of reaction regions within the images.</p>
+<h3 id="hardware-model-section-58" data-toc-level="2" data-hardware-model-source="58">On-Device Deployment</h3>
+<p data-hardware-model-source="59">The YOLOv8n model was converted to the .rknn format and deployed on the Ai BOX alongside an OpenCV-based image processing pipeline. As illustrated in Figure 8, the on-device reaction region localization results achieved detection confidence scores ranging from 0.90 to 0.95.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-8" data-hardware-model-source="60">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1268.0px;--figure-ratio:1268.0/504.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image6.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 8">
+<img src="../assets/model-hardware/images/image6.png" width="1268" height="504" alt="Figure 8. Example of on-device reaction region localization testing." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="61">Figure 8. Example of on-device reaction region localization testing.</figcaption>
+</figure>
+<h3 id="hardware-model-section-62" data-toc-level="2" data-hardware-model-source="62">Fluorescence Signal Extraction and Grading</h3>
+<p data-hardware-model-source="63">Following region-of-interest (ROI) extraction, pixel intensities were filtered using the OpenCV inRange function. At this stage, the filtering operation was performed using inRange(roi, 15, 255, mask). Figure 9 presents the image processing results obtained with lower intensity thresholds of 5, 10, 15, and 20, respectively, while maintaining a constant upper threshold of 255.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-9" data-hardware-model-source="64">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1045.0px;--figure-ratio:1045.0/752.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image7.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 9">
+<img src="../assets/model-hardware/images/image7.png" width="1045" height="752" alt="Figure 9. Comparison of fluorescence signal extraction under different inRange threshold settings." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="65">Figure 9. Comparison of fluorescence signal extraction under different inRange threshold settings.</figcaption>
+</figure>
+<h4 id="hardware-model-section-66" data-toc-level="3" data-hardware-model-source="66">Preliminary Fluorescence Intensity Classification</h4>
+<p data-hardware-model-source="67">Figure 10 shows six levels of fluorescence signal output, designated N and P1–P5, corresponding to NC, 1 × 10⁰–1 × 10¹, 1 × 10², 1 × 10³, 1 × 10⁴, and 1 × 10⁵–1 × 10⁷ CFU/mL, respectively. P5 represents a combined presentation of the high-concentration range in the figure. The values in parentheses indicate fluorescence readings and do not represent classification thresholds.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-10" data-hardware-model-source="68">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:5671.4826299999995px;--figure-ratio:5671.4826299999995/3787.2276000000006;--image-width:104.96373503%;--image-height:186.70649739%;--image-left:-4.96373503%;--image-top:-86.70649739%;" href="../assets/model-hardware/images/image2.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 10">
+<img src="../assets/model-hardware/images/image2.png" width="5953" height="7071" alt="Figure 10. ROI fluorescence readings and examples of N and P1–P5 classification." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="69">Figure 10. ROI fluorescence readings and examples of N and P1–P5 classification.</figcaption>
+</figure>
+<h4 id="hardware-model-section-70" data-toc-level="3" data-hardware-model-source="70">Scope of Application</h4>
+<p data-hardware-model-source="71">Target-specific detection thresholds, weak-signal performance, and inter-batch variability should be evaluated separately for each reaction system. When imaging conditions change, the pixel selection thresholds must be reassessed.</p>
+<h3 id="hardware-model-section-72" data-toc-level="2" data-hardware-model-source="72">ByeGerm 1.0 Supplementary Data</h3>
+<figure class="model-hardware-figure" id="hardware-model-figure-11" data-hardware-model-source="73">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:1242.79216px;--figure-ratio:1242.79216/447.2929500000001;--image-width:102.02832306%;--image-height:380.73481820%;--image-left:-2.02832306%;--image-top:-183.96344946%;" href="../assets/model-hardware/images/image3.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 11">
+<img src="../assets/model-hardware/images/image3.png" width="1268" height="1703" alt="Figure 11. Distribution of annotated bounding box center positions and dimensions." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="74">Figure 11. Distribution of annotated bounding box center positions and dimensions.</figcaption>
+</figure>
+<p data-hardware-model-source="76">From left to right: X–Y distribution of bounding box centers, relationship between the center Y-coordinate and bounding box width, and relationship between the center Y-coordinate and bounding box height.</p>
+</section>
+<section class="lab-section model-hardware-section">
+<h2 id="hardware-model-generation-2" data-toc-level="1" data-hardware-model-source="77">ByeGerm 2.0: Multi-Tube and Multicolor Fluorescence Recognition</h2>
+<p data-hardware-model-source="78">Fluorescence class recognition was added to the region localization framework to support multi-tube image analysis and result tracking.</p>
+<h3 id="hardware-model-section-79" data-toc-level="2" data-hardware-model-source="79">Recognition Tasks and Data Collection</h3>
+<p data-hardware-model-source="80">Four class labels were defined according to the reaction systems and fluorescent labeling configurations used in this project.</p>
+<div class="model-hardware-table" data-hardware-model-source="82" role="region" aria-label="Scrollable Hardware Model table 2" tabindex="0">
+<table>
+<thead>
+<tr>
+<th scope="col">Detection Target or Control</th>
+<th scope="col">Model Label</th>
+<th scope="col">Abbreviation Used in Evaluation Figures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RSV(Red Fluorescence)</td>
+<td>tube_red</td>
+<td>tr</td>
+</tr>
+<tr>
+<td>hMPV-B (Blue Fluorescence)</td>
+<td>tube_blue</td>
+<td>tb</td>
+</tr>
+<tr>
+<td>SPN（Green Fluorescence）</td>
+<td>tube_green</td>
+<td>tg</td>
+</tr>
+<tr>
+<td>Negative Control</td>
+<td>tube_null</td>
+<td>tn</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-hardware-model-source="84">At this stage, multicolor fluorescence recognition validation covered the fluorescence classes corresponding to RSV, hMPV-B, and SPN, as well as the negative class. BP and HI were not included in this validation stage.</p>
+<h4 id="hardware-model-section-86" data-toc-level="3" data-hardware-model-source="86">Sample Composition and Tube Position Arrangement</h4>
+<p data-hardware-model-source="87">A total of 750 reaction tubes were included, comprising 150 positive tubes each for RSV, hMPV-B, and SPN, and 300 negative tubes. The dataset was divided into training, validation, and test sets at a ratio of 60%, 20%, and 20%, respectively.</p>
+<p data-hardware-model-source="88">Five tube positions were arranged on each of the three observation faces, and images were acquired using the following five tube arrangement configurations.</p>
+<div class="model-hardware-table" data-hardware-model-source="90" role="region" aria-label="Scrollable Hardware Model table 3" tabindex="0">
+<table>
+<thead>
+<tr>
+<th scope="col">Arrangement</th>
+<th scope="col">Tube Position 1</th>
+<th scope="col">Tube Position 2</th>
+<th scope="col">Tube Position  3</th>
+<th scope="col">Tube Position  4</th>
+<th scope="col">Tube Position  5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>RSV</td>
+<td>hMPV-B</td>
+<td>NC</td>
+<td>NC</td>
+<td>SPN</td>
+</tr>
+<tr>
+<td>2</td>
+<td>SPN</td>
+<td>NC</td>
+<td>RSV</td>
+<td>hMPV-B</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>3</td>
+<td>hMPV-B</td>
+<td>NC</td>
+<td>SPN</td>
+<td>RSV</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>4</td>
+<td>NC</td>
+<td>RSV</td>
+<td>hMPV-B</td>
+<td>SPN</td>
+<td>NC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>NC</td>
+<td>SPN</td>
+<td>NC</td>
+<td>hMPV-B</td>
+<td>RSV</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p data-hardware-model-source="92">Images were acquired for each of the five tube arrangement configurations on each observation face, with 200 images per configuration, yielding 1,000 images per observation face and 3,000 images across all three faces. NC denotes the negative control. Repeated imaging of the same reaction tube was not considered an independent experimental replicate.</p>
+<h3 id="hardware-model-section-93" data-toc-level="2" data-hardware-model-source="93">Data Annotation and Model Training</h3>
+<p data-hardware-model-source="94">Reaction regions were manually annotated with bounding boxes, and fluorescence classes were labeled according to the experimental configuration. Images with bounding box annotations and class labels were used to train the object detection model.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-12" data-hardware-model-source="95">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:574.0px;--figure-ratio:574.0/700.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image8.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 12">
+<img src="../assets/model-hardware/images/image8.png" width="574" height="700" alt="Figure 12. Example of manual annotation of multicolor fluorescence reaction tube images." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="96">Figure 12. Example of manual annotation of multicolor fluorescence reaction tube images.</figcaption>
+</figure>
+<h4 id="hardware-model-section-97" data-toc-level="3" data-hardware-model-source="97">Training Performance</h4>
+<p data-hardware-model-source="98">Across the five recorded points shown in Figure 13, the training and validation losses generally decreased, precision approached 1.00, recall reached 1.00, mAP50(B) was approximately 0.995, and mAP50-95(B) showed an increasing trend.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-13" data-hardware-model-source="99">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:931.0px;--figure-ratio:931.0/467.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image9.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 13">
+<img src="../assets/model-hardware/images/image9.png" width="931" height="467" alt="Figure 13. Changes in training and validation metrics of the multicolor fluorescence detection model." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="100">Figure 13. Changes in training and validation metrics of the multicolor fluorescence detection model.</figcaption>
+</figure>
+<p data-hardware-model-source="101">Panels A–C show the bounding box loss, classification loss, and distribution focal loss (DFL) during training, respectively; panels D and E show precision and recall, respectively; panels F–H show the corresponding validation losses; and panels I and J show mAP50(B) and mAP50-95(B), respectively.</p>
+<h3 id="hardware-model-section-102" data-toc-level="2" data-hardware-model-source="102">Model Output and Detection Evaluation</h3>
+<p data-hardware-model-source="103">The model outputs bounding boxes, class labels, and detection confidence scores for the reaction regions. The bounding boxes are used to extract regions of interest (ROIs), the class labels correspond to the fluorescence types defined in the experimental configuration, and the confidence scores are used to filter predicted detections.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-14" data-hardware-model-source="104">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:768.0px;--figure-ratio:768.0/590.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image10.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 14">
+<img src="../assets/model-hardware/images/image10.png" width="768" height="590" alt="Figure 14. Example of automatic model annotation of multicolor fluorescence reaction tube images." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="105">Figure 14. Example of automatic model annotation of multicolor fluorescence reaction tube images.</figcaption>
+</figure>
+<p data-hardware-model-source="106">tube_green 0.95 indicates that the region was predicted to belong to the green fluorescence class, with a detection confidence score of 0.95. The confidence score does not represent the probability that the sample is positive. Final interpretation should take into account the reaction system, control results, and predefined decision criteria.</p>
+<h4 id="hardware-model-section-107" data-toc-level="3" data-hardware-model-source="107">Validation and Blind Testing</h4>
+<p data-hardware-model-source="108">Figures 15 and 16 show representative detection examples from the validation set and blind test dataset, respectively. Each composite figure contains 15 groups of images, with five reaction tubes per group. The predicted class labels and confidence scores are annotated for each reaction region.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-15" data-hardware-model-source="109">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:813.0px;--figure-ratio:813.0/857.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image11.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 15">
+<img src="../assets/model-hardware/images/image11.png" width="813" height="857" alt="Figure 15. Examples of multicolor fluorescence reaction tube detection in the validation set." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="110">Figure 15. Examples of multicolor fluorescence reaction tube detection in the validation set.</figcaption>
+</figure>
+<figure class="model-hardware-figure" id="hardware-model-figure-16" data-hardware-model-source="111">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:677.0px;--figure-ratio:677.0/701.0;--image-width:100.00000000%;--image-height:100.00000000%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image12.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 16">
+<img src="../assets/model-hardware/images/image12.png" width="677" height="701" alt="Figure 16. Examples of multicolor fluorescence reaction tube detection in the blind test dataset." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="112">Figure 16. Examples of multicolor fluorescence reaction tube detection in the blind test dataset.</figcaption>
+</figure>
+<h4 id="hardware-model-section-113" data-toc-level="3" data-hardware-model-source="113">Confusion Matrix and Evaluation Curves</h4>
+<p data-hardware-model-source="114">In Figure 17, the diagonal counts of the confusion matrix are 165 for each of the tg, tr, and tb classes, and 330 for the tn class. After normalization, the diagonal values for all four classes are 1.00. The abbreviation bg denotes the background class.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-17" data-hardware-model-source="115">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:473.64156px;--figure-ratio:473.64156/235.668;--image-width:159.61437168%;--image-height:203.25203252%;--image-left:-0.00000000%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image13.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 17">
+<img src="../assets/model-hardware/images/image13.png" width="756" height="479" alt="Figure 17. Raw and normalized confusion matrices for multicolor fluorescence reaction tube detection." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="116">Figure 17. Raw and normalized confusion matrices for multicolor fluorescence reaction tube detection.</figcaption>
+</figure>
+<p data-hardware-model-source="117">The confusion matrices are based on detection counts and do not represent the number of independent reaction tubes.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-18" data-hardware-model-source="118">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:467.82791999999995px;--figure-ratio:467.82791999999995/236.77928;--image-width:161.59787984%;--image-height:202.29810649%;--image-left:-0.00000000%;--image-top:-102.29810649%;" href="../assets/model-hardware/images/image13.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 18">
+<img src="../assets/model-hardware/images/image13.png" width="756" height="479" alt="Figure 18. Relationships between F1 score, recall, and confidence threshold." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="119">Figure 18. Relationships between F1 score, recall, and confidence threshold.</figcaption>
+</figure>
+<p data-hardware-model-source="120">In Figure 18, the overall F1 score across all classes reached 1.00 at a confidence threshold of 0.846, while recall was 1.00 at a confidence threshold of 0.000.</p>
+<p data-hardware-model-source="121">The above metrics reflect the image detection performance evaluated in this study. Sample-level detection performance and long-term stability require separate validation.</p>
+<h3 id="hardware-model-section-122" data-toc-level="2" data-hardware-model-source="122">Multi-Tube Result Recording and Visualization</h3>
+<p data-hardware-model-source="123">Images are acquired sequentially from the three observation faces. The program locates each reaction tube, identifies its fluorescence class, and analyzes the fluorescence signal. It records the detection task, observation face, tube position, and actual acquisition time to organize fluorescence data and generate fluorescence signal curves. The images and analysis results are transmitted to a mobile device, allowing users to view the results by detection task and tube position.</p>
+<h4 id="hardware-model-section-124" data-toc-level="3" data-hardware-model-source="124">Scope of Application and Future Extensions</h4>
+<p data-hardware-model-source="125">Cases involving localization failure, overexposure, occlusion, abnormal control results, or insufficient signal should be flagged as abnormal and retested when necessary. Future work will incorporate fluorescence signal configurations and validation data for BP and HI, and evaluate result consistency across batches, observation faces, and tube positions.</p>
+<h3 id="hardware-model-section-126" data-toc-level="2" data-hardware-model-source="126">ByeGerm 2.0 Supplementary Data</h3>
+<p data-hardware-model-source="127">The left panel of Figure 19 shows the distributions and relationships of the annotated bounding box center coordinates, widths, and heights. The right panel presents the number of instances per class, the distribution of bounding box center positions, and the relationships between bounding box dimensions. The negative class (tn) has a higher number of instances than the tg, tr, and tb classes.</p>
+<figure class="model-hardware-figure" id="hardware-model-figure-19" data-hardware-model-source="128">
+<div class="model-hardware-figure__images">
+<a class="model-hardware-figure__frame" style="--figure-native-width:280.05264px;--figure-ratio:280.05264/234.19268000000002;--image-width:269.94924954%;--image-height:204.53243884%;--image-left:-169.94924954%;--image-top:-0.00000000%;" href="../assets/model-hardware/images/image13.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 19">
+<img src="../assets/model-hardware/images/image13.png" width="756" height="479" alt="Figure 19. Number of annotated instances per class and distributions of bounding box positions and dimensions." loading="lazy" decoding="async">
+</a>
+<a class="model-hardware-figure__frame" style="--figure-native-width:280.05264px;--figure-ratio:280.05264/212.50835;--image-width:269.94924954%;--image-height:225.40290770%;--image-left:-169.94924954%;--image-top:-125.40290770%;" href="../assets/model-hardware/images/image13.png" target="_blank" rel="noopener" aria-label="Open complete original image for Hardware Model Figure 19">
+<img src="../assets/model-hardware/images/image13.png" width="756" height="479" alt="Figure 19. Number of annotated instances per class and distributions of bounding box positions and dimensions." loading="lazy" decoding="async">
+</a>
+</div>
+<figcaption data-hardware-model-source="129">Figure 19. Number of annotated instances per class and distributions of bounding box positions and dimensions.</figcaption>
+</figure>
+</section>
+<section class="lab-section model-hardware-section model-hardware-references" id="hardware-model-references">
+<h2 data-toc-level="1">References</h2>
+<ol class="reference-list">
+<li id="hardware-model-reference-1">Xuheng Li, Meilin Liu, Dianhui Men, et al.. Rapid, portable, and sensitive detection of CaMV35S by RPA-CRISPR/Cas12a-G4 colorimetric assays with high accuracy deep learning object recognition and classification. Talanta. 2024;278:126441. DOI: <a href="https://doi.org/10.1016/j.talanta.2024.126441" target="_blank" rel="noopener">10.1016/j.talanta.2024.126441</a>.</li>
+<li id="hardware-model-reference-2">Qingwei Wang, Yihua Ren, Tian Meng, et al.. Cas14a1-advanced LAMP for ultrasensitive and visual Pathogen diagnostic. Talanta. 2024;269:125458. DOI: <a href="https://doi.org/10.1016/j.talanta.2023.125458" target="_blank" rel="noopener">10.1016/j.talanta.2023.125458</a>.</li>
+<li id="hardware-model-reference-3">Mengnan Fan, Jianru Yang, Xiaosu Wang, et al.. Highly specific detection of Neisseria gonorrhoeae based on recombinase polymerase amplification-initiated strand displacement amplification. Analytica Chimica Acta. 2023;1283:341956. DOI: <a href="https://doi.org/10.1016/j.aca.2023.341956" target="_blank" rel="noopener">10.1016/j.aca.2023.341956</a>.</li>
+<li id="hardware-model-reference-4">Changsoon Choi, Gil Ju Lee, Sehui Chang, et al.. Nanomaterial-Based Artificial Vision Systems: From Bioinspired Electronic Eyes to In-Sensor Processing Devices. ACS Nano. 2024;18(2):1241-1256. DOI: <a href="https://doi.org/10.1021/acsnano.3c10181" target="_blank" rel="noopener">10.1021/acsnano.3c10181</a>.</li>
+<li id="hardware-model-reference-5">Adeeb Ibne Alam, Md Hafizur Rahman, Akhter Zia, et al.. In-situ particle analysis with heterogeneous background: a machine learning approach. Scientific Reports. 2024;14(1):10609. DOI: <a href="https://doi.org/10.1038/s41598-024-59558-7" target="_blank" rel="noopener">10.1038/s41598-024-59558-7</a>.</li>
+</ol>
+</section>
+</article>
+</div>
+</section>
 </main>
 
 <footer class="site-footer">
@@ -352,6 +861,7 @@ X_num(c) =
 <script type="module" src="../样式/main.js"></script>
 <script type="module" src="../样式/wetlab-pages.js"></script>
 <script type="module" src="../样式/model-revision.js"></script>
+<script type="module" src="../样式/model-modules.js"></script>
 <script data-loading-fallback>
 window.setTimeout(function () {
   var loader = document.getElementById('igem-loader');
