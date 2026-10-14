@@ -277,7 +277,9 @@
   ],
   "editorial_changes": [
     "Corrected compatibility cross-reference to the existing 6.1 section.",
+    "Restored the second-generation connection/loading/run/result overview with user confirmation; existing manual link retained.",
     "Renumbered pathogen results 6.3 to 6.2; no missing section fabricated.",
+    "Restored all four reproduction-documentation points with user confirmation; supplied guide links retained without claiming source-design files have been released.",
     "Removed verbatim duplicated ByeGerm 2.0 budget clause; no comparison value changed.",
     "Duplicate source cost table labels renumbered 1..5.",
     "Supplied manuals and reproduction guides replace stale future-tense availability text."

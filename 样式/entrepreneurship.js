@@ -1,4 +1,3 @@
-const content = document.querySelector('#entrepreneurship-content')
 const toc = document.querySelector('.hp-toc')
 const tocLinks = Array.from(document.querySelectorAll('.toc-link'))
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -94,31 +93,6 @@ function setupToc() {
   })
 }
 
-function setupReadingProgress() {
-  if (!content) return
-  let ticking = false
-  const update = () => {
-    const rect = content.getBoundingClientRect()
-    const start = window.scrollY + rect.top - window.innerHeight * 0.18
-    const distance = Math.max(content.offsetHeight - window.innerHeight * 0.64, 1)
-    const progress = Math.min(1, Math.max(0, (window.scrollY - start) / distance))
-    content.style.setProperty('--reading-progress', `${(progress * 100).toFixed(2)}%`)
-    toc?.style.setProperty('--toc-progress', `${(progress * 100).toFixed(2)}%`)
-    ticking = false
-  }
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (ticking) return
-      ticking = true
-      requestAnimationFrame(update)
-    },
-    { passive: true },
-  )
-  window.addEventListener('resize', update, { passive: true })
-  update()
-}
-
 function setupReveal() {
   const items = document.querySelectorAll('.doc-figure, .hp-h1')
   if (reducedMotion.matches || !('IntersectionObserver' in window)) {
@@ -195,8 +169,37 @@ function setupFigureLightbox() {
   })
 }
 
+function setupSwotCards() {
+  document.querySelectorAll('.swot-flip-card').forEach((card) => {
+    const front = card.querySelector('.swot-flip-card__front')
+    const back = card.querySelector('.swot-flip-card__back')
+    const returnButton = card.querySelector('.swot-flip-card__return')
+    if (!front || !back || !returnButton) return
+
+    card.classList.add('is-enhanced')
+    back.inert = true
+
+    const setFlipped = (flipped) => {
+      card.classList.toggle('is-flipped', flipped)
+      front.setAttribute('aria-expanded', String(flipped))
+      front.inert = flipped
+      back.inert = !flipped
+      const focusTarget = flipped ? returnButton : front
+      focusTarget.focus({ preventScroll: true })
+    }
+    front.addEventListener('click', () => setFlipped(true))
+    returnButton.addEventListener('click', () => setFlipped(false))
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && card.classList.contains('is-flipped')) {
+        event.preventDefault()
+        setFlipped(false)
+      }
+    })
+  })
+}
+
 enhanceCollapsibleSections()
+setupSwotCards()
 setupToc()
-setupReadingProgress()
 setupReveal()
 setupFigureLightbox()

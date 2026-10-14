@@ -1,0 +1,118 @@
+{
+  "responsive": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": 0,
+      "figureCount": 24,
+      "broken": 0,
+      "photos": [
+        {
+          "width": 5953,
+          "height": 6330
+        },
+        {
+          "width": 5953,
+          "height": 2720
+        }
+      ],
+      "overview": true,
+      "reproduction": true,
+      "maxFigureHeight": 360
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": 0,
+      "figureCount": 24,
+      "broken": 0,
+      "photos": [
+        {
+          "width": 5953,
+          "height": 6330
+        },
+        {
+          "width": 5953,
+          "height": 2720
+        }
+      ],
+      "overview": true,
+      "reproduction": true,
+      "maxFigureHeight": 302.390625
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": 0,
+      "figureCount": 24,
+      "broken": 0,
+      "photos": [
+        {
+          "width": 5953,
+          "height": 6330
+        },
+        {
+          "width": 5953,
+          "height": 2720
+        }
+      ],
+      "overview": true,
+      "reproduction": true,
+      "maxFigureHeight": 354.46875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "overflow": 0,
+      "figureCount": 24,
+      "broken": 0,
+      "photos": [
+        {
+          "width": 5953,
+          "height": 6330
+        },
+        {
+          "width": 5953,
+          "height": 2720
+        }
+      ],
+      "overview": true,
+      "reproduction": true,
+      "maxFigureHeight": 238.546875
+    }
+  ],
+  "assets": [
+    {
+      "target": "assets/hardware/images/fluorescence-interface-high-resolution.jpg",
+      "HTTP": 200,
+      "originalOpenLink": true,
+      "sha256Matches": true
+    },
+    {
+      "target": "assets/hardware/images/imaging-distances-high-resolution.jpg",
+      "HTTP": 200,
+      "originalOpenLink": true,
+      "sha256Matches": true
+    },
+    {
+      "target": "assets/hardware/images/workflow-1-clean.svg",
+      "HTTP": 200,
+      "originalOpenLink": true,
+      "sha256Matches": true
+    },
+    {
+      "target": "assets/hardware/images/workflow-2-clean.svg",
+      "HTTP": 200,
+      "originalOpenLink": true,
+      "sha256Matches": true
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "model": {
+    "equationGroups": 36,
+    "scrollbarsHidden": true,
+    "keyboardScrollStillWorks": true,
+    "mathCount": 71
+  }
+}

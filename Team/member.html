@@ -59,74 +59,59 @@
   </nav>
 
   <main class="team-page" id="main-content">
-    <section class="team-hero" aria-labelledby="team-page-title">
-      <p class="team-eyebrow">JLU-SPH · iGEM 2026</p>
-      <h1 id="team-page-title">OUR TEAM</h1>
-      <p class="team-hero__lead">Meet the people behind our project.</p>
-      <p class="team-hero__note">43 people · one shared journey</p>
-    </section>
-
-    <div class="team-layout">
-    <nav class="team-jumps" aria-label="Team page sections">
-      <a href="#pi-title">PI</a>
-      <a href="#secondary-pi-title">Secondary PI</a>
-      <a href="#leaders-title">Team Leaders</a>
-      <a href="#team-directory">Members</a>
-      <a href="#advisors-title">Advisors</a>
-    </nav>
-
-    <div class="team-content">
-    <section class="team-section" aria-labelledby="pi-title">
-      <header class="team-section__heading">
-        <div><p class="team-eyebrow">Scientific guidance</p><h2 id="pi-title">PI</h2></div>
-        <p>The principal investigators supporting our journey.</p>
+    <div class="team-hero-runway">
+      <header class="team-hero" aria-labelledby="team-page-title">
+        <img class="team-group-backdrop" src="../assets/team-member/cover/group-960.webp" alt="" aria-hidden="true" width="960" height="640">
+        <img class="team-group-photo" src="../assets/team-member/cover/group-1920.webp" srcset="../assets/team-member/cover/group-960.webp 960w, ../assets/team-member/cover/group-1920.webp 1920w, ../assets/team-member/cover/group-2880.webp 2880w" sizes="100vw" alt="JLU-SPH team group photograph" width="6000" height="4000" fetchpriority="high">
+        <div class="team-hero-shade" aria-hidden="true"></div>
+        <div class="team-hero-title"><p>JLU-SPH · iGEM 2026</p><h1 id="team-page-title">OUR TEAM</h1></div>
+        <a class="team-scroll-cue" href="#team-directory"><span>SCROLL TO EXPLORE</span><i aria-hidden="true"></i></a>
       </header>
-      <div class="faculty-grid" id="pi-grid"></div>
-    </section>
+    </div>
 
-    <section class="team-section" aria-labelledby="secondary-pi-title">
-      <header class="team-section__heading">
-        <div><p class="team-eyebrow">Shared expertise</p><h2 id="secondary-pi-title">Secondary PI</h2></div>
-        <p>Supporting our work across disciplines.</p>
-      </header>
-      <div class="faculty-grid" id="secondary-pi-grid"></div>
-    </section>
-
-    <section class="team-section team-leaders" aria-labelledby="leaders-title">
-      <header class="team-section__heading">
-        <div><p class="team-eyebrow">Leading the journey</p><h2 id="leaders-title">Team Leaders</h2></div>
-        <p>Guiding our research, collaboration, and shared direction.</p>
-      </header>
-      <div class="leader-grid" id="leader-grid"></div>
-    </section>
-
-    <section class="team-directory" id="team-directory" aria-labelledby="directory-title">
-      <header class="team-section__heading">
-        <div><p class="team-eyebrow">One project, many disciplines</p><h2 id="directory-title">Members</h2></div>
-        <p>Choose a group. Flip a card to read the story and contributions behind it.</p>
-      </header>
-      <div class="team-filters" role="toolbar" aria-label="Filter team members">
+    <section class="team-section team-directory" id="team-directory" aria-labelledby="directory-title">
+      <header class="team-section-heading"><h2 id="directory-title">Members</h2></header>
+      <div class="team-filters" role="group" aria-label="Filter team members">
         <button class="team-filter" type="button" data-filter="All" aria-pressed="true">All</button>
         <button class="team-filter" type="button" data-filter="Wet Lab" aria-pressed="false">Wet Lab</button>
         <button class="team-filter" type="button" data-filter="Dry Lab" aria-pressed="false">Dry Lab</button>
         <button class="team-filter" type="button" data-filter="Human Practices" aria-pressed="false">Human Practices</button>
         <button class="team-filter" type="button" data-filter="Hardware &amp; Wiki" aria-pressed="false">Hardware &amp; Wiki</button>
         <button class="team-filter" type="button" data-filter="Visual Design" aria-pressed="false">Visual Design</button>
-        <button class="team-filter" type="button" data-filter="Advisors" aria-pressed="false">Advisors</button>
       </div>
-      <p class="team-results" id="team-results" role="status" aria-live="polite"></p>
-      <div class="member-grid" id="member-grid"></div>
+      <p class="team-results" id="team-results" role="status" aria-live="polite">28 members · select a portrait to explore</p>
+      <div class="team-carousel" aria-label="Scrolling member portraits" aria-describedby="carousel-help"><div class="team-avatar-stage"></div></div>
+      <p class="team-carousel-help" id="carousel-help">Select a portrait to meet the person. Use the arrows to explore everyone.</p>
+      <div class="team-selection-controls">
+        <button class="team-previous" type="button" aria-label="Previous member">‹</button>
+        <span class="team-member-index" aria-live="polite">01 / 28</span>
+        <button class="team-next" type="button" aria-label="Next member">›</button>
+      </div>
+      <div class="team-deck" id="selected-member">
+        <article class="team-profile" aria-labelledby="selected-member-name">
+          <button class="team-profile-return" type="button">↶ Back to portraits</button>
+          <div class="team-profile-layout">
+            <div class="team-profile-identity"><span class="member-photo team-profile-photo"></span><h3 id="selected-member-name"></h3></div>
+            <div class="team-profile-copy"></div>
+          </div>
+          <div class="team-contribution-host"></div>
+        </article>
+      </div>
+      <span class="team-sr-only" id="team-selection-status" role="status" aria-live="polite"></span>
     </section>
 
-    <section class="team-section advisor-section" id="advisor-section" aria-labelledby="advisors-title">
-      <header class="team-section__heading">
-        <div><p class="team-eyebrow">Experience and guidance</p><h2 id="advisors-title">Advisors</h2></div>
-        <p>Scientific insight, careful review, and perspective.</p>
-      </header>
-      <div class="advisor-grid" id="advisor-grid"></div>
+    <section class="team-section" aria-labelledby="pi-title">
+      <header class="team-section-heading"><h2 id="pi-title">Principal Investigators</h2></header>
+      <div class="team-people-grid" id="pi-grid"></div>
     </section>
-    </div>
-    </div>
+    <section class="team-section" aria-labelledby="secondary-pi-title">
+      <header class="team-section-heading"><h2 id="secondary-pi-title">Secondary Principal Investigators</h2></header>
+      <div class="team-people-grid" id="secondary-pi-grid"></div>
+    </section>
+    <section class="team-section team-advisors" aria-labelledby="advisors-title">
+      <header class="team-section-heading"><h2 id="advisors-title">Advisors</h2></header>
+      <div class="team-people-grid" id="advisor-grid"></div>
+    </section>
   </main>
 
   <footer class="site-footer">

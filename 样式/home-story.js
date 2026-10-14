@@ -6,13 +6,33 @@ if (story) {
   const worldScene = story.querySelector('.world-scene')
   const world = story.querySelector('.story-world')
   const worldIntro = story.querySelector('.world-intro')
-  const pcrMark = story.querySelector('.world-pcr-mark')
+  const pcrButton = story.querySelector('.world-pcr')
+  const pcrScene = story.querySelector('.world-pcr-scene')
+  const pcrStatus = pcrButton.querySelector('.world-pcr-status')
+  let pcrStep = 0
+  let pcrManual = false
   const campfirePeople = story.querySelector('.campfire-people')
   const campfirePeopleSource = story.querySelector('.campfire-people-source')
   const instrumentScene = story.querySelector('.instrument-scene')
   const coverKeyframes = [...story.querySelectorAll('.cover-keyframe')]
   const coverFrameReady = coverKeyframes.map(image => image.complete && image.naturalWidth > 0)
   const chapters = [...story.querySelectorAll('[data-chapter]')]
+  // Neighboring scenes meet at a shared tone, feathered over their own art.
+  // Separate decoration avoids replacing scene-specific background layers.
+  const seamTones = ['#3b3025', '#493422', '#342331', '#4c494b', '#abb0af', '#c7b7a2', '#827c63', '#6f4e37']
+  chapters.forEach((chapter, index) => {
+    const seams = document.createElement('div')
+    seams.className = 'home-scene-seams'
+    seams.setAttribute('aria-hidden', 'true')
+    seams.style.setProperty('--seam-entry', seamTones[index])
+    seams.style.setProperty('--seam-exit', seamTones[index + 1])
+    chapter.append(seams)
+  })
+  const worldSeam = document.createElement('div')
+  worldSeam.className = 'home-scene-seams home-scene-seams--exit'
+  worldSeam.setAttribute('aria-hidden', 'true')
+  worldSeam.style.setProperty('--seam-exit', seamTones[0])
+  worldScene.append(worldSeam)
   const frame = story.querySelector('.world-frame-overlay')
   const progressIndicator = story.querySelector('.home-story-progress')
   const progressOutput = progressIndicator?.querySelector('output')
@@ -70,9 +90,9 @@ if (story) {
     worldHeight = Math.max(viewportHeight, world.offsetHeight)
     worldScene.style.height = worldHeight + 'px'
     worldUnits = Math.max(3, (worldHeight - viewportHeight) / viewportHeight * 4.6)
-    // Wait until the lighthouse panel's bottom has reached the viewport.
-    // The portrait layout already contains it, but its narrative turn is later.
-    pcrRevealStart = Math.max(.42, clamp((worldHeight * 2 / 3 - viewportHeight) / Math.max(1, worldHeight - viewportHeight)))
+    // Reveal while the lighthouse sky enters, before the PCR illustration
+    // reaches the top of the screen. Waiting for the panel bottom hid the art.
+    pcrRevealStart = Math.max(.10, compactViewport.matches ? .30 : clamp((worldHeight / 3 - viewportHeight * .66) / Math.max(1, worldHeight - viewportHeight)))
     totalUnits = coverUnits + worldUnits + chapterWeights.reduce((sum, weight) => sum + weight, 0)
     story.style.height = (totalUnits + 1) * viewportHeight + 'px'
     let start = coverUnits + worldUnits
@@ -90,8 +110,9 @@ if (story) {
       element.dataset.storyHoldEnd = ((coverUnits + worldUnits * leave[0]) / totalUnits).toFixed(6)
       element.dataset.storyEnd = ((coverUnits + worldUnits * Math.min(1, leave[1])) / totalUnits).toFixed(6)
     })
-    pcrMark.dataset.storyStart = ((coverUnits + worldUnits * pcrRevealStart) / totalUnits).toFixed(6)
-    pcrMark.dataset.storyFull = ((coverUnits + worldUnits * (pcrRevealStart + .09)) / totalUnits).toFixed(6)
+    pcrButton.dataset.storyStart = ((coverUnits + worldUnits * pcrRevealStart) / totalUnits).toFixed(6)
+    pcrButton.dataset.storyFull = ((coverUnits + worldUnits * (pcrRevealStart + .09)) / totalUnits).toFixed(6)
+    pcrButton.dataset.storySample = ((coverUnits + worldUnits * (compactViewport.matches ? .50 : clamp((worldHeight / 3 - viewportHeight * .18) / Math.max(1, worldHeight - viewportHeight)))) / totalUnits).toFixed(6)
     const worldLeft = (viewportWidth - world.offsetWidth) / 2
     campfirePeople.style.setProperty('--campfire-x', worldLeft + world.offsetWidth * .780317 + 'px')
     campfirePeople.style.setProperty('--campfire-y', world.offsetWidth * (1080 / 1935) * .958 + 'px')
@@ -139,7 +160,16 @@ if (story) {
       element.setAttribute('aria-hidden', String(!visible || resolved <= .01))
     })
     const pcrReveal = smoothstep(range(progress, pcrRevealStart, pcrRevealStart + .09))
-    pcrMark.style.setProperty('--pcr-mark-opacity', String(reducedMotion.matches ? Number(pcrReveal > .05) : pcrReveal))
+    const pcrOpacity = noteEntrance * pcrReveal * worldExit * (1 - smoothstep(range(progress, .62, .70)))
+    pcrButton.style.setProperty('--pcr-mark-opacity', String(reducedMotion.matches ? Number(pcrOpacity > .05) : pcrOpacity))
+    pcrScene.style.setProperty('--pcr-mark-opacity', String(reducedMotion.matches ? Number(pcrOpacity > .05) : pcrOpacity))
+    pcrButton.style.setProperty('--pcr-mark-scale', String(reducedMotion.matches ? 1 : .90 + pcrReveal * .10))
+    pcrButton.disabled = !visible || pcrOpacity < .1
+    pcrButton.setAttribute('aria-hidden', String(pcrButton.disabled))
+    if (!pcrManual) {
+      const step = Math.min(3, Math.floor(range(progress, pcrRevealStart + .09, pcrRevealStart + .30) * 4))
+      setPcrStep(step, false)
+    }
     frame.classList.toggle('is-visible', visible)
     frame.classList.toggle('is-clock-live', visible && !reducedMotion.matches)
     frame.style.opacity = String(visible ? 1 - range(ribbonY, worldHeight - viewportHeight, worldHeight) : 0)
@@ -508,6 +538,19 @@ if (story) {
       button.setAttribute('aria-pressed', String(worldActions.has(action)))
       requestUpdate()
     })
+  })
+
+  function setPcrStep(step, announce) {
+    pcrStep = step
+    pcrButton.dataset.pcrStep = String(step)
+    const descriptions = ['Click to explore amplification', 'DNA strands separate', 'Primers bind to the target', 'DNA is copied · 1 copy → 2 copies']
+    pcrButton.setAttribute('aria-label', 'PCR: ' + descriptions[step] + '. Click for the next step.')
+    if (announce) pcrStatus.textContent = descriptions[step]
+  }
+
+  pcrButton.addEventListener('click', () => {
+    pcrManual = true
+    setPcrStep((pcrStep + 1) % 4, true)
   })
 
   function finishCardTurn(card) {

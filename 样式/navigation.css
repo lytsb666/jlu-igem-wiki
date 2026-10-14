@@ -9,13 +9,13 @@
 .navbar {
   --navigation-text-color: #FFFFFF;
   --navigation-brown-rgb: 111, 78, 55;
-  --navigation-primary-size: 1rem;
-  --navigation-secondary-size: 0.875rem;
+  --navigation-primary-size: calc(1rem + 2px);
+  --navigation-secondary-size: calc(0.875rem + 2px);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 68px;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -233,7 +233,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    --navigation-primary-size: 0.9375rem;
+    --navigation-primary-size: calc(0.9375rem + 2px);
     justify-content: flex-start;
     overflow: visible;
   }

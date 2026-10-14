@@ -41,16 +41,14 @@ const navigationSchema = [
   },
   {
     label: 'Team',
-    items: [
-      ['Member', '../Team/member.html'],
-    ],
+    href: '../Team/member.html',
   },
   {
     label: 'Judging',
     items: [
       ['iHP', '../Eagagement/iHP.html?nav=judging'],
+      ['Measurement', '../Wet-lab/measurement.html?nav=judging'],
       ['Hardware', '../Instrument/hardware.html?nav=judging'],
-      ['Measurement', '../Wet-lab/measurement.html'],
     ],
   },
 ]
@@ -60,7 +58,8 @@ if (navbar) {
   if (navLinks) {
     navLinks.innerHTML = `
       <div class="dropdown nav-home"><a href="../homepage/index.html" class="nav-link">Home</a></div>
-      ${navigationSchema.map(({ label, items }) => {
+      ${navigationSchema.map(({ label, items, href }) => {
+        if (href) return `<div class="dropdown nav-direct" data-navigation-section="${label.toLowerCase()}"><a href="${href}" class="nav-link">${label}</a></div>`
         const menuId = `navigation-menu-${label.toLowerCase()}`
         return `
         <div class="dropdown" data-navigation-section="${label.toLowerCase()}">
@@ -180,7 +179,7 @@ const sectionLabels = {
   judging: 'judging',
 }
 // Carry shared pages' menu context through refresh, history and new tabs.
-const activeSection = ['/eagagement/ihp', '/instrument/hardware'].some(path => currentPath.endsWith(path))
+const activeSection = ['/eagagement/ihp', '/instrument/hardware', '/wet-lab/measurement'].some(path => currentPath.endsWith(path))
   && new URLSearchParams(window.location.search).get('nav') === 'judging'
   ? 'judging'
   : sectionLabels[currentSection]

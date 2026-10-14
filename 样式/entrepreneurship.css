@@ -837,45 +837,11 @@ body.entrepreneurship-page {
   transform: translateX(4px);
 }
 
-.hp-toc__progress {
-  position: absolute;
-  top: 22px;
-  left: -2px;
-  width: 3px;
-  height: calc(100% - 44px);
-  overflow: hidden;
-  background: rgba(111, 78, 55, 0.1);
-}
-
-.hp-toc__progress i {
-  display: block;
-  width: 100%;
-  height: var(--toc-progress, 0%);
-  background: var(--entre-copper);
-}
-
 .hp-content {
   position: relative;
   min-width: 0;
   width: 100%;
   padding: 42px 0 0;
-}
-
-.reading-progress {
-  position: sticky;
-  top: 72px;
-  z-index: 30;
-  height: 3px;
-  margin: -42px 0 42px;
-  overflow: hidden;
-  background: rgba(111, 78, 55, 0.1);
-}
-
-.reading-progress span {
-  display: block;
-  width: var(--reading-progress, 0%);
-  height: 100%;
-  background: linear-gradient(90deg, var(--entre-copper-dark), #C27B45);
 }
 
 .hp-h1,
@@ -1407,9 +1373,6 @@ body.entrepreneurship-page {
     padding-inline: 0;
   }
 
-  .reading-progress {
-    margin-inline: 0;
-  }
 }
 
 @media (max-width: 760px) {
@@ -1517,11 +1480,6 @@ body.entrepreneurship-page {
     padding: 20px 0 80px;
   }
 
-  .reading-progress {
-    top: 62px;
-    margin: -20px 0 30px;
-  }
-
   .hp-h1 {
     margin-top: 72px;
     font-size: clamp(2.35rem, 12vw, 3.9rem);
@@ -1604,4 +1562,408 @@ body.entrepreneurship-page {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Entrepreneurship revision: evidence overview and a single white article surface. */
+body.entrepreneurship-page .hp-content {
+  padding: clamp(24px, 3vw, 42px);
+  border: 1px solid rgba(111, 78, 55, 0.16);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 16px 46px rgba(111, 78, 55, 0.08);
+}
+
+body.entrepreneurship-page .entre-evidence-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  padding: clamp(24px, 3vw, 42px);
+  align-items: stretch;
+  border: 1px solid rgba(111, 78, 55, 0.16);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 16px 46px rgba(111, 78, 55, 0.08);
+}
+
+.entre-evidence-overview__heading > p:first-child {
+  margin: 0 0 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.entre-evidence-overview__heading > p:last-child {
+  margin: 0;
+}
+
+.entre-evidence-overview__group > h3 {
+  margin: 0 0 16px;
+}
+
+.entre-evidence-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.entre-metric {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #dbe6eb;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.entre-metric--lab {
+  background: #eef5f8;
+}
+
+.entre-metric > strong,
+.entre-metric > span {
+  display: block;
+}
+
+.entre-metric > strong {
+  margin-bottom: 7px;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.15;
+}
+
+.entre-metric > span {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.entre-metric > p {
+  margin: 0;
+}
+
+.entre-evidence-overview__commercial {
+  --wiki-ink: #fff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  color: #fff;
+  background: #0d3b53;
+}
+
+.entre-evidence-overview__commercial > p {
+  margin: 7px 0 0;
+}
+
+/* Keep the inherited brown table headers readable under the shared ink rule. */
+body.entrepreneurship-page .hp-table thead {
+  --wiki-ink: #fff;
+}
+
+body.entrepreneurship-page .swot-module {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.swot-module__instruction {
+  margin: -8px 0 22px;
+}
+
+.swot-flip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.swot-flip-card {
+  --swot-color: #009d96;
+  --swot-dark: #004c51;
+  --swot-tint: #e7f8f6;
+  min-width: 0;
+  perspective: 1400px;
+}
+
+.swot-flip-card--weaknesses {
+  --swot-color: #086be8;
+  --swot-dark: #101c65;
+  --swot-tint: #edf4ff;
+}
+
+.swot-flip-card--opportunities {
+  --swot-color: #7830de;
+  --swot-dark: #29115f;
+  --swot-tint: #f4edff;
+}
+
+.swot-flip-card--threats {
+  --swot-color: #e5267e;
+  --swot-dark: #781442;
+  --swot-tint: #fff0f6;
+}
+
+.swot-flip-card__inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 520ms cubic-bezier(.2,.7,.2,1);
+}
+
+.swot-flip-card.is-enhanced .swot-flip-card__inner {
+  height: 480px;
+}
+
+.swot-flip-card.is-flipped .swot-flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+.swot-flip-card__front {
+  display: none;
+}
+
+.swot-flip-card.is-enhanced .swot-flip-card__front,
+.swot-flip-card.is-enhanced .swot-flip-card__back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.swot-flip-card.is-enhanced .swot-flip-card__front {
+  --wiki-ink: #fff;
+  isolation: isolate;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 22px;
+  color: #fff;
+  background: radial-gradient(circle at 80% 35%, rgba(255,255,255,.26), transparent 50%), linear-gradient(150deg, var(--swot-color), var(--swot-dark));
+  box-shadow: 0 14px 28px color-mix(in srgb, var(--swot-dark) 24%, transparent);
+  cursor: pointer;
+  text-align: left;
+}
+
+.swot-flip-card__front::before {
+  position: absolute;
+  z-index: -1;
+  inset: auto 0 0;
+  height: 72%;
+  content: "";
+  background: rgba(1, 12, 41, .45);
+  mask: url('../a  图片/entrepreneurship/swot-skyline.svg') center bottom / 100% 100% no-repeat;
+}
+
+.swot-flip-card__front::after {
+  position: absolute;
+  z-index: -1;
+  right: -14%;
+  bottom: -28%;
+  width: 145%;
+  height: 48%;
+  content: "";
+  border: 2px solid rgba(255,255,255,.38);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(255,255,255,.05), 0 0 0 40px rgba(255,255,255,.04);
+  transform: rotate(-22deg);
+}
+
+.swot-flip-card__letter {
+  padding: 5px 12px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.swot-flip-card__title {
+  margin-top: 16px;
+  font-size: clamp(27px, 3vw, 38px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.swot-flip-card__art {
+  position: absolute;
+  right: 18px;
+  bottom: 55px;
+  left: 18px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.swot-flip-card__mascot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,.22));
+}
+
+/* The existing lens mascot has a large transparent canvas; frame it in CSS. */
+.swot-flip-card__mascot--opportunities {
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 680px;
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.swot-flip-card__hint {
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,.36);
+  font-weight: 700;
+}
+
+.swot-flip-card__hint > span {
+  font-size: 23px;
+}
+
+.swot-flip-card__back {
+  display: grid;
+  padding: 22px;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 18px;
+  border: 1px solid var(--swot-color);
+  border-top: 5px solid var(--swot-color);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff 75%, var(--swot-tint));
+}
+
+.swot-flip-card.is-enhanced .swot-flip-card__back {
+  transform: rotateY(180deg);
+}
+
+.swot-flip-card__back-heading {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.swot-flip-card__back-heading > h5 {
+  margin: 0;
+}
+
+.swot-flip-card__return {
+  display: none;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--swot-color);
+  border-radius: 50%;
+  color: var(--wiki-ink);
+  background: var(--swot-tint);
+  cursor: pointer;
+  font-size: 24px !important;
+}
+
+.swot-flip-card.is-enhanced .swot-flip-card__return {
+  display: block;
+}
+
+.swot-flip-card__body {
+  min-height: 0;
+}
+
+.swot-flip-card.is-enhanced .swot-flip-card__body {
+  padding-right: 10px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--swot-color) var(--swot-tint);
+}
+
+.swot-flip-card__body > p {
+  margin: 0 0 18px;
+}
+
+.swot-flip-card__body > p:last-child {
+  margin-bottom: 0;
+}
+
+.swot-flip-card :is(button, [tabindex]):focus-visible {
+  outline: 3px solid var(--swot-color);
+  outline-offset: 4px;
+}
+
+.swot-flip-card__front:focus-visible {
+  outline-color: var(--swot-dark) !important;
+}
+
+.five-rings-table__row--1 { --ring-tint: #e5f3ee; --ring-color: #79afa0; }
+.five-rings-table__row--2 { --ring-tint: #e6f0fb; --ring-color: #7eabda; }
+.five-rings-table__row--3 { --ring-tint: #efebfa; --ring-color: #9b8bc7; }
+.five-rings-table__row--4 { --ring-tint: #faecdb; --ring-color: #d4aa76; }
+.five-rings-table__row--5 { --ring-tint: #f9e8e3; --ring-color: #d29b8c; }
+body.entrepreneurship-page .five-rings-table .hp-table tbody tr {
+  background: var(--ring-tint);
+}
+.five-rings-table .hp-table tbody td:first-child {
+  border-left: 4px solid var(--ring-color);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .entre-evidence-overview__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .swot-flip-grid { gap: 16px; }
+}
+
+@media (max-width: 680px) {
+  body.entrepreneurship-page .hp-content,
+  body.entrepreneurship-page .entre-evidence-overview {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+  .swot-flip-grid { grid-template-columns: minmax(0, 1fr); }
+  .swot-flip-card.is-enhanced .swot-flip-card__inner { height: 440px; }
+  .swot-flip-card.is-enhanced .swot-flip-card__front { padding: 24px; }
+  .swot-flip-card__art { height: 230px; }
+  .swot-flip-card__back { padding: 18px; }
+  .swot-flip-card__title { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  .entre-evidence-overview__grid { grid-template-columns: minmax(0, 1fr); }
+  .entre-metric { padding: 18px; }
+  .entre-evidence-overview__commercial { padding: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swot-flip-card__inner { transition: none; }
+}
+
+@media print {
+  .swot-flip-grid { display: block; }
+  .swot-flip-card { margin-bottom: 24px; break-inside: avoid; }
+  .swot-flip-card.is-enhanced .swot-flip-card__inner { height: auto; transform: none; }
+  .swot-flip-card.is-enhanced .swot-flip-card__front { display: none; }
+  .swot-flip-card.is-enhanced .swot-flip-card__back { position: static; transform: none; }
+  .swot-flip-card.is-enhanced .swot-flip-card__body { overflow: visible; }
+  .swot-flip-card.is-enhanced .swot-flip-card__return { display: none; }
+}
+
+/* Large front-face labels are decorative card content, outside the prose scale. */
+@layer wiki-typography {
+  body.entrepreneurship-page .swot-flip-card__front .swot-flip-card__title {
+    font-size: clamp(26px, 3vw, 36px) !important;
+  }
+}
+
+body.entrepreneurship-page .entre-evidence-overview .entre-metric > p,
+body.entrepreneurship-page .swot-flip-card__back .swot-flip-card__body > p {
+  text-align: left !important;
+}
+
+.entre-metric > span { color: var(--wiki-ink, #6f4e37); }
+.swot-flip-card__mascot--opportunities { width: 600px; }
+@media (max-width: 680px) {
+  .swot-flip-card__mascot--opportunities { width: 540px; }
 }

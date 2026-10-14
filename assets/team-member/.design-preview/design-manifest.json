@@ -1,0 +1,237 @@
+{
+  "kind": "Design only; no production Member or member-data edits",
+  "date": "2026-10-13",
+  "branch": "codex/02-team",
+  "baseline": "cc7e9491b7468f3c3673135af3f3801b4c7bba72",
+  "groupPhoto": {
+    "source": "C:\\Users\\UserTech\\Documents\\Tencent Files\\1043105282\\nt_qq\\nt_data\\Pic\\2026-10\\Ori\\d7bb2edbb14a664e944ec63a92d55710.jpg",
+    "sha256": "c48690824c6f071295f8cb015ea1fa29886c16e76b12a244e335c36ff6a21e88"
+  },
+  "leaderList": {
+    "source": "D:\\WeChathis\\xwechat_files\\wxid_te2sfwdnpar522_2c28\\temp\\RWTemp\\2026-10\\b101f6cb78252293104820af9d06fdc5\\dbbeea7bbbcc2d92fa836950ab2f7375.png",
+    "sha256": "7ec6a66cfdba289c4531f0735fceaef52ef5eb6aaac99b500c9c558cce1087fd"
+  },
+  "firstNine": [
+    {
+      "id": "mo-jin",
+      "name": "Mo Jin",
+      "displayRoleInPreview": "Team Leader",
+      "originalRoleUnchanged": "Hardware & Wiki",
+      "originalGroupsUnchanged": [
+        "Hardware & Wiki"
+      ]
+    },
+    {
+      "id": "jingyi-kang",
+      "name": "Jingyi Kang",
+      "displayRoleInPreview": "Team Leader",
+      "originalRoleUnchanged": "Team Leader",
+      "originalGroupsUnchanged": [
+        "Team Leaders"
+      ]
+    },
+    {
+      "id": "zhiyuan-jin",
+      "name": "Zhiyuan Jin",
+      "displayRoleInPreview": "Wet Lab Leader",
+      "originalRoleUnchanged": "Wet Lab",
+      "originalGroupsUnchanged": [
+        "Wet Lab"
+      ]
+    },
+    {
+      "id": "ziyan-qin",
+      "name": "Ziyan Qin",
+      "displayRoleInPreview": "Dry Lab Leader",
+      "originalRoleUnchanged": "Dry Lab",
+      "originalGroupsUnchanged": [
+        "Dry Lab"
+      ]
+    },
+    {
+      "id": "yujia-yang",
+      "name": "Yujia Yang",
+      "displayRoleInPreview": "iHP Leader",
+      "originalRoleUnchanged": "Human Practices",
+      "originalGroupsUnchanged": [
+        "Human Practices"
+      ]
+    },
+    {
+      "id": "wenxian-gao",
+      "name": "Wenxian Gao",
+      "displayRoleInPreview": "Education Leader",
+      "originalRoleUnchanged": "Human Practices",
+      "originalGroupsUnchanged": [
+        "Human Practices"
+      ]
+    },
+    {
+      "id": "tonghui-yin",
+      "name": "Tonghui Yin",
+      "displayRoleInPreview": "Hardware Leader",
+      "originalRoleUnchanged": "Human Practices · Hardware",
+      "originalGroupsUnchanged": [
+        "Human Practices",
+        "Hardware & Wiki"
+      ]
+    },
+    {
+      "id": "xiaojie-meng",
+      "name": "Xiaojie Meng",
+      "displayRoleInPreview": "Part Leader",
+      "originalRoleUnchanged": "Wet Lab",
+      "originalGroupsUnchanged": [
+        "Wet Lab"
+      ]
+    },
+    {
+      "id": "chen-xing",
+      "name": "Chen Xing",
+      "displayRoleInPreview": "Visual Design Leader",
+      "originalRoleUnchanged": "Visual Design",
+      "originalGroupsUnchanged": [
+        "Visual Design"
+      ]
+    }
+  ],
+  "membersInPreview": [
+    {
+      "id": "mo-jin",
+      "name": "Mo Jin"
+    },
+    {
+      "id": "jingyi-kang",
+      "name": "Jingyi Kang"
+    },
+    {
+      "id": "zhiyuan-jin",
+      "name": "Zhiyuan Jin"
+    },
+    {
+      "id": "ziyan-qin",
+      "name": "Ziyan Qin"
+    },
+    {
+      "id": "yujia-yang",
+      "name": "Yujia Yang"
+    },
+    {
+      "id": "wenxian-gao",
+      "name": "Wenxian Gao"
+    },
+    {
+      "id": "tonghui-yin",
+      "name": "Tonghui Yin"
+    },
+    {
+      "id": "xiaojie-meng",
+      "name": "Xiaojie Meng"
+    },
+    {
+      "id": "chen-xing",
+      "name": "Chen Xing"
+    },
+    {
+      "id": "hengqi-deng",
+      "name": "Hengqi Deng"
+    },
+    {
+      "id": "tong-li",
+      "name": "Tong Li"
+    },
+    {
+      "id": "ziyi-dong",
+      "name": "Ziyi Dong"
+    },
+    {
+      "id": "duo-zhang",
+      "name": "Duo Zhang"
+    },
+    {
+      "id": "guanbo-yin",
+      "name": "Guanbo Yin"
+    },
+    {
+      "id": "botao-zhang",
+      "name": "Botao Zhang"
+    },
+    {
+      "id": "haoyang-liu",
+      "name": "Haoyang Liu"
+    },
+    {
+      "id": "yu-xia",
+      "name": "Yu Xia"
+    },
+    {
+      "id": "ruiyao-guo",
+      "name": "Ruiyao Guo"
+    },
+    {
+      "id": "jiale-wei",
+      "name": "Jiale Wei"
+    },
+    {
+      "id": "shunyao-zhang",
+      "name": "Shunyao Zhang"
+    },
+    {
+      "id": "wensong-yao",
+      "name": "Wensong Yao"
+    },
+    {
+      "id": "yirui-lu",
+      "name": "Yirui Lu"
+    },
+    {
+      "id": "bowen-xiao",
+      "name": "Bowen Xiao"
+    },
+    {
+      "id": "liuyu-yang",
+      "name": "Liuyu Yang"
+    },
+    {
+      "id": "qianwen-luo",
+      "name": "Qianwen Luo"
+    },
+    {
+      "id": "wenqi-ai",
+      "name": "Wenqi Ai"
+    },
+    {
+      "id": "qianwen-wang",
+      "name": "Qianwen Wang"
+    },
+    {
+      "id": "jiale-zhang",
+      "name": "Jiale Zhang"
+    }
+  ],
+  "sectionOrder": [
+    "Members",
+    "PI",
+    "Secondary PI",
+    "Advisors"
+  ],
+  "uniquePeople": 43,
+  "membersIncludingLeaders": 28,
+  "faculty": 6,
+  "advisors": 9,
+  "originalSpecificTasks": 186,
+  "productionHashes": {
+    "Team\\member.html": "5fabc2b677c1cc8f54b435452323bba6659b7d290315e1d1f1707624d1c6cc29",
+    "Team\\member-data.js": "eaef68b4a7b64516fc335d1cb7b899553c46968a57333a56f6820b6285068c0f",
+    "Team\\member-data-report.md": "c8173335fc2b1c790f844b79a1c065ec530792d465cee0d55bd4aaadac2cef55",
+    "样式\\member.js": "2bc9461bf152ce006b1f138e5dcd89520011c2f39c9f82005afe93c94fec6cd4",
+    "样式\\member.css": "9a731f6e6790facf7b5458e57e16f040d56c0913ce245b87566a3778e76ad781"
+  },
+  "fragmentBytes": 882319,
+  "typography": {
+    "family": "Times New Roman",
+    "body": "12pt / 16px",
+    "sectionHeading": "22pt / 29.333px",
+    "personName": "16pt / 21.333px"
+  }
+}

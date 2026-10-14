@@ -1,0 +1,153 @@
+{
+  "baseline": "20e90de1b5304c9b0d2539146bf46d447e36970e",
+  "scientific_prose_and_all_table_values_preserved": true,
+  "mathml_tokens_preserved": 71,
+  "citation_links_and_order_preserved": 48,
+  "ids_preserved": 59,
+  "figures_and_captions_preserved": 7,
+  "table_rows": [
+    41,
+    30,
+    32,
+    15,
+    4,
+    4
+  ],
+  "abbreviation_subscripts": [
+    {
+      "source": "FG(m)",
+      "display": "FGm"
+    },
+    {
+      "source": "FG(m)R*",
+      "display": "FGmR*"
+    },
+    {
+      "source": "FG(m-1)R",
+      "display": "FGm-1R"
+    },
+    {
+      "source": "FG(m-1)R(n)",
+      "display": "FGm-1Rn"
+    },
+    {
+      "source": "FR(n)",
+      "display": "FRn"
+    },
+    {
+      "source": "FR(n)D",
+      "display": "FRnD"
+    },
+    {
+      "source": "k(1f)",
+      "display": "k1f"
+    },
+    {
+      "source": "k(1)(r)",
+      "display": "k1r"
+    },
+    {
+      "source": "k(2af)",
+      "display": "k2af"
+    },
+    {
+      "source": "k(2ar)",
+      "display": "k2ar"
+    },
+    {
+      "source": "k(2b)",
+      "display": "k2b"
+    },
+    {
+      "source": "k(2cf)",
+      "display": "k2cf"
+    },
+    {
+      "source": "k(2cr)",
+      "display": "k2cr"
+    },
+    {
+      "source": "k(2d)",
+      "display": "k2d"
+    },
+    {
+      "source": "k(3af)",
+      "display": "k3af"
+    },
+    {
+      "source": "k(3ar)",
+      "display": "k3ar"
+    },
+    {
+      "source": "k(3b)",
+      "display": "k3b"
+    },
+    {
+      "source": "k(3cf)",
+      "display": "k3cf"
+    },
+    {
+      "source": "k(3cr)",
+      "display": "k3cr"
+    },
+    {
+      "source": "k(3d)",
+      "display": "k3d"
+    },
+    {
+      "source": "k(4af)",
+      "display": "k4af"
+    },
+    {
+      "source": "k(4ar)",
+      "display": "k4ar"
+    },
+    {
+      "source": "k(4b1cat)",
+      "display": "k4b1cat"
+    },
+    {
+      "source": "K(4b2cat)",
+      "display": "K4b2cat"
+    },
+    {
+      "source": "k(5af)",
+      "display": "k5af"
+    },
+    {
+      "source": "k(5ar)",
+      "display": "k5ar"
+    },
+    {
+      "source": "k(5b)",
+      "display": "k5b"
+    },
+    {
+      "source": "K(6af)",
+      "display": "K6af"
+    },
+    {
+      "source": "K(6ar)",
+      "display": "K6ar"
+    },
+    {
+      "source": "k(6b)",
+      "display": "k6b"
+    },
+    {
+      "source": "K(6cf)",
+      "display": "K6cf"
+    },
+    {
+      "source": "K(6cr)",
+      "display": "K6cr"
+    },
+    {
+      "source": "k(6d)",
+      "display": "k6d"
+    }
+  ],
+  "navbar_loading_footer_unchanged": true,
+  "formatter_idempotent": true,
+  "source_gaps": "Existing source ambiguities are unchanged; no model or experimental conclusions were added."
+}

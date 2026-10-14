@@ -1,0 +1,66 @@
+{
+  "people": {
+    "firstNine": [
+      "mo-jin",
+      "jingyi-kang",
+      "zhiyuan-jin",
+      "ziyan-qin",
+      "yujia-yang",
+      "wenxian-gao",
+      "tonghui-yin",
+      "xiaojie-meng",
+      "chen-xing"
+    ],
+    "members": 28,
+    "faculty": 6,
+    "advisors": 9,
+    "unique": 43
+  },
+  "hero": {
+    "initial": {
+      "hero": 680,
+      "viewport": 680
+    },
+    "half": {
+      "hero": 340,
+      "viewport": 680
+    }
+  },
+  "desktop": {
+    "width": 1408,
+    "scrollWidth": 1408,
+    "clientWidth": 1408,
+    "textSize": "16px",
+    "allImagesLoaded": true,
+    "details": true,
+    "lastTask": true
+  },
+  "filters": {
+    "Wet Lab": 6,
+    "Dry Lab": 4,
+    "Human Practices": 8,
+    "Hardware & Wiki": 4,
+    "Visual Design": 6,
+    "All": 28
+  },
+  "mobile": {
+    "width": 358,
+    "scrollWidth": 358,
+    "clientWidth": 358,
+    "columns": "268px",
+    "textSize": "16px",
+    "title": "Zhiyuan Jin"
+  },
+  "reducedMotion": {
+    "preference": true,
+    "animations": 0,
+    "scroll": "auto"
+  },
+  "touch": {
+    "emulatedTouch": true,
+    "selected": "Jingyi Kang",
+    "passed": true
+  },
+  "consoleErrors": [],
+  "productionFilesUnchanged": true
+}
