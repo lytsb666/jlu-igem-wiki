@@ -1,0 +1,618 @@
+{
+  "document": "ihp文稿English.docx",
+  "documentSha256": "edfbf20c216399cf2719534ab8110deaaae3cbf5044162794b9d1d61841738b1",
+  "paragraphsAndTables": 739,
+  "originalMedia": [
+    {
+      "file": "image1.png",
+      "sha256": "04f43023e1a07206a9c080a5bd54feb1f85390d3d24b9cf18b2577af4cff65cc"
+    },
+    {
+      "file": "image10.jpeg",
+      "sha256": "f83100ae94d91ace598cc48197a84b10a54f39f162f580968960049936de79ae"
+    },
+    {
+      "file": "image100.jpeg",
+      "sha256": "f756f35720d4bb05da90f661e43f862178dafc907c32db5aad8ec27fff299a4c"
+    },
+    {
+      "file": "image101.jpeg",
+      "sha256": "bbecbeb86e351fa521eb1f95e3ca70be6dca2e42fb95612ab07739e462f5938b"
+    },
+    {
+      "file": "image11.jpeg",
+      "sha256": "023423f2e714faca11a3c61efeb525f8e1c814d309c00e45888e4d1624eadd3e"
+    },
+    {
+      "file": "image12.jpeg",
+      "sha256": "877dc171ac9d5cfe3db83a131b83f15841058941e8abbcbae54fbbaf7e4979bf"
+    },
+    {
+      "file": "image13.png",
+      "sha256": "0a71b42a4ee52df6aeda828213eeb62fca46a32c5fb0afc1625278f0ce47926e"
+    },
+    {
+      "file": "image14.png",
+      "sha256": "d6a4db4d89c75aaad3d1a902f9e55827f1780b86ebf278e82408ac49d70d0f00"
+    },
+    {
+      "file": "image15.png",
+      "sha256": "93db34e8e6a6cfe99ac5fcaa4b2490ae50ea289db761759779b21fe1c7e01103"
+    },
+    {
+      "file": "image16.jpeg",
+      "sha256": "da5d2d96cbc569f6b1bebe10de6c7f0826fb17389fe71f5de8193c40907234c9"
+    },
+    {
+      "file": "image17.jpeg",
+      "sha256": "b3b5f5b87e406219ec4eecc70d6116ee2fb4c24e59480b9b7f632a0c462bc5d8"
+    },
+    {
+      "file": "image18.jpeg",
+      "sha256": "e6d055d35845e783101af5c6a9968ca060643b38a34308c07ef701bf02ab8906"
+    },
+    {
+      "file": "image19.jpeg",
+      "sha256": "3c53273ae7f9e0feb091677ea945136b1f1075b49f16e2f0a89870636e040fb8"
+    },
+    {
+      "file": "image2.png",
+      "sha256": "2fcfc575567f8ef32a4001740233b69a935f675a9fecd5bc09a10fa666bd9e1c"
+    },
+    {
+      "file": "image20.jpeg",
+      "sha256": "e84c290ae7e62e3db12f090f3aebde0a3c40c2c9c576cbaafe1f742e206cbef6"
+    },
+    {
+      "file": "image21.jpeg",
+      "sha256": "8a65ecabcd0740474243d703d6704c37dfa3adadce12e8cde3a6d4fbed6d7d76"
+    },
+    {
+      "file": "image22.jpeg",
+      "sha256": "3241f5650356aba7a9f7810bd4846ed8d032fbf0fda53c7a9d06def4df2c7f13"
+    },
+    {
+      "file": "image23.jpeg",
+      "sha256": "b8574379348a2d6b4b9c653284133631effa672fb9f932bad2c177d618645a83"
+    },
+    {
+      "file": "image24.jpeg",
+      "sha256": "462d624058349b3ec13225ba036f768615fb09b4a4f976cf8af6bdd94f07ed23"
+    },
+    {
+      "file": "image25.png",
+      "sha256": "769eb5e2f2b0ec5b001c0068e4fa198da652f0a7c3bea914608e7e7f435339b4"
+    },
+    {
+      "file": "image26.png",
+      "sha256": "da12d3f4fe2e9b3d2f158973bd890d22f09ee1f8e1584b5d9be5596ac5b390c2"
+    },
+    {
+      "file": "image27.jpeg",
+      "sha256": "aa4d83abafbe93b0af25ab1efce594aec7e7fc9dbf62d3f01d02c78c84c4b984"
+    },
+    {
+      "file": "image28.jpeg",
+      "sha256": "f8783194f904fae6fa16d0b59e47219f4b2780601d2966c8ee94b3f116ae9cf5"
+    },
+    {
+      "file": "image29.png",
+      "sha256": "b7be8f8afd15464f856ae45a1099fe328c740f64a2996a91ff76a1111828485d"
+    },
+    {
+      "file": "image3.jpeg",
+      "sha256": "220d8d5b9304f1235b489207aca0c80c99c6ffc1ca43053791ffa33b35fb10cc"
+    },
+    {
+      "file": "image30.jpeg",
+      "sha256": "014b6f8d5ac8034d65decbd030b18f7f96fbaf0235aa46c27b801156b699b7f8"
+    },
+    {
+      "file": "image31.jpeg",
+      "sha256": "fa88670ee13e6abe08e7c396af7d3908f373b7d0161b5b24fd249510d967f235"
+    },
+    {
+      "file": "image32.jpeg",
+      "sha256": "36db47c4ffa3b7aa0166a5f07c8d139c6526819bf2e0c0d6e95496a9c766f344"
+    },
+    {
+      "file": "image33.jpeg",
+      "sha256": "4376b20ccb957b2141482a4fd91d87e0ac3f1b094edea5409ce37bc7a493ef26"
+    },
+    {
+      "file": "image34.jpeg",
+      "sha256": "c2cbf2b930407027f5b9b2a4062d85d7193def022c06d012f0f7894b10e383aa"
+    },
+    {
+      "file": "image35.jpeg",
+      "sha256": "b8e182b7ef2f8d53d1881381bbec0f56d3ce6da5dcc8d4a5a0030938d0cbb88c"
+    },
+    {
+      "file": "image36.jpeg",
+      "sha256": "5f2ef8833906dd09b87098247fcac92cf340ce826f209d816f9f2d3671ea80b5"
+    },
+    {
+      "file": "image37.jpeg",
+      "sha256": "00ae200c70a5a9a70981d192cc0ca22eedb2df79ee6539769fad22c28340c611"
+    },
+    {
+      "file": "image38.jpeg",
+      "sha256": "3794975c3efc89c64b2b562d5f023024d26a042916e84c98ad07bd5bf9b88f88"
+    },
+    {
+      "file": "image39.png",
+      "sha256": "215cb7b9d5bf190b3d64c80d24f498148d38e8b72ade0e66d1d0fa6e38628912"
+    },
+    {
+      "file": "image4.png",
+      "sha256": "45e5d40ceccf0cf0d9517762fdc08a4b490fa16708e4b01dd79567617b6ee639"
+    },
+    {
+      "file": "image40.png",
+      "sha256": "8b494a2c95cb60e0e1338a8b9c84f3feaff82cbdab5a8cd1f3540183e83df706"
+    },
+    {
+      "file": "image41.jpeg",
+      "sha256": "13826c3f7189b5532e54739cff4544faaaf766750a9c60980053a0592067aed6"
+    },
+    {
+      "file": "image42.jpeg",
+      "sha256": "216f96435dcada9a5b488ce31d24ff4898824ca296810d56d75516dc442847bc"
+    },
+    {
+      "file": "image43.png",
+      "sha256": "7ff01eb59fb241645ae76e48b2e63d554abc2b428e3ddd8b0193db7a4ef7f6ca"
+    },
+    {
+      "file": "image44.png",
+      "sha256": "ab28781eae58cfe40afe6083104a47d5b24d37a1e67de74eb9e32c7cab4258e1"
+    },
+    {
+      "file": "image45.jpeg",
+      "sha256": "7dd413cae9eecf6651e2d38c247b32c2b390ca71edb505645832e48b0671855a"
+    },
+    {
+      "file": "image46.jpeg",
+      "sha256": "cf36310f7362e9e617d8ad86f8dd1b85cea2900ffe7c941e8219d2eef1f8eb68"
+    },
+    {
+      "file": "image47.jpeg",
+      "sha256": "f5572b113224445145f8892fb2326d3373a7fc3890ea080b07c5d009421784e5"
+    },
+    {
+      "file": "image48.jpeg",
+      "sha256": "8a85260f7ba73a19dcd8d8e231c1eae44bfb9ba7533140e2c8cce9f4739d2373"
+    },
+    {
+      "file": "image49.png",
+      "sha256": "25260deaf7a11e62a53d8093170e1efb4ff46763a4003988f2f1f821b522f35d"
+    },
+    {
+      "file": "image5.png",
+      "sha256": "b5b579b7f56e2389d3312da24588d4b58a82c20f82a7747f5b7757118197a548"
+    },
+    {
+      "file": "image50.png",
+      "sha256": "1adbaa5be398c17bedffdec3843b3b308b9b7796b65efb4c6d43b8ea35544dcc"
+    },
+    {
+      "file": "image51.png",
+      "sha256": "b483bf14dfe150842e04e9d9a2e8aba9131698704296d3bfe383d8a979039126"
+    },
+    {
+      "file": "image52.jpeg",
+      "sha256": "00b83416af2e31c040ee8fc54338f0f84e47e03af1e89376f44d7dfc96d0fb5f"
+    },
+    {
+      "file": "image53.jpeg",
+      "sha256": "adc0e036debbae42f65ab1c4c4c53d2db9abf7c90ba455df687304a1209a034b"
+    },
+    {
+      "file": "image54.jpeg",
+      "sha256": "87f2b344fb36b357f51f1c036809f935dd0937f1adc9ee4b15853543c5095b9b"
+    },
+    {
+      "file": "image55.jpeg",
+      "sha256": "7221404eb553677156475440d45d71746beb06c23e8d35a38688fed24b787c90"
+    },
+    {
+      "file": "image56.jpeg",
+      "sha256": "1aa317ea61abca23c9c8f2c929c1dcaa9ab342cb1cb181cfed19aa0a5205376d"
+    },
+    {
+      "file": "image57.png",
+      "sha256": "3f55e744d6c40c3ed3cc745cc1b20a349f096613b6165f7dadf1514c2609f010"
+    },
+    {
+      "file": "image58.jpeg",
+      "sha256": "49e2d37d3eadb74ba2ac84e8c9c6d410965323e8642628f5cbd7656a675a9294"
+    },
+    {
+      "file": "image59.png",
+      "sha256": "4b9d827d5e46c79f5a10496f2d2695a0ada4ed13acfe77892bd094245f43ae07"
+    },
+    {
+      "file": "image6.png",
+      "sha256": "517c555d4b1d9f09ac4cccce408824a21cf3fb39777b442de8ce222a7f0fd0de"
+    },
+    {
+      "file": "image60.jpeg",
+      "sha256": "f503feceb217c0013ee716d8f90c57883779c8f3202be95787b02f0d319cdd7c"
+    },
+    {
+      "file": "image61.jpeg",
+      "sha256": "2e02d4854619c8fee13b9a0c53428f1f789d6ea8fc2797e42818a511c980fdab"
+    },
+    {
+      "file": "image62.jpeg",
+      "sha256": "d2d4d0c7599d1a2f13dec7c6559e8929b2417e3f930d89a155222ee77301e9d3"
+    },
+    {
+      "file": "image63.jpeg",
+      "sha256": "635f1d747d7f1dae420ff9adc3c6fbe060a1bbe56581e99ae4aafdc40993e413"
+    },
+    {
+      "file": "image64.png",
+      "sha256": "49799c0b0e1c4e3db4472de816cd6d0f027e3a0d854aa5e7b52785818d3b9481"
+    },
+    {
+      "file": "image65.jpeg",
+      "sha256": "4292f816ac77d856ddbcbd04bfd1c48f884ebb0462e06eef7fe266cacdcbf1bf"
+    },
+    {
+      "file": "image66.jpeg",
+      "sha256": "09b6459086e0d9b5596f122f24513b4ca2aa69972501685223900baf30932381"
+    },
+    {
+      "file": "image67.jpeg",
+      "sha256": "afad8ffcd2183b49a639cf828775c964737538fa8ae1c81d95eebe6f4611b42d"
+    },
+    {
+      "file": "image68.png",
+      "sha256": "1c2c55b6a71242893641c9ed232a58ae88628611e075a89521c130e887455cc7"
+    },
+    {
+      "file": "image69.png",
+      "sha256": "ef1275dac7bb2f3da39b6c56727952f9925cf7f8e995efde32ef11720d32f065"
+    },
+    {
+      "file": "image7.png",
+      "sha256": "4f8c2769cdc084d166c1197140204da67237e299139ce761e47d0aec79254d58"
+    },
+    {
+      "file": "image70.png",
+      "sha256": "a229c508d59b20ea9f30494f143176c7eafb113f627b69235f6fb56d0a4f3346"
+    },
+    {
+      "file": "image71.png",
+      "sha256": "49d5af57358e29c4ecf284ed347984c5a894cfa3cd18524f6bacf22c9a8916a6"
+    },
+    {
+      "file": "image72.jpeg",
+      "sha256": "77b2e29b389ece607f3b44f0b266cbe8468aa839030edc66afa3ca8de46a16e2"
+    },
+    {
+      "file": "image73.png",
+      "sha256": "f0859eb7f68c3482fb1d72af747dc197f2e5009f42a071a90b2d702bfdc7ff7d"
+    },
+    {
+      "file": "image74.jpeg",
+      "sha256": "342d7e5e79471f2bc539511c5ead27471d2ed9554939e50eb0329b6b7f3c1745"
+    },
+    {
+      "file": "image75.jpeg",
+      "sha256": "5d0a6514b30a7c5bcf768f6aeb6d8ff20e88ec5af63a566515dd2c8a622188f9"
+    },
+    {
+      "file": "image76.jpeg",
+      "sha256": "7b41de247b8a1c61b0d267e142c4a618944aeea2810ecd4a685bf6c610aa4c91"
+    },
+    {
+      "file": "image77.jpeg",
+      "sha256": "cc4850eb5ecbefc4a79df1e1ff81392e098fdc9c081295993f4113c45447a376"
+    },
+    {
+      "file": "image78.jpeg",
+      "sha256": "92e3e65e0a6f8d59108de99e77534b766d1b2663ea586b4cef18ddcccefd70ba"
+    },
+    {
+      "file": "image79.jpeg",
+      "sha256": "a7fca2b00a27a6ee6d8b16fe2b7cc2e3b54fa9558fec6763610abaf069dbaf65"
+    },
+    {
+      "file": "image8.jpeg",
+      "sha256": "75208c68b7db84bf69fd57357725d9777fb8326fbb6658612cd51c3b68731f19"
+    },
+    {
+      "file": "image80.jpeg",
+      "sha256": "8aa644025e1949941846441bd93d99b7598a317017a157958510153dd878e328"
+    },
+    {
+      "file": "image81.jpeg",
+      "sha256": "0b067cdff219520daf2d51e2bffd1471fa3f9eaab755e10d67ba4b03aa1e986e"
+    },
+    {
+      "file": "image82.jpeg",
+      "sha256": "fb8d9b59751e0114fa0b4894c3998c32e26ca96a5999fa14afc762ef73d496f1"
+    },
+    {
+      "file": "image83.jpeg",
+      "sha256": "35b7dca19cd03bc45b3711a510d244d923118d567decdc96d36d3c2bb2ad35ee"
+    },
+    {
+      "file": "image84.jpeg",
+      "sha256": "4345f11ff46bcdcb5b50c53b1263cb8157eb893ded81c8cd2cfeb2b12b234a24"
+    },
+    {
+      "file": "image85.jpeg",
+      "sha256": "866250338b5c167a1d43c074148a1f45ad0cd52ffc36e550a31048844d3102a2"
+    },
+    {
+      "file": "image86.jpeg",
+      "sha256": "468b99cbff891584b5e94da08f0641569e742ed0af5ccd8b15a523cc1bdbba33"
+    },
+    {
+      "file": "image87.jpeg",
+      "sha256": "c8c31eff75bfdbf3471edd7d746fab3c982453a0374b71107ae9e479e5c7b88e"
+    },
+    {
+      "file": "image88.jpeg",
+      "sha256": "51292d17cedaf80c167e1dcab5fc83705d9035e1734f9c4ee8dbfe6560d5e7fd"
+    },
+    {
+      "file": "image89.jpeg",
+      "sha256": "4091e9829830f26ed5a69cbca5af571c46fa2bc4e08e18971d3e1468d6a93397"
+    },
+    {
+      "file": "image9.jpeg",
+      "sha256": "a7c6bccca093fa31dcf9898e92b8283b98f9134732384107cd08369de7e46bb9"
+    },
+    {
+      "file": "image90.jpeg",
+      "sha256": "b74ffdedf19bb7d4a2df6ca5ff89e36c7325186eb343b34654cf6902cbf76e2a"
+    },
+    {
+      "file": "image91.png",
+      "sha256": "fa99964f690440d2025b6014ffe4db8ec184c2b926b874187a810622bb137abb"
+    },
+    {
+      "file": "image92.jpeg",
+      "sha256": "ecb80040f86f7888870a08e0c9ec7574c6009debf5075857d56efaae6be13390"
+    },
+    {
+      "file": "image93.jpeg",
+      "sha256": "7c9443e450b21d5e370c6cfc50df015fc9a3e855c8e6127eec6de6f20e2d9d57"
+    },
+    {
+      "file": "image94.jpeg",
+      "sha256": "d09bde79beccf9590e5fc7c77b4990d290be1ef0f655762c1830e49199ef42f3"
+    },
+    {
+      "file": "image95.jpeg",
+      "sha256": "d18deb06f710bb0304db56ca1826a086fc5ebe1c0a349777877332878039b66f"
+    },
+    {
+      "file": "image96.jpeg",
+      "sha256": "2322728b5de53881154aff0f904f8feffea57e8ca77d54a316c4393754712216"
+    },
+    {
+      "file": "image97.jpeg",
+      "sha256": "5d42487e271a0716ba4822d91a31a9a1fa2e56cc5d7b77f32fdd81a24b51f4b5"
+    },
+    {
+      "file": "image98.png",
+      "sha256": "639fc0d8f7114fa4ae4e01648ef4b16cadc994d4e200c3d33f1c1c734c6cb587"
+    },
+    {
+      "file": "image99.png",
+      "sha256": "3227ce30053ada7e7d09691821cec0b3304b1090ac79ea4d5fe1ae596b25260c"
+    }
+  ],
+  "pendingResources": [
+    {
+      "sourceParagraph": 23,
+      "id": "pending-overview-illustration",
+      "label": "Project illustration",
+      "kind": "Image",
+      "sourceNote": "+图片"
+    },
+    {
+      "sourceParagraph": 29,
+      "id": "pending-overview-map",
+      "label": "Interactive project map",
+      "kind": "Map",
+      "sourceNote": "+地图"
+    },
+    {
+      "sourceParagraph": 62,
+      "id": "pending-stakeholder-scoring-01",
+      "label": "Stakeholder scoring criteria · 01",
+      "kind": "Document",
+      "sourceNote": "+打分依据文件01"
+    },
+    {
+      "sourceParagraph": 100,
+      "id": "pending-stakeholder-review-02",
+      "label": "Stakeholder review and adaptation · 02",
+      "kind": "Document",
+      "sourceNote": "+详述文件02"
+    },
+    {
+      "sourceParagraph": 125,
+      "id": "pending-consent-03",
+      "label": "Informed consent · 03",
+      "kind": "PDF",
+      "sourceNote": "+知情同意03、04"
+    },
+    {
+      "sourceParagraph": 125,
+      "id": "pending-consent-04",
+      "label": "Informed consent · 04",
+      "kind": "PDF",
+      "sourceNote": "+知情同意03、04"
+    },
+    {
+      "sourceParagraph": 132,
+      "id": "pending-patents-approvals-05",
+      "label": "Patents and approvals · 05",
+      "kind": "PDF",
+      "sourceNote": "+pdf专利与审批（待完成05）"
+    },
+    {
+      "sourceParagraph": 244,
+      "id": "pending-community-response-guide",
+      "label": "Community Collaborative Emergency Response Guide",
+      "kind": "PDF",
+      "sourceNote": "+pdf协同指南"
+    },
+    {
+      "sourceParagraph": 410,
+      "id": "pending-retrospective-questionnaire",
+      "label": "Retrospective patient questionnaire",
+      "kind": "PDF",
+      "sourceNote": "+问卷pdf"
+    },
+    {
+      "sourceParagraph": 423,
+      "id": "pending-device-instructions",
+      "label": "Device operating instructions",
+      "kind": "PDF",
+      "sourceNote": "+pdf使用说明"
+    },
+    {
+      "sourceParagraph": 461,
+      "id": "pending-card-game-instructions",
+      "label": "Card game instructions",
+      "kind": "PDF",
+      "sourceNote": "→ Card Game Instructions [WIKI PDF LINK]"
+    },
+    {
+      "sourceParagraph": 537,
+      "id": "pending-safety-resource-1",
+      "label": "Kindergarten safety resource · 1",
+      "kind": "PDF",
+      "sourceNote": "（+3个文件pdf1、2、3）"
+    },
+    {
+      "sourceParagraph": 537,
+      "id": "pending-safety-resource-2",
+      "label": "Kindergarten safety resource · 2",
+      "kind": "PDF",
+      "sourceNote": "（+3个文件pdf1、2、3）"
+    },
+    {
+      "sourceParagraph": 537,
+      "id": "pending-safety-resource-3",
+      "label": "Kindergarten safety resource · 3",
+      "kind": "PDF",
+      "sourceNote": "（+3个文件pdf1、2、3）"
+    },
+    {
+      "sourceParagraph": 571,
+      "id": "pending-older-adults-resource-4",
+      "label": "Older-adult education resource · 4",
+      "kind": "PDF",
+      "sourceNote": "（+pdf文件4）"
+    },
+    {
+      "sourceParagraph": 585,
+      "id": "pending-braille-resource",
+      "label": "Braille learning material",
+      "kind": "PDF",
+      "sourceNote": "+pdf盲文和对照"
+    },
+    {
+      "sourceParagraph": 585,
+      "id": "pending-braille-comparison",
+      "label": "Braille comparison material",
+      "kind": "PDF",
+      "sourceNote": "+pdf盲文和对照"
+    },
+    {
+      "sourceParagraph": 673,
+      "id": "pending-summit-video-still",
+      "label": "Project presentation video still",
+      "kind": "Image",
+      "sourceNote": "视觉焦点：在此处并排两张图。左侧为团队的 5 分钟路演视频截图，右侧放一张带有北京大学和莱斯大学 Logo 的官方海报截图。"
+    },
+    {
+      "sourceParagraph": 673,
+      "id": "pending-summit-poster",
+      "label": "Official summit poster",
+      "kind": "Image",
+      "sourceNote": "视觉焦点：在此处并排两张图。左侧为团队的 5 分钟路演视频截图，右侧放一张带有北京大学和莱斯大学 Logo 的官方海报截图。"
+    },
+    {
+      "sourceParagraph": 720,
+      "id": "pending-sbti-webpage",
+      "label": "SBti interactive webpage",
+      "kind": "Webpage",
+      "sourceNote": "+网页怎么加？"
+    }
+  ],
+  "layoutReferenceParagraphsOmitted": [
+    64,
+    65,
+    110,
+    111
+  ],
+  "preservedLegacyAnchors": [
+    "top",
+    "preface",
+    "stakeholders",
+    "stakeholder-parts",
+    "ecosystem",
+    "stakeholder-arrow",
+    "stakeholder-typology",
+    "stakeholder-positioning",
+    "profile-patients",
+    "profile-susceptible",
+    "profile-contacts",
+    "profile-facilities",
+    "profile-public-health",
+    "profile-medical",
+    "profile-manufacturer",
+    "profile-dealer",
+    "profile-insurance",
+    "profile-public",
+    "profile-education",
+    "profile-supervision",
+    "profile-policy",
+    "stakeholder-connections",
+    "relationship-core",
+    "relationship-direct",
+    "relationship-indirect",
+    "priority",
+    "strategies",
+    "stakeholder-reflection",
+    "origin",
+    "design-path",
+    "tab-system",
+    "tab-frontline",
+    "panel-system",
+    "design-interview-5",
+    "design-interview-20",
+    "panel-frontline",
+    "design-interview-42",
+    "design-interview-55",
+    "design-interview-68",
+    "design-interview-80",
+    "design-interview-90",
+    "design-interview-104",
+    "design-interview-116",
+    "implementation",
+    "ethics",
+    "cares-c",
+    "cares-a",
+    "cares-r",
+    "cares-e",
+    "cares-s",
+    "reflection",
+    "evidence",
+    "evidence-instrument-04",
+    "evidence-instrument-05",
+    "evidence-method-06",
+    "evidence-stakeholder-review"
+  ],
+  "frameOriginalSha256": "03e31d4e172b2acf4b946b5b44e2d129d51762d5094298d00ce762fc997cb43b"
+}

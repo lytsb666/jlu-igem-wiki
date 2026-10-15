@@ -37,9 +37,7 @@ const pageRoles = {
   '/instrument/model.html': 'computers',
   '/eagagement/ihp.html': 'medical',
   '/eagagement/education.html': 'books',
-  '/eagagement/inclusity.html': 'surgeon',
   '/eagagement/entrepreneurship.html': 'books',
-  '/eagagement/collaboration.html': 'reactor',
   '/team/member.html': 'reactor',
 }
 

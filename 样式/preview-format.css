@@ -49,9 +49,6 @@
     background: #6f4e37 !important;
     box-shadow: inset 3px 0 #d4a276 !important;
   }
-  :root body .wiki-directory .wiki-toc-group.is-current > .wiki-toc-list {
-    display: block !important;
-  }
   :root body .wiki-directory .wiki-toc-group.is-current > a {
     --wiki-ink: #fffaf5;
     color: #fffaf5 !important;

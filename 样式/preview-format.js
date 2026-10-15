@@ -1,3 +1,5 @@
+import { setDirectoryGroupOpen } from './site-format.js'
+
 // Apply shared presentation while preserving manuscript text, anchors and data.
 const isMeasurement = /\/wet-lab\/measurement(?:\.html)?\/?$/i.test(location.pathname)
 const keepDownloadLinks = document.body.classList.contains('software-page')
@@ -215,6 +217,36 @@ removeAuxiliaryDownloads()
 enhanceLinks()
 
 let scheduled = false, directoryEntries = []
+const followedDirectoryGroups = new WeakMap()
+const directoryMouse = window.matchMedia('(hover: hover) and (pointer: fine)')
+
+function followCurrentChapter(toc, current, threshold) {
+  // Let readers choose a destination without moving entries under the pointer
+  // or keyboard focus. Apply the latest chapter when they leave the directory.
+  if ((directoryMouse.matches && toc.matches(':hover')) || toc.querySelector(':focus-visible')) return
+  const tocBox = toc.getBoundingClientRect()
+  const narrow = innerWidth <= 900
+  if (narrow && tocBox.bottom > threshold) return
+
+  const targetTop = current.target.getBoundingClientRect().top
+  const main = current.target.closest('main')
+  const inArticle = targetTop < innerHeight && (!main || main.getBoundingClientRect().bottom > threshold)
+  const group = inArticle ? current.link.closest('.wiki-toc-group, .engineering-toc-group') : null
+  if (followedDirectoryGroups.has(toc) && followedDirectoryGroups.get(toc) === group) return
+
+  followedDirectoryGroups.set(toc, group)
+  toc.querySelectorAll('.wiki-toc-group, .engineering-toc-group').forEach(item => {
+    setDirectoryGroupOpen(item, item === group)
+  })
+
+  // Mobile directories sit above the article. Preserve the reading position
+  // when their expanded height changes, including browsers with scroll anchoring.
+  if (narrow) {
+    const shift = current.target.getBoundingClientRect().top - targetTop
+    if (Math.abs(shift) > .5) window.scrollBy({ top: shift, behavior: 'instant' })
+  }
+}
+
 function updateDirectories() {
   scheduled = false
   for (const {toc,links} of directoryEntries) {
@@ -231,7 +263,7 @@ function updateDirectories() {
     })
     toc.querySelectorAll('.wiki-toc-group').forEach(group=>group.classList.toggle('is-current',group.contains(current.link)))
     toc.querySelectorAll('.engineering-toc-group').forEach(group=>group.classList.toggle('is-current',group.contains(current.link)))
-    if(innerWidth>900)current.link.closest('.engineering-toc-group')?.setAttribute('open','')
+    followCurrentChapter(toc, current, threshold)
   }
 }
 function scheduleDirectories() { if (!scheduled) {scheduled=true;requestAnimationFrame(updateDirectories)} }
@@ -264,6 +296,8 @@ function centerDirectories() {
 refreshDirectories()
 requestAnimationFrame(centerDirectories)
 document.querySelectorAll(directorySelector).forEach(toc=>{
+  toc.addEventListener('pointerleave', scheduleDirectories)
+  toc.addEventListener('focusout', () => requestAnimationFrame(scheduleDirectories))
   new MutationObserver(()=>{refreshDirectories();enhanceLinks()}).observe(toc,{childList:true,subtree:true})
   // Legacy page trackers still own their keyboard and disclosure behaviour;
   // settle their location attributes to the same visible-section convention.

@@ -2,9 +2,7 @@ const root = document.querySelector('#placeholder-root')
 const { section, title, description, cover } = document.body.dataset
 
 const coverAssets = {
-  collaboration: new URL('../a  图片/page-covers/collaboration.webp', import.meta.url).href,
   contribution: new URL('../a  图片/page-covers/contribution.webp', import.meta.url).href,
-  inclusivity: new URL('../a  图片/page-covers/inclusivity.webp', import.meta.url).href,
   model: new URL('../a  图片/page-covers/model.webp', import.meta.url).href,
 }
 
@@ -34,8 +32,7 @@ if (section === 'Team' && title === 'Attribution') {
       <div class="dropdown">
         <a href="../Eagagement/iHP.html" class="nav-link">Engagement</a>
         <div class="dropdown-content">
-          <a href="../Eagagement/iHP.html">iHP</a><a href="../Eagagement/collaboration.html">Collaboration</a>
-          <a href="../Eagagement/inclusity.html">Inclusivity</a><a href="../Eagagement/education.html">Education</a>
+          <a href="../Eagagement/iHP.html">iHP</a><a href="../Eagagement/education.html">Education</a>
           <a href="../Eagagement/entrepreneurship.html">Entrepreneurship</a>
         </div>
       </div>
