@@ -12,12 +12,12 @@
 | 03 科研 | `Project/`、`Wet-lab/`、`Instrument/model.html` | `feat/03-results` |
 | 04 iHP | `Eagagement/iHP.html`、iHP 专用文件 | `feat/04-ihp` |
 | 05 教育 | `Eagagement/education.html`、education 专用文件 | `feat/05-education` |
-| 06 包容性 | `Eagagement/inclusity.html`、inclusivity 专用文件 | `feat/06-inclusivity` |
+| 06 包容性资源 | 页面已删除，保留 `public/inclusivity-resources/` 的资料归属 | `feat/06-inclusivity` |
 | 07 创业 | `Eagagement/entrepreneurship.html`、entrepreneurship 专用文件 | `feat/07-entrepreneurship` |
 | 08 仪器 | Hardware / Software 页面、各自专用资源和脚本 | `feat/08-hardware` |
 | 10 部署 | 构建、CI、依赖、Pages 配置与发布 | `feat/10-build` |
 
-Collaboration、Judging 跳转页及尚未分配的文件由 00 兜底分派。实际 GitHub 账号填入 `.github/owners.json`，运行 `node scripts/configure-codeowners.mjs` 生成 CODEOWNERS。账号必须有仓库 Write 权限；团队账号必须为有 Write 权限的可见团队。
+Judging 跳转页及尚未分配的文件由 00 兜底分派。实际 GitHub 账号填入 `.github/owners.json`，运行 `node scripts/configure-codeowners.mjs` 生成 CODEOWNERS。账号必须有仓库 Write 权限；团队账号必须为有 Write 权限的可见团队。
 
 **公共组件责任人：00。** 包括 `样式/main.js`、navigation、loading、footer、cursor、style、site-format、typography、full-width-layout、placeholder-page、wetlab-pages 等共享文件。修改这些文件，或页面 HTML 内的 Navbar / Loading / Footer / 公共目录结构，PR 必须写明“公共责任人 00”、影响页面和回归结果，并请求 00 审核。构建 / 依赖 / 发布变更由 10 审核，影响全站时再由 00 审核。CODEOWNERS 按文件匹配，不能识别 HTML 内的公共区域；一个模式列出多个 owner 时 GitHub 只要求其中一个批准，不能用它替代这里的双人审核约定。
 

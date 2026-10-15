@@ -1,0 +1,134 @@
+/* The replacement manuscript owns its article layout; the existing hero,
+   navigation, loader, footer and public formatting remain shared. */
+body.ihp-manuscript-page .ihp-content { min-width: 0; }
+body.ihp-manuscript-page .ihp-toc { display: block; }
+body.ihp-manuscript-page .ihp-paper-panel {
+  min-width: 0;
+  margin: 0 0 3rem;
+  padding: 1rem clamp(.75rem, 2vw, 1.6rem);
+  border: solid transparent;
+  border-width: 44px 36px 34px 28px;
+  border-image-source: url('../assets/human-practice/revision-20261015/content-frame.svg');
+  border-image-slice: 180 180 150 180 fill;
+  border-image-width: 44px 36px 34px 28px;
+  border-image-repeat: stretch;
+  background: #fff;
+  color: #6f4e37;
+  font-family: "Times New Roman", Times, serif;
+}
+body.ihp-manuscript-page .ihp-paper-panel :is(h2, h3, h4, p, ul, ol) {
+  max-width: none;
+  overflow-wrap: break-word;
+}
+body.ihp-manuscript-page .ihp-paper-panel h2 { margin: 0 0 1.5rem; font-size: 22pt; line-height: 1.3; }
+body.ihp-manuscript-page .ihp-paper-panel h3 { margin: 2rem 0 1rem; font-size: 16pt; line-height: 1.4; }
+body.ihp-manuscript-page .ihp-paper-panel h4 { margin: 1.5rem 0 1rem; font-size: 14pt; line-height: 1.4; }
+body.ihp-manuscript-page .ihp-paper-panel :is(p, li) { font-size: 12pt; line-height: 1.7; }
+body.ihp-manuscript-page .ihp-paper-panel p { margin: 0 0 1rem; }
+body.ihp-manuscript-page .ihp-paper-panel [id] { scroll-margin-top: 100px; }
+body.ihp-manuscript-page .legacy-source-anchor { display: block; height: 0; scroll-margin-top: 100px; }
+body.ihp-manuscript-page .ihp-stage-question,
+body.ihp-manuscript-page .ihp-source-quote {
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #ba813e;
+  border-radius: 0 12px 12px 0;
+  background: #fbf4eb;
+  font-weight: 700;
+}
+body.ihp-manuscript-page .ihp-manuscript-figure { margin: 1.5rem 0; min-width: 0; text-align: center; }
+body.ihp-manuscript-page .ihp-manuscript-figure > a {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform .2s, box-shadow .2s;
+}
+body.ihp-manuscript-page .ihp-manuscript-figure > a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgb(111 78 55 / 15%);
+}
+body.ihp-manuscript-page .ihp-manuscript-figure img {
+  display: block;
+  width: min(100%, var(--ihp-image-width));
+  height: auto;
+  max-width: 100%;
+  max-height: 42rem;
+  margin: auto;
+  object-fit: contain;
+  transform: none !important;
+}
+body.ihp-manuscript-page .ihp-manuscript-figure figcaption { margin: .75rem 0; font-size: 12pt; font-weight: 700; text-align: center; }
+body.ihp-manuscript-page .ihp-gallery { min-width: 0; margin: 1.5rem 0; }
+body.ihp-manuscript-page .ihp-gallery__track {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-color: #9a6742 #f6eadd;
+}
+body.ihp-manuscript-page .ihp-gallery__track > figure { flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
+body.ihp-manuscript-page .ihp-gallery__track img { max-height: 30rem; }
+body.ihp-manuscript-page .ihp-gallery__controls { display: flex; align-items: center; justify-content: center; gap: 1.25rem; margin-top: .75rem; }
+body.ihp-manuscript-page .ihp-gallery__controls button {
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 1px solid #cda77d;
+  border-radius: 50%;
+  background: #fff8ef;
+  cursor: pointer;
+}
+body.ihp-manuscript-page .ihp-gallery__controls button:disabled { opacity: .45; cursor: default; }
+body.ihp-manuscript-page .ihp-disclosure { min-width: 0; margin: 1.1rem 0; border: 1px solid #d4b696; border-radius: 14px; background: #fff; }
+body.ihp-manuscript-page .ihp-disclosure > summary { padding: 1rem 1.25rem; cursor: pointer; font-size: 14pt; font-weight: 700; line-height: 1.5; background: #fbf4eb; border-radius: 14px; }
+body.ihp-manuscript-page .ihp-disclosure[open] > summary { border-bottom: 1px solid #e6d3bf; border-radius: 14px 14px 0 0; }
+body.ihp-manuscript-page .ihp-disclosure__body { min-width: 0; padding: 1.25rem; }
+body.ihp-manuscript-page .ihp-expert-roles ul { margin: 1.25rem; padding-left: 1.5rem; }
+body.ihp-manuscript-page .ihp-expert-roles li { margin-bottom: .75rem; }
+body.ihp-manuscript-page .ihp-resource-slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
+body.ihp-manuscript-page .ihp-resource-placeholder { min-width: 0; min-height: 145px; padding: 1.25rem; border: 2px dashed #c99a69; border-radius: 14px; background: #fffaf4; display: flex; flex-direction: column; justify-content: center; gap: .5rem; }
+body.ihp-manuscript-page .ihp-resource-placeholder > span { font-size: 12pt; }
+body.ihp-manuscript-page .ihp-resource-placeholder strong { font-size: 14pt; line-height: 1.4; }
+body.ihp-manuscript-page .ihp-resource-placeholder p { margin: 0; }
+body.ihp-manuscript-page .ihp-reflection-cycle { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+body.ihp-manuscript-page .ihp-reflection-cycle article { min-width: 0; padding: 1.25rem; border: 1px solid #d4b696; border-radius: 14px; background: #fbf4eb; }
+body.ihp-manuscript-page .ihp-reflection-cycle p { margin: 0; }
+body.ihp-manuscript-page .ihp-track-tabs { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.75rem 0; }
+body.ihp-manuscript-page .ihp-track-tabs button { flex: 1 1 220px; padding: .85rem 1rem; border: 1px solid #9a6742; border-radius: 12px; background: #fff; font-weight: 700; cursor: pointer; }
+body.ihp-manuscript-page .ihp-track-tabs button[aria-selected="true"] { --wiki-ink: #fffaf5; color: #fffaf5; background: #6f4e37; }
+body.ihp-manuscript-page [data-ihp-track-panel][hidden] { display: none !important; }
+body.ihp-manuscript-page .ihp-parallel-clinics,
+body.ihp-manuscript-page .ihp-media-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+body.ihp-manuscript-page .ihp-parallel-clinics > article { min-width: 0; }
+body.ihp-manuscript-page .ihp-manuscript-table-wrap { max-width: 100%; overflow-x: auto; margin: 1.5rem 0; }
+body.ihp-manuscript-page .ihp-manuscript-table-wrap table { width: 100%; min-width: 32rem; border-collapse: collapse; }
+body.ihp-manuscript-page .ihp-manuscript-table-wrap :is(th, td) { padding: .75rem; border: 1px solid #d4b696; vertical-align: middle; text-align: left; }
+body.ihp-manuscript-page .ihp-manuscript-table-wrap th { --wiki-ink: #fffaf5; background: #6f4e37; color: #fffaf5; text-align: center; white-space: nowrap; }
+body.ihp-manuscript-page .ihp-manuscript-table-wrap p { margin: 0; }
+body.ihp-manuscript-page .ihp-evidence-note { margin: 1.5rem 0; padding: 1.25rem; border-left: 4px solid #ba813e; border-radius: 0 12px 12px 0; background: #fbf4eb; }
+body.ihp-manuscript-page .ihp-evidence-note p:last-child { margin-bottom: 0; }
+body.ihp-manuscript-page .ihp-filmstrip { display: flex; gap: 1rem; padding: 1.8rem .75rem; overflow-x: auto; background: #6f4e37; border-radius: 12px; border-top: .6rem dotted #e0c1a6; border-bottom: .6rem dotted #e0c1a6; }
+body.ihp-manuscript-page .ihp-filmstrip figure { flex: 0 0 200px; margin: 0; text-align: center; }
+body.ihp-manuscript-page .ihp-filmstrip img { display: block; width: auto; max-width: 100%; height: 210px; margin: auto; object-fit: contain; }
+body.ihp-manuscript-page .ihp-filmstrip figcaption { --wiki-ink: #fffaf5; margin-top: .75rem; color: #fffaf5; font-size: 12pt; font-weight: 700; }
+body.ihp-manuscript-page .ihp-network-link { display: inline-block; margin-bottom: 1.5rem; }
+body.ihp-manuscript-page :is(.ihp-gallery__track, .ihp-filmstrip, .ihp-disclosure > summary, .ihp-track-tabs button, .ihp-gallery__controls button):focus-visible { outline: 3px solid #9a6742; outline-offset: 4px; }
+@media (max-width: 900px) {
+  body.ihp-manuscript-page .ihp-shell { display: block; }
+  body.ihp-manuscript-page .ihp-toc { position: static; display: block; width: 100%; max-width: none; margin: 0 0 2rem; padding: 1rem; border: 1px solid #d4b696; border-radius: 14px; background: #fbf4eb; }
+  body.ihp-manuscript-page .ihp-toc nav { max-height: none; }
+  body.ihp-manuscript-page .ihp-paper-panel { padding: .5rem; border-width: 28px 20px 24px 18px; border-image-width: 28px 20px 24px 18px; }
+  body.ihp-manuscript-page .ihp-parallel-clinics,
+  body.ihp-manuscript-page .ihp-media-pair,
+  body.ihp-manuscript-page .ihp-reflection-cycle { grid-template-columns: 1fr; }
+  body.ihp-manuscript-page .ihp-disclosure__body { padding: .85rem; }
+  @layer wiki-format {
+    :root body.ihp-manuscript-page .wiki-directory .wiki-toc-group:not(.is-open) > .wiki-toc-list { display: none !important; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.ihp-manuscript-page .ihp-manuscript-figure > a { transition: none; }
+  body.ihp-manuscript-page .ihp-manuscript-figure > a:hover { transform: none; }
+}

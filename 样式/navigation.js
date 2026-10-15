@@ -1,4 +1,6 @@
 const navbar = document.querySelector('.navbar')
+let dismissNavigation
+let revealNavigationAtTop
 
 const navigationSchema = [
   {
@@ -15,8 +17,6 @@ const navigationSchema = [
     label: 'Engagement',
     items: [
       ['iHP', '../Eagagement/iHP.html'],
-      ['Collaboration', '../Eagagement/collaboration.html'],
-      ['Inclusivity', '../Eagagement/inclusity.html'],
       ['Education', '../Eagagement/education.html'],
       ['Entrepreneurship', '../Eagagement/entrepreneurship.html'],
     ],
@@ -86,6 +86,8 @@ if (navbar) {
   let lastDirection = 0
   let directionDistance = 0
   let ticking = false
+  let manuallyDismissed = false
+  let topRevealArmed = true
 
   const navigationIsEngaged = () => (
     (precisePointer.matches && navbar.matches(':hover'))
@@ -95,7 +97,27 @@ if (navbar) {
 
   const setHidden = (hidden) => {
     if (hidden && navigationIsEngaged()) return
+    if (!hidden) {
+      manuallyDismissed = false
+      topRevealArmed = true
+    }
     navbar.classList.toggle('hide', hidden)
+  }
+
+  dismissNavigation = (event) => {
+    manuallyDismissed = true
+    // Clicking the bar's own empty space must not immediately reveal it again.
+    topRevealArmed = event.clientY > POINTER_TOP_ZONE
+    lastScrollY = documentScrollY()
+    lastDirection = 0
+    directionDistance = 0
+    navbar.classList.add('hide')
+  }
+
+  revealNavigationAtTop = (event) => {
+    if (event.clientY > POINTER_TOP_ZONE || !navbar.classList.contains('hide')) return false
+    setHidden(false)
+    return true
   }
 
   const reactToDirection = (direction, distance) => {
@@ -120,7 +142,7 @@ if (navbar) {
     const deltaY = currentScrollY - lastScrollY
 
     if (currentScrollY <= Math.max(TOP_EDGE, navbar.offsetHeight)) {
-      setHidden(false)
+      if (!manuallyDismissed || deltaY < 0) setHidden(false)
       lastDirection = 0
       directionDistance = 0
     } else {
@@ -139,18 +161,25 @@ if (navbar) {
   window.addEventListener('pointermove', (event) => {
     if (!precisePointer.matches || (event.pointerType && event.pointerType !== 'mouse')) return
 
-    if (event.clientY <= POINTER_TOP_ZONE) {
+    if (event.clientY > POINTER_TOP_ZONE) topRevealArmed = true
+    else if (topRevealArmed) {
       setHidden(false)
     }
   }, { passive: true })
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab') setHidden(false)
+  })
+
   navbar.addEventListener('focusin', () => setHidden(false))
-  navbar.addEventListener('pointerenter', () => setHidden(false))
+  navbar.addEventListener('pointerenter', () => {
+    if (topRevealArmed) setHidden(false)
+  })
   const resetScrollTracking = () => {
     lastScrollY = documentScrollY()
     lastDirection = 0
     directionDistance = 0
-    setHidden(false)
+    if (!manuallyDismissed) setHidden(false)
   }
   window.addEventListener('pageshow', resetScrollTracking)
   window.addEventListener('resize', resetScrollTracking, { passive: true })
@@ -324,6 +353,27 @@ if (navbar) {
   })
 
   document.addEventListener('pointerdown', (event) => {
-    if (!navbar.contains(event.target)) closeAllMenus()
-  }, { passive: true })
+    const target = event.target
+    if (event.button !== 0 || !(target instanceof Element)) return
+    if (revealNavigationAtTop(event)) return
+    if (!navbar.contains(target)) closeAllMenus()
+
+    // Only dismiss on empty page space; keep media and content controls intact.
+    if (target.closest('a, button, input, select, textarea, label, summary, [tabindex]:not([tabindex="-1"]), [role="button"], [role="tab"], [contenteditable], video, audio, iframe, img, svg, canvas, math, dialog, .wiki-toc')) return
+    for (const node of target.childNodes) {
+      if (node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) continue
+      const range = document.createRange()
+      range.selectNodeContents(node)
+      const onText = [...range.getClientRects()].some(rect => (
+        event.clientX >= rect.left && event.clientX <= rect.right
+        && event.clientY >= rect.top && event.clientY <= rect.bottom
+      ))
+      if (onText) return
+    }
+
+    cancelScheduledClose()
+    closeAllMenus()
+    if (navbar.contains(document.activeElement)) document.activeElement.blur()
+    dismissNavigation(event)
+  }, { capture: true, passive: true })
 }

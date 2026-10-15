@@ -7,6 +7,12 @@ document.querySelectorAll('main h2').forEach(heading => {
 })
 
 let listNumber = 0
+const directoryGroupControls = new WeakMap()
+
+export function setDirectoryGroupOpen(group, open) {
+  directoryGroupControls.get(group)?.(open)
+}
+
 function wireGroup(group, list, button, label) {
   if (group.dataset.wikiDirectoryGroup) return
   group.dataset.wikiDirectoryGroup = 'true'
@@ -22,26 +28,26 @@ function wireGroup(group, list, button, label) {
   button.type = 'button'
   button.setAttribute('aria-controls', list.id)
   button.setAttribute('aria-label', `Expand ${label}`)
-  let pinned = false
   const show = open => {
     group.classList.toggle('is-open', open)
     button.setAttribute('aria-expanded', String(open))
     button.setAttribute('aria-label', `${open ? 'Collapse' : 'Expand'} ${label}`)
     button.textContent = open ? '−' : '+'
   }
+  directoryGroupControls.set(group, show)
   show(false)
   button.addEventListener('click', event => {
     event.preventDefault()
     event.stopImmediatePropagation()
-    pinned = !pinned
-    show(pinned)
+    show(!group.classList.contains('is-open'))
   }, { capture: true })
-  group.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') show(true) })
-  group.addEventListener('pointerleave', () => { if (!pinned && !group.contains(document.activeElement)) show(false) })
-  group.addEventListener('focusin', () => show(true))
-  group.addEventListener('focusout', event => { if (!pinned && !group.contains(event.relatedTarget)) show(false) })
   group.addEventListener('keydown', event => {
-    if (event.key === 'Escape') { pinned = false; button.focus(); show(false) }
+    if (event.key === 'Escape') { button.focus({ preventScroll: true }); show(false) }
+    if (event.target !== button && event.target !== group.querySelector(':scope > a, :scope > .parts-toc-row > a')) return
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault()
+      show(event.key === 'ArrowRight')
+    }
   })
 }
 
@@ -70,14 +76,17 @@ function enhanceDirectory(toc) {
     if (group.dataset.wikiDirectoryGroup) return
     group.dataset.wikiDirectoryGroup = 'true'
     group.open = false
-    let pinned = false
+    directoryGroupControls.set(group, open => { group.open = open })
     const summary = group.querySelector(':scope > summary')
-    summary.addEventListener('click', event => { event.preventDefault(); pinned = !pinned; group.open = pinned })
-    group.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') group.open = true })
-    group.addEventListener('pointerleave', () => { if (!pinned && !group.contains(document.activeElement)) group.open = false })
-    group.addEventListener('focusin', () => { group.open = true })
-    group.addEventListener('focusout', event => { if (!pinned && !group.contains(event.relatedTarget)) group.open = false })
-    group.addEventListener('keydown', event => { if (event.key === 'Escape') { pinned = false; summary.focus(); group.open = false } })
+    // Native summary click / Enter / Space controls expansion. Hover and focus
+    // leave the list geometry unchanged while a reader chooses a chapter.
+    group.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { summary.focus({ preventScroll: true }); group.open = false }
+      if (event.target === summary && (event.key === 'ArrowRight' || event.key === 'ArrowLeft')) {
+        event.preventDefault()
+        group.open = event.key === 'ArrowRight'
+      }
+    })
   })
 }
 

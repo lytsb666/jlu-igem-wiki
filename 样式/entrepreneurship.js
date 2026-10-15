@@ -58,7 +58,7 @@ function setupToc() {
     tocLinks.forEach((link) => link.classList.toggle('active', link.hash === `#${id}`))
     const active = linkById.get(id)
     const nav = active?.closest('nav')
-    if (nav?.clientHeight) {
+    if (nav?.clientHeight && !toc.matches(':hover, :focus-within')) {
       const linkBox = active.getBoundingClientRect()
       const navBox = nav.getBoundingClientRect()
       if (linkBox.top < navBox.top || linkBox.bottom > navBox.bottom) {

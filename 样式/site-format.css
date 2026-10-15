@@ -125,6 +125,7 @@
   scrollbar-width: thin;
   scrollbar-color: #9a6742 #ead5c2;
   overscroll-behavior: contain;
+  overflow-anchor: none;
 }
 :root body .wiki-directory nav[hidden] { display: none !important; }
 :root body .wiki-directory :is(nav > ol, nav > ul) { display: block !important; list-style: none; padding: 0; margin: 0; }
