@@ -82,6 +82,30 @@ document.querySelectorAll('main a[href^="#"]').forEach(link => {
 })
 
 // Link only bracketed citation numbers that have an actual bibliography entry.
+// Entrepreneurship retains the manuscript's S identifiers in its source table.
+if (document.querySelector('.entrepreneur-references')) {
+  const sourceWalker = document.createTreeWalker(document.querySelector('main'), NodeFilter.SHOW_TEXT)
+  const sourceTexts = []
+  while (sourceWalker.nextNode()) {
+    const node = sourceWalker.currentNode
+    if (!node.parentElement.closest('a,nav,aside,table,script,style') && /\[S\d+\]/.test(node.data)) sourceTexts.push(node)
+  }
+  for (const node of sourceTexts) {
+    const fragment = document.createDocumentFragment()
+    let offset = 0
+    for (const match of node.data.matchAll(/\[(S\d+)\]/g)) {
+      const target = document.getElementById(`entrepreneur-source-${match[1]}`)
+      if (!target) continue
+      fragment.append(document.createTextNode(node.data.slice(offset, match.index)))
+      const mark = document.createElement('sup')
+      mark.className = 'wiki-citation-mark'
+      const link = document.createElement('a')
+      link.href = `#${target.id}`; link.textContent = match[0]; link.className = 'wiki-citation'
+      mark.append(link); fragment.append(mark); offset = match.index + match[0].length
+    }
+    if (offset) { fragment.append(document.createTextNode(node.data.slice(offset))); node.replaceWith(fragment) }
+  }
+}
 // Years, measurements, tables, formula indices and existing links are untouched.
 const walker = document.createTreeWalker(document.querySelector('main') || document.body, NodeFilter.SHOW_TEXT)
 const texts = []

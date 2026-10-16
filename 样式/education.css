@@ -1046,3 +1046,4 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
   }
   :root:root body .edu-references a { overflow-wrap: anywhere !important; }
 }
+.edu-content #why-heart > .edu-intro-actions { display: flex; flex-flow: row wrap; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; box-sizing: border-box; margin: 0 0 28px; }

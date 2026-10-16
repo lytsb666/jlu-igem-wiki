@@ -906,7 +906,8 @@ body.wetlab-page {
 }
 
 .notebook-calendar__header {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   margin-bottom: 12px;
   align-items: end;
   justify-content: space-between;
@@ -931,6 +932,8 @@ body.wetlab-page {
 
 .notebook-calendar__controls {
   display: flex;
+  grid-column: 2;
+  justify-self: center;
   gap: 8px;
 }
 
@@ -1667,8 +1670,8 @@ body.wetlab-page {
   .module-card__content { padding-left: 22px; }
   .experiment-card > summary { align-items: flex-start; }
   .notebook-calendar { padding: 10px; border-radius: 18px; }
-  .notebook-calendar__header { align-items: center; flex-wrap: wrap; gap: 8px; }
-  .notebook-calendar__controls { gap: 4px; }
+  .notebook-calendar__header { grid-template-columns: 1fr; justify-items: center; align-items: center; text-align: center; gap: 8px; }
+  .notebook-calendar__controls { grid-column: 1; gap: 4px; }
   .notebook-calendar__controls button { padding-inline: 8px; }
   .notebook-calendar__day { padding: 3px; }
 }

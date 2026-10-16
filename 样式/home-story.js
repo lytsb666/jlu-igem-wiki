@@ -50,6 +50,52 @@ if (story) {
   ]
   const workflowChapter = story.querySelector('.home-chapter--workflow')
   const workflowTimer = workflowChapter.querySelector('.workflow-timer')
+  const countdown = workflowTimer.querySelector('[data-countdown]')
+  // A single digital face follows the perspective of the original timer artwork.
+  const segmentShapes = [
+    'M10 4H54L61 11L54 18H10L3 11Z',
+    'M57 17L64 10L70 17V52L63 59L57 52Z',
+    'M57 68L64 61L70 68V103L63 110L57 103Z',
+    'M10 104H54L61 111L54 118H10L3 111Z',
+    'M0 68L7 61L13 68V103L6 110L0 103Z',
+    'M0 17L7 10L13 17V52L6 59L0 52Z',
+    'M10 54H54L61 61L54 68H10L3 61Z',
+  ]
+  const digitSegments = ['012345', '12', '01346', '01236', '1256', '02356', '023456', '012', '0123456', '012356']
+  const svgNS = 'http://www.w3.org/2000/svg'
+  const display = document.createElementNS(svgNS, 'svg')
+  display.classList.add('workflow-digital-face')
+  display.setAttribute('viewBox', '0 0 925 693')
+  display.setAttribute('aria-hidden', 'true')
+  const digits = []
+  const face = document.createElementNS(svgNS, 'g')
+  face.setAttribute('transform', 'matrix(2.3 1.24 -1.1 2.4 154 0)')
+  for (const x of [0, 80, 180, 260]) {
+    const group = document.createElementNS(svgNS, 'g')
+    group.setAttribute('transform', `translate(${x} 0)`)
+    const paths = segmentShapes.map(d => { const p = document.createElementNS(svgNS, 'path'); p.setAttribute('d', d); group.append(p); return p })
+    digits.push(paths); face.append(group)
+  }
+  for (const y of [43, 83]) {
+    const dot = document.createElementNS(svgNS, 'circle')
+    dot.setAttribute('cx', '164'); dot.setAttribute('cy', String(y)); dot.setAttribute('r', '6'); face.append(dot)
+  }
+  display.append(face)
+  workflowTimer.append(display)
+  let countdownStarted
+  const drawCountdown = () => {
+    const elapsed = countdownStarted === undefined ? 0 : Math.floor((Date.now() - countdownStarted) / 1000) % 1800
+    const remaining = 1800 - elapsed
+    const text = `${String(Math.floor(remaining / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')}`
+    if (countdown) countdown.textContent = text
+    const value = text.replace(':', '')
+    digits.forEach((paths, index) => paths.forEach((p, segment) => p.classList.toggle('is-lit', digitSegments[Number(value[index])].includes(String(segment)))))
+  }
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && countdownStarted === undefined) { countdownStarted = Date.now(); drawCountdown() }
+  }).observe(workflowTimer)
+  setInterval(drawCountdown, 1000)
+  drawCountdown()
   const workflowCaption = workflowChapter.querySelector('.workflow-caption')
   const workflowPathogens = [...workflowChapter.querySelectorAll('.workflow-pathogen')]
   const cardsChapter = story.querySelector('.home-chapter--cards')

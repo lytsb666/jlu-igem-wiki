@@ -1,0 +1,13 @@
+:root body main .wiki-disclosure-trigger { list-style: none; }
+:root body main summary.wiki-disclosure-trigger::marker { content: ''; }
+:root body main summary.wiki-disclosure-trigger::-webkit-details-marker { display: none; }
+:root body main .wiki-disclosure-trigger::after { display: none !important; content: none !important; }
+:root body main .wiki-disclosure-arrow {
+  display: inline-block; width: .42em; height: .42em;
+  margin-inline-start: .65em; vertical-align: .18em;
+  border-right: .12em solid currentColor; border-bottom: .12em solid currentColor;
+  transform: rotate(45deg); transform-origin: 65% 65%;
+  color: inherit; pointer-events: none;
+}
+:root body main details[open] > summary .wiki-disclosure-arrow,
+:root body main .wiki-disclosure-trigger[aria-expanded="true"] .wiki-disclosure-arrow { transform: rotate(225deg); }

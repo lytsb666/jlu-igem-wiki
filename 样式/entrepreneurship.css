@@ -1564,7 +1564,11 @@ body.entrepreneurship-page {
   }
 }
 
-/* Entrepreneurship revision: evidence overview and a single white article surface. */
+/* Main article and its bibliography keep separate white surfaces. */
+.entre-content-flow { display: grid; gap: 28px; min-width: 0; }
+.entrepreneur-references .reference-list { margin: 0; padding-left: 24px; }
+.entrepreneur-references .reference-list > li { margin: 0 0 16px; overflow-wrap: anywhere; }
+.entrepreneur-references .reference-list > li:last-child { margin-bottom: 0; }
 body.entrepreneurship-page .hp-content {
   padding: clamp(24px, 3vw, 42px);
   border: 1px solid rgba(111, 78, 55, 0.16);

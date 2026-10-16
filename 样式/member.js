@@ -14,6 +14,7 @@ const filters = [...page.querySelectorAll('.team-filter')]
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)')
 const leaderRoles = new Map(memberPresentation.leaders.map(p => [p.id, p.role]))
 const leaders = memberPresentation.leaders.map(p => teamMembers.find(member => member.id === p.id))
+;[leaders[0], leaders[1]] = [leaders[1], leaders[0]]
 const directory = teamMembers.filter(p => !p.groups.includes('Team Leaders') && !p.groups.includes('Advisors'))
 const previousPageOrder = [
   ...teamMembers.filter(p => p.groups.includes('Team Leaders')),
@@ -32,6 +33,13 @@ function element(tag, className, text) {
   const node = document.createElement(tag)
   if (className) node.className = className
   if (text !== undefined) node.textContent = text
+  return node
+}
+
+function nameLabel(node, person, avatar = false) {
+  node.textContent = `${person.name} `
+  const chinese = memberPresentation.chineseNames[person.id]
+  if (chinese) node.append(element('span', `team-name-chinese${avatar ? ' team-avatar-chinese' : ''}`, `(${chinese})`))
   return node
 }
 
@@ -118,7 +126,7 @@ function choose(index, animate = true, moveFocus = false) {
   deck.hidden = false
   profile.dataset.memberId = person.id
   page.querySelector('.team-profile-photo').replaceWith(Object.assign(photo(person, true), { className: 'member-photo team-profile-photo' }))
-  page.querySelector('#selected-member-name').textContent = person.name
+  nameLabel(page.querySelector('#selected-member-name'), person)
   page.querySelector('.team-profile-copy').replaceChildren(biography(person, true))
   page.querySelector('.team-contribution-host').replaceChildren(contribution(person))
   buttons.forEach((button, i) => {
@@ -189,7 +197,9 @@ function applyFilter(group) {
       if (event.pointerType === 'mouse') { hoveredPhoto = true; syncMotion() }
     })
     image.addEventListener('pointerleave', () => { hoveredPhoto = false; syncMotion() })
-    button.append(image, element('span', 'team-avatar-name', person.name))
+    const name = nameLabel(element('span', 'team-avatar-name'), person, true)
+    button.append(image, name)
+    if (leaderRoles.has(person.id)) button.append(element('span', 'team-avatar-leader', leaderRoles.get(person.id)))
     button.addEventListener('click', () => choose(index, true, true))
     stage.append(button)
     return button
@@ -239,7 +249,7 @@ function staticPerson(person, isAdvisor = false) {
     reading.setAttribute('aria-hidden', 'true')
     const back = element('button', 'team-advisor-return', '↶ Back to photo')
     back.type = 'button'
-    reading.append(back, element('h3', '', person.name), biography(person), contribution(person))
+    reading.append(back, nameLabel(element('h3'), person), biography(person), contribution(person))
     const close = () => {
       card.classList.remove('is-flipped')
       reading.inert = true
@@ -263,11 +273,11 @@ function staticPerson(person, isAdvisor = false) {
       openAdvisor = { close }
       back.focus({ preventScroll: true })
     })
-    front.append(button, element('h3', '', person.name))
+    front.append(button, nameLabel(element('h3'), person))
     rotor.append(front, reading)
     card.append(rotor)
   } else {
-    card.append(photo(person), element('h3', '', person.name))
+    card.append(photo(person), nameLabel(element('h3'), person))
     const note = memberPresentation.facultyNotes[person.id]
     if (note) card.append(element('p', 'team-faculty-note', note.text))
   }
@@ -276,9 +286,10 @@ function staticPerson(person, isAdvisor = false) {
 function renderPeople(list, id, advisors = false) {
   page.querySelector(id).replaceChildren(...list.map(person => staticPerson(person, advisors)))
 }
-renderPeople(teamFaculty.filter(p => p.groups.includes('PI')), '#pi-grid')
+const principalInvestigators = teamFaculty.filter(p => p.groups.includes('PI'))
+renderPeople([...principalInvestigators.slice(1), principalInvestigators[0]], '#pi-grid')
 renderPeople(teamFaculty.filter(p => p.groups.includes('Secondary PI')), '#secondary-pi-grid')
-renderPeople(teamMembers.filter(p => p.groups.includes('Advisors')), '#advisor-grid', true)
+renderPeople(memberPresentation.advisors.map(id => teamMembers.find(p => p.id === id)), '#advisor-grid', true)
 
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return

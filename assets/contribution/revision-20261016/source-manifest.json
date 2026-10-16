@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-16",
+  "source": "User-provided original PNG attachments; recovered from corresponding WeChat image cache after temporary PNG paths expired; no recompression or pixel changes",
+  "media": [
+    {
+      "sourceAttachment": "c2dd09d06ddc110f21a104b789735fe.png",
+      "cacheFile": "c2dd09d06ddc110f21a104b789735fe8.dat",
+      "file": "listen.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "4982082ca23a1db9555c485bd6e0b7dbc990039f1e31ca0edc4853b7ed3100ac"
+    },
+    {
+      "sourceAttachment": "9da1802bd858694a2002bb84e00cbbe.png",
+      "cacheFile": "9da1802bd858694a2002bb84e00cbbef.dat",
+      "file": "define.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "1ff8bfbca3f50352e8ac8ab5472227dd90c9bd3707c15d8177017439966e3046"
+    },
+    {
+      "sourceAttachment": "daca1093251720229c08a35f43c7d3d.png",
+      "cacheFile": "daca1093251720229c08a35f43c7d3da.dat",
+      "file": "build.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "27b8d34260b3b0ac232dd478ff5f2d8064833fe39d82ae7a78877c8236e986b3"
+    },
+    {
+      "sourceAttachment": "212f81bd8d78e41ff781a7bebcc3ef0.png",
+      "cacheFile": "212f81bd8d78e41ff781a7bebcc3ef0c.dat",
+      "file": "engineer.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "b575f30ba380f8d623f61d779d1b133dfdb535bbe8dbcc82c45f57c284b28050"
+    },
+    {
+      "sourceAttachment": "e36ef533c372bb37d0becd6bf3395ea.png",
+      "cacheFile": "e36ef533c372bb37d0becd6bf3395ead.dat",
+      "file": "extend.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "7dbd46bed2453236bc933dbe484e96b95b992dc121ec983015441ec9ff543bc8"
+    }
+  ]
+}

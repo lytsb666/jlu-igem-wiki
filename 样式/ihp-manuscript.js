@@ -1,3 +1,5 @@
+import { createCarousel } from './carousel.js'
+
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)')
 const trackButtons = [...document.querySelectorAll('[data-ihp-track]')]
 const trackPanels = [...document.querySelectorAll('[data-ihp-track-panel]')]
@@ -64,33 +66,29 @@ addEventListener('popstate', revealFragment)
 if (location.hash) revealFragment()
 
 document.querySelectorAll('[data-ihp-gallery]').forEach(gallery => {
-  const track = gallery.querySelector('.ihp-gallery__track')
-  const slides = [...track.children]
-  const previous = gallery.querySelector('[data-gallery-prev]')
-  const next = gallery.querySelector('[data-gallery-next]')
-  const position = gallery.querySelector('[data-gallery-position]')
-  const currentIndex = () => Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / (slides[0].offsetWidth + parseFloat(getComputedStyle(track).columnGap)))))
-  function update() {
-    const index = currentIndex()
-    position.textContent = `${index + 1} / ${slides.length}`
-    previous.disabled = index === 0
-    next.disabled = index === slides.length - 1
-  }
-  function move(offset) {
-    const index = Math.max(0, Math.min(slides.length - 1, currentIndex() + offset))
-    track.scrollTo({ left: slides[index].offsetLeft, behavior: reducedMotion.matches ? 'instant' : 'smooth' })
-  }
-  previous.addEventListener('click', () => move(-1))
-  next.addEventListener('click', () => move(1))
-  track.addEventListener('scroll', update, { passive: true })
-  track.addEventListener('keydown', event => {
-    if (event.target !== track || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return
-    event.preventDefault()
-    move(event.key === 'ArrowLeft' ? -1 : 1)
-  })
-  addEventListener('resize', update, { passive: true })
-  update()
+  gallery.querySelector('.ihp-gallery__controls')?.remove()
+  createCarousel(gallery, { track: gallery.querySelector('.ihp-gallery__track') })
 })
+
+// Category names and people are transcribed from the supplied Word table.
+const stakeholderData = document.querySelector('#ihp-stakeholder-data')
+const stakeholderReader = document.querySelector('#ihp-stakeholder-reader')
+if (stakeholderData && stakeholderReader) {
+  const categories = JSON.parse(stakeholderData.textContent)
+  const buttons = [...document.querySelectorAll('[data-stakeholder]')]
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const index = Number(button.dataset.stakeholder)
+    const category = categories[index]
+    if (!category) return
+    buttons.forEach(other => other.setAttribute('aria-pressed', String(Number(other.dataset.stakeholder) === index)))
+    stakeholderReader.querySelector('h4').textContent = category.label
+    stakeholderReader.querySelector('ul').replaceChildren(...category.people.map(person => {
+      const item = document.createElement('li')
+      item.textContent = person
+      return item
+    }))
+  }))
+}
 
 const lightbox = document.querySelector('.ihp-lightbox')
 const lightboxImage = lightbox?.querySelector('img')
@@ -99,7 +97,7 @@ document.querySelectorAll('[data-ihp-image]').forEach(link => {
     if (!lightbox || !lightboxImage || event.button !== 0 || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return
     event.preventDefault()
     lightboxImage.src = link.href
-    lightboxImage.alt = link.querySelector('img')?.alt || ''
+    lightboxImage.alt = link.querySelector('img')?.alt || link.getAttribute('aria-label') || ''
     lightbox.showModal()
   })
 })

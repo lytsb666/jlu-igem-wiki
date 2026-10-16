@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-16",
+  "source": "User-provided original PNG attachments; recovered from corresponding WeChat image cache after temporary PNG paths expired; no recompression or pixel changes",
+  "media": [
+    {
+      "sourceAttachment": "63b433af307923dbd531d50f5d2585d.png",
+      "cacheFile": "63b433af307923dbd531d50f5d2585de.dat",
+      "file": "measurement.png",
+      "width": 1678,
+      "height": 937,
+      "sha256": "8c8b6af8783cf19a4a156fd3249bde4c2ede3b10711d3d28de3d5d9720ba04f6"
+    },
+    {
+      "sourceAttachment": "e694f1e80fd2eddd6380bce296b3421.png",
+      "cacheFile": "e694f1e80fd2eddd6380bce296b34212.dat",
+      "file": "contribution.png",
+      "width": 1678,
+      "height": 937,
+      "sha256": "0f98b46df834d55f09a3431692453ee6ac6463dc5fbdc50a6d4355c25471a414"
+    }
+  ]
+}

@@ -143,7 +143,7 @@ if (calendarGrid && calendarTitle && calendarWeekdays && experimentCards.length)
 
   const firstMonth = Date.UTC(2026, 2, 1)
   const lastMonth = Date.UTC(2026, 8, 1)
-  const calendarMonth = new Date(firstMonth)
+  const calendarMonth = new Date(Date.UTC(2026, 6, 1))
   const previousMonthButton = document.querySelector('[data-calendar-prev]')
   const nextMonthButton = document.querySelector('[data-calendar-next]')
   const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' })

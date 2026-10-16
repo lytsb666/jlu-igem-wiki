@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-16",
+  "sources": [
+    {
+      "file": "10.15改动.docx",
+      "sha256": "8440d1ca00492b9ea7a022517567759100de8cc9a6dc389968d93872c4f22cfa",
+      "greenBlocks": []
+    },
+    {
+      "file": "result.标绿 改动主要集中在x.1还有6.3.1.docx",
+      "sha256": "8b7242eb6f92c31caf0512a69bd0b939b2a0971c00357eef8ba0e7603a224092",
+      "greenBlocks": [
+        3,
+        6,
+        8,
+        9,
+        55,
+        56,
+        103,
+        104,
+        146,
+        147,
+        189,
+        190,
+        214
+      ]
+    },
+    {
+      "file": "notebook.标黄+标绿.docx",
+      "sha256": "0a34f75a1098450f28759a218f8cd0b40f516128feb4e937f9161da3a63f5aef",
+      "greenBlocks": [
+        15,
+        178,
+        341,
+        486,
+        632
+      ]
+    },
+    {
+      "file": "24项活动反馈英文版.docx",
+      "sha256": "83d2ff32d6c79bb512811eccc46e1ee393a5c44f1cef1416f51745cb26650516",
+      "greenBlocks": []
+    },
+    {
+      "file": "user-manual-second-generation.pdf",
+      "sha256": "6f8752a32096fb2987dd4ba7a9e8585681246664c1f9e8cec79338a77ca16321"
+    },
+    {
+      "file": "sponsor.docx",
+      "sha256": "d9f97eb274bf5e4621dbc48fe000620734221ca2948d88e362a74d9b4ef2d0fd"
+    }
+  ],
+  "educationActivities": 24,
+  "greenNotebookParagraphs": 5,
+  "greenResultParagraphs": 13,
+  "manual": {
+    "path": "public/hardware-resources/user-manual-second-generation.pdf",
+    "pages": 5
+  },
+  "portrait": {
+    "member": "zhiyuan-jin",
+    "source": "10.15改动.docx / word/media/image11.jpeg",
+    "path": "assets/team-member/portraits/zhiyuan-jin-20261016.jpg"
+  },
+  "notes": "Green changes only for Result/Notebook; 10.15 change document applies to presentation; sponsor document supplies original footer media.",
+  "footerMedia": [
+    {
+      "file": "image1.png",
+      "sha256": "e6b0f61be6e542c55954505c678141916598acbf74ce63c77fba3e0c416b5f9a"
+    },
+    {
+      "file": "image10.png",
+      "sha256": "6a3557d99ff36f3a3e86994921d0dd308e441ff263d009167bb687069c742217"
+    },
+    {
+      "file": "image11.png",
+      "sha256": "4dee560f2095926f401dd47558f06f3b18a0640b307c347fcc5a53bc7d59cf21"
+    },
+    {
+      "file": "image12.png",
+      "sha256": "8ce23aac9ce9f4f7eef0e3b275404f8f9207e2ea6de150cd25e9f89832694c81"
+    },
+    {
+      "file": "image13.png",
+      "sha256": "3e83abcc206fe9957bda0f642457e9dac55639a343fb5f9e3be248da2016905a"
+    },
+    {
+      "file": "image2.png",
+      "sha256": "b40c34929937c2275fe495f05d645926178dfd8a042ef1d7d6edb69764a37617"
+    },
+    {
+      "file": "image3.png",
+      "sha256": "7aeb658e50fae922eae0c0cfca272131083eb4e37614a3f3ca86069675436fe6"
+    },
+    {
+      "file": "image4.png",
+      "sha256": "fae636f009f23dccce8972f0ab88b42c1db318f83d69d0e1d263e8236aa557b0"
+    },
+    {
+      "file": "image5.png",
+      "sha256": "95f17e7629877835d59060028cbc57495e460ad1b5dc4d8e31adec9d5a9bc62f"
+    },
+    {
+      "file": "image6.png",
+      "sha256": "bbc0f77873a12ed6cba1777d421dcd75a09f5f1ee9bd7c00f55bdd4c161fa2bc"
+    },
+    {
+      "file": "image7.png",
+      "sha256": "4b0ddb9d8c1933bfbe3f23db13749b87952dd1e99997840133c1d7346f1f6eee"
+    },
+    {
+      "file": "image8.png",
+      "sha256": "9b551ec898cff789a3c2831659d4aa64a778d1fc1c1a2d16425da6d2f8485cb8"
+    },
+    {
+      "file": "image9.png",
+      "sha256": "a25d01cdf57274c0b40614fb116b194aa760e86fda0d3a48dd699d9149ffc96b"
+    }
+  ]
+}
