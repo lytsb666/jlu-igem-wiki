@@ -1,0 +1,21 @@
+{
+  "source_document": "修改意见3.0.docx",
+  "source_sha256": "f8972ba3aaed3f952224a10f4e1d5221fbbf3d362391356a7e58bdb39606244d",
+  "assets": [
+    {
+      "source_part": "word/media/image5.png",
+      "file": "stakeholder-strategy.png",
+      "sha256": "2fcfc575567f8ef32a4001740233b69a935f675a9fecd5bc09a10fa666bd9e1c"
+    },
+    {
+      "source_part": "word/media/image4.jpeg",
+      "file": "overview-loop.jpeg",
+      "sha256": "ab127ce5cea4fe0e2701e8c8374af8ff6b11a8ee604bd1b0c9941716c82e1add"
+    },
+    {
+      "source_part": "word/media/image14.png",
+      "file": "stage-5-responsible-adoption.png",
+      "sha256": "4a6795e5f019f1e52ef18ed650bbbcff2156fbff775770951eb608748efcc561"
+    }
+  ]
+}

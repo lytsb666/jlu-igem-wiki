@@ -45,23 +45,31 @@ const pageRoles = {
 const pagePath = decodeURI(location.pathname).toLowerCase().replace(/\/+$/, '')
 const roleName = pageRoles[pagePath.endsWith('.html') ? pagePath : `${pagePath}.html`]
 if (roleName) {
+  const createPair = () => {
+    const names = Object.keys(roles)
+    const companion = names[(names.indexOf(roleName) + 5) % names.length]
+    createBackToTop(roleName)
+    createBackToTop(companion, true)
+  }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => createBackToTop(roleName), { once: true })
-  } else createBackToTop(roleName)
+    document.addEventListener('DOMContentLoaded', createPair, { once: true })
+  } else createPair()
 }
 
-function createBackToTop(name) {
+function createBackToTop(name, towardBottom = false) {
   const role = roles[name]
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)')
   const button = document.createElement('button')
   button.type = 'button'
-  button.className = 'wiki-back-to-top'
+  button.className = `wiki-back-to-top wiki-scroll-mascot${towardBottom ? ' wiki-jump-to-bottom' : ''}`
   button.dataset.mascot = name
   button.dataset.motion = role.motion
-  button.setAttribute('aria-label', 'Back to top')
-  button.title = 'Back to top'
+  const label = towardBottom ? 'Go to footer' : 'Back to top'
+  button.setAttribute('aria-label', label)
+  button.title = label
   button.hidden = true
   button.innerHTML = '<span class="wiki-back-to-top__scene" aria-hidden="true"><span class="wiki-back-to-top__art"></span><i></i><i></i><i></i></span><span class="wiki-back-to-top__arrow" aria-hidden="true">↑</span>'
+  if (towardBottom) button.querySelector('.wiki-back-to-top__arrow').textContent = '↓'
 
   const [x, y, width, height] = role.crop
   const art = button.querySelector('.wiki-back-to-top__art')
@@ -77,9 +85,10 @@ function createBackToTop(name) {
   let returning = false
   let returnTimer = 0
   const sceneRatio = height / width
-  const minimumSize = role.paired ? 52 : 44
+  const minimumSize = role.paired ? 26 : 24
   let renderedSize = 0
   let nearbyObstacles = []
+  let whitePanels = []
 
   // Reserve the entire button, including its arrow, focus ring and motion.
   // Reject content cards as well as text/media, even if their padding is empty.
@@ -116,7 +125,8 @@ function createBackToTop(name) {
 
   function measureObstacles(area) {
     if (obstaclesDirty) {
-      obstacles = [...document.querySelectorAll(obstacleSelector)].filter((element) => !button.contains(element))
+      obstacles = [...document.querySelectorAll(obstacleSelector)].filter((element) => !element.closest('.wiki-scroll-mascot'))
+      whitePanels = [...document.querySelectorAll('main section, main article, .edu-content, .ihp-content, .lab-content, .sw-content')]
       obstaclesDirty = false
     }
     nearbyObstacles = []
@@ -134,6 +144,7 @@ function createBackToTop(name) {
   }
 
   function areaIsEmpty(area) {
+    if (area.left < 2 || area.right > document.documentElement.clientWidth - 2) return false
     if (nearbyObstacles.some(rect => intersects(area, rect))) return false
 
     // Hit-test the canvas too: a new page-specific panel or decorative
@@ -144,7 +155,7 @@ function createBackToTop(name) {
         const py = area.top + vertical * (area.bottom - area.top)
         const hits = document.elementsFromPoint(px, py)
         for (const element of hits) {
-          if (button.contains(element) || element.id === 'igem-custom-cursor'
+          if (element.closest('.wiki-scroll-mascot') || element.id === 'igem-custom-cursor'
             || ['HTML', 'BODY', 'MAIN', 'FOOTER'].includes(element.tagName)) continue
           const style = getComputedStyle(element)
           if (style.visibility === 'hidden' || style.opacity === '0') continue
@@ -168,32 +179,60 @@ function createBackToTop(name) {
 
   function checkCorner() {
     frame = 0
-    if (returning && scrollY < 1) {
+    const atDestination = towardBottom
+      ? scrollY + innerHeight >= document.documentElement.scrollHeight - 2
+      : scrollY < 1
+    if (returning && atDestination) {
       returning = false
       clearTimeout(returnTimer)
     }
-    if (!imageReady || returning || scrollY < 240 || innerHeight < 320
+    if (!imageReady || returning || (towardBottom ? atDestination : scrollY < 240) || innerHeight < 320
       || document.body.classList.contains('loading-lock') || document.hidden || modalIsOpen()
       || (window.visualViewport && (visualViewport.scale > 1.05 || visualViewport.height < innerHeight - 100))) {
       hide()
       return
     }
     const placement = getComputedStyle(button)
-    const right = parseFloat(placement.right) || 16
+    // The used `right` value changes after positioning with `left`; reading it
+    // back would make the fallback drift or disappear when leaving an article.
+    const safeEdge = parseFloat(placement.getPropertyValue(towardBottom ? '--mascot-safe-left' : '--mascot-safe-right')) || 0
+    let edgeInset = Math.max(16, safeEdge)
     const bottom = parseFloat(placement.bottom) || 16
-    const safety = 6
+    const safety = 2
     const maximumSize = Math.min(role.paired ? 104 : 80, innerWidth * .24, innerHeight * .16)
+    // Find the outer white article panel crossing the lower reading area. Both
+    // controls grow outwards from its edges, instead of hugging the viewport.
+    if (obstaclesDirty) measureObstacles({ left: 0, right: innerWidth, top: innerHeight, bottom: innerHeight, width: innerWidth, height: 0 })
+    let panel = null
+    const readingLine = innerHeight - bottom - 60
+    for (const element of whitePanels) {
+      const rect = element.getBoundingClientRect()
+      if (rect.width < innerWidth * .25 || rect.top > readingLine || rect.bottom < readingLine) continue
+      const style = getComputedStyle(element)
+      const rgb = style.backgroundColor.match(/[\d.]+/g)?.map(Number)
+      if (style.visibility === 'hidden' || !rgb || rgb.slice(0, 3).some(channel => channel < 220) || (rgb[3] ?? 1) < .5) continue
+      if (!panel || rect.width > panel.width) panel = rect
+    }
+    const leftForSize = size => panel
+      ? (towardBottom ? panel.left - 4 - size : panel.right + 4)
+      : (towardBottom ? edgeInset : document.documentElement.clientWidth - edgeInset - size)
     const areaForSize = size => {
       const sceneHeight = Math.ceil(size * sceneRatio)
       const buttonHeight = sceneHeight + 20
       return {
-        left: document.documentElement.clientWidth - right - size - safety,
-        right: document.documentElement.clientWidth - right + safety,
+        left: leftForSize(size) - safety,
+        right: leftForSize(size) + size + safety,
         top: innerHeight - bottom - buttonHeight - safety,
         bottom: innerHeight - bottom + safety,
       }
     }
     measureObstacles(areaForSize(maximumSize))
+    if (!panel && !areaIsEmpty(areaForSize(minimumSize))) {
+      // A narrow footer gutter can still hold a small control near the edge.
+      // Verify that space with the same content and focus-ring safeguards.
+      edgeInset = Math.max(4, safeEdge)
+      measureObstacles(areaForSize(maximumSize))
+    }
     if (maximumSize < minimumSize || !areaIsEmpty(areaForSize(minimumSize))) { hide(); return }
     // Empty rectangles are nested at the same corner. Find the available size
     // continuously instead of choosing one of three preselected widths.
@@ -209,6 +248,9 @@ function createBackToTop(name) {
     renderedSize = size
     const sceneHeight = Math.ceil(size * sceneRatio)
     button.style.width = `${size}px`
+    button.style.setProperty('--mascot-control-size', `${size}px`)
+    button.style.left = `${leftForSize(size)}px`
+    button.style.right = 'auto'
     button.style.height = `${sceneHeight + 20}px`
     button.style.setProperty('--mascot-scene-height', `${sceneHeight}px`)
     button.hidden = false
@@ -228,7 +270,7 @@ function createBackToTop(name) {
     hide()
     const useKeyboard = event.detail === 0
     if (useKeyboard) {
-      const target = document.querySelector('h1, main')
+      const target = towardBottom ? document.querySelector('#site-footer, .site-footer') : document.querySelector('h1, main')
       if (target) {
         const previousTabindex = target.getAttribute('tabindex')
         target.setAttribute('tabindex', '-1')
@@ -239,7 +281,11 @@ function createBackToTop(name) {
         }, { once: true })
       }
     }
-    scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' })
+    const footer = document.querySelector('#site-footer, .site-footer')
+    const destination = towardBottom
+      ? (footer ? scrollY + footer.getBoundingClientRect().top : document.documentElement.scrollHeight)
+      : 0
+    scrollTo({ top: destination, behavior: reducedMotion.matches ? 'instant' : 'smooth' })
     clearTimeout(returnTimer)
     returnTimer = setTimeout(() => { returning = false; scheduleCheck() }, 1600)
   }
@@ -256,7 +302,7 @@ function createBackToTop(name) {
   window.visualViewport?.addEventListener('scroll', scheduleCheck)
   new ResizeObserver(scheduleCheck).observe(document.body)
   new MutationObserver((records) => {
-    const relevant = records.filter((record) => !button.contains(record.target))
+    const relevant = records.filter((record) => !record.target.closest?.('.wiki-scroll-mascot'))
     if (!relevant.length) return
     if (relevant.some((record) => record.type === 'childList')) obstaclesDirty = true
     scheduleCheck()

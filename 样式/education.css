@@ -1047,3 +1047,82 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
   :root:root body .edu-references a { overflow-wrap: anywhere !important; }
 }
 .edu-content #why-heart > .edu-intro-actions { display: flex; flex-flow: row wrap; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; box-sizing: border-box; margin: 0 0 28px; }
+/* All three audiences share the same photo-left / text-right activity layout. */
+.edu-content .activity-card,
+.edu-content .activity-card:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  overflow: clip;
+  border-right-width: 1px;
+  border-left: 5px solid var(--audience-color);
+}
+.edu-content .activity-card .activity-gallery {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 20px 8px 20px 20px;
+}
+.edu-content .activity-card .activity-card__body {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 24px;
+}
+.edu-content .activity-card .activity-media {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  box-sizing: border-box;
+  width: calc(100% - 28px);
+  min-height: 280px;
+  margin: 20px 8px 20px 20px;
+}
+.edu-content .activity-card .activity-gallery__photos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.edu-content .activity-card .activity-photo {
+  grid-column: auto;
+  flex: 0 0 auto;
+  border-radius: 12px;
+}
+.edu-content .activity-card .activity-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.edu-content .activity-card .activity-gallery > figcaption { margin-top: 10px; }
+.edu-content .activity-card .activity-toolkit { display: block; }
+.edu-content .activity-card .activity-toolkit__links {
+  width: 100%;
+  align-items: stretch;
+}
+.edu-content .activity-card .activity-toolkit__links > :is(.wiki-pdf-fold, a[href*="activity-plan.pdf"]) {
+  flex: 1 1 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 1050px) {
+  .edu-content .activity-card,
+  .edu-content .activity-card:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
+  .edu-content .activity-card .activity-gallery { grid-column: 1; grid-row: 1; padding: 18px 18px 0; }
+  .edu-content .activity-card .activity-media { width: calc(100% - 36px); margin: 18px 18px 0; }
+  .edu-content .activity-card .activity-card__body { grid-column: 1; grid-row: 2; padding: 22px 18px; }
+}
+
+/* Keep each visible pair of Open resources disclosure headers aligned. */
+@layer wiki-format {
+  :root:root body #resources :is(.resource-download-group, .gene-wars-guides) .wiki-pdf-fold > summary {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: var(--edu-resource-header-height, 0px) !important;
+  }
+}

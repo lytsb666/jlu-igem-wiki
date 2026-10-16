@@ -48,6 +48,12 @@
 .model-hardware-table table { width: 100%; border-collapse: collapse; }
 .model-hardware-table :is(th, td) { padding: 12px; border: 1px solid #dfcfbf; }
 .model-hardware-figure { width: min(100%, 780px); margin: 28px auto; padding: 0 !important; border: 0 !important; background: transparent !important; box-shadow: none !important; }
+/* Match the visible image frames, including Figure 17's existing crop window. */
+#hardware-model-figure-14 .model-hardware-figure__frame,
+#hardware-model-figure-15 .model-hardware-figure__frame { max-width: 677px; }
+#hardware-model-figure-3 .model-hardware-figure__frame,
+#hardware-model-figure-4 .model-hardware-figure__frame,
+#hardware-model-figure-7 .model-hardware-figure__frame { max-width: 473.64156px; }
 .model-hardware-figure__images { display: flex; align-items: flex-start; justify-content: center; gap: 16px; }
 .model-hardware-figure__frame {
   position: relative;

@@ -1,7 +1,23 @@
 // Standardize caption labels without flattening scientific markup or links.
-const captionSelector = 'figcaption,caption,[data-wiki-caption],[class*="table-caption"],[class*="figure-caption"]'
+const captionSelector = 'figcaption,caption,[data-wiki-caption],[class*="table-caption"],[class*="figure-caption"],.video-caption,[data-video-caption]'
+const videoSelector = 'video,iframe[src*="video.igem.org/videos/embed/"]'
 const labelPrefix = /^\s*(Figures?|Fig\.?|Tables?|图|表)\s*(?:(\d+(?:[-.]\d+)*[a-z]?)(?=\s|[.:：·|—–-]|$))?\s*[.:：·|—–-]?\s*/i
 const scopes = new Map()
+
+function removeVideoCaptions(main) {
+  const captions = new Set(main.querySelectorAll('.video-caption,[data-video-caption]'))
+  for (const video of main.querySelectorAll(videoSelector)) {
+    const figure = video.closest('figure')
+    const container = figure && !figure.querySelector('img,picture,svg,canvas')
+      ? figure : video.closest('.wiki-video-player,.home-promotion-player') || video
+    // Cover labels above and below the player, including sibling captions.
+    container.querySelectorAll(captionSelector).forEach(caption => captions.add(caption))
+    for (const sibling of [container.previousElementSibling, container.nextElementSibling]) {
+      if (sibling?.matches(captionSelector) && !sibling.querySelector('img,table,video,iframe')) captions.add(sibling)
+    }
+  }
+  captions.forEach(caption => caption.remove())
+}
 
 function textNodes(caption) {
   const walker = document.createTreeWalker(caption, NodeFilter.SHOW_TEXT)
@@ -37,7 +53,7 @@ function record(caption) {
 
 function format(captions) {
   const records = [...new Set(captions)]
-    .filter(caption => !caption.parentElement.closest(captionSelector))
+    .filter(caption => caption.isConnected && !caption.parentElement.closest(captionSelector))
     .map(record).filter(Boolean)
   // Reserve manuscript numbers before assigning labels to unnumbered captions.
   for (const {prefix, subject, state} of records) if (prefix?.[2]) {
@@ -72,8 +88,11 @@ function format(captions) {
 
 const main = document.querySelector('main')
 if (main) {
+  removeVideoCaptions(main)
   format(main.querySelectorAll(captionSelector))
   new MutationObserver(records => {
+    // Media and labels can also arrive after the shared scripts initialize.
+    if (records.some(({addedNodes}) => [...addedNodes].some(node => node instanceof Element))) removeVideoCaptions(main)
     const captions = new Set()
     for (const {target, addedNodes} of records) {
       if (target instanceof Element) {

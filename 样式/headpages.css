@@ -71,10 +71,12 @@
     display: block;
     margin: 0;
     font-weight: 700 !important;
-    font-style: italic !important;
+    font-style: normal !important;
     text-transform: none !important;
     letter-spacing: .02em !important;
   }
+  :root:root body .wiki-headpage .wiki-headpage__title > :is(p, span):first-child *,
+  :root:root body .team-hero-title p * { font-style: normal !important; }
   :root:root body .wiki-headpage .lab-cover-note {
     position: absolute !important;
     inset: auto clamp(24px, 4vw, 64px) 44px auto !important;
@@ -192,7 +194,7 @@
 @layer wiki-format {
   :root:root body .team-hero-title { left: clamp(24px, 6vw, 88px); bottom: 44px; max-width: calc(100% - 48px); font-style: italic !important; }
   :root:root body .team-hero-title :is(p, h1) { font-style: italic !important; text-transform: none !important; letter-spacing: .02em !important; }
-  :root:root body .team-hero-title p { font-weight: 700 !important; }
+  :root:root body .team-hero-title p { font-weight: 700 !important; font-style: normal !important; }
   @media (max-width: 680px) {
     :root:root body .team-hero-title { left: 20px; bottom: 24px; }
   }

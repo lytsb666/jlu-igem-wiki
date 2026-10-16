@@ -126,7 +126,7 @@ function choose(index, animate = true, moveFocus = false) {
   deck.hidden = false
   profile.dataset.memberId = person.id
   page.querySelector('.team-profile-photo').replaceWith(Object.assign(photo(person, true), { className: 'member-photo team-profile-photo' }))
-  nameLabel(page.querySelector('#selected-member-name'), person)
+  page.querySelector('#selected-member-name').textContent = person.name
   page.querySelector('.team-profile-copy').replaceChildren(biography(person, true))
   page.querySelector('.team-contribution-host').replaceChildren(contribution(person))
   buttons.forEach((button, i) => {

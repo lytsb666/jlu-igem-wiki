@@ -1,0 +1,170 @@
+[
+  {
+    "id": "image6",
+    "original": "assets/site-footer/revision-20261016/image6.png",
+    "originalSHA256": "bbc0f77873a12ed6cba1777d421dcd75a09f5f1ee9bd7c00f55bdd4c161fa2bc",
+    "restoredPNG": "image6.png",
+    "restoredSHA256": "eab4cd5e1700b883f6187c4f146f3feea5051125e2425d5070d2f3fde9d04b9d",
+    "size": [
+      2206,
+      713
+    ],
+    "sourceWindow": [
+      8,
+      205,
+      2198,
+      541
+    ],
+    "displaySize": [
+      591,
+      92
+    ],
+    "treatment": "restored Chinese wordmark only; original circular school seal preserved to retain its exact fine lettering/date",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the horizontal logo across the middle of the square source: green circular school emblem at left and the exact black calligraphic Chinese text 吉林大学公共卫生学院 at right. Preserve that entire emblem plus wordmark, and the small original lettering inside the emblem. Remove the huge empty white canvas above and below; keep the horizontal lockup."
+  },
+  {
+    "id": "image7",
+    "original": "assets/site-footer/revision-20261016/image7.png",
+    "originalSHA256": "4b0ddb9d8c1933bfbe3f23db13749b87952dd1e99997840133c1d7346f1f6eee",
+    "restoredPNG": "image7.png",
+    "restoredSHA256": "21183c484d22ee7b3cb47a2b6fc7a7a86cd6f562dbea270c52ec52a5b7eef27b",
+    "size": [
+      1254,
+      1254
+    ],
+    "sourceWindow": [
+      0,
+      0,
+      1247,
+      1246
+    ],
+    "displaySize": [
+      1104,
+      1106
+    ],
+    "treatment": "high-resolution restored alpha; exact original flat brand ink, no edge halos",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the complete blue circular Jilin University seal, including exact JILIN UNIVERSITY · CHINA, 1946, central symbol and Chinese 吉林大学. Preserve source blue and transparency. Remove jagged white edge halos; do not redesign the seal."
+  },
+  {
+    "id": "image9",
+    "original": "assets/site-footer/revision-20261016/image9.png",
+    "originalSHA256": "a25d01cdf57274c0b40614fb116b194aa760e86fda0d3a48dd699d9149ffc96b",
+    "restoredPNG": "image9.png",
+    "restoredSHA256": "72e55d0655d53dede415d668e2925bbafbafe55929af488287f3ec9f6d6c23c5",
+    "size": [
+      2167,
+      726
+    ],
+    "sourceWindow": [
+      64,
+      145,
+      2117,
+      545
+    ],
+    "displaySize": [
+      226,
+      47
+    ],
+    "treatment": "restored low-resolution school lockup; source dark-gray Chinese and light-gray English retained, English set as native SVG text",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the very low-resolution horizontal logo. Retain the green circular emblem on the left and exact Chinese 吉林大学生命科学学院 with English School of Life Sciences, Jilin University beneath. Preserve the source light/white lettering and green emblem so it works on a dark brown website; background truly transparent. Carefully recover original letter edges without adding words."
+  },
+  {
+    "id": "image10",
+    "original": "assets/site-footer/revision-20261016/image10.png",
+    "originalSHA256": "6a3557d99ff36f3a3e86994921d0dd308e441ff263d009167bb687069c742217",
+    "restoredPNG": "image10.png",
+    "restoredSHA256": "794fd82c5e42ef0581e46bd3e4f719472d1158616e7f6aa3a7a1a4dc972ff849",
+    "size": [
+      1778,
+      885
+    ],
+    "sourceWindow": [
+      178,
+      235,
+      1605,
+      645
+    ],
+    "displaySize": [
+      840,
+      236
+    ],
+    "treatment": "high-resolution restored alpha; exact original flat brand ink, no edge halos",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the original green UNIVERSITY OF ALBERTA horizontal lockup with green shield at left and original two-line uppercase wordmark at right. Keep exact original shade of green, arrangement and shield details. Remove canvas padding; preserve transparency."
+  },
+  {
+    "id": "image11",
+    "original": "assets/site-footer/revision-20261016/image11.png",
+    "originalSHA256": "4dee560f2095926f401dd47558f06f3b18a0640b307c347fcc5a53bc7d59cf21",
+    "restoredPNG": "image11.png",
+    "restoredSHA256": "f6b35de2f942023257834b0fbbfb2634c78b802cb21fb7598c58648803d948db",
+    "size": [
+      1548,
+      1016
+    ],
+    "sourceWindow": [
+      65,
+      100,
+      1512,
+      932
+    ],
+    "displaySize": [
+      747,
+      473
+    ],
+    "treatment": "restored two-color lettering, original red and gray palette, cleaned transparent edges",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the original DLAB logo: red D and gray LAB in their precise geometric connected shapes, with exact gray Chinese 大龙仪器 underneath. Preserve gray letters as gray, do not convert them to white. Remove only the white paper backdrop; keep red and gray colors and original two-row layout."
+  },
+  {
+    "id": "image12",
+    "original": "assets/site-footer/revision-20261016/image12.png",
+    "originalSHA256": "8ce23aac9ce9f4f7eef0e3b275404f8f9207e2ea6de150cd25e9f89832694c81",
+    "restoredPNG": "image12.png",
+    "restoredSHA256": "5a5ad90da58366e8573754161b22c90e0a50e1df61072dabf23473ff25386566",
+    "size": [
+      1254,
+      1254
+    ],
+    "sourceWindow": [
+      45,
+      328,
+      1201,
+      1000
+    ],
+    "displaySize": [
+      479,
+      286
+    ],
+    "treatment": "high-resolution restored alpha; exact original flat brand ink, no edge halos",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the original white 生工 registered-mark logo with white Sangon Biotech below. Remove the solid BLUE background entirely, leaving original WHITE logo strokes and wording on genuine transparency. Keep exact white letters, registered mark, spacing and the same two-line arrangement. Do not recolor the logo blue."
+  },
+  {
+    "id": "health-inspection",
+    "original": "assets/site-footer/revision-20261016-followup/health-inspection.png",
+    "originalSHA256": "8d9e1cd7da7c04cfa3e1e8723cbfce962f792e1f547917570d6d9187ffb06843",
+    "restoredPNG": "health-inspection.png",
+    "restoredSHA256": "b32bd1d4d993821d9d3f8cc71c7b088168a2d9f2875e045883802c79fdd24deb",
+    "size": [
+      1254,
+      1254
+    ],
+    "sourceWindow": [
+      137,
+      12,
+      1118,
+      1245
+    ],
+    "displaySize": [
+      725,
+      914
+    ],
+    "treatment": "restored transparent raster; original display aspect ratio",
+    "mode": "built-in image_gen.imagegen + native SVG display cleanup",
+    "prompt": "Edit the provided existing logo; this is fidelity-preserving high-resolution restoration, not a redesign. Remove compression noise, pixelation, halos and jagged edges, restoring clean sharp original strokes and exact original colors. Preserve ALL original lettering, spelling, symbols, proportions and layout exactly. Do not invent, stylize, modernize, replace fonts, add details or change the logo. Output only this one restored logo, large and crisp on a truly transparent background, with minimal outer padding. Remove only the surrounding paper/canvas background; retain internal white details that belong to the logo. No mockup, no shadow, no added text. The target is the entire navy-and-gold shield badge. Remove only white canvas OUTSIDE the shield; preserve white background INSIDE the shield plus all original illustrations. Preserve all text exactly: 吉林大学公共卫生学院, 卫生检验教研室, 1982, HEALTH INSPECTION. Keep microscope, globe, DNA, molecular illustrations, open book and complete shield geometry exactly as shown, with original navy/gold/light-blue palette."
+  }
+]

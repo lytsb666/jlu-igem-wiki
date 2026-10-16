@@ -1,5 +1,49 @@
 import { createCarousel } from './carousel.js';
 
+// Match the natural height of neighboring Open resources headers without
+// shortening titles or changing any PDF's expanded state.
+const resources = document.querySelector('#resources');
+if (resources) {
+  const lists = [...resources.querySelectorAll('.resource-download-group > ul, .gene-wars-guides > ul')];
+  let headerFrame = 0;
+  const alignResourceHeaders = () => {
+    headerFrame = 0;
+    const cards = lists.flatMap(list => [...list.children].map(card => ({
+      list, card, summary: card.querySelector('.wiki-pdf-fold > summary'),
+    })).filter(item => item.summary));
+    cards.forEach(({summary}) => summary.style.removeProperty('--edu-resource-header-height'));
+    const rows = new Map();
+    for (const {list, card, summary} of cards) {
+      if (!rows.has(list)) rows.set(list, new Map());
+      const top = Math.round(card.getBoundingClientRect().top);
+      const listRows = rows.get(list);
+      if (!listRows.has(top)) listRows.set(top, []);
+      listRows.get(top).push({summary, height: summary.getBoundingClientRect().height});
+    }
+    for (const listRows of rows.values()) for (const row of listRows.values()) {
+      if (row.length < 2) continue;
+      const height = Math.ceil(Math.max(...row.map(item => item.height)));
+      row.forEach(({summary}) => summary.style.setProperty('--edu-resource-header-height', `${height}px`));
+    }
+  };
+  const scheduleResourceHeaders = () => {
+    if (!headerFrame) headerFrame = requestAnimationFrame(alignResourceHeaders);
+  };
+  const widths = new WeakMap();
+  const resourceResize = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      const width = Math.round(entry.contentRect.width * 100) / 100;
+      if (widths.get(entry.target) === width) continue;
+      widths.set(entry.target, width);
+      scheduleResourceHeaders();
+    }
+  });
+  lists.forEach(list => resourceResize.observe(list));
+  new MutationObserver(scheduleResourceHeaders).observe(resources, {childList: true, subtree: true, characterData: true});
+  document.fonts.ready.then(scheduleResourceHeaders);
+  scheduleResourceHeaders();
+}
+
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const revealItems = [...document.querySelectorAll('.reveal:not(.is-visible)')];
@@ -106,13 +150,13 @@ document.querySelectorAll('.activity-card').forEach((card) => {
   if (media) media.dataset.photoCode = code;
 });
 
-// Replace continuous film strips and the feedback scroller with the same slideshow.
-document.querySelectorAll('.filmstrip__window').forEach(root => {
-  const track = root.querySelector('.filmstrip__track');
-  const originals = [...track.querySelector('.filmstrip__group').children];
-  track.replaceChildren(...originals);
-  root.removeAttribute('tabindex');
-  createCarousel(root, { track });
+// The three opening filmstrips retain their original continuous photo bands.
+// Activity-card photos stay visible in a static vertical stack. Their original
+// lightbox links and the separate feedback slideshow remain available.
+document.querySelectorAll('.activity-card .activity-photo img').forEach(image => {
+  const width = Number(image.getAttribute('width'));
+  const height = Number(image.getAttribute('height'));
+  if (width > 0 && height > 0) image.style.aspectRatio = `${width} / ${height}`;
 });
 const feedbackViewport = document.querySelector('.feedback-viewport');
 if (feedbackViewport) {

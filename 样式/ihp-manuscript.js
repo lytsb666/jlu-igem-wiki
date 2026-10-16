@@ -32,6 +32,8 @@ function revealTarget(target, scroll = true) {
   }
   const panel = target.closest('[data-ihp-track-panel]')
   if (panel) selectTrack(panel.dataset.ihpTrackPanel)
+  const stakeholderCard = target.closest('.ihp-stakeholder-card')
+  if (stakeholderCard) setStakeholderCard(stakeholderCard, true)
   for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
     if (ancestor.tagName === 'DETAILS') ancestor.open = true
   }
@@ -64,6 +66,25 @@ document.querySelectorAll('main .ihp-shell a[href^="#"], main .ihp-hero a[href^=
 addEventListener('hashchange', revealFragment)
 addEventListener('popstate', revealFragment)
 if (location.hash) revealFragment()
+
+function setStakeholderCard(card, expanded) {
+  card.classList.toggle('is-flipped', expanded)
+  const button = card.querySelector('.ihp-stakeholder-card__toggle')
+  const heading = card.querySelector('h4')
+  button.setAttribute('aria-expanded', String(expanded))
+  button.setAttribute('aria-label', `${heading.textContent}: ${expanded ? 'show front' : 'show details'}`)
+  card.querySelector('.ihp-stakeholder-card__front').setAttribute('aria-hidden', String(expanded))
+  card.querySelector('.ihp-stakeholder-card__back').setAttribute('aria-hidden', String(!expanded))
+}
+document.querySelectorAll('.ihp-stakeholder-card').forEach(card => {
+  const button = card.querySelector('.ihp-stakeholder-card__toggle')
+  button.addEventListener('click', () => setStakeholderCard(card, button.getAttribute('aria-expanded') !== 'true'))
+  button.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return
+    event.preventDefault()
+    setStakeholderCard(card, false)
+  })
+})
 
 document.querySelectorAll('[data-ihp-gallery]').forEach(gallery => {
   gallery.querySelector('.ihp-gallery__controls')?.remove()

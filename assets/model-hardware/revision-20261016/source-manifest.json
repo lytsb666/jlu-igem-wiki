@@ -1,0 +1,13 @@
+{
+  "source_document": "10.16.docx",
+  "source_sha256": "f63a5742b2a2677efc3ce5eaa6b7a4f69c69aca5a54cb2b8360e25fe0a1a69f1",
+  "media_part": "word/media/image3.png",
+  "output": "training-workflow.png",
+  "sha256": "5fd3345dbd5b76d69fb9a03bde86296e82cbaa11dd743055fc41cf9f9e1acea5",
+  "dimensions": [
+    1014,
+    239
+  ],
+  "use": "Model for Hardware Figure 2; displayed image and original-image link share the supplied unmodified PNG",
+  "preserved": "Prior image2.png remains unchanged and continues to supply Figures 3 and 7"
+}
