@@ -1,3 +1,5 @@
+**2026-10-16 首页倒计时线上修复**：上一轮版本已通过 [PR #9](https://github.com/lytsb666/jlu-igem-wiki/pull/9) 发布。用户反馈计时不动，并明确机器场景进入瞬间启动、3 倍速倒数。已复现原 IntersectionObserver 在相邻场景接触视口时报告零高度、真正进入时不再通知的漏触发；改用现有叙事时间线启动，数字直接显示，实际 10 分钟走完显示 30 分钟并循环，回滚不重置。本轮只修首页及相关记录，沿用本次网站修复的发布范围，不调整图注和其他待办。实施、边界回归及 PR／部署追踪见 [HOMEPAGE_COUNTDOWN_FIX_REVIEW_20261016.md](docs/HOMEPAGE_COUNTDOWN_FIX_REVIEW_20261016.md)，最新长期要求见全局第 24 节。
+
 **2026-10-16 当前版本上传／发布授权**：用户本轮要求把现在版本上传仓库并更新网站，范围包含下方连续各轮已完成的本地成果及 iHP 3.0；此前“仅本地／未上传”均为当时快照。按现有 PR 检查、merge commit 和已开启的 GitHub Actions 发布既有固定 Pages 项目，保留图注暂缓、独立 Summary 留空、缺真实 PDF 与白边仅方案的状态。范围、检查及实时追踪入口见 [RELEASE_CURRENT_REVIEW_20261016.md](docs/RELEASE_CURRENT_REVIEW_20261016.md)，不复用旧授权判断后续任务。
 
 **2026-10-16 iHP《修改意见3.0》（仅本地）**：按用户确认，80 处现有图注原样保留，统计清单存入仓库；其余完成米色正文框、三张翻卡、四步骤原图互动与分框／箭头、逆时针透明转盘、WHO 引文、九个标题框、65 个独立对话标签、统计图缩小、Stage 5 换图、照片去侧框、BioAI 补齐轮播及 CARES 标签。Overview 新图放 Project illustration，Interactive map 仍待补；删除 05 和 Stage 4 两个 PDF 待补框。原 Closing 按本次要求归入 Expanding，独立 Summary 空出待补，覆盖早期的整体暂缓。网页阅读文档仍缺实际文件路径，保留其余 16 个资源待补位置。最新见全局第 25 节、[IHP_REVISION_3_REVIEW_20261016.md](docs/IHP_REVISION_3_REVIEW_20261016.md) 和 [图注待办](docs/IHP_CAPTION_PENDING_20261016.md)；其他未提交成果保留，未上传或发布。

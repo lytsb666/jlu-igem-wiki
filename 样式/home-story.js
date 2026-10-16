@@ -82,24 +82,28 @@ if (story) {
   }
   display.append(face)
   workflowTimer.append(display)
+  const countdownDuration = 30 * 60
+  const countdownRate = 3
   let countdownStarted
+  let countdownText
   const drawCountdown = () => {
-    const elapsed = countdownStarted === undefined ? 0 : Math.floor((Date.now() - countdownStarted) / 1000) % 1800
-    const remaining = 1800 - elapsed
+    const elapsed = countdownStarted === undefined ? 0 : Math.floor((Date.now() - countdownStarted) * countdownRate / 1000) % countdownDuration
+    const remaining = countdownDuration - elapsed
     const text = `${String(Math.floor(remaining / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')}`
+    if (text === countdownText) return
+    countdownText = text
     if (countdown) countdown.textContent = text
     const value = text.replace(':', '')
     digits.forEach((paths, index) => paths.forEach((p, segment) => p.classList.toggle('is-lit', digitSegments[Number(value[index])].includes(String(segment)))))
   }
-  // Start as soon as the scene arrives, before its digital layer fades in.
-  const countdownObserver = new IntersectionObserver(entries => {
-    if (!entries.some(entry => entry.isIntersecting && entry.intersectionRect.height > 0)) return
+  // The story timeline owns arrival. An adjacent panel can stay at the exact
+  // viewport edge for a long hold, without another IntersectionObserver entry.
+  const startCountdown = () => {
+    if (countdownStarted !== undefined) return
     countdownStarted = Date.now()
     drawCountdown()
-    countdownObserver.disconnect()
-  })
-  countdownObserver.observe(workflowChapter)
-  setInterval(drawCountdown, 1000)
+    setInterval(drawCountdown, 100)
+  }
   drawCountdown()
   const workflowCaption = workflowChapter.querySelector('.workflow-caption')
   const workflowPathogens = [...workflowChapter.querySelectorAll('.workflow-pathogen')]
@@ -272,6 +276,7 @@ if (story) {
     }
 
     if (chapter === workflowChapter) {
+      if (isOnscreen && chapterReady.has(chapter)) startCountdown()
       const backgroundArrival = smoothstep(range(localProgress, .12, .34))
       chapter.style.setProperty('--workflow-background-brightness', (.66 + backgroundArrival * .34).toFixed(3))
       chapter.style.setProperty('--workflow-background-scale', String(reduce ? 1 : 1.045 - backgroundArrival * .045))
@@ -287,7 +292,8 @@ if (story) {
         layer.style.setProperty('--workflow-layer-scale', String(reduce ? 1 : .8 + resolved * .2))
         layer.style.setProperty('--workflow-layer-blur', (reduce ? 0 : (1 - resolved) * 8) + 'px')
       }
-      setWorkflowLayer(workflowTimer, smoothstep(range(localProgress, .28, .46)))
+      // The screen is live from arrival; it does not wait for a later scroll cue.
+      setWorkflowLayer(workflowTimer, 1)
       workflowPathogens.forEach((pathogen, index) => {
         const start = .62 + index * .045
         setWorkflowLayer(pathogen, smoothstep(range(localProgress, start, start + .12)))
