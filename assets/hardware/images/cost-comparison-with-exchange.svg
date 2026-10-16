@@ -178,7 +178,7 @@ L 663.774545 361.149688
     <text style="font-size: 12px; font-family: 'DejaVu Serif', 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook', 'Century Schoolbook L', 'Utopia', 'ITC Bookman', 'Bookman', 'Nimbus Roman No9 L', 'Times New Roman', 'Times', 'Palatino', 'Charter', serif; text-anchor: middle; fill: #6f4e37" x="375.548679" y="345.450827" transform="rotate(-0 375.548679 345.450827)">CNY 3,980</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 12px; font-family: 'DejaVu Serif', 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook', 'Century Schoolbook L', 'Utopia', 'ITC Bookman', 'Bookman', 'Nimbus Roman No9 L', 'Times New Roman', 'Times', 'Palatino', 'Charter', serif; text-anchor: middle; fill: #6f4e37" x="586.857965" y="46.936201" transform="rotate(-0 586.857965 46.936201)">CNY 158,300</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Serif', 'Bitstream Vera Serif', 'Computer Modern Roman', 'New Century Schoolbook', 'Century Schoolbook L', 'Utopia', 'ITC Bookman', 'Bookman', 'Nimbus Roman No9 L', 'Times New Roman', 'Times', 'Palatino', 'Charter', serif; text-anchor: middle; fill: #6f4e37" x="580" y="46.936201">CNY 158,300 (US$1 ≈ CNY 7)</text>
    </g>
   </g>
  </g>
@@ -187,5 +187,4 @@ L 663.774545 361.149688
    <rect x="87.322813" y="12.96" width="576.451733" height="348.189688"/>
   </clipPath>
  </defs>
- <g id="exchange-rate"><text x="105" y="34" fill="#6f4e37" style="font: 700 12px 'Times New Roman', Times, serif">US$1 ≈ CNY 7</text></g>
 </svg>

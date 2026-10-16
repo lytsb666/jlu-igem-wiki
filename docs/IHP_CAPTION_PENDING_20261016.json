@@ -1,0 +1,900 @@
+{
+  "status": "Deferred by user; no caption edits applied",
+  "page": "Eagagement/iHP.html",
+  "source_document_sha256": "f8972ba3aaed3f952224a10f4e1d5221fbbf3d362391356a7e58bdb39606244d",
+  "existing_captions_unchanged": 80,
+  "figures_without_caption": 24,
+  "captions": [
+    {
+      "record": 1,
+      "context": "From Questions to Decisions: How Human Practices Shaped ByeGerm",
+      "source_text": "Five questions that shaped the Human Practices journey",
+      "source_html": "<figcaption>Five questions that shaped the Human Practices journey</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image7.jpeg"
+      ]
+    },
+    {
+      "record": 2,
+      "context": "Step 1  Building the Stakeholder Map",
+      "source_text": "Stakeholder relationships across three circles",
+      "source_html": "<figcaption>Stakeholder relationships across three circles</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image10.jpeg"
+      ]
+    },
+    {
+      "record": 3,
+      "context": "Step 2 Mapping the Power-Interest Matrix to Establish Management Priorities and Strategic Focus",
+      "source_text": "Power–interest matrix of the project stakeholders",
+      "source_html": "<figcaption>Power–interest matrix of the project stakeholders</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image8.png"
+      ]
+    },
+    {
+      "record": 4,
+      "context": "C.A.R.E.S. Ethical Evaluation Framework",
+      "source_text": "C.A.R.E.S. Ethical Evaluation Framework",
+      "source_html": "<figcaption>C.A.R.E.S. Ethical Evaluation Framework</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image4.png"
+      ]
+    },
+    {
+      "record": 5,
+      "context": "Public outreach and questionnaire",
+      "source_text": "Listening to the Public — activity photograph",
+      "source_html": "<figcaption>Listening to the Public — activity photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image18.jpeg"
+      ]
+    },
+    {
+      "record": 6,
+      "context": "Public outreach and questionnaire",
+      "source_text": "Listening to the Public — questionnaire format",
+      "source_html": "<figcaption>Listening to the Public — questionnaire format</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image19.jpeg"
+      ]
+    },
+    {
+      "record": 7,
+      "context": "Public outreach and participant responses",
+      "source_text": "Listening to the Public — activity photograph",
+      "source_html": "<figcaption>Listening to the Public — activity photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image20.jpeg"
+      ]
+    },
+    {
+      "record": 8,
+      "context": "Public outreach and participant responses",
+      "source_text": "Listening to the Public — participant responses",
+      "source_html": "<figcaption>Listening to the Public — participant responses</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image21.jpeg"
+      ]
+    },
+    {
+      "record": 9,
+      "context": "2 Random Interviews at the Third Hospital of Harbin Medical University",
+      "source_text": "Random Interviews at the Third Hospital of Harbin Medical University — photograph",
+      "source_html": "<figcaption>Random Interviews at the Third Hospital of Harbin Medical University — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image16.jpeg"
+      ]
+    },
+    {
+      "record": 10,
+      "context": "2 Random Interviews at the Third Hospital of Harbin Medical University",
+      "source_text": "Random Interviews at the Third Hospital of Harbin Medical University — photograph",
+      "source_html": "<figcaption>Random Interviews at the Third Hospital of Harbin Medical University — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image17.jpeg"
+      ]
+    },
+    {
+      "record": 11,
+      "context": "2 Random Interviews at the Third Hospital of Harbin Medical University",
+      "source_text": "Random Interviews at the Third Hospital of Harbin Medical University — photograph",
+      "source_html": "<figcaption>Random Interviews at the Third Hospital of Harbin Medical University — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image18.jpeg"
+      ]
+    },
+    {
+      "record": 12,
+      "context": "3 Dialogue with Nursing Home Care Workers and Residents",
+      "source_text": "Dialogue with Nursing Home Care Workers and Residents — photograph",
+      "source_html": "<figcaption>Dialogue with Nursing Home Care Workers and Residents — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image19.jpeg"
+      ]
+    },
+    {
+      "record": 13,
+      "context": "3 Dialogue with Nursing Home Care Workers and Residents",
+      "source_text": "Dialogue with Nursing Home Care Workers and Residents — photograph",
+      "source_html": "<figcaption>Dialogue with Nursing Home Care Workers and Residents — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image20.jpeg"
+      ]
+    },
+    {
+      "record": 14,
+      "context": "Iteration",
+      "source_text": "Dialogue with Nursing Home Care Workers and Residents — photograph",
+      "source_html": "<figcaption>Dialogue with Nursing Home Care Workers and Residents — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image21.jpeg"
+      ]
+    },
+    {
+      "record": 15,
+      "context": "Iteration",
+      "source_text": "Dialogue with Nursing Home Care Workers and Residents — photograph",
+      "source_html": "<figcaption>Dialogue with Nursing Home Care Workers and Residents — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image22.jpeg"
+      ]
+    },
+    {
+      "record": 16,
+      "context": "4 Dialogue with Kindergarten Teachers and Children",
+      "source_text": "Dialogue with Kindergarten Teachers and Children — photograph",
+      "source_html": "<figcaption>Dialogue with Kindergarten Teachers and Children — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image23.jpeg"
+      ]
+    },
+    {
+      "record": 17,
+      "context": "4 Dialogue with Kindergarten Teachers and Children",
+      "source_text": "Dialogue with Kindergarten Teachers and Children — photograph",
+      "source_html": "<figcaption>Dialogue with Kindergarten Teachers and Children — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image24.jpeg"
+      ]
+    },
+    {
+      "record": 18,
+      "context": "5 Dialogue with Dean Juan Li",
+      "source_text": "Dialogue with Dean Juan Li — photograph",
+      "source_html": "<figcaption>Dialogue with Dean Juan Li — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image26.png"
+      ]
+    },
+    {
+      "record": 19,
+      "context": "1 Roundtable with Public Health and Disease Control Experts",
+      "source_text": "Roundtable with Public Health and Disease Control Experts — photograph",
+      "source_html": "<figcaption>Roundtable with Public Health and Disease Control Experts — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image27.jpeg"
+      ]
+    },
+    {
+      "record": 20,
+      "context": "1 Roundtable with Public Health and Disease Control Experts",
+      "source_text": "Roundtable with Public Health and Disease Control Experts — photograph",
+      "source_html": "<figcaption>Roundtable with Public Health and Disease Control Experts — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image28.jpeg"
+      ]
+    },
+    {
+      "record": 21,
+      "context": "3.1 Respiratory Medicine: Dr. Junyao Li",
+      "source_text": "1 Respiratory Medicine: Dr. Junyao Li — photograph",
+      "source_html": "<figcaption>1 Respiratory Medicine: Dr. Junyao Li — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image30.jpeg"
+      ]
+    },
+    {
+      "record": 22,
+      "context": "3.2 Laboratory Medicine: Dr. Huimin Li",
+      "source_text": "2 Laboratory Medicine: Dr. Huimin Li — photograph",
+      "source_html": "<figcaption>2 Laboratory Medicine: Dr. Huimin Li — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image31.jpeg"
+      ]
+    },
+    {
+      "record": 23,
+      "context": "3.3 Infectious Diseases: Dr. Shangwei Ji",
+      "source_text": "3 Infectious Diseases: Dr. Shangwei Ji — photograph",
+      "source_html": "<figcaption>3 Infectious Diseases: Dr. Shangwei Ji — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image32.jpeg"
+      ]
+    },
+    {
+      "record": 24,
+      "context": "3.4 Pediatrics: Dr. Xin Tian",
+      "source_text": "4 Pediatrics: Dr. Xin Tian — photograph",
+      "source_html": "<figcaption>4 Pediatrics: Dr. Xin Tian — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image33.jpeg"
+      ]
+    },
+    {
+      "record": 25,
+      "context": "3.5 Geriatric Medicine: Dr. Lihong Huang",
+      "source_text": "5 Geriatric Medicine: Dr. Lihong Huang — photograph",
+      "source_html": "<figcaption>5 Geriatric Medicine: Dr. Lihong Huang — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image34.jpeg"
+      ]
+    },
+    {
+      "record": 26,
+      "context": "1 Interview with Professor X. Chris Le of the University of Alberta",
+      "source_text": "Interview with Professor X. Chris Le of the University of Alberta — photograph",
+      "source_html": "<figcaption>Interview with Professor X. Chris Le of the University of Alberta — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image35.jpeg"
+      ]
+    },
+    {
+      "record": 27,
+      "context": "2 Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+      "source_text": "Interview with Professor Tianyi Zhao of the Harbin Institute of Technology — photograph",
+      "source_html": "<figcaption>Interview with Professor Tianyi Zhao of the Harbin Institute of Technology — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image36.jpeg"
+      ]
+    },
+    {
+      "record": 28,
+      "context": "2 Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+      "source_text": "Interview with Professor Tianyi Zhao of the Harbin Institute of Technology — photograph",
+      "source_html": "<figcaption>Interview with Professor Tianyi Zhao of the Harbin Institute of Technology — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image37.jpeg"
+      ]
+    },
+    {
+      "record": 29,
+      "context": "3 Interview with Professor Xingfang Li of the University of Alberta",
+      "source_text": "Discussion with Professor Xing-Fang Li at the conference",
+      "source_html": "<figcaption>Discussion with Professor Xing-Fang Li at the conference</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image12.jpeg"
+      ]
+    },
+    {
+      "record": 30,
+      "context": "3 Interview with Professor Xingfang Li of the University of Alberta",
+      "source_text": "Interview with Professor Xing-Fang Li",
+      "source_html": "<figcaption>Interview with Professor Xing-Fang Li</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image11.jpeg"
+      ]
+    },
+    {
+      "record": 31,
+      "context": "4 Interview with Professor Tsan-Yuk Lam of the University of Hong Kong",
+      "source_text": "Interview with Professor Tsan-Yuk Lam of the University of Hong Kong — photograph",
+      "source_html": "<figcaption>Interview with Professor Tsan-Yuk Lam of the University of Hong Kong — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image39.png"
+      ]
+    },
+    {
+      "record": 32,
+      "context": "Iteration",
+      "source_text": "Dry-Lab Workflow for Target Optimization",
+      "source_html": "<figcaption>Dry-Lab Workflow for Target Optimization</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image22.png"
+      ]
+    },
+    {
+      "record": 33,
+      "context": "1 Interview with Professor Zheng Hu of the Harbin Institute of Technology",
+      "source_text": "Interview with Professor Zheng Hu of the Harbin Institute of Technology — photograph",
+      "source_html": "<figcaption>Interview with Professor Zheng Hu of the Harbin Institute of Technology — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image41.jpeg"
+      ]
+    },
+    {
+      "record": 34,
+      "context": "2 Interview with Professor Yingtao Zhang of the Harbin Institute of Technology",
+      "source_text": "Interview with Professor Yingtao Zhang of the Harbin Institute of Technology — photograph",
+      "source_html": "<figcaption>Interview with Professor Yingtao Zhang of the Harbin Institute of Technology — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image42.jpeg"
+      ]
+    },
+    {
+      "record": 35,
+      "context": "3 Collecting Feedback from Nursing Homes and Kindergartens",
+      "source_text": "Collecting Feedback from Nursing Homes and Kindergartens — photograph",
+      "source_html": "<figcaption>Collecting Feedback from Nursing Homes and Kindergartens — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image45.jpeg"
+      ]
+    },
+    {
+      "record": 36,
+      "context": "3 Collecting Feedback from Nursing Homes and Kindergartens",
+      "source_text": "Collecting Feedback from Nursing Homes and Kindergartens — photograph",
+      "source_html": "<figcaption>Collecting Feedback from Nursing Homes and Kindergartens — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image46.jpeg"
+      ]
+    },
+    {
+      "record": 37,
+      "context": "3 Collecting Feedback from Nursing Homes and Kindergartens",
+      "source_text": "Collecting Feedback from Nursing Homes and Kindergartens — photograph",
+      "source_html": "<figcaption>Collecting Feedback from Nursing Homes and Kindergartens — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image47.jpeg"
+      ]
+    },
+    {
+      "record": 38,
+      "context": "3 Collecting Feedback from Nursing Homes and Kindergartens",
+      "source_text": "Collecting Feedback from Nursing Homes and Kindergartens — photograph",
+      "source_html": "<figcaption>Collecting Feedback from Nursing Homes and Kindergartens — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image48.jpeg"
+      ]
+    },
+    {
+      "record": 39,
+      "context": "4 Interview with Professor Ying Mou of Zhejiang University",
+      "source_text": "Interview with Professor Ying Mou of Zhejiang University — photograph",
+      "source_html": "<figcaption>Interview with Professor Ying Mou of Zhejiang University — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image49.png"
+      ]
+    },
+    {
+      "record": 40,
+      "context": "1. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+      "source_text": "The “Auditory and Tactile” Blind-Testing Box for Older Adults — photograph",
+      "source_html": "<figcaption>The “Auditory and Tactile” Blind-Testing Box for Older Adults — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image52.jpeg"
+      ]
+    },
+    {
+      "record": 41,
+      "context": "1. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+      "source_text": "The “Auditory and Tactile” Blind-Testing Box for Older Adults — photograph",
+      "source_html": "<figcaption>The “Auditory and Tactile” Blind-Testing Box for Older Adults — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image53.jpeg"
+      ]
+    },
+    {
+      "record": 42,
+      "context": "1. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+      "source_text": "The “Auditory and Tactile” Blind-Testing Box for Older Adults — photograph",
+      "source_html": "<figcaption>The “Auditory and Tactile” Blind-Testing Box for Older Adults — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image54.jpeg"
+      ]
+    },
+    {
+      "record": 43,
+      "context": "2. The “Monster Capture” Sticker Wall for Children",
+      "source_text": "The “Monster Capture” Sticker Wall for Children — photograph",
+      "source_html": "<figcaption>The “Monster Capture” Sticker Wall for Children — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image55.jpeg"
+      ]
+    },
+    {
+      "record": 44,
+      "context": "2. The “Monster Capture” Sticker Wall for Children",
+      "source_text": "The “Monster Capture” Sticker Wall for Children — photograph",
+      "source_html": "<figcaption>The “Monster Capture” Sticker Wall for Children — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image56.jpeg"
+      ]
+    },
+    {
+      "record": 45,
+      "context": "3. The Retrospective Empathy Survey for Patients",
+      "source_text": "The Retrospective Empathy Survey for Patients — photograph",
+      "source_html": "<figcaption>The Retrospective Empathy Survey for Patients — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image58.jpeg"
+      ]
+    },
+    {
+      "record": 46,
+      "context": "Interview with Department Head Xie Linshen",
+      "source_text": "Interview with Department Head Xie Linshen — photograph",
+      "source_html": "<figcaption>Interview with Department Head Xie Linshen — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image60.jpeg"
+      ]
+    },
+    {
+      "record": 47,
+      "context": "Meeting with Zhang Jinming of Guangzhou Zhikang Medical",
+      "source_text": "Meeting with Zhang Jinming of Guangzhou Zhikang Medical — photograph",
+      "source_html": "<figcaption>Meeting with Zhang Jinming of Guangzhou Zhikang Medical — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image61.jpeg"
+      ]
+    },
+    {
+      "record": 48,
+      "context": "Context",
+      "source_text": "Age-Adapted Education — dialogue with an older adult",
+      "source_html": "<figcaption>Age-Adapted Education — dialogue with an older adult</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261016/image9.jpeg"
+      ]
+    },
+    {
+      "record": 49,
+      "context": "Context",
+      "source_text": "Children — reducing unfamiliarity and fear of the device",
+      "source_html": "<figcaption>Children — reducing unfamiliarity and fear of the device</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image63.jpeg"
+      ]
+    },
+    {
+      "record": 50,
+      "context": "Dialogue",
+      "source_text": "2 Respiratory Virus Testing Strategy Cards — photograph",
+      "source_html": "<figcaption>2 Respiratory Virus Testing Strategy Cards — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image65.jpeg"
+      ]
+    },
+    {
+      "record": 51,
+      "context": "Context",
+      "source_text": "Device model and interactive experience",
+      "source_html": "<figcaption>Device model and interactive experience</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image66.jpeg"
+      ]
+    },
+    {
+      "record": 52,
+      "context": "Context",
+      "source_text": "Public health education in a county-level classroom",
+      "source_html": "<figcaption>Public health education in a county-level classroom</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image67.jpeg"
+      ]
+    },
+    {
+      "record": 53,
+      "context": "A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital",
+      "source_text": "A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital — photograph",
+      "source_html": "<figcaption>A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image72.jpeg"
+      ]
+    },
+    {
+      "record": 54,
+      "context": "1 Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+      "source_text": "Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children — photograph",
+      "source_html": "<figcaption>Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image74.jpeg"
+      ]
+    },
+    {
+      "record": 55,
+      "context": "2 Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+      "source_text": "Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities — photograph",
+      "source_html": "<figcaption>Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image75.jpeg"
+      ]
+    },
+    {
+      "record": 56,
+      "context": "2 Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+      "source_text": "Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities — photograph",
+      "source_html": "<figcaption>Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image76.jpeg"
+      ]
+    },
+    {
+      "record": 57,
+      "context": "2 Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+      "source_text": "Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities — photograph",
+      "source_html": "<figcaption>Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image77.jpeg"
+      ]
+    },
+    {
+      "record": 58,
+      "context": "3 Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults",
+      "source_text": "Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults — photograph",
+      "source_html": "<figcaption>Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image78.jpeg"
+      ]
+    },
+    {
+      "record": 59,
+      "context": "4 Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments",
+      "source_text": "Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments — photograph",
+      "source_html": "<figcaption>Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image79.jpeg"
+      ]
+    },
+    {
+      "record": 60,
+      "context": "5 A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+      "source_text": "A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World — photograph",
+      "source_html": "<figcaption>A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image80.jpeg"
+      ]
+    },
+    {
+      "record": 61,
+      "context": "5 A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+      "source_text": "A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World — photograph",
+      "source_html": "<figcaption>A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image81.jpeg"
+      ]
+    },
+    {
+      "record": 62,
+      "context": "6 Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+      "source_text": "Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health — photograph",
+      "source_html": "<figcaption>Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image82.jpeg"
+      ]
+    },
+    {
+      "record": 63,
+      "context": "6 Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+      "source_text": "Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health — photograph",
+      "source_html": "<figcaption>Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image83.jpeg"
+      ]
+    },
+    {
+      "record": 64,
+      "context": "7 Breaking Gender Bias in Research: “Her Power” — Face to Face with Women Scientists, Envisioning the Future of Synthetic Biology",
+      "source_text": "Dean Juan Li",
+      "source_html": "<figcaption>Dean Juan Li</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image26.png"
+      ]
+    },
+    {
+      "record": 65,
+      "context": "7 Breaking Gender Bias in Research: “Her Power” — Face to Face with Women Scientists, Envisioning the Future of Synthetic Biology",
+      "source_text": "Professor Xingfang Li",
+      "source_html": "<figcaption>Professor Xingfang Li</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image38.jpeg"
+      ]
+    },
+    {
+      "record": 66,
+      "context": "7 Breaking Gender Bias in Research: “Her Power” — Face to Face with Women Scientists, Envisioning the Future of Synthetic Biology",
+      "source_text": "Professor Ying Mou",
+      "source_html": "<figcaption>Professor Ying Mou</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image49.png"
+      ]
+    },
+    {
+      "record": 67,
+      "context": "2 CCiC & APIc Conferences",
+      "source_text": "CCiC — photograph",
+      "source_html": "<figcaption>CCiC — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image84.jpeg"
+      ]
+    },
+    {
+      "record": 68,
+      "context": "2 CCiC & APIc Conferences",
+      "source_text": "CCiC — photograph",
+      "source_html": "<figcaption>CCiC — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image85.jpeg"
+      ]
+    },
+    {
+      "record": 69,
+      "context": "2 CCiC & APIc Conferences",
+      "source_text": "CCiC — photograph",
+      "source_html": "<figcaption>CCiC — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image86.jpeg"
+      ]
+    },
+    {
+      "record": 70,
+      "context": "2 CCiC & APIc Conferences",
+      "source_text": "CCiC — photograph",
+      "source_html": "<figcaption>CCiC — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image87.jpeg"
+      ]
+    },
+    {
+      "record": 71,
+      "context": "2 CCiC & APIc Conferences",
+      "source_text": "APIc — photograph",
+      "source_html": "<figcaption>APIc — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image88.jpeg"
+      ]
+    },
+    {
+      "record": 72,
+      "context": "2 CCiC & APIc Conferences",
+      "source_text": "APIc — photograph",
+      "source_html": "<figcaption>APIc — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image89.jpeg"
+      ]
+    },
+    {
+      "record": 73,
+      "context": "1 BioAI Agent Software Exchange & Summer Dry Lab Camp",
+      "source_text": "BioAI Agent Software Exchange & Summer Dry Lab Camp — photograph",
+      "source_html": "<figcaption>BioAI Agent Software Exchange &amp; Summer Dry Lab Camp — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image90.jpeg"
+      ]
+    },
+    {
+      "record": 74,
+      "context": "1 BioAI Agent Software Exchange & Summer Dry Lab Camp",
+      "source_text": "BioAI Agent Software Exchange & Summer Dry Lab Camp — photograph",
+      "source_html": "<figcaption>BioAI Agent Software Exchange &amp; Summer Dry Lab Camp — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image93.jpeg"
+      ]
+    },
+    {
+      "record": 75,
+      "context": "1 BioAI Agent Software Exchange & Summer Dry Lab Camp",
+      "source_text": "BioAI Agent Software Exchange & Summer Dry Lab Camp — photograph",
+      "source_html": "<figcaption>BioAI Agent Software Exchange &amp; Summer Dry Lab Camp — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image94.jpeg"
+      ]
+    },
+    {
+      "record": 76,
+      "context": "2 Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+      "source_text": "Dialogue with ZJUT-China at the Bio-manufacturing Expo — photograph",
+      "source_html": "<figcaption>Dialogue with ZJUT-China at the Bio-manufacturing Expo — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image95.jpeg"
+      ]
+    },
+    {
+      "record": 77,
+      "context": "2 Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+      "source_text": "Dialogue with ZJUT-China at the Bio-manufacturing Expo — photograph",
+      "source_html": "<figcaption>Dialogue with ZJUT-China at the Bio-manufacturing Expo — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image96.jpeg"
+      ]
+    },
+    {
+      "record": 78,
+      "context": "2 Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+      "source_text": "Dialogue with ZJUT-China at the Bio-manufacturing Expo — photograph",
+      "source_html": "<figcaption>Dialogue with ZJUT-China at the Bio-manufacturing Expo — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image97.jpeg"
+      ]
+    },
+    {
+      "record": 79,
+      "context": "3 Social Inclusion (Hike with Love · Embrace the Future)",
+      "source_text": "Social Inclusion (Hike with Love · Embrace the Future) — photograph",
+      "source_html": "<figcaption>Social Inclusion (Hike with Love · Embrace the Future) — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image100.jpeg"
+      ]
+    },
+    {
+      "record": 80,
+      "context": "3 Social Inclusion (Hike with Love · Embrace the Future)",
+      "source_text": "Social Inclusion (Hike with Love · Embrace the Future) — photograph",
+      "source_html": "<figcaption>Social Inclusion (Hike with Love · Embrace the Future) — photograph</figcaption>",
+      "images": [
+        "../assets/human-practice/revision-20261015/image101.jpeg"
+      ]
+    }
+  ],
+  "uncaptioned_figures": [
+    {
+      "context": "Overview",
+      "images": [
+        "../assets/human-practice/revision-3-20261016/overview-loop.jpeg"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Reflection Cycle",
+      "images": [
+        "../assets/human-practice/revision-20261016/image13.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Public outreach and participant responses",
+      "images": [
+        "../assets/human-practice/revision-20261015/image11.jpeg"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Reflection",
+      "images": [
+        "../assets/human-practice/revision-20261015/image13.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Reflection",
+      "images": [
+        "../assets/human-practice/revision-20261015/image14.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Reflection",
+      "images": [
+        "../assets/human-practice/revision-20261015/image15.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image25.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "2 Interview with Deputy Dean Changgui Kou of the School of Public Health at Jilin University",
+      "images": [
+        "../assets/human-practice/revision-20261015/image29.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image43.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image44.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image50.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image51.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "2. The “Monster Capture” Sticker Wall for Children",
+      "images": [
+        "../assets/human-practice/revision-20261015/image57.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "From Responsible Adoption to Sustainable Translation",
+      "images": [
+        "../assets/human-practice/revision-3-20261016/stage-5-responsible-adoption.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image64.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "1.1 Needs × Technology × Institutions",
+      "images": [
+        "../assets/human-practice/revision-20261015/image68.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "1.2 Where Do We Start?",
+      "images": [
+        "../assets/human-practice/revision-20261015/image69.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "From an Assay Reaction to a Minimum Viable System",
+      "images": [
+        "../assets/human-practice/revision-20261015/image70.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "3 | What evidence allows us to move forward?",
+      "images": [
+        "../assets/human-practice/revision-20261015/image71.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "Iteration",
+      "images": [
+        "../assets/human-practice/revision-20261015/image73.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "1 BioAI Agent Software Exchange & Summer Dry Lab Camp",
+      "images": [
+        "../assets/human-practice/revision-20261015/image91.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "1 BioAI Agent Software Exchange & Summer Dry Lab Camp",
+      "images": [
+        "../assets/human-practice/revision-20261015/image92.jpeg"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "1 iGEM New Team Development and Knowledge Transfer Handbook (Jointly compiled with JLU-FBH)",
+      "images": [
+        "../assets/human-practice/revision-20261015/image98.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    },
+    {
+      "context": "2 AI × Synthetic Biology Collaborative Science Communication Handbook",
+      "images": [
+        "../assets/human-practice/revision-20261015/image99.png"
+      ],
+      "note": "Existing uncaptioned illustration; whether to add a caption remains unconfirmed."
+    }
+  ],
+  "new_interactive_diagram_without_caption": "../assets/human-practice/revision-3-20261016/stakeholder-strategy.png"
+}

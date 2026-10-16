@@ -81,6 +81,31 @@
     text-decoration-thickness: 1.5px !important;
     text-underline-offset: .18em !important;
   }
+  :root:root body :is(main,footer) a.wiki-boxed-link,
+  :root:root body :is(main,footer) a.wiki-boxed-link * {
+    text-decoration: none !important;
+  }
+  :root body :is(main,footer) a.wiki-boxed-link {
+    transition: transform .2s, box-shadow .2s, background-color .2s, border-color .2s;
+  }
+  :root body :is(main,footer) a.wiki-boxed-link:is(:hover,:focus-visible) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px #6f4e3729;
+    border-color: #9a6742;
+  }
+  :root body :is(main,footer) a.wiki-boxed-link:active { transform: translateY(0); }
+  /* Device illustrations follow the visible width of Measurement Figure 37A.
+     Explicit figure markers keep scientific plots and other media unchanged. */
+  :root:root body main figure.wiki-equipment-figure img {
+    display: block;
+    width: auto !important;
+    height: auto !important;
+    max-width: min(100%, 36rem) !important;
+    max-height: 46rem !important;
+    margin-inline: auto !important;
+    object-fit: contain;
+  }
+  :root:root body main .wiki-equipment-panels { width: min(100%, 36rem) !important; margin-inline: auto !important; }
   :root body main ol.wiki-bracket-references { list-style-type: decimal !important; }
   :root body main ol.wiki-bracket-references > li::marker {
     content: '[' counter(list-item) '] ';
@@ -161,6 +186,8 @@
   }
   @media (prefers-reduced-motion: reduce) {
     :root body main img { translate: none !important; }
+    :root body :is(main,footer) a.wiki-boxed-link { transition: none; }
+    :root body :is(main,footer) a.wiki-boxed-link:is(:hover,:focus-visible) { transform: none; }
   }
 }
 
@@ -176,6 +203,9 @@
     font-size: var(--wiki-link-size, 18px) !important;
     font-weight: 700 !important;
     transition-property: color, background-color, text-decoration-color !important;
+  }
+  :root:root body :is(main,footer) a.wiki-boxed-link {
+    transition-property: color, background-color, border-color, box-shadow, transform !important;
   }
   :root body main .wiki-pdf-fold > summary { font-size: 16pt !important; }
   :root body .navbar .nav-link { font-size: var(--navigation-primary-size) !important; }

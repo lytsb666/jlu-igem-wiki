@@ -182,6 +182,12 @@ function enhanceLinks() {
     if (link.closest('.wiki-directory, .team-jumps, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
     link.style.setProperty('--wiki-link-size', `${(parseFloat(getComputedStyle(link).fontSize)||16)+2}px`)
     link.classList.add('wiki-jump-link')
+    // Boxed destinations are buttons/cards; keep prose links underlined.
+    const style = getComputedStyle(link)
+    if ((parseFloat(style.borderTopWidth) > 0 && style.borderTopStyle !== 'none') ||
+        link.matches('.sw-button,.btn-primary,.model-generation-card,.hw-explore-link,.measurement-process-link')) {
+      link.classList.add('wiki-boxed-link')
+    }
     // Keep inline button labels and text arrows in one text run so the flex
     // gap cannot split the underline. Existing nodes and links stay intact.
     if (['flex', 'inline-flex'].includes(getComputedStyle(link).display) && link.children.length &&
@@ -195,21 +201,21 @@ function enhanceLinks() {
   })
 }
 
-const articleVideos = [...document.querySelectorAll('main video')]
-for (const video of articleVideos) {
-  const figure = video.closest('figure')
-  figure?.querySelectorAll('figcaption a').forEach(a=>{if (/open video/i.test(a.textContent)) {const previous=a.previousSibling;if(previous?.nodeType===Node.TEXT_NODE)previous.textContent=previous.textContent.replace(/\s*·\s*$/,'');a.remove()}})
-}
-
 document.querySelectorAll('main table').forEach(wrapTable)
 const articleMain=document.querySelector('main')
 if(articleMain)new MutationObserver(records=>{
   const tables=new Set()
+  let addedLinks = false
   for(const record of records){
     if(record.target instanceof Element){const table=record.target.closest('table');if(table)tables.add(table)}
-    for(const node of record.addedNodes)if(node instanceof Element){if(node.matches('table'))tables.add(node);node.querySelectorAll('table').forEach(t=>tables.add(t))}
+    for(const node of record.addedNodes)if(node instanceof Element){
+      if(node.matches('table'))tables.add(node)
+      node.querySelectorAll('table').forEach(t=>tables.add(t))
+      if(node.matches('a[href]') || node.querySelector('a[href]')) addedLinks = true
+    }
   }
   tables.forEach(wrapTable)
+  if (addedLinks) enhanceLinks()
 }).observe(articleMain,{childList:true,subtree:true})
 document.querySelectorAll('main img').forEach(image=>image.parentElement.classList.add('wiki-image-host'))
 document.querySelectorAll('main figcaption, main caption, main [class*="table-caption"], main [class*="figure-caption"]').forEach(el=>el.dataset.wikiCaption='true')

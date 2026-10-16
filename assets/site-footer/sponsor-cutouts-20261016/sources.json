@@ -1,0 +1,98 @@
+[
+  {
+    "display": "image6.svg",
+    "original": "assets/site-footer/revision-20261016/image6.png",
+    "sha256": "bbc0f77873a12ed6cba1777d421dcd75a09f5f1ee9bd7c00f55bdd4c161fa2bc",
+    "viewBox": [
+      0,
+      250,
+      591,
+      92
+    ],
+    "backgroundMask": "near-white alpha filter; RGB unchanged"
+  },
+  {
+    "display": "image7.svg",
+    "original": "assets/site-footer/revision-20261016/image7.png",
+    "sha256": "4b0ddb9d8c1933bfbe3f23db13749b87952dd1e99997840133c1d7346f1f6eee",
+    "viewBox": [
+      0,
+      0,
+      1104,
+      1106
+    ],
+    "backgroundMask": null
+  },
+  {
+    "display": "image9.svg",
+    "original": "assets/site-footer/revision-20261016/image9.png",
+    "sha256": "a25d01cdf57274c0b40614fb116b194aa760e86fda0d3a48dd699d9149ffc96b",
+    "viewBox": [
+      3,
+      2,
+      226,
+      47
+    ],
+    "backgroundMask": null
+  },
+  {
+    "display": "image10.svg",
+    "original": "assets/site-footer/revision-20261016/image10.png",
+    "sha256": "6a3557d99ff36f3a3e86994921d0dd308e441ff263d009167bb687069c742217",
+    "viewBox": [
+      133,
+      171,
+      840,
+      236
+    ],
+    "backgroundMask": null
+  },
+  {
+    "display": "image11.svg",
+    "original": "assets/site-footer/revision-20261016/image11.png",
+    "sha256": "4dee560f2095926f401dd47558f06f3b18a0640b307c347fcc5a53bc7d59cf21",
+    "viewBox": [
+      62,
+      28,
+      747,
+      473
+    ],
+    "backgroundMask": "near-white alpha filter; RGB unchanged"
+  },
+  {
+    "display": "image12.svg",
+    "original": "assets/site-footer/revision-20261016/image12.png",
+    "sha256": "8ce23aac9ce9f4f7eef0e3b275404f8f9207e2ea6de150cd25e9f89832694c81",
+    "viewBox": [
+      48,
+      158,
+      479,
+      286
+    ],
+    "backgroundMask": "blue"
+  },
+  {
+    "display": "image13.svg",
+    "original": "assets/site-footer/revision-20261016/image13.png",
+    "sha256": "3e83abcc206fe9957bda0f642457e9dac55639a343fb5f9e3be248da2016905a",
+    "viewBox": [
+      52,
+      20,
+      472,
+      282
+    ],
+    "backgroundMask": "near-white alpha filter; RGB unchanged"
+  },
+  {
+    "display": "health-inspection.svg",
+    "original": "assets/site-footer/revision-20261016-followup/health-inspection.png",
+    "sha256": "8d9e1cd7da7c04cfa3e1e8723cbfce962f792e1f547917570d6d9187ffb06843",
+    "viewBox": [
+      106,
+      15,
+      725,
+      914
+    ],
+    "backgroundMask": "outer-shield-contour; original white badge interior preserved"
+  }
+]

@@ -91,9 +91,14 @@ if (story) {
     const value = text.replace(':', '')
     digits.forEach((paths, index) => paths.forEach((p, segment) => p.classList.toggle('is-lit', digitSegments[Number(value[index])].includes(String(segment)))))
   }
-  new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && countdownStarted === undefined) { countdownStarted = Date.now(); drawCountdown() }
-  }).observe(workflowTimer)
+  // Start as soon as the scene arrives, before its digital layer fades in.
+  const countdownObserver = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting && entry.intersectionRect.height > 0)) return
+    countdownStarted = Date.now()
+    drawCountdown()
+    countdownObserver.disconnect()
+  })
+  countdownObserver.observe(workflowChapter)
   setInterval(drawCountdown, 1000)
   drawCountdown()
   const workflowCaption = workflowChapter.querySelector('.workflow-caption')

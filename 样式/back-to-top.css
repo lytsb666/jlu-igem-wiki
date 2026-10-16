@@ -1,6 +1,8 @@
 /* This control occupies only verified empty canvas; it never changes the
    article layout or adds a permanent background card to the corner. */
 :root body .wiki-back-to-top {
+  --mascot-safe-left: env(safe-area-inset-left, 0px);
+  --mascot-safe-right: env(safe-area-inset-right, 0px);
   position: fixed;
   right: max(16px, env(safe-area-inset-right));
   bottom: max(16px, env(safe-area-inset-bottom));
@@ -19,7 +21,8 @@
   isolation: isolate;
 }
 :root body .wiki-back-to-top[hidden] { display: none !important; }
-:root body .wiki-back-to-top:focus-visible { outline: 2px solid #6f4e37; outline-offset: 3px; }
+:root body .wiki-jump-to-bottom { left: max(16px, env(safe-area-inset-left)); right: auto; }
+:root body .wiki-back-to-top:focus-visible { outline: 2px solid #6f4e37; outline-offset: 0; }
 html.navigation-cursor-native body .wiki-back-to-top,
 html.navigation-cursor-native body .wiki-back-to-top * { cursor: pointer !important; }
 .wiki-back-to-top__scene {
@@ -37,13 +40,14 @@ html.navigation-cursor-native body .wiki-back-to-top * { cursor: pointer !import
   right: 2px;
   display: grid;
   place-items: center;
-  width: 22px;
-  height: 22px;
+  width: clamp(14px, 40%, 22px);
+  height: auto;
+  aspect-ratio: 1;
   border: 1px solid #9a6742;
   border-radius: 50%;
   background: #fffaf5;
   color: #6f4e37;
-  font-size: 16px;
+  font-size: clamp(10px, calc(var(--mascot-control-size, 80px) * .2), 16px);
   font-weight: bold;
   line-height: 1;
   pointer-events: none;

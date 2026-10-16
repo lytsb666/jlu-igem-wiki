@@ -1,5 +1,6 @@
 // Public article decoration and nested directories. Page scripts continue to
 // own section navigation, content disclosures, filters and module selection.
+import { formatDirectoryLabel } from './directory-labels.js'
 const directorySelector = '.page-toc, .ihp-toc, .edu-toc, .inc-toc, .hp-toc, .cl-toc'
 const protectedHeading = 'aside, nav, .image-page-hero, .page-hero, .team-hero, .sw-intro, .home-story, .home-cover, .cover-stage, .story-stage, .member-card, .card'
 document.querySelectorAll('main h2').forEach(heading => {
@@ -53,6 +54,7 @@ function wireGroup(group, list, button, label) {
 
 function enhanceDirectory(toc) {
   toc.classList.add('wiki-directory')
+  toc.querySelectorAll('a, summary, .engineering-toc-title').forEach(formatDirectoryLabel)
   toc.querySelectorAll('nav > div, nav > ol > li').forEach(group => {
     const anchor = group.querySelector(':scope > a, :scope > .parts-toc-row > a')
     const list = group.querySelector(':scope > ul')
@@ -93,4 +95,9 @@ function enhanceDirectory(toc) {
 document.querySelectorAll(directorySelector).forEach(toc => {
   enhanceDirectory(toc)
   new MutationObserver(() => enhanceDirectory(toc)).observe(toc, { childList: true, subtree: true })
+})
+document.querySelectorAll('.team-jumps').forEach(toc => {
+  const format = () => toc.querySelectorAll('a').forEach(formatDirectoryLabel)
+  format()
+  new MutationObserver(format).observe(toc, { childList: true, subtree: true })
 })

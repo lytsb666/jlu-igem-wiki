@@ -1,3 +1,31 @@
+**2026-10-16 当前版本上传／发布授权**：用户本轮要求把现在版本上传仓库并更新网站，范围包含下方连续各轮已完成的本地成果及 iHP 3.0；此前“仅本地／未上传”均为当时快照。按现有 PR 检查、merge commit 和已开启的 GitHub Actions 发布既有固定 Pages 项目，保留图注暂缓、独立 Summary 留空、缺真实 PDF 与白边仅方案的状态。范围、检查及实时追踪入口见 [RELEASE_CURRENT_REVIEW_20261016.md](docs/RELEASE_CURRENT_REVIEW_20261016.md)，不复用旧授权判断后续任务。
+
+**2026-10-16 iHP《修改意见3.0》（仅本地）**：按用户确认，80 处现有图注原样保留，统计清单存入仓库；其余完成米色正文框、三张翻卡、四步骤原图互动与分框／箭头、逆时针透明转盘、WHO 引文、九个标题框、65 个独立对话标签、统计图缩小、Stage 5 换图、照片去侧框、BioAI 补齐轮播及 CARES 标签。Overview 新图放 Project illustration，Interactive map 仍待补；删除 05 和 Stage 4 两个 PDF 待补框。原 Closing 按本次要求归入 Expanding，独立 Summary 空出待补，覆盖早期的整体暂缓。网页阅读文档仍缺实际文件路径，保留其余 16 个资源待补位置。最新见全局第 25 节、[IHP_REVISION_3_REVIEW_20261016.md](docs/IHP_REVISION_3_REVIEW_20261016.md) 和 [图注待办](docs/IHP_CAPTION_PENDING_20261016.md)；其他未提交成果保留，未上传或发布。
+
+**2026-10-16 首页计时／视频及白边方案（仅本地）**：Homepage 倒计时在整个机器场景首次刚进入视野时启动，不等数字出现，回滚继续与 30 分钟循环保持。当前四段正文视频及首页官方视频均无图注，公共清理覆盖播放器内、上下紧邻及动态插入的图注，原图片说明和播放行为保持。22 项浏览器检查、构建与资源检查通过。白边仅只读初筛并形成逐图显示窗口方案，未批量裁图；部分科研图已有窗口，后续应收紧现有窗口。最新见全局第 24 节、[HOMEPAGE_VIDEO_REVIEW_20261016.md](docs/HOMEPAGE_VIDEO_REVIEW_20261016.md) 和 [IMAGE_WHITE_MARGIN_PLAN_20261016.md](docs/IMAGE_WHITE_MARGIN_PLAN_20261016.md)。保留其余未提交成果，未上传或发布。
+
+**2026-10-16 Hardware／Education 展开栏（仅本地）**：Hardware Explore more 入口文字改为 Software for Hardware／Model for Hardware，原图标及地址不改；Education Open resources 的 27 个 PDF 标题栏按实际每排左右等高，缩放后重新适配，手机单列恢复自然高度。23 个活动方案仍默认展开、四份 Gene Wars 指南仍默认收起，完整原件与阅读器保留。39 项浏览器检查通过，最新见全局第 23 节及 [HARDWARE_EDUCATION_RESOURCE_HEADERS_REVIEW_20261016.md](docs/HARDWARE_EDUCATION_RESOURCE_HEADERS_REVIEW_20261016.md)，其他未提交成果保留，未上传或发布。
+
+**2026-10-16 页脚最新同高／单行修正（仅本地）**：Contact with us 与 Explore the wiki 桌面同高；二维码区 190–240px，导航两列按内容宽度分配，1024px 及以上每组一级和全部子页同一行，20 个链接完整可见、无滚动条。用户明确手机仍允许换行以保证完整可读。62 项针对性检查通过，含六种桌面宽度、1023px 断点及手机；最新见全局第 22 节及 [FOOTER_HALF_LAYOUT_REVIEW_20261016.md](docs/FOOTER_HALF_LAYOUT_REVIEW_20261016.md) 末节，覆盖下方桌面允许换行的旧快照。未上传或发布。
+
+**2026-10-16 页脚链接完整性补改（仅本地）**：用户反馈导航显示不全并建议中间区左移，现将中间区改为约 28% 二维码／72% 导航；子页自然换行，取消隐藏的横向滚动和裁切，保留两列三组、顶部品牌位置及校徽字号。20 个链接的完整文字／边界在六种视口逐个核对，38 项检查通过，无重叠、截断或整页溢出。更新见全局第 22 节及 [FOOTER_HALF_LAYOUT_REVIEW_20261016.md](docs/FOOTER_HALF_LAYOUT_REVIEW_20261016.md) 后续修正；手机按完整内容自然增高，不能恢复旧的单行隐藏。未上传或发布。
+
+**2026-10-16 页脚最新草图（仅本地）**：按用户最终确认压缩为大半屏，顶部 ByeGerm／队名分别在左右半区居中、校徽居中放大；下方左侧四码两行两列，右侧导航两列三行、子页在一级右侧同一行，导航不显示进度条或滚动条。赞助商横跨下方，版权位于底部；手机自然排版。桌面页脚约 591px（900px 屏）／514px（720px 屏），45 项浏览器检查、构建与资源检查通过。详见全局第 22 节与 [FOOTER_HALF_LAYOUT_REVIEW_20261016.md](docs/FOOTER_HALF_LAYOUT_REVIEW_20261016.md)，覆盖下方旧的满屏要求；其余未提交成果保留，没有上传或发布。
+
+**2026-10-16《10.16.docx》继续修改（仅本地）**：按附件及用户四项澄清，完成 Measurement 星号、设备插图限宽、视频图注删除、Hardware 指定流程删除与 Explore more 双图标入口、病原体轮播标题、Model 原图替换与可见图框同宽、带框链接去下划线及交互、Team 仅展开资料卡去中文、Software 指定小节删除、Contribution 三项封面主题词。页脚品牌行放大，删除第二个抖音二维码，四个原码以等大正方形白底显示。最新规则见全局第 21 节及 [DOCUMENT_REVISION_REVIEW_20261016.md](docs/DOCUMENT_REVISION_REVIEW_20261016.md)，覆盖下方五二维码等旧快照；保留原件、既有未提交成果和 iHP 总结暂缓要求。构建与资源检查通过，未上传或发布。
+
+**2026-10-16 赞助商高清与纯二维码（仅本地）**：七个 sponsor 已接入高清透明衍生版本，原展示大小、顺序、42 秒连续滚动保持。用户明确二维码只留有效码区、五框同大小：现为五个等大正方形框，抖音去灰底与外部名称、Instagram 去表情海报与账号，其余原码直接显示；码内标志和必要留白保留，不重画或重编码。全部原件仍在仓库，最新要求写入全局第 20 节，见 [FOOTER_SPONSOR_QR_REVIEW_20261016.md](docs/FOOTER_SPONSOR_QR_REVIEW_20261016.md)。
+
+**2026-10-16 页脚校徽与二维码补改（仅本地）**：品牌行 JLU 圆圈改用用户本次提供的蓝色吉林大学原始校徽，删除旁边独立英文校名，保留 ByeGerm／JLU-SPH iGEM Team。用户明确二维码铺满整个框、删除下方文字：5 框取消内边距及平台图注，原图按原比例铺满，桌面框上限 136px／短屏 112px，手机五列自适应；原色、原件、查看入口及辅助技术标签保留。共享页脚生效，单屏与手机布局保持，详见 [FOOTER_SEAL_QR_REVIEW_20261016.md](docs/FOOTER_SEAL_QR_REVIEW_20261016.md)。
+
+**2026-10-16 连续改动核查与补漏（仅本地）**：用户明确检查的是 `127.0.0.1:5221`。已核对 18 个实际入口并补齐目录 RT／HP／P6 与五阶段名称大小写、iHP 横向分级支线、Hardware 删除 Figure 21 后视频误补位，以及窄边栏人物漏显和页脚回顶定位。其余最新 Education 静态照片、页脚七个标志和封面等逐项核对，详见 [REQUEST_SEQUENCE_REVIEW_20261016.md](docs/REQUEST_SEQUENCE_REVIEW_20261016.md)。原有未提交成果保留；本轮未上传或发布，待补资源与 iHP 总结暂缓要求保持。
+
+**2026-10-16 页脚再次调整（仅本地）**：页脚导航、品牌、联系区、二维码整体放大，赞助商标志桌面高度 72→106px；删除第二个生工展示，每个连续滚动组现为 7 个标志，原始文件保留。两列三行、链接单行及一屏布局保持。最新要求已写入全局第 20 节，见 [FOOTER_SCALE_REVIEW_20261016.md](docs/FOOTER_SCALE_REVIEW_20261016.md)。
+
+**2026-10-16 Education 同日后续修正（仅本地）**：Health Guardians、Biotech Explorers、Diversity Partners 的活动照片改为左栏纵向静态排列，不再轮播或粘性跟随；删除 Open toolkit 提示，Activity plan 阅读按钮加宽。原 75 张照片、24 项活动、文稿、原图与资源入口保留，开头三条连续总览照片带保持。最新要求已更新全局第 20 节，见 [EDUCATION_STATIC_PHOTOS_REVIEW_20261016.md](docs/EDUCATION_STATIC_PHOTOS_REVIEW_20261016.md)，覆盖下方旧记录中这 24 项活动的轮播描述。
+
+**2026-10-16 同日后续本地修改（未上传／未发布）**：当前 `codex/footer-card-polish-20261016` 保留 Figure 21 删除与卡牌裁边，并完成页脚无外框两列三行、每组链接单行、Team 页脚行删除、原色透明赞助商连续滚动（移除 HIT／加入卫生检验徽标）；目录句首大写与分级线加强；封面队名栏目首行改直体；左侧直达页脚与右侧回顶的不同人物靠白框外侧；Education 开头三条连续照片带恢复、24 项活动统一左图右文与多图两秒轮播；iHP 三项主题词、成本最高柱括号汇率和 Contribution Figure 5 替换。最新要求见全局第 20 节及 [FOOTER_DIRECTORY_EDUCATION_REVIEW_20261016.md](docs/FOOTER_DIRECTORY_EDUCATION_REVIEW_20261016.md)，覆盖以下旧快照中的冲突显示要求。构建与受影响桌面／手机检查通过；B08 照片仍待补，iHP Closing／独立总总结继续暂缓。旧发布授权不延续。
+
 # JLU-SPH Wiki 项目交接
 
 **2026-10-16 本轮上传与发布授权**：用户明确要求把当前本地代码上传仓库并更新网站。本次范围包括《10.15改动》、iHP 最新文稿修订、新封面和 Contribution 卡牌、统一页脚／headpage、资源区修复、倒计时贴框、Team 中文名／Advisor 顺序、非 Team 两秒轮播及展开箭头。此前各本地验收文档的“未上传／未发布”是当时快照，不能据其回退本轮成果。发布范围与检查入口见 [RELEASE_REVIEW_20261016.md](docs/RELEASE_REVIEW_20261016.md)；最终版本以本轮 PR、GitHub Actions 和实际网站为准。本轮授权不自动延续到后续任务。

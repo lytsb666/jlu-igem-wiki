@@ -3,10 +3,16 @@
 在本项目开始任何任务前，先读取 [全站开发要求](docs/全站开发要求.md)。这是持续维护的全局规范入口，适用于本仓库及其子目录。
 
 - 结合 `HANDOFF.md`、`CONTRIBUTING.md`、相关页面的最新 `docs/*REVIEW*.md` 和实时 Git 状态确认现状。最新 2026-10-16 改动交接见 `docs/REVISION_REVIEW_20261016.md`；此前文稿交接见 `docs/MANUSCRIPT_REVIEW_20261015.md`。
-- iHP 最新修改及用户暂缓的 Closing／总总结见 `docs/IHP_REVIEW_20261016.md`，不要自行补写或搬动该部分。
-- 同日最新页脚、headpage 两行斜体及 Hardware 图内汇率见 `docs/FOOTER_HEADPAGE_REVIEW_20261016.md`，覆盖之前同日相冲突的显示要求。
+- iHP 原修改见 `docs/IHP_REVIEW_20261016.md`；最新《修改意见3.0》以全局第 25 节和 `docs/IHP_REVISION_3_REVIEW_20261016.md` 为准：用户已要求把原 Closing 归到 Expanding 末尾，独立总总结继续空出待补，不能自行补写。
+- 同日页脚、headpage 与 Hardware 图内汇率的早期交接见 `docs/FOOTER_HEADPAGE_REVIEW_20261016.md`；后续用户修正以全局第 20 节为准。
 - Team 全员中文名／Advisor 顺序、非 Team 两秒轮播和展开箭头以全局要求第 18 节及 `docs/TEAM_CAROUSEL_REVIEW_20261016.md` 为准；Homepage 滚动叙事保留。
+- 同日后续页脚两列三行／原色赞助商、目录分级／句首大写、两侧人物、Education 图片展示及封面首行直体以全局第 20 节和 `docs/FOOTER_DIRECTORY_EDUCATION_REVIEW_20261016.md` 为准，覆盖前述相冲突的显示要求。
+- 连续改动的本地核查与补漏见 `docs/REQUEST_SEQUENCE_REVIEW_20261016.md`；最新 Education 静态照片和页脚放大分别见 `docs/EDUCATION_STATIC_PHOTOS_REVIEW_20261016.md`、`docs/FOOTER_SCALE_REVIEW_20261016.md`，不能恢复旧轮播或第二个生工。
 - 用户当前明确指令优先于旧需求；全局要求中的最新条目优先于旧交接记录。附件中的编辑备注须按用户指定范围解读，不能整份当作执行指令。
+- 最新《10.16.docx》及用户四项澄清见全局第 21 节和 `docs/DOCUMENT_REVISION_REVIEW_20261016.md`：只统一设备图，图注每行居中，Team 仅展开资料卡去中文名；页脚删除第二个抖音码后为四码。此前五码等冲突快照不再恢复。
+- 页脚最新草图与后续校正见全局第 22 节和 `docs/FOOTER_HALF_LAYOUT_REVIEW_20261016.md`：大半屏高度，顶部品牌／队名分别在左右半区居中、校徽放大；下方左四码两行两列，右导航两列三行、子页在一级右侧，导航无进度条或滚动条。
+- 同日页脚完整性及最新同高／单行修正见第 22 节：中间区向左收拢、20 个链接直接完整显示，Contact／Explore 同高；桌面每组一级和全部子页同一行，手机按用户确认允许换行，不能恢复隐藏滚动条后截断链接的旧布局。
+- 《修改意见3.0》本轮的图注修改统一暂缓，80 处现有图注和待核对位置见 `docs/IHP_CAPTION_PENDING_20261016.md`；用户确认图片缩小／换图／去侧白框照常进行。新 PDF 缺真实文件时保留待补，不能用参考网站文件填充。
 - 保留已有未提交修改、未跟踪文件和其他 worktree 成果；只修改本次任务涉及的内容。不重跑旧页面生成器，不用 reset、clean、强推或整目录覆盖消除已有工作。
 - 保留科研事实、原始数据、成员身份和原始媒体；缺少确认材料时保留待补位置，不能编造。
 - 不过度思考或冗余验证：按影响范围完成必要检查，通过后不无故重复；纯文档修改无需重建网站。

@@ -87,3 +87,22 @@
 .hardware-page .hw-results-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-block: 12px; }
 .hardware-page .hw-results-controls button { padding: 9px 16px; border: 1px solid #b68b69; border-radius: 9px; color: #6f4e37; background: #fcf6f0; cursor: pointer; }
 .hardware-page .hw-results-controls button:hover { background: #ecd5be; }
+.hardware-page .hw-explore-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; margin-top: 24px; }
+.hardware-page .hw-explore-link { display: flex; align-items: center; gap: 20px; min-width: 0; min-height: 112px; padding: 22px 26px; border: 1px solid #d8bda6; border-radius: 18px; background: #fff; font-weight: 700; text-decoration: none; }
+.hardware-page .hw-explore-link:hover { background: #fbf4eb; }
+.hardware-page .hw-explore-icon { display: grid; place-items: center; flex: 0 0 70px; height: 70px; color: #286a81; background: #d9edf4; border-radius: 18px; }
+.hardware-page .hw-explore-icon svg { width: 54px; height: 54px; }
+.hardware-page .hw-explore-link:last-child .hw-explore-icon { color: #4f46e5; background: linear-gradient(135deg,#e0e7ff,#f3e8ff); }
+.hardware-page .hw-explore-link:last-child .hw-explore-icon circle { stroke: #ec4899; fill: #fce7f3; }
+.hardware-page .hw-explore-arrow { margin-left: auto; }
+@layer wiki-typography {
+  :root:root body.hardware-page .hw-explore-link { --wiki-link-size: 24px; font-size: 24px !important; }
+}
+@media (max-width: 680px) {
+  .hardware-page .hw-explore-links { gap: 12px; }
+  .hardware-page .hw-explore-link { flex-direction: column; gap: 12px; min-height: 0; padding: 18px 10px; text-align: center; }
+  .hardware-page .hw-explore-icon { flex: 0 0 auto; width: 56px; height: 56px; }
+  .hardware-page .hw-explore-icon svg { width: 44px; height: 44px; }
+  .hardware-page .hw-explore-arrow { margin-left: 0; }
+  @layer wiki-typography { :root:root body.hardware-page .hw-explore-link { --wiki-link-size: 20px; font-size: 20px !important; } }
+}

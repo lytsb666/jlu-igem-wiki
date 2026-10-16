@@ -1,0 +1,209 @@
+/* Revision 3.0: iHP layout only. Caption formatting stays unchanged. */
+body.ihp-manuscript-page [data-ihp-chapter="project-evolution"] {
+  background: #fbf4eb;
+  border-image-slice: 180 180 150 180;
+}
+body.ihp-manuscript-page .ihp-chapter-banner {
+  padding: 1rem 1.2rem;
+  border: 0;
+  border-radius: 18px;
+  background: #f1e3d2;
+  box-shadow: inset -12px 0 #ad7b59, inset -25px 0 #d2ac86, inset -39px 0 #e4c9a8;
+}
+body.ihp-manuscript-page .ihp-chapter-banner::after { content: none; }
+body.ihp-manuscript-page .ihp-chapter-banner > :is(h2,h3),
+body.ihp-manuscript-page .ihp-chapter-banner > .ihp-chapter-subtitle { padding-right: 2rem; }
+body.ihp-manuscript-page .ihp-chapter-banner .ihp-stage-question {
+  padding: .85rem 1rem;
+  border: 1px solid #e3ceb6;
+  border-radius: 10px;
+  background: #fffaf3;
+}
+body.ihp-manuscript-page .ihp-health-quote {
+  --wiki-ink: #fffaf3;
+  margin: 2rem .4rem;
+  padding: 2.4rem clamp(1.3rem, 4vw, 3.5rem);
+  border: 0;
+  border-radius: 20px 36px 20px 36px;
+  background: #a4773f;
+  box-shadow: -7px 7px 0 #ecd5b4;
+  color: #fffaf3;
+}
+body.ihp-manuscript-page .ihp-health-quote::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 2.4rem;
+  width: 5px;
+  height: 28px;
+  border-radius: 4px;
+  background: #c39762;
+  box-shadow: 12px -5px #c39762, 24px 4px #c39762, 36px -2px #c39762;
+}
+body.ihp-manuscript-page .ihp-health-quote .ihp-source-quote { font-style: normal; }
+body.ihp-manuscript-page .ihp-stakeholder-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+body.ihp-manuscript-page .ihp-stakeholder-card { position: relative; min-width: 0; perspective: 1200px; }
+body.ihp-manuscript-page .ihp-stakeholder-card__inner {
+  display: grid;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .55s ease;
+}
+body.ihp-manuscript-page .ihp-stakeholder-card.is-flipped .ihp-stakeholder-card__inner { transform: rotateY(180deg); }
+body.ihp-manuscript-page :is(.ihp-stakeholder-card__front, .ihp-stakeholder-card__back) {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 18rem;
+  box-sizing: border-box;
+  padding: 1.4rem 1.1rem;
+  border: 1px solid #bd9470;
+  border-radius: 18px;
+  background: #f1e1ce;
+  backface-visibility: hidden;
+}
+body.ihp-manuscript-page .ihp-stakeholder-card:nth-child(2) .ihp-stakeholder-card__front { background: #ead3ba; }
+body.ihp-manuscript-page .ihp-stakeholder-card:nth-child(3) .ihp-stakeholder-card__front { background: #dfc1a6; }
+body.ihp-manuscript-page .ihp-stakeholder-card__front h4 { margin: 0; text-align: center; }
+body.ihp-manuscript-page .ihp-stakeholder-card__mark { margin: 1rem 0; font-size: 3.6rem; line-height: 1; opacity: .5; }
+body.ihp-manuscript-page .ihp-card-hint { font-size: .85rem; font-style: italic; }
+body.ihp-manuscript-page .ihp-stakeholder-card__back { transform: rotateY(180deg); background: #fffaf3; align-items: stretch; }
+body.ihp-manuscript-page .ihp-stakeholder-card__back p { margin: 0; }
+body.ihp-manuscript-page .ihp-stakeholder-card__toggle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  cursor: pointer;
+}
+body.ihp-manuscript-page .ihp-stakeholder-card__toggle:focus-visible { outline: 3px solid #9a6742; outline-offset: 4px; }
+body.ihp-manuscript-page .ihp-strategy-diagram { margin: 1.5rem 0; }
+body.ihp-manuscript-page .ihp-strategy-diagram__canvas { position: relative; }
+body.ihp-manuscript-page .ihp-strategy-diagram__canvas > img { display: block; width: 100%; height: auto; box-shadow: none; }
+body.ihp-manuscript-page .ihp-strategy-hotspot {
+  position: absolute;
+  top: 20.5%;
+  width: 20.7%;
+  height: 56%;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  transition: background .2s, box-shadow .2s;
+}
+body.ihp-manuscript-page .ihp-strategy-hotspot:is(:hover,:focus-visible) { outline: 2px solid #9a6742; background: rgb(201 163 115 / 12%); box-shadow: 0 4px 15px rgb(111 78 55 / 18%); }
+body.ihp-manuscript-page .ihp-strategy-shortcuts { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+body.ihp-manuscript-page .ihp-strategy-shortcuts > a { flex: 1 1 130px; padding: .6rem; border: 1px solid #bd9470; border-radius: 10px; background: #fffaf3; text-align: center; }
+body.ihp-manuscript-page .ihp-strategy-shortcuts :is(.ihp-strategy-step-number,span:last-child) { display: none; }
+body.ihp-manuscript-page .ihp-strategy-section {
+  margin: 2rem 0;
+  padding: 1.1rem;
+  border: 1px solid #d4b697;
+  border-left: 5px solid #bd8a60;
+  border-radius: 18px;
+  background: #fffaf4;
+}
+body.ihp-manuscript-page .ihp-strategy-section > .ihp-strategy-step-title,
+body.ihp-manuscript-page .ihp-ethic-label {
+  --wiki-ink: #fffaf5;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 1.25rem;
+  padding: .7rem 1.2rem;
+  border: 2px solid #704b31;
+  border-radius: 9px;
+  background: #b9855d;
+  box-shadow: 0 3px 0 #e1c5a9;
+  color: #fffaf5;
+  font-weight: 700;
+}
+body.ihp-manuscript-page .ihp-strategy-disclosure { border: 2px solid #cda880; border-radius: 12px; background: #fff; }
+body.ihp-manuscript-page .ihp-strategy-disclosure > summary { background: #ead8c2; border-radius: 10px; padding-right: 3rem; }
+body.ihp-manuscript-page .ihp-strategy-disclosure:nth-of-type(even) > summary { background: #f0e4d4; }
+body.ihp-manuscript-page .ihp-strategy-disclosure > summary .wiki-disclosure-label { display: block; position: relative; padding-right: 1rem; }
+body.ihp-manuscript-page .ihp-strategy-disclosure > summary .wiki-disclosure-arrow { position: absolute; right: -1.2rem; top: .4em; margin: 0; width: .55em; height: .55em; }
+body.ihp-manuscript-page .ihp-ethic-label { min-width: 12rem; text-align: center; }
+body.ihp-manuscript-page .ihp-cycle-layout { padding: 1rem; border-radius: 20px; background: #f5eadb; }
+body.ihp-manuscript-page .ihp-cycle-art { width: min(100%, 340px); margin: 1.5rem auto; background: transparent; animation: ihp-cycle-counterclockwise 32s linear infinite; }
+body.ihp-manuscript-page .ihp-cycle-art img { animation: none; background: transparent; box-shadow: none; translate: none; }
+@keyframes ihp-cycle-counterclockwise { to { transform: rotate(-360deg); } }
+body.ihp-manuscript-page .ihp-overview-illustration { max-width: 42rem; margin-inline: auto; }
+body.ihp-manuscript-page .ihp-screening-results { width: min(100%, 32rem); margin-inline: auto; }
+/* Fit the photo itself; a portrait no longer casts a wide rectangular frame. */
+body.ihp-manuscript-page :is(.ihp-activity-photo, .ihp-gallery__track > figure) > a {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+body.ihp-manuscript-page :is(.ihp-activity-photo, .ihp-gallery__track) img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 320px;
+  margin-inline: auto;
+  object-fit: contain;
+}
+body.ihp-manuscript-page .ihp-closing {
+  --wiki-ink: #6f4e37;
+  margin: 2.5rem 0 0;
+  padding: 1.4rem;
+  border: 1px solid #c5a17b;
+  border-radius: 16px;
+  background: #f5e7d5;
+  color: #6f4e37;
+}
+body.ihp-manuscript-page .ihp-closing h3 { margin-top: 0; }
+body.ihp-manuscript-page .ihp-closing p { text-transform: none; letter-spacing: normal; font-weight: 400; text-align: left; }
+body.ihp-manuscript-page [data-summary-pending] { min-height: 14rem; }
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-chapter-banner .wiki-chapter-title { margin-bottom: 0 !important; }
+  :root:root body.ihp-manuscript-page .ihp-chapter-banner .wiki-chapter-title::after { content: none !important; display: none !important; }
+  :root:root body.ihp-manuscript-page :is(.ihp-dialogue-label, .ihp-stakeholder-card h4) { text-transform: none !important; }
+  :root:root body.ihp-manuscript-page :is(.ihp-strategy-step-title, .ihp-ethic-label) { color: #fffaf5 !important; }
+  :root:root body.ihp-manuscript-page .ihp-health-quote p { color: #fffaf3 !important; }
+  :root:root body.ihp-manuscript-page .ihp-ethic-label { width: fit-content !important; }
+  :root:root body.ihp-manuscript-page .ihp-cycle-art img { box-shadow: none !important; }
+  :root:root body.ihp-manuscript-page :is(.ihp-activity-photo,.ihp-gallery__track) img { width: auto !important; height: auto !important; }
+  :root:root body.ihp-manuscript-page :is(.ihp-activity-photo,.ihp-gallery__track > figure) > a {
+    display: block !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+}
+@media (max-width: 900px) {
+  body.ihp-manuscript-page .ihp-stakeholder-cards { grid-template-columns: 1fr; }
+  body.ihp-manuscript-page :is(.ihp-stakeholder-card__front,.ihp-stakeholder-card__back) { min-height: 13rem; }
+}
+@media (max-width: 550px) {
+  body.ihp-manuscript-page .ihp-strategy-section { padding: .8rem .6rem; }
+  body.ihp-manuscript-page .ihp-chapter-banner { padding: .9rem .8rem; }
+  body.ihp-manuscript-page .ihp-health-quote { padding: 2rem 1rem 1.5rem; }
+  body.ihp-manuscript-page :is(.ihp-activity-photo,.ihp-gallery__track) img { max-height: 220px; }
+  body.ihp-manuscript-page .ihp-cycle-layout { padding: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.ihp-manuscript-page .ihp-cycle-art { animation: none; }
+  body.ihp-manuscript-page .ihp-stakeholder-card__inner,
+  body.ihp-manuscript-page .ihp-strategy-hotspot { transition: none; }
+}
