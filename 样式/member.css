@@ -155,3 +155,11 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
 @layer wiki-typography {
   body .team-page :is(.team-avatar-name, .team-member-index) { font-size: var(--wiki-body-size) !important; }
 }
+.team-page .team-scroll-cue { top: 92px; right: 28px; bottom: auto; left: auto; transform: none; }
+.team-page .team-avatar-name { display: block; font-family: Georgia, 'Times New Roman', serif; font-weight: 900; font-style: italic; letter-spacing: .01em; text-shadow: 0 1px 0 #fff6ec; }
+.team-page .team-avatar-leader { display: block; margin-top: 6px; font-weight: 800; font-style: italic; color: #80512f; letter-spacing: .04em; }
+.team-page .team-avatar-chinese { display: block; white-space: nowrap; font-size: .95em; }
+.team-page .team-name-chinese { font-style: normal; }
+.team-page .team-carousel { height: calc(var(--team-avatar) + 145px); }
+.team-page .team-avatar { gap: 9px; }
+.team-page .team-hero-title h1 { font-style: italic; }

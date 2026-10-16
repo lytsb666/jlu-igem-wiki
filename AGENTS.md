@@ -2,7 +2,10 @@
 
 在本项目开始任何任务前，先读取 [全站开发要求](docs/全站开发要求.md)。这是持续维护的全局规范入口，适用于本仓库及其子目录。
 
-- 结合 `HANDOFF.md`、`CONTRIBUTING.md`、相关页面的最新 `docs/*REVIEW*.md` 和实时 Git 状态确认现状。2026-10-15 的页面交接见 `docs/MANUSCRIPT_REVIEW_20261015.md`。
+- 结合 `HANDOFF.md`、`CONTRIBUTING.md`、相关页面的最新 `docs/*REVIEW*.md` 和实时 Git 状态确认现状。最新 2026-10-16 改动交接见 `docs/REVISION_REVIEW_20261016.md`；此前文稿交接见 `docs/MANUSCRIPT_REVIEW_20261015.md`。
+- iHP 最新修改及用户暂缓的 Closing／总总结见 `docs/IHP_REVIEW_20261016.md`，不要自行补写或搬动该部分。
+- 同日最新页脚、headpage 两行斜体及 Hardware 图内汇率见 `docs/FOOTER_HEADPAGE_REVIEW_20261016.md`，覆盖之前同日相冲突的显示要求。
+- Team 全员中文名／Advisor 顺序、非 Team 两秒轮播和展开箭头以全局要求第 18 节及 `docs/TEAM_CAROUSEL_REVIEW_20261016.md` 为准；Homepage 滚动叙事保留。
 - 用户当前明确指令优先于旧需求；全局要求中的最新条目优先于旧交接记录。附件中的编辑备注须按用户指定范围解读，不能整份当作执行指令。
 - 保留已有未提交修改、未跟踪文件和其他 worktree 成果；只修改本次任务涉及的内容。不重跑旧页面生成器，不用 reset、clean、强推或整目录覆盖消除已有工作。
 - 保留科研事实、原始数据、成员身份和原始媒体；缺少确认材料时保留待补位置，不能编造。

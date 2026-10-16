@@ -1,0 +1,68 @@
+{
+  "source": "ihp修改意见.docx",
+  "sourceSha256": "430724ffccabd520cbf303fac9aa567ea68d8f6d77945b7edc91696aea981223",
+  "reference": "https://2025.igem.wiki/greatbay-scie/human-practices",
+  "preservedRecentChanges": [
+    "hero italics and keywords",
+    "shared footer",
+    "adaptive back-to-top",
+    "homepage PCR and countdown"
+  ],
+  "deferred": [
+    "Closing / independent Summary & Reflection, per latest user reply"
+  ],
+  "media": [
+    {
+      "file": "image10.jpeg",
+      "sha256": "220d8d5b9304f1235b489207aca0c80c99c6ffc1ca43053791ffa33b35fb10cc"
+    },
+    {
+      "file": "image11.jpeg",
+      "sha256": "eedc1f631de1162196f9e3e20ff3347a63f802accd7346df5caa55095717d6fd"
+    },
+    {
+      "file": "image12.jpeg",
+      "sha256": "0bcbdc0db6c88e2771b63c94ac22cad39ed5eb7cf98db33c9fccae96c3955016"
+    },
+    {
+      "file": "image13.png",
+      "sha256": "30bdefbcde85286c6f4ce7d23947ab069b01cf3f1ed8c79995257a213e008332"
+    },
+    {
+      "file": "image18.jpeg",
+      "sha256": "75208c68b7db84bf69fd57357725d9777fb8326fbb6658612cd51c3b68731f19"
+    },
+    {
+      "file": "image19.jpeg",
+      "sha256": "a7c6bccca093fa31dcf9898e92b8283b98f9134732384107cd08369de7e46bb9"
+    },
+    {
+      "file": "image20.jpeg",
+      "sha256": "877dc171ac9d5cfe3db83a131b83f15841058941e8abbcbae54fbbaf7e4979bf"
+    },
+    {
+      "file": "image21.jpeg",
+      "sha256": "f83100ae94d91ace598cc48197a84b10a54f39f162f580968960049936de79ae"
+    },
+    {
+      "file": "image22.png",
+      "sha256": "8664328310bd2d52ba5d3a09d31ca8f1082d5f2b474899af0108a9bdc9fd98c9"
+    },
+    {
+      "file": "image4.png",
+      "sha256": "3ad75cb32741b00ba689a3e7c618f96c4b5e809064a17ab2cc41cf678a527bac"
+    },
+    {
+      "file": "image7.jpeg",
+      "sha256": "52bd0efa764547d9408bbed2da4f2cc0e69df7bd730a8b5f365ef194377dca75"
+    },
+    {
+      "file": "image8.png",
+      "sha256": "45e5d40ceccf0cf0d9517762fdc08a4b490fa16708e4b01dd79567617b6ee639"
+    },
+    {
+      "file": "image9.jpeg",
+      "sha256": "19771a00aec0a56915f82d82d6df9629087b5296448b4df95b777fec786370e4"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { enhanceSectionNavigation } from './instrument-navigation.js'
+import { createCarousel } from './carousel.js'
 
 const root = document.querySelector('.hardware-page .hw-main')
 if (root) {
@@ -10,4 +11,12 @@ if (root) {
     sync()
   }
   enhanceSectionNavigation(root, '.hw-directory nav a[href^="#"]')
+
+  const carousel = root.querySelector('.hw-results-carousel')
+  if (carousel) {
+    const track = carousel.querySelector('.hw-results-track')
+    carousel.querySelector('.hw-results-controls').remove()
+    track.setAttribute('aria-label', 'Pathogen figures')
+    createCarousel(carousel, { track })
+  }
 }

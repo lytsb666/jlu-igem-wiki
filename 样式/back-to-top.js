@@ -77,7 +77,9 @@ function createBackToTop(name) {
   let returning = false
   let returnTimer = 0
   const sceneRatio = height / width
-  const sizes = role.paired ? [128, 108, 88] : [94, 80, 66]
+  const minimumSize = role.paired ? 52 : 44
+  let renderedSize = 0
+  let nearbyObstacles = []
 
   // Reserve the entire button, including its arrow, focus ring and motion.
   // Reject content cards as well as text/media, even if their padding is empty.
@@ -112,17 +114,27 @@ function createBackToTop(name) {
     return [...range.getClientRects()].some((rect) => intersects(area, rect))
   }
 
-  function areaIsEmpty(area) {
+  function measureObstacles(area) {
     if (obstaclesDirty) {
       obstacles = [...document.querySelectorAll(obstacleSelector)].filter((element) => !button.contains(element))
       obstaclesDirty = false
     }
+    nearbyObstacles = []
     for (const element of obstacles) {
-      if (!intersects(area, element.getBoundingClientRect())) continue
+      const rect = element.getBoundingClientRect()
+      if (!intersects(area, rect)) continue
       const style = getComputedStyle(element)
       if (style.visibility === 'hidden' || style.display === 'none' || style.opacity === '0') continue
-      if (!textTags.has(element.tagName) || textOverlaps(element, area)) return false
+      if (textTags.has(element.tagName)) {
+        const range = document.createRange()
+        range.selectNodeContents(element)
+        nearbyObstacles.push(...[...range.getClientRects()].filter(rect => intersects(area, rect)))
+      } else nearbyObstacles.push(rect)
     }
+  }
+
+  function areaIsEmpty(area) {
+    if (nearbyObstacles.some(rect => intersects(area, rect))) return false
 
     // Hit-test the canvas too: a new page-specific panel or decorative
     // background must not be covered just because it is absent from the list.
@@ -151,6 +163,7 @@ function createBackToTop(name) {
   function hide() {
     button.hidden = true
     button.dataset.corner = 'occupied'
+    renderedSize = 0
   }
 
   function checkCorner() {
@@ -169,24 +182,38 @@ function createBackToTop(name) {
     const right = parseFloat(placement.right) || 16
     const bottom = parseFloat(placement.bottom) || 16
     const safety = 6
-    for (const size of sizes) {
+    const maximumSize = Math.min(role.paired ? 104 : 80, innerWidth * .24, innerHeight * .16)
+    const areaForSize = size => {
       const sceneHeight = Math.ceil(size * sceneRatio)
       const buttonHeight = sceneHeight + 20
-      const area = {
+      return {
         left: document.documentElement.clientWidth - right - size - safety,
         right: document.documentElement.clientWidth - right + safety,
         top: innerHeight - bottom - buttonHeight - safety,
         bottom: innerHeight - bottom + safety,
       }
-      if (!areaIsEmpty(area)) continue
-      button.style.width = `${size}px`
-      button.style.height = `${buttonHeight}px`
-      button.style.setProperty('--mascot-scene-height', `${sceneHeight}px`)
-      button.hidden = false
-      button.dataset.corner = 'empty'
-      return
     }
-    hide()
+    measureObstacles(areaForSize(maximumSize))
+    if (maximumSize < minimumSize || !areaIsEmpty(areaForSize(minimumSize))) { hide(); return }
+    // Empty rectangles are nested at the same corner. Find the available size
+    // continuously instead of choosing one of three preselected widths.
+    let low = minimumSize, high = maximumSize
+    while (high - low > .4) {
+      const middle = (low + high) / 2
+      if (areaIsEmpty(areaForSize(middle))) low = middle
+      else high = middle
+    }
+    const target = Math.floor(low * 2) / 2
+    // Shrink immediately to avoid content; grow gently within verified space.
+    const size = Math.min(target, renderedSize ? renderedSize + 3 : minimumSize)
+    renderedSize = size
+    const sceneHeight = Math.ceil(size * sceneRatio)
+    button.style.width = `${size}px`
+    button.style.height = `${sceneHeight + 20}px`
+    button.style.setProperty('--mascot-scene-height', `${sceneHeight}px`)
+    button.hidden = false
+    button.dataset.corner = 'empty'
+    if (target > size + .4) scheduleCheck()
   }
 
   function scheduleCheck() {

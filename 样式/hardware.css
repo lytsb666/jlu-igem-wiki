@@ -81,3 +81,9 @@
   .hardware-page .hw-layout { display: block; }
   .hardware-page .hw-pdf-scroll { height: auto; max-height: none; overflow: visible; }
 }
+.hardware-page .hw-results-carousel { min-width: 0; margin-bottom: 28px; }
+.hardware-page .hw-results-track { display: flex; position: relative; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+.hardware-page .hw-results-track > .hw-result-panel { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; padding: 12px 10px; box-sizing: border-box; }
+.hardware-page .hw-results-controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-block: 12px; }
+.hardware-page .hw-results-controls button { padding: 9px 16px; border: 1px solid #b68b69; border-radius: 9px; color: #6f4e37; background: #fcf6f0; cursor: pointer; }
+.hardware-page .hw-results-controls button:hover { background: #ecd5be; }

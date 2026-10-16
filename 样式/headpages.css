@@ -44,12 +44,16 @@
     padding: 0 !important;
     color: #fffaf5 !important;
     transform: none !important;
+    font-style: italic !important;
   }
   :root:root body .wiki-headpage .wiki-headpage__title :is(h1, p, span, a) {
     color: #fffaf5 !important;
+    font-style: italic !important;
     text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
   }
   :root:root body .wiki-headpage .wiki-headpage__title h1 {
+    font-style: italic !important;
+    font-size: clamp(44px, 5.2vw, 82px) !important;
     margin: 8px 0 0 !important;
     padding: 0 !important;
     border: 0 !important;
@@ -66,7 +70,10 @@
   :root:root body .wiki-headpage .wiki-headpage__title > :is(p, span):first-child {
     display: block;
     margin: 0;
-    font-weight: 700;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    text-transform: none !important;
+    letter-spacing: .02em !important;
   }
   :root:root body .wiki-headpage .lab-cover-note {
     position: absolute !important;
@@ -94,7 +101,7 @@
     background: rgba(0, 0, 0, .86) !important;
     border: 1px solid rgba(255, 250, 245, .35) !important;
     border-radius: 999px !important;
-    font-size: 14pt !important;
+    font-size: 16pt !important;
     font-weight: 700 !important;
     line-height: 1.25 !important;
     letter-spacing: normal !important;
@@ -173,7 +180,7 @@
     }
     :root:root body .wiki-headpage .lab-cover-note > span {
       padding: 10px 14px !important;
-      font-size: 12pt !important;
+      font-size: 14pt !important;
     }
     :root:root body .wiki-headpage-context { padding: 20px !important; }
     :root:root body .wiki-headpage .wiki-headpage__title > :is(.lab-hero__lead, .ihp-hero__lead, .inc-hero__lead) {
@@ -181,7 +188,17 @@
     }
   }
 }
+/* Team keeps its group-photo scene; only its lower-left label is standardized. */
+@layer wiki-format {
+  :root:root body .team-hero-title { left: clamp(24px, 6vw, 88px); bottom: 44px; max-width: calc(100% - 48px); font-style: italic !important; }
+  :root:root body .team-hero-title :is(p, h1) { font-style: italic !important; text-transform: none !important; letter-spacing: .02em !important; }
+  :root:root body .team-hero-title p { font-weight: 700 !important; }
+  @media (max-width: 680px) {
+    :root:root body .team-hero-title { left: 20px; bottom: 24px; }
+  }
+}
 @layer wiki-typography {
+  :root:root body .team-hero-title h1 { font-size: clamp(44px, 5.2vw, 82px) !important; }
   :root:root body main .wiki-citation-mark {
     display: inline !important;
     font-size: .75em !important;
@@ -195,6 +212,7 @@
     vertical-align: baseline !important;
   }
   @media (max-width: 680px) {
+    :root:root body .team-hero-title h1 { font-size: clamp(28px, 7.8vw, 44px) !important; }
     :root:root body .wiki-headpage .wiki-headpage__title h1 {
       font-size: clamp(28px, 7.8vw, 44px) !important;
       line-height: 1.1 !important;

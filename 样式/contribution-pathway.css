@@ -1,0 +1,30 @@
+/* Figure 6: source-image fronts and readable, keyboard-operated reverse sides. */
+body.contribution-page .contribution-pathway-figure { overflow: visible; }
+body.contribution-page .contribution-pathway-hint { margin: 0 0 1rem; text-align: center; }
+body.contribution-page .contribution-pathway { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(18px, 2vw, 30px); align-items: start; }
+body.contribution-page .contribution-pathway__step { position: relative; min-width: 0; }
+body.contribution-page .contribution-pathway__step:not(:last-child)::after { position: absolute; top: 43%; left: calc(100% + 1px); width: clamp(16px, 2vw, 28px); content: '→'; font-size: 24px; line-height: 1; text-align: center; color: #946433; }
+body.contribution-page .contribution-flip-card { display: block; width: 100%; padding: 0; border: 0; border-radius: 14px; background: transparent; color: #6f4e37; cursor: pointer; perspective: 1100px; font-family: inherit; }
+body.contribution-page .contribution-flip-card__inner { position: relative; display: block; width: 100%; min-height: 250px; aspect-ratio: 3 / 4; transform-style: preserve-3d; transition: transform .6s cubic-bezier(.2,.65,.3,1); }
+body.contribution-page .contribution-flip-card.is-flipped .contribution-flip-card__inner { transform: rotateY(180deg); }
+body.contribution-page :is(.contribution-flip-card__front, .contribution-flip-card__back) { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 14px; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; }
+:root body.contribution-page main .contribution-flip-card__front img { display: block; width: 100%; height: 100%; max-height: none; margin: 0; border: 0; border-radius: 14px; object-fit: contain; box-shadow: none !important; transform: none !important; translate: none !important; }
+body.contribution-page .contribution-flip-card__back { gap: .7rem; padding: clamp(.6rem, 1vw, 1rem); border: 2px solid #a77941; outline: 1px solid #e0bc82; outline-offset: -7px; background: linear-gradient(135deg, #fff8eb, #f1dbb8); transform: rotateY(180deg); text-align: center; line-height: 1.3; }
+body.contribution-page .contribution-flip-card__back strong { display: block; }
+body.contribution-page .contribution-flip-card__shift { display: block; width: 100%; padding-top: .6rem; border-top: 1px solid #c59b66; font-weight: 700; letter-spacing: .03em; }
+body.contribution-page .contribution-flip-card__label { display: flex; justify-content: center; align-items: center; gap: .5rem; margin-top: .7rem; font-weight: 700; }
+body.contribution-page .contribution-flip-card__label > span { display: inline-grid; place-items: center; width: 1.5rem; height: 1.5rem; border: 1px solid #c6a079; border-radius: 50%; background: #fff6e7; }
+body.contribution-page .contribution-flip-card:hover .contribution-flip-card__label > span { background: #ecd0a8; }
+body.contribution-page .contribution-flip-card:focus-visible { outline: 3px solid #9a6742; outline-offset: 5px; }
+body.contribution-page .contribution-pathway-original { display: inline-block; margin-top: 1.5rem; }
+@layer wiki-typography {
+  :root body.contribution-page .contribution-flip-card__back .contribution-flip-card__shift { font-size: 9pt !important; }
+}
+@media (max-width: 1360px) {
+  body.contribution-page .contribution-pathway { grid-template-columns: minmax(0, 260px); justify-content: center; gap: 2.4rem; }
+  body.contribution-page .contribution-pathway__step:not(:last-child)::after { top: calc(100% + .45rem); left: calc(50% - 14px); width: 28px; content: '↓'; }
+  body.contribution-page .contribution-flip-card__back { gap: 1.1rem; padding: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.contribution-page .contribution-flip-card__inner { transition: none; }
+}

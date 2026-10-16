@@ -66,11 +66,7 @@ function format(captions) {
     }
     caption.prepend(document.createTextNode(`${kind} ${number}. `))
     const last = [...textNodes(caption)].reverse().find(node => node.data.trim())
-    if (last && !last.data.trimEnd().endsWith('.')) {
-      const annotation = last.parentElement.closest('sup,sub,a')
-      if (annotation && caption.contains(annotation)) annotation.after(document.createTextNode('.'))
-      else last.data = last.data.trimEnd().replace(/。$/, '') + '.'
-    }
+    if (last) last.data = last.data.replace(/[.。]\s*$/, '')
   }
 }
 

@@ -10,9 +10,11 @@ import './numbered-content.css'
 import './numbered-content.js'
 import './article-video.css'
 import './article-video.js'
-import './headpages.css'
+import './headpages.js'
 import './captions.js'
 import './references.js'
+import './disclosures.js'
+import './footer.js'
 import './back-to-top.js'
 
 const MINIMUM_VISIBLE_TIME = 320

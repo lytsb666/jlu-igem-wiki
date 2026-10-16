@@ -156,6 +156,11 @@ function enhancePdfs() {
   }
   // Image-based Hardware readers are superseded by the native PDF disclosures.
   document.querySelectorAll('.hw-pdf-reader').forEach(reader=>reader.remove())
+  // Activity plans in Open resources start expanded; B14 prototype guides keep
+  // their deliberate disclosure so the green prototype panel stays compact.
+  document.querySelectorAll('#resources .wiki-pdf-fold').forEach(fold => {
+    if (!fold.closest('.gene-wars-guides')) fold.open = true
+  })
 }
 
 function removeAuxiliaryDownloads() {

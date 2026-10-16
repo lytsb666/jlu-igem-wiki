@@ -46,7 +46,7 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 .software-page .sw-intro {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
+  align-items: start;
   gap: clamp(24px, 4vw, 56px);
   margin: 0 0 64px;
   padding: clamp(22px, 3vw, 42px);
@@ -83,9 +83,9 @@ html:has(body.software-page) { scroll-behavior: smooth; }
 .software-page .sw-floating-illustration {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 320px;
   margin: 0;
-  padding: 14px 0;
+  padding: 0;
   justify-self: center;
 }
 .software-page .sw-floating-illustration img {

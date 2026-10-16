@@ -1,139 +1,81 @@
-.site-footer {
-  width: 100%;
-  margin-top: 60px;
-  padding: 48px 20px 34px;
-  color: #E0C1A6;
-  text-align: center;
-  background: linear-gradient(115deg, #6F4E37 0%, #9A6742 100%);
-  border-top: 1px solid rgba(224, 193, 166, 0.2);
+/* The navigation and the original sponsors/contact footer share one screen. */
+.site-footer { --wiki-ink: #e0c1a6; width: 100%; min-height: 100svh; box-sizing: border-box; margin-top: 40px; padding: 84px 24px 24px; color: #e0c1a6; background: linear-gradient(115deg, #6f4e37 0%, #9a6742 100%); border-top: 1px solid #e0c1a633; text-align: center; }
+.site-footer .footer-content { display: grid; grid-template-columns: minmax(0, 1fr); align-content: space-between; gap: 8px; min-height: calc(100svh - 109px); width: min(1200px, 100%); margin: 0 auto; }
+.site-footer .school-info { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 16px; margin: 0; }
+.site-footer .school-info h3 { margin: 0; color: #e0c1a6; font-size: 18px; }
+.site-footer .school-logo { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid #e0c1a6; border-radius: 50%; color: #6f4e37; background: #e0c1a6; font-weight: 800; font-size: 13px; }
+.site-footer .footer-sitemap { display: grid; align-content: start; gap: 2px; margin: 0; text-align: left; }
+.site-footer .footer-sitemap-row { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: center; gap: 12px; padding: 3px 0; border-bottom: 1px solid #e0c1a640; }
+.site-footer .footer-sitemap h2 { margin: 0; color: #e0c1a6; font-size: 16px; }
+.site-footer .footer-sitemap-row > div { display: flex; flex-wrap: wrap; gap: 5px; }
+.site-footer .footer-sitemap a { display: inline-flex; align-items: center; min-height: 27px; padding: 3px 10px; box-sizing: border-box; color: #e0c1a6; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid #e0c1a680; border-radius: 8px; transition: background .2s, transform .2s; }
+.site-footer .footer-sitemap a:hover { background: #e0c1a622; transform: translateY(-1px); }
+.site-footer :is(a, [tabindex]):focus-visible { outline: 2px solid #fff3e3; outline-offset: 3px; }
+.site-footer .contact-title { margin: 0; color: #e0c1a6; font-size: 16px; font-weight: 700; letter-spacing: .04em; }
+.site-footer .qr-container { display: flex; align-items: start; justify-content: center; gap: 20px; margin: 0; }
+.site-footer figure.qr-item { display: flex; flex: 1 1 0; min-width: 0; max-width: 110px; flex-direction: column; align-items: center; gap: 5px; margin: 0; }
+.site-footer .qr-original { display: block; width: min(100%, 76px); aspect-ratio: 1; }
+.site-footer img.qr-code { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+.site-footer .qr-item figcaption { color: #e0c1a6; font-size: 12px; font-weight: 700; line-height: 1.15; }
+.site-footer .sponsor-title { margin: 0; color: #e0c1a6; font-size: 14px; font-weight: 700; letter-spacing: .06em; }
+.site-footer .sponsor-marquee { min-width: 0; overflow: hidden; margin: 0; scrollbar-width: thin; }
+.site-footer .sponsor-marquee-track { display: flex; width: max-content; animation: sponsor-travel 42s linear infinite; }
+.site-footer .sponsor-marquee-group { display: flex; align-items: center; gap: 24px; padding-right: 24px; }
+.site-footer .sponsor-card { display: grid; place-items: center; width: 170px; height: 62px; background: transparent; }
+.site-footer .sponsor-card img { display: block; width: 100%; height: 56px; max-height: 56px; object-fit: contain; filter: grayscale(1) invert(1); mix-blend-mode: screen; }
+.site-footer .sponsor-card:first-child img { object-fit: cover; }
+.site-footer .sponsor-marquee:is(:hover,:focus-within) .sponsor-marquee-track { animation-play-state: paused; }
+.site-footer .copyright { margin: 0; color: #e0c1a6; font-size: 12px; line-height: 1.35; }
+@keyframes sponsor-travel { to { transform: translateX(-50%); } }
+@media (max-width: 760px) {
+  .site-footer { margin-top: 28px; padding: 84px 16px 12px; }
+  .site-footer .footer-content { min-height: calc(100svh - 97px); gap: 8px; }
+  .site-footer .school-info { grid-area: auto; gap: 6px 10px; margin: 0; }
+  .site-footer .school-info h3 { font-size: 15px; }
+  .site-footer .school-logo { width: 30px; height: 30px; font-size: 11px; }
+  .site-footer .footer-sitemap { grid-area: auto; gap: 2px; }
+  .site-footer .footer-sitemap-row { grid-template-columns: 84px minmax(0, 1fr); gap: 8px; padding: 3px 0; }
+  .site-footer .footer-sitemap h2 { font-size: 14px; }
+  .site-footer .footer-sitemap a { min-height: 27px; padding: 3px 7px; font-size: 13px; }
+  .site-footer .contact-title, .site-footer .qr-container, .site-footer .sponsor-title, .site-footer .sponsor-marquee, .site-footer .copyright { grid-area: auto; }
+  .site-footer .contact-title { margin-top: 2px; font-size: 14px; }
+  .site-footer .qr-container { gap: 9px; }
+  .site-footer .qr-original { width: min(100%, 60px); }
+  .site-footer .qr-item figcaption { font-size: 11px; }
+  .site-footer .sponsor-title { font-size: 12px; }
+  .site-footer .sponsor-card { width: 145px; height: 46px; }
+  .site-footer .sponsor-card img { height: 42px; max-height: 42px; }
+  .site-footer .copyright { font-size: 11px; }
 }
-
-.site-footer .footer-content {
-  width: min(1200px, 100%);
-  margin: 0 auto;
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .sponsor-marquee { overflow-x: auto; }
+  .site-footer .sponsor-marquee-track { animation: none; }
+  .site-footer .sponsor-marquee-group[aria-hidden] { display: none; }
+  .site-footer .footer-sitemap a { transition: none; }
 }
-
-.site-footer .school-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 16px 20px;
-  margin-bottom: 28px;
+@media (max-width: 360px) {
+  .site-footer { padding-inline: 12px; }
+  .site-footer .footer-content { gap: 6px; }
+  .site-footer .school-info { gap: 5px 6px; }
+  .site-footer .footer-sitemap-row { grid-template-columns: 78px minmax(0, 1fr); gap: 6px; padding-block: 2px; }
+  .site-footer .footer-sitemap-row > div { gap: 4px; }
+  .site-footer .footer-sitemap a { min-height: 25px; padding: 2px 5px; }
 }
-
-.site-footer .school-info h3 {
-  margin: 0;
-  color: #E0C1A6;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-}
-
-.site-footer .school-logo {
-  display: flex;
-  width: 70px;
-  height: 70px;
-  flex: 0 0 70px;
-  align-items: center;
-  justify-content: center;
-  color: #6F4E37;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  background: #E0C1A6;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
-}
-
-.site-footer .contact-title,
-.site-footer .sponsor-title {
-  color: #E0C1A6;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.site-footer .contact-title {
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-.site-footer .qr-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 20px 0;
-}
-
-.site-footer .qr-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  min-width: 90px;
-}
-
-.site-footer .qr-code {
-  width: 90px;
-  height: 90px;
-  background: #E0C1A6;
-  border: 1px solid rgba(224, 193, 166, 0.55);
-  border-radius: 8px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-.site-footer .qr-item span {
-  color: rgba(224, 193, 166, 0.9);
-  font-size: 0.88rem;
-}
-
-.site-footer .sponsor-title {
-  margin: 32px 0 20px;
-  font-size: 1.05rem;
-}
-
-.site-footer .sponsors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px 20px;
-  margin-bottom: 25px;
-}
-
-.site-footer .sponsor-logo {
-  display: flex;
-  width: 110px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  color: #6F4E37;
-  font-size: 0.8rem;
-  font-weight: 700;
-  background: #E0C1A6;
-  border-radius: 6px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.13);
-}
-
-.site-footer .copyright {
-  margin-top: 20px;
-  color: rgba(224, 193, 166, 0.82);
-  font-size: 0.85rem;
-  line-height: 1.7;
-}
-
-@media (max-width: 600px) {
-  .site-footer {
-    padding: 40px 16px 28px;
+/* Footer controls use a compact UI scale rather than article heading sizes. */
+@layer wiki-typography {
+  :root:root body .site-footer .school-info h3 { font-size: 18px !important; }
+  :root:root body .site-footer .footer-sitemap h2 { font-size: 16px !important; }
+  :root:root body .site-footer .footer-sitemap a { font-size: 14px !important; }
+  :root:root body .site-footer .qr-item figcaption { font-size: 12px !important; line-height: 1.15 !important; }
+  @media (max-width: 760px) {
+    :root:root body .site-footer .school-info h3 { font-size: 15px !important; }
+    :root:root body .site-footer .footer-sitemap h2 { font-size: 14px !important; }
+    :root:root body .site-footer .footer-sitemap a { font-size: 13px !important; }
+    :root:root body .site-footer .qr-item figcaption { font-size: 11px !important; }
   }
-
-  .site-footer .school-info {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .site-footer .qr-container {
-    gap: 18px;
-  }
-
-  .site-footer .sponsor-logo {
-    width: 96px;
+  @media (max-width: 360px) {
+    :root:root body .site-footer .school-info h3 { font-size: 13px !important; }
+    :root:root body .site-footer .footer-sitemap h2 { font-size: 13px !important; }
+    :root:root body .site-footer .footer-sitemap a { font-size: 12px !important; }
   }
 }

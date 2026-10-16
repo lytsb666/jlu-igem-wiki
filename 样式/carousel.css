@@ -1,0 +1,55 @@
+/* Shared by article slideshows; Team's portrait strip keeps its own controls. */
+:root body .wiki-carousel { min-width: 0; }
+:root body .wiki-carousel__viewport { position: relative; min-width: 0; min-height: 0; overflow: hidden; touch-action: pan-y; }
+:root body .wiki-carousel__track {
+  position: relative; display: grid !important; width: 100% !important;
+  min-width: 0; margin: 0; padding: 0 !important; gap: 0 !important;
+  overflow: hidden !important; scroll-snap-type: none !important;
+  scrollbar-width: none !important; scroll-behavior: auto !important;
+  animation: none !important; transform: none !important; will-change: auto;
+}
+:root body .wiki-carousel__track::-webkit-scrollbar { display: none; }
+:root body .wiki-carousel__track > .wiki-carousel__slide {
+  grid-area: 1 / 1; align-self: start; min-width: 0; max-width: 100%;
+  margin: 0; visibility: hidden; pointer-events: none;
+  opacity: 1 !important; transform: none !important; transition: none !important;
+}
+:root body .wiki-carousel__track > .wiki-carousel__slide.is-current { visibility: visible; pointer-events: auto; }
+:root body .wiki-carousel :is(img, figure, article, a) { animation: none !important; transition: none !important; transform: none !important; }
+:root body .wiki-carousel__dots { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; margin: 4px 0 0; padding: 0; }
+:root body .wiki-carousel__dots > button {
+  display: grid; place-items: center; width: 24px; height: 24px; min-height: 0;
+  margin: 0; padding: 0; border: 0; border-radius: 50%; background: transparent;
+  color: inherit; cursor: pointer; box-shadow: none;
+}
+:root body .wiki-carousel__dots > button::before { content: ''; width: 7px; height: 7px; border: 1px solid currentColor; border-radius: 50%; background: transparent; }
+:root body .wiki-carousel__dots > button[aria-current="true"]::before { background: currentColor; }
+:root body .wiki-carousel__arrow {
+  --wiki-ink: #fffaf5; position: absolute; z-index: 4; top: 50%; transform: translateY(-50%);
+  display: grid; place-items: center; width: 40px; height: 48px; min-height: 0;
+  margin: 0; padding: 8px; border: 0; border-radius: 8px;
+  background: rgb(71 48 32 / 38%); color: #fffaf5 !important;
+  opacity: 0; pointer-events: none; cursor: pointer; box-shadow: none;
+}
+:root body .wiki-carousel__arrow--previous { left: 8px; }
+:root body .wiki-carousel__arrow--next { right: 8px; }
+:root body .wiki-carousel__arrow svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (hover: hover) {
+  :root body .wiki-carousel__viewport:hover > .wiki-carousel__arrow { opacity: 1; pointer-events: auto; }
+}
+:root body .wiki-carousel__arrow:focus-visible { opacity: 1; pointer-events: auto; }
+:root body .wiki-carousel :is(button, a):focus-visible { outline: 2px solid #b98a60; outline-offset: -3px; }
+:root body .filmstrip__window.wiki-carousel { mask-image: none; }
+:root body .filmstrip__window.wiki-carousel img { justify-self: center; width: min(100%, 520px); height: 160px; object-fit: contain; }
+:root body .feedback-showcase .wiki-carousel__slide { justify-self: center; width: min(100%, 560px); box-sizing: border-box; box-shadow: none; }
+:root body .feedback-showcase .wiki-carousel { margin-inline: clamp(18px, 3vw, 36px); }
+:root body .wiki-carousel--sponsors .sponsor-marquee-group { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 12px; padding: 0; }
+:root body .wiki-carousel--sponsors .sponsor-card { width: min(170px, 100%); }
+:root body .wiki-carousel--sponsors .sponsor-card img { width: 100%; object-fit: contain; }
+:root body .wiki-carousel--sponsors .wiki-carousel__arrow { width: 30px; height: 40px; padding: 4px; }
+:root body .edu-lightbox__image.wiki-carousel { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+:root body .edu-lightbox__image .wiki-carousel__track,
+:root body .edu-lightbox__image .wiki-carousel__slide { height: 100%; min-height: 0; }
+:root body .edu-lightbox__image .wiki-carousel__slide img { height: 100%; width: 100%; object-fit: contain; }
+:root body .edu-lightbox-photo-track,
+:root body .edu-lightbox-photo-track > figure { height: 100%; min-height: 0; margin: 0; }

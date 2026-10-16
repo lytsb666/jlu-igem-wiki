@@ -1,3 +1,5 @@
+import { createCarousel } from './carousel.js';
+
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const revealItems = [...document.querySelectorAll('.reveal:not(.is-visible)')];
@@ -104,102 +106,63 @@ document.querySelectorAll('.activity-card').forEach((card) => {
   if (media) media.dataset.photoCode = code;
 });
 
-const feedbackViewport = document.querySelector('.feedback-viewport');
-const feedbackCards = [...document.querySelectorAll('.feedback-card')];
-const feedbackCurrent = document.querySelector('[data-feedback-current]');
-let feedbackIndex = Math.max(0, feedbackCards.findIndex((card) => card.classList.contains('is-current')));
-
-function updateFeedback(index, shouldScroll = true) {
-  if (!feedbackViewport || feedbackCards.length === 0) return;
-  feedbackIndex = (index + feedbackCards.length) % feedbackCards.length;
-  feedbackCards.forEach((card, cardIndex) => card.classList.toggle('is-current', cardIndex === feedbackIndex));
-  if (feedbackCurrent) feedbackCurrent.textContent = String(feedbackIndex + 1);
-  if (shouldScroll) {
-    const card = feedbackCards[feedbackIndex];
-    const left = card.offsetLeft - (feedbackViewport.clientWidth - card.offsetWidth) / 2;
-    feedbackViewport.scrollTo({ left, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-  }
-}
-
-document.querySelector('[data-feedback-prev]')?.addEventListener('click', () => updateFeedback(feedbackIndex - 1));
-document.querySelector('[data-feedback-next]')?.addEventListener('click', () => updateFeedback(feedbackIndex + 1));
-
-feedbackViewport?.addEventListener('keydown', (event) => {
-  let nextIndex = null;
-  if (event.key === 'ArrowRight') nextIndex = feedbackIndex + 1;
-  if (event.key === 'ArrowLeft') nextIndex = feedbackIndex - 1;
-  if (event.key === 'Home') nextIndex = 0;
-  if (event.key === 'End') nextIndex = feedbackCards.length - 1;
-  if (nextIndex === null) return;
-  event.preventDefault();
-  updateFeedback(nextIndex);
+// Replace continuous film strips and the feedback scroller with the same slideshow.
+document.querySelectorAll('.filmstrip__window').forEach(root => {
+  const track = root.querySelector('.filmstrip__track');
+  const originals = [...track.querySelector('.filmstrip__group').children];
+  track.replaceChildren(...originals);
+  root.removeAttribute('tabindex');
+  createCarousel(root, { track });
 });
-
-let feedbackTicking = false;
-feedbackViewport?.addEventListener('scroll', () => {
-  if (feedbackTicking) return;
-  feedbackTicking = true;
-  requestAnimationFrame(() => {
-    const centre = feedbackViewport.scrollLeft + feedbackViewport.clientWidth / 2;
-    let closest = feedbackIndex;
-    let distance = Number.POSITIVE_INFINITY;
-    feedbackCards.forEach((card, index) => {
-      const cardCentre = card.offsetLeft + card.offsetWidth / 2;
-      const nextDistance = Math.abs(cardCentre - centre);
-      if (nextDistance < distance) {
-        distance = nextDistance;
-        closest = index;
-      }
-    });
-    if (closest !== feedbackIndex) updateFeedback(closest, false);
-    feedbackTicking = false;
-  });
-}, { passive: true });
-
-requestAnimationFrame(() => updateFeedback(feedbackIndex));
+const feedbackViewport = document.querySelector('.feedback-viewport');
+if (feedbackViewport) {
+  document.querySelector('.feedback-controls')?.remove();
+  const host = document.createElement('div');
+  feedbackViewport.before(host);
+  host.append(feedbackViewport);
+  createCarousel(host, { track: feedbackViewport, initial: 2 });
+}
 
 const lightbox = document.querySelector('.edu-lightbox');
-const lightboxImage = lightbox?.querySelector('img');
+const lightboxImages = lightbox?.querySelector('.edu-lightbox__image');
 const lightboxClose = lightbox?.querySelector('.edu-lightbox__close');
 const lightboxCaption = lightbox?.querySelector('#lightbox-caption');
-const lightboxCounter = lightbox?.querySelector('[data-photo-counter]');
-const lightboxControls = lightbox?.querySelector('.edu-lightbox__controls');
 const photoTriggers = [...document.querySelectorAll('[data-lightbox]')];
-let activePhotos = [];
-let activePhotoIndex = 0;
-
-function showActivityPhoto(index) {
-  if (!lightboxImage || !activePhotos.length) return;
-  activePhotoIndex = (index + activePhotos.length) % activePhotos.length;
-  const photo = activePhotos[activePhotoIndex].querySelector('img');
-  if (!photo) return;
-  lightboxImage.src = photo.currentSrc || photo.src;
-  lightboxImage.alt = photo.alt;
-  if (lightboxCaption) lightboxCaption.textContent = photo.alt;
-  if (lightboxCounter) lightboxCounter.textContent = `${activePhotoIndex + 1} / ${activePhotos.length}`;
-  if (lightboxControls) lightboxControls.hidden = activePhotos.length < 2;
-}
-
-photoTriggers.forEach((trigger) => {
+let photoCarousel = null;
+lightbox?.querySelector('.edu-lightbox__controls')?.remove();
+photoTriggers.forEach(trigger => {
   trigger.addEventListener('click', () => {
-    if (!lightbox || !trigger.querySelector('img')) return;
+    if (!lightbox || !lightboxImages || !trigger.querySelector('img')) return;
+    photoCarousel?.destroy();
     const group = trigger.dataset.photoGroup;
-    activePhotos = group ? photoTriggers.filter((photo) => photo.dataset.photoGroup === group) : [trigger];
-    showActivityPhoto(activePhotos.indexOf(trigger));
+    const photos = group ? photoTriggers.filter(photo => photo.dataset.photoGroup === group) : [trigger];
+    const track = document.createElement('div');
+    track.className = 'edu-lightbox-photo-track';
+    const captions = photos.map(photo => photo.querySelector('img').alt);
+    photos.forEach(photo => {
+      const figure = document.createElement('figure');
+      const original = photo.querySelector('img');
+      const image = original.cloneNode();
+      image.src = original.currentSrc || original.src;
+      image.loading = 'eager';
+      figure.append(image);
+      track.append(figure);
+    });
+    lightboxImages.replaceChildren(track);
+    const initial = photos.indexOf(trigger);
+    if (lightboxCaption) lightboxCaption.textContent = captions[initial];
+    photoCarousel = createCarousel(lightboxImages, {
+      track, initial,
+      onChange: index => { if (lightboxCaption) lightboxCaption.textContent = captions[index]; },
+    });
     if (typeof lightbox.showModal === 'function') {
       lightbox.showModal();
       lightboxClose?.focus();
     }
   });
 });
-lightbox?.querySelector('[data-photo-prev]')?.addEventListener('click', () => showActivityPhoto(activePhotoIndex - 1));
-lightbox?.querySelector('[data-photo-next]')?.addEventListener('click', () => showActivityPhoto(activePhotoIndex + 1));
-lightbox?.addEventListener('keydown', (event) => {
-  if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-  event.preventDefault();
-  showActivityPhoto(activePhotoIndex + (event.key === 'ArrowRight' ? 1 : -1));
-});
+lightbox?.addEventListener('close', () => { photoCarousel?.destroy(); photoCarousel = null; });
 lightboxClose?.addEventListener('click', () => lightbox.close());
-lightbox?.addEventListener('click', (event) => {
+lightbox?.addEventListener('click', event => {
   if (event.target === lightbox) lightbox.close();
 });

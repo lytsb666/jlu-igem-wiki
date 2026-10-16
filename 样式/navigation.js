@@ -2,7 +2,7 @@ const navbar = document.querySelector('.navbar')
 let dismissNavigation
 let revealNavigationAtTop
 
-const navigationSchema = [
+export const navigationSchema = [
   {
     label: 'Project',
     items: [
