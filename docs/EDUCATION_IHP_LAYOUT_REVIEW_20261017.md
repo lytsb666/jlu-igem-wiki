@@ -44,3 +44,13 @@
 - 本机过程数据与截图：`.local/layout-revision-20261017/`。长期要求与照片清单已写入上述项目文件，不依赖本机临时记录。
 
 本地预览：[Education](http://127.0.0.1:5221/Eagagement/education.html#health-guardians)、[Measurement](http://127.0.0.1:5221/Wet-lab/measurement.html#measurement-engineering-cycle)、[iHP](http://127.0.0.1:5221/Eagagement/iHP.html)。
+
+## 同日后续 B14 游戏截图
+
+用户先要求确定位置，随后确认将两张新截图接到 Education → Biotech Explorers → B14 Gene Wars 原介绍截图下方。现依次展示原介绍图、游戏运行画面、成就画面，同组静态纵排、保持原比例与点击放大；图注更新为 `Gene Wars · story, gameplay, and achievement screens`，数量更新为 3，原 Figure 24 编号保持。没有修改活动正文、In development 状态、其他图库或资源入口。
+
+两张附件原字节复制至 `a  图片/education/activities/b14-gene-wars-gameplay.png`（2007×1492）和 `b14-gene-wars-achievement.png`（1963×1476），没有裁切、放大或重绘；原附件文件名、顺序及 SHA-256 保存在同目录 `b14-screenshots.source.json`，不依赖临时附件路径的唯一副本。
+
+构建与资源检查通过：934 文件、23 HTML、1764 引用，缺失／超限／不安全项均为 0。1440px 桌面及 390px 手机核对三图顺序、完整原比例、两张新图直接点击的放大初始选中项，以及三图弹窗，无脚本错误或横向溢出。源标记对照除 B14 媒体与图注外完全相同，24 项活动及全部链接保持。截图及核查数据在 `.local/education-game-20261017/`。
+
+本次仅本地修改，未上传或发布。[B14 预览](http://127.0.0.1:5221/Eagagement/education.html#activity-b14)。此前图组数量及照片总数是上轮快照，不能据此移除本次新图。

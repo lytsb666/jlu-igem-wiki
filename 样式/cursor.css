@@ -147,3 +147,20 @@ html.custom-cursor-active.navigation-cursor-native body .navbar * {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
+/* Native dialogs/fullscreen paint above a DOM cursor regardless of z-index. */
+html.surface-cursor-native,
+html.surface-cursor-native body,
+html.surface-cursor-native body *,
+html.surface-cursor-native body *::before,
+html.surface-cursor-native body *::after {
+    cursor: auto !important;
+}
+html.surface-cursor-native :is(a, button, summary, [role='button'], [role='link']),
+html.surface-cursor-native :is(a, button, summary, [role='button'], [role='link']) * {
+    cursor: pointer !important;
+}
+dialog:modal::backdrop { cursor: auto !important; }
+html.surface-cursor-native #igem-custom-cursor {
+    display: none !important;
+}

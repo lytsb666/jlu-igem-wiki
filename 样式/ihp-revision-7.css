@@ -1,0 +1,62 @@
+/* The supplied heading template owns the three iHP title treatments. */
+body.ihp-manuscript-page .ihp-chapter { margin-bottom: 3rem; }
+body.ihp-manuscript-page .ihp-chapter > .ihp-paper-panel { margin-bottom: 0; }
+body.ihp-manuscript-page .ihp-heading-one {
+  margin: 0 0 1.2rem; padding: 1rem 3.8rem 1rem 1.5rem;
+  border-radius: 30px; background: #fbf4eb;
+  box-shadow: inset -18px 0 #8b5951, inset -37px 0 #c7974c, inset -56px 0 #bf7a59;
+}
+body.ihp-manuscript-page .ihp-heading-one > h2 { margin: 0; padding: 0; }
+body.ihp-manuscript-page .ihp-heading-two {
+  display: block; margin: 1.8rem 10px 1.3rem 0; padding: .85rem 1.1rem;
+  border: 1px solid #ad6626; border-radius: 12px;
+  background: #fbf1e5; box-shadow: 8px -4px 0 -1px #dca06a, 8px -4px 0 #ad6626;
+}
+body.ihp-manuscript-page .ihp-stage-question.ihp-heading-two { margin-top: 0; border-left-width: 1px; }
+body.ihp-manuscript-page .ihp-heading-three {
+  width: fit-content; max-width: 100%; box-sizing: border-box;
+  margin: 1.5rem 0 1rem; padding: .6rem 1rem;
+  border: 2px solid #653008; border-radius: 12px; background: #bf8157;
+}
+body.ihp-manuscript-page .ihp-subchapter-heading { margin: 2rem 0 1rem; }
+body.ihp-manuscript-page [data-ihp-chapter="stage-5"] .ihp-heading-three {
+  background: #fbf1e5; border-color: #b88d66; box-shadow: none;
+}
+body.ihp-manuscript-page .ihp-chapter[data-summary-pending] > .ihp-paper-panel { min-height: 14rem; }
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .lab-section.ihp-chapter {
+    padding: 0 !important; border: 0 !important; border-image: none !important;
+    background: transparent !important; box-shadow: none !important; overflow: visible !important;
+  }
+  :root:root body.ihp-manuscript-page .ihp-heading-one h2::after { content: none !important; display: none !important; }
+  :root:root body.ihp-manuscript-page .ihp-heading-three { color: #fbf4eb !important; }
+  :root:root body.ihp-manuscript-page .ihp-heading-three .ihp-activity-number { color: #6f4e37 !important; }
+  :root:root body.ihp-manuscript-page [data-ihp-chapter="stage-5"] :is(.ihp-heading-three,.ihp-heading-four,.ihp-strategy-step-title) { color: #6f4e37 !important; }
+}
+@layer wiki-typography {
+  :root:root body.ihp-manuscript-page .ihp-heading-one h2 { font-size: 22pt !important; }
+  :root:root body.ihp-manuscript-page .ihp-heading-two { font-size: 16pt !important; }
+  :root:root body.ihp-manuscript-page :is(.ihp-heading-three,.ihp-heading-four) { font-size: 14pt !important; }
+}
+/* Native map icons remain visible; their activity number sits outside the icon. */
+body.ihp-manuscript-page .ihp-activity-point--icon { position: relative; }
+body.ihp-manuscript-page .ihp-activity-point__number {
+  position: absolute; right: -4px; top: -7px; display: grid; place-items: center;
+  min-width: 19px; height: 19px; padding-inline: 2px; box-sizing: border-box;
+  border: 1px solid #8b694d; border-radius: 6px; background: #fbf4eb; color: #503722;
+  font-size: 12px; line-height: 1; font-weight: 700; pointer-events: none;
+}
+body.ihp-manuscript-page .ihp-activity-explorer__canvas .ihp-activity-point--icon:is(:hover,:focus-visible,[aria-pressed="true"]) { background: transparent; }
+/* Only the five confirmed single portraits receive a reference-size backdrop.
+   The original portrait stays a separate foreground image, protecting identity. */
+body.ihp-manuscript-page .ihp-activity-card__photos--portrait { position: relative; }
+body.ihp-manuscript-page .ihp-activity-card__portrait-original { position: absolute; top: 0; height: 100%; z-index: 1; mask-image: linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+body.ihp-manuscript-page .ihp-activity-card__portrait-original img { display: block; width: 100%; height: 100%; object-fit: contain; }
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-activity-card__photos > .ihp-activity-card__portrait-background { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: cover; pointer-events: none; }
+}
+@media (max-width: 550px) {
+  body.ihp-manuscript-page .ihp-heading-one { padding: .9rem 3.4rem .9rem 1rem; border-radius: 22px; box-shadow: inset -14px 0 #8b5951,inset -29px 0 #c7974c,inset -44px 0 #bf7a59; }
+  body.ihp-manuscript-page .ihp-heading-two { padding: .75rem .8rem; margin-right: 7px; box-shadow: 5px -3px 0 -1px #dca06a,5px -3px 0 #ad6626; }
+  body.ihp-manuscript-page .ihp-heading-three { padding: .6rem .75rem; }
+}

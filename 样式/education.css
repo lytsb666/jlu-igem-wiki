@@ -164,7 +164,7 @@ button { font: inherit; }
 .edu-toc > p { margin: 0 0 18px; color: var(--edu-muted); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .edu-toc nav { display: grid; gap: 4px; }
 .edu-toc a { position: relative; padding: 8px 6px; color: #9A6742; font-size: .78rem; line-height: 1.3; text-decoration: none; transition: color .2s ease, transform .2s ease; }
-.edu-toc a::before { position: absolute; top: 50%; left: -21px; width: 5px; height: 5px; content: ""; background: var(--edu-paper); border: 1px solid #D4A276; border-radius: 50%; transform: translate(-50%, -50%); transition: .2s ease; }
+.edu-toc a::before { content: none !important; display: none !important; }
 .edu-toc a:hover,
 .edu-toc a.is-active { color: var(--edu-copper); transform: translateX(3px); }
 .edu-toc a.is-active::before { width: 9px; height: 9px; background: var(--edu-copper); border-color: var(--edu-copper); }
@@ -1103,7 +1103,17 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
   aspect-ratio: auto;
   object-fit: contain;
 }
-.edu-content .activity-card .activity-gallery > figcaption { margin-top: 10px; }
+.edu-content .activity-card .activity-gallery > figcaption { display: block; margin-top: 10px; }
+.edu-content .activity-gallery__archive[hidden] { display: none !important; }
+.edu-content .activity-card .activity-gallery > figcaption > span { display: inline; }
+.edu-content .activity-card .activity-gallery > figcaption > small { display: block; margin-top: 8px; }
+.pathogen-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+@layer wiki-format {
+  :root:root body .pathogen-grid p {
+    text-align: left !important; word-break: normal !important;
+    overflow-wrap: normal !important; hyphens: none !important;
+  }
+}
 .edu-content .activity-card .activity-toolkit { display: block; }
 .edu-content .activity-card .activity-toolkit__links {
   width: 100%;
@@ -1124,6 +1134,11 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
 }
 
 /* Keep each visible pair of Open resources disclosure headers aligned. */
+/* Frame the new lesson artwork around the board on desktop and the face on phones. */
+.edu-hero__cover--heart { object-position: center 12% !important; }
+@media (max-width: 650px) {
+  .edu-hero__cover--heart { object-position: 88% center !important; }
+}
 @layer wiki-format {
   :root:root body #resources :is(.resource-download-group, .gene-wars-guides) .wiki-pdf-fold > summary {
     display: flex;

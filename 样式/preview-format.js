@@ -109,18 +109,7 @@ function makePdfFold(href, title) {
   const reader = document.createElement('iframe')
   reader.className = 'wiki-pdf-reader'
   reader.title = `${summary.textContent} — PDF reader`
-  const actions = document.createElement('p')
-  actions.className = 'wiki-pdf-actions'
-  const open = document.createElement('a')
-  open.href = href
-  open.target = '_blank'; open.rel = 'noopener'; open.textContent = 'Open original PDF'
-  actions.append(open)
-  if (keepDownloadLinks) {
-    const download = document.createElement('a')
-    download.href = href; download.download = ''; download.textContent = 'Download PDF'
-    actions.append(download)
-  }
-  body.append(reader, actions); fold.append(summary,body)
+  body.append(reader); fold.append(summary,body)
   fold.addEventListener('toggle',()=>{ if (fold.open && !reader.src) reader.src = href.split('#')[0]+'#toolbar=1&navpanes=0&view=FitH' })
   return fold
 }
@@ -184,6 +173,25 @@ function removeAuxiliaryDownloads() {
   })
 }
 
+function removeMediaSourceLinks(root = document) {
+  // PDF conversion runs first, preserving its reader. Pictures and APK links
+  // remain interactive; only duplicate image/PDF/video source text is removed.
+  root.querySelectorAll('a[href]').forEach(link => {
+    if (link.querySelector('img,picture,svg,canvas') || link.closest('nav,aside,footer,video,.wiki-directory,.wiki-reference-section,[class*="reference"],[id*="reference"]')) return
+    if (!/\.(?:pdf|png|jpe?g|webp|gif|svg|mp4|webm)(?:[?#]|$)/i.test(link.href)) return
+    const label = link.textContent.trim()
+    const helper = link.matches('.ihp-map-original-link,.ihp-diagram-original,.research-original,.engineering-original') ||
+      link.closest('.wiki-pdf-actions,.measurement-map__original') ||
+      /^(?:[↗↑]\s*)?(?:Open|View|Download)\b/i.test(label) ||
+      /^(?:查看|打开|下载)/.test(label) ||
+      Boolean(link.dataset.wikiPdfTarget)
+    if (!helper || !label) return
+    const parent = link.parentElement
+    link.remove()
+    if (parent.matches('p,.wiki-pdf-actions,.measurement-map__original') && !parent.children.length && !parent.textContent.trim()) parent.remove()
+  })
+}
+
 function enhanceLinks() {
   document.querySelectorAll('main a[href], footer a[href]').forEach(link => {
     if (link.closest('.wiki-directory, .team-jumps, .footer-sitemap, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
@@ -231,8 +239,22 @@ document.querySelectorAll('main h2,main h3,main h4,main h5,main h6,main details 
 })
 enhanceReferences()
 enhancePdfs()
+removeMediaSourceLinks()
 removeAuxiliaryDownloads()
 enhanceLinks()
+
+// Figure helpers created by a page module receive the same source-link cleanup.
+if (articleMain) {
+  let sourceLinkFrame = 0
+  new MutationObserver(records => {
+    const addedLinks = records.some(record => [...record.addedNodes].some(node =>
+      node instanceof Element && (node.matches('a[href]') || node.querySelector('a[href]'))))
+    if (addedLinks && !sourceLinkFrame) sourceLinkFrame = requestAnimationFrame(() => {
+      sourceLinkFrame = 0
+      removeMediaSourceLinks(articleMain)
+    })
+  }).observe(articleMain, {childList: true, subtree: true})
+}
 
 let scheduled = false, directoryEntries = []
 const followedDirectoryGroups = new WeakMap()

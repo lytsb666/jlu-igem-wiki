@@ -1,0 +1,27 @@
+{
+  "recorded_on": "2026-10-17",
+  "user_confirmed_location": "Education / Biotech Explorers / B14 Gene Wars, below the existing story screenshot",
+  "order": [
+    "b14-gene-wars-prototype.png",
+    "b14-gene-wars-gameplay.png",
+    "b14-gene-wars-achievement.png"
+  ],
+  "files": [
+    {
+      "source": "codex-clipboard-5c412230-c268-4437-b90c-2d792c205d20.png",
+      "file": "b14-gene-wars-gameplay.png",
+      "width": 2007,
+      "height": 1492,
+      "sha256": "1fd5f2d06dafa6ae2b506cfcb3fce4019ec59f2c9ae25686c29a4aab40bc4db6",
+      "method": "Original attachment bytes; no cropping, resizing, or retouching."
+    },
+    {
+      "source": "codex-clipboard-e5cdfccd-730b-48f4-aa42-cdda6d0c52d3.png",
+      "file": "b14-gene-wars-achievement.png",
+      "width": 1963,
+      "height": 1476,
+      "sha256": "4a1fd98dee1c87eacb4266a67d2e09b4cb527013f7b92c5b2db13e4e12edc368",
+      "method": "Original attachment bytes; no cropping, resizing, or retouching."
+    }
+  ]
+}

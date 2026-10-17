@@ -1,0 +1,1183 @@
+{
+  "geometry": {
+    "questions": {
+      "width": 1160.0,
+      "height": 657.0,
+      "translate": [
+        -105.0,
+        -8.0
+      ]
+    },
+    "activity-map": {
+      "width": 808.0,
+      "height": 1889.0,
+      "translate": [
+        199.0,
+        -76.0
+      ],
+      "source": "史诗大图带图标版.pptx",
+      "originalIcons": 40
+    },
+    "activity-types": {
+      "width": 975.0,
+      "height": 208.0,
+      "translate": [
+        -18.0,
+        -19.0
+      ]
+    }
+  },
+  "questions": [
+    {
+      "number": 1,
+      "question": "What Global Health Challenges Matter Most?",
+      "stage": "LISTEN",
+      "target": "stage-1",
+      "box": {
+        "x": 47.3333,
+        "y": 7.1333,
+        "w": 623.622,
+        "h": 75.6
+      }
+    },
+    {
+      "number": 2,
+      "question": "How Can We Contribute to Global Health?",
+      "stage": "DEFINE",
+      "target": "stage-2",
+      "box": {
+        "x": 458.0667,
+        "y": 146.8667,
+        "w": 623.622,
+        "h": 75.5906
+      }
+    },
+    {
+      "number": 3,
+      "question": "How Human Practices Shape the Science?",
+      "stage": "BUILD",
+      "target": "stage-3",
+      "box": {
+        "x": 47.3333,
+        "y": 287.4667,
+        "w": 623.622,
+        "h": 75.5906
+      }
+    },
+    {
+      "number": 4,
+      "question": "How Does ByeGerm Evolve Through Human Practices?",
+      "stage": "ENGINEER",
+      "target": "stage-4",
+      "box": {
+        "x": 405.1333,
+        "y": 432.9333,
+        "w": 734.4,
+        "h": 75.6
+      }
+    },
+    {
+      "number": 5,
+      "question": "How Can the iGEM Spirit Drive ByeGerm Forward?",
+      "stage": "EXTEND",
+      "target": "stage-5",
+      "box": {
+        "x": 11.6667,
+        "y": 570.8667,
+        "w": 674.0,
+        "h": 75.6
+      }
+    }
+  ],
+  "stages": [
+    {
+      "name": "LISTEN",
+      "slots": [
+        {
+          "id": "listen-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 3.3333,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 1,
+              "box": {
+                "x": 269.0667,
+                "y": 21.5333,
+                "w": 51.0236,
+                "h": 50.9333
+              },
+              "color": "#C8D1D6"
+            },
+            {
+              "number": 2,
+              "box": {
+                "x": 269.0667,
+                "y": 104.6,
+                "w": 51.0236,
+                "h": 50.9333
+              },
+              "color": "#D0D8C8"
+            }
+          ]
+        },
+        {
+          "id": "listen-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 3.3333,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 3,
+              "box": {
+                "x": 485.0,
+                "y": 22.4,
+                "w": 51.0236,
+                "h": 50.9333
+              },
+              "color": "#C8D1D6"
+            },
+            {
+              "number": 4,
+              "box": {
+                "x": 484.3333,
+                "y": 102.3333,
+                "w": 51.0236,
+                "h": 50.9333
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "DEFINE",
+      "slots": [
+        {
+          "id": "define-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 251.8667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 5,
+              "box": {
+                "x": 270.2,
+                "y": 233.7333,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#D0D8C8"
+            },
+            {
+              "number": 6,
+              "box": {
+                "x": 270.4,
+                "y": 310.8,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 7,
+              "box": {
+                "x": 270.1333,
+                "y": 389.8667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        },
+        {
+          "id": "define-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 251.6,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 8,
+              "box": {
+                "x": 482.3333,
+                "y": 235.2,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 9,
+              "box": {
+                "x": 483.4,
+                "y": 310.8,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 10,
+              "box": {
+                "x": 481.6667,
+                "y": 389.8667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BUILD",
+      "slots": [
+        {
+          "id": "build-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 500.4667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 11,
+              "box": {
+                "x": 272.3333,
+                "y": 511.9333,
+                "w": 51.0,
+                "h": 50.9333
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 12,
+              "box": {
+                "x": 267.3333,
+                "y": 606.4,
+                "w": 51.0,
+                "h": 50.9333
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        },
+        {
+          "id": "build-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 500.4667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 13,
+              "box": {
+                "x": 483.8667,
+                "y": 514.9333,
+                "w": 51.0,
+                "h": 50.9333
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 14,
+              "box": {
+                "x": 484.1333,
+                "y": 606.4,
+                "w": 51.0,
+                "h": 50.9333
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ENGINEER",
+      "slots": [
+        {
+          "id": "engineer-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 829.4667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 15,
+              "box": {
+                "x": 268.2667,
+                "y": 811.6667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 16,
+              "box": {
+                "x": 267.0667,
+                "y": 880.0667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#D0D8C8"
+            },
+            {
+              "number": 17,
+              "box": {
+                "x": 267.3333,
+                "y": 949.6,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#D0D8C8"
+            }
+          ]
+        },
+        {
+          "id": "engineer-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 829.4667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 18,
+              "box": {
+                "x": 481.6667,
+                "y": 811.6667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 19,
+              "box": {
+                "x": 482.8,
+                "y": 880.0667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E0CDCA"
+            },
+            {
+              "number": 20,
+              "box": {
+                "x": 483.2667,
+                "y": 949.6,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#C8D1D6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EXTEND",
+      "slots": [
+        {
+          "id": "extend-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 1155.6667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 21,
+              "box": {
+                "x": 267.4667,
+                "y": 1147.0,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 22,
+              "box": {
+                "x": 266.5333,
+                "y": 1213.6,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            },
+            {
+              "number": 23,
+              "box": {
+                "x": 266.4,
+                "y": 1284.7333,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            }
+          ]
+        },
+        {
+          "id": "extend-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 1155.6667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 24,
+              "box": {
+                "x": 480.7333,
+                "y": 1146.3333,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#D5CEDD"
+            },
+            {
+              "number": 25,
+              "box": {
+                "x": 481.6667,
+                "y": 1214.7333,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 26,
+              "box": {
+                "x": 483.8,
+                "y": 1283.2667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "INCLUSIVITY",
+      "slots": [
+        {
+          "id": "inclusivity-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 1410.1333,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 27,
+              "box": {
+                "x": 267.7333,
+                "y": 1400.8,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#D5CEDD"
+            },
+            {
+              "number": 28,
+              "box": {
+                "x": 268.2667,
+                "y": 1467.4667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 29,
+              "box": {
+                "x": 267.7333,
+                "y": 1536.0667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            }
+          ]
+        },
+        {
+          "id": "inclusivity-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 1410.1333,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 30,
+              "box": {
+                "x": 482.8,
+                "y": 1400.8,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 31,
+              "box": {
+                "x": 483.8,
+                "y": 1467.4667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 32,
+              "box": {
+                "x": 484.8667,
+                "y": 1536.6667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E8D5C1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "COLLABORATION",
+      "slots": [
+        {
+          "id": "collaboration-left",
+          "side": "left",
+          "frame": {
+            "x": 5.8,
+            "y": 1668.4667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 33,
+              "box": {
+                "x": 267.7333,
+                "y": 1628.0667,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 34,
+              "box": {
+                "x": 267.3333,
+                "y": 1695.8,
+                "w": 51.0236,
+                "h": 51.0236
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 35,
+              "box": {
+                "x": 267.0667,
+                "y": 1763.0,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#D0D8C8"
+            },
+            {
+              "number": 36,
+              "box": {
+                "x": 266.0,
+                "y": 1829.4667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E6DCBE"
+            }
+          ]
+        },
+        {
+          "id": "collaboration-right",
+          "side": "right",
+          "frame": {
+            "x": 559.6,
+            "y": 1668.4667,
+            "w": 242.8,
+            "h": 171.1333
+          },
+          "points": [
+            {
+              "number": 37,
+              "box": {
+                "x": 485.0,
+                "y": 1627.9333,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E6DCBE"
+            },
+            {
+              "number": 38,
+              "box": {
+                "x": 484.5333,
+                "y": 1696.2667,
+                "w": 51.0,
+                "h": 50.9333
+              },
+              "color": "#C8D1D6"
+            },
+            {
+              "number": 39,
+              "box": {
+                "x": 484.6667,
+                "y": 1761.4,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#D5CEDD"
+            },
+            {
+              "number": 40,
+              "box": {
+                "x": 484.7333,
+                "y": 1829.4667,
+                "w": 51.0,
+                "h": 51.0
+              },
+              "color": "#E6DCBE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "number": 1,
+      "title": "Listening to the Public",
+      "summaries": [
+        "Collected public feedback through surveys and interactive activities, revealing demand for portable respiratory pathogen testing."
+      ],
+      "photos": [
+        "image1.jpeg"
+      ],
+      "sourceBlock": 13,
+      "type": "SURVEY"
+    },
+    {
+      "number": 2,
+      "title": "Random Interviews at the Third Hospital of Harbin Medical University",
+      "summaries": [
+        "Visited pediatric and geriatric departments, identifying mobility barriers and cross-infection risks that support local screening."
+      ],
+      "photos": [
+        "image2.jpeg"
+      ],
+      "sourceBlock": 17,
+      "type": "FIELD VISIT"
+    },
+    {
+      "number": 3,
+      "title": "Interviews with Nursing Home Care Workers and Residents",
+      "summaries": [
+        "Interviewed nursing home staff and residents, identifying the need for simple, rapid, on-site infection screening."
+      ],
+      "photos": [
+        "image3.jpeg"
+      ],
+      "sourceBlock": 21,
+      "type": "SURVEY"
+    },
+    {
+      "number": 4,
+      "title": "Interview with Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+      "summaries": [
+        "Discussed primary-care needs with Professor Li Juan, Former Dean of the School of Public Health, Jilin University, defining a portable, rapid, multiplex pathogen detection goal."
+      ],
+      "photos": [
+        "image4.png"
+      ],
+      "sourceBlock": 25,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 5,
+      "title": "Roundtable with Public Health and Disease Control Experts",
+      "summaries": [
+        "Consulted disease-control experts to position ByeGerm as a community early-warning node and draft an emergency response guide."
+      ],
+      "photos": [
+        "image5.jpeg"
+      ],
+      "sourceBlock": 30,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 6,
+      "title": "Interview with Vice Dean Changgui Kou of the School of Public Health, Jilin University",
+      "summaries": [
+        "Used epidemiological guidance to select five respiratory targets: RSV, hMPV-B, SPN, BP, and HI."
+      ],
+      "photos": [
+        "image6.png"
+      ],
+      "sourceBlock": 34,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 7,
+      "title": "Interview with Dr. Junyao Li, Respiratory Medicine",
+      "summaries": [
+        "Consulted respiratory clinicians to define ByeGerm as an out-of-hospital preliminary screening tool, not a laboratory replacement."
+      ],
+      "photos": [
+        "image7.jpeg"
+      ],
+      "sourceBlock": 38,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 8,
+      "title": "Interview with Dr. Huimin Li, Laboratory Medicine",
+      "summaries": [
+        "Confirmed that on-site screening should complement, not replace, standardized laboratory confirmation."
+      ],
+      "photos": [
+        "image8.jpeg"
+      ],
+      "sourceBlock": 42,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 9,
+      "title": "Interview with Dr. Shangwei Ji, Infectious Diseases",
+      "summaries": [
+        "Discussed on-site risk stratification to guide observation, isolation, and referral decisions."
+      ],
+      "photos": [
+        "image9.jpeg"
+      ],
+      "sourceBlock": 46,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 10,
+      "title": "Interview with Dr. Xin Tian, Pediatrics",
+      "summaries": [
+        "Identified kindergarten and home screening opportunities to help caregivers recognize pediatric respiratory risks earlier."
+      ],
+      "photos": [
+        "image10.jpeg"
+      ],
+      "sourceBlock": 50,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 11,
+      "title": "Interview with Professor X. Chris Le, University of Alberta",
+      "summaries": [
+        "Adopted expert advice to pursue a portable, one-pot RPA–CRISPR/Cas12a assay instead of conventional PCR."
+      ],
+      "photos": [
+        "image11.jpeg"
+      ],
+      "sourceBlock": 56,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 12,
+      "title": "Interview with Professor Tianyi Zhao, Harbin Institute of Technology",
+      "summaries": [
+        "Discussed DNABERT-based machine learning to improve candidate sequence screening and multiplex detection specificity."
+      ],
+      "photos": [
+        "image12.jpeg"
+      ],
+      "sourceBlock": 60,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 13,
+      "title": "Interview with Professor Xingfang Li, University of Alberta",
+      "summaries": [
+        "Discussed molecular docking and dynamics simulations to assess candidate structural stability before wet-lab experiments."
+      ],
+      "photos": [
+        "image13.jpeg"
+      ],
+      "sourceBlock": 64,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 14,
+      "title": "Interview with Professor Tsan-Yuk Lam, University of Hong Kong",
+      "summaries": [
+        "Developed optimization strategies for one-pot interference using single-factor gradients and comprehensive controls."
+      ],
+      "photos": [
+        "image14.png"
+      ],
+      "sourceBlock": 68,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 15,
+      "title": "Interview with Professor Zheng Hu and Professor Yingtao Zhang, Harbin Institute of Technology",
+      "summaries": [
+        "Integrated expert recommendations on temperature control, microcomputing, and computer vision for automated fluorescence analysis."
+      ],
+      "photos": [
+        "image15.jpeg"
+      ],
+      "sourceBlock": 73,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 16,
+      "title": "Collecting First-Generation Instrument Feedback from Nursing Homes",
+      "summaries": [
+        "Nursing-home trials revealed limitations of single-channel testing, motivating a multi-channel instrument upgrade."
+      ],
+      "photos": [
+        "image16.jpeg"
+      ],
+      "sourceBlock": 77,
+      "type": "FIELD VISIT"
+    },
+    {
+      "number": 17,
+      "title": "Collecting First-Generation Instrument Feedback from Kindergartens",
+      "summaries": [
+        "Kindergarten feedback highlighted the need for faster, higher-throughput screening during sudden fevers."
+      ],
+      "photos": [
+        "image17.jpeg"
+      ],
+      "sourceBlock": 81,
+      "type": "FIELD VISIT"
+    },
+    {
+      "number": 18,
+      "title": "Interview with Professor Ying Mou, Zhejiang University",
+      "summaries": [
+        "Implemented rotational switching and thermal isolation recommendations in the second-generation 15-well instrument."
+      ],
+      "photos": [
+        "image18.png"
+      ],
+      "sourceBlock": 85,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 19,
+      "title": "The “Auditory and Tactile” Blind-Testing Box for Older Adults and The “Monster Capture” Sticker Wall for Children",
+      "summaries": [
+        "Collected 60 votes from older adults, with 70% positive feedback on device usability.",
+        "Used sticker voting with 50 children, finding 64% expressed positive feelings toward screening."
+      ],
+      "photos": [
+        "image19.jpeg"
+      ],
+      "sourceBlock": 89,
+      "type": "VOTING"
+    },
+    {
+      "number": 20,
+      "title": "The Retrospective Empathy Survey for Patients",
+      "summaries": [
+        "Surveyed 200 patients; 90% preferred mobile displays and 85% reported reduced anxiety with bedside testing."
+      ],
+      "photos": [
+        "image20.jpeg"
+      ],
+      "sourceBlock": 97,
+      "type": "VOTING"
+    },
+    {
+      "number": 21,
+      "title": "Interview with Director Linshen Xie, West China Fourth Hospital of Sichuan University",
+      "summaries": [
+        "Discussed quality control, exception handling, data traceability, and public health integration for responsible deployment."
+      ],
+      "photos": [
+        "image21.jpeg"
+      ],
+      "sourceBlock": 103,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 22,
+      "title": "Communication with Medical Device Manufacturing Enterprise",
+      "summaries": [
+        "Reviewed production feasibility, material safety, certification, and cost reduction with medical device engineers."
+      ],
+      "photos": [
+        "image22.jpeg"
+      ],
+      "sourceBlock": 107,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 23,
+      "title": "Age-Adapted and Child-Friendly Science Education",
+      "summaries": [
+        "Delivered age-adapted science education, increasing voluntary testing acceptance to 93% among older adults and 95% among children."
+      ],
+      "photos": [
+        "image23.jpeg"
+      ],
+      "sourceBlock": 111,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 24,
+      "title": "Respiratory Virus Detection Strategy Card Game Experience",
+      "summaries": [
+        "Created a respiratory virus card game to explain transmission and detection through playful participation."
+      ],
+      "photos": [
+        "image24.jpeg"
+      ],
+      "sourceBlock": 115,
+      "type": "GAMIFIED ENGAGEMENT"
+    },
+    {
+      "number": 25,
+      "title": "Volunteer Science Education in Tang County, Hebei",
+      "summaries": [
+        "Introduced device models and public health concepts in remote classrooms through demonstrations and hands-on learning."
+      ],
+      "photos": [
+        "image25.jpeg"
+      ],
+      "sourceBlock": 119,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 26,
+      "title": "Interview with Vice President Wei Ye, Nanjing Second Hospital",
+      "summaries": [
+        "Defined single-channel use for homes and small institutions and multi-channel screening for communities and disease-control centers."
+      ],
+      "photos": [
+        "image26.jpeg"
+      ],
+      "sourceBlock": 123,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 27,
+      "title": "Wonderful Building Blocks of Life — Kindergarten Synthetic Biology",
+      "summaries": [
+        "Introduced synthetic biology to preschool children through storytelling, child-safe DNA crafts, and RNA role-play."
+      ],
+      "photos": [
+        "image27.jpeg"
+      ],
+      "sourceBlock": 128,
+      "type": "GAMIFIED ENGAGEMENT"
+    },
+    {
+      "number": 28,
+      "title": "Beyond Mountains and Seas — Science in County Communities",
+      "summaries": [
+        "Brought interactive synthetic biology lessons and hands-on models to students in county-level communities."
+      ],
+      "photos": [
+        "image28.jpeg"
+      ],
+      "sourceBlock": 132,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 29,
+      "title": "Wisdom in Silver Years — Science with Older Adults",
+      "summaries": [
+        "Engaged older adults through tactile models, fermentation analogies, and discussions of respiratory health technologies."
+      ],
+      "photos": [
+        "image29.jpeg"
+      ],
+      "sourceBlock": 136,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 30,
+      "title": "Sound as a Bridge — Accessible Science for People with Visual Impairments",
+      "summaries": [
+        "Co-designed a multisensory synthetic biology workshop and accessible handbook for participants with visual impairments."
+      ],
+      "photos": [
+        "image30.jpeg"
+      ],
+      "sourceBlock": 140,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 31,
+      "title": "A Dialogue Across Continents — Global Youth Exchange",
+      "summaries": [
+        "Connected international students through roundtables and cross-cultural design challenges on synthetic biology applications."
+      ],
+      "photos": [
+        "image31.jpeg"
+      ],
+      "sourceBlock": 144,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 32,
+      "title": "Lighting a Spark in the Community — Public Health Dialogue",
+      "summaries": [
+        "Held community health salons with frontline professionals to discuss biosensors, screening needs, and deployment pathways."
+      ],
+      "photos": [
+        "image32.jpeg"
+      ],
+      "sourceBlock": 148,
+      "type": "EXPERT INTERVIEW"
+    },
+    {
+      "number": 33,
+      "title": "CCiC & APiC Conferences",
+      "summaries": [
+        "Exchanged technical and regulatory perspectives with iGEM teams at CCiC and APiC conferences."
+      ],
+      "photos": [
+        "image33.jpeg"
+      ],
+      "sourceBlock": 153,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 34,
+      "title": "BioAI Agent Exchange and Summer Dry-Lab Camp",
+      "summaries": [
+        "Collaborated on BioAI Agent discussions and a dry-lab outreach lecture to share computational biology skills."
+      ],
+      "photos": [
+        "image34.jpeg"
+      ],
+      "sourceBlock": 157,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 35,
+      "title": "Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+      "summaries": [
+        "Exchanged project ideas with ZJUT-China at the Bio-manufacturing Expo, inspiring participatory outreach formats."
+      ],
+      "photos": [
+        "image35.jpeg"
+      ],
+      "sourceBlock": 161,
+      "type": "FIELD VISIT"
+    },
+    {
+      "number": 36,
+      "title": "iGEM New Team Development and Knowledge Transfer Handbook",
+      "summaries": [
+        "Co-developed an iGEM team handbook with JLU-FBH to share management, troubleshooting, and knowledge-transfer practices."
+      ],
+      "photos": [
+        "image36.jpeg"
+      ],
+      "sourceBlock": 165,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 37,
+      "title": "AI × Synthetic Biology Collaborative Science Communication Handbook",
+      "summaries": [
+        "Co-authored an AI–synthetic biology handbook with four iGEM teams, covering opportunities, limitations, and ethical considerations."
+      ],
+      "photos": [
+        "image37.jpeg"
+      ],
+      "sourceBlock": 169,
+      "type": "PRESENTATION"
+    },
+    {
+      "number": 38,
+      "title": "SBti Interactive Public Engagement",
+      "type": "SURVEY",
+      "photos": [
+        "activity-sbti.jpeg"
+      ],
+      "summaries": [
+        "Developed the SBti interactive survey to gather public attitudes and tailor synthetic biology communication."
+      ],
+      "sourceDocument": "ihp6.0.docx",
+      "sourceBlock": 4
+    },
+    {
+      "number": 39,
+      "title": "Tower-Defense Synthetic Biology Education Game",
+      "type": "GAMIFIED ENGAGEMENT",
+      "photos": [
+        "activity-tower-defense.png"
+      ],
+      "summaries": [
+        "Created an open-source tower-defense game to make synthetic biology mechanisms accessible through play."
+      ],
+      "sourceDocument": "ihp6.0.docx",
+      "sourceBlock": 8
+    },
+    {
+      "number": 40,
+      "title": "Hike with Love · Embrace the Future — Social Inclusion",
+      "summaries": [
+        "Supported 100 young people with special needs through medical assistance and science outreach during an inclusive hike."
+      ],
+      "photos": [
+        "image39.jpeg"
+      ],
+      "sourceBlock": 182,
+      "type": "FIELD VISIT"
+    }
+  ],
+  "unresolvedNumbers": []
+}

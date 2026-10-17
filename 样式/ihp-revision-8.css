@@ -1,0 +1,97 @@
+/* Latest iHP feedback tables and the caption document's equipment pairs. */
+body.ihp-manuscript-page .ihp-device-comparison { max-width: 760px; margin-inline: auto; }
+body.ihp-manuscript-page .ihp-hardware-pair:has(> .ihp-device-comparison) {
+  display: block; width: min(100%, 760px);
+}
+body.ihp-manuscript-page .ihp-device-comparison__images {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center; gap: 1.1rem;
+}
+body.ihp-manuscript-page .ihp-device-comparison__images > a { display: block; min-width: 0; }
+body.ihp-manuscript-page .ihp-device-comparison__images img { width: 100%; height: auto; }
+/* Proportional column widths give both complete first-generation panels the
+   same visible height without stretching either technical drawing. */
+body.ihp-manuscript-page [data-ihp-device-generation="1"] .ihp-device-comparison__images {
+  grid-template-columns: 1.399132fr 1.599496fr;
+}
+body.ihp-manuscript-page .ihp-summit-still { width: min(100%, 680px); margin-inline: auto; }
+body.ihp-manuscript-page .ihp-feedback-point {
+  position: absolute; padding: 0; border: 2px solid #9a6a2c80; border-radius: 22px;
+  background: transparent; cursor: pointer; color: #6f4e37;
+  animation: ihp-feedback-glow 2.8s ease-in-out infinite;
+}
+body.ihp-manuscript-page .ihp-feedback-point:nth-of-type(even) { animation-delay: -.9s; }
+body.ihp-manuscript-page .ihp-feedback-point__label {
+  position: absolute; z-index: 2; left: 50%; bottom: calc(100% + 9px);
+  transform: translateX(-50%); width: max-content; max-width: 220px;
+  padding: 6px 10px; border-radius: 8px; background: #6f4e37; color: #fffaf5;
+  font: 700 12pt/1.3 'Times New Roman', Times, serif;
+  opacity: 0; pointer-events: none; transition: opacity .18s;
+}
+body.ihp-manuscript-page .ihp-feedback-point:is(:hover,:focus-visible) {
+  outline: 3px solid #9a6a2c; outline-offset: 4px;
+}
+body.ihp-manuscript-page .ihp-feedback-point:is(:hover,:focus-visible) .ihp-feedback-point__label { opacity: 1; }
+@keyframes ihp-feedback-glow {
+  0%, 100% { box-shadow: 0 0 0 2px #dba64335, 0 0 12px 4px #dba64335; }
+  50% { box-shadow: 0 0 0 6px #dba64350, 0 0 25px 9px #dba64370; }
+}
+body.ihp-manuscript-page .ihp-feedback-links {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+  margin-top: 2.2rem;
+}
+body.ihp-manuscript-page .ihp-feedback-point--mobile {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  gap: 10px; min-width: 0; padding: 12px 8px; background: #fbf4eb;
+}
+body.ihp-manuscript-page .ihp-feedback-point__icon {
+  display: block; width: 74px; height: 74px; background-repeat: no-repeat; border-radius: 12px;
+}
+body.ihp-manuscript-page .ihp-feedback-point--mobile .ihp-feedback-point__label {
+  position: static; transform: none; width: auto; max-width: 100%; opacity: 1;
+  padding: 0; background: none; color: #6f4e37;
+}
+body.ihp-manuscript-page .ihp-feedback-dialog {
+  width: min(960px, calc(100vw - 36px)); max-width: none; max-height: calc(100dvh - 48px);
+  box-sizing: border-box; padding: 0; border: 1px solid #bd936a; border-radius: 18px;
+  background: #fbf4eb; color: #6f4e37; box-shadow: 0 22px 70px #39241640;
+  font-family: 'Times New Roman', Times, serif; overscroll-behavior: contain;
+}
+body.ihp-manuscript-page .ihp-feedback-dialog::backdrop { background: #32251bb3; }
+body.ihp-manuscript-page .ihp-feedback-dialog__header {
+  display: flex; justify-content: space-between; align-items: center; gap: 18px;
+  position: sticky; top: 0; z-index: 2; padding: 18px 22px; background: #6f4e37; color: #fffaf5;
+}
+body.ihp-manuscript-page .ihp-feedback-dialog__header h3 { margin: 0; font-size: 16pt; color: inherit; }
+body.ihp-manuscript-page .ihp-feedback-dialog__close {
+  flex-shrink: 0; border: 1px solid #fffaf580; border-radius: 8px; padding: 7px 12px;
+  background: transparent; color: inherit; font: 700 12pt/1.3 'Times New Roman', Times, serif; cursor: pointer;
+}
+body.ihp-manuscript-page .ihp-feedback-dialog__close:focus-visible { outline: 3px solid #f5d092; outline-offset: 3px; }
+body.ihp-manuscript-page .ihp-feedback-dialog__content { padding: 20px 24px 26px; }
+body.ihp-manuscript-page .ihp-feedback-table-scroll { overflow-x: auto; }
+body.ihp-manuscript-page .ihp-feedback-dialog table { width: 100%; min-width: 600px; table-layout: fixed; margin: 0; border-collapse: collapse; }
+body.ihp-manuscript-page .ihp-feedback-dialog caption {
+  position: sticky; left: 0; width: min(100%, calc(100vw - 64px));
+  white-space: normal; text-align: center;
+}
+body.ihp-manuscript-page .ihp-feedback-scroll-hint { display: none; }
+body.ihp-manuscript-page .ihp-feedback-dialog :is(th,td) { white-space: normal; overflow-wrap: normal; word-break: normal; }
+body.ihp-manuscript-page .ihp-feedback-dialog th:first-child { width: 34%; }
+body.ihp-manuscript-page .ihp-feedback-dialog td { line-height: 1.6; }
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-feedback-dialog__header :is(h3,button,span) { color: #fffaf5 !important; }
+  :root:root body.ihp-manuscript-page .ihp-feedback-point:not(.ihp-feedback-point--mobile) .ihp-feedback-point__label { color: #fffaf5 !important; }
+  :root:root body.ihp-manuscript-page .ihp-device-comparison__images img { width: 100% !important; max-height: none !important; }
+}
+@media (max-width: 550px) {
+  body.ihp-manuscript-page .ihp-feedback-dialog__header { padding: 14px 16px; }
+  body.ihp-manuscript-page .ihp-feedback-dialog__content { padding: 16px 12px 20px; }
+  body.ihp-manuscript-page .ihp-feedback-dialog :is(th,td) { padding: 10px; }
+  body.ihp-manuscript-page .ihp-device-comparison__images { gap: 10px; }
+  body.ihp-manuscript-page .ihp-feedback-scroll-hint { display: block; margin: 0; font-size: 12pt; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.ihp-manuscript-page .ihp-feedback-point { animation: none; box-shadow: 0 0 0 3px #dba64355; }
+  body.ihp-manuscript-page .ihp-feedback-point__label { transition: none; }
+}

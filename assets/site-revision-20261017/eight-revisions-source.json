@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-17",
+  "hardware_removed_caption": "Figure 1. Development timeline for the ByeGerm instruments and app",
+  "hardware_figure_map": [
+    {
+      "old": 2,
+      "new": 1
+    },
+    {
+      "old": 3,
+      "new": 2
+    },
+    {
+      "old": 4,
+      "new": 3
+    },
+    {
+      "old": 5,
+      "new": 4
+    },
+    {
+      "old": 6,
+      "new": 5
+    },
+    {
+      "old": 7,
+      "new": 6
+    },
+    {
+      "old": 8,
+      "new": 7
+    },
+    {
+      "old": 9,
+      "new": 8
+    },
+    {
+      "old": 10,
+      "new": 9
+    },
+    {
+      "old": 11,
+      "new": 10
+    },
+    {
+      "old": 12,
+      "new": 11
+    },
+    {
+      "old": 13,
+      "new": 12
+    },
+    {
+      "old": 14,
+      "new": 13
+    },
+    {
+      "old": 15,
+      "new": 14
+    },
+    {
+      "old": 16,
+      "new": 15
+    },
+    {
+      "old": 17,
+      "new": 16
+    },
+    {
+      "old": 18,
+      "new": 17
+    },
+    {
+      "old": 19,
+      "new": 18
+    },
+    {
+      "old": 20,
+      "new": 19
+    },
+    {
+      "old": 21,
+      "new": 20
+    },
+    {
+      "old": 22,
+      "new": 21
+    }
+  ],
+  "ihp_captions": [
+    "Figure 1. Overview of Human Practices engagement: questionnaires, stakeholder groups, named contacts, and work entries",
+    "Figure 2. From people’s needs to a better ByeGerm: the Human Practices feedback loop",
+    "Figure 3. Five questions that shaped the Human Practices journey",
+    "Figure 4. Activity types used throughout the Human Practices journey",
+    "Figure 5. Stakeholder relationships across three circles",
+    "Figure 6. Power–interest matrix of the project stakeholders",
+    "Figure 7. C.A.R.E.S. Ethical Evaluation Framework",
+    "Figure 8. Listening to the Public",
+    "Figure 9. Listening to the Public — questionnaire format",
+    "Figure 10. Listening to the Public",
+    "Figure 11. Listening to the Public — participant responses",
+    "Figure 12. Public concern about respiratory infections across age groups",
+    "Figure 13. Perceived vulnerability of different age groups to severe respiratory infections",
+    "Figure 14. Perceived value of portable testing for young children and older family members",
+    "Figure 15. Random Interviews at the Third Hospital of Harbin Medical University",
+    "Figure 16. Random Interviews at the Third Hospital of Harbin Medical University",
+    "Figure 17. Random Interviews at the Third Hospital of Harbin Medical University",
+    "Figure 18. Dialogue with Nursing Home Care Workers and Residents",
+    "Figure 19. Dialogue with Nursing Home Care Workers and Residents",
+    "Figure 20. Dialogue with Nursing Home Care Workers and Residents",
+    "Figure 21. Dialogue with Nursing Home Care Workers and Residents",
+    "Figure 22. Dialogue with Kindergarten Teachers and Children",
+    "Figure 23. Dialogue with Kindergarten Teachers and Children",
+    "Figure 24. From community voices to practical respiratory pathogen screening",
+    "Figure 25. Dialogue with Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+    "Figure 26. Roundtable with Public Health and Disease Control Experts",
+    "Figure 27. Roundtable with Public Health and Disease Control Experts",
+    "Figure 28. Deputy Dean Changgui Kou of the School of Public Health, Jilin University",
+    "Figure 29. Respiratory Medicine: Dr. Junyao Li",
+    "Figure 30. Laboratory Medicine: Dr. Huimin Li",
+    "Figure 31. Infectious Diseases: Dr. Shangwei Ji",
+    "Figure 32. Pediatrics: Dr. Xin Tian",
+    "Figure 33. Geriatric Medicine: Dr. Lihong Huang",
+    "Figure 34. Interview with Professor X. Chris Le of the University of Alberta",
+    "Figure 35. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+    "Figure 36. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+    "Figure 37. Discussion with Professor Xing-Fang Li at the conference",
+    "Figure 38. Interview with Professor Xing-Fang Li",
+    "Figure 39. Interview with Professor Tsan-Yuk Lam of the University of Hong Kong",
+    "Figure 40. Dry-Lab Workflow for Target Optimization",
+    "Figure 41. Interview with Professor Zheng Hu of the Harbin Institute of Technology",
+    "Figure 42. Interview with Professor Yingtao Zhang of the Harbin Institute of Technology",
+    "Figure 43. First-generation ByeGerm instrument: external dimensions and internal modules",
+    "Figure 44. Collecting Feedback from Nursing Homes and Kindergartens",
+    "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+    "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+    "Figure 47. Collecting Feedback from Nursing Homes and Kindergartens",
+    "Figure 48. Interview with Professor Ying Mou of Zhejiang University",
+    "Figure 49. Second-generation ByeGerm instrument: external design and multichannel module architecture",
+    "Figure 50. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+    "Figure 51. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+    "Figure 52. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+    "Figure 53. The “Monster Capture” Sticker Wall for Children",
+    "Figure 54. The “Monster Capture” Sticker Wall for Children",
+    "Figure 55. Children’s feedback on the ByeGerm screening experience",
+    "Figure 56. The Retrospective Empathy Survey for Patients",
+    "Figure 57. Responsible adoption and Human Practices-driven entrepreneurial translation",
+    "Figure 58. Interview with Department Head Xie Linshen",
+    "Figure 59. Meeting with Zhang Jinming of Guangzhou Zhikang Medical",
+    "Figure 60. Age-Adapted Education — dialogue with an older adult",
+    "Figure 61. Children — reducing unfamiliarity and fear of the device",
+    "Figure 62. Screening acceptance among older adults and children before and after education",
+    "Figure 63. Respiratory Virus Testing Strategy Cards",
+    "Figure 64. Device model and interactive experience",
+    "Figure 65. Public health education in a county-level classroom",
+    "Figure 66. ByeGerm framework for responsible translation.",
+    "Figure 67. Priority settings and criteria for responsible testing",
+    "Figure 68. From assay validation to a minimum viable testing and service system",
+    "Figure 69. Validation stages and evidence boundaries.",
+    "Figure 70. A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital",
+    "Figure 71. Evidence-gated translation roadmap with explicit rollback conditions.",
+    "Figure 72. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+    "Figure 73. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+    "Figure 74. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+    "Figure 75. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+    "Figure 76. Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults",
+    "Figure 77. Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments",
+    "Figure 78. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+    "Figure 79. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+    "Figure 80. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+    "Figure 81. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+    "Figure 82. Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+    "Figure 83. Professor Xingfang Li",
+    "Figure 84. Professor Ying Mou",
+    "Figure 85. JLU-SPH project presentation at the US-China iGEM Human Practices Summit",
+    "Figure 86. CCiC",
+    "Figure 87. CCiC",
+    "Figure 88. CCiC",
+    "Figure 89. CCiC",
+    "Figure 90. APiC",
+    "Figure 91. APiC",
+    "Figure 92. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+    "Figure 93. BioAI Agent software demonstration during the inter-team online exchange",
+    "Figure 94. Online course timetable for the Summer Dry Lab Camp",
+    "Figure 95. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+    "Figure 96. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+    "Figure 97. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+    "Figure 98. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+    "Figure 99. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+    "Figure 100. Introduction and gameplay instructions for the synthetic biology adaptation of Plants vs. Zombies",
+    "Figure 101. Social Inclusion (Hike with Love · Embrace the Future)",
+    "Figure 102. Social Inclusion (Hike with Love · Embrace the Future)"
+  ],
+  "education_b08": {
+    "static": [
+      "b08-01.jpg",
+      "b08-02.jpg",
+      "b08-06.png",
+      "b08-10.jpg"
+    ],
+    "moved_to_full_gallery": "b08-13.jpg",
+    "gallery_count": 14
+  },
+  "stakeholder_stickers": {
+    "sheet_directory": "assets/mascots/back-to-top-20261014/",
+    "crops": {
+      "core": [
+        "lab-roles-transparent.png",
+        1216,
+        472,
+        448,
+        452
+      ],
+      "direct": [
+        "research-roles-transparent.png",
+        1212,
+        474,
+        431,
+        448
+      ],
+      "indirect": [
+        "lab-roles-transparent.png",
+        20,
+        472,
+        468,
+        442
+      ]
+    }
+  },
+  "model_manifest": "assets/model/revision-20261017/source-manifest.json",
+  "system_diagram_manifest": "assets/human-practice/revision-11-20261017/source-manifest.json",
+  "authorization": "Local edits only; no upload or deployment."
+}

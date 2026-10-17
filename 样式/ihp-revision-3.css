@@ -73,7 +73,13 @@ body.ihp-manuscript-page :is(.ihp-stakeholder-card__front, .ihp-stakeholder-card
 body.ihp-manuscript-page .ihp-stakeholder-card:nth-child(2) .ihp-stakeholder-card__front { background: #ead3ba; }
 body.ihp-manuscript-page .ihp-stakeholder-card:nth-child(3) .ihp-stakeholder-card__front { background: #dfc1a6; }
 body.ihp-manuscript-page .ihp-stakeholder-card__front h4 { margin: 0; text-align: center; }
-body.ihp-manuscript-page .ihp-stakeholder-card__mark { margin: 1rem 0; font-size: 3.6rem; line-height: 1; opacity: .5; }
+body.ihp-manuscript-page .ihp-stakeholder-card__sticker {
+  display: block; width: clamp(76px, 7vw, 112px); margin: 0 0 1rem;
+  filter: drop-shadow(0 3px 0 #fffaf5) drop-shadow(0 -2px 0 #fffaf5) drop-shadow(3px 0 0 #fffaf5) drop-shadow(-3px 0 0 #fffaf5);
+  pointer-events: none;
+}
+body.ihp-manuscript-page .ihp-stakeholder-card__sticker svg { display: block; width: 100%; height: auto; }
+body.ihp-manuscript-page .ihp-stakeholder-card__mark { margin: .7rem 0; font-size: 3rem; line-height: 1; opacity: .5; }
 body.ihp-manuscript-page .ihp-card-hint { font-size: .85rem; font-style: italic; }
 body.ihp-manuscript-page .ihp-stakeholder-card__back { transform: rotateY(180deg); background: #fffaf3; align-items: stretch; }
 body.ihp-manuscript-page .ihp-stakeholder-card__back p { margin: 0; }
@@ -132,13 +138,13 @@ body.ihp-manuscript-page .ihp-ethic-label {
   color: #fffaf5;
   font-weight: 700;
 }
-body.ihp-manuscript-page .ihp-strategy-disclosure { border: 2px solid #cda880; border-radius: 12px; background: #fff; }
+body.ihp-manuscript-page .ihp-strategy-disclosure { border: 2px solid #cda880; border-radius: 12px; background: #fbf4eb; }
 body.ihp-manuscript-page .ihp-strategy-disclosure > summary { background: #ead8c2; border-radius: 10px; padding-right: 3rem; }
 body.ihp-manuscript-page .ihp-strategy-disclosure:nth-of-type(even) > summary { background: #f0e4d4; }
 body.ihp-manuscript-page .ihp-strategy-disclosure > summary .wiki-disclosure-label { display: block; position: relative; padding-right: 1rem; }
 body.ihp-manuscript-page .ihp-strategy-disclosure > summary .wiki-disclosure-arrow { position: absolute; right: -1.2rem; top: .4em; margin: 0; width: .55em; height: .55em; }
 body.ihp-manuscript-page .ihp-ethic-label { min-width: 12rem; text-align: center; }
-body.ihp-manuscript-page .ihp-cycle-layout { padding: 1rem; border-radius: 20px; background: #f5eadb; }
+body.ihp-manuscript-page .ihp-cycle-layout { padding: 1rem; border-radius: 20px; background: #f5eadb; overflow-x: clip; }
 body.ihp-manuscript-page .ihp-cycle-art { width: min(100%, 340px); margin: 1.5rem auto; background: transparent; animation: ihp-cycle-counterclockwise 32s linear infinite; }
 body.ihp-manuscript-page .ihp-cycle-art img { animation: none; background: transparent; box-shadow: none; translate: none; }
 @keyframes ihp-cycle-counterclockwise { to { transform: rotate(-360deg); } }

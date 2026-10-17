@@ -1,3 +1,25 @@
+**2026-10-17 当前完整版本再次上传／发布授权**：用户在八项截图修改完成后明确要求“把这版传到仓库并上传公网”，范围为全局第 32–41 节连续完成的当前网站、配套媒体／完整 PDF／来源和交接。最新八项包括 Hardware／iHP 图号、Education B08 四张静态／14 张图库、封面新词、设备同高、非安全 PDF 尾号删除、贴纸悬停翻卡、sponsor 浅色内凹槽及 Model 四张新机制图／白色标题裁边。保留科研数据、原图与 Summary／Closing、暂缓 Feedback PPT 状态。按原 PR、wiki-build、merge commit 和自动 Pages 流程更新固定站；无关本地裁判评估留在工作区。实际发布追踪见全局第 42 节及 [RELEASE_POLISH_REVIEW_20261017.md](docs/RELEASE_POLISH_REVIEW_20261017.md)，下文“仅本地”均为历史快照。
+
+**2026-10-17 iHP Overview 2.0／漏注图标与 Education 封面（仅本地）**：按用户随后提供的新 Word 替换九段 Overview 正文，WHO 署名右对齐；PPT 四项统计卡与圆形反馈图按新稿位置加入并去外围画布。补齐两张 BioAI 图及游戏介绍图说明，102 图／5 表顺序连续；总图四模块去框保留光效，40 活动小圆圈贴合并加名称／卡片反馈，默认 28 和原互动保持。Education 换用户 HEART-Edu Loop 原封面并适配手机构图。旧锚点、非 Overview 正文、PDF、Summary／Closing 及此前成果保留；最新见全局第 40 节与 [IHP_OVERVIEW_ICONS_EDUCATION_REVIEW_20261017.md](docs/IHP_OVERVIEW_ICONS_EDUCATION_REVIEW_20261017.md)。三宽度交互与构建检查通过，未上传／未发布。
+
+**2026-10-17 全站光标／目录／媒体入口及病原体口径（仅本地）**：原生弹窗、全屏与 PDF 区域提供系统光标回退；删除图片／PDF 附加文字源链接，74 个完整阅读器保留。Education B10 中间加新图、B08 14 原图接入（五张静态、完整图库），目录去点；Engineering 十组目录统一加减号与分级。Hardware 删除选中缺值句，22 图／6 表顺序及正文引用同步；Software 五图重排，Measurement 去重复 Table 2，Contribution 图注交公共规范。iHP Figure 81 换清晰原图；用户确认的 E01–E09 病原体口径统一为 RSV／hMPV-B／SPN／BP／HI，科普背景和科研数据保留。Feedback PPT 按用户追加要求暂不加入。18 页双宽度 378 图表注、三宽度交互及构建通过，最新见全局第 39 节与 [SITE_POLISH_PATHOGENS_REVIEW_20261017.md](docs/SITE_POLISH_PATHOGENS_REVIEW_20261017.md)。保留所有既有成果，未上传／未发布。
+
+**2026-10-17 iHP 图标反馈表与图注（仅本地）**：一级标题主底改正文同款米色；总图移除可见活动数字，Inclusivity 左卡默认 28。四个模块图标增加呼吸光效，分别打开 Word 原反馈表；手机内部横向滚动，键盘／关闭与焦点返回保持。按图注文档补 18 条图注、需求表标题及四个新反馈表标题，两代设备分别并排、第一代 A／C 仅显示层去除、峰会截图缩小。原 80 条说明、515 个源内容块、176 个旧锚点、14 个 PDF 和 Summary／Closing 保持；构建及三宽度检查通过。最新见全局第 38 节与 [IHP_NAVIGATION_CAPTIONS_REVIEW_20261017.md](docs/IHP_NAVIGATION_CAPTIONS_REVIEW_20261017.md)。全部既有成果保留，未上传／未发布。
+
+**2026-10-17 iHP 标题／图标总图／单人肖像（仅本地）**：九个一级标题移至正文框上方，五个 Stage 中间副标题删除、原问题框升为二级标题，按新模板统一三级样式；Stage 5 仅网页白字标题改棕色。接入最新带图标原生总图及 40 个活动点；仅五张单人肖像按 11 号尺寸扩展背景，原人像单独叠放保留人脸，合照等比例保持。515 个源文段、80 条图注、171 个旧锚点、14 个 PDF 及活动原文保持；构建和桌面／两种手机宽度检查通过。最新见全局第 37 节及 [IHP_HEADING_ICON_PORTRAIT_REVIEW_20261017.md](docs/IHP_HEADING_ICON_PORTRAIT_REVIEW_20261017.md)。保留此前全部成果，未提交／未上传／未发布。
+
+**2026-10-17 iHP 卡框贴合与人脸完整（仅本地）**：两侧活动卡片按完整照片比例适配，边框跟随照片，编号移到图外；显示版移除重叠的 14 组旧卡框／阴影，六张照片浅边用可撤销窗口移除，原媒体与其他图示元素保持。覆盖 6.0 的固定横框 cover。构建及桌面／手机全部 40 活动的 80 次比例检查、翻卡与键盘／触屏通过，见全局第 36 节及 [IHP_ACTIVITY_CARD_FIT_REVIEW_20261017.md](docs/IHP_ACTIVITY_CARD_FIT_REVIEW_20261017.md)。此前全部成果保留，未上传／未发布。
+
+**2026-10-17 Education B14 游戏截图（仅本地）**：用户确认在 Gene Wars 原介绍截图下方依次加入运行画面和成就画面，同组静态纵排、原比例和点击放大，原图注及数量同步，Figure 24 保持。原文件、哈希与顺序已保存；其他页面标记、活动正文／状态和链接保持。构建及桌面／手机检查通过，见全局第 35 节及 [EDUCATION_IHP_LAYOUT_REVIEW_20261017.md](docs/EDUCATION_IHP_LAYOUT_REVIEW_20261017.md)。未上传／未发布。
+
+**2026-10-17 iHP 6.0（仅本地）**：十项修改完成，补齐 38 SBti／39 塔防游戏和两份完整资源（14 页指南、8 页游戏说明），活动照片铺满，Stage 1 三图、Ye Wei 路线图和 Figure 50 换新／放大，Collective Growth 加游戏截图，APiC 与李娟教授称谓同步。原 80 条源图注数量、171 个锚点、其他正文／旧 PDF 及先前本地成果保持；Summary 留空，旧统计／分类／缺图标疑点不扩改。构建与桌面／触屏核查通过；最新要求见全局第 34 节及 [IHP_REVISION_6_REVIEW_20261017.md](docs/IHP_REVISION_6_REVIEW_20261017.md)。未提交／未上传／未发布。
+
+**2026-10-17 Member 筛选文字加粗（仅本地）**：按用户补充，Member 下 All 等六个筛选按钮均为 700 粗体，保留中文名同字体及筛选行为；桌面／手机计算样式已核对。规则同步全局第 32 节，实施补充见 [SMOOTH_NAVIGATION_IHP_POLISH_REVIEW_20261017.md](docs/SMOOTH_NAVIGATION_IHP_POLISH_REVIEW_20261017.md)。其余未提交成果保留，未上传／未发布。
+
+**2026-10-17 三页 headpage 关键词（仅本地）**：iHP 改为 Sharing Knowledge／Enabling Reuse／Empowering iGEM；Notebook 改为 Primer Validation／System Optimization／Performance Evaluation；Contribution 改为 Open Tools for iGEM／Reusable iGEM Frameworks／Knowledge Sharing Across iGEM。顺序及大小写按用户原文，原封面、单排黑框和窄屏横向滑动保持。最新要求见全局第 33 节与 [HEADPAGE_KEYWORDS_REVIEW_20261017.md](docs/HEADPAGE_KEYWORDS_REVIEW_20261017.md)，此前未提交成果保留；未上传／未发布。
+
+**2026-10-17 米色／平滑跳转与 Collective Growth 恢复（仅本地）**：按最新五项要求统一 iHP 九个正文框及边框白沿为米色、页脚子页文字在按钮内居中、全站同页锚点平滑滑动及手动中止、Member 六个筛选按钮改为中文名同字体。用户新确认恢复各项活动照片，已放回 18 张原图及 14 条原图注，保留后来指定的峰会图；当前 Collective Growth 共 19 张、源图注 80 条，覆盖此前“整个板块只留一张”。原正文／PDF 和暂缓项保持。构建及 54 项检查通过，最新规则见全局第 32 节及 [SMOOTH_NAVIGATION_IHP_POLISH_REVIEW_20261017.md](docs/SMOOTH_NAVIGATION_IHP_POLISH_REVIEW_20261017.md)。分支 `codex/smooth-navigation-ihp-polish-20261017`，未上传／未发布，线上仍为 PR #11。
+
 **2026-10-17 当前版本上传／发布授权**：用户明确要求将现在版本上传仓库并更新网站，本轮范围包括连续本地修改、iHP 4.0／5.0、Education 公网排版、References／目录、页脚、图注媒体检查及原件／修改清单。按原 PR 检查和 merge commit 流程更新固定 Pages 站；此前“未上传／未发布”均为当时快照。范围及实际结果入口见 [RELEASE_CURRENT_REVIEW_20261017.md](docs/RELEASE_CURRENT_REVIEW_20261017.md)，不据旧状态回退成果，不猜填仍暂缓的资料、编号或总结。
 
 **2026-10-17 iHP 5.0 图示与活动互动（本地完成）**：按五份新附件替换五问题图并完善五阶段跳转，Figure 1 后加入七阶段活动总图、14 张共享翻转卡及原 Activity Types 图例，38 个唯一活动完成照片／简介对应；Stage 5 五图与阶段问题同步最新版。重复 38／缺失 39、汇总统计、三处颜色分类和源 PPT 空图片对象保留待确认，不提问、不猜填。66 条原图注和其他正文／PDF 保持，135 项构建版交互断言及构建检查通过。最新要求见全局第 31 节与 [IHP_REVISION_5_REVIEW_20261017.md](docs/IHP_REVISION_5_REVIEW_20261017.md)，交付 Word 修改清单；保留此前成果，未上传／未发布。

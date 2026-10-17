@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-17",
+  "overview_document": "2.0 is authoritative; the previous Overview DOCX was not used",
+  "files": [
+    {
+      "source": "C:\\Users\\10431\\Documents\\WeChat Files\\wxid_te2sfwdnpar522\\FileStorage\\File\\2026-10\\ByeGerm Overview最终版.2.0docx.docx",
+      "path": "assets/human-practice/revision-10-20261017/sources/ByeGerm-Overview-final-2.0.docx",
+      "sha256": "e57aa216af8c8800cb10f4ad67e5c002b61682b430ee8142ad784eaf830e8068"
+    },
+    {
+      "source": "C:\\Users\\10431\\Documents\\WeChat Files\\wxid_te2sfwdnpar522\\FileStorage\\File\\2026-10\\overview配图.pptx",
+      "path": "assets/human-practice/revision-10-20261017/sources/overview-illustrations.pptx",
+      "sha256": "5477d9a06089ceb3e4af43453630465a1bba970970e81e418cc8586469b3b5ae"
+    },
+    {
+      "source": "D:\\JLU-Wiki\\.local\\overview-map-20261017\\slide-1-full.svg",
+      "path": "assets/human-practice/revision-10-20261017/overview-statistics-original.svg",
+      "sha256": "ddad01dc4220b8e597defde8357becf9ff693e318d78ede85a97a1da5406aacb"
+    },
+    {
+      "source": "D:\\JLU-Wiki\\.local\\overview-map-20261017\\ppt-\\image1.jpeg",
+      "path": "assets/human-practice/revision-10-20261017/overview-loop-original.jpeg",
+      "sha256": "ab127ce5cea4fe0e2701e8c8374af8ff6b11a8ee604bd1b0c9941716c82e1add"
+    },
+    {
+      "source": "C:\\Users\\10431\\AppData\\Local\\Temp\\WeChat Files\\c98bda1e8b9ced6c0873ade50ad39d4.png",
+      "path": "a  图片/page-covers/education-heart-edu-20261017.png",
+      "sha256": "645f59c15ad679e883f8b50852ae200f331ab68a7b7b6bb39b021e0543b62c0f"
+    },
+    {
+      "source": "C:\\Users\\10431\\AppData\\Local\\Temp\\codex-clipboard-73cf15e5-25af-44ec-96b3-b470de0f1ee7.png",
+      "path": "assets/human-practice/revision-10-20261017/sources/activity-circle-reference.png",
+      "sha256": "90d351c0bac843bfa2c66e0737993aee9b01e3eb253619b1bd3e771fc48da8fc"
+    },
+    {
+      "path": "assets/human-practice/revision-10-20261017/overview-loop-display.svg",
+      "sha256": "446a535c5bfc638c9e52f4dd79a2f91564f6bed6394d91df2a2481e2f0df79d4",
+      "source": "Display derivative of the supplied PowerPoint original"
+    },
+    {
+      "path": "assets/human-practice/revision-10-20261017/overview-stat-1.svg",
+      "sha256": "be80a238e5a3cffe8b1cd5abc4e64824b9b5160d4765d6f6ff8007e03ebb9b37",
+      "source": "Display derivative of the supplied PowerPoint original"
+    },
+    {
+      "path": "assets/human-practice/revision-10-20261017/overview-stat-2.svg",
+      "sha256": "9b41307749a4054b70e111c9f1edcc85dd8579a6ab66f6197fcb7b89e81164f9",
+      "source": "Display derivative of the supplied PowerPoint original"
+    },
+    {
+      "path": "assets/human-practice/revision-10-20261017/overview-stat-3.svg",
+      "sha256": "9d59a34b0f1bebb511524272c67630d555130aa9c83ee64ba6a489169a6c2b5f",
+      "source": "Display derivative of the supplied PowerPoint original"
+    },
+    {
+      "path": "assets/human-practice/revision-10-20261017/overview-stat-4.svg",
+      "sha256": "3a5226187750ad7a22747585290524d78d66851e3f411632fc48507fd91fabf5",
+      "source": "Display derivative of the supplied PowerPoint original"
+    }
+  ],
+  "statistics": {
+    "source": "PowerPoint slide 1, all 12 original shapes",
+    "display": "Four original cards, responsive 4/2-column layout, no outer slide canvas",
+    "values": [
+      585,
+      10,
+      24,
+      45
+    ]
+  },
+  "loop": {
+    "source": "PowerPoint slide 2 original JPEG",
+    "original_pixels": [
+      1267,
+      950
+    ],
+    "display": "Reversible SVG ellipse display window; no resampling, no generated reconstruction",
+    "viewBox": [
+      133,
+      0,
+      1000,
+      940
+    ],
+    "ellipse": [
+      633,
+      470,
+      500,
+      469
+    ]
+  },
+  "education_cover": {
+    "dimensions": [
+      1678,
+      937
+    ],
+    "original_unchanged": true
+  },
+  "added_captions": {
+    "revision-20261015/image91.png": "BioAI Agent software demonstration during the inter-team online exchange",
+    "revision-20261015/image92.jpeg": "Online course timetable for the Summer Dry Lab Camp",
+    "revision-6-20261017/requirements/image1.png": "Introduction and gameplay instructions for the synthetic biology adaptation of Plants vs. Zombies"
+  }
+}

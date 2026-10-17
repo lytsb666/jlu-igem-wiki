@@ -1,0 +1,105 @@
+{
+  "sources": [
+    {
+      "file": "sources/JLU-SPH_病原体名称一致性核查.docx",
+      "sha256": "1a3abd0eb827adbed3dfa9339382a3ffbbcb6d194afb53368d35b4a97f5b926f"
+    }
+  ],
+  "deferred": [
+    "Feedback-to-Shared-Impact-polished-v4.pptx: user explicitly said not to add it."
+  ],
+  "media": [
+    {
+      "file": "a  图片/education/activities/gallery/b10-03.jpg",
+      "source": "9c40454677bbfe8a2a78b3b13548083.jpg",
+      "sha256": "2877aa6202587f9eaa308eb2dfdcb886e401fa92eb6dff2d7e4d5b24b55ad76f",
+      "placement": "Education B10, second of three static photos"
+    },
+    {
+      "file": "assets/human-practice/revision-9-20261017/li-juan-high-resolution.png",
+      "sha256": "a6f12345ddaa40aa10ff05312de67c4e74851917115bb5fdec548ce1f37c2524",
+      "size": [
+        1095,
+        1436
+      ],
+      "placement": "iHP Figure 81, first portrait in women-scientists group"
+    }
+  ],
+  "captionRenumbering": {
+    "Instrument/hardware.html": {
+      "counts": {
+        "Figure": 22,
+        "Table": 6
+      },
+      "mapping": {
+        "Table 6": "1",
+        "Figure 2": "1",
+        "Table 1": "2",
+        "Figure 3": "2",
+        "Figure 4": "3",
+        "Figure 5": "4",
+        "Figure 6": "5",
+        "Figure 7": "6",
+        "Figure 8": "7",
+        "Figure 9": "8",
+        "Figure 10": "9",
+        "Figure 11": "10",
+        "Figure 12": "11",
+        "Figure 13": "12",
+        "Figure 14": "13",
+        "Figure 15": "14",
+        "Figure 16": "15",
+        "Figure 17": "16",
+        "Figure 18": "17",
+        "Figure 19": "18",
+        "Figure 20": "19",
+        "Figure 22": "20",
+        "Figure 6.3": "21",
+        "Table 2": "3",
+        "Table 3": "4",
+        "Table 4": "5",
+        "Table 5": "6",
+        "Figure 23": "22"
+      }
+    },
+    "Instrument/software.html": {
+      "counts": {
+        "Figure": 5,
+        "Table": 0
+      },
+      "mapping": {
+        "Figure 1": "4",
+        "Figure 2": "5"
+      }
+    }
+  },
+  "B08": {
+    "sourceArchive": "B08.zip",
+    "sha256": "ff83fd101388e541053f7375ffe7902917c3ff7298a6048db525356c4e6f2fc8",
+    "photos": 14,
+    "staticPhotos": [
+      1,
+      2,
+      6,
+      10,
+      13
+    ],
+    "inventory": "a  图片/education/activities/gallery/b08-source.json"
+  },
+  "pathogenCorrections": {
+    "documentItems": "E01–E09",
+    "currentPanel": [
+      "RSV",
+      "hMPV-B",
+      "SPN",
+      "BP",
+      "HI"
+    ],
+    "generalCovidInfluenzaBackgroundRetained": true,
+    "supportingSources": [
+      "https://www.cdc.gov/pertussis/about/",
+      "https://www.cdc.gov/hi-disease/about/index.html"
+    ],
+    "expertQuotationUnchanged": true
+  }
+}

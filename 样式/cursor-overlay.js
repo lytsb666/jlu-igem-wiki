@@ -76,6 +76,36 @@ const textSelector = [
   let pointerX = 0
   let pointerY = 0
   let frameId = 0
+  let nativePointerSurface = false
+
+  function syncNativeSurface() {
+    const nativeSurface = nativePointerSurface || Boolean(document.fullscreenElement) ||
+      Boolean(document.querySelector('dialog[open], [popover]:popover-open'))
+    document.documentElement.classList.toggle('surface-cursor-native', nativeSurface)
+    if (nativeSurface) cursorElement.classList.remove('is-visible')
+    else if (document.documentElement.classList.contains('custom-cursor-active')) {
+      cursorElement.classList.add('is-visible')
+      scheduleRender()
+    }
+    return nativeSurface
+  }
+
+  // Track top-layer state once rather than using a document-wide CSS :has()
+  // selector during the many layout updates on long scientific pages.
+  new MutationObserver(records => {
+    if (records.some(record => record.target.tagName === 'DIALOG')) syncNativeSurface()
+  }).observe(document.documentElement, {attributes: true, attributeFilter: ['open'], subtree: true})
+  document.addEventListener('toggle', event => {
+    if (event.target.matches?.('dialog, [popover]')) syncNativeSurface()
+  }, true)
+  document.addEventListener('fullscreenchange', syncNativeSurface)
+  document.addEventListener('pointerover', event => {
+    if (event.target instanceof Element && event.target.closest('iframe, object, embed')) {
+      nativePointerSurface = true
+      syncNativeSurface()
+    }
+  }, {capture: true, passive: true})
+  syncNativeSurface()
 
   function findCursorName(target) {
     if (document.body.classList.contains('loading-lock')) return 'busy'
@@ -106,10 +136,12 @@ const textSelector = [
     pointerX = event.clientX
     pointerY = event.clientY
 
+    nativePointerSurface = event.target instanceof Element && Boolean(event.target.closest('iframe, object, embed'))
+    const nativeSurface = syncNativeSurface()
     const navigationUsesNativeCursor = event.target instanceof Element && Boolean(event.target.closest('.navbar, .wiki-back-to-top'))
     document.documentElement.classList.toggle('navigation-cursor-native', navigationUsesNativeCursor)
 
-    if (navigationUsesNativeCursor) {
+    if (navigationUsesNativeCursor || nativeSurface) {
       cursorElement.classList.remove('is-visible')
       return
     }
@@ -120,18 +152,30 @@ const textSelector = [
       cursorElement.src = cursors[cursorName].src
     }
 
+    if (cursorElement.complete && !cursorElement.naturalWidth) {
+      document.documentElement.classList.remove('custom-cursor-active')
+      cursorElement.classList.remove('is-visible')
+      return
+    }
     document.documentElement.classList.add('custom-cursor-active')
     cursorElement.classList.add('is-visible')
     scheduleRender()
   }, { capture: true, passive: true })
 
   document.addEventListener('pointerleave', () => {
-    document.documentElement.classList.remove('navigation-cursor-native')
+    nativePointerSurface = false
+    document.documentElement.classList.remove('custom-cursor-active', 'navigation-cursor-native', 'surface-cursor-native')
     cursorElement.classList.remove('is-visible')
   })
 
   window.addEventListener('blur', () => {
-    document.documentElement.classList.remove('navigation-cursor-native')
+    nativePointerSurface = false
+    document.documentElement.classList.remove('custom-cursor-active', 'navigation-cursor-native', 'surface-cursor-native')
+    cursorElement.classList.remove('is-visible')
+  })
+
+  cursorElement.addEventListener('error', () => {
+    document.documentElement.classList.remove('custom-cursor-active')
     cursorElement.classList.remove('is-visible')
   })
 }

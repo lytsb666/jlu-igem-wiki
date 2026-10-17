@@ -1,0 +1,81 @@
+/* Keep the supplied Overview artwork sharp and outside canvas margins hidden. */
+body.ihp-manuscript-page .ihp-overview-statistics__cards {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+}
+body.ihp-manuscript-page .ihp-overview-statistics__cards img { display: block; width: 100%; height: auto; }
+body.ihp-manuscript-page .ihp-overview-statistics__cards > a { display: block; min-width: 0; }
+body.ihp-manuscript-page .ihp-overview-illustration { width: min(100%, 720px); margin-inline: auto; }
+body.ihp-manuscript-page .ihp-overview-illustration > a { display: block; }
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-health-quote > p:last-child { text-align: right !important; text-align-last: right !important; }
+  :root:root body.ihp-manuscript-page .ihp-overview-statistics__cards img { width: 100% !important; max-height: none !important; }
+  :root:root body.ihp-manuscript-page .ihp-overview-illustration img { width: 100% !important; max-height: none !important; border-radius: 0 !important; }
+}
+
+/* Activity rings sit inside the native circles, without a second, loose rim. */
+body.ihp-manuscript-page .ihp-activity-explorer button.ihp-activity-point--icon {
+  border: 0; outline: none; box-shadow: none; background-color: transparent;
+  overflow: visible; isolation: isolate; -webkit-tap-highlight-color: transparent;
+}
+body.ihp-manuscript-page .ihp-activity-point--icon::before {
+  content: ''; position: absolute; inset: 0; box-sizing: border-box; border-radius: inherit;
+  border: 2px solid transparent; pointer-events: none;
+  transition: border-color .18s, box-shadow .18s, background-color .18s, transform .18s;
+}
+body.ihp-manuscript-page .ihp-activity-point--icon[aria-pressed="true"]::before {
+  border-color: #805a38; box-shadow: inset 0 0 0 1px #fff8ec80, 0 0 8px #c3976240;
+}
+body.ihp-manuscript-page .ihp-activity-point--icon:is(:hover,:focus-visible)::before {
+  border-color: #805a38; background: #efc97526;
+  box-shadow: inset 0 0 0 1px #fff8ecc0, 0 0 16px 3px #c3976260;
+}
+body.ihp-manuscript-page .ihp-activity-point--icon:focus-visible::before { outline: 2px dashed #6f4e37; outline-offset: 2px; }
+body.ihp-manuscript-page .ihp-activity-point--icon:active::before { transform: scale(.94); }
+body.ihp-manuscript-page .ihp-activity-point--icon:is(:hover,:focus-visible) { z-index: 4; }
+body.ihp-manuscript-page .ihp-activity-point__label {
+  position: absolute; z-index: 8; bottom: calc(100% + 8px); left: 50%;
+  transform: translate(-50%, 3px); width: max-content; max-width: 220px;
+  box-sizing: border-box; padding: 7px 10px; border-radius: 8px;
+  background: #6f4e37; color: #fffaf5; font: 700 14px/1.35 'Times New Roman', Times, serif;
+  white-space: normal; text-align: center; pointer-events: none; opacity: 0;
+  transition: opacity .18s, transform .18s;
+}
+body.ihp-manuscript-page .ihp-activity-point--icon:focus-visible .ihp-activity-point__label { opacity: 1; transform: translate(-50%, 0); }
+@media (hover: hover) and (pointer: fine) {
+  body.ihp-manuscript-page .ihp-activity-point--icon:hover .ihp-activity-point__label { opacity: 1; transform: translate(-50%, 0); }
+  body.ihp-manuscript-page .ihp-activity-explorer:has(.ihp-activity-point--icon:hover) .ihp-activity-point--icon:not(:hover) .ihp-activity-point__label { opacity: 0; }
+}
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-activity-point__label { color: #fffaf5 !important; }
+}
+
+/* Module affordances use a soft glow, with no surrounding rectangular frame. */
+body.ihp-manuscript-page .ihp-feedback-point {
+  border: 0; border-radius: 50%; outline: none; box-shadow: none;
+  animation: none; isolation: isolate;
+}
+body.ihp-manuscript-page .ihp-feedback-point::before {
+  content: ''; position: absolute; z-index: -1; inset: -7%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(ellipse, #f7d25a00 30%, #edbd4355 58%, #edbd4300 74%);
+  filter: blur(4px); animation: ihp-module-light 2.8s ease-in-out infinite;
+  transition: filter .18s;
+}
+body.ihp-manuscript-page .ihp-feedback-point:nth-of-type(even)::before { animation-delay: -.9s; }
+body.ihp-manuscript-page .ihp-feedback-point:is(:hover,:focus-visible) { outline: none; box-shadow: none; }
+body.ihp-manuscript-page .ihp-feedback-point:is(:hover,:focus-visible)::before { filter: blur(2px) brightness(1.15); }
+body.ihp-manuscript-page .ihp-feedback-point:focus-visible { outline: 2px dashed #8b603a; outline-offset: 3px; }
+body.ihp-manuscript-page .ihp-feedback-point--mobile { background: transparent; border-radius: 12px; }
+body.ihp-manuscript-page .ihp-feedback-point--mobile::before {
+  inset: 6px calc(50% - 46px) auto; width: 92px; height: 92px;
+}
+@keyframes ihp-module-light { 0%,100% { opacity: .4; scale: .96; } 50% { opacity: 1; scale: 1.04; } }
+@media (max-width: 650px) {
+  body.ihp-manuscript-page .ihp-overview-statistics__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  body.ihp-manuscript-page .ihp-activity-mobile-points .ihp-activity-point__label {
+    max-width: min(220px, calc(100vw - 140px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.ihp-manuscript-page .ihp-feedback-point::before { animation: none; opacity: .65; }
+  body.ihp-manuscript-page :is(.ihp-feedback-point::before,.ihp-activity-point--icon::before,.ihp-activity-point__label) { transition: none; }
+}
