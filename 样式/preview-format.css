@@ -163,11 +163,20 @@
   :root body main :is(.sw-guide-grid,.hw-guides) { grid-template-columns: minmax(0, 1fr) !important; }
   :root body main .sw-manual-card { min-width: 0; padding: 0 !important; border: 0 !important; box-shadow: none !important; background: transparent !important; }
   :root body main .hw-pdf-reader { display: none; }
-  :root body main img { box-shadow: 0 3px 12px rgba(78,45,25,.10) !important; }
+  :root body main img:where(.wiki-captioned-image, .ihp-manuscript-page *) { box-shadow: 0 3px 12px rgba(78,45,25,.10) !important; }
+  :root:root body main :is(img.wiki-uncaptioned-image, .wiki-uncaptioned-image-host) {
+    box-shadow: none !important;
+    translate: none !important;
+  }
+  :root body main .team-advisor-photo.wiki-uncaptioned-image-host:hover { transform: none !important; }
+  :root body main .sw-floating-illustration img.wiki-uncaptioned-image {
+    animation: none !important;
+    transform: none !important;
+  }
   @media (hover: hover) and (pointer: fine) {
-    :root body main img:hover,
-    :root body main .wiki-image-host:hover > img,
-    :root body main :is(.image-page-hero,.page-hero,.entre-hero,.ihp-hero,.inc-hero,.edu-hero):hover img {
+    :root body main img:where(.wiki-captioned-image, .ihp-manuscript-page *):hover,
+    :root body main .wiki-image-host:hover > img:where(.wiki-captioned-image, .ihp-manuscript-page *),
+    :root body main :is(.image-page-hero,.page-hero,.entre-hero,.ihp-hero,.inc-hero,.edu-hero):hover img:where(.wiki-captioned-image, .ihp-manuscript-page *) {
       translate: 0 -3px;
       box-shadow: 0 8px 24px rgba(78,45,25,.18), 0 0 10px rgba(78,45,25,.07) !important;
     }
@@ -217,14 +226,15 @@
 body .navbar a[href] { text-decoration: none; font-weight: 700; }
 
 /* Independent translate preserves figure controls and existing scene transforms. */
-body img:not(.loading-video), .wiki-table-scroll {
+body img:where(.wiki-captioned-image, .ihp-manuscript-page *), .wiki-table-scroll {
   transition: translate .22s ease, box-shadow .22s ease;
 }
-body main img, .wiki-table-scroll {
+body main img:where(.wiki-captioned-image, .ihp-manuscript-page *), .wiki-table-scroll {
   box-shadow: 0 3px 12px rgba(78, 45, 25, .10);
 }
 @media (hover: hover) and (pointer: fine) {
-  body img:hover, .wiki-image-host:hover > img, .wiki-table-scroll:hover {
+  body img:where(.wiki-captioned-image, .ihp-manuscript-page *):hover,
+  .wiki-image-host:hover > img:where(.wiki-captioned-image, .ihp-manuscript-page *), .wiki-table-scroll:hover {
     translate: 0 -3px;
     box-shadow: 0 8px 24px rgba(78, 45, 25, .18), 0 0 10px rgba(78, 45, 25, .07);
   }
@@ -232,4 +242,53 @@ body main img, .wiki-table-scroll {
 @media (prefers-reduced-motion: reduce) {
   body img, .wiki-table-scroll { transition: none; }
   body img:hover, .wiki-image-host:hover > img, .wiki-table-scroll:hover { translate: none; }
+}
+/* References follow Hardware: one outer white card and an unboxed list. */
+@layer wiki-format {
+  :root:root body main .wiki-reference-section {
+    padding: clamp(26px, 4vw, 52px) !important;
+    border: 1px solid rgba(0, 0, 0, .16) !important;
+    border-radius: 24px !important;
+    background: #fff !important;
+    box-shadow: 0 18px 48px rgba(111, 78, 55, .12) !important;
+  }
+  :root:root body main .wiki-reference-inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  :root:root body main .wiki-reference-section .wiki-reference-heading { margin: 0 0 24px !important; }
+  :root:root body main .wiki-reference-section ol {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 0 0 24px !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  :root:root body main .wiki-reference-section :is(li, .research-reference-entry, .reference-entry) {
+    margin: 16px 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow-wrap: anywhere !important;
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+  :root:root body main .wiki-reference-section :is(p.research-reference-entry, p.reference-entry) {
+    padding-left: 24px !important;
+    text-indent: -24px !important;
+  }
+  @media (max-width: 680px) {
+    :root:root body main .wiki-reference-section { padding: 24px 19px !important; border-radius: 18px !important; }
+  }
+}
+@layer wiki-typography {
+  :root:root body main .wiki-reference-section .wiki-reference-heading { font-size: var(--wiki-heading-size) !important; }
 }

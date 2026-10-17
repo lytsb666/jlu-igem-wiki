@@ -234,3 +234,103 @@
     :root:root body .site-footer .footer-sitemap a { font-size: 14px !important; }
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .site-footer { padding-inline: 14px; }
+  .site-footer .footer-sitemap { padding-inline: 4px; }
+}
+
+/* The emblem straddles the article/footer boundary: one third above it. */
+.footer-scene { position: relative; isolation: isolate; margin-top: 132px; }
+.footer-scene > .site-footer { overflow: visible; margin-top: 0; z-index: 1; }
+.site-footer::before { top: 0; right: 0; width: min(32vw, 360px); box-shadow: none; }
+.site-footer::after { bottom: 0; left: 0; max-width: 100%; overflow: hidden; }
+.site-footer > .footer-boundary-seal {
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  left: 50%;
+  width: 132px;
+  height: 132px;
+  transform: translate(-50%, -33.333333%);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 6px #fff8ee, 0 6px 18px #39251926;
+}
+.footer-scene > .footer-mascot {
+  position: absolute;
+  z-index: 0;
+  top: -112px;
+  right: clamp(18px, 4vw, 64px);
+  width: 112px;
+  pointer-events: none;
+  overflow: clip;
+  filter: drop-shadow(3px 5px 3px #39251930);
+  transform-origin: 50% 90%;
+  animation: footer-greeting 5s ease-in-out infinite;
+}
+.footer-mascot svg { display: block; width: 100%; height: auto; overflow: hidden; }
+@keyframes footer-greeting {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-5px) rotate(2deg); }
+}
+@media (max-width: 760px) {
+  .footer-scene { margin-top: 88px; }
+  .site-footer > .footer-boundary-seal { width: 96px; height: 96px; }
+  .footer-scene > .footer-mascot { top: -70px; right: 18px; width: 72px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-scene > .footer-mascot { animation: none; }
+}
+
+/* Share the heading/page tracks across the three groups in each column. */
+@media (min-width: 1024px) {
+  .site-footer .footer-sitemap {
+    grid-template-columns: max-content repeat(3, max-content) minmax(18px, 1fr) max-content repeat(5, max-content);
+    column-gap: 6px;
+    justify-content: stretch;
+  }
+  .site-footer .footer-sitemap-row {
+    grid-column: 1 / span 4;
+    grid-template-columns: subgrid;
+    column-gap: 6px;
+  }
+  .site-footer .footer-sitemap-row:nth-of-type(even) { grid-column: 6 / span 6; }
+  .site-footer .footer-sitemap-row > div {
+    display: grid;
+    grid-column: 2 / -1;
+    grid-template-columns: subgrid;
+    column-gap: 4px;
+  }
+  @media (max-width: 1100px) {
+    .site-footer .footer-sitemap { grid-template-columns: max-content repeat(3, max-content) minmax(14px, 1fr) max-content repeat(5, max-content); }
+    .site-footer .footer-sitemap,
+    .site-footer .footer-sitemap-row,
+    .site-footer .footer-sitemap-row > div { column-gap: 3px; }
+  }
+}
+@layer wiki-typography {
+  @media (min-width: 1300px) and (max-width: 1399px) {
+    :root:root body .site-footer .footer-sitemap h2 { font-size: 18px !important; }
+    :root:root body .site-footer .footer-sitemap a { font-size: 14px !important; }
+  }
+  @media (min-width: 1201px) and (max-width: 1299px) {
+    :root:root body .site-footer .footer-sitemap h2 { font-size: 16px !important; }
+    :root:root body .site-footer .footer-sitemap a { font-size: 13px !important; }
+  }
+}
+@media (max-width: 1023px) {
+  .site-footer .footer-sitemap-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 6px;
+  }
+  .site-footer .footer-sitemap-row > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+  }
+}

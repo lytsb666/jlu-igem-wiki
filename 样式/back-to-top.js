@@ -84,6 +84,7 @@ function createBackToTop(name, towardBottom = false) {
   let obstaclesDirty = true
   let returning = false
   let returnTimer = 0
+  let cancelBottomTravel = null
   const sceneRatio = height / width
   const minimumSize = role.paired ? 26 : 24
   let renderedSize = 0
@@ -266,6 +267,7 @@ function createBackToTop(name, towardBottom = false) {
   }
 
   function returnToTop(event) {
+    cancelBottomTravel?.()
     returning = true
     hide()
     const useKeyboard = event.detail === 0
@@ -281,11 +283,37 @@ function createBackToTop(name, towardBottom = false) {
         }, { once: true })
       }
     }
-    const footer = document.querySelector('#site-footer, .site-footer')
-    const destination = towardBottom
-      ? (footer ? scrollY + footer.getBoundingClientRect().top : document.documentElement.scrollHeight)
-      : 0
-    scrollTo({ top: destination, behavior: reducedMotion.matches ? 'instant' : 'smooth' })
+    if (towardBottom) {
+      // Re-read the real bottom while travelling: lazy media or an expanded
+      // reader can change the document height after the click. User input
+      // cancels immediately, so this never fights a reader's own scrolling.
+      const start = scrollY
+      const started = performance.now()
+      const duration = reducedMotion.matches ? 0 : 900
+      let lastBottom = -1, stableSince = started, travelFrame = 0
+      const inputs = ['wheel', 'touchstart', 'pointerdown', 'keydown']
+      const stop = () => {
+        cancelAnimationFrame(travelFrame)
+        inputs.forEach(type => removeEventListener(type, stop))
+        cancelBottomTravel = null
+        returning = false
+        scheduleCheck()
+      }
+      cancelBottomTravel = stop
+      inputs.forEach(type => addEventListener(type, stop, { passive: true }))
+      const travel = now => {
+        const bottom = Math.max(0, document.scrollingElement.scrollHeight - innerHeight)
+        if (bottom !== lastBottom) { lastBottom = bottom; stableSince = now }
+        const progress = duration ? Math.min(1, (now - started) / duration) : 1
+        const eased = 1 - (1 - progress) ** 3
+        scrollTo({ top: start + (bottom - start) * eased, behavior: 'instant' })
+        if (progress === 1 && (now - stableSince >= 160 || now - started >= 2200)) stop()
+        else travelFrame = requestAnimationFrame(travel)
+      }
+      travelFrame = requestAnimationFrame(travel)
+      return
+    }
+    scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' })
     clearTimeout(returnTimer)
     returnTimer = setTimeout(() => { returning = false; scheduleCheck() }, 1600)
   }

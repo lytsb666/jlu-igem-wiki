@@ -26,13 +26,37 @@
 .hardware-page .hw-figure img {
   display: block;
   max-width: 100%;
-  width: 100%;
+  width: auto;
   height: auto;
   max-height: min(360px,42svh);
   margin-inline: auto;
   object-fit: contain;
 }
 .hardware-page .hw-figure-images { display: grid; gap: 16px; }
+.hardware-page .hw-figure a[data-hw-fullimage] { width: fit-content; max-width: 100%; margin-inline: auto; }
+.hardware-page .hw-crop-window {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: min(100%, calc(360px * var(--hw-crop-ratio)), calc(42svh * var(--hw-crop-ratio)));
+  aspect-ratio: var(--hw-crop-ratio);
+  margin-inline: auto;
+}
+.hardware-page .wiki-equipment-figure .hw-crop-window { width: min(100%, 36rem, calc(46rem * var(--hw-crop-ratio))); }
+.hardware-page .hw-figure a:has(.hw-crop-window) { width: 100%; }
+@layer wiki-format {
+:root:root body.hardware-page main .hw-crop-window img {
+  position: absolute;
+  top: var(--hw-crop-top);
+  left: var(--hw-crop-left);
+  width: var(--hw-crop-source-width) !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+}
 .hardware-page .hw-figure--large img { max-height: min(600px,65svh); }
 .hardware-page .hw-result-panels { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
 .hardware-page .hw-result-panel:last-child { grid-column: 1 / -1; }

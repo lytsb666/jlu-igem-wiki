@@ -1,0 +1,3 @@
+@layer wiki-typography {
+  :root:root body em.wiki-scientific-term { font-style: italic !important; }
+}

@@ -93,11 +93,12 @@ body.ihp-manuscript-page .ihp-stakeholder-card__toggle:focus-visible { outline: 
 body.ihp-manuscript-page .ihp-strategy-diagram { margin: 1.5rem 0; }
 body.ihp-manuscript-page .ihp-strategy-diagram__canvas { position: relative; }
 body.ihp-manuscript-page .ihp-strategy-diagram__canvas > img { display: block; width: 100%; height: auto; box-shadow: none; }
+body.ihp-manuscript-page .ihp-strategy-diagram__canvas > svg { display: block; width: 100%; height: auto; }
 body.ihp-manuscript-page .ihp-strategy-hotspot {
   position: absolute;
-  top: 20.5%;
-  width: 20.7%;
-  height: 56%;
+  top: 0;
+  width: 22.3%;
+  height: 100%;
   border: 2px solid transparent;
   border-radius: 14px;
   background: transparent;
@@ -160,7 +161,7 @@ body.ihp-manuscript-page :is(.ihp-activity-photo, .ihp-gallery__track) img {
   margin-inline: auto;
   object-fit: contain;
 }
-body.ihp-manuscript-page .ihp-closing {
+body.ihp-manuscript-page :is(.ihp-opening, .ihp-closing) {
   --wiki-ink: #6f4e37;
   margin: 2.5rem 0 0;
   padding: 1.4rem;
@@ -169,8 +170,12 @@ body.ihp-manuscript-page .ihp-closing {
   background: #f5e7d5;
   color: #6f4e37;
 }
-body.ihp-manuscript-page .ihp-closing h3 { margin-top: 0; }
-body.ihp-manuscript-page .ihp-closing p { text-transform: none; letter-spacing: normal; font-weight: 400; text-align: left; }
+body.ihp-manuscript-page :is(.ihp-opening, .ihp-closing) > :is(h3,h4) { margin-top: 0; text-align: center; }
+body.ihp-manuscript-page :is(.ihp-opening, .ihp-closing) p { text-transform: none; letter-spacing: normal; font-weight: 400; text-align: left; }
+body.ihp-manuscript-page .ihp-document { min-width: 0; margin-block: 1.5rem; }
+body.ihp-manuscript-page .ihp-document > p { margin: 0; }
+body.ihp-manuscript-page .ihp-resource-slots:has(> .ihp-document) { grid-template-columns: minmax(0, 1fr); }
+body.ihp-manuscript-page .ihp-web-resource { padding: 1.25rem; border: 1px solid #c5a17b; border-radius: 14px; background: #f5e7d5; }
 body.ihp-manuscript-page [data-summary-pending] { min-height: 14rem; }
 @layer wiki-format {
   :root:root body.ihp-manuscript-page .ihp-chapter-banner .wiki-chapter-title { margin-bottom: 0 !important; }
@@ -181,6 +186,8 @@ body.ihp-manuscript-page [data-summary-pending] { min-height: 14rem; }
   :root:root body.ihp-manuscript-page .ihp-ethic-label { width: fit-content !important; }
   :root:root body.ihp-manuscript-page .ihp-cycle-art img { box-shadow: none !important; }
   :root:root body.ihp-manuscript-page :is(.ihp-activity-photo,.ihp-gallery__track) img { width: auto !important; height: auto !important; }
+  /* Match all three interview portraits, including the smaller source image. */
+  :root:root body.ihp-manuscript-page .ihp-women-gallery img { height: 320px !important; }
   :root:root body.ihp-manuscript-page :is(.ihp-activity-photo,.ihp-gallery__track > figure) > a {
     display: block !important;
     width: fit-content !important;
@@ -200,6 +207,9 @@ body.ihp-manuscript-page [data-summary-pending] { min-height: 14rem; }
   body.ihp-manuscript-page .ihp-chapter-banner { padding: .9rem .8rem; }
   body.ihp-manuscript-page .ihp-health-quote { padding: 2rem 1rem 1.5rem; }
   body.ihp-manuscript-page :is(.ihp-activity-photo,.ihp-gallery__track) img { max-height: 220px; }
+  @layer wiki-format {
+    :root:root body.ihp-manuscript-page .ihp-women-gallery img { height: 220px !important; }
+  }
   body.ihp-manuscript-page .ihp-cycle-layout { padding: .5rem; }
 }
 @media (prefers-reduced-motion: reduce) {

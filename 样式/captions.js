@@ -4,6 +4,59 @@ const videoSelector = 'video,iframe[src*="video.igem.org/videos/embed/"]'
 const labelPrefix = /^\s*(Figures?|Fig\.?|Tables?|图|表)\s*(?:(\d+(?:[-.]\d+)*[a-z]?)(?=\s|[.:：·|—–-]|$))?\s*[.:：·|—–-]?\s*/i
 const scopes = new Map()
 
+function captionSubject(caption) {
+  const table = caption.closest('table')
+  if (table) return {subject: table, kind: 'Table'}
+  const figure = caption.closest('figure')
+  if (figure) {
+    const tables = figure.querySelectorAll('table')
+    const outsideMedia = [...figure.querySelectorAll('img,picture,svg,canvas,video,iframe')]
+      .some(media => !media.closest('table'))
+    if (tables.length === 1 && !outsideMedia) {
+      return {subject: tables[0], kind: 'Table'}
+    }
+    if (!tables.length && figure.querySelector('img,picture,svg,canvas')) return {subject: figure, kind: 'Figure'}
+    return {subject: figure}
+  }
+  // Existing standalone table labels precede their scroll container. Structured
+  // card tables (such as SWOT) retain their explicit Table label as well.
+  const next = caption.nextElementSibling
+  if (next?.matches('table,.wiki-table-scroll,.table-scroll,.table-wrap')) {
+    const table = next.matches('table') ? next : next.querySelector('table')
+    if (table) return {subject: table, kind: 'Table'}
+  }
+  return {subject: caption}
+}
+
+function refreshImagePresentation(main) {
+  if (document.body.classList.contains('ihp-manuscript-page')) return
+  const plainHosts = new Set()
+  const images = [...main.querySelectorAll('img')]
+  for (const image of images) {
+    const figure = image.closest('figure')
+    const caption = figure?.querySelector(':scope > figcaption')
+    const captioned = Boolean(caption?.textContent.trim() && caption.dataset.wikiCaptionKind !== 'Table')
+    image.classList.toggle('wiki-captioned-image', captioned)
+    image.classList.toggle('wiki-uncaptioned-image', !captioned)
+  }
+  for (const image of images) {
+    // Only remove decoration from dedicated picture wrappers. Cards, controls,
+    // scene positioning and carousel/portrait transforms keep their own roles.
+    if (image.classList.contains('wiki-uncaptioned-image')) {
+      let host = image.parentElement
+      while (host && host !== main && host.matches('picture,figure,a,button,div,span')) {
+        if (host.textContent.trim() || host.querySelector('figcaption,caption,video,iframe,table,input,select,textarea')) break
+        if ([...host.querySelectorAll('img')].every(img => img.classList.contains('wiki-uncaptioned-image'))) plainHosts.add(host)
+        host = host.parentElement
+      }
+    }
+  }
+  for (const host of main.querySelectorAll('.wiki-uncaptioned-image-host')) {
+    if (!plainHosts.has(host)) host.classList.remove('wiki-uncaptioned-image-host')
+  }
+  plainHosts.forEach(host => host.classList.add('wiki-uncaptioned-image-host'))
+}
+
 function removeVideoCaptions(main) {
   const captions = new Set(main.querySelectorAll('.video-caption,[data-video-caption]'))
   for (const video of main.querySelectorAll(videoSelector)) {
@@ -36,18 +89,14 @@ function record(caption) {
   const text = nodes.map(node => node.data).join('')
   if (!text.trim() || caption.dataset.wikiCaptionFormatted) return
   const prefix = text.match(labelPrefix)
-  const kind = prefix ? /^(?:Table|表)/i.test(prefix[1]) ? 'Table' : 'Figure'
-    : caption.matches('caption,[class*="table-caption"]') ? 'Table' : 'Figure'
+  const {subject, kind: mediaKind} = captionSubject(caption)
+  const kind = mediaKind || (prefix ? /^(?:Table|表)/i.test(prefix[1]) ? 'Table' : 'Figure'
+    : caption.matches('caption,[class*="table-caption"]') ? 'Table' : 'Figure')
   const scope = caption.closest('[data-model-module]') || document.querySelector('main')
   if (!scopes.has(scope)) scopes.set(scope, new Map())
   const states = scopes.get(scope)
   if (!states.has(kind)) states.set(kind, {used: new Set(), next: 1, numbers: new WeakMap()})
   const state = states.get(kind)
-  let subject = caption.closest('table,figure') || caption
-  if (kind === 'Table' && !caption.closest('table')) {
-    const next = caption.nextElementSibling
-    if (next?.matches('table,.wiki-table-scroll')) subject = next.matches('table') ? next : next.querySelector('table') || subject
-  }
   return {caption, nodes, prefix, kind, subject, state}
 }
 
@@ -90,6 +139,8 @@ const main = document.querySelector('main')
 if (main) {
   removeVideoCaptions(main)
   format(main.querySelectorAll(captionSelector))
+  refreshImagePresentation(main)
+  let imageFrame = 0
   new MutationObserver(records => {
     // Media and labels can also arrive after the shared scripts initialize.
     if (records.some(({addedNodes}) => [...addedNodes].some(node => node instanceof Element))) removeVideoCaptions(main)
@@ -105,5 +156,9 @@ if (main) {
       }
     }
     format(captions)
+    if (!imageFrame) imageFrame = requestAnimationFrame(() => {
+      imageFrame = 0
+      refreshImagePresentation(main)
+    })
   }).observe(main, {childList: true, subtree: true})
 }

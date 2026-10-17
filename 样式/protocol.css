@@ -236,8 +236,16 @@
 
 /* Continuous protocols; equipment and reagents retain native disclosures. */
 .protocol-main { padding-inline: 0; }
-.protocol-main .protocol-pathogen + .protocol-pathogen { margin-top: 48px; }
-.protocol-main .protocol-pathogen { min-width: 0; }
+.protocol-main .protocol-content { padding: 0; border: 0; background: transparent; }
+.protocol-main .protocol-pathogen {
+  min-width: 0;
+  padding: clamp(18px, 2.5vw, 32px);
+  border: 1px solid #d9c4b4;
+  border-radius: 22px;
+  background: #fff;
+}
+.protocol-main .protocol-pathogen + .protocol-pathogen { margin-top: 56px; }
+.protocol-main .protocol-pathogen > h2 { margin-top: 0 !important; }
 .protocol-main .protocol-panel { margin: 28px 0; padding: 0; border-top: 0; }
 .protocol-main .protocol-panel-header { margin-bottom: 20px; }
 .protocol-main .protocol-panel-header h3 { margin-top: 12px; }

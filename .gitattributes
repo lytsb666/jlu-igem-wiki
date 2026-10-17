@@ -1,0 +1,4 @@
+# Preserve supplied documents byte for byte across Windows and Linux checkouts.
+*.pdf binary
+*.docx binary
+*.pptx binary

@@ -16,6 +16,7 @@ import './references.js'
 import './disclosures.js'
 import './footer.js'
 import './back-to-top.js'
+import './scientific-typography.js'
 
 const MINIMUM_VISIBLE_TIME = 320
 const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href
