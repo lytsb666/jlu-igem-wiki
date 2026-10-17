@@ -1,0 +1,102 @@
+[
+  {
+    "id": "dry-lab",
+    "label": "Dry Lab",
+    "headers": [
+      "Problem",
+      "HP Feedback  →  Improvement"
+    ],
+    "rows": [
+      [
+        "Inefficient sequence screening and unstable low-copy signals",
+        "Prof. Tianyi Zhao’s advice → Introduced DNABERT-6 for systematic candidate-sequence screening."
+      ],
+      [
+        "Uncertain stability of crRNA–Cas12a binding",
+        "Prof. Xingfang Li’s advice → Added molecular dynamics simulations to prioritize promising candidates for wet-lab validation."
+      ]
+    ],
+    "box": {
+      "x": 509.9333,
+      "y": 692.6,
+      "w": 104.5333,
+      "h": 104.5333
+    }
+  },
+  {
+    "id": "wet-lab",
+    "label": "Wet Lab",
+    "headers": [
+      "Problem",
+      "HP Feedback  →  Improvement"
+    ],
+    "rows": [
+      [
+        "Conventional PCR required complex equipment",
+        "Prof. X. Chris Le’s advice → Shifted to a portable one-pot RPA–CRISPR/Cas12a method."
+      ],
+      [
+        "One-pot reactions showed reduced activity and component interference",
+        "Prof. Tsan-Yuk Lam’s advice → Optimized Mg²⁺, pH, and primer–crRNA ratios with single-factor experiments and controls."
+      ]
+    ],
+    "box": {
+      "x": 187.2,
+      "y": 686.5333,
+      "w": 118.6,
+      "h": 118.6
+    }
+  },
+  {
+    "id": "software",
+    "label": "Software",
+    "headers": [
+      "Problem",
+      "HP Feedback  →  Improvement"
+    ],
+    "rows": [
+      [
+        "Weak fluorescence and background interference complicated signal reading",
+        "Prof. Yingtao Zhang’s advice → Used YOLOv8n + OpenCV for fluorescence recognition and background-noise reduction."
+      ],
+      [
+        "Multiple detection results were difficult to manage and display",
+        "Multichannel engineering and user needs → Updated the app for multi-tube recognition, fluorescence curves, and mobile results."
+      ]
+    ],
+    "box": {
+      "x": 509.9333,
+      "y": 1013.5333,
+      "w": 119.0667,
+      "h": 119.0667
+    }
+  },
+  {
+    "id": "hardware",
+    "label": "Hardware",
+    "headers": [
+      "Problem",
+      "HP Feedback  →  Improvement"
+    ],
+    "rows": [
+      [
+        "Laboratory reactions were difficult to reproduce in field settings",
+        "Prof. Zheng Hu’s advice → Integrated stable temperature control and fluorescence acquisition into a portable device."
+      ],
+      [
+        "Single-channel testing could not meet frontline multiplex needs",
+        "Nursing home and kindergarten feedback → Upgraded to a second-generation multichannel instrument."
+      ],
+      [
+        "More channels increased size and thermal-interference challenges",
+        "Prof. Ying Mou’s advice → Designed a rotating 15-position chamber with an independent, thermally isolated lysis region."
+      ]
+    ],
+    "box": {
+      "x": 196.6667,
+      "y": 1030.0,
+      "w": 100.7333,
+      "h": 82.0
+    }
+  }
+]

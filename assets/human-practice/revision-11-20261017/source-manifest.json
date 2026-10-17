@@ -1,0 +1,14 @@
+{
+  "source": "../revision-5-20261017/stage-5-4.svg",
+  "source_sha256": "688de3da9b68b0c10265c9497dc863d2967a4179e8da68c14c6eae806c42925e",
+  "display": "stage-5-system-display.svg",
+  "viewBox": [
+    20,
+    160,
+    1225,
+    520
+  ],
+  "historical_figure": 67,
+  "current_figure": 68,
+  "treatment": "SVG viewport only; embedded original unchanged."
+}

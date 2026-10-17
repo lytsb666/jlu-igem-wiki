@@ -187,10 +187,11 @@
   position: relative;
   aspect-ratio: var(--model-crop-ratio);
 }
-.model-revision-page .model-mechanism-01 { --model-crop-ratio: 924 / 616; --model-crop-width: 100.8658%; --model-crop-left: -.8658%; --model-crop-top: -1.2987%; border-color: #bd731f; }
-.model-revision-page .model-mechanism-02 { --model-crop-ratio: 950 / 653; --model-crop-width: 100.7368%; --model-crop-left: -.7368%; --model-crop-top: -1.5314%; border-color: #3f662d; }
-.model-revision-page .model-mechanism-03 { --model-crop-ratio: 986 / 620; --model-crop-width: 101.0142%; --model-crop-left: -1.0142%; --model-crop-top: -1.9355%; border-color: #355e83; }
-.model-revision-page .model-mechanism-04 { --model-crop-ratio: 875 / 571; --model-crop-width: 101.1429%; --model-crop-left: -1.1429%; --model-crop-top: -1.9264%; border-color: #4a344f; border-radius: 3% / 4.6%; }
+.model-revision-page .model-mechanism { --model-crop-width: 100%; --model-crop-left: 0%; --model-crop-top: 0%; border: 0; border-radius: 0; }
+.model-revision-page .model-mechanism-01 { --model-crop-ratio: 2807 / 1973; }
+.model-revision-page .model-mechanism-02 { --model-crop-ratio: 2936 / 2075; }
+.model-revision-page .model-mechanism-03 { --model-crop-ratio: 3026 / 2012; }
+.model-revision-page .model-mechanism-04 { --model-crop-ratio: 2609 / 1829; }
 .model-revision-page .model-mechanism img {
   position: absolute; top: var(--model-crop-top); left: var(--model-crop-left);
   width: var(--model-crop-width); max-width: none; height: auto;

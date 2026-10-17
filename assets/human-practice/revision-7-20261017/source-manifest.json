@@ -1,0 +1,204 @@
+{
+  "sources": [
+    {
+      "file": "史诗大图带图标版.pptx",
+      "sha256": "db1099d07854b5b2dcf376e9c260239e53d5414e24d433015d188924c1d215dc"
+    },
+    {
+      "file": "三级标题.pptx",
+      "sha256": "d175c6af4ea5b2aed0b71c9dff3b5e7ae409d1a3f09a80f56cd977f934a93baf"
+    }
+  ],
+  "removedObsoleteEmptyPictures": [
+    {
+      "id": "74",
+      "description": "医生戴听诊器",
+      "box": {
+        "x": 59.0,
+        "y": 355.35,
+        "w": 27.15,
+        "h": 27.15
+      }
+    },
+    {
+      "id": "75",
+      "description": "病毒",
+      "box": {
+        "x": 234.66335403726708,
+        "y": 246.84830508474576,
+        "w": 10.136645962732919,
+        "h": 12.338983050847457
+      }
+    },
+    {
+      "id": "76",
+      "description": "医护人员",
+      "box": {
+        "x": 219.3,
+        "y": 241.45,
+        "w": 18.742236024844722,
+        "h": 22.814265536723166
+      }
+    },
+    {
+      "id": "90",
+      "description": "考察",
+      "box": {
+        "x": 220.95,
+        "y": 777.4,
+        "w": 22.95,
+        "h": 22.95
+      }
+    },
+    {
+      "id": "94",
+      "description": "游戏手柄",
+      "box": {
+        "x": 217.95,
+        "y": 923.75,
+        "w": 24.75,
+        "h": 24.75
+      }
+    },
+    {
+      "id": "115",
+      "description": "投票选举",
+      "box": {
+        "x": 219.75,
+        "y": 724.9,
+        "w": 23.75,
+        "h": 23.75
+      }
+    },
+    {
+      "id": "127",
+      "description": "报告",
+      "box": {
+        "x": 220.55,
+        "y": 1284.05,
+        "w": 26.25,
+        "h": 26.25
+      }
+    },
+    {
+      "id": "154",
+      "description": "游戏手柄",
+      "box": {
+        "x": 58.2,
+        "y": 1114.6,
+        "w": 24.75,
+        "h": 24.75
+      }
+    },
+    {
+      "id": "176",
+      "description": "游戏手柄",
+      "box": {
+        "x": 220.9,
+        "y": 1385.05,
+        "w": 24.75,
+        "h": 24.75
+      }
+    },
+    {
+      "id": "16",
+      "description": "团队开会讨论头脑风暴",
+      "box": {
+        "x": 56.7,
+        "y": 135.8,
+        "w": 24.7,
+        "h": 24.7
+      }
+    },
+    {
+      "id": "19",
+      "description": "医护人员",
+      "box": {
+        "x": 58.65,
+        "y": 238.0,
+        "w": 19.024015748031495,
+        "h": 19.75
+      }
+    },
+    {
+      "id": "61",
+      "description": "人",
+      "box": {
+        "x": 220.35,
+        "y": 135.8,
+        "w": 22.7,
+        "h": 22.7
+      }
+    }
+  ],
+  "portraitBackgrounds": [
+    {
+      "activity": 4,
+      "sourcePhoto": "assets/human-practice/revision-5-20261017/activity-records/image4.png",
+      "original_sha256": "da12d3f4fe2e9b3d2f158973bd890d22f09ee1f8e1584b5d9be5596ac5b390c2",
+      "background": "portrait-backgrounds/portrait-4-background.png",
+      "background_sha256": "4989cc0d86a7955b26c007f51e441f6fb554f585f297f00aa57573746c412a9f",
+      "tool": "Built-in image_gen",
+      "prompt": "Use case: identity-preserve, background outpainting.\nEdit target: the one attached original portrait. This is a real person's photograph for a university team website.\nMake a landscape canvas approximately 1.406:1 (the reference display size is 509 wide by 362 high). Preserve the ENTIRE original portrait, centered, at the full output-canvas height, with the exact same person, complete head, face, hair, glasses if present, expression, pose, body, clothing and all original foreground details. Extend the canvas ONLY to the left and right; do not crop, zoom in, replace the person, beautify, retouch the face, or add limbs. Add only a natural seamless continuation of the existing background into the new side areas. Continue the existing wooden bookshelves and softly lit academic office naturally to both sides.\nNo new people, no text, no logos, no borders, no graphical frames, no blur bars or mirrored copies of the person. The center original photograph must stay visually unchanged; all creative editing is restricted to added side background. Photorealistic continuity, natural lighting and perspective.",
+      "displayPolicy": "Generated layer supplies added side background and a narrow edge blend. The unchanged original photograph remains a complete foreground layer; the face is not regenerated."
+    },
+    {
+      "activity": 6,
+      "sourcePhoto": "assets/human-practice/revision-5-20261017/activity-records/image6.png",
+      "original_sha256": "b7be8f8afd15464f856ae45a1099fe328c740f64a2996a91ff76a1111828485d",
+      "background": "portrait-backgrounds/portrait-6-background.png",
+      "background_sha256": "ea126840cbad0b2a04955f0468772894da78a5b49061b157bc335641016be379",
+      "tool": "Built-in image_gen",
+      "prompt": "Use case: identity-preserve, background outpainting.\nEdit target: the one attached original portrait. This is a real person's photograph for a university team website.\nMake a landscape canvas approximately 1.406:1 (the reference display size is 509 wide by 362 high). Preserve the ENTIRE original portrait, centered, at the full output-canvas height, with the exact same person, complete head, face, hair, glasses if present, expression, pose, body, clothing and all original foreground details. Extend the canvas ONLY to the left and right; do not crop, zoom in, replace the person, beautify, retouch the face, or add limbs. Add only a natural seamless continuation of the existing background into the new side areas. Continue only the smooth neutral warm-gray studio backdrop naturally to both sides. Do not add objects.\nNo new people, no text, no logos, no borders, no graphical frames, no blur bars or mirrored copies of the person. The center original photograph must stay visually unchanged; all creative editing is restricted to added side background. Photorealistic continuity, natural lighting and perspective.",
+      "displayPolicy": "Generated layer supplies added side background and a narrow edge blend. The unchanged original photograph remains a complete foreground layer; the face is not regenerated."
+    },
+    {
+      "activity": 13,
+      "sourcePhoto": "assets/human-practice/revision-5-20261017/activity-records/image13.jpeg",
+      "original_sha256": "f1a91a988d19457611e46736e3a85fb33b9a557b1774012a0fd4805c9db2902e",
+      "background": "portrait-backgrounds/portrait-13-background.png",
+      "background_sha256": "bf76b425ba96fcf1d8bb591f259ea4d979f6cb749052d909ecd6fb0fbec8e416",
+      "tool": "Built-in image_gen",
+      "prompt": "Use case: identity-preserve, background outpainting.\nEdit target: the one attached original portrait. This is a real person's photograph for a university team website.\nMake a landscape canvas approximately 1.406:1 (the reference display size is 509 wide by 362 high). Preserve the ENTIRE original portrait, centered, at the full output-canvas height, with the exact same person, complete head, face, hair, glasses if present, expression, pose, body, clothing and all original foreground details. Extend the canvas ONLY to the left and right; do not crop, zoom in, replace the person, beautify, retouch the face, or add limbs. Add only a natural seamless continuation of the existing background into the new side areas. Continue the existing bookshelves, office surfaces and desk naturally to both sides, maintaining their perspective and soft lighting.\nNo new people, no text, no logos, no borders, no graphical frames, no blur bars or mirrored copies of the person. The center original photograph must stay visually unchanged; all creative editing is restricted to added side background. Photorealistic continuity, natural lighting and perspective.",
+      "displayPolicy": "Generated layer supplies added side background and a narrow edge blend. The unchanged original photograph remains a complete foreground layer; the face is not regenerated."
+    },
+    {
+      "activity": 14,
+      "sourcePhoto": "assets/human-practice/revision-5-20261017/activity-records/image14.png",
+      "original_sha256": "3ca83aa5c32dea081244778d72c2043df5dfe46daaebd1e6844de8379e5b02e3",
+      "background": "portrait-backgrounds/portrait-14-background.png",
+      "background_sha256": "ab1b6ef5573da545a293db83557ceb6fec95506603aaf32c614a453ef32117fb",
+      "tool": "Built-in image_gen",
+      "prompt": "Use case: identity-preserve, background outpainting.\nEdit target: the one attached original portrait. This is a real person's photograph for a university team website.\nMake a landscape canvas approximately 1.406:1 (the reference display size is 509 wide by 362 high). Preserve the ENTIRE original portrait, centered, at the full output-canvas height, with the exact same person, complete head, face, hair, glasses if present, expression, pose, body, clothing and all original foreground details. Extend the canvas ONLY to the left and right; do not crop, zoom in, replace the person, beautify, retouch the face, or add limbs. Add only a natural seamless continuation of the existing background into the new side areas. Continue only the smooth blue-gray studio backdrop naturally to both sides. Do not add objects.\nNo new people, no text, no logos, no borders, no graphical frames, no blur bars or mirrored copies of the person. The center original photograph must stay visually unchanged; all creative editing is restricted to added side background. Photorealistic continuity, natural lighting and perspective.",
+      "displayPolicy": "Generated layer supplies added side background and a narrow edge blend. The unchanged original photograph remains a complete foreground layer; the face is not regenerated."
+    },
+    {
+      "activity": 18,
+      "sourcePhoto": "assets/human-practice/revision-5-20261017/activity-records/image18.png",
+      "original_sha256": "25260deaf7a11e62a53d8093170e1efb4ff46763a4003988f2f1f821b522f35d",
+      "background": "portrait-backgrounds/portrait-18-background.png",
+      "background_sha256": "850aa1d4d43ddc27f28f371c5a5d40e7615b715bce27f29fb8bdbae062243942",
+      "tool": "Built-in image_gen",
+      "prompt": "Use case: identity-preserve, background outpainting.\nEdit target: the one attached original portrait. This is a real person's photograph for a university team website.\nMake a landscape canvas approximately 1.406:1 (the reference display size is 509 wide by 362 high). Preserve the ENTIRE original portrait, centered, at the full output-canvas height, with the exact same person, complete head, face, hair, glasses if present, expression, pose, body, clothing and all original foreground details. Extend the canvas ONLY to the left and right; do not crop, zoom in, replace the person, beautify, retouch the face, or add limbs. Add only a natural seamless continuation of the existing background into the new side areas. Continue only the smooth cool-gray studio backdrop naturally to both sides. Do not add objects.\nNo new people, no text, no logos, no borders, no graphical frames, no blur bars or mirrored copies of the person. The center original photograph must stay visually unchanged; all creative editing is restricted to added side background. Photorealistic continuity, natural lighting and perspective.",
+      "displayPolicy": "Generated layer supplies added side background and a narrow edge blend. The unchanged original photograph remains a complete foreground layer; the face is not regenerated."
+    }
+  ],
+  "mapDisplay": {
+    "file": "activity-map-display.svg",
+    "sha256": "255c134b0c010a11d76013feed93caad76122cef2306408a0e383855fe0005ff",
+    "width": 808,
+    "height": 1889,
+    "removedCardFrames": 14,
+    "removedObsoleteBrokenOverlays": 12,
+    "validIconsRetained": 40
+  },
+  "portraitReference": {
+    "activity": 11,
+    "ratio": [
+      509,
+      362
+    ],
+    "scope": "Only single-person portraits 4, 6, 13, 14, 18; group photos keep their complete natural proportions.",
+    "edgeBlend": "Original foreground is fully opaque from 8% to 92% of its width; only the two narrow outer edges are feathered."
+  }
+}

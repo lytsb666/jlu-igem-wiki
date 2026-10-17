@@ -9,7 +9,7 @@
 .site-footer .footer-sitemap h2 { margin: 0; color: #e0c1a6; font-size: 16px; }
 .site-footer .footer-sitemap-row > div { display: flex; flex-wrap: nowrap; gap: 5px; min-width: 0; overflow-x: auto; scrollbar-width: thin; scrollbar-color: #efd4af55 transparent; }
 .site-footer .footer-sitemap-row a { flex: 0 0 auto; white-space: nowrap; }
-.site-footer .footer-sitemap a { display: inline-flex; align-items: center; min-height: 36px; padding: 4px 12px; box-sizing: border-box; color: #e0c1a6; font-size: 18px; font-weight: 700; text-decoration: none; border: 1px solid #e0c1a680; border-radius: 8px; transition: background .2s, transform .2s; }
+.site-footer .footer-sitemap a { display: inline-flex; align-items: center; justify-content: center; text-align: center; min-height: 36px; padding: 4px 12px; box-sizing: border-box; color: #e0c1a6; font-size: 18px; font-weight: 700; text-decoration: none; border: 1px solid #e0c1a680; border-radius: 8px; transition: background .2s, transform .2s; }
 .site-footer .footer-sitemap a:hover { background: #e0c1a622; transform: translateY(-1px); }
 .site-footer :is(a, [tabindex]):focus-visible { outline: 2px solid #fff3e3; outline-offset: 3px; }
 .site-footer .contact-title { margin: 0; color: #e0c1a6; font-size: 19px; font-weight: 700; letter-spacing: .04em; }
@@ -45,7 +45,13 @@
 .site-footer :is(.contact-title, .sponsor-title)::after { transform: rotate(180deg); }
 .site-footer .qr-container { align-items: center; gap: 14px; }
 .site-footer figure.qr-item { box-sizing: border-box; padding: 0; border: 1px solid #efd4af26; border-radius: 12px; overflow: hidden; background: transparent; }
-.site-footer .sponsor-marquee { padding: 8px 16px 2px; border: 1px solid #efd4af26; border-radius: 16px; background: #39251912; }
+.site-footer .sponsor-marquee {
+  padding: 8px 16px 2px;
+  border: 1px solid #e4c6a65c;
+  border-radius: 16px;
+  background: #c69d77;
+  box-shadow: inset 0 5px 12px #3b241a5c, inset 0 -2px 3px #ffe9cc9c, 0 1px 0 #f6d9b85c;
+}
 .site-footer .copyright { padding-top: 8px; border-top: 1px solid #efd4af26; opacity: .9; }
 @keyframes sponsor-travel { to { transform: translateX(-50%); } }
 @media (max-width: 760px) {

@@ -1,0 +1,134 @@
+{
+  "sources": [
+    {
+      "file": "ihp6.0.docx",
+      "path": "assets/human-practice/revision-6-20261017/sources/ihp6.0.docx",
+      "sha256": "f68527e048dded5ff65033c9353b9d6902fd5fbf5c4a156a9c2cf00388114d33"
+    },
+    {
+      "file": "Card game instructions.docx",
+      "path": "assets/human-practice/revision-6-20261017/sources/Card game instructions.docx",
+      "sha256": "cb0176a0a960ea79f4051ca62a633b9884966e46bcd0be8eaa07842bcccbd709"
+    },
+    {
+      "file": "文件01.pdf",
+      "path": "assets/human-practice/revision-6-20261017/sources/文件01.pdf",
+      "sha256": "89e21e2b8531d2f7528762e1423acff0deeed9caa927fa8d8c607294973a86eb"
+    }
+  ],
+  "images": [
+    {
+      "display": "stage-1-concern.svg",
+      "source": "requirements/image6.png",
+      "source_sha256": "ef6358880794f1bbeb40ab2bccaafd9ff9bd132318a06f2bbfb4a74f0f26de35",
+      "display_sha256": "cc8bf028072b1609e9556130d77861b443edd2efaf1ad879f30ee5ead1391347",
+      "viewBox": [
+        26,
+        26,
+        1216,
+        894
+      ],
+      "method": "Lossless embedded original PNG with reversible SVG display window; no upscaling or data editing."
+    },
+    {
+      "display": "stage-1-vulnerability.svg",
+      "source": "requirements/image5.png",
+      "source_sha256": "59d4f58b140f49014b2872abcc5439918ae109d7f797832636f0d9dd6d203776",
+      "display_sha256": "087c5e9a756d0e44d79452cdc30b351f3eebf9d9dd2603ef0576754a74e16de4",
+      "viewBox": [
+        26,
+        26,
+        1216,
+        894
+      ],
+      "method": "Lossless embedded original PNG with reversible SVG display window; no upscaling or data editing."
+    },
+    {
+      "display": "stage-1-portable-value.svg",
+      "source": "requirements/image4.png",
+      "source_sha256": "c6fbaa18e951bc120baa033865511f7f464f8331bd56011ebe20a3fb4e751da5",
+      "display_sha256": "eec7ede8ff78c5347398bf641bca95f7d67c63768bdddee461155faf5f29108e",
+      "viewBox": [
+        26,
+        26,
+        1216,
+        894
+      ],
+      "method": "Lossless embedded original PNG with reversible SVG display window; no upscaling or data editing."
+    },
+    {
+      "display": "stage-5-roadmap.svg",
+      "source": "requirements/image3.png",
+      "source_sha256": "6b0b286f34c7310d8da41b6f4ffc2d551e0dbceea30371ed0dc26d5e77555b7d",
+      "display_sha256": "3a59072fc0d110fc3238c15c735be183828a9c86a88f86f3941d6f9de1c63886",
+      "viewBox": [
+        30,
+        153,
+        1210,
+        475
+      ],
+      "method": "Lossless embedded original PNG with reversible SVG display window; no upscaling or data editing."
+    }
+  ],
+  "resources": [
+    {
+      "file": "public/ihp-resources/revision-6-20261017/community-collaborative-emergency-response-guide.pdf",
+      "source": "文件01.pdf",
+      "sha256": "89e21e2b8531d2f7528762e1423acff0deeed9caa927fa8d8c607294973a86eb",
+      "pages": 14,
+      "conversion": "Original PDF bytes",
+      "anchor": "pending-community-response-guide"
+    },
+    {
+      "file": "public/ihp-resources/revision-6-20261017/card-game-instructions.pdf",
+      "source": "Card game instructions.docx",
+      "sha256": "2e3504be3afd877d992a863da2ccf9f37faea0e97df113a11b1fe48511473d25",
+      "pages": 8,
+      "conversion": "Complete native Microsoft Word PDF export; source DOCX retained unchanged.",
+      "anchor": "pending-card-game-instructions"
+    }
+  ],
+  "resolvedActivityNumbers": {
+    "38": "SBti Interactive Public Engagement",
+    "39": "Tower-Defense Synthetic Biology Education Game"
+  },
+  "remainingUncertainties": [
+    "Source activity total and type/color discrepancies from revision 5 remain unmodified."
+  ],
+  "copiedMedia": [
+    {
+      "file": "requirements/image1.png",
+      "sha256": "009f43ed6871b15a01d3697d271cb0c168996da3630fa1e25081cd788d89fbdc"
+    },
+    {
+      "file": "requirements/image2.jpeg",
+      "sha256": "2c4e24fece7d81e81fe1d733d4e479359da3120fdd4d237da93548476a545582"
+    },
+    {
+      "file": "requirements/image3.png",
+      "sha256": "6b0b286f34c7310d8da41b6f4ffc2d551e0dbceea30371ed0dc26d5e77555b7d"
+    },
+    {
+      "file": "requirements/image4.png",
+      "sha256": "c6fbaa18e951bc120baa033865511f7f464f8331bd56011ebe20a3fb4e751da5"
+    },
+    {
+      "file": "requirements/image5.png",
+      "sha256": "59d4f58b140f49014b2872abcc5439918ae109d7f797832636f0d9dd6d203776"
+    },
+    {
+      "file": "requirements/image6.png",
+      "sha256": "ef6358880794f1bbeb40ab2bccaafd9ff9bd132318a06f2bbfb4a74f0f26de35"
+    },
+    {
+      "file": "requirements/image7.png",
+      "sha256": "32b6f34069656af65835cee6a80e9ff9c9cd6fc563255f777c568661220cc3b8"
+    }
+  ],
+  "activityData": {
+    "file": "explorer-data.json",
+    "sha256": "0b936170ad638a89608d5cfa7ce01060c4a6fa46de7d967a5b226cc814e74873",
+    "records": 40,
+    "sourcePhotoPolicy": "Original bytes preserved; cover only on activity-card thumbnails."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "archive": "B08.zip",
+  "archive_sha256": "ff83fd101388e541053f7375ffe7902917c3ff7298a6048db525356c4e6f2fc8",
+  "staticPhotos": [
+    1,
+    2,
+    6,
+    10,
+    13
+  ],
+  "lightboxOrder": [
+    1,
+    2,
+    6,
+    10,
+    13,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11,
+    12,
+    14
+  ],
+  "photos": [
+    {
+      "index": 1,
+      "zipPath": "B08/0.jpg",
+      "file": "b08-01.jpg",
+      "width": 1702,
+      "height": 1276,
+      "sha256": "8f53166a8082528545aaed0e54c5fa2a9e820f98099749ece4f04d695c7bdd63",
+      "alt": "A volunteer presenting synthetic biology to a high-school class",
+      "displayed": true
+    },
+    {
+      "index": 2,
+      "zipPath": "B08/2f43ab63bc846680572869432f9140ca.jpg",
+      "file": "b08-02.jpg",
+      "width": 1706,
+      "height": 1279,
+      "sha256": "d8c9aed4d58de4b14cff0f96a66740bb837aab501a9207680855488ee62d8f04",
+      "alt": "Students and outreach volunteers holding the JLU-SPH banner in a classroom",
+      "displayed": true
+    },
+    {
+      "index": 3,
+      "zipPath": "B08/2f45f1597cefd6ce0e261cdc5b21e49a.jpg",
+      "file": "b08-03.jpg",
+      "width": 1279,
+      "height": 1706,
+      "sha256": "14b6da884317e7022bb1ad480daf081a155574a7092bbbae659e9f31f6ed5d9b",
+      "alt": "Volunteers discussing outreach materials with high-school students",
+      "displayed": false
+    },
+    {
+      "index": 4,
+      "zipPath": "B08/66713892a656b1d003ba1df3b0a0057f.jpg",
+      "file": "b08-04.jpg",
+      "width": 1706,
+      "height": 1279,
+      "sha256": "6b64cd1a447ec556be7332887e48f94aec1d5079d4811e777dc4c0547c375ff1",
+      "alt": "A student presenter introducing the iGEM project on a classroom screen",
+      "displayed": false
+    },
+    {
+      "index": 5,
+      "zipPath": "B08/6809f36cd60df9945f4bde39d308bced.jpg",
+      "file": "b08-05.jpg",
+      "width": 1706,
+      "height": 1279,
+      "sha256": "7b41de247b8a1c61b0d267e142c4a618944aeea2810ecd4a685bf6c610aa4c91",
+      "alt": "The outreach team sharing synthetic-biology activities at a partner school",
+      "displayed": false
+    },
+    {
+      "index": 6,
+      "zipPath": "B08/88162c594a31c1af5001abb2f07b581d.png",
+      "file": "b08-06.png",
+      "width": 908,
+      "height": 684,
+      "sha256": "03d93f8c0c2bb8f62ecdddbc7a20ed04bbf955cd4d7388f2b36f910e39a37d2a",
+      "alt": "Students discussing illustrated learning materials at their desks",
+      "displayed": true
+    },
+    {
+      "index": 7,
+      "zipPath": "B08/ae8739f2f32912b52f2987192c5869a8.jpg",
+      "file": "b08-07.jpg",
+      "width": 1706,
+      "height": 1279,
+      "sha256": "0cd5d86ba95d22baf639d880dc0551976e89abf1090182b44d4f7b2bdb154be3",
+      "alt": "A volunteer introducing the synthetic-biology outreach programme",
+      "displayed": false
+    },
+    {
+      "index": 8,
+      "zipPath": "B08/b1494b052dcf6bea266bd767d44a8d7f.jpg",
+      "file": "b08-08.jpg",
+      "width": 1279,
+      "height": 1706,
+      "sha256": "c0ee4d87cad5a9a7e3416fb45373d93dca4c6ba9fb3cdc188d05c121fd848aa6",
+      "alt": "Two volunteers exchanging ideas in front of a high-school class",
+      "displayed": false
+    },
+    {
+      "index": 9,
+      "zipPath": "B08/微信图片_20260119113142_7_664.jpg",
+      "file": "b08-09.jpg",
+      "width": 3072,
+      "height": 4096,
+      "sha256": "1d61c495c95cd4323e4d0b2f0bcaccaf22560eb45b2f463605922bc8d6106556",
+      "alt": "A volunteer explaining the iGEM learning framework to students",
+      "displayed": false
+    },
+    {
+      "index": 10,
+      "zipPath": "B08/微信图片_20260119113723_18_664.jpg",
+      "file": "b08-10.jpg",
+      "width": 4096,
+      "height": 3072,
+      "sha256": "263c0ffc87f580342d703170e8c18d4541eda1da2f1bc446c4683c596dd3f16f",
+      "alt": "Volunteers talking with students during a classroom discussion",
+      "displayed": true
+    },
+    {
+      "index": 11,
+      "zipPath": "B08/微信图片_20260119221547_3_699.jpg",
+      "file": "b08-11.jpg",
+      "width": 1706,
+      "height": 1279,
+      "sha256": "3b526b7d3a968b19fa4b7712ac32ecc0d2e91ccf1c46f83aa3254d96eda740bf",
+      "alt": "Students and volunteers displaying the JLU-SPH banner after the session",
+      "displayed": false
+    },
+    {
+      "index": 12,
+      "zipPath": "B08/微信图片_20260206110233_6_914.jpg",
+      "file": "b08-12.jpg",
+      "width": 1279,
+      "height": 1706,
+      "sha256": "7370c2a884f92dc5e8d5e4b5a509ddae22aec72d4125e3d6c825b09b157da122",
+      "alt": "A presenter introducing iGEM and synthetic biology to a class",
+      "displayed": false
+    },
+    {
+      "index": 13,
+      "zipPath": "B08/微信图片_20260208193250_6_665.jpg",
+      "file": "b08-13.jpg",
+      "width": 4096,
+      "height": 3072,
+      "sha256": "a615c43e98448f8ce7b59ad31b85755676c117b6f1ce6a175575c2e15526395a",
+      "alt": "A student presenter discussing iGEM roles and participation",
+      "displayed": true
+    },
+    {
+      "index": 14,
+      "zipPath": "B08/微信图片_20260221135634_73_80.jpg",
+      "file": "b08-14.jpg",
+      "width": 1706,
+      "height": 1279,
+      "sha256": "d18c35867414013d6d1d03a9e122972abec94c9e32dea28c34a7c08db30a6a57",
+      "alt": "An outreach volunteer presenting the iGEM competition structure",
+      "displayed": false
+    }
+  ]
+}

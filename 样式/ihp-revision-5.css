@@ -24,17 +24,17 @@ body.ihp-manuscript-page .ihp-activity-explorer__hint { margin-bottom: 1.25rem; 
 body.ihp-manuscript-page .ihp-activity-explorer__canvas { position: relative; width: 100%; margin-block: 1rem; }
 body.ihp-manuscript-page .ihp-activity-explorer__canvas > img { display: block; width: 100%; height: auto; max-height: none; }
 body.ihp-manuscript-page .ihp-activity-explorer__canvas > :is(.ihp-activity-card,.ihp-activity-point) { position: absolute; }
-body.ihp-manuscript-page .ihp-activity-card { min-width: 0; box-sizing: border-box; cursor: pointer; perspective: 1200px; outline-offset: 3px; border-radius: 16px; -webkit-tap-highlight-color: transparent; }
-body.ihp-manuscript-page .ihp-activity-card__inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .45s ease; }
+body.ihp-manuscript-page .ihp-activity-card { min-width: 0; box-sizing: border-box; cursor: pointer; perspective: 1200px; outline-offset: 3px; border-radius: 8px; -webkit-tap-highlight-color: transparent; }
+body.ihp-manuscript-page .ihp-activity-card__inner { position: relative; width: 100%; height: 100%; border-radius: inherit; transform-style: preserve-3d; transition: transform .45s ease; }
 body.ihp-manuscript-page .ihp-activity-card.is-flipped .ihp-activity-card__inner { transform: rotateY(180deg); }
 body.ihp-manuscript-page :is(.ihp-activity-card__front,.ihp-activity-card__back) {
-  position: absolute; inset: 0; box-sizing: border-box; overflow: hidden; border-radius: 15px;
+  position: absolute; inset: 0; box-sizing: border-box; overflow: hidden; border-radius: inherit;
   background: #f5eadb; backface-visibility: hidden; -webkit-backface-visibility: hidden;
 }
-body.ihp-manuscript-page .ihp-activity-card__front { padding: 3px; }
-body.ihp-manuscript-page .ihp-activity-card__photos { display: flex; width: 100%; height: 100%; gap: 4px; align-items: center; }
-body.ihp-manuscript-page .ihp-activity-card__photos img { display: block; min-width: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 12px; }
-body.ihp-manuscript-page .ihp-activity-card__number { position: absolute; left: 9px; top: 9px; padding: 3px 8px; border-radius: 6px; background: #6f4e37ed; color: white; font-weight: 700; }
+body.ihp-manuscript-page .ihp-activity-card__front { padding: 0; overflow: visible; background: transparent; }
+body.ihp-manuscript-page .ihp-activity-card__photos { display: flex; width: 100%; height: 100%; gap: 0; align-items: stretch; overflow: hidden; border-radius: inherit; outline: 1px solid #c4915f; }
+body.ihp-manuscript-page .ihp-activity-card__photos img { display: block; flex: 1 1 0; min-width: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
+body.ihp-manuscript-page .ihp-activity-card__number { position: absolute; left: 0; bottom: -25px; padding: 3px 8px; border-radius: 6px; background: #6f4e37ed; color: white; font-size: 12px; line-height: 1; font-weight: 700; }
 body.ihp-manuscript-page .ihp-activity-card__back { transform: rotateY(180deg); padding: 12px; overflow-y: auto; border: 1px solid #bc9775; }
 body.ihp-manuscript-page .ihp-activity-card__back strong { display: block; margin-bottom: 8px; }
 body.ihp-manuscript-page .ihp-activity-card__back p { margin: 0 0 .65rem; }
@@ -55,11 +55,17 @@ body.ihp-manuscript-page .ihp-activity-explorer__mobile { display: none; }
 body.ihp-manuscript-page .ihp-map-original-link { display: inline-block; margin-top: .6rem; }
 body.ihp-manuscript-page .ihp-activity-types { margin: 2rem 0; }
 body.ihp-manuscript-page .ihp-activity-types img { display: block; width: 100%; height: auto; }
+/* Revision 6: show only the supplied chart interior at a readable article width. */
+body.ihp-manuscript-page .ihp-statistic-v6 { width: min(100%, 720px); margin-inline: auto; }
+body.ihp-manuscript-page .ihp-statistic-v6 img { width: 100%; }
+body.ihp-manuscript-page .ihp-card-set-v6 { width: min(100%, 1020px); margin-inline: auto; }
+body.ihp-manuscript-page .ihp-game-screenshot-v6 { width: min(100%, 860px); margin-inline: auto; }
 @layer wiki-format {
   :root:root body.ihp-manuscript-page :is(.ihp-evolution-map > img,.ihp-activity-explorer__canvas > img,.ihp-activity-types img,.ihp-activity-card img) {
     max-height: none !important; translate: none !important; transform: none !important; box-shadow: none !important;
   }
   :root:root body.ihp-manuscript-page .ihp-activity-card__photos img { width: 100% !important; height: 100% !important; }
+  :root:root body.ihp-manuscript-page :is(.ihp-card-set-v6,.ihp-game-screenshot-v6) img { max-height: none !important; }
   :root:root body.ihp-manuscript-page :is(.ihp-question-badge,.ihp-activity-card__number) { color: #fffaf5 !important; }
   :root:root body.ihp-manuscript-page .ihp-activity-card__back p { text-align: left !important; }
   :root:root body.ihp-manuscript-page .ihp-question-link { text-decoration: none !important; }
@@ -72,10 +78,10 @@ body.ihp-manuscript-page .ihp-activity-types img { display: block; width: 100%; 
   body.ihp-manuscript-page .ihp-activity-explorer__mobile { display: block; }
   body.ihp-manuscript-page .ihp-activity-mobile-stage { padding: 16px 0 24px; border-top: 1px solid #d6b89c; }
   body.ihp-manuscript-page .ihp-activity-mobile-stage h5 { margin: 0 0 14px; }
-  body.ihp-manuscript-page .ihp-activity-mobile-slot + .ihp-activity-mobile-slot { margin-top: 18px; }
+  body.ihp-manuscript-page .ihp-activity-mobile-slot + .ihp-activity-mobile-slot { margin-top: 38px; }
   body.ihp-manuscript-page .ihp-activity-mobile-points { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
   body.ihp-manuscript-page .ihp-activity-mobile-points .ihp-activity-point { width: 44px; height: 44px; font-size: 17px; background: var(--ihp-point-color); }
-  body.ihp-manuscript-page .ihp-activity-explorer__mobile .ihp-activity-card { position: relative; height: 230px; width: 100%; }
+  body.ihp-manuscript-page .ihp-activity-explorer__mobile .ihp-activity-card { position: relative; height: auto; width: min(100%, calc(230px * var(--ihp-photo-aspect))); aspect-ratio: var(--ihp-photo-aspect); margin-inline: auto; }
   body.ihp-manuscript-page .ihp-activity-explorer__mobile .ihp-activity-card__back { padding: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,201 @@
+{
+  "sources": [
+    {
+      "file": "sources/史诗大图点击跳转.docx",
+      "sha256": "76e978137cf700851cc65f092e2df735ba936fe62919e02c939f6add18286ecb"
+    },
+    {
+      "file": "sources/ihp图注.docx",
+      "sha256": "36a40ddbe1bd26a74ea110d57d9c4056a1b9b7f351a08c3d9e8b323f5668dac7"
+    }
+  ],
+  "captionEdits": [
+    {
+      "documentItem": 1,
+      "image": "overview-loop.jpeg",
+      "caption": "From people’s needs to a better ByeGerm: the Human Practices feedback loop",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 2,
+      "image": "activity-types-display.svg",
+      "caption": "Activity types used throughout the Human Practices journey",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 3,
+      "image": "stage-1-concern.svg",
+      "caption": "Public concern about respiratory infections across age groups",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 4,
+      "image": "stage-1-vulnerability.svg",
+      "caption": "Perceived vulnerability of different age groups to severe respiratory infections",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 5,
+      "image": "stage-1-portable-value.svg",
+      "caption": "Perceived value of portable testing for young children and older family members",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 6,
+      "image": "image25.png",
+      "caption": "From community voices to practical respiratory pathogen screening",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 7,
+      "image": "image29.png",
+      "caption": "Deputy Dean Changgui Kou of the School of Public Health, Jilin University",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 10,
+      "image": "image57.png",
+      "caption": "Children’s feedback on the ByeGerm screening experience",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 11,
+      "image": "stage-5-1.svg",
+      "caption": "Responsible adoption and Human Practices-driven entrepreneurial translation",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 12,
+      "image": "image64.png",
+      "caption": "Screening acceptance among older adults and children before and after education",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 13,
+      "image": "stage-5-2.svg",
+      "caption": "ByeGerm framework for responsible translation.",
+      "kind": "Figure",
+      "preservedSourceParagraph": "475"
+    },
+    {
+      "documentItem": 14,
+      "image": "stage-5-3.svg",
+      "caption": "Priority settings and criteria for responsible testing",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 16,
+      "image": "stage-5-4.svg",
+      "caption": "From assay validation to a minimum viable testing and service system",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 17,
+      "image": "stage-5-5.svg",
+      "caption": "Validation stages and evidence boundaries.",
+      "kind": "Figure",
+      "preservedSourceParagraph": "490"
+    },
+    {
+      "documentItem": 18,
+      "image": "stage-5-roadmap.svg",
+      "caption": "Evidence-gated translation roadmap with explicit rollback conditions.",
+      "kind": "Figure",
+      "preservedSourceParagraph": "500"
+    },
+    {
+      "documentItem": 19,
+      "image": "collective-growth-summit.png",
+      "caption": "JLU-SPH project presentation at the US-China iGEM Human Practices Summit",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 8,
+      "images": [
+        43,
+        44
+      ],
+      "caption": "First-generation ByeGerm instrument: external dimensions and internal modules",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 9,
+      "images": [
+        50,
+        51
+      ],
+      "caption": "Second-generation ByeGerm instrument: external design and multichannel module architecture",
+      "kind": "Figure"
+    },
+    {
+      "documentItem": 15,
+      "table": "Six unmet needs",
+      "caption": "Stakeholder needs, feedback, and corresponding system responses",
+      "kind": "Table"
+    }
+  ],
+  "displayEdits": [
+    {
+      "source": "assets/human-practice/revision-20261015/image43.png",
+      "source_sha256": "7ff01eb59fb241645ae76e48b2e63d554abc2b428e3ddd8b0193db7a4ef7f6ca",
+      "display": "gen1-43-display.svg",
+      "hiddenLetterRect": [
+        50,
+        0,
+        48,
+        34
+      ],
+      "method": "Vector display mask only; embedded original PNG is unchanged.",
+      "display_sha256": "81bf60d8a7c07dfb3efb474b37a022c87615fc06727e7701630f1455c918526d"
+    },
+    {
+      "source": "assets/human-practice/revision-20261015/image44.png",
+      "source_sha256": "ab28781eae58cfe40afe6083104a47d5b24d37a1e67de74eb9e32c7cab4258e1",
+      "display": "gen1-44-display.svg",
+      "hiddenLetterRect": [
+        20,
+        0,
+        31,
+        20
+      ],
+      "method": "Vector display mask only; embedded original PNG is unchanged.",
+      "display_sha256": "f71073f76e3a9903977217003d65c16b949b0c9c3b7860cb39a41b261850d285"
+    }
+  ],
+  "scope": "iHP only; local implementation; no publication",
+  "alreadySatisfied": [
+    {
+      "items": [
+        3,
+        4,
+        5
+      ],
+      "note": "Latest Stage 1 source charts have no obsolete 1./2./3. prefixes; data not edited."
+    },
+    {
+      "item": 18,
+      "note": "The latest beige evidence-gated roadmap already replaces the blue version shown in the annotation screenshot."
+    }
+  ],
+  "unfilledDocumentItems": [
+    {
+      "item": 20,
+      "reason": "No text or image was supplied for this empty item; no action inferred."
+    }
+  ],
+  "moduleFeedbackTables": {
+    "file": "feedback-tables.json",
+    "sha256": "cd12c3ab6ff7a76d629a74ae2fb81ae8fbeea2328c2c94fffa173cbf8c0c9408",
+    "interaction": "Native modal dialog from each matching map icon, keyboard accessible; reduced-motion aware glow."
+  },
+  "displayDefaults": {
+    "visibleActivityNumbers": false,
+    "inclusivityLeft": 28,
+    "chapterPrimaryBackground": "#fbf4eb"
+  },
+  "documentInterpretation": {
+    "items3to5": "The source DOCX contains no images for these three items. Mapped to the three Stage 1 charts by position and reference to obsolete 1./2./3. prefixes; current source charts already omit those prefixes.",
+    "captionScope": "18 requested figure captions plus the six-needs table; four new source tables have their own Table captions. Existing 80 caption descriptions unchanged.",
+    "roadmap": "The requested new beige roadmap is already in the page; old blue chart shown by the document is not restored."
+  }
+}

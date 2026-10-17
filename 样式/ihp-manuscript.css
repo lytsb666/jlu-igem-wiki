@@ -8,11 +8,11 @@ body.ihp-manuscript-page .ihp-paper-panel {
   padding: 1rem clamp(.75rem, 2vw, 1.6rem);
   border: solid transparent;
   border-width: 44px 36px 34px 28px;
-  border-image-source: url('../assets/human-practice/revision-20261015/content-frame.svg');
-  border-image-slice: 180 180 150 180 fill;
+  border-image-source: url('../assets/human-practice/revision-20261015/content-frame-beige.svg');
+  border-image-slice: 180 180 150 180;
   border-image-width: 44px 36px 34px 28px;
   border-image-repeat: stretch;
-  background: #fff;
+  background: #fbf4eb;
   color: #6f4e37;
   font-family: "Times New Roman", Times, serif;
 }
@@ -81,7 +81,7 @@ body.ihp-manuscript-page .ihp-gallery__controls button {
   cursor: pointer;
 }
 body.ihp-manuscript-page .ihp-gallery__controls button:disabled { opacity: .45; cursor: default; }
-body.ihp-manuscript-page .ihp-disclosure { min-width: 0; margin: 1.1rem 0; border: 1px solid #d4b696; border-radius: 14px; background: #fff; }
+body.ihp-manuscript-page .ihp-disclosure { min-width: 0; margin: 1.1rem 0; border: 1px solid #d4b696; border-radius: 14px; background: #fbf4eb; }
 body.ihp-manuscript-page .ihp-disclosure > summary { padding: 1rem 1.25rem; cursor: pointer; font-size: 14pt; font-weight: 700; line-height: 1.5; background: #fbf4eb; border-radius: 14px; }
 body.ihp-manuscript-page .ihp-disclosure[open] > summary { border-bottom: 1px solid #e6d3bf; border-radius: 14px 14px 0 0; }
 body.ihp-manuscript-page .ihp-disclosure__body { min-width: 0; padding: 1.25rem; }
@@ -96,7 +96,7 @@ body.ihp-manuscript-page .ihp-reflection-cycle { display: grid; grid-template-co
 body.ihp-manuscript-page .ihp-reflection-cycle article { min-width: 0; padding: 1.25rem; border: 1px solid #d4b696; border-radius: 14px; background: #fbf4eb; }
 body.ihp-manuscript-page .ihp-reflection-cycle p { margin: 0; }
 body.ihp-manuscript-page .ihp-track-tabs { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.75rem 0; }
-body.ihp-manuscript-page .ihp-track-tabs button { flex: 1 1 220px; padding: .85rem 1rem; border: 1px solid #9a6742; border-radius: 12px; background: #fff; font-weight: 700; cursor: pointer; }
+body.ihp-manuscript-page .ihp-track-tabs button { flex: 1 1 220px; padding: .85rem 1rem; border: 1px solid #9a6742; border-radius: 12px; background: #fbf4eb; font-weight: 700; cursor: pointer; }
 body.ihp-manuscript-page .ihp-track-tabs button[aria-selected="true"] { --wiki-ink: #fffaf5; color: #fffaf5; background: #6f4e37; }
 body.ihp-manuscript-page [data-ihp-track-panel][hidden] { display: none !important; }
 body.ihp-manuscript-page .ihp-parallel-clinics,

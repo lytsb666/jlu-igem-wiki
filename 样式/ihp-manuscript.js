@@ -77,7 +77,7 @@ document.querySelectorAll('main .ihp-shell a[href^="#"], main .ihp-hero a[href^=
     const url = new URL(location.href)
     url.hash = link.hash
     history.pushState(null, '', url)
-    revealTarget(target)
+    revealTarget(target, false)
   })
 })
 addEventListener('hashchange', revealFragment)
@@ -95,7 +95,23 @@ function setStakeholderCard(card, expanded) {
 }
 document.querySelectorAll('.ihp-stakeholder-card').forEach(card => {
   const button = card.querySelector('.ihp-stakeholder-card__toggle')
-  button.addEventListener('click', () => setStakeholderCard(card, button.getAttribute('aria-expanded') !== 'true'))
+  card.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse') setStakeholderCard(card, true)
+  })
+  card.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse' && !button.matches(':focus-visible')) setStakeholderCard(card, false)
+  })
+  button.addEventListener('focus', () => {
+    if (button.matches(':focus-visible')) setStakeholderCard(card, true)
+  })
+  button.addEventListener('blur', () => {
+    if (!card.matches(':hover')) setStakeholderCard(card, false)
+  })
+  button.addEventListener('click', event => {
+    // A mouse already reveals the card on entry; retain tap and keyboard use.
+    if (event.pointerType === 'mouse' && event.detail) return
+    setStakeholderCard(card, button.getAttribute('aria-expanded') !== 'true')
+  })
   button.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return
     event.preventDefault()

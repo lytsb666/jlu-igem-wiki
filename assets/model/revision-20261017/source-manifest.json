@@ -1,0 +1,106 @@
+[
+  {
+    "source_attachment": "ff1bf40d69cc6f57ba0fccc6e19a61a.png",
+    "original": "mechanism-01-primer-complex.png",
+    "display": "mechanism-01-primer-complex-display.svg",
+    "sha256": "16a383014da7f252e1f67044e27b0cfcbc8951c59bf26c540251743827876a16",
+    "original_size": [
+      2943,
+      2109
+    ],
+    "display_viewBox": [
+      68,
+      68,
+      2807,
+      1973
+    ],
+    "title_band": [
+      381,
+      153,
+      2094,
+      198
+    ],
+    "title": "Recombinase–Primer Complex Synthesis",
+    "number": 1,
+    "treatment": "Original PNG bytes embedded unchanged; vector title band with centered white title; outer white canvas excluded by SVG viewBox.",
+    "title_font_size": 88
+  },
+  {
+    "source_attachment": "bc8ea2e357b2445671563df9d54ca5c.png",
+    "original": "mechanism-02-reverse-transcription.png",
+    "display": "mechanism-02-reverse-transcription-display.svg",
+    "sha256": "990967a17a7ce3341ca16030b5da729a9fda16b8372efb2e2e8ea7b2cda800b8",
+    "original_size": [
+      3072,
+      2211
+    ],
+    "display_viewBox": [
+      68,
+      68,
+      2936,
+      2075
+    ],
+    "title_band": [
+      615,
+      153,
+      1509,
+      198
+    ],
+    "title": "Reverse Transcription",
+    "number": 2,
+    "treatment": "Original PNG bytes embedded unchanged; vector title band with centered white title; outer white canvas excluded by SVG viewBox.",
+    "title_font_size": 88
+  },
+  {
+    "source_attachment": "23685c0f6baf8a7fee065d9621fb090.png",
+    "original": "mechanism-03-rpa.png",
+    "display": "mechanism-03-rpa-display.svg",
+    "sha256": "d182fe1320fa5a254391ea04bf642c088c457f3d3ad0e0841a19ca86c0240fee",
+    "original_size": [
+      3162,
+      2148
+    ],
+    "display_viewBox": [
+      68,
+      68,
+      3026,
+      2012
+    ],
+    "title_band": [
+      417,
+      153,
+      2043,
+      198
+    ],
+    "title": "Recombinase Polymerase Amplification",
+    "number": 3,
+    "treatment": "Original PNG bytes embedded unchanged; vector title band with centered white title; outer white canvas excluded by SVG viewBox.",
+    "title_font_size": 88
+  },
+  {
+    "source_attachment": "b16671c4131500a89c454a850f2fee2.png",
+    "original": "mechanism-04-cas12a.png",
+    "display": "mechanism-04-cas12a-display.svg",
+    "sha256": "e3b114bb29c3fefde5b9f3b2e5d32a52b28340984fc8609a9b0f5b1c5d5c6d62",
+    "original_size": [
+      2745,
+      1965
+    ],
+    "display_viewBox": [
+      68,
+      68,
+      2609,
+      1829
+    ],
+    "title_band": [
+      237,
+      153,
+      1593,
+      198
+    ],
+    "title": "CRISPR–Cas12a Mediated Cleavage",
+    "number": 4,
+    "treatment": "Original PNG bytes embedded unchanged; vector title band with centered white title; outer white canvas excluded by SVG viewBox.",
+    "title_font_size": 79
+  }
+]

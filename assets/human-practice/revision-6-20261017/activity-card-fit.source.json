@@ -1,0 +1,402 @@
+{
+  "recorded_on": "2026-10-17",
+  "upstream": "assets/human-practice/revision-5-20261017/activity-map-display.svg",
+  "upstream_sha256": "24519ae5f418c495f156d2c7b0a8cd141293593fb3e2e5961eafeb8d43946624",
+  "display": "activity-map-card-fit.svg",
+  "display_sha256": "519377dd4b1d8cef7960eff08bf6f2163b3e18c70490c017497c2bd0c049c8cc",
+  "method": "Only the 14 static card backgrounds and their 14 shadows are omitted from the SVG display derivative. All other original nodes, geometry, tree, labels, arrows and icons remain. HTML cards fit complete source images inside the original slot bounds, and draw their own attached border.",
+  "removedFrames": [
+    {
+      "framePath": "M-192.5 349.02C-192.5 337.687-183.313 328.5-171.98 328.5L29.9801 328.5C41.313 328.5 50.5001 337.687 50.5001 349.02L50.5001 478.98C50.5001 490.313 41.313 499.5 29.9801 499.5L-171.98 499.5C-183.313 499.5-192.5 490.313-192.5 478.98Z",
+      "shadowClip": "url(#clip185)"
+    },
+    {
+      "framePath": "M361.5 349.02C361.5 337.687 370.687 328.5 382.02 328.5L582.98 328.5C594.313 328.5 603.5 337.687 603.5 349.02L603.5 478.98C603.5 490.313 594.313 499.5 582.98 499.5L382.02 499.5C370.687 499.5 361.5 490.313 361.5 478.98Z",
+      "shadowClip": "url(#clip189)"
+    },
+    {
+      "framePath": "M-192.5 100.02C-192.5 88.6872-183.313 79.5001-171.98 79.5001L29.9801 79.5001C41.313 79.5001 50.5001 88.6872 50.5001 100.02L50.5001 229.98C50.5001 241.313 41.313 250.5 29.9801 250.5L-171.98 250.5C-183.313 250.5-192.5 241.313-192.5 229.98Z",
+      "shadowClip": "url(#clip194)"
+    },
+    {
+      "framePath": "M-192.5 597.14C-192.5 585.741-183.259 576.5-171.86 576.5L29.8602 576.5C41.2593 576.5 50.5001 585.741 50.5001 597.14L50.5001 727.86C50.5001 739.259 41.2593 748.5 29.8602 748.5L-171.86 748.5C-183.259 748.5-192.5 739.259-192.5 727.86Z",
+      "shadowClip": "url(#clip196)"
+    },
+    {
+      "framePath": "M361.5 100.02C361.5 88.6872 370.687 79.5001 382.02 79.5001L582.98 79.5001C594.313 79.5001 603.5 88.6872 603.5 100.02L603.5 229.98C603.5 241.313 594.313 250.5 582.98 250.5L382.02 250.5C370.687 250.5 361.5 241.313 361.5 229.98Z",
+      "shadowClip": "url(#clip198)"
+    },
+    {
+      "framePath": "M361.5 597.14C361.5 585.741 370.741 576.5 382.14 576.5L582.86 576.5C594.259 576.5 603.5 585.741 603.5 597.14L603.5 727.86C603.5 739.259 594.259 748.5 582.86 748.5L382.14 748.5C370.741 748.5 361.5 739.259 361.5 727.86Z",
+      "shadowClip": "url(#clip200)"
+    },
+    {
+      "framePath": "M361.5 926.14C361.5 914.741 370.741 905.5 382.14 905.5L582.86 905.5C594.259 905.5 603.5 914.741 603.5 926.14L603.5 1056.86C603.5 1068.26 594.259 1077.5 582.86 1077.5L382.14 1077.5C370.741 1077.5 361.5 1068.26 361.5 1056.86Z",
+      "shadowClip": "url(#clip221)"
+    },
+    {
+      "framePath": "M-192.5 926.14C-192.5 914.741-183.259 905.5-171.86 905.5L29.8602 905.5C41.2593 905.5 50.5001 914.741 50.5001 926.14L50.5001 1056.86C50.5001 1068.26 41.2593 1077.5 29.8602 1077.5L-171.86 1077.5C-183.259 1077.5-192.5 1068.26-192.5 1056.86Z",
+      "shadowClip": "url(#clip223)"
+    },
+    {
+      "framePath": "M361.5 1253.02C361.5 1241.69 370.687 1232.5 382.02 1232.5L582.98 1232.5C594.313 1232.5 603.5 1241.69 603.5 1253.02L603.5 1382.98C603.5 1394.31 594.313 1403.5 582.98 1403.5L382.02 1403.5C370.687 1403.5 361.5 1394.31 361.5 1382.98Z",
+      "shadowClip": "url(#clip225)"
+    },
+    {
+      "framePath": "M-192.5 1253.02C-192.5 1241.69-183.313 1232.5-171.98 1232.5L29.9801 1232.5C41.313 1232.5 50.5001 1241.69 50.5001 1253.02L50.5001 1382.98C50.5001 1394.31 41.313 1403.5 29.9801 1403.5L-171.98 1403.5C-183.313 1403.5-192.5 1394.31-192.5 1382.98Z",
+      "shadowClip": "url(#clip227)"
+    },
+    {
+      "framePath": "M361.5 1507.02C361.5 1495.69 370.687 1486.5 382.02 1486.5L582.98 1486.5C594.313 1486.5 603.5 1495.69 603.5 1507.02L603.5 1636.98C603.5 1648.31 594.313 1657.5 582.98 1657.5L382.02 1657.5C370.687 1657.5 361.5 1648.31 361.5 1636.98Z",
+      "shadowClip": "url(#clip266)"
+    },
+    {
+      "framePath": "M-192.5 1507.02C-192.5 1495.69-183.313 1486.5-171.98 1486.5L29.9801 1486.5C41.313 1486.5 50.5001 1495.69 50.5001 1507.02L50.5001 1636.98C50.5001 1648.31 41.313 1657.5 29.9801 1657.5L-171.98 1657.5C-183.313 1657.5-192.5 1648.31-192.5 1636.98Z",
+      "shadowClip": "url(#clip268)"
+    },
+    {
+      "framePath": "M361.5 1765.14C361.5 1753.74 370.741 1744.5 382.14 1744.5L582.86 1744.5C594.259 1744.5 603.5 1753.74 603.5 1765.14L603.5 1895.86C603.5 1907.26 594.259 1916.5 582.86 1916.5L382.14 1916.5C370.741 1916.5 361.5 1907.26 361.5 1895.86Z",
+      "shadowClip": "url(#clip270)"
+    },
+    {
+      "framePath": "M-192.5 1765.14C-192.5 1753.74-183.259 1744.5-171.86 1744.5L29.8602 1744.5C41.2593 1744.5 50.5001 1753.74 50.5001 1765.14L50.5001 1895.86C50.5001 1907.26 41.2593 1916.5 29.8602 1916.5L-171.86 1916.5C-183.259 1916.5-192.5 1907.26-192.5 1895.86Z",
+      "shadowClip": "url(#clip272)"
+    }
+  ],
+  "photos": [
+    {
+      "activity": 1,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image1.jpeg",
+      "sha256": "75208c68b7db84bf69fd57357725d9777fb8326fbb6658612cd51c3b68731f19",
+      "width": 2133,
+      "height": 1600
+    },
+    {
+      "activity": 2,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image2.jpeg",
+      "sha256": "da5d2d96cbc569f6b1bebe10de6c7f0826fb17389fe71f5de8193c40907234c9",
+      "width": 672,
+      "height": 378
+    },
+    {
+      "activity": 3,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image3.jpeg",
+      "sha256": "3c53273ae7f9e0feb091677ea945136b1f1075b49f16e2f0a89870636e040fb8",
+      "width": 821,
+      "height": 616
+    },
+    {
+      "activity": 4,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image4.png",
+      "sha256": "da12d3f4fe2e9b3d2f158973bd890d22f09ee1f8e1584b5d9be5596ac5b390c2",
+      "width": 156,
+      "height": 156
+    },
+    {
+      "activity": 5,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image5.jpeg",
+      "sha256": "aa4d83abafbe93b0af25ab1efce594aec7e7fc9dbf62d3f01d02c78c84c4b984",
+      "width": 709,
+      "height": 532
+    },
+    {
+      "activity": 6,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image6.png",
+      "sha256": "b7be8f8afd15464f856ae45a1099fe328c740f64a2996a91ff76a1111828485d",
+      "width": 321,
+      "height": 480
+    },
+    {
+      "activity": 7,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image7.jpeg",
+      "sha256": "014b6f8d5ac8034d65decbd030b18f7f96fbaf0235aa46c27b801156b699b7f8",
+      "width": 752,
+      "height": 564
+    },
+    {
+      "activity": 8,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image8.jpeg",
+      "sha256": "12072922a82a72578fd89ba0545ed6f34bdf7e5a73a1398948e12285ad12dffd",
+      "width": 721,
+      "height": 541
+    },
+    {
+      "activity": 9,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image9.jpeg",
+      "sha256": "536df0d38166ebff8d141db7b034c5d5f176d051abd63dfb9eb71885dab2d391",
+      "width": 894,
+      "height": 671
+    },
+    {
+      "activity": 10,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image10.jpeg",
+      "sha256": "4376b20ccb957b2141482a4fd91d87e0ac3f1b094edea5409ce37bc7a493ef26",
+      "width": 625,
+      "height": 469
+    },
+    {
+      "activity": 11,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image11.jpeg",
+      "sha256": "ad303c734cfb1f78eb7357ce59eacf139ead0dee5060191aea946dee187ef05f",
+      "width": 509,
+      "height": 362
+    },
+    {
+      "activity": 12,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image12.jpeg",
+      "sha256": "be4bb8c371e0a1a8c5c75d373036f89965a9db544b93714ff848c3be27480a51",
+      "width": 759,
+      "height": 569
+    },
+    {
+      "activity": 13,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image13.jpeg",
+      "sha256": "f1a91a988d19457611e46736e3a85fb33b9a557b1774012a0fd4805c9db2902e",
+      "width": 486,
+      "height": 599
+    },
+    {
+      "activity": 14,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image14.png",
+      "sha256": "3ca83aa5c32dea081244778d72c2043df5dfe46daaebd1e6844de8379e5b02e3",
+      "width": 439,
+      "height": 659
+    },
+    {
+      "activity": 15,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image15.jpeg",
+      "sha256": "1db78126279a448455d239b1c4d7955e98fcff86e5e6bec5de005d1da81c520c",
+      "width": 1125,
+      "height": 633
+    },
+    {
+      "activity": 16,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image16.jpeg",
+      "sha256": "0d9725a03d37bf3600cb07376947348463f651ebe29f04bc8f1d6c69bdc94525",
+      "width": 522,
+      "height": 391
+    },
+    {
+      "activity": 17,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image17.jpeg",
+      "sha256": "8a85260f7ba73a19dcd8d8e231c1eae44bfb9ba7533140e2c8cce9f4739d2373",
+      "width": 533,
+      "height": 711
+    },
+    {
+      "activity": 18,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image18.png",
+      "sha256": "25260deaf7a11e62a53d8093170e1efb4ff46763a4003988f2f1f821b522f35d",
+      "width": 351,
+      "height": 471
+    },
+    {
+      "activity": 19,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image19.jpeg",
+      "sha256": "adc0e036debbae42f65ab1c4c4c53d2db9abf7c90ba455df687304a1209a034b",
+      "width": 594,
+      "height": 445
+    },
+    {
+      "activity": 20,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image20.jpeg",
+      "sha256": "49e2d37d3eadb74ba2ac84e8c9c6d410965323e8642628f5cbd7656a675a9294",
+      "width": 739,
+      "height": 554
+    },
+    {
+      "activity": 21,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image21.jpeg",
+      "sha256": "f503feceb217c0013ee716d8f90c57883779c8f3202be95787b02f0d319cdd7c",
+      "width": 661,
+      "height": 496
+    },
+    {
+      "activity": 22,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image22.jpeg",
+      "sha256": "2e02d4854619c8fee13b9a0c53428f1f789d6ea8fc2797e42818a511c980fdab",
+      "width": 1914,
+      "height": 1180
+    },
+    {
+      "activity": 23,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image23.jpeg",
+      "sha256": "635f1d747d7f1dae420ff9adc3c6fbe060a1bbe56581e99ae4aafdc40993e413",
+      "width": 627,
+      "height": 469
+    },
+    {
+      "activity": 24,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image24.jpeg",
+      "sha256": "4292f816ac77d856ddbcbd04bfd1c48f884ebb0462e06eef7fe266cacdcbf1bf",
+      "width": 910,
+      "height": 620
+    },
+    {
+      "activity": 25,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image25.jpeg",
+      "sha256": "09b6459086e0d9b5596f122f24513b4ca2aa69972501685223900baf30932381",
+      "width": 627,
+      "height": 469
+    },
+    {
+      "activity": 26,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image26.jpeg",
+      "sha256": "85c4af2e8e25ef9b204dbea1ac6799425dd5b3094d4a56b26d3dc5b1d28f051f",
+      "width": 660,
+      "height": 495
+    },
+    {
+      "activity": 27,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image27.jpeg",
+      "sha256": "4b15d643fae988f84bd99a1840f4fab95fc73b4071fb6acfa6d8d8262b20d596",
+      "width": 650,
+      "height": 470,
+      "display": "activity-photo-display/activity-photo-27.svg",
+      "display_sha256": "c961241402c76316bdcb373c348afaab2bf0b236b13d392395403ac8f38f2bfd",
+      "viewBox": [
+        147,
+        0,
+        356,
+        470
+      ],
+      "paddingCriterion": "Only complete edge rows/columns whose pixels all have min RGB >= 233 and max-min RGB <= 17."
+    },
+    {
+      "activity": 28,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image28.jpeg",
+      "sha256": "b4715863a57f43ef025b6e035e37be2a7f24363724533e8fccd46e6a30baf7b7",
+      "width": 650,
+      "height": 470,
+      "display": "activity-photo-display/activity-photo-28.svg",
+      "display_sha256": "9ca8ddccabe1f5b0043635b6f1210dba1d2d341efde7bbc4ae6e3b1aa9600f3b",
+      "viewBox": [
+        10,
+        0,
+        630,
+        470
+      ],
+      "paddingCriterion": "Only complete edge rows/columns whose pixels all have min RGB >= 233 and max-min RGB <= 17."
+    },
+    {
+      "activity": 29,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image29.jpeg",
+      "sha256": "c9345f95c18a0ae15cd874e7f2de9993744525dc96aca1a7bd29b9df1ff77c1a",
+      "width": 650,
+      "height": 470,
+      "display": "activity-photo-display/activity-photo-29.svg",
+      "display_sha256": "7a06e3779cea1f24df122521a76449f7385104ff0353cc80de5be9b2a99e9136",
+      "viewBox": [
+        0,
+        18,
+        650,
+        435
+      ],
+      "paddingCriterion": "Only complete edge rows/columns whose pixels all have min RGB >= 233 and max-min RGB <= 17."
+    },
+    {
+      "activity": 30,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image30.jpeg",
+      "sha256": "4f7c5ce09ef57a352361554535bc1db12250563b8245e98ca85872b5a428d644",
+      "width": 650,
+      "height": 470,
+      "display": "activity-photo-display/activity-photo-30.svg",
+      "display_sha256": "700353860f5c548e4be84a644594c2489ee674f4ae093f57d0e2ff4cd5ab4a89",
+      "viewBox": [
+        0,
+        51,
+        650,
+        368
+      ],
+      "paddingCriterion": "Only complete edge rows/columns whose pixels all have min RGB >= 233 and max-min RGB <= 17."
+    },
+    {
+      "activity": 31,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image31.jpeg",
+      "sha256": "102f3801f840618331de3f22f4ff0d18f8b355a97811fef7426ffc3e3e374b81",
+      "width": 650,
+      "height": 470
+    },
+    {
+      "activity": 32,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image32.jpeg",
+      "sha256": "ef8a3143c7dd37dee27736e6cf7517d22e108603011570ced69e1008c717d58a",
+      "width": 650,
+      "height": 470
+    },
+    {
+      "activity": 33,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image33.jpeg",
+      "sha256": "f848053e9d37dbb16f3d2307f26a461cac2e87a008765e6075479818955ad4bc",
+      "width": 650,
+      "height": 470,
+      "display": "activity-photo-display/activity-photo-33.svg",
+      "display_sha256": "2534dd5b1ed409fce7a5bd815fe9a9506fe09bc08e4a4b9781306c5612d24baf",
+      "viewBox": [
+        0,
+        18,
+        650,
+        433
+      ],
+      "paddingCriterion": "Only complete edge rows/columns whose pixels all have min RGB >= 233 and max-min RGB <= 17."
+    },
+    {
+      "activity": 34,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image34.jpeg",
+      "sha256": "daac4e50668baa0ca003b47a3e1d37f37b9fdc63ecd5d57618562a3ca49b4e4a",
+      "width": 650,
+      "height": 470,
+      "display": "activity-photo-display/activity-photo-34.svg",
+      "display_sha256": "a61fa6caa1a231f24cc1b027b1ca9a7065e654800e9f9f0faa6f1cc0f8929012",
+      "viewBox": [
+        0,
+        77,
+        650,
+        316
+      ],
+      "paddingCriterion": "Only complete edge rows/columns whose pixels all have min RGB >= 233 and max-min RGB <= 17."
+    },
+    {
+      "activity": 35,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image35.jpeg",
+      "sha256": "78862bad4addf130edf662227e17bcd4a911b135db07ea6d2930ad851bdc7e5f",
+      "width": 650,
+      "height": 470
+    },
+    {
+      "activity": 36,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image36.jpeg",
+      "sha256": "3befabbd2387ff1e9c2bc0e3375c60dd5f6563de5e48a00b8659975a6aa0c66e",
+      "width": 650,
+      "height": 470
+    },
+    {
+      "activity": 37,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image37.jpeg",
+      "sha256": "650999a599b81cd7ab5782541adbe614ffe9409d295ff621f8e01aeeeb93684e",
+      "width": 650,
+      "height": 470
+    },
+    {
+      "activity": 38,
+      "path": "assets/human-practice/revision-6-20261017/activity-records/activity-sbti.jpeg",
+      "sha256": "2c4e24fece7d81e81fe1d733d4e479359da3120fdd4d237da93548476a545582",
+      "width": 2360,
+      "height": 1476
+    },
+    {
+      "activity": 39,
+      "path": "assets/human-practice/revision-6-20261017/activity-records/activity-tower-defense.png",
+      "sha256": "009f43ed6871b15a01d3697d271cb0c168996da3630fa1e25081cd788d89fbdc",
+      "width": 2880,
+      "height": 1646
+    },
+    {
+      "activity": 40,
+      "path": "assets/human-practice/revision-5-20261017/activity-records/image39.jpeg",
+      "sha256": "29e721b4ec3655bc137a3110206a65dd1ce5d236594edf975cac6680c9e724c8",
+      "width": 650,
+      "height": 470
+    }
+  ]
+}
