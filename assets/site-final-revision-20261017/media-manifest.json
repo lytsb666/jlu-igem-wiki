@@ -1,0 +1,92 @@
+[
+  {
+    "file": "assets/site-final-revision-20261017/ihp/li-juan.png",
+    "source": "ihp修改7.0/image2.png",
+    "sha256": "23e41bbe0a3fe7e7e2612210dcc097cc25965d6a251892fe380aad9052311e41"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/baize-walking.png",
+    "source": "ihp修改7.0/image7.png",
+    "sha256": "63ffbc84ddf77d8fb39dfd0dc5d694085b68c956c3e9a9f366dae85f8900a802"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/feedback-loops.svg",
+    "source": "render/slide-1-full.svg",
+    "sha256": "66645e00fd1c38d542f4f7f801f6d1005f608a737932adf7748a5da2f6c627d2"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/opening-answers.svg",
+    "source": "render/slide-2-full.svg",
+    "sha256": "c6cb662b7b459af6afbaf4cff5948da5346820021e3f06f3c1ffb2b36d998cff"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/human-practices-in-numbers.svg",
+    "source": "render/slide-3-full.svg",
+    "sha256": "1bfcd10795818faf8c67dd0c4270dee4e82d94939d5c2122285dd5086113a1e2"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/stat-20.svg",
+    "source": "render/stat-20.svg",
+    "sha256": "850601dab642b14c278974b537c9149adb2ae8874c6dfff1b2ed7f07a084be33"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/stat-43.svg",
+    "source": "render/stat-43.svg",
+    "sha256": "f97220451d083f0925505bbb483512bf83c6356208adf987f0ef6783bfe0804c"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/stat-770.svg",
+    "source": "render/stat-770.svg",
+    "sha256": "007584e4593ad84cc9c374cea89e4f0f811dc7280d55a365a12c643d4432ac63"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/stat-50.svg",
+    "source": "render/stat-50.svg",
+    "sha256": "cddea6cb525ac6a2782e70e81af849ce579c2ffd9b6570349955b67ad498ce75"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/stat-28.svg",
+    "source": "render/stat-28.svg",
+    "sha256": "e2c0beeb09ded918a916fedb3c36060860e3424e5990f2acadb9cd3e0f175c81"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/ihp/stat-14.svg",
+    "source": "render/stat-14.svg",
+    "sha256": "18528fec0fcc2bc4e1264ae489b0dac5b1547fc203ecf50e27445d9105aa2995"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image2.jpeg",
+    "source": "创业修改意见(1)/image2.jpeg",
+    "sha256": "4e1220b7b0bd67d8c7c446f6846d2ba25fcab1c31b0e1f8456aef9f38aad6b1a"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image4.jpeg",
+    "source": "创业修改意见(1)/image4.jpeg",
+    "sha256": "c32e263f85f4343e27aa9f1377140d2b453b91c7ddbc86453178643886053887"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image6.jpeg",
+    "source": "创业修改意见(1)/image6.jpeg",
+    "sha256": "4bab148be854af14c27b7349c8138a622e60290387af8eac57c7df5eb93901bb"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image7.jpeg",
+    "source": "创业修改意见(1)/image7.jpeg",
+    "sha256": "830f441625e6f89e842a6aad6af2e46efdb2c69f4167fb781560b1fdfd756ccd"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image10.jpeg",
+    "source": "创业修改意见(1)/image10.jpeg",
+    "sha256": "a92ba68c59379e56c514f9f11871b2d9d314899ccba1234d66715abd5a135577"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image12.jpeg",
+    "source": "创业修改意见(1)/image12.jpeg",
+    "sha256": "f017f86ff6a739370ee10ed19c8156837b0f713323f5ad12f9bb235dcd654faa"
+  },
+  {
+    "file": "assets/site-final-revision-20261017/entrepreneurship/image13.jpeg",
+    "source": "创业修改意见(1)/image13.jpeg",
+    "sha256": "ab170351307e0142a8bb0180f5f80b3b89a9663510b86ae826b1827e1db90a47"
+  }
+]

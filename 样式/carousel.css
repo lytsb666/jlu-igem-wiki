@@ -12,10 +12,11 @@
 :root body .wiki-carousel__track > .wiki-carousel__slide {
   grid-area: 1 / 1; align-self: start; min-width: 0; max-width: 100%;
   margin: 0; visibility: hidden; pointer-events: none;
-  opacity: 1 !important; transform: none !important; transition: none !important;
+  opacity: 1; transform: none; transition: none !important;
 }
 :root body .wiki-carousel__track > .wiki-carousel__slide.is-current { visibility: visible; pointer-events: auto; }
-:root body .wiki-carousel :is(img, figure, article, a) { animation: none !important; transition: none !important; transform: none !important; }
+:root body .wiki-carousel__track > .wiki-carousel__slide.is-leaving { visibility: visible; pointer-events: none; }
+:root body .wiki-carousel :is(img, figure, article, a):not(.wiki-carousel__slide) { animation: none !important; transition: none !important; transform: none !important; }
 :root body .wiki-carousel__dots { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px; margin: 4px 0 0; padding: 0; }
 :root body .wiki-carousel__dots > button {
   display: grid; place-items: center; width: 24px; height: 24px; min-height: 0;
@@ -28,8 +29,9 @@
   --wiki-ink: #fffaf5; position: absolute; z-index: 4; top: 50%; transform: translateY(-50%);
   display: grid; place-items: center; width: 40px; height: 48px; min-height: 0;
   margin: 0; padding: 8px; border: 0; border-radius: 8px;
-  background: rgb(71 48 32 / 38%); color: #fffaf5 !important;
+  background: rgb(71 48 32 / 60%); color: #fffaf5 !important;
   opacity: 0; pointer-events: none; cursor: pointer; box-shadow: none;
+  transition: opacity .18s ease, background .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 :root body .wiki-carousel__arrow--previous { left: 8px; }
 :root body .wiki-carousel__arrow--next { right: 8px; }
@@ -38,6 +40,13 @@
   :root body .wiki-carousel__viewport:hover > .wiki-carousel__arrow { opacity: 1; pointer-events: auto; }
 }
 :root body .wiki-carousel__arrow:focus-visible { opacity: 1; pointer-events: auto; }
+:root body .wiki-carousel__arrow:hover { background: rgb(92 57 32 / 90%); box-shadow: 0 3px 12px #2b180b55; transform: translateY(-50%) scale(1.08); }
+:root body .wiki-carousel__arrow:active { background: #54351d; transform: translateY(-50%) scale(.94); box-shadow: inset 0 2px 4px #29180e55; }
+:root body .wiki-carousel__arrow:focus-visible { outline: 3px solid #dfb77f; outline-offset: -3px; background: #6f4e37; }
+:root body .wiki-carousel__dots > button::before { transition: transform .18s ease, background .18s ease; }
+:root body .wiki-carousel__dots > button:hover::before, :root body .wiki-carousel__dots > button[aria-current="true"]::before { transform: scale(1.25); }
+@media (hover: none) { :root body .wiki-carousel__arrow { opacity: .85; pointer-events: auto; } }
+@media (prefers-reduced-motion: reduce) { :root body .wiki-carousel__arrow, :root body .wiki-carousel__dots > button::before { transition: none; } }
 :root body .wiki-carousel :is(button, a):focus-visible { outline: 2px solid #b98a60; outline-offset: -3px; }
 :root body .filmstrip__window.wiki-carousel { mask-image: none; }
 :root body .filmstrip__window.wiki-carousel img { justify-self: center; width: min(100%, 520px); height: 160px; object-fit: contain; }

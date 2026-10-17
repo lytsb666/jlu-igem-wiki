@@ -1,0 +1,47 @@
+[
+  {
+    "file": "sources/summary最终版.docx",
+    "sha256": "0de23b2d28ab7b98707cf1a98351d01c82b40d62ce832d3d36853a7f23cb6cae",
+    "bytes": 62369,
+    "paragraphs": 15,
+    "comments": 0,
+    "media": 0,
+    "slides": 0
+  },
+  {
+    "file": "sources/ihp修改7.0.docx",
+    "sha256": "98f3d23507d8d4a21da10083be7801991847160a7a29a9aa8ed085f79a1d287e",
+    "bytes": 5202904,
+    "paragraphs": 25,
+    "comments": 0,
+    "media": 11,
+    "slides": 0
+  },
+  {
+    "file": "sources/7.0配图.pptx",
+    "sha256": "c8f6686f7118a78f84d5f169d20b2be3760dd657f4b4b353a3a9cb3178997c43",
+    "bytes": 3513040,
+    "paragraphs": 0,
+    "comments": 0,
+    "media": 35,
+    "slides": 3
+  },
+  {
+    "file": "sources/创业修改意见(1).docx",
+    "sha256": "63503a8cbf31205429e0d234d99c90b0f21d400d7c170d63323612952a5e247c",
+    "bytes": 2735375,
+    "paragraphs": 66,
+    "comments": 0,
+    "media": 14,
+    "slides": 0
+  },
+  {
+    "file": "sources/Hardware 修改1017.docx",
+    "sha256": "2ca20fbe26f838bef522220df789850f3acd6036442b795ba9d1e71ce4577ca0",
+    "bytes": 1407279,
+    "paragraphs": 22,
+    "comments": 0,
+    "media": 12,
+    "slides": 0
+  }
+]

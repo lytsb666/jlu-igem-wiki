@@ -8,6 +8,7 @@ if (story) {
   const worldIntro = story.querySelector('.world-intro')
   const pcrButton = story.querySelector('.world-pcr')
   const pcrScene = story.querySelector('.world-pcr-scene')
+  const lighthouseGlow = story.querySelector('.world-lighthouse-glow')
   const pcrStatus = pcrButton.querySelector('.world-pcr-status')
   let pcrStep = 0
   let pcrManual = false
@@ -45,7 +46,7 @@ if (story) {
   const worldButtons = [...worldScene.querySelectorAll('[data-world-action]')]
   const worldNotes = [
     { element: worldScene.querySelector('[data-world-note="village"]'), enter: [0, .06], leave: [.27, .35] },
-    { element: worldScene.querySelector('[data-world-note="pcr"]'), enter: [.35, .42], leave: [.62, .70] },
+    { element: worldScene.querySelector('[data-world-note="pcr"]'), enter: [.27, .34], leave: [.62, .70] },
     { element: worldScene.querySelector('[data-world-note="care"]'), enter: [.70, .78], leave: [1.01, 1.02] },
   ]
   const workflowChapter = story.querySelector('.home-chapter--workflow')
@@ -191,6 +192,9 @@ if (story) {
       const reveal = reducedMotion.matches || active(action) ? 1 : smootherstep(range(progress, start, end))
       const edge = clamp(reveal * 1.08)
       element.style.setProperty('--world-light-opacity', smoothstep(range(reveal, 0, .20)).toFixed(3))
+      if (action === 'lighthouse') {
+        lighthouseGlow.style.setProperty('--lighthouse-glow-opacity', smoothstep(range(reveal, 0, .20)).toFixed(3))
+      }
       element.style.setProperty('--world-light-clip-bottom', (1 - edge) * 100 + '%')
       element.style.setProperty('--world-light-mask-solid', clamp(edge - .08) * 100 + '%')
       element.style.setProperty('--world-light-mask-edge', edge * 100 + '%')
