@@ -1,6 +1,7 @@
 import { navigationSchema } from './navigation.js'
 import './footer.css'
 import universitySeal from '../assets/site-footer/revision-20261016-followup/jilin-university-seal.jpg'
+import footerMascot from '../a  图片/home-story/cover-zoom/cover-mascot.png'
 
 const footer = document.querySelector('.site-footer .footer-content')
 const media = import.meta.glob('../assets/site-footer/revision-20261016/*.png', {
@@ -26,12 +27,13 @@ if (footer) {
   const brand = footer.querySelector('.school-info')
   if (brand) {
     const seal = document.createElement('img')
-    seal.className = 'school-logo'
+    seal.className = 'school-logo footer-boundary-seal'
     seal.src = universitySeal
     seal.alt = 'Jilin University emblem'
-    seal.width = 76
-    seal.height = 76
+    seal.width = 132
+    seal.height = 132
     brand.querySelector('.school-logo')?.replaceWith(seal)
+    footer.parentElement.append(seal)
     brand.querySelectorAll('h3').forEach(heading => {
       if (/^jilin\s+university$/i.test(heading.textContent.trim())) heading.remove()
     })
@@ -40,6 +42,14 @@ if (footer) {
     wordmark.textContent = 'ByeGerm'
     brand.prepend(wordmark)
   }
+  const mascot = document.createElement('div')
+  mascot.className = 'footer-mascot'
+  mascot.setAttribute('aria-hidden', 'true')
+  mascot.innerHTML = `<svg viewBox="640 328 600 732" width="120" height="146" focusable="false"><image href="${footerMascot}" width="1920" height="1088"/></svg>`
+  const scene = document.createElement('div')
+  scene.className = 'footer-scene'
+  footer.parentElement.before(scene)
+  scene.append(mascot, footer.parentElement)
   const social = footer.querySelector('.qr-container')
   const qrItems = [
     [1, 'WeChat Official Account', 368, 368, '0 0 368 368'],

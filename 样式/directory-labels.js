@@ -1,6 +1,8 @@
 // Sentence case is a display rule for directories only. Preserve the original
 // article headings, inline scientific notation, link targets and section IDs.
+import { scientificNames } from './scientific-terms.js'
 const terms = [
+  ...scientificNames,
   'JLU-SPH', 'iGEM', 'iHP', 'ByeGerm', 'C.A.R.E.S.', 'CARES', 'HEART-Edu Loop', 'HEART-Edu',
   'LbCas12a', 'Cas12a', 'DNABERT-6', 'DNABERT', 'BERT', 'CRISPR', 'RPA',
   'DBTL', 'D-B-T-L', 'RNP', 'crRNAs', 'gRNAs', 'crRNA', 'gRNA', 'mRNA', 'cDNA', 'RNA', 'DNA', 'N gene',

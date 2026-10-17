@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+    <g fill="none" stroke="#4B3900" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="34" y="49" width="187" height="153" rx="11" stroke-width="10"/>
+  <path d="M39 83 H216" stroke-width="9"/>
+  <circle cx="58" cy="66" r="4.5" fill="#4B3900" stroke="none"/>
+  <circle cx="75" cy="66" r="4.5" fill="#4B3900" stroke="none"/>
+  <circle cx="92" cy="66" r="4.5" fill="#4B3900" stroke="none"/>
+  <path d="M101 112 L76 136 L101 160 M133 112 L155 136 L133 160" stroke-width="9"/>
+  <path d="M125 106 L109 167" stroke-width="8"/>
+  <path d="M 171.06 148.76 L 172.49 137.94 L 189.51 137.94 L 190.94 148.76 L 193.23 149.71 L 201.89 143.07 L 213.93 155.11 L 207.29 163.77 L 208.24 166.06 L 219.06 167.49 L 219.06 184.51 L 208.24 185.94 L 207.29 188.23 L 213.93 196.89 L 201.89 208.93 L 193.23 202.29 L 190.94 203.24 L 189.51 214.06 L 172.49 214.06 L 171.06 203.24 L 168.77 202.29 L 160.11 208.93 L 148.07 196.89 L 154.71 188.23 L 153.76 185.94 L 142.94 184.51 L 142.94 167.49 L 153.76 166.06 L 154.71 163.77 L 148.07 155.11 L 160.11 143.07 L 168.77 149.71 Z M 194 176 A 13 13 0 1 0 168 176 A 13 13 0 1 0 194 176 Z" fill="#4B3900" fill-rule="evenodd" stroke="none"/>
+</g>
+    </svg>

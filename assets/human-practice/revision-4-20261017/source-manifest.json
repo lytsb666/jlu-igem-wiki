@@ -1,0 +1,234 @@
+{
+  "date": "2026-10-17",
+  "requirements_document": {
+    "filename": "ihp4.0.docx",
+    "sha256": "905590085f111ab539b2afc07c50d3aa00b004a70515d3d1f9713c51bf2e3204"
+  },
+  "archive": {
+    "filename": "ihp文件.zip",
+    "sha256": "f60a79dfceef2f0881809515844e053ff4940b3fe050c0f9f992e4e795095304"
+  },
+  "resources": [
+    {
+      "archive_path": "ihp文件/hpshapebyegerm的文件/01pi打分依据.docx",
+      "source_sha256": "fde784328757c80999f34d79638040adecc139455713c0e989984d5ac9bdf2ff",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/stakeholder-scoring-criteria.pdf",
+      "pdf_sha256": "8167af78b1da810d12f3c282f8ff26d94541b7023f4911f2143057f952f44bb1",
+      "pages": 3,
+      "conversion": "Microsoft Word ExportAsFixedFormat, complete document, source unchanged",
+      "anchor": "pending-stakeholder-scoring-01"
+    },
+    {
+      "archive_path": "ihp文件/hpshapebyegerm的文件/02详述.pdf",
+      "source_sha256": "d4f1236d7f8cf3414e570083c9af992e3b48f4e0bd6c54082cd44291fa62a121",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/stakeholder-review-and-adaptation.pdf",
+      "pdf_sha256": "d4f1236d7f8cf3414e570083c9af992e3b48f4e0bd6c54082cd44291fa62a121",
+      "pages": 30,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-stakeholder-review-02"
+    },
+    {
+      "archive_path": "ihp文件/hpshapebyegerm的文件/03养老院.docx",
+      "source_sha256": "6813cc858f593f68325bddeece376a8db495ae4782482a9ddedba6018d22a9fd",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/nursing-home-informed-consent.pdf",
+      "pdf_sha256": "321050182f96eaeb2466317f427341393e7c18d23d56c072bbc5d2626ccb0622",
+      "pages": 7,
+      "conversion": "Microsoft Word ExportAsFixedFormat, complete document, source unchanged",
+      "anchor": "pending-consent-03"
+    },
+    {
+      "archive_path": "ihp文件/hpshapebyegerm的文件/04幼儿园.docx",
+      "source_sha256": "27bc2aa5a612dfb77a0b78ad966be7958064d8e88c25d1b7cee712bc958682f5",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/kindergarten-informed-consent.pdf",
+      "pdf_sha256": "851c9d74d838c130d3c5248ddebfbf1d8ce07f01a6cb76160276ee9477a84600",
+      "pages": 6,
+      "conversion": "Microsoft Word ExportAsFixedFormat, complete document, source unchanged",
+      "anchor": "pending-consent-04"
+    },
+    {
+      "archive_path": "ihp文件/Expanding the Circle of Human Practices/01Inclusive Engagement 活动1pdf.pdf",
+      "source_sha256": "1dfdc415f46a798d5c2bd5c838fa0437d810f827ceaa813781edb0a8b384fa90",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/kindergarten-material-safety.pdf",
+      "pdf_sha256": "1dfdc415f46a798d5c2bd5c838fa0437d810f827ceaa813781edb0a8b384fa90",
+      "pages": 2,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-safety-resource-1"
+    },
+    {
+      "archive_path": "ihp文件/Expanding the Circle of Human Practices/02Inclusive Engagement 活动1.pdf",
+      "source_sha256": "502e896b1203ab460abe8a6534056836e32361f1c5ad7f4a63445af4ff51dd88",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/kindergarten-venue-personnel-safety.pdf",
+      "pdf_sha256": "502e896b1203ab460abe8a6534056836e32361f1c5ad7f4a63445af4ff51dd88",
+      "pages": 2,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-safety-resource-2"
+    },
+    {
+      "archive_path": "ihp文件/Expanding the Circle of Human Practices/03Inclusive Engagement活动1.pdf",
+      "source_sha256": "85c07b54e1d888426e6b45f76e5b0063dbe522751e7ead2c1f32553f2a7cc15d",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/kindergarten-activity-safety.pdf",
+      "pdf_sha256": "85c07b54e1d888426e6b45f76e5b0063dbe522751e7ead2c1f32553f2a7cc15d",
+      "pages": 2,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-safety-resource-3"
+    },
+    {
+      "archive_path": "ihp文件/Expanding the Circle of Human Practices/04Inclusive Engagement活动三pdf.pdf",
+      "source_sha256": "7431349d865a37171e2f63b0aff9cf1aa9fe66ca9e43371462afae1b4fea22e1",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/older-adult-education.pdf",
+      "pdf_sha256": "7431349d865a37171e2f63b0aff9cf1aa9fe66ca9e43371462afae1b4fea22e1",
+      "pages": 4,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-older-adults-resource-4"
+    },
+    {
+      "archive_path": "ihp文件/Expanding the Circle of Human Practices/05盲文活动四.docx",
+      "source_sha256": "e2a31eb08108c8046725d866560b4e7d5cb8b6759e7a60e95bd02f67c1ecfeca",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/braille-learning-material.pdf",
+      "pdf_sha256": "713e66e8e8997026c5dae9dee0bbcf7cfac1c7701b3eed22666c9100b0ce5d18",
+      "pages": 56,
+      "conversion": "Microsoft Word ExportAsFixedFormat, complete document, source unchanged",
+      "anchor": "pending-braille-resource"
+    },
+    {
+      "archive_path": "ihp文件/stage1-4文件/stage401回溯性共情问卷.pdf",
+      "source_sha256": "aa6af92cda75cf20fe6074b66489e95503c386798e7b2575c73d7d3518133b1c",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/retrospective-empathy-survey.pdf",
+      "pdf_sha256": "aa6af92cda75cf20fe6074b66489e95503c386798e7b2575c73d7d3518133b1c",
+      "pages": 2,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-retrospective-patient-questionnaire"
+    },
+    {
+      "archive_path": "ihp文件/stage1-4文件/stage402说明书.pdf",
+      "source_sha256": "1c97fb02585e8c70674c761df56e6603b18d055198e83b07ef08838c41a74b2c",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/byegerm-1-user-manual.pdf",
+      "pdf_sha256": "1c97fb02585e8c70674c761df56e6603b18d055198e83b07ef08838c41a74b2c",
+      "pages": 4,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-device-operating-instructions"
+    },
+    {
+      "archive_path": "ihp文件/stage1-4文件/stage405放说明书.pdf",
+      "source_sha256": "828e60b80c9b9d8bdf813c5d236ceda834b77cc8de92331dad3227cba29b16f7",
+      "site_pdf": "public/ihp-resources/revision-4-20261017/byegerm-2-user-manual.pdf",
+      "pdf_sha256": "828e60b80c9b9d8bdf813c5d236ceda834b77cc8de92331dad3227cba29b16f7",
+      "pages": 5,
+      "conversion": "original PDF byte-for-byte copy",
+      "anchor": "pending-second-generation-instructions"
+    }
+  ],
+  "photograph": {
+    "source": "ihp4.0.docx:word/media/image3.png",
+    "path": "assets/human-practice/revision-4-20261017/collective-growth-summit.png",
+    "sha256": "45b5227ed08f37bc9a03452b40d5b81ac7d3d246e9562847a400cf83638f5685"
+  },
+  "strategy_display": {
+    "original": "assets/human-practice/revision-3-20261016/stakeholder-strategy.png",
+    "sha256": "2fcfc575567f8ef32a4001740233b69a935f675a9fecd5bc09a10fa666bd9e1c",
+    "viewport": [
+      30,
+      93,
+      736,
+      249
+    ],
+    "cards": [
+      31,
+      221,
+      411,
+      601
+    ],
+    "card_bounds_y_width_height": [
+      94,
+      164,
+      247
+    ],
+    "arrow_x": [
+      198,
+      388,
+      578
+    ],
+    "arrow_bounds_y_width_height": [
+      200,
+      21,
+      27
+    ]
+  },
+  "collective_growth": {
+    "confirmed_scope": "Only the supplied photograph across the entire Collective Growth section; activity text and original files retained",
+    "removed_display_images": [
+      {
+        "src": "../assets/human-practice/revision-20261015/image84.jpeg",
+        "caption": "CCiC"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image85.jpeg",
+        "caption": "CCiC"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image86.jpeg",
+        "caption": "CCiC"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image87.jpeg",
+        "caption": "CCiC"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image88.jpeg",
+        "caption": "APIc"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image89.jpeg",
+        "caption": "APIc"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image90.jpeg",
+        "caption": "BioAI Agent Software Exchange & Summer Dry Lab Camp"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image91.png",
+        "caption": null
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image92.jpeg",
+        "caption": null
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image93.jpeg",
+        "caption": "BioAI Agent Software Exchange & Summer Dry Lab Camp"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image94.jpeg",
+        "caption": "BioAI Agent Software Exchange & Summer Dry Lab Camp"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image95.jpeg",
+        "caption": "Dialogue with ZJUT-China at the Bio-manufacturing Expo"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image96.jpeg",
+        "caption": "Dialogue with ZJUT-China at the Bio-manufacturing Expo"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image97.jpeg",
+        "caption": "Dialogue with ZJUT-China at the Bio-manufacturing Expo"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image98.png",
+        "caption": null
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image99.png",
+        "caption": null
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image100.jpeg",
+        "caption": "Social Inclusion (Hike with Love · Embrace the Future)"
+      },
+      {
+        "src": "../assets/human-practice/revision-20261015/image101.jpeg",
+        "caption": "Social Inclusion (Hike with Love · Embrace the Future)"
+      }
+    ]
+  }
+}

@@ -58,6 +58,9 @@ html:has(body.team-page-body) { scroll-behavior: smooth; }
 .team-directory { padding-inline: 0; }
 .team-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 24px; padding: 0 22px; }
 .team-filter { border: 1px solid transparent; border-radius: 12px; background: rgba(251,245,239,.25); padding: 12px 18px; min-height: 48px; }
+@layer wiki-typography {
+  :root:root body .team-page .team-filter { font-family: Arial, Helvetica, sans-serif !important; }
+}
 .team-filter[aria-pressed="true"] { --wiki-ink: #fffaf5; color: #fffaf5; font-weight: 700; background: #6f4e37; border-color: #6f4e37; box-shadow: 0 5px 12px rgba(74,45,28,.18); }
 .team-filter:hover { background: #f2ddcb; border-color: #a97652; transform: translateY(-2px); }
 .team-filter[aria-pressed="true"]:hover { background: #82583b; }

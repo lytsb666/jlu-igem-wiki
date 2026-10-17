@@ -1047,6 +1047,12 @@ body:has(.edu-lightbox[open]) { overflow: hidden; }
   :root:root body .edu-references a { overflow-wrap: anywhere !important; }
 }
 .edu-content #why-heart > .edu-intro-actions { display: flex; flex-flow: row wrap; align-items: center; justify-content: flex-end; gap: 12px; width: 100%; box-sizing: border-box; margin: 0 0 28px; }
+.edu-content #why-heart .edu-intro-actions .is-quiet {
+  border: 1px solid #b7855d;
+  background: #f0dfcc;
+  box-shadow: 0 3px 9px #6f4e370c;
+}
+.edu-content #why-heart .edu-intro-actions .is-quiet:hover { background: #e4c5a6; }
 /* All three audiences share the same photo-left / text-right activity layout. */
 .edu-content .activity-card,
 .edu-content .activity-card:nth-child(even) {

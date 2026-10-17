@@ -1,0 +1,12 @@
+{
+  "source": "public/hardware-resources/user-manual-second-generation.pdf",
+  "sourceSha256": "6f8752a32096fb2987dd4ba7a9e8585681246664c1f9e8cec79338a77ca16321",
+  "sourcePages": 5,
+  "cover": "user-manual-2-current-cover.webp",
+  "coverSize": [
+    614,
+    1000
+  ],
+  "coverSha256": "9c8787a846a402a331f1be1f98b09e4c8fc17d7293633c6b3039fed3482d3f4c",
+  "operation": "Read-only render of page 1 with Poppler at maximum dimension 1000px; WebP quality 92. Original PDF unchanged; static fallback cover matches the current shared reader."
+}

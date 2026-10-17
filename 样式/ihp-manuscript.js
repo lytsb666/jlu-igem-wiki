@@ -1,4 +1,21 @@
 import { createCarousel } from './carousel.js'
+import './ihp-revision-5.js'
+import stakeholderStrategy from '../assets/human-practice/revision-3-20261016/stakeholder-strategy.png'
+
+// Show only the four original cards and connecting arrows. Keep the source
+// artwork intact; the SVG window excludes its surrounding frame and canvas.
+const strategyCanvas = document.querySelector('.ihp-strategy-diagram__canvas')
+const strategyImage = strategyCanvas?.querySelector('img')
+if (strategyImage) {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+  svg.setAttribute('viewBox', '30 93 736 249')
+  svg.setAttribute('width', '736')
+  svg.setAttribute('height', '249')
+  svg.setAttribute('role', 'img')
+  svg.setAttribute('aria-label', strategyImage.alt)
+  svg.innerHTML = `<defs><clipPath id="ihp-strategy-cards">${[31, 221, 411, 601].map(x => `<rect x="${x}" y="94" width="164" height="247" rx="12"/>`).join('')}${[198, 388, 578].map(x => `<rect x="${x}" y="200" width="21" height="27"/>`).join('')}</clipPath></defs><image href="${stakeholderStrategy}" width="796" height="448" clip-path="url(#ihp-strategy-cards)"/>`
+  strategyImage.replaceWith(svg)
+}
 
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)')
 const trackButtons = [...document.querySelectorAll('[data-ihp-track]')]
@@ -97,8 +114,7 @@ const stakeholderReader = document.querySelector('#ihp-stakeholder-reader')
 if (stakeholderData && stakeholderReader) {
   const categories = JSON.parse(stakeholderData.textContent)
   const buttons = [...document.querySelectorAll('[data-stakeholder]')]
-  buttons.forEach(button => button.addEventListener('click', () => {
-    const index = Number(button.dataset.stakeholder)
+  function selectStakeholder(index) {
     const category = categories[index]
     if (!category) return
     buttons.forEach(other => other.setAttribute('aria-pressed', String(Number(other.dataset.stakeholder) === index)))
@@ -108,7 +124,10 @@ if (stakeholderData && stakeholderReader) {
       item.textContent = person
       return item
     }))
-  }))
+  }
+  buttons.forEach(button => button.addEventListener('click', () => selectStakeholder(Number(button.dataset.stakeholder))))
+  // Match the supplied screenshot on every fresh page load.
+  selectStakeholder(5)
 }
 
 const lightbox = document.querySelector('.ihp-lightbox')

@@ -130,7 +130,7 @@
               <div class="sw-function-card"><h4>Receive analysis results</h4><p>Request an image and display the tube labels returned by device-side analysis.</p></div>
               <div class="sw-function-card"><h4>View and save images</h4><p>Inspect the acquired image in the app and retain it through the image-viewing and saving functions.</p></div>
             </div>
-            <h3>One data flow</h3>
+            <h3>How data flows</h3>
             <ol class="sw-data-flow" aria-label="Device and app data flow">
               <li><span>1</span>Connect over Wi-Fi</li><li><span>2</span>Send parameters</li><li><span>3</span>AI Box acquires and analyzes</li><li><span>4</span>Return temperature, curves, images and labels</li><li><span>5</span>App displays results</li>
             </ol>
@@ -216,13 +216,13 @@ networkService.sendMessage(requestJson.toString());</code></pre>
               <div class="sw-resource-card sw-manual-card">
                 <p class="sw-kicker">B · Second-generation manual</p>
                 <h3>ByeGerm 2.0 User Manual</h3>
-                <a class="sw-manual-cover" href="../software-resources/software-user-guide-second-generation.pdf" target="_blank" rel="noopener" aria-label="Preview ByeGerm 2.0 user manual"><img src="../assets/software/images/user-manual-2-cover.webp" width="614" height="1000" alt="Original green cover of the ByeGerm 2.0 User Manual" loading="lazy" decoding="async" /></a>
+                <a class="sw-manual-cover" href="../hardware-resources/user-manual-second-generation.pdf" target="_blank" rel="noopener" aria-label="Preview ByeGerm 2.0 user manual"><img src="../assets/software/images/user-manual-2-current-cover.webp" width="614" height="1000" alt="Cover of the current ByeGerm 2.0 User Manual" loading="lazy" decoding="async" /></a>
                 <p>A five-page illustrated guide covering preparation, connection, the two loading areas, viewing-face rotation, image acquisition, and troubleshooting.</p>
-                <div class="sw-actions"><a class="sw-button" href="../software-resources/software-user-guide-second-generation.pdf" target="_blank" rel="noopener">Preview second-generation manual ↗</a><a class="sw-text-link" href="../software-resources/software-user-guide-second-generation.pdf" download>Download PDF</a></div>
+                <div class="sw-actions"><a class="sw-button" href="../hardware-resources/user-manual-second-generation.pdf" target="_blank" rel="noopener">Preview second-generation manual ↗</a><a class="sw-text-link" href="../hardware-resources/user-manual-second-generation.pdf" download>Download PDF</a></div>
                 <a class="sw-text-link" href="https://gitlab.igem.org/2026/software/jlu-sph/sph-software/-/raw/main/downloads/fluorescent-detection.apk?inline=false">Download second-generation APK ↗</a>
               </div>
             </div>
-            <p><strong>Hardware resources:</strong> <a href="../Instrument/hardware.html">Hardware manual (to be added)</a> · <a href="../Instrument/hardware.html">Hardware operation video (to be added)</a>. These temporary links open the Hardware page; final manual and video entries will be added here.</p>
+            <p><strong>Hardware resources:</strong> <a href="../Instrument/hardware.html#hw-user-manuals">Hardware user manuals</a> · <a href="../Instrument/hardware.html#hw-gen2-operation">Hardware operation video</a>.</p>
             <h3>Quick start</h3>
             <ol class="sw-quick-start"><li><strong>Install.</strong> Download the matching APK for Android 7.0 / API 24 or later. Both supplied app generations declare version 1.0.</li><li><strong>Connect.</strong> Start the compatible AI Box server, join its network, and enter the actual IP address and port. The recorded setup uses <code>10.42.0.1:8080</code>.</li><li><strong>Configure and monitor.</strong> Set heating time and the controls supported by the device and assay. Confirm returned status and temperature; inspect the curve labels available in your app build. Follow the generation-specific manual for version differences.</li><li><strong>Request and inspect.</strong> Request an image, inspect the returned tube labels, and use image viewing or saving as needed. Interpret labels according to the assay.</li></ol>
             <details class="sw-detail"><summary>If the connection or data does not update</summary><div><p>Check that the device server is running, the phone can reach its network, and the IP address and port match the device. Reconnect and request an update. Empty or unchanged plots alone do not establish a negative assay result. Record the app generation, Android version, and observed status when reporting an issue.</p></div></details>
@@ -264,7 +264,7 @@ networkService.sendMessage(requestJson.toString());</code></pre>
           <div class="sponsor-logo">iGEM</div><div class="sponsor-logo">School</div><div class="sponsor-logo">CSC</div>
           <div class="sponsor-logo">Lab</div><div class="sponsor-logo">iGEM</div><div class="sponsor-logo">iGEM</div>
         </div>
-        <div class="copyright">© 2026 JLU-SPH. Content licensed under CC BY 4.0.<br>Source code: gitlab.igem.org/2026/jlu-sphera</div>
+        <div class="copyright">© 2026 JLU-SPH. Content licensed under CC BY 4.0.<br>Source code: gitlab.igem.org/2026/jlu-sph</div>
       </div>
     </footer>
 

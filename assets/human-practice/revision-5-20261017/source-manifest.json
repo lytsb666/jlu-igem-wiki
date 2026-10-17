@@ -1,0 +1,309 @@
+{
+  "inputs": [
+    {
+      "name": "ihp5.0.docx",
+      "bytes": 1204533,
+      "sha256": "f962506decb655e730c594d378c5d07408a0c81137951bafb8ca2d0d94620ec4",
+      "media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png"
+      ],
+      "textFile": ".local\\ihp5-20261017\\ihp5.0-text.txt",
+      "storedOriginal": "assets/human-practice/revision-5-20261017/sources/ihp5.0.docx"
+    },
+    {
+      "name": "史诗大图88888(1).pptx",
+      "bytes": 577041,
+      "sha256": "7b3757e31b16a9c4dc5dc42a8aa582853fdd1e9199a7703cae06a9c8c91069e1",
+      "media": [
+        "ppt/media/image1.svg",
+        "ppt/media/image2.svg",
+        "ppt/media/image3.svg",
+        "ppt/media/image4.png",
+        "ppt/media/image5.png",
+        "ppt/media/image6.svg"
+      ],
+      "textFile": ".local\\ihp5-20261017\\史诗大图88888(1)-text.txt",
+      "storedOriginal": "assets/human-practice/revision-5-20261017/sources/史诗大图88888(1).pptx"
+    },
+    {
+      "name": "活动卡片终极版.docx",
+      "bytes": 4313139,
+      "sha256": "bb159c494ba321a7a865c5318caafc8ee3b1994998c93f52087869740fe57f79",
+      "media": [
+        "word/media/image1.jpeg",
+        "word/media/image10.jpeg",
+        "word/media/image11.jpeg",
+        "word/media/image12.jpeg",
+        "word/media/image13.jpeg",
+        "word/media/image14.png",
+        "word/media/image15.jpeg",
+        "word/media/image16.jpeg",
+        "word/media/image17.jpeg",
+        "word/media/image18.png",
+        "word/media/image19.jpeg",
+        "word/media/image2.jpeg",
+        "word/media/image20.jpeg",
+        "word/media/image21.jpeg",
+        "word/media/image22.jpeg",
+        "word/media/image23.jpeg",
+        "word/media/image24.jpeg",
+        "word/media/image25.jpeg",
+        "word/media/image26.jpeg",
+        "word/media/image27.jpeg",
+        "word/media/image28.jpeg",
+        "word/media/image29.jpeg",
+        "word/media/image3.jpeg",
+        "word/media/image30.jpeg",
+        "word/media/image31.jpeg",
+        "word/media/image32.jpeg",
+        "word/media/image33.jpeg",
+        "word/media/image34.jpeg",
+        "word/media/image35.jpeg",
+        "word/media/image36.jpeg",
+        "word/media/image37.jpeg",
+        "word/media/image38.jpeg",
+        "word/media/image39.jpeg",
+        "word/media/image4.png",
+        "word/media/image5.jpeg",
+        "word/media/image6.png",
+        "word/media/image7.jpeg",
+        "word/media/image8.jpeg",
+        "word/media/image9.jpeg"
+      ],
+      "textFile": ".local\\ihp5-20261017\\活动卡片终极版-text.txt",
+      "storedOriginal": "assets/human-practice/revision-5-20261017/sources/活动卡片终极版.docx"
+    },
+    {
+      "name": "Activity_Types_big_color_circles_muted_thin_border.pptx",
+      "bytes": 38320,
+      "sha256": "def43351b90e2b503aa448fbc4cdf50e74b14d13eb13620fe5da9e82dd0dfb35",
+      "media": [],
+      "textFile": ".local\\ihp5-20261017\\Activity_Types_big_color_circles_muted_thin_border-text.txt",
+      "storedOriginal": "assets/human-practice/revision-5-20261017/sources/Activity_Types_big_color_circles_muted_thin_border.pptx"
+    },
+    {
+      "name": "how hp shape的五个问题.pptx",
+      "bytes": 305354,
+      "sha256": "538e90b4900b47fe25a2afe2d1dc3b25cf4d30d2dd636dc3ffe00f8834d1e661",
+      "media": [
+        "ppt/media/image1.png",
+        "ppt/media/image10.svg",
+        "ppt/media/image11.png",
+        "ppt/media/image12.svg",
+        "ppt/media/image13.svg",
+        "ppt/media/image14.svg",
+        "ppt/media/image15.svg",
+        "ppt/media/image2.svg",
+        "ppt/media/image3.png",
+        "ppt/media/image4.svg",
+        "ppt/media/image5.png",
+        "ppt/media/image6.svg",
+        "ppt/media/image7.png",
+        "ppt/media/image8.svg",
+        "ppt/media/image9.png"
+      ],
+      "textFile": ".local\\ihp5-20261017\\how hp shape的五个问题-text.txt",
+      "storedOriginal": "assets/human-practice/revision-5-20261017/sources/how hp shape的五个问题.pptx"
+    }
+  ],
+  "note": "User requested clear edits first; unresolved items are retained for the final review document.",
+  "stage5Windows": [
+    {
+      "source": "assets/human-practice/revision-5-20261017/requirements/image1.png",
+      "display": "assets/human-practice/revision-5-20261017/stage-5-1.svg",
+      "window": [
+        165,
+        252,
+        973,
+        366
+      ],
+      "sourceSize": [
+        1269,
+        714
+      ]
+    },
+    {
+      "source": "assets/human-practice/revision-5-20261017/requirements/image2.png",
+      "display": "assets/human-practice/revision-5-20261017/stage-5-2.svg",
+      "window": [
+        67,
+        25,
+        1078,
+        577
+      ],
+      "sourceSize": [
+        1269,
+        714
+      ]
+    },
+    {
+      "source": "assets/human-practice/revision-5-20261017/requirements/image3.png",
+      "display": "assets/human-practice/revision-5-20261017/stage-5-3.svg",
+      "window": [
+        23,
+        19,
+        915,
+        482
+      ],
+      "sourceSize": [
+        960,
+        540
+      ]
+    },
+    {
+      "source": "assets/human-practice/revision-5-20261017/requirements/image4.png",
+      "display": "assets/human-practice/revision-5-20261017/stage-5-4.svg",
+      "window": [
+        0,
+        0,
+        1265,
+        711
+      ],
+      "sourceSize": [
+        1265,
+        711
+      ]
+    },
+    {
+      "source": "assets/human-practice/revision-5-20261017/requirements/image5.png",
+      "display": "assets/human-practice/revision-5-20261017/stage-5-5.svg",
+      "window": [
+        0,
+        18,
+        933,
+        514
+      ],
+      "sourceSize": [
+        960,
+        540
+      ]
+    }
+  ],
+  "export": "Native PowerPoint grouped-shape SVG export, including shapes outside the slide; original presentation files are unchanged.",
+  "questions": [
+    {
+      "number": 1,
+      "question": "What Global Health Challenges Matter Most?",
+      "stage": "LISTEN",
+      "target": "stage-1",
+      "box": {
+        "x": 47.3333,
+        "y": 7.1333,
+        "w": 623.622,
+        "h": 75.6
+      }
+    },
+    {
+      "number": 2,
+      "question": "How Can We Contribute to Global Health?",
+      "stage": "DEFINE",
+      "target": "stage-2",
+      "box": {
+        "x": 458.0667,
+        "y": 146.8667,
+        "w": 623.622,
+        "h": 75.5906
+      }
+    },
+    {
+      "number": 3,
+      "question": "How Human Practices Shape the Science?",
+      "stage": "BUILD",
+      "target": "stage-3",
+      "box": {
+        "x": 47.3333,
+        "y": 287.4667,
+        "w": 623.622,
+        "h": 75.5906
+      }
+    },
+    {
+      "number": 4,
+      "question": "How Does ByeGerm Evolve Through Human Practices?",
+      "stage": "ENGINEER",
+      "target": "stage-4",
+      "box": {
+        "x": 405.1333,
+        "y": 432.9333,
+        "w": 734.4,
+        "h": 75.6
+      }
+    },
+    {
+      "number": 5,
+      "question": "How Can the iGEM Spirit Drive ByeGerm Forward?",
+      "stage": "EXTEND",
+      "target": "stage-5",
+      "box": {
+        "x": 11.6667,
+        "y": 570.8667,
+        "w": 674.0,
+        "h": 75.6
+      }
+    }
+  ],
+  "unresolved": [
+    "Activity 38 appears twice for SBti and the tower-defense game; Activity 39 is absent. Neither point is bound to an inferred record.",
+    "Summary says 45 total / 29 core / 16 extended, but the register contains 40 entries with 39 distinct numbers. Summary counts are not published.",
+    "Activity types differ between map colors and card labels at 5, 20, and 40. Source colors and card wording are not silently changed.",
+    "Source activity-map picture 115 (Voting) has an empty a:blip with no image relationship. Its error placeholder is omitted only from the display SVG; no replacement icon is guessed."
+  ],
+  "outputs": {
+    "activity-map-display.svg": {
+      "bytes": 378002,
+      "sha256": "24519ae5f418c495f156d2c7b0a8cd141293593fb3e2e5961eafeb8d43946624"
+    },
+    "activity-map-original.svg": {
+      "bytes": 389446,
+      "sha256": "dad10d976e4a3970549d6564da3782854d61870c840b68c5ec6f6ff5cd5d1212"
+    },
+    "activity-register-source.json": {
+      "bytes": 14498,
+      "sha256": "01c86730585ff5cc74fbebb12c4988342e1a9eafca1a5373b8483e7d7937f76c"
+    },
+    "activity-types-display.svg": {
+      "bytes": 10706,
+      "sha256": "91416dc773841d393244691f73c8efc836d43bc26d9ec1dd8e0bf8fd80992d28"
+    },
+    "activity-types-original.svg": {
+      "bytes": 10645,
+      "sha256": "e32b9e7b05617e272e8cbb988ef0aaeb7be3a0c29b008d2868bc0b3b219c3460"
+    },
+    "explorer-data.json": {
+      "bytes": 31246,
+      "sha256": "42e75c5b436ae399a3639bb502a6d878bb64a2f7ffe323abb8c4557c0960ad32"
+    },
+    "questions-display.svg": {
+      "bytes": 405427,
+      "sha256": "14e23fdb426d1269bb84e74fd7cf487d92e897f6258b9e2cb87f85741793d5cd"
+    },
+    "questions-original.svg": {
+      "bytes": 405365,
+      "sha256": "984abba8584ac81aba3b8c0b415fee59124c93e3098cf1bfdef61346d62d7664"
+    },
+    "stage-5-1.svg": {
+      "bytes": 145313,
+      "sha256": "1167cc6adaa5188b793aaee20f6ece335537e92818d60687de0825fb3f5d0f95"
+    },
+    "stage-5-2.svg": {
+      "bytes": 152949,
+      "sha256": "9eda9459a874f19e5046b0a67c657bd2ea8b6375eee67c54fb9c30bc724b4f00"
+    },
+    "stage-5-3.svg": {
+      "bytes": 201482,
+      "sha256": "fc3d005131ebcafbd7461dca8f98e4da343f3aa10f82f10e668c2a20e6cbecc0"
+    },
+    "stage-5-4.svg": {
+      "bytes": 856331,
+      "sha256": "688de3da9b68b0c10265c9497dc863d2967a4179e8da68c14c6eae806c42925e"
+    },
+    "stage-5-5.svg": {
+      "bytes": 230129,
+      "sha256": "60350f59ab5473172a02845f4013ca88b9d67d635a6753c95450ced5d1812dd1"
+    }
+  }
+}

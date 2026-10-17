@@ -1,4 +1,5 @@
 import { setDirectoryGroupOpen } from './site-format.js'
+import { activeDirectoryLink } from './directory-navigation.js'
 
 // Apply shared presentation while preserving manuscript text, anchors and data.
 const isMeasurement = /\/wet-lab\/measurement(?:\.html)?\/?$/i.test(location.pathname)
@@ -78,6 +79,12 @@ function wrapTable(table) {
 }
 
 function enhanceReferences() {
+  document.querySelectorAll('main .research-reference').forEach(inner => {
+    inner.classList.add('wiki-reference-inner')
+    inner.parentElement.classList.add('wiki-reference-section')
+    inner.querySelector('.wiki-reference-heading')?.classList.add('wiki-chapter-title')
+  })
+  document.querySelectorAll('main #hw-references, main #references.lab-section, main .model-hardware-references, main .edu-references, main .entrepreneur-references').forEach(section => section.classList.add('wiki-reference-section'))
   document.querySelectorAll('main ol').forEach(list => {
     if (!list.matches('[class*="reference"]') && !list.closest('[id*="reference"], [class*="reference"]')) return
     list.classList.add('wiki-bracket-references')
@@ -179,7 +186,7 @@ function removeAuxiliaryDownloads() {
 
 function enhanceLinks() {
   document.querySelectorAll('main a[href], footer a[href]').forEach(link => {
-    if (link.closest('.wiki-directory, .team-jumps, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
+    if (link.closest('.wiki-directory, .team-jumps, .footer-sitemap, video') || link.matches('.team-scroll-cue') || !link.textContent.trim() || link.querySelector('img') || link.classList.contains('wiki-jump-link')) return
     link.style.setProperty('--wiki-link-size', `${(parseFloat(getComputedStyle(link).fontSize)||16)+2}px`)
     link.classList.add('wiki-jump-link')
     // Boxed destinations are buttons/cards; keep prose links underlined.
@@ -234,7 +241,7 @@ const directoryMouse = window.matchMedia('(hover: hover) and (pointer: fine)')
 function followCurrentChapter(toc, current, threshold) {
   // Let readers choose a destination without moving entries under the pointer
   // or keyboard focus. Apply the latest chapter when they leave the directory.
-  if ((directoryMouse.matches && toc.matches(':hover')) || toc.querySelector(':focus-visible')) return
+  if (activeDirectoryLink(toc) || (directoryMouse.matches && toc.matches(':hover')) || toc.querySelector(':focus-visible')) return
   const tocBox = toc.getBoundingClientRect()
   const narrow = innerWidth <= 900
   if (narrow && tocBox.bottom > threshold) return
@@ -258,6 +265,19 @@ function followCurrentChapter(toc, current, threshold) {
   }
 }
 
+function showCurrentDirectoryEntry(toc, current, threshold) {
+  if (activeDirectoryLink(toc) || innerWidth <= 900 || (directoryMouse.matches && toc.matches(':hover')) || toc.querySelector(':focus-visible')) return
+  const main = current.target.closest('main')
+  if (current.target.getBoundingClientRect().top >= innerHeight || (main && main.getBoundingClientRect().bottom <= threshold)) return
+  const scrollArea = current.link.closest('nav')
+  if (!scrollArea || !current.link.getClientRects().length) return
+  const box = scrollArea.getBoundingClientRect()
+  const entry = current.link.getBoundingClientRect()
+  if (entry.top < box.top + 12 || entry.bottom > box.bottom - 12) {
+    scrollArea.scrollTo({top: scrollArea.scrollTop + (entry.top + entry.bottom - box.top - box.bottom) / 2, behavior: 'instant'})
+  }
+}
+
 function updateDirectories() {
   scheduled = false
   for (const {toc,links} of directoryEntries) {
@@ -265,7 +285,8 @@ function updateDirectories() {
     if (!candidates.length) continue
     const threshold = Math.min(240, innerHeight * .25)
     const passed = candidates.filter(({target})=>target.getBoundingClientRect().top<=threshold)
-    const current = passed.length ? passed.reduce((last,item)=>item.target.getBoundingClientRect().top>=last.target.getBoundingClientRect().top?item:last) : candidates[0]
+    const selected = activeDirectoryLink(toc)
+    const current = candidates.find(item => item.link === selected) || (passed.length ? passed.reduce((last,item)=>item.target.getBoundingClientRect().top>=last.target.getBoundingClientRect().top?item:last) : candidates[0])
     links.forEach(({link})=>{
       link.classList.toggle('is-active',link===current.link)
       link.classList.toggle('active',link===current.link)
@@ -275,6 +296,7 @@ function updateDirectories() {
     toc.querySelectorAll('.wiki-toc-group').forEach(group=>group.classList.toggle('is-current',group.contains(current.link)))
     toc.querySelectorAll('.engineering-toc-group').forEach(group=>group.classList.toggle('is-current',group.contains(current.link)))
     followCurrentChapter(toc, current, threshold)
+    showCurrentDirectoryEntry(toc, current, threshold)
   }
 }
 function scheduleDirectories() { if (!scheduled) {scheduled=true;requestAnimationFrame(updateDirectories)} }
@@ -317,5 +339,6 @@ document.querySelectorAll(directorySelector).forEach(toc=>{
 window.addEventListener('scroll',scheduleDirectories,{passive:true})
 window.addEventListener('resize',()=>{centerDirectories();scheduleDirectories()},{passive:true})
 window.addEventListener('hashchange',scheduleDirectories)
+window.addEventListener('wiki:directory-settled',scheduleDirectories)
 document.addEventListener('toggle',scheduleDirectories,true)
 document.addEventListener('click',()=>requestAnimationFrame(scheduleDirectories))
