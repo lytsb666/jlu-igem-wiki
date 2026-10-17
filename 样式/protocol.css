@@ -1,4 +1,14 @@
 /* Protocol follows the shared wiki type scale and article directory. */
+/* The wet-lab revision promotes the three experiment headers to the gene
+   heading scale; equipment and reagents follow Reaction System. */
+@layer wiki-typography {
+  :root:root body .protocol-main .protocol-panel-header h3 { font-size: var(--wiki-heading-size) !important; }
+  :root:root body .protocol-main .protocol-category-label { font-size: var(--wiki-third-heading-size) !important; }
+  :root:root body .protocol-main .protocol-materials > summary { font-size: var(--wiki-third-heading-size) !important; font-weight: 700 !important; }
+}
+@layer wiki-format {
+  :root:root body .protocol-panel ~ .protocol-panel { margin-top: calc(42px + 3.4rem) !important; }
+}
 .protocol-main {
   width: var(--wiki-main-width);
   margin: 108px auto 96px;

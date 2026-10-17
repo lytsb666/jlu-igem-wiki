@@ -1,5 +1,6 @@
-const toc = document.querySelector('.hp-toc')
-const tocLinks = Array.from(document.querySelectorAll('.toc-link'))
+import './entrepreneurship-final-20261017.css'
+import { createCarousel } from './carousel.js'
+
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 
 function enhanceCollapsibleSections() {
@@ -43,52 +44,6 @@ function enhanceCollapsibleSections() {
       if (event.key !== 'Enter' && event.key !== ' ') return
       event.preventDefault()
       toggle()
-    })
-  })
-}
-
-function setupToc() {
-  const linkById = new Map(tocLinks.map((link) => [link.hash.slice(1), link]))
-  const headings = tocLinks
-    .map((link) => document.getElementById(link.hash.slice(1)))
-    .filter(Boolean)
-  if (!headings.length || !tocLinks.length) return
-
-  const activate = (id) => {
-    tocLinks.forEach((link) => link.classList.toggle('active', link.hash === `#${id}`))
-    const active = linkById.get(id)
-    const nav = active?.closest('nav')
-    if (nav?.clientHeight && !toc.matches(':hover, :focus-within')) {
-      const linkBox = active.getBoundingClientRect()
-      const navBox = nav.getBoundingClientRect()
-      if (linkBox.top < navBox.top || linkBox.bottom > navBox.bottom) {
-        nav.scrollTo({
-          top: nav.scrollTop + linkBox.top - navBox.top - (nav.clientHeight - linkBox.height) / 2,
-          behavior: reducedMotion.matches ? 'instant' : 'smooth',
-        })
-      }
-    }
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-      if (visible[0]) activate(visible[0].target.id)
-    },
-    { rootMargin: '-18% 0px -70% 0px', threshold: 0 },
-  )
-  headings.forEach((heading) => observer.observe(heading))
-
-  tocLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const target = document.querySelector(link.hash)
-      if (!target) return
-      event.preventDefault()
-      target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' })
-      history.replaceState(null, '', link.hash)
-      activate(target.id)
     })
   })
 }
@@ -200,6 +155,17 @@ function setupSwotCards() {
 
 enhanceCollapsibleSections()
 setupSwotCards()
-setupToc()
 setupReveal()
+document.querySelectorAll('.entre-final-photo').forEach(figure => {
+  const image = figure.querySelector('img')
+  const button = document.createElement('button')
+  button.type = 'button'
+  button.className = 'figure-zoom'
+  button.setAttribute('aria-label', `Enlarge: ${image.alt}`)
+  image.before(button)
+  button.append(image)
+})
+document.querySelectorAll('.entre-final-device-gallery').forEach(root => {
+  createCarousel(root, { track: root.querySelector('.entre-final-device-track') })
+})
 setupFigureLightbox()

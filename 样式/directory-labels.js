@@ -14,6 +14,7 @@ const terms = [
   'Python', 'GitHub', 'Android', 'iOS', 'Bluetooth', 'Wi-Fi',
   'Jilin', 'Changchun', 'Alberta', 'China', 'WHO', 'CDC', 'POCT', 'LFA',
   'NCBI', 'BLAST', 'SOPs', 'SOP', 'PDF', 'RFU', 'OD', 'T7', 'LB',
+  'UVP', 'MVP', 'PESTLE', 'TAM', 'SAM', 'SOM', 'SWOT', 'TOWS',
   'MgCl2', 'Mg2+', 'Mg', 'KCl', 'NaCl', 'ATP', 'NADH', 'dNTP', 'dNTPs',
   'PID', 'ODEs', 'ODE', 'PDE', '3D', 'CAD', 'LED', 'USB',
   'LASSO', 'MCMC', 'AUC', 'ROC', 'LOD', 'Cq', 'Ct', 'R²',
@@ -25,6 +26,7 @@ const specialTerm = new RegExp(`(?<![a-z0-9])(?:${terms.sort((a, b) => b.length 
 export function sentenceCaseDirectory(value) {
   let result = value.toLowerCase()
   result = result.replace(specialTerm, match => canonical.get(match.toLowerCase()))
+  if (/metapneumovirus/i.test(value)) result = result.replace(/\b((?:sub)?type\s+)b\b/gi, (_, prefix) => `${prefix}B`)
   // Preserve source identifiers and the five named stages without changing
   // ordinary headings such as "Build & test" into uppercase.
   for (const match of value.matchAll(/\b[A-J][1-4]\b|\b[A-J](?=\s*[:→–])|\b(?:LISTEN|DEFINE|BUILD|ENGINEER|EXTEND)\b/g)) {

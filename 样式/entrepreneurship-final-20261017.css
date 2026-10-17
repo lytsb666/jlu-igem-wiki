@@ -1,0 +1,58 @@
+.entrepreneurship-page .hp-content .bmc-overview { width: 100%; margin: 2rem 0 3rem; padding: 0; }
+.entrepreneurship-page .bmc-card h4 { margin: 0; font-size: 14pt; }
+.entrepreneurship-page .entre-evidence-overview { width: 100%; margin: 1.5rem 0; padding: 1.2rem; box-sizing: border-box; }
+.entrepreneurship-page .entre-evidence-overview__heading h4 { margin-top: 0; }
+.entrepreneurship-page .entre-evidence-overview h5 { font-size: 14pt; }
+.entrepreneurship-page .entre-final-photo { margin: 1.5rem 0; width: 100%; }
+.entrepreneurship-page .entre-final-photo img { display: block; width: 100%; max-width: 100%; height: auto; object-fit: contain; }
+.entrepreneurship-page .entre-final-inventivity { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 1.4rem; align-items: center; margin-block: 1.5rem; }
+.entrepreneurship-page .entre-final-device-gallery { min-width: 0; }
+.entrepreneurship-page .entre-final-device-gallery .entre-final-photo { margin: 0; }
+.entrepreneurship-page .entre-final-closing-photos { margin: 2rem 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; align-items: center; }
+.entrepreneurship-page .entre-final-photo .figure-zoom { display: block; width: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-in; }
+.entrepreneurship-page .entrepreneur-references h3 { margin: 1.7rem 0 .8rem; }
+.entrepreneurship-page .hp-toc .toc-list > div { min-width: 0; }
+.entrepreneurship-page .hp-toc ul { list-style: none; margin: .25rem 0 .5rem; padding-left: .8rem; }
+.entrepreneurship-page .hp-toc ul a { line-height: 1.35; }
+@layer wiki-format {
+  :root:root body.entrepreneurship-page .wiki-headpage .wiki-headpage__title { width: 48% !important; }
+  :root:root body.entrepreneurship-page .wiki-headpage .wiki-headpage__title h1 { font-size: clamp(28px,4vw,64px) !important; white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+  :root:root body.entrepreneurship-page .hp-table { background: #f7eadb !important; border-color: #c49f7b !important; }
+  :root:root body.entrepreneurship-page .hp-table :is(th,td) { border-color: #d5b696 !important; }
+  :root:root body.entrepreneurship-page .hp-table thead :is(th,td) { background: #79533c !important; color: #fff9f1 !important; font-weight: 700 !important; }
+  :root:root body.entrepreneurship-page .hp-table tbody tr:nth-child(odd) > :is(th,td) { background: #fbf2e6 !important; }
+  :root:root body.entrepreneurship-page .hp-table tbody tr:nth-child(even) > :is(th,td) { background: #eddbc6 !important; }
+  :root:root body.entrepreneurship-page .static-table { background: #f8ecdd !important; border: 1px solid #ccb092 !important; border-radius: 14px !important; box-shadow: 0 4px 0 #e2cbb0 !important; }
+  :root:root body.entrepreneurship-page .entre-final-photo img { width: 100% !important; height: auto !important; max-height: none !important; }
+  :root:root body.entrepreneurship-page .entre-final-photo { box-shadow: none !important; }
+  :root:root body.entrepreneurship-page .entre-final-inventivity > div { min-width: 0; }
+  :root:root body.entrepreneurship-page :is(.data-table, .static-card-table) { min-width: 0; max-width: 100%; margin-block: 1.5rem !important; }
+  :root:root body.entrepreneurship-page .data-table > .wiki-table-scroll { margin-block: 0 !important; }
+  :root:root body.entrepreneurship-page .hp-table { min-width: 100%; }
+  :root:root body.entrepreneurship-page .hp-table thead :is(th,td) { white-space: nowrap !important; text-align: center !important; vertical-align: middle !important; }
+  :root:root body.entrepreneurship-page .hp-table tbody :is(th,td) { text-align: left !important; vertical-align: middle !important; }
+  :root:root body.entrepreneurship-page .table-caption { text-align: center !important; text-align-last: center !important; letter-spacing: normal !important; text-transform: none !important; }
+  :root:root body.entrepreneurship-page .figure-zoom { padding: 0; background: transparent; box-shadow: none; transform: none; }
+  :root:root body.entrepreneurship-page .figure-zoom:is(:hover,:focus-visible) { box-shadow: none; transform: none; }
+  :root:root body.entrepreneurship-page .doc-figure:not(:has(figcaption)) .figure-zoom { border: 0; }
+  :root:root body.entrepreneurship-page figure.wiki-equipment-figure { max-width: 36rem; margin-inline: auto; }
+  :root:root body.entrepreneurship-page figure.wiki-equipment-figure img { max-width: 100% !important; }
+  :root:root body.entrepreneurship-page .hp-content :is(h2,h3,h4,h5,h6) { letter-spacing: normal !important; }
+  :root:root body.entrepreneurship-page :is(.interactive-card__body, .bmc-card__code, .bmc-card__role, .bmc-overview__legend span, .static-card-table__legend span) { font-size: 12pt !important; line-height: 1.3 !important; letter-spacing: normal; }
+  :root:root body.entrepreneurship-page .interactive-card__body { color: #6f4e37 !important; }
+  :root:root body.entrepreneurship-page .doc-figure:has(figcaption) .figure-zoom { box-shadow: 0 3px 12px #4e2d191a !important; }
+  :root:root body.entrepreneurship-page .doc-figure:has(figcaption) img { translate: none !important; box-shadow: none !important; }
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    :root:root body.entrepreneurship-page .doc-figure:has(figcaption) .figure-zoom:hover { transform: translateY(-3px); box-shadow: 0 8px 24px #4e2d192e !important; }
+  }
+}
+@media (max-width: 900px) {
+  .entrepreneurship-page .entre-final-inventivity { grid-template-columns: 1fr; }
+  .entrepreneurship-page .entre-final-device-gallery { width: min(100%,30rem); margin-inline: auto; }
+  @layer wiki-format { :root:root body.entrepreneurship-page .wiki-headpage .wiki-headpage__title { width: calc(100% - 36px) !important; } }
+}
+@media (max-width: 550px) {
+  .entrepreneurship-page .entre-final-closing-photos { grid-template-columns: 1fr; }
+  .entrepreneurship-page .entre-evidence-overview { padding: .8rem; }
+  @layer wiki-format { :root:root body.entrepreneurship-page .wiki-headpage .wiki-headpage__title h1 { font-size: clamp(23px,7vw,36px) !important; } }
+}

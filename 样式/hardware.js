@@ -1,6 +1,7 @@
 import { enhanceSectionNavigation } from './instrument-navigation.js'
 import { createCarousel } from './carousel.js'
 import cropWindows from '../assets/hardware/crop-windows-20261016.json'
+import './hardware-final-20261017.css'
 
 const root = document.querySelector('.hardware-page .hw-main')
 if (root) {

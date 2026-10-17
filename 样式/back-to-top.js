@@ -126,8 +126,8 @@ function createBackToTop(name, towardBottom = false) {
 
   function measureObstacles(area) {
     if (obstaclesDirty) {
-      obstacles = [...document.querySelectorAll(obstacleSelector)].filter((element) => !element.closest('.wiki-scroll-mascot'))
-      whitePanels = [...document.querySelectorAll('main section, main article, .edu-content, .ihp-content, .lab-content, .sw-content')]
+      obstacles = [...document.querySelectorAll(obstacleSelector)].filter((element) => !element.closest('.wiki-scroll-mascot, #igem-custom-cursor'))
+      whitePanels = [...document.querySelectorAll('main section, main article, .edu-content, .ihp-content, .lab-content, .sw-content, .hp-content, .ihp-paper-panel, .hw-final-paper')]
       obstaclesDirty = false
     }
     nearbyObstacles = []

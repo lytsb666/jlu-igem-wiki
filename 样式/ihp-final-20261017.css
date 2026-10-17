@@ -1,0 +1,42 @@
+/* Source: ihp修改7.0, summary最终版 and the three original 7.0 slides. */
+body.ihp-manuscript-page .ihp-final-numbers { margin: 2rem 0; }
+body.ihp-manuscript-page .ihp-final-numbers > h3 { margin: 0 0 1.2rem; }
+body.ihp-manuscript-page .ihp-final-numbers__grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: .45rem; }
+body.ihp-manuscript-page .ihp-number-card { min-width: 0; }
+body.ihp-manuscript-page .ihp-number-card svg { display: block; width: 100%; height: auto; overflow: visible; }
+body.ihp-manuscript-page .ihp-summary-diagram > a { border-radius: 0; }
+body.ihp-manuscript-page .ihp-summary-diagram img { width: 100%; max-height: none; }
+body.ihp-manuscript-page .ihp-closing-title { margin: 0 0 1rem; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+body.ihp-manuscript-page .ihp-walking-story { height: 200svh; margin: 0 0 3rem; position: relative; --walk-progress: 0; --text-reveal: 100%; }
+body.ihp-manuscript-page .ihp-walking-story__stage { position: sticky; top: 88px; height: calc(100svh - 100px); min-height: 340px; display: flex; flex-direction: column; justify-content: center; padding: 1.25rem clamp(1rem,3vw,2.5rem); box-sizing: border-box; border-radius: 30px; background: #fbf4eb; overflow: hidden; }
+body.ihp-manuscript-page .ihp-walking-story__message { position: relative; z-index: 1; clip-path: inset(0 var(--text-reveal) 0 0); }
+body.ihp-manuscript-page .ihp-walking-story__message p { margin: 0 0 1.5rem; font-size: clamp(22px,2.6vw,38px); line-height: 1.45; font-weight: 700; text-align: center; }
+body.ihp-manuscript-page .ihp-walking-story__path { position: relative; height: clamp(130px,18vw,210px); margin-top: 1.5rem; border-bottom: 1px solid #cba37b; }
+body.ihp-manuscript-page .ihp-walking-story__traveller { position: absolute; bottom: 0; width: clamp(130px,18vw,210px); left: calc((1 - var(--walk-progress)) * (100% - clamp(130px,18vw,210px))); }
+body.ihp-manuscript-page .ihp-walking-story__traveller img { display: block; width: 100%; height: auto; transform-origin: 50% 90%; }
+body.ihp-manuscript-page .ihp-walking-story.is-walking img { animation: ihp-final-walk .4s ease-in-out infinite alternate; }
+@keyframes ihp-final-walk { from { transform: translateY(0) rotate(-2deg); } to { transform: translateY(-5px) rotate(2deg); } }
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .wiki-headpage::after { background: transparent !important; }
+  :root:root body.ihp-manuscript-page .ihp-hero__veil { display: none !important; }
+  :root:root body.ihp-manuscript-page .ihp-final-portrait img { width: auto !important; height: 320px !important; max-height: none !important; max-width: 100% !important; object-fit: contain; margin-inline: auto; }
+  :root:root body.ihp-manuscript-page .ihp-closing-title { background: transparent !important; box-shadow: none !important; border: 0 !important; padding: 0 !important; }
+  :root:root body.ihp-manuscript-page .ihp-summary-diagram img { width: 100% !important; height: auto !important; max-height: none !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__traveller img { box-shadow: none !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__message p { font-size: clamp(22px,2.6vw,38px) !important; text-align: center !important; }
+}
+@layer wiki-typography {
+  :root:root body.ihp-manuscript-page .ihp-walking-story__message p { font-size: clamp(22px,2.6vw,38px) !important; text-align: center !important; text-align-last: center !important; }
+}
+@media (max-width: 900px) {
+  body.ihp-manuscript-page .ihp-final-numbers__grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: .6rem; }
+}
+@media (max-width: 550px) {
+  body.ihp-manuscript-page .ihp-walking-story__stage { top: 76px; height: calc(100svh - 88px); min-height: 310px; }
+  @layer wiki-format { :root:root body.ihp-manuscript-page .ihp-final-portrait img { height: 220px !important; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.ihp-manuscript-page .ihp-walking-story { height: auto; --walk-progress: 1; --text-reveal: 0%; }
+  body.ihp-manuscript-page .ihp-walking-story__stage { position: relative; top: auto; height: auto; min-height: 0; padding-block: 2.5rem; }
+  body.ihp-manuscript-page .ihp-walking-story img { animation: none !important; }
+}

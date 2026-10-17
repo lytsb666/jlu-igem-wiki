@@ -129,6 +129,12 @@
 }
 :root body .wiki-directory nav[hidden] { display: none !important; }
 :root body .wiki-directory :is(nav > ol, nav > ul) { display: block !important; list-style: none; padding: 0; margin: 0; }
+/* Directory branches carry their own lines; Education and Entrepreneurship
+   never use browser bullets, including nested lists and marker overrides. */
+@layer wiki-format {
+  :root:root body :is(.edu-toc, .hp-toc) :is(ul, ol, li) { list-style: none !important; }
+  :root:root body :is(.edu-toc, .hp-toc) li::marker { content: '' !important; }
+}
 :root body .wiki-directory a {
   display: block !important;
   min-width: 0;

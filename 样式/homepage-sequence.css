@@ -30,6 +30,9 @@
 /* Reference narration appears directly over the original scene. Text shadow
    supplies contrast without adding a panel or replacing any illustration. */
 .world-pcr-scene { position: absolute; z-index: 7; top: 33.333333%; left: 50%; width: var(--story-world-width); height: 33.333333%; max-width: none; object-fit: fill; transform: translateX(-50%); opacity: var(--pcr-mark-opacity, 0); mask-image: linear-gradient(transparent, #000 3%, #000 97%, transparent); pointer-events: none; }
+/* Keep the lamp and its downward beam above the incoming PCR artwork. The
+   cone stays in illustration coordinates, reaching the people at its base. */
+.world-lighthouse-glow { position: absolute; z-index: 8; top: 33.333333%; left: 50%; width: var(--story-world-width); height: 33.333333%; max-width: none; transform: translateX(-50%); overflow: visible; opacity: var(--lighthouse-glow-opacity, 0); mix-blend-mode: screen; pointer-events: none; }
 .world-pcr { --wiki-body-size: clamp(13px, 1.05vw, 24px); position: absolute; z-index: 9; top: calc(33.333333% - var(--story-world-width) * .018); left: 54%; width: calc(var(--story-world-width) * .28); aspect-ratio: 640 / 595; padding: 0; border: 0; background: transparent; color: #3f2114; opacity: var(--pcr-mark-opacity, 0); transform: translateX(-50%); cursor: pointer; }
 .world-pcr:disabled { pointer-events: none; }
 .world-pcr:focus-visible { outline: 3px solid #fff2bb; outline-offset: 8px; border-radius: 20%; }

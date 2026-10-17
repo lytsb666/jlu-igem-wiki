@@ -1118,26 +1118,6 @@ body.entrepreneurship-page {
   transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
-.figure-zoom::after {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  padding: 6px 9px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 999px;
-  content: "View full size";
-  color: var(--entre-ink);
-  background: rgba(255, 255, 255, 0.9);
-  font-family: Arial, sans-serif;
-  font-size: 0.63rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  opacity: 0.86;
-  pointer-events: none;
-  text-transform: uppercase;
-  backdrop-filter: blur(8px);
-}
-
 .figure-zoom img {
   display: block;
   width: 100%;
@@ -1509,12 +1489,6 @@ body.entrepreneurship-page {
   .figure-zoom {
     padding: 8px;
     border-radius: 14px;
-  }
-
-  .figure-zoom::after {
-    top: 9px;
-    right: 9px;
-    content: "Zoom";
   }
 
   .hp-p {
