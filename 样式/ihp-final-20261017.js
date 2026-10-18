@@ -5,6 +5,7 @@ const stats = document.querySelector('.ihp-final-numbers')
 const counters = [...document.querySelectorAll('[data-ihp-counter]')]
 const story = document.querySelector('.ihp-walking-story')
 const stage = story?.querySelector('.ihp-walking-story__stage')
+const row = story?.querySelector('.ihp-walking-story__row')
 let frame = 0, walkingTimer = 0, counterProgress = 0
 const clamp = value => Math.min(1, Math.max(0, value))
 
@@ -18,13 +19,13 @@ function update() {
       counter.textContent = `${Math.round(Number(counter.dataset.ihpCounter) * counterProgress)}${counter.dataset.counterSuffix}`
     })
   }
-  if (story && stage) {
+  if (story && stage && row) {
     const box = story.getBoundingClientRect()
-    const pinTop = parseFloat(getComputedStyle(stage).top) || 0
-    const distance = Math.max(1, story.offsetHeight - stage.offsetHeight)
-    const progress = reduced.matches ? 1 : clamp((pinTop - box.top) / distance)
+    const progress = reduced.matches ? 1 : clamp((innerHeight * .95 - box.top) / (innerHeight * .5))
+    const start = stage.clientWidth + 8
+    const end = Math.min(0, stage.clientWidth - row.offsetWidth)
     story.style.setProperty('--walk-progress', progress)
-    story.style.setProperty('--text-reveal', `${(1 - progress) * 100}%`)
+    story.style.setProperty('--walk-offset', `${reduced.matches ? 0 : start + (end - start) * progress}px`)
     story.dataset.walkProgress = progress.toFixed(3)
     story.classList.toggle('is-walking', !reduced.matches && progress > 0 && progress < 1)
     clearTimeout(walkingTimer)

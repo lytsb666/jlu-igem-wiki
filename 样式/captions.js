@@ -9,17 +9,18 @@ function captionSubject(caption) {
   if (table) return {subject: table, kind: 'Table'}
   const figure = caption.closest('figure')
   if (figure) {
+    // A supplied timetable or data grid may be stored as an image.
+    if (figure.dataset.wikiMediaKind === 'table') return {subject: figure, kind: 'Table'}
     const tables = figure.querySelectorAll('table')
     const outsideMedia = [...figure.querySelectorAll('img,picture,svg,canvas,video,iframe')]
       .some(media => !media.closest('table'))
     if (tables.length === 1 && !outsideMedia) {
       return {subject: tables[0], kind: 'Table'}
     }
-    if (!tables.length && figure.querySelector('img,picture,svg,canvas')) return {subject: figure, kind: 'Figure'}
+    if (!tables.length && figure.querySelector('img,picture,svg,canvas,[role="img"]')) return {subject: figure, kind: 'Figure'}
     return {subject: figure}
   }
-  // Existing standalone table labels precede their scroll container. Structured
-  // card tables (such as SWOT) retain their explicit Table label as well.
+  // Existing standalone table labels precede their actual table container.
   const next = caption.nextElementSibling
   if (next?.matches('table,.wiki-table-scroll,.table-scroll,.table-wrap')) {
     const table = next.matches('table') ? next : next.querySelector('table')

@@ -1,0 +1,3093 @@
+{
+  "date": "2026-10-18",
+  "sourceDocument": {
+    "source": "sources/10.18湿实验建议.docx",
+    "bytes": 839685,
+    "sha256": "6eae22bedf65e04bbde71d9de13d773503aac9f1806d718a32b0769c0bbb69fa"
+  },
+  "captionCount": 380,
+  "captionKinds": {
+    "Figure": 301,
+    "Table": 79
+  },
+  "sourceIntegrity": {
+    "pages": 18,
+    "nativeTables": 133,
+    "preservedAnchors": 1672,
+    "preservedMediaSources": 657,
+    "originalHashesVerified": 141,
+    "issues": []
+  },
+  "captionAudit": [
+    {
+      "file": "Eagagement/education.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. HEART-Edu Loop connects health protection, scientific exploration, and inclusive participation through audience-responsive education"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Document-supplied COVID-19 confirmed-case trends, 2023–2024"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Document-supplied COVID-19 death trends, 2023–2024"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Hospital outreach and health-information materials3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Health conversations in the prenatal waiting area3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. Postpartum-care mini-class and participant activities3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Learning hand hygiene through classroom participation3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "page",
+          "text": "Figure 8. Children's clay creations and workshop group2 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 9,
+          "scope": "page",
+          "text": "Figure 9. Exploring the ideas behind biological building blocks3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 10,
+          "scope": "page",
+          "text": "Figure 10. One-to-one health conversations with older adults3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 11,
+          "scope": "page",
+          "text": "Figure 11. Practical health communication in the care setting3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 12,
+          "scope": "page",
+          "text": "Figure 12. Student posters become a starting point for discussion3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 13,
+          "scope": "page",
+          "text": "Figure 13. Joining the Respiration Lab online class3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 14,
+          "scope": "page",
+          "text": "Figure 14. Classroom demonstration, student participation, and learning materials3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 15,
+          "scope": "page",
+          "text": "Figure 15. Students tell health stories through the camera3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 16,
+          "scope": "page",
+          "text": "Figure 16. Turning detection ideas into student designs3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 17,
+          "scope": "page",
+          "text": "Figure 17. Synthetic-biology presentations and classroom quiz3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 18,
+          "scope": "page",
+          "text": "Figure 18. Career seminar, participant notes, and student sharing3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 19,
+          "scope": "page",
+          "text": "Figure 19. National homecoming outreach: classroom presentations and student participation across partner high schools14 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 20,
+          "scope": "page",
+          "text": "Figure 20. Outreach conversations, visitors, and the JLU-SPH team at the fair3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 21,
+          "scope": "page",
+          "text": "Figure 21. Bringing science conversations to the residence hall3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 22,
+          "scope": "page",
+          "text": "Figure 22. Campus running, the JLU-SPH team, and the event gathering3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 23,
+          "scope": "page",
+          "text": "Figure 23. Festival outreach conversations and illustrated learning materials3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 24,
+          "scope": "page",
+          "text": "Figure 24. Public participation in detection-choice voting3 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 25,
+          "scope": "page",
+          "text": "Figure 25. Gene Wars · story, gameplay, and achievement screens3 images · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 26,
+          "scope": "page",
+          "text": "Figure 26. Shared making and conversation through lacquer-fan outreach4 photos · Click to enlarge"
+        },
+        {
+          "kind": "Figure",
+          "number": 27,
+          "scope": "page",
+          "text": "Figure 27. Inclusive outdoor learning and shared exploration3 photos · Click to enlarge"
+        }
+      ]
+    },
+    {
+      "file": "Eagagement/entrepreneurship.html",
+      "captions": [
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Byegerm Key Information at a Glance"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "page",
+          "text": "Table 2. Byegerm UVP dismantling"
+        },
+        {
+          "kind": "Table",
+          "number": 3,
+          "scope": "page",
+          "text": "Table 3. Summary of customer findings with IHP evidence"
+        },
+        {
+          "kind": "Table",
+          "number": 4,
+          "scope": "page",
+          "text": "Table 4. POCT market size stratification (multi-source cross-check) associated with respiratory pathogen testing"
+        },
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. POCT market size related to respiratory pathogen detection (multi-source cross-checking; column indicated as corresponding base year/project year)"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Byegerm TAM / SAM / SOM market funnel"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Byegerm geographical market expansion ladder (incremental geographical coverage, distinct from TAM/SAM/SOM values funnel at the same time point)"
+        },
+        {
+          "kind": "Table",
+          "number": 5,
+          "scope": "page",
+          "text": "Table 5. MVP Key assumptions and validation indicators"
+        },
+        {
+          "kind": "Table",
+          "number": 6,
+          "scope": "page",
+          "text": "Table 6. Bygerm competition analysis (direct/indirect/potential competitors)"
+        },
+        {
+          "kind": "Table",
+          "number": 7,
+          "scope": "page",
+          "text": "Table 7. Five-dimensional pairing matrix (for the operational organization of Bygerm)"
+        },
+        {
+          "kind": "Table",
+          "number": 8,
+          "scope": "page",
+          "text": "Table 8. TOWS Strategic portfolio matrix"
+        },
+        {
+          "kind": "Table",
+          "number": 9,
+          "scope": "page",
+          "text": "Table 9. Four categories of TOWS strategy priorities and options"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Byegerm three-phase development road map Gantt (2026-2032, including the timing of key tasks and milestones financing)"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Byegerm three-phase roadmap from validation to deployment"
+        },
+        {
+          "kind": "Table",
+          "number": 10,
+          "scope": "page",
+          "text": "Table 10. Byegerm resource requirements, category VI"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. Risk heat map showing probability and impact across seven risk categories"
+        },
+        {
+          "kind": "Table",
+          "number": 11,
+          "scope": "page",
+          "text": "Table 11. Risk heat matrix (P = probability of occurrence, I = degree of impact)"
+        },
+        {
+          "kind": "Table",
+          "number": 12,
+          "scope": "page",
+          "text": "Table 12. Status, questioning and decentralization schedule of triple concentration"
+        },
+        {
+          "kind": "Table",
+          "number": 13,
+          "scope": "page",
+          "text": "Table 13. Seven categories of core competencies required for the commercialization of Bygerm"
+        },
+        {
+          "kind": "Table",
+          "number": 14,
+          "scope": "page",
+          "text": "Table 14. Team capacity gaps and risk management resources"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Byegerm Five Rings stakeholder model and the four flows between them"
+        },
+        {
+          "kind": "Table",
+          "number": 15,
+          "scope": "page",
+          "text": "Table 15. Byegerm Five Rings Stakeholders Model"
+        },
+        {
+          "kind": "Table",
+          "number": 16,
+          "scope": "page",
+          "text": "Table 16. Year-by-year reconciliation of financing to accounts and cash balances (base scenario)"
+        },
+        {
+          "kind": "Table",
+          "number": 17,
+          "scope": "page",
+          "text": "Table 17. Bygerm Six income streams and corresponding Maori structures"
+        },
+        {
+          "kind": "Table",
+          "number": 18,
+          "scope": "page",
+          "text": "Table 18. Operating cost structure (compacting § 5.6.1 for parameter summary)"
+        },
+        {
+          "kind": "Table",
+          "number": 19,
+          "scope": "page",
+          "text": "Table 19. Single-card terminal price sensitivity and price red line (BOM fixed to $30)"
+        },
+        {
+          "kind": "Table",
+          "number": 20,
+          "scope": "page",
+          "text": "Table 20. Economic measures in units (LTV / CAC)"
+        },
+        {
+          "kind": "Table",
+          "number": 21,
+          "scope": "page",
+          "text": "Table 21. Summary of input parameters for the three scenarios (all projected inputs for this section)"
+        },
+        {
+          "kind": "Table",
+          "number": 22,
+          "scope": "page",
+          "text": "Table 22. Income projections and structural evolution of the baseline scenario"
+        },
+        {
+          "kind": "Table",
+          "number": 23,
+          "scope": "page",
+          "text": "Table 23. Three scenarios, income versus profit"
+        },
+        {
+          "kind": "Table",
+          "number": 24,
+          "scope": "page",
+          "text": "Table 24. Five-year course of cost rates for the period"
+        },
+        {
+          "kind": "Table",
+          "number": 25,
+          "scope": "page",
+          "text": "Table 25. Projections of the base scenario profit statement"
+        },
+        {
+          "kind": "Table",
+          "number": 26,
+          "scope": "page",
+          "text": "Table 26. Simplified balance sheet projections for the baseline scenario (passed balance checks)"
+        },
+        {
+          "kind": "Table",
+          "number": 27,
+          "scope": "page",
+          "text": "Table 27. Summary of cash flow statement for the baseline scenario"
+        },
+        {
+          "kind": "Table",
+          "number": 28,
+          "scope": "page",
+          "text": "Table 28. Number of installed stations required to balance the book gains and losses (70 per cent of gross fuel consumption)"
+        },
+        {
+          "kind": "Table",
+          "number": 29,
+          "scope": "page",
+          "text": "Table 29. Sensitivity in the number of days of turnover of accounts receivable (base scenario)"
+        },
+        {
+          "kind": "Table",
+          "number": 30,
+          "scope": "page",
+          "text": "Table 30. Analysis of net present value (three scenarios x five tranche discount rate)"
+        },
+        {
+          "kind": "Table",
+          "number": 31,
+          "scope": "page",
+          "text": "Table 31. Remuneration rates at the project level"
+        },
+        {
+          "kind": "Table",
+          "number": 32,
+          "scope": "page",
+          "text": "Table 32. Investment returns in turn (three scenarios)"
+        },
+        {
+          "kind": "Table",
+          "number": 33,
+          "scope": "page",
+          "text": "Table 33. 2026. Portfolios of business evidence (samples n = 64) are received in sections of A shares"
+        },
+        {
+          "kind": "Table",
+          "number": 34,
+          "scope": "page",
+          "text": "Table 34. Panel selection decision matrix (projected values x empirical threshold)"
+        },
+        {
+          "kind": "Table",
+          "number": 35,
+          "scope": "page",
+          "text": "Table 35. Five exit paths and their trigger conditions"
+        },
+        {
+          "kind": "Table",
+          "number": 36,
+          "scope": "page",
+          "text": "Table 36. Risk capital exit time nodes"
+        },
+        {
+          "kind": "Table",
+          "number": 37,
+          "scope": "page",
+          "text": "Table 37. Data validation level three"
+        },
+        {
+          "kind": "Table",
+          "number": 38,
+          "scope": "page",
+          "text": "Table 38. Authoritative Sources"
+        }
+      ]
+    },
+    {
+      "file": "homepage/index.html",
+      "captions": []
+    },
+    {
+      "file": "Eagagement/iHP.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. From people’s needs to a better ByeGerm: the Human Practices feedback loop"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Five questions that shaped the Human Practices journey"
+        },
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Human Practices feedback and Dry Lab improvements"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "page",
+          "text": "Table 2. Human Practices feedback and Wet Lab improvements"
+        },
+        {
+          "kind": "Table",
+          "number": 3,
+          "scope": "page",
+          "text": "Table 3. Human Practices feedback and Software improvements"
+        },
+        {
+          "kind": "Table",
+          "number": 4,
+          "scope": "page",
+          "text": "Table 4. Human Practices feedback and Hardware improvements"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Activity types used throughout the Human Practices journey"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Stakeholder relationships across three circles"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Power–interest matrix of the project stakeholders"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. C.A.R.E.S. Ethical Evaluation Framework"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Listening to the Public"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "page",
+          "text": "Figure 8. Listening to the Public — questionnaire format"
+        },
+        {
+          "kind": "Figure",
+          "number": 9,
+          "scope": "page",
+          "text": "Figure 9. Listening to the Public"
+        },
+        {
+          "kind": "Figure",
+          "number": 10,
+          "scope": "page",
+          "text": "Figure 10. Listening to the Public — participant responses"
+        },
+        {
+          "kind": "Figure",
+          "number": 11,
+          "scope": "page",
+          "text": "Figure 11. Public concern about respiratory infections across age groups"
+        },
+        {
+          "kind": "Figure",
+          "number": 12,
+          "scope": "page",
+          "text": "Figure 12. Perceived vulnerability of different age groups to severe respiratory infections"
+        },
+        {
+          "kind": "Figure",
+          "number": 13,
+          "scope": "page",
+          "text": "Figure 13. Perceived value of portable testing for young children and older family members"
+        },
+        {
+          "kind": "Figure",
+          "number": 14,
+          "scope": "page",
+          "text": "Figure 14. Random Interviews at the Third Hospital of Harbin Medical University"
+        },
+        {
+          "kind": "Figure",
+          "number": 15,
+          "scope": "page",
+          "text": "Figure 15. Random Interviews at the Third Hospital of Harbin Medical University"
+        },
+        {
+          "kind": "Figure",
+          "number": 16,
+          "scope": "page",
+          "text": "Figure 16. Random Interviews at the Third Hospital of Harbin Medical University"
+        },
+        {
+          "kind": "Figure",
+          "number": 17,
+          "scope": "page",
+          "text": "Figure 17. Dialogue with Nursing Home Care Workers and Residents"
+        },
+        {
+          "kind": "Figure",
+          "number": 18,
+          "scope": "page",
+          "text": "Figure 18. Dialogue with Nursing Home Care Workers and Residents"
+        },
+        {
+          "kind": "Figure",
+          "number": 19,
+          "scope": "page",
+          "text": "Figure 19. Dialogue with Nursing Home Care Workers and Residents"
+        },
+        {
+          "kind": "Figure",
+          "number": 20,
+          "scope": "page",
+          "text": "Figure 20. Dialogue with Nursing Home Care Workers and Residents"
+        },
+        {
+          "kind": "Figure",
+          "number": 21,
+          "scope": "page",
+          "text": "Figure 21. Dialogue with Kindergarten Teachers and Children"
+        },
+        {
+          "kind": "Figure",
+          "number": 22,
+          "scope": "page",
+          "text": "Figure 22. Dialogue with Kindergarten Teachers and Children"
+        },
+        {
+          "kind": "Figure",
+          "number": 23,
+          "scope": "page",
+          "text": "Figure 23. From community voices to practical respiratory pathogen screening"
+        },
+        {
+          "kind": "Figure",
+          "number": 24,
+          "scope": "page",
+          "text": "Figure 24. Dialogue with Professor Li Juan, Former Dean of the School of Public Health, Jilin University"
+        },
+        {
+          "kind": "Figure",
+          "number": 25,
+          "scope": "page",
+          "text": "Figure 25. Roundtable with Public Health and Disease Control Experts"
+        },
+        {
+          "kind": "Figure",
+          "number": 26,
+          "scope": "page",
+          "text": "Figure 26. Roundtable with Public Health and Disease Control Experts"
+        },
+        {
+          "kind": "Figure",
+          "number": 27,
+          "scope": "page",
+          "text": "Figure 27. Deputy Dean Changgui Kou of the School of Public Health, Jilin University"
+        },
+        {
+          "kind": "Figure",
+          "number": 28,
+          "scope": "page",
+          "text": "Figure 28. Respiratory Medicine: Dr. Junyao Li"
+        },
+        {
+          "kind": "Figure",
+          "number": 29,
+          "scope": "page",
+          "text": "Figure 29. Laboratory Medicine: Dr. Huimin Li"
+        },
+        {
+          "kind": "Figure",
+          "number": 30,
+          "scope": "page",
+          "text": "Figure 30. Infectious Diseases: Dr. Shangwei Ji"
+        },
+        {
+          "kind": "Figure",
+          "number": 31,
+          "scope": "page",
+          "text": "Figure 31. Pediatrics: Dr. Xin Tian"
+        },
+        {
+          "kind": "Figure",
+          "number": 32,
+          "scope": "page",
+          "text": "Figure 32. Geriatric Medicine: Dr. Lihong Huang"
+        },
+        {
+          "kind": "Figure",
+          "number": 33,
+          "scope": "page",
+          "text": "Figure 33. Interview with Professor X. Chris Le of the University of Alberta"
+        },
+        {
+          "kind": "Figure",
+          "number": 34,
+          "scope": "page",
+          "text": "Figure 34. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology"
+        },
+        {
+          "kind": "Figure",
+          "number": 35,
+          "scope": "page",
+          "text": "Figure 35. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology"
+        },
+        {
+          "kind": "Figure",
+          "number": 36,
+          "scope": "page",
+          "text": "Figure 36. Discussion with Professor Xing-Fang Li at the conference"
+        },
+        {
+          "kind": "Figure",
+          "number": 37,
+          "scope": "page",
+          "text": "Figure 37. Interview with Professor Xing-Fang Li"
+        },
+        {
+          "kind": "Figure",
+          "number": 38,
+          "scope": "page",
+          "text": "Figure 38. Interview with Professor Tsan-Yuk Lam of the University of Hong Kong"
+        },
+        {
+          "kind": "Figure",
+          "number": 39,
+          "scope": "page",
+          "text": "Figure 39. Dry-Lab Workflow for Target Optimization"
+        },
+        {
+          "kind": "Figure",
+          "number": 40,
+          "scope": "page",
+          "text": "Figure 40. Interview with Professor Zheng Hu of the Harbin Institute of Technology"
+        },
+        {
+          "kind": "Figure",
+          "number": 41,
+          "scope": "page",
+          "text": "Figure 41. Interview with Professor Yingtao Zhang of the Harbin Institute of Technology"
+        },
+        {
+          "kind": "Figure",
+          "number": 42,
+          "scope": "page",
+          "text": "Figure 42. First-generation ByeGerm instrument: external dimensions and internal modules"
+        },
+        {
+          "kind": "Figure",
+          "number": 43,
+          "scope": "page",
+          "text": "Figure 43. Collecting Feedback from Nursing Homes and Kindergartens"
+        },
+        {
+          "kind": "Figure",
+          "number": 44,
+          "scope": "page",
+          "text": "Figure 44. Collecting Feedback from Nursing Homes and Kindergartens"
+        },
+        {
+          "kind": "Figure",
+          "number": 45,
+          "scope": "page",
+          "text": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens"
+        },
+        {
+          "kind": "Figure",
+          "number": 46,
+          "scope": "page",
+          "text": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens"
+        },
+        {
+          "kind": "Figure",
+          "number": 47,
+          "scope": "page",
+          "text": "Figure 47. Interview with Professor Ying Mou of Zhejiang University"
+        },
+        {
+          "kind": "Figure",
+          "number": 48,
+          "scope": "page",
+          "text": "Figure 48. Second-generation ByeGerm instrument: external design and multichannel module architecture"
+        },
+        {
+          "kind": "Figure",
+          "number": 49,
+          "scope": "page",
+          "text": "Figure 49. The “Auditory and Tactile” Blind-Testing Box for Older Adults"
+        },
+        {
+          "kind": "Figure",
+          "number": 50,
+          "scope": "page",
+          "text": "Figure 50. The “Auditory and Tactile” Blind-Testing Box for Older Adults"
+        },
+        {
+          "kind": "Figure",
+          "number": 51,
+          "scope": "page",
+          "text": "Figure 51. The “Auditory and Tactile” Blind-Testing Box for Older Adults"
+        },
+        {
+          "kind": "Figure",
+          "number": 52,
+          "scope": "page",
+          "text": "Figure 52. The “Monster Capture” Sticker Wall for Children"
+        },
+        {
+          "kind": "Figure",
+          "number": 53,
+          "scope": "page",
+          "text": "Figure 53. The “Monster Capture” Sticker Wall for Children"
+        },
+        {
+          "kind": "Figure",
+          "number": 54,
+          "scope": "page",
+          "text": "Figure 54. Children’s feedback on the ByeGerm screening experience"
+        },
+        {
+          "kind": "Figure",
+          "number": 55,
+          "scope": "page",
+          "text": "Figure 55. The Retrospective Empathy Survey for Patients"
+        },
+        {
+          "kind": "Figure",
+          "number": 56,
+          "scope": "page",
+          "text": "Figure 56. Responsible adoption and Human Practices-driven entrepreneurial translation"
+        },
+        {
+          "kind": "Figure",
+          "number": 57,
+          "scope": "page",
+          "text": "Figure 57. Interview with Department Head Xie Linshen"
+        },
+        {
+          "kind": "Figure",
+          "number": 58,
+          "scope": "page",
+          "text": "Figure 58. Meeting with Zhang Jinming of Guangzhou Zhikang Medical"
+        },
+        {
+          "kind": "Figure",
+          "number": 59,
+          "scope": "page",
+          "text": "Figure 59. Age-Adapted Education — dialogue with an older adult"
+        },
+        {
+          "kind": "Figure",
+          "number": 60,
+          "scope": "page",
+          "text": "Figure 60. Children — reducing unfamiliarity and fear of the device"
+        },
+        {
+          "kind": "Figure",
+          "number": 61,
+          "scope": "page",
+          "text": "Figure 61. Screening acceptance among older adults and children before and after education"
+        },
+        {
+          "kind": "Figure",
+          "number": 62,
+          "scope": "page",
+          "text": "Figure 62. Respiratory Virus Testing Strategy Cards"
+        },
+        {
+          "kind": "Figure",
+          "number": 63,
+          "scope": "page",
+          "text": "Figure 63. Device model and interactive experience"
+        },
+        {
+          "kind": "Figure",
+          "number": 64,
+          "scope": "page",
+          "text": "Figure 64. Public health education in a county-level classroom"
+        },
+        {
+          "kind": "Figure",
+          "number": 65,
+          "scope": "page",
+          "text": "Figure 65. ByeGerm framework for responsible translation"
+        },
+        {
+          "kind": "Figure",
+          "number": 66,
+          "scope": "page",
+          "text": "Figure 66. Priority settings and criteria for responsible testing"
+        },
+        {
+          "kind": "Table",
+          "number": 5,
+          "scope": "page",
+          "text": "Table 5. Stakeholder needs, feedback, and corresponding system responses"
+        },
+        {
+          "kind": "Figure",
+          "number": 67,
+          "scope": "page",
+          "text": "Figure 67. From assay validation to a minimum viable testing and service system"
+        },
+        {
+          "kind": "Figure",
+          "number": 68,
+          "scope": "page",
+          "text": "Figure 68. Validation stages and evidence boundaries"
+        },
+        {
+          "kind": "Figure",
+          "number": 69,
+          "scope": "page",
+          "text": "Figure 69. A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital"
+        },
+        {
+          "kind": "Figure",
+          "number": 70,
+          "scope": "page",
+          "text": "Figure 70. Evidence-gated translation roadmap with explicit rollback conditions"
+        },
+        {
+          "kind": "Figure",
+          "number": 71,
+          "scope": "page",
+          "text": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children"
+        },
+        {
+          "kind": "Figure",
+          "number": 72,
+          "scope": "page",
+          "text": "Figure 72. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities"
+        },
+        {
+          "kind": "Figure",
+          "number": 73,
+          "scope": "page",
+          "text": "Figure 73. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities"
+        },
+        {
+          "kind": "Figure",
+          "number": 74,
+          "scope": "page",
+          "text": "Figure 74. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities"
+        },
+        {
+          "kind": "Figure",
+          "number": 75,
+          "scope": "page",
+          "text": "Figure 75. Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults"
+        },
+        {
+          "kind": "Figure",
+          "number": 76,
+          "scope": "page",
+          "text": "Figure 76. Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments"
+        },
+        {
+          "kind": "Figure",
+          "number": 77,
+          "scope": "page",
+          "text": "Figure 77. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World"
+        },
+        {
+          "kind": "Figure",
+          "number": 78,
+          "scope": "page",
+          "text": "Figure 78. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World"
+        },
+        {
+          "kind": "Figure",
+          "number": 79,
+          "scope": "page",
+          "text": "Figure 79. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health"
+        },
+        {
+          "kind": "Figure",
+          "number": 80,
+          "scope": "page",
+          "text": "Figure 80. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health"
+        },
+        {
+          "kind": "Figure",
+          "number": 81,
+          "scope": "page",
+          "text": "Figure 81. Professor Li Juan, Former Dean of the School of Public Health, Jilin University"
+        },
+        {
+          "kind": "Figure",
+          "number": 82,
+          "scope": "page",
+          "text": "Figure 82. Professor Xingfang Li"
+        },
+        {
+          "kind": "Figure",
+          "number": 83,
+          "scope": "page",
+          "text": "Figure 83. Professor Ying Mou"
+        },
+        {
+          "kind": "Figure",
+          "number": 84,
+          "scope": "page",
+          "text": "Figure 84. JLU-SPH project presentation at the US-China iGEM Human Practices Summit"
+        },
+        {
+          "kind": "Figure",
+          "number": 85,
+          "scope": "page",
+          "text": "Figure 85. CCiC"
+        },
+        {
+          "kind": "Figure",
+          "number": 86,
+          "scope": "page",
+          "text": "Figure 86. CCiC"
+        },
+        {
+          "kind": "Figure",
+          "number": 87,
+          "scope": "page",
+          "text": "Figure 87. CCiC"
+        },
+        {
+          "kind": "Figure",
+          "number": 88,
+          "scope": "page",
+          "text": "Figure 88. CCiC"
+        },
+        {
+          "kind": "Figure",
+          "number": 89,
+          "scope": "page",
+          "text": "Figure 89. APiC"
+        },
+        {
+          "kind": "Figure",
+          "number": 90,
+          "scope": "page",
+          "text": "Figure 90. APiC"
+        },
+        {
+          "kind": "Figure",
+          "number": 91,
+          "scope": "page",
+          "text": "Figure 91. BioAI Agent Software Exchange & Summer Dry Lab Camp"
+        },
+        {
+          "kind": "Figure",
+          "number": 92,
+          "scope": "page",
+          "text": "Figure 92. BioAI Agent software demonstration during the inter-team online exchange"
+        },
+        {
+          "kind": "Table",
+          "number": 6,
+          "scope": "page",
+          "text": "Table 6. Online course timetable for the Summer Dry Lab Camp"
+        },
+        {
+          "kind": "Figure",
+          "number": 93,
+          "scope": "page",
+          "text": "Figure 93. BioAI Agent Software Exchange & Summer Dry Lab Camp"
+        },
+        {
+          "kind": "Figure",
+          "number": 94,
+          "scope": "page",
+          "text": "Figure 94. BioAI Agent Software Exchange & Summer Dry Lab Camp"
+        },
+        {
+          "kind": "Figure",
+          "number": 95,
+          "scope": "page",
+          "text": "Figure 95. Dialogue with ZJUT-China at the Bio-manufacturing Expo"
+        },
+        {
+          "kind": "Figure",
+          "number": 96,
+          "scope": "page",
+          "text": "Figure 96. Dialogue with ZJUT-China at the Bio-manufacturing Expo"
+        },
+        {
+          "kind": "Figure",
+          "number": 97,
+          "scope": "page",
+          "text": "Figure 97. Dialogue with ZJUT-China at the Bio-manufacturing Expo"
+        },
+        {
+          "kind": "Figure",
+          "number": 98,
+          "scope": "page",
+          "text": "Figure 98. Introduction and gameplay instructions for the synthetic biology adaptation of Plants vs. Zombies"
+        },
+        {
+          "kind": "Figure",
+          "number": 99,
+          "scope": "page",
+          "text": "Figure 99. Social Inclusion (Hike with Love · Embrace the Future)"
+        },
+        {
+          "kind": "Figure",
+          "number": 100,
+          "scope": "page",
+          "text": "Figure 100. Social Inclusion (Hike with Love · Embrace the Future)"
+        }
+      ]
+    },
+    {
+      "file": "Instrument/hardware.html",
+      "captions": [
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Technical specifications of first- and second-generation ByeGerm instruments"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "page",
+          "text": "Table 2. Hardware Requirements of the Detection System"
+        },
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Schematic of the ByeGerm 1.0 detection and readout platform — A: Detection workflow; B: Schematic of the RPA-CRISPR/Cas12a reaction used in the detection system;C: Instrument, mobile client, and control unit; D: Workflow for reaction tube localization and fluorescence image analysis"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Structural schematic of ByeGerm 1.0, showing the five functional modules and their mounting positions"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Photograph of the metal reaction tube support block, cooling fan, and optical filter components"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Camera acquisition interface and fluorescence images of reaction tubes in ByeGerm 1.0"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Comparison of fluorescence images acquired at five imaging distances. The selected distance of 50 mm is highlighted in red"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. Photograph of the internal layout of ByeGerm 1.0 — Showing Boards, wiring harnesses, and support structures"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Raspberry Pi single-board computer and its interface layout"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "page",
+          "text": "Figure 8. Photograph of the reaction area assembly in ByeGerm 1.0"
+        },
+        {
+          "kind": "Figure",
+          "number": 9,
+          "scope": "page",
+          "text": "Figure 9. Schematic of the image analysis workflow"
+        },
+        {
+          "kind": "Figure",
+          "number": 10,
+          "scope": "page",
+          "text": "Figure 10. Overview of the Fluorescent detection mobile app"
+        },
+        {
+          "kind": "Figure",
+          "number": 11,
+          "scope": "page",
+          "text": "Figure 11. Example of ByeGerm 1.0 in use, showing reaction tube preparation and loading, device operation, and viewing results on a mobile device"
+        },
+        {
+          "kind": "Figure",
+          "number": 12,
+          "scope": "page",
+          "text": "Figure 12. Exploded structural view of ByeGerm 2.0, showing the assembly relationships among the enclosure, rotating reaction chamber, optical components, and internal modules"
+        },
+        {
+          "kind": "Figure",
+          "number": 13,
+          "scope": "page",
+          "text": "Figure 13. Exterior and dimensional views of ByeGerm 2.0, showing the enclosure, front and rear panels, and top and bottom structures"
+        },
+        {
+          "kind": "Figure",
+          "number": 14,
+          "scope": "page",
+          "text": "Figure 14. Structural view of the front lysis area in ByeGerm 2.0, showing the two tube positions in the metal support block"
+        },
+        {
+          "kind": "Figure",
+          "number": 15,
+          "scope": "page",
+          "text": "Figure 15. Structural view of the main reaction chamber in ByeGerm 2.0, showing the top loading opening and internal arrangement for accommodating reaction tubes"
+        },
+        {
+          "kind": "Figure",
+          "number": 16,
+          "scope": "page",
+          "text": "Figure 16. Connection diagram of the control and power supply systems in ByeGerm 2.0, showing the relationships among the control, rotation, power management, and battery units"
+        },
+        {
+          "kind": "Figure",
+          "number": 17,
+          "scope": "page",
+          "text": "Figure 17. Schematic of the processing workflow for the multicolor fluorescence image classification model"
+        },
+        {
+          "kind": "Figure",
+          "number": 18,
+          "scope": "page",
+          "text": "Figure 18. The coordinated hardware and software architecture of ByeGerm 2.0 includes the mobile app, a Windows training host, an STM32 AI vision main control board, an RGB LED array, an STM32 temperature control main control board, a power management module, and a camera module. Data exchange and control are implemented through Wi-Fi and hardware interfaces"
+        },
+        {
+          "kind": "Figure",
+          "number": 19,
+          "scope": "page",
+          "text": "Figure 19. Operation proceeds through connection, loading, running the device, and viewing results"
+        },
+        {
+          "kind": "Figure",
+          "number": 20,
+          "scope": "page",
+          "text": "Figure 20. Records of data acquisition and result display using ByeGerm 2.0 on four tested mobile operating systems"
+        },
+        {
+          "kind": "Figure",
+          "number": 21,
+          "scope": "page",
+          "text": "Figure 21. Sensitivity, specificity, and five-tube detection results. A–E: HI, BP, SPN, RSV, and hMPV, respectively. Left: sensitivity tests with extracts of the corresponding pathogen. Right: specificity tests with extracts of other pathogens. In each image, the first two tubes are positive and negative controls, followed by three test tubes. F: the left and middle images show five alternating positive/negative control pairs in total; the right image shows results for HI, BP, SPN, RSV, and hMPV test tubes, in that order"
+        },
+        {
+          "kind": "Table",
+          "number": 3,
+          "scope": "page",
+          "text": "Table 3. ByeGerm 1.0 Component and Fabrication Cost Breakdown"
+        },
+        {
+          "kind": "Table",
+          "number": 4,
+          "scope": "page",
+          "text": "Table 4. ByeGerm 1.0 Total Device Cost Summary"
+        },
+        {
+          "kind": "Table",
+          "number": 5,
+          "scope": "page",
+          "text": "Table 5. ByeGerm 2.0 Component and Fabrication Cost Breakdown"
+        },
+        {
+          "kind": "Table",
+          "number": 6,
+          "scope": "page",
+          "text": "Table 6. ByeGerm 2.0 Total Device Cost Summary"
+        },
+        {
+          "kind": "Figure",
+          "number": 22,
+          "scope": "page",
+          "text": "Figure 22. Comparison of the prototype production budgets for ByeGerm 1.0 and ByeGerm 2.0 with a reference procurement price for a qPCR instrument"
+        }
+      ]
+    },
+    {
+      "file": "Instrument/model.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "measurement",
+          "text": "Figure 1. Overall workflow of the study"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "measurement",
+          "text": "Figure 2. Schematic of the machine-learning model"
+        },
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "measurement",
+          "text": "Table 1. RSV top 10 candidate combinations"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "measurement",
+          "text": "Figure 3. Schematic of recombinase-primer complex synthesis"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "measurement",
+          "text": "Figure 4. Schematic of RNA reverse transcription"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "measurement",
+          "text": "Figure 5. Schematic of recombinase polymerase amplification"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "measurement",
+          "text": "Figure 6. Schematic of CRISPR/Cas12a assembly and cleavage"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "measurement",
+          "text": "Table 2. Nomenclature"
+        },
+        {
+          "kind": "Table",
+          "number": 3,
+          "scope": "measurement",
+          "text": "Table 3. Rate constants"
+        },
+        {
+          "kind": "Table",
+          "number": 4,
+          "scope": "measurement",
+          "text": "Table 4. Initial conditions"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "measurement",
+          "text": "Figure 7. System dynamics simulation results"
+        },
+        {
+          "kind": "Table",
+          "number": 5,
+          "scope": "measurement",
+          "text": "Table 5. Global coarse search"
+        },
+        {
+          "kind": "Table",
+          "number": 6,
+          "scope": "measurement",
+          "text": "Table 6. Fine local search"
+        },
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "hardware",
+          "text": "Figure 1. Examples of manual annotations of reaction tube images across different concentration gradients"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "hardware",
+          "text": "Figure 2. Workflow of data annotation, model training, and on-device testing for reaction tube localization"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "hardware",
+          "text": "Figure 3. Validation bounding box regression loss and normalized confusion matrix"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "hardware",
+          "text": "Figure 4. Training loss curves and changes in detection performance metrics during initial model training"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "hardware",
+          "text": "Figure 5. Example of reaction region localization and fluorescence intensity measurement using the initial model"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "hardware",
+          "text": "Figure 6. Example of reaction region localization following the second round of model training"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "hardware",
+          "text": "Figure 7. Relationship between F1-score and confidence threshold, and distribution of annotated bounding box dimensions"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "hardware",
+          "text": "Figure 8. Example of on-device reaction region localization testing"
+        },
+        {
+          "kind": "Figure",
+          "number": 9,
+          "scope": "hardware",
+          "text": "Figure 9. Comparison of fluorescence signal extraction under different inRange threshold settings"
+        },
+        {
+          "kind": "Figure",
+          "number": 10,
+          "scope": "hardware",
+          "text": "Figure 10. ROI fluorescence readings and examples of N and P1–P5 classification"
+        },
+        {
+          "kind": "Figure",
+          "number": 11,
+          "scope": "hardware",
+          "text": "Figure 11. Distribution of annotated bounding box center positions and dimensions"
+        },
+        {
+          "kind": "Figure",
+          "number": 12,
+          "scope": "hardware",
+          "text": "Figure 12. Example of manual annotation of multicolor fluorescence reaction tube images"
+        },
+        {
+          "kind": "Figure",
+          "number": 13,
+          "scope": "hardware",
+          "text": "Figure 13. Changes in training and validation metrics of the multicolor fluorescence detection model"
+        },
+        {
+          "kind": "Figure",
+          "number": 14,
+          "scope": "hardware",
+          "text": "Figure 14. Example of automatic model annotation of multicolor fluorescence reaction tube images"
+        },
+        {
+          "kind": "Figure",
+          "number": 15,
+          "scope": "hardware",
+          "text": "Figure 15. Examples of multicolor fluorescence reaction tube detection in the validation set"
+        },
+        {
+          "kind": "Figure",
+          "number": 16,
+          "scope": "hardware",
+          "text": "Figure 16. Examples of multicolor fluorescence reaction tube detection in the blind test dataset"
+        },
+        {
+          "kind": "Figure",
+          "number": 17,
+          "scope": "hardware",
+          "text": "Figure 17. Raw and normalized confusion matrices for multicolor fluorescence reaction tube detection"
+        },
+        {
+          "kind": "Figure",
+          "number": 18,
+          "scope": "hardware",
+          "text": "Figure 18. Relationships between F1 score, recall, and confidence threshold"
+        },
+        {
+          "kind": "Figure",
+          "number": 19,
+          "scope": "hardware",
+          "text": "Figure 19. Number of annotated instances per class and distributions of bounding box positions and dimensions"
+        }
+      ]
+    },
+    {
+      "file": "Instrument/software.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Reaction display: temperature and two fluorescence curves. This supplied screen illustrates the monitoring interface"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Result display: five tube labels and the image returned by the AI Box"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Application Design Architecture"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Supplied acquisition record A: 43.1 °C and two curve series"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Supplied acquisition record B: 43.0 °C and two curve series"
+        }
+      ]
+    },
+    {
+      "file": "Project/contribution.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Schematic illustration of the combined RPA-CRISPR/Cas12a system"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Closed-loop iterative workflow for detection of five respiratory pathogens based on the DBTL cycle"
+        },
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Settings of the ranking procedure"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "page",
+          "text": "Table 2. Fine-search concentrations and the performance formulation"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. ByeGerm 1.0 exploded view and main modules"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. ByeGerm 2.0 exploded view and main modules"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. C.A.R.E.S. Ethical Evaluation Framework"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. ByeGerm’s five-stage iterative pathway"
+        }
+      ]
+    },
+    {
+      "file": "Project/description.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Schematic diagram of the RPA-CRISPR principle. Steps ① and ② show the process of RPA isothermal amplification, while steps ③ and ④ show CRISPR/Cas12a-specific trans-cleavage"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Logical diagram of the closed-loop iterative workflow for the detection project targeting five respiratory pathogens based on the DBTL cycle"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Exterior of the second-generation ByeGerm instrument with both lids closed. Design rendering"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Exploded view of the first-generation instrument, showing the optical, thermal, computing, communication and power modules"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. First-generation prototype and mobile interface during a platform demonstration, including tube loading, image acquisition and curve display. The photographs show earlier foodborne-assay platform validation"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. Exploded mechanical layout of the second-generation instrument. The view shows the rotating assembly, camera, heating components, control boards and battery arrangement"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Second-generation instrument with both lids open. The front opening exposes the separate lysis zone, and the upper opening provides access to the main reaction chamber. Design rendering"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "page",
+          "text": "Figure 8. Organization of the second-generation mobile interface, device control and data storage"
+        },
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Hardware functions supporting the respiratory assay workflow"
+        }
+      ]
+    },
+    {
+      "file": "Project/design.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Example of the PID Algorithm"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Interrupt Code for the Temperature Sensor"
+        }
+      ]
+    },
+    {
+      "file": "Project/engineering.html",
+      "captions": [
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Summary of RSV candidate comparison (data from manuscript 9.22, Figure 3A–D)"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "page",
+          "text": "Table 2. RSV Candidate 2 oligonucleotides (manuscript 9.22, Table 3)"
+        },
+        {
+          "kind": "Table",
+          "number": 3,
+          "scope": "page",
+          "text": "Table 3. First-stage PAM-site outputs (DNABERT PAM Model v3)"
+        },
+        {
+          "kind": "Table",
+          "number": 4,
+          "scope": "page",
+          "text": "Table 4. Ranking and ablation (manuscript 9.22, Table 2)"
+        },
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Baseline ODE time course of DNA and cleaved reporter X (Drylab 9.3)"
+        },
+        {
+          "kind": "Table",
+          "number": 5,
+          "scope": "page",
+          "text": "Table 5. Groupwise candidate construction (Drylab 9.3)"
+        },
+        {
+          "kind": "Table",
+          "number": 6,
+          "scope": "page",
+          "text": "Table 6. Device generations (ByeGerm Engineering)"
+        }
+      ]
+    },
+    {
+      "file": "Project/safety.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Laboratory information board showing risk classification"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Laboratory safety equipment and supporting facilities: (A) Clean bench; (B) Centrifuge; (C) Vortex mixer; (D) qPCR instrument; (E) Flammable safety cabinet"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Team members studying laboratory management regulations"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Laboratory safety management documents: (A) Posted lab management rules; (B) Safety inspection records; (C) Daily safety self-inspection forms; (D) Duty roster and chemical safety notices"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Laboratory waste management setup: (A) Biological waste temporary storage; (B) Sealed biohazard waste bags; (C) Waste bins and sharps container"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. The CARES Framework: A Five-Dimensional Approach to Ethical and Safe Framework"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Collaborative Discussion with Li Hui on the Development of the Ethical and Safe Framework"
+        }
+      ]
+    },
+    {
+      "file": "Team/member.html",
+      "captions": []
+    },
+    {
+      "file": "Wet-lab/measurement.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Schematic illustration of the RPA-CRISPR principle. Steps ① and ② show the RPA isothermal amplification process, whereas steps ③ and ④ show CRISPR/Cas12a-specific trans-cleavage"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Closed-loop iterative workflow for detection of five respiratory pathogens based on the DBTL cycle"
+        },
+        {
+          "kind": "Table",
+          "number": 1,
+          "scope": "page",
+          "text": "Table 1. Basic Information on LbCas12a"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. pET28a-TEV-LbCas12a Plasmid Map"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Workflow of the DNABERT-6 Model"
+        },
+        {
+          "kind": "Table",
+          "number": 2,
+          "scope": "page",
+          "text": "Table 2. RSV top 10 candidate combinations"
+        },
+        {
+          "kind": "Table",
+          "number": 3,
+          "scope": "page",
+          "text": "Table 3. Preparation parameters for each reaction component of the RPA-CRISPR/Cas12a cascade-amplification detection system"
+        },
+        {
+          "kind": "Table",
+          "number": 4,
+          "scope": "page",
+          "text": "Table 4. DNABERT-6-predicted candidate primer-crRNA sequences selected for validation"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Fluorescence Curves from Optimization of RSV Candidate Primer-crRNA Combinations"
+        },
+        {
+          "kind": "Table",
+          "number": 5,
+          "scope": "page",
+          "text": "Table 5. Concentration Ranges of Reaction Components Obtained by the Global Coarse Search Using Differential Evolution"
+        },
+        {
+          "kind": "Table",
+          "number": 6,
+          "scope": "page",
+          "text": "Table 6. Optimal Reaction-Component Concentrations Obtained by Fine Local Search Using Differential Evolution"
+        },
+        {
+          "kind": "Table",
+          "number": 7,
+          "scope": "page",
+          "text": "Table 7. Amount of ddH2O Added to the Lyophilized Pellet System at Different Enzyme-Combination Concentrations"
+        },
+        {
+          "kind": "Table",
+          "number": 8,
+          "scope": "page",
+          "text": "Table 8. Preparation parameters for each reaction component in the RPA-CRISPR/Cas12a enzyme-combination concentration validation"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. Real-time fluorescence curves of a model plasmid carrying the RSV N gene in the RPA-CRISPR system under different enzyme-concentration gradients"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Real-time fluorescence curves of a model plasmid carrying the RSV N gene in the RPA-CRISPR system under different primer-concentration gradients"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "page",
+          "text": "Figure 8. Fluorescence curves for optimal reaction temperature optimization of the model plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 9,
+          "scope": "page",
+          "text": "Figure 9. Fluorescence curves for Mg2+ concentration optimization of the model plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 10,
+          "scope": "page",
+          "text": "Figure 10. Fluorescence curves for probe concentration optimization of the model plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 11,
+          "scope": "page",
+          "text": "Figure 11. Fluorescence curves for RNP ratio optimization of the model plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Table",
+          "number": 9,
+          "scope": "page",
+          "text": "Table 9. Preparation parameters for performance evaluation of the RPA-CRISPR/Cas12a cascade-amplification detection system"
+        },
+        {
+          "kind": "Figure",
+          "number": 12,
+          "scope": "page",
+          "text": "Figure 12. Fluorescence curves for evaluating the sensitivity of the RPA-CRISPR system toward a model plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 13,
+          "scope": "page",
+          "text": "Figure 13. Fluorescence curves for evaluating the specificity of the RPA-CRISPR system toward a model plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 14,
+          "scope": "page",
+          "text": "Figure 14. Fluorescence curves for evaluating the reproducibility of the RPA-CRISPR system toward a model plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 15,
+          "scope": "page",
+          "text": "Figure 15. Overlay of fluorescence curves from six parallel experiments evaluating the reproducibility of the RPA-CRISPR system toward a model plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 16,
+          "scope": "page",
+          "text": "Figure 16. Fluorescence curves for evaluating matrix-interference resistance of the RPA-CRISPR system toward a model plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Table",
+          "number": 10,
+          "scope": "page",
+          "text": "Table 10. Comparison of RSV Clinical Nucleic-Acid Sample Results Obtained by qPCR and the RPA-CRISPR/Cas12a System"
+        },
+        {
+          "kind": "Figure",
+          "number": 17,
+          "scope": "page",
+          "text": "Figure 17. Fluorescence curves for evaluating the sensitivity of the RPA-CRISPR system toward a model plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 18,
+          "scope": "page",
+          "text": "Figure 18. Fluorescence curves for evaluating the specificity of the RPA-CRISPR system toward a model plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 19,
+          "scope": "page",
+          "text": "Figure 19. Fluorescence curves for evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the hMPV-B N gene: two operators (Operator C and Operator D) performed replicate experiments at different times over two days"
+        },
+        {
+          "kind": "Figure",
+          "number": 20,
+          "scope": "page",
+          "text": "Figure 20. Overlay of fluorescence curves from six parallel experiments evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 21,
+          "scope": "page",
+          "text": "Figure 21. Fluorescence curves for evaluating matrix-interference resistance of the RPA-CRISPR system toward a model plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Table",
+          "number": 11,
+          "scope": "page",
+          "text": "Table 11. Comparison of hMPV-B Clinical Nucleic-Acid Sample Results Obtained by qPCR and the RPA-CRISPR/Cas12a System"
+        },
+        {
+          "kind": "Figure",
+          "number": 22,
+          "scope": "page",
+          "text": "Figure 22. Fluorescence curves for evaluating the sensitivity of the RPA-CRISPR system toward a model plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 23,
+          "scope": "page",
+          "text": "Figure 23. Fluorescence curves for evaluating the specificity of the RPA-CRISPR system toward a model plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 24,
+          "scope": "page",
+          "text": "Figure 24. Fluorescence curves for evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the SPN-lytA gene:Two operators (Operator E and Operator A) performed replicate experiments at different times over two days"
+        },
+        {
+          "kind": "Figure",
+          "number": 25,
+          "scope": "page",
+          "text": "Figure 25. Overlay of fluorescence curves from six parallel experiments evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 26,
+          "scope": "page",
+          "text": "Figure 26. Fluorescence curves for evaluating matrix-interference resistance of the RPA-CRISPR system toward a model plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Table",
+          "number": 12,
+          "scope": "page",
+          "text": "Table 12. Comparison of SPN Clinical Nucleic-Acid Sample Results Obtained by qPCR and the RPA-CRISPR/Cas12a System"
+        },
+        {
+          "kind": "Figure",
+          "number": 27,
+          "scope": "page",
+          "text": "Figure 27. Fluorescence curves for evaluating the sensitivity of the RPA-CRISPR system toward a model plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 28,
+          "scope": "page",
+          "text": "Figure 28. Fluorescence curves for evaluating the specificity of the RPA-CRISPR system toward a model plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 29,
+          "scope": "page",
+          "text": "Figure 29. Fluorescence curves for evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the BP-IS1663 gene:Two operators (Operator B and Operator F) performed replicate experiments at different times over two days"
+        },
+        {
+          "kind": "Figure",
+          "number": 30,
+          "scope": "page",
+          "text": "Figure 30. Overlay of fluorescence curves from six parallel experiments evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 31,
+          "scope": "page",
+          "text": "Figure 31. Fluorescence curves for evaluating matrix-interference resistance of the RPA-CRISPR system toward a model plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Table",
+          "number": 13,
+          "scope": "page",
+          "text": "Table 13. Comparison of BP Clinical Nucleic-Acid Sample Results Obtained by qPCR and the RPA-CRISPR/Cas12a System"
+        },
+        {
+          "kind": "Figure",
+          "number": 32,
+          "scope": "page",
+          "text": "Figure 32. Fluorescence curves for evaluating the sensitivity of the RPA-CRISPR system toward a model plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 33,
+          "scope": "page",
+          "text": "Figure 33. Fluorescence curves for evaluating the specificity of the RPA-CRISPR system toward a model plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 34,
+          "scope": "page",
+          "text": "Figure 34. Fluorescence curves for evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the HI-ompP6 gene: two operators (Operator E and Operator F) performed replicate experiments at different times over two days"
+        },
+        {
+          "kind": "Figure",
+          "number": 35,
+          "scope": "page",
+          "text": "Figure 35. Overlay of fluorescence curves from six parallel experiments evaluating reproducibility of the RPA-CRISPR system toward a model plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 36,
+          "scope": "page",
+          "text": "Figure 36. Fluorescence curves for evaluating matrix-interference resistance of the RPA-CRISPR system toward a model plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Table",
+          "number": 14,
+          "scope": "page",
+          "text": "Table 14. Comparison of HI Clinical Nucleic-Acid Sample Results Obtained by qPCR and the RPA-CRISPR/Cas12a System"
+        },
+        {
+          "kind": "Figure",
+          "number": 37,
+          "scope": "page",
+          "text": "Figure 37. Overall structure, hardware components, and control circuit of the device.(A) Exploded view showing the functional modules, including the RK3588 SoC–based artificial intelligence module, AP6256 Wi‑Fi/Bluetooth communication module, optical module (camera and filter), LED chip, temperature module (heating plate and heating element), and power module (lithium battery and charging chip); (B) front (left) and back (right) views of the RK3588 core control board; (C) photograph and dimensions of the assembled device (14 cm × 7.5 cm × 11 cm); and (D) schematic diagram of the temperature-module drive and control circuit"
+        }
+      ]
+    },
+    {
+      "file": "Wet-lab/notebook.html",
+      "captions": []
+    },
+    {
+      "file": "Wet-lab/part.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. pET28a-TEV-LbCas12a Plasmid Map"
+        }
+      ]
+    },
+    {
+      "file": "Wet-lab/result.html",
+      "captions": [
+        {
+          "kind": "Figure",
+          "number": 1,
+          "scope": "page",
+          "text": "Figure 1. Fluorescence curves used to optimize candidate primer-crRNA combinations targeting the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 2,
+          "scope": "page",
+          "text": "Figure 2. Fluorescence curves for optimization of the optimal reaction temperature of the simulated plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 3,
+          "scope": "page",
+          "text": "Figure 3. Fluorescence curves for optimization of the optimal RNP ratio of the simulated plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 4,
+          "scope": "page",
+          "text": "Figure 4. Fluorescence curves for optimization of the optimal RNP concentration of the simulated plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 5,
+          "scope": "page",
+          "text": "Figure 5. Fluorescence curves for optimization of the optimal Mg2+ concentration of the simulated plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 6,
+          "scope": "page",
+          "text": "Figure 6. Fluorescence curves for optimization of the optimal probe concentration of the simulated plasmid carrying the RSV N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 7,
+          "scope": "page",
+          "text": "Figure 7. Fluorescence curves used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 8,
+          "scope": "page",
+          "text": "Figure 8. Overlaid fluorescence curves from six parallel experiments used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 9,
+          "scope": "page",
+          "text": "Figure 9. Fluorescence curves used to evaluate the sensitivity of the RPA-CRISPR system for the simulated plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 10,
+          "scope": "page",
+          "text": "Figure 10. Fluorescence curves used to evaluate the specificity of the RPA-CRISPR system for the simulated plasmid carrying the RSV N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 11,
+          "scope": "page",
+          "text": "Figure 11. Fluorescence curves used to evaluate resistance to matrix interference of the RPA-CRISPR system for the simulated plasmid carrying the RSV N gene. Positive and negative controls were tested under conditions with and without a saliva matrix"
+        },
+        {
+          "kind": "Figure",
+          "number": 12,
+          "scope": "page",
+          "text": "Figure 12. Fluorescence curves used to optimize candidate primer-crRNA combinations targeting the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 13,
+          "scope": "page",
+          "text": "Figure 13. Fluorescence curves for optimization of the optimal reaction temperature of the simulated plasmid carrying the hMPV-B N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 14,
+          "scope": "page",
+          "text": "Figure 14. Fluorescence curves for optimization of the optimal RNP ratio of the simulated plasmid carrying the hMPV-B N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 15,
+          "scope": "page",
+          "text": "Figure 15. Fluorescence curves for optimization of the optimal RNP concentration of the simulated plasmid carrying the hMPV-B N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 16,
+          "scope": "page",
+          "text": "Figure 16. Fluorescence curves for optimization of the optimal Mg2+ concentration of the simulated plasmid carrying the hMPV-B N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 17,
+          "scope": "page",
+          "text": "Figure 17. Fluorescence curves for optimization of the optimal probe concentration of the simulated plasmid carrying the hMPV-B N gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 18,
+          "scope": "page",
+          "text": "Figure 18. Fluorescence curves used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 19,
+          "scope": "page",
+          "text": "Figure 19. Overlaid fluorescence curves from six parallel experiments used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 20,
+          "scope": "page",
+          "text": "Figure 20. Fluorescence curves used to evaluate the sensitivity of the RPA-CRISPR system for the simulated plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 21,
+          "scope": "page",
+          "text": "Figure 21. Fluorescence curves used to evaluate the specificity of the RPA-CRISPR system for the simulated plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 22,
+          "scope": "page",
+          "text": "Figure 22. Fluorescence curves used to evaluate resistance to matrix interference of the RPA-CRISPR system for the simulated plasmid carrying the hMPV-B N gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 23,
+          "scope": "page",
+          "text": "Figure 23. Fluorescence curves used to optimize candidate primer-crRNA combinations targeting the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 24,
+          "scope": "page",
+          "text": "Figure 24. Fluorescence curves for optimization of the optimal reaction temperature of the simulated plasmid carrying the SPN-lytA gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 25,
+          "scope": "page",
+          "text": "Figure 25. Fluorescence curves for optimization of the optimal RNP ratio of the simulated plasmid carrying the SPN-lytA gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 26,
+          "scope": "page",
+          "text": "Figure 26. Fluorescence curves for optimization of the optimal RNP concentration of the simulated plasmid carrying the SPN-lytA gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 27,
+          "scope": "page",
+          "text": "Figure 27. Fluorescence curves for optimization of the optimal Mg2+ concentration of the simulated plasmid carrying the SPN-lytA gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 28,
+          "scope": "page",
+          "text": "Figure 28. Fluorescence curves used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 29,
+          "scope": "page",
+          "text": "Figure 29. Overlaid fluorescence curves from six parallel experiments used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 30,
+          "scope": "page",
+          "text": "Figure 30. Fluorescence curves used to evaluate the sensitivity of the RPA-CRISPR system for the simulated plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 31,
+          "scope": "page",
+          "text": "Figure 31. Fluorescence curves used to evaluate the specificity of the RPA-CRISPR system for the simulated plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 32,
+          "scope": "page",
+          "text": "Figure 32. Fluorescence curves used to evaluate resistance to matrix interference of the RPA-CRISPR system for the simulated plasmid carrying the SPN-lytA gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 33,
+          "scope": "page",
+          "text": "Figure 33. Fluorescence curves used to optimize candidate primer-crRNA combinations targeting the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 34,
+          "scope": "page",
+          "text": "Figure 34. Fluorescence curves for optimization of the optimal reaction temperature of the simulated plasmid carrying the BP-IS1663 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 35,
+          "scope": "page",
+          "text": "Figure 35. Fluorescence curves for optimization of the optimal RNP ratio of the simulated plasmid carrying the BP-IS1663 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 36,
+          "scope": "page",
+          "text": "Figure 36. Fluorescence curves for optimization of the optimal RNP concentration of the simulated plasmid carrying the BP-IS1663 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 37,
+          "scope": "page",
+          "text": "Figure 37. Fluorescence curves for optimization of the optimal Mg2+ concentration of the simulated plasmid carrying the BP-IS1663 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 38,
+          "scope": "page",
+          "text": "Figure 38. Fluorescence curves used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 39,
+          "scope": "page",
+          "text": "Figure 39. Overlaid fluorescence curves from six parallel experiments used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 40,
+          "scope": "page",
+          "text": "Figure 40. Fluorescence curves used to evaluate the sensitivity of the RPA-CRISPR system for the simulated plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 41,
+          "scope": "page",
+          "text": "Figure 41. Fluorescence curves used to evaluate the specificity of the RPA-CRISPR system for the simulated plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 42,
+          "scope": "page",
+          "text": "Figure 42. Fluorescence curves used to evaluate resistance to matrix interference of the RPA-CRISPR system for the simulated plasmid carrying the BP-IS1663 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 43,
+          "scope": "page",
+          "text": "Figure 43. Fluorescence curves used to optimize candidate primer-crRNA combinations targeting the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 44,
+          "scope": "page",
+          "text": "Figure 44. Fluorescence curves for the optimal reaction temperature of the simulated plasmid carrying the HI-ompP6 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 45,
+          "scope": "page",
+          "text": "Figure 45. Fluorescence curves for optimization of the optimal RNP ratio of the simulated plasmid carrying the HI-ompP6 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 46,
+          "scope": "page",
+          "text": "Figure 46. Fluorescence curves for optimization of the optimal RNP concentration of the simulated plasmid carrying the HI-ompP6 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 47,
+          "scope": "page",
+          "text": "Figure 47. Fluorescence curves for optimization of the optimal Mg2+ concentration of the simulated plasmid carrying the HI-ompP6 gene in the RPA-CRISPR system"
+        },
+        {
+          "kind": "Figure",
+          "number": 48,
+          "scope": "page",
+          "text": "Figure 48. Fluorescence curves used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 49,
+          "scope": "page",
+          "text": "Figure 49. Overlaid fluorescence curves from six parallel experiments used to evaluate the repeatability of the RPA-CRISPR system for the simulated plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 50,
+          "scope": "page",
+          "text": "Figure 50. Fluorescence curves used to evaluate the sensitivity of the RPA-CRISPR system for the simulated plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 51,
+          "scope": "page",
+          "text": "Figure 51. Fluorescence curves used to evaluate the specificity of the RPA-CRISPR system for the simulated plasmid carrying the HI-ompP6 gene"
+        },
+        {
+          "kind": "Figure",
+          "number": 52,
+          "scope": "page",
+          "text": "Figure 52. Fluorescence curves used to evaluate resistance to matrix interference of the RPA-CRISPR system for the simulated plasmid carrying the HI-ompP6 gene"
+        }
+      ]
+    },
+    {
+      "file": "Wet-lab/protocal.html",
+      "captions": []
+    }
+  ],
+  "backChecks": [
+    {
+      "file": "Eagagement/education.html",
+      "width": 1440,
+      "target": "#edu-loop",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Eagagement/entrepreneurship.html",
+      "width": 1440,
+      "target": "#entrepreneur-reference-2",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Eagagement/iHP.html",
+      "width": 1440,
+      "target": "#engineer-ying-mou",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Instrument/hardware.html",
+      "width": 1440,
+      "target": "#hw-reference-5",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Instrument/model.html",
+      "width": 1440,
+      "target": "#reference-7",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Instrument/software.html",
+      "width": 1440,
+      "target": "#software-open-source",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/contribution.html",
+      "width": 1440,
+      "target": "#contribution-section-6-1",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/description.html",
+      "width": 1440,
+      "target": "#wiki-reference-16",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/design.html",
+      "width": 1440,
+      "target": "#wiki-reference-7",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/engineering.html",
+      "width": 1440,
+      "target": "#engineering-node-a2",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/safety.html",
+      "width": 1440,
+      "target": "#safety-section-9-5",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Team/member.html",
+      "width": 1440,
+      "target": "#team-directory",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/measurement.html",
+      "width": 1440,
+      "target": "#section-8",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/notebook.html",
+      "width": 1440,
+      "target": "#notebook-5-3-4",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/part.html",
+      "width": 1440,
+      "target": "#step-3",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/protocal.html",
+      "width": 1440,
+      "target": "#panel-hi-3",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/result.html",
+      "width": 1440,
+      "target": "#results-section-6-3-4",
+      "position": {
+        "gap": 2,
+        "right": 1436,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Eagagement/education.html",
+      "width": 390,
+      "target": "#edu-loop",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Eagagement/entrepreneurship.html",
+      "width": 390,
+      "target": "#entrepreneur-reference-2",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Eagagement/iHP.html",
+      "width": 390,
+      "target": "#engineer-ying-mou",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Instrument/hardware.html",
+      "width": 390,
+      "target": "#hw-reference-5",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Instrument/model.html",
+      "width": 390,
+      "target": "#reference-7",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Instrument/software.html",
+      "width": 390,
+      "target": "#software-open-source",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/contribution.html",
+      "width": 390,
+      "target": "#contribution-section-6-1",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/description.html",
+      "width": 390,
+      "target": "#wiki-reference-16",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/design.html",
+      "width": 390,
+      "target": "#wiki-reference-7",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/engineering.html",
+      "width": 390,
+      "target": "#engineering-node-a2",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Project/safety.html",
+      "width": 390,
+      "target": "#safety-section-9-5",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Team/member.html",
+      "width": 390,
+      "target": "#team-directory",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/measurement.html",
+      "width": 390,
+      "target": "#section-8",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/notebook.html",
+      "width": 390,
+      "target": "#notebook-5-3-4",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/part.html",
+      "width": 390,
+      "target": "#step-3",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/protocal.html",
+      "width": 390,
+      "target": "#panel-hi-3",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    },
+    {
+      "file": "Wet-lab/result.html",
+      "width": 390,
+      "target": "#results-section-6-3-4",
+      "position": {
+        "gap": 2,
+        "right": 386,
+        "overflow": 0,
+        "slots": 0
+      },
+      "returnDifference": 0,
+      "urlRestored": true,
+      "hidesAfterScroll": true,
+      "errors": []
+    }
+  ],
+  "imageChecks": [
+    {
+      "width": 1440,
+      "file": "Wet-lab/measurement.html",
+      "overflow": 0,
+      "windows": 1,
+      "adjusted": 30,
+      "paper": 34,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "file": "Wet-lab/result.html",
+      "overflow": 0,
+      "windows": 0,
+      "adjusted": 47,
+      "paper": 52,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "file": "Instrument/hardware.html",
+      "overflow": 0,
+      "windows": 2,
+      "adjusted": 0,
+      "paper": 12,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "file": "Eagagement/iHP.html",
+      "overflow": 0,
+      "windows": 2,
+      "adjusted": 0,
+      "paper": 9,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "file": "Project/contribution.html",
+      "overflow": 0,
+      "windows": 3,
+      "adjusted": 0,
+      "paper": 4,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "file": "Eagagement/entrepreneurship.html",
+      "overflow": 0,
+      "windows": 4,
+      "adjusted": 0,
+      "paper": 7,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "file": "Wet-lab/measurement.html",
+      "overflow": 0,
+      "windows": 1,
+      "adjusted": 30,
+      "paper": 34,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "file": "Wet-lab/result.html",
+      "overflow": 0,
+      "windows": 0,
+      "adjusted": 47,
+      "paper": 52,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "file": "Instrument/hardware.html",
+      "overflow": 0,
+      "windows": 2,
+      "adjusted": 0,
+      "paper": 12,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "file": "Eagagement/iHP.html",
+      "overflow": 0,
+      "windows": 2,
+      "adjusted": 0,
+      "paper": 9,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "file": "Project/contribution.html",
+      "overflow": 0,
+      "windows": 3,
+      "adjusted": 0,
+      "paper": 4,
+      "rollback": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "file": "Eagagement/entrepreneurship.html",
+      "overflow": 0,
+      "windows": 4,
+      "adjusted": 0,
+      "paper": 7,
+      "rollback": true,
+      "errors": []
+    }
+  ],
+  "modelChecks": [
+    {
+      "width": 1440,
+      "normalMotion": true,
+      "whiteTitlesPreserved": 4,
+      "crossModuleReturn": true,
+      "gap": 2,
+      "rollback": true,
+      "repeatedCropStable": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "normalMotion": true,
+      "whiteTitlesPreserved": 4,
+      "crossModuleReturn": true,
+      "gap": 2,
+      "rollback": true,
+      "repeatedCropStable": true,
+      "errors": []
+    }
+  ],
+  "imageSwitch": {
+    "filesChecked": 1488,
+    "changedOnDisable": [
+      "assets/media-presentation-20261018/settings.json"
+    ],
+    "onlySettings": true,
+    "enableRestoresExactly": true
+  },
+  "entrepreneurTableNumbers": {
+    "1": 1,
+    "2": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 7,
+    "10": 8,
+    "11": 9,
+    "12": 10,
+    "13": 11,
+    "14": 12,
+    "15": 13,
+    "16": 14,
+    "17": 15,
+    "19": 16,
+    "20": 17,
+    "21": 18,
+    "22": 19,
+    "23": 20,
+    "24": 21,
+    "25": 22,
+    "26": 23,
+    "27": 24,
+    "28": 25,
+    "29": 26,
+    "30": 27,
+    "31": 28,
+    "32": 29,
+    "33": 30,
+    "34": 31,
+    "35": 32,
+    "36": 33,
+    "37": 34,
+    "38": 35,
+    "39": 36,
+    "40": 37,
+    "41": 38
+  }
+}
