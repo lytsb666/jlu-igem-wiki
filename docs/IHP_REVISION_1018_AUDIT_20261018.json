@@ -1,0 +1,3584 @@
+{
+  "date": "2026-10-18",
+  "sourceIntegrity": {
+    "anchorsPreserved": 210,
+    "tablesUnchanged": 9,
+    "pdfLinksPreserved": true,
+    "summaryParagraphsUnchanged": 6,
+    "changedSourceParagraphTexts": [
+      "38",
+      "46"
+    ],
+    "replacementsMatchSuppliedOriginals": true,
+    "archivedSourcesAndMediaHashesMatch": true
+  },
+  "baselineLayout": [
+    {
+      "width": 1440,
+      "quote": {
+        "x": 487.984375,
+        "y": 1022.09375,
+        "width": 834.03125,
+        "height": 141.296875,
+        "top": 1022.09375,
+        "right": 1322.015625,
+        "bottom": 1163.390625,
+        "left": 487.984375
+      },
+      "font": "21.3333px",
+      "padding": "38.4px 56px",
+      "figure": 672
+    },
+    {
+      "width": 390,
+      "quote": {
+        "x": 42.390625,
+        "y": 1676.125,
+        "width": 263.21875,
+        "height": 175.953125,
+        "top": 1676.125,
+        "right": 305.609375,
+        "bottom": 1852.078125,
+        "left": 42.390625
+      },
+      "font": "21.3333px",
+      "padding": "32px 16px 24px",
+      "figure": 276
+    },
+    {
+      "width": 320,
+      "quote": {
+        "x": 42.390625,
+        "y": 1821.703125,
+        "width": 193.21875,
+        "height": 252.1875,
+        "top": 1821.703125,
+        "right": 235.609375,
+        "bottom": 2073.890625,
+        "left": 42.390625
+      },
+      "font": "21.3333px",
+      "padding": "32px 16px 24px",
+      "figure": 206
+    }
+  ],
+  "ihpThreeWidths": [
+    {
+      "width": 1440,
+      "overflow": 0,
+      "quote": {
+        "box": {
+          "x": 487.984375,
+          "y": 1022.09375,
+          "width": 834.03125,
+          "height": 141.296875,
+          "top": 1022.09375,
+          "right": 1322.015625,
+          "bottom": 1163.390625,
+          "left": 487.984375
+        },
+        "font": "21.3333px",
+        "lineBreaks": 1,
+        "align": "center",
+        "signature": "right",
+        "mascot": {
+          "x": 499.984375,
+          "y": 1078.171875,
+          "width": 64,
+          "height": 78.21875,
+          "top": 1078.171875,
+          "right": 563.984375,
+          "bottom": 1156.390625,
+          "left": 499.984375
+        }
+      },
+      "figureWidth": 596.40625,
+      "cards": [
+        {
+          "box": {
+            "x": 481.59375,
+            "y": 1477.46875,
+            "width": 135.140625,
+            "height": 175.75,
+            "top": 1477.46875,
+            "right": 616.734375,
+            "bottom": 1653.21875,
+            "left": 481.59375
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 623.921875,
+            "y": 1477.46875,
+            "width": 135.140625,
+            "height": 175.75,
+            "top": 1477.46875,
+            "right": 759.0625,
+            "bottom": 1653.21875,
+            "left": 623.921875
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 766.25,
+            "y": 1477.46875,
+            "width": 135.140625,
+            "height": 175.75,
+            "top": 1477.46875,
+            "right": 901.390625,
+            "bottom": 1653.21875,
+            "left": 766.25
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 908.578125,
+            "y": 1477.46875,
+            "width": 135.15625,
+            "height": 175.765625,
+            "top": 1477.46875,
+            "right": 1043.734375,
+            "bottom": 1653.234375,
+            "left": 908.578125
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 1050.921875,
+            "y": 1477.46875,
+            "width": 135.140625,
+            "height": 175.75,
+            "top": 1477.46875,
+            "right": 1186.0625,
+            "bottom": 1653.21875,
+            "left": 1050.921875
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 1193.25,
+            "y": 1477.46875,
+            "width": 135.140625,
+            "height": 175.75,
+            "top": 1477.46875,
+            "right": 1328.390625,
+            "bottom": 1653.21875,
+            "left": 1193.25
+          },
+          "viewbox": "0 0 183 238"
+        }
+      ],
+      "story": {
+        "inside": true,
+        "height": 88,
+        "rowDirection": "row",
+        "mascotWidth": 64,
+        "font": "16px"
+      },
+      "summaryHeads": [
+        {
+          "text": "From Feedback to Shared Impact",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Three Interconnected Feedback Loop",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Cross-Team Collaboration",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Participation and Knowledge Sharing",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Answering Our Opening Questions",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Reflection and Outlook",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        }
+      ],
+      "pathogens": [
+        {
+          "text": "respiratory syncytial virus",
+          "style": "italic"
+        },
+        {
+          "text": "human metapneumovirus subtype B",
+          "style": "italic"
+        },
+        {
+          "text": "Streptococcus pneumoniae",
+          "style": "italic"
+        },
+        {
+          "text": "Bordetella pertussis",
+          "style": "italic"
+        },
+        {
+          "text": "Haemophilus influenzae",
+          "style": "italic"
+        }
+      ],
+      "upright": true,
+      "captions": [
+        {
+          "text": "Figure 1. From people’s needs to a better ByeGerm: the Human Practices feedback loop",
+          "kind": "Figure",
+          "n": 1,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 2. Five questions that shaped the Human Practices journey",
+          "kind": "Figure",
+          "n": 2,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 1. Human Practices feedback and Dry Lab improvements",
+          "kind": "Table",
+          "n": 1,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 2. Human Practices feedback and Wet Lab improvements",
+          "kind": "Table",
+          "n": 2,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 3. Human Practices feedback and Software improvements",
+          "kind": "Table",
+          "n": 3,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 4. Human Practices feedback and Hardware improvements",
+          "kind": "Table",
+          "n": 4,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 3. Activity types used throughout the Human Practices journey",
+          "kind": "Figure",
+          "n": 3,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 4. Stakeholder relationships across three circles",
+          "kind": "Figure",
+          "n": 4,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 5. Power–interest matrix of the project stakeholders",
+          "kind": "Figure",
+          "n": 5,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 6. C.A.R.E.S. Ethical Evaluation Framework",
+          "kind": "Figure",
+          "n": 6,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 7. Listening to the Public",
+          "kind": "Figure",
+          "n": 7,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 8. Listening to the Public — questionnaire format",
+          "kind": "Figure",
+          "n": 8,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 9. Listening to the Public",
+          "kind": "Figure",
+          "n": 9,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 10. Listening to the Public — participant responses",
+          "kind": "Figure",
+          "n": 10,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 11. Public concern about respiratory infections across age groups",
+          "kind": "Figure",
+          "n": 11,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 12. Perceived vulnerability of different age groups to severe respiratory infections",
+          "kind": "Figure",
+          "n": 12,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 13. Perceived value of portable testing for young children and older family members",
+          "kind": "Figure",
+          "n": 13,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 14. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 14,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 15. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 15,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 16. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 16,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 17. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 17,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 18. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 18,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 19. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 19,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 20. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 20,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 21. Dialogue with Kindergarten Teachers and Children",
+          "kind": "Figure",
+          "n": 21,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 22. Dialogue with Kindergarten Teachers and Children",
+          "kind": "Figure",
+          "n": 22,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 23. From community voices to practical respiratory pathogen screening",
+          "kind": "Figure",
+          "n": 23,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 24. Dialogue with Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 24,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 25. Roundtable with Public Health and Disease Control Experts",
+          "kind": "Figure",
+          "n": 25,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 26. Roundtable with Public Health and Disease Control Experts",
+          "kind": "Figure",
+          "n": 26,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 27. Deputy Dean Changgui Kou of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 27,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 28. Respiratory Medicine: Dr. Junyao Li",
+          "kind": "Figure",
+          "n": 28,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 29. Laboratory Medicine: Dr. Huimin Li",
+          "kind": "Figure",
+          "n": 29,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 30. Infectious Diseases: Dr. Shangwei Ji",
+          "kind": "Figure",
+          "n": 30,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 31. Pediatrics: Dr. Xin Tian",
+          "kind": "Figure",
+          "n": 31,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 32. Geriatric Medicine: Dr. Lihong Huang",
+          "kind": "Figure",
+          "n": 32,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 33. Interview with Professor X. Chris Le of the University of Alberta",
+          "kind": "Figure",
+          "n": 33,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 34. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 34,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 35. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 35,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 36. Discussion with Professor Xing-Fang Li at the conference",
+          "kind": "Figure",
+          "n": 36,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 37. Interview with Professor Xing-Fang Li",
+          "kind": "Figure",
+          "n": 37,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 38. Interview with Professor Tsan-Yuk Lam of the University of Hong Kong",
+          "kind": "Figure",
+          "n": 38,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 39. Dry-Lab Workflow for Target Optimization",
+          "kind": "Figure",
+          "n": 39,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 40. Interview with Professor Zheng Hu of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 40,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 41. Interview with Professor Yingtao Zhang of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 41,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 42. First-generation ByeGerm instrument: external dimensions and internal modules",
+          "kind": "Figure",
+          "n": 42,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 43. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 43,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 44. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 44,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 45,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 46,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 47. Interview with Professor Ying Mou of Zhejiang University",
+          "kind": "Figure",
+          "n": 47,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 48. Second-generation ByeGerm instrument: external design and multichannel module architecture",
+          "kind": "Figure",
+          "n": 48,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 49. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 49,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 50. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 50,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 51. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 51,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 52. The “Monster Capture” Sticker Wall for Children",
+          "kind": "Figure",
+          "n": 52,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 53. The “Monster Capture” Sticker Wall for Children",
+          "kind": "Figure",
+          "n": 53,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 54. Children’s feedback on the ByeGerm screening experience",
+          "kind": "Figure",
+          "n": 54,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 55. The Retrospective Empathy Survey for Patients",
+          "kind": "Figure",
+          "n": 55,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 56. Responsible adoption and Human Practices-driven entrepreneurial translation",
+          "kind": "Figure",
+          "n": 56,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 57. Interview with Department Head Xie Linshen",
+          "kind": "Figure",
+          "n": 57,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 58. Meeting with Zhang Jinming of Guangzhou Zhikang Medical",
+          "kind": "Figure",
+          "n": 58,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 59. Age-Adapted Education — dialogue with an older adult",
+          "kind": "Figure",
+          "n": 59,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 60. Children — reducing unfamiliarity and fear of the device",
+          "kind": "Figure",
+          "n": 60,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 61. Screening acceptance among older adults and children before and after education",
+          "kind": "Figure",
+          "n": 61,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 62. Respiratory Virus Testing Strategy Cards",
+          "kind": "Figure",
+          "n": 62,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 63. Device model and interactive experience",
+          "kind": "Figure",
+          "n": 63,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 64. Public health education in a county-level classroom",
+          "kind": "Figure",
+          "n": 64,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 65. ByeGerm framework for responsible translation",
+          "kind": "Figure",
+          "n": 65,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 66. Priority settings and criteria for responsible testing",
+          "kind": "Figure",
+          "n": 66,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 5. Stakeholder needs, feedback, and corresponding system responses",
+          "kind": "Table",
+          "n": 5,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 67. From assay validation to a minimum viable testing and service system",
+          "kind": "Figure",
+          "n": 67,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 68. Validation stages and evidence boundaries",
+          "kind": "Figure",
+          "n": 68,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 69. A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital",
+          "kind": "Figure",
+          "n": 69,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 70. Evidence-gated translation roadmap with explicit rollback conditions",
+          "kind": "Figure",
+          "n": 70,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+          "kind": "Figure",
+          "n": 71,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 72. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 72,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 73. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 73,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 74. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 74,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 75. Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults",
+          "kind": "Figure",
+          "n": 75,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 76. Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments",
+          "kind": "Figure",
+          "n": 76,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 77. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+          "kind": "Figure",
+          "n": 77,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 78. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+          "kind": "Figure",
+          "n": 78,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 79. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+          "kind": "Figure",
+          "n": 79,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 80. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+          "kind": "Figure",
+          "n": 80,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 81. Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 81,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 82. Professor Xingfang Li",
+          "kind": "Figure",
+          "n": 82,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 83. Professor Ying Mou",
+          "kind": "Figure",
+          "n": 83,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 84. JLU-SPH project presentation at the US-China iGEM Human Practices Summit",
+          "kind": "Figure",
+          "n": 84,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 85. CCiC",
+          "kind": "Figure",
+          "n": 85,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 86. CCiC",
+          "kind": "Figure",
+          "n": 86,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 87. CCiC",
+          "kind": "Figure",
+          "n": 87,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 88. CCiC",
+          "kind": "Figure",
+          "n": 88,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 89. APiC",
+          "kind": "Figure",
+          "n": 89,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 90. APiC",
+          "kind": "Figure",
+          "n": 90,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 91. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 91,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 92. BioAI Agent software demonstration during the inter-team online exchange",
+          "kind": "Figure",
+          "n": 92,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 6. Online course timetable for the Summer Dry Lab Camp",
+          "kind": "Table",
+          "n": 6,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 93. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 93,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 94. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 94,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 95. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 95,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 96. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 96,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 97. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 97,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 98. Introduction and gameplay instructions for the synthetic biology adaptation of Plants vs. Zombies",
+          "kind": "Figure",
+          "n": 98,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 99. Social Inclusion (Hike with Love · Embrace the Future)",
+          "kind": "Figure",
+          "n": 99,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 100. Social Inclusion (Hike with Love · Embrace the Future)",
+          "kind": "Figure",
+          "n": 100,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 101. From Feedback to Shared Impact",
+          "kind": "Figure",
+          "n": 101,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 102. Answering Our Opening Questions",
+          "kind": "Figure",
+          "n": 102,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        }
+      ],
+      "hints": 2,
+      "removedOverview": true,
+      "sources": [
+        {
+          "caption": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+          "src": "http://127.0.0.1:5222/assets/Crpi3vmP.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-45.png"
+        },
+        {
+          "caption": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+          "src": "http://127.0.0.1:5222/assets/BdO8xe95.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-46.png"
+        },
+        {
+          "caption": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+          "src": "http://127.0.0.1:5222/assets/DkIjVcWF.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-71.png"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "quote": {
+        "box": {
+          "x": 42.390625,
+          "y": 1676.125,
+          "width": 263.21875,
+          "height": 175.953125,
+          "top": 1676.125,
+          "right": 305.609375,
+          "bottom": 1852.078125,
+          "left": 42.390625
+        },
+        "font": "21.3333px",
+        "lineBreaks": 1,
+        "align": "center",
+        "signature": "right",
+        "mascot": {
+          "x": 47.390625,
+          "y": 1806.96875,
+          "width": 32,
+          "height": 39.109375,
+          "top": 1806.96875,
+          "right": 79.390625,
+          "bottom": 1846.078125,
+          "left": 47.390625
+        }
+      },
+      "figureWidth": 200.40625,
+      "cards": [
+        {
+          "box": {
+            "x": 36,
+            "y": 2540.5,
+            "width": 85.59375,
+            "height": 111.3125,
+            "top": 2540.5,
+            "right": 121.59375,
+            "bottom": 2651.8125,
+            "left": 36
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 131.1875,
+            "y": 2540.5,
+            "width": 85.609375,
+            "height": 111.328125,
+            "top": 2540.5,
+            "right": 216.796875,
+            "bottom": 2651.828125,
+            "left": 131.1875
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 226.390625,
+            "y": 2540.5,
+            "width": 85.59375,
+            "height": 111.3125,
+            "top": 2540.5,
+            "right": 311.984375,
+            "bottom": 2651.8125,
+            "left": 226.390625
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 36,
+            "y": 2661.421875,
+            "width": 85.59375,
+            "height": 111.3125,
+            "top": 2661.421875,
+            "right": 121.59375,
+            "bottom": 2772.734375,
+            "left": 36
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 131.1875,
+            "y": 2661.421875,
+            "width": 85.609375,
+            "height": 111.328125,
+            "top": 2661.421875,
+            "right": 216.796875,
+            "bottom": 2772.75,
+            "left": 131.1875
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 226.390625,
+            "y": 2661.421875,
+            "width": 85.59375,
+            "height": 111.3125,
+            "top": 2661.421875,
+            "right": 311.984375,
+            "bottom": 2772.734375,
+            "left": 226.390625
+          },
+          "viewbox": "0 0 183 238"
+        }
+      ],
+      "story": {
+        "inside": true,
+        "height": 88,
+        "rowDirection": "row",
+        "mascotWidth": 64,
+        "font": "16px"
+      },
+      "summaryHeads": [
+        {
+          "text": "From Feedback to Shared Impact",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Three Interconnected Feedback Loop",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Cross-Team Collaboration",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Participation and Knowledge Sharing",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Answering Our Opening Questions",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Reflection and Outlook",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        }
+      ],
+      "pathogens": [
+        {
+          "text": "respiratory syncytial virus",
+          "style": "italic"
+        },
+        {
+          "text": "human metapneumovirus subtype B",
+          "style": "italic"
+        },
+        {
+          "text": "Streptococcus pneumoniae",
+          "style": "italic"
+        },
+        {
+          "text": "Bordetella pertussis",
+          "style": "italic"
+        },
+        {
+          "text": "Haemophilus influenzae",
+          "style": "italic"
+        }
+      ],
+      "upright": true,
+      "captions": [
+        {
+          "text": "Figure 1. From people’s needs to a better ByeGerm: the Human Practices feedback loop",
+          "kind": "Figure",
+          "n": 1,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 2. Five questions that shaped the Human Practices journey",
+          "kind": "Figure",
+          "n": 2,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 1. Human Practices feedback and Dry Lab improvements",
+          "kind": "Table",
+          "n": 1,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 2. Human Practices feedback and Wet Lab improvements",
+          "kind": "Table",
+          "n": 2,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 3. Human Practices feedback and Software improvements",
+          "kind": "Table",
+          "n": 3,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 4. Human Practices feedback and Hardware improvements",
+          "kind": "Table",
+          "n": 4,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 3. Activity types used throughout the Human Practices journey",
+          "kind": "Figure",
+          "n": 3,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 4. Stakeholder relationships across three circles",
+          "kind": "Figure",
+          "n": 4,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 5. Power–interest matrix of the project stakeholders",
+          "kind": "Figure",
+          "n": 5,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 6. C.A.R.E.S. Ethical Evaluation Framework",
+          "kind": "Figure",
+          "n": 6,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 7. Listening to the Public",
+          "kind": "Figure",
+          "n": 7,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 8. Listening to the Public — questionnaire format",
+          "kind": "Figure",
+          "n": 8,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 9. Listening to the Public",
+          "kind": "Figure",
+          "n": 9,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 10. Listening to the Public — participant responses",
+          "kind": "Figure",
+          "n": 10,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 11. Public concern about respiratory infections across age groups",
+          "kind": "Figure",
+          "n": 11,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 12. Perceived vulnerability of different age groups to severe respiratory infections",
+          "kind": "Figure",
+          "n": 12,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 13. Perceived value of portable testing for young children and older family members",
+          "kind": "Figure",
+          "n": 13,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 14. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 14,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 15. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 15,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 16. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 16,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 17. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 17,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 18. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 18,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 19. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 19,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 20. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 20,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 21. Dialogue with Kindergarten Teachers and Children",
+          "kind": "Figure",
+          "n": 21,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 22. Dialogue with Kindergarten Teachers and Children",
+          "kind": "Figure",
+          "n": 22,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 23. From community voices to practical respiratory pathogen screening",
+          "kind": "Figure",
+          "n": 23,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 24. Dialogue with Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 24,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 25. Roundtable with Public Health and Disease Control Experts",
+          "kind": "Figure",
+          "n": 25,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 26. Roundtable with Public Health and Disease Control Experts",
+          "kind": "Figure",
+          "n": 26,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 27. Deputy Dean Changgui Kou of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 27,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 28. Respiratory Medicine: Dr. Junyao Li",
+          "kind": "Figure",
+          "n": 28,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 29. Laboratory Medicine: Dr. Huimin Li",
+          "kind": "Figure",
+          "n": 29,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 30. Infectious Diseases: Dr. Shangwei Ji",
+          "kind": "Figure",
+          "n": 30,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 31. Pediatrics: Dr. Xin Tian",
+          "kind": "Figure",
+          "n": 31,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 32. Geriatric Medicine: Dr. Lihong Huang",
+          "kind": "Figure",
+          "n": 32,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 33. Interview with Professor X. Chris Le of the University of Alberta",
+          "kind": "Figure",
+          "n": 33,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 34. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 34,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 35. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 35,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 36. Discussion with Professor Xing-Fang Li at the conference",
+          "kind": "Figure",
+          "n": 36,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 37. Interview with Professor Xing-Fang Li",
+          "kind": "Figure",
+          "n": 37,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 38. Interview with Professor Tsan-Yuk Lam of the University of Hong Kong",
+          "kind": "Figure",
+          "n": 38,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 39. Dry-Lab Workflow for Target Optimization",
+          "kind": "Figure",
+          "n": 39,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 40. Interview with Professor Zheng Hu of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 40,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 41. Interview with Professor Yingtao Zhang of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 41,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 42. First-generation ByeGerm instrument: external dimensions and internal modules",
+          "kind": "Figure",
+          "n": 42,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 43. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 43,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 44. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 44,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 45,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 46,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 47. Interview with Professor Ying Mou of Zhejiang University",
+          "kind": "Figure",
+          "n": 47,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 48. Second-generation ByeGerm instrument: external design and multichannel module architecture",
+          "kind": "Figure",
+          "n": 48,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 49. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 49,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 50. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 50,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 51. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 51,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 52. The “Monster Capture” Sticker Wall for Children",
+          "kind": "Figure",
+          "n": 52,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 53. The “Monster Capture” Sticker Wall for Children",
+          "kind": "Figure",
+          "n": 53,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 54. Children’s feedback on the ByeGerm screening experience",
+          "kind": "Figure",
+          "n": 54,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 55. The Retrospective Empathy Survey for Patients",
+          "kind": "Figure",
+          "n": 55,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 56. Responsible adoption and Human Practices-driven entrepreneurial translation",
+          "kind": "Figure",
+          "n": 56,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 57. Interview with Department Head Xie Linshen",
+          "kind": "Figure",
+          "n": 57,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 58. Meeting with Zhang Jinming of Guangzhou Zhikang Medical",
+          "kind": "Figure",
+          "n": 58,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 59. Age-Adapted Education — dialogue with an older adult",
+          "kind": "Figure",
+          "n": 59,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 60. Children — reducing unfamiliarity and fear of the device",
+          "kind": "Figure",
+          "n": 60,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 61. Screening acceptance among older adults and children before and after education",
+          "kind": "Figure",
+          "n": 61,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 62. Respiratory Virus Testing Strategy Cards",
+          "kind": "Figure",
+          "n": 62,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 63. Device model and interactive experience",
+          "kind": "Figure",
+          "n": 63,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 64. Public health education in a county-level classroom",
+          "kind": "Figure",
+          "n": 64,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 65. ByeGerm framework for responsible translation",
+          "kind": "Figure",
+          "n": 65,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 66. Priority settings and criteria for responsible testing",
+          "kind": "Figure",
+          "n": 66,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 5. Stakeholder needs, feedback, and corresponding system responses",
+          "kind": "Table",
+          "n": 5,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 67. From assay validation to a minimum viable testing and service system",
+          "kind": "Figure",
+          "n": 67,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 68. Validation stages and evidence boundaries",
+          "kind": "Figure",
+          "n": 68,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 69. A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital",
+          "kind": "Figure",
+          "n": 69,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 70. Evidence-gated translation roadmap with explicit rollback conditions",
+          "kind": "Figure",
+          "n": 70,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+          "kind": "Figure",
+          "n": 71,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 72. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 72,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 73. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 73,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 74. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 74,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 75. Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults",
+          "kind": "Figure",
+          "n": 75,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 76. Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments",
+          "kind": "Figure",
+          "n": 76,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 77. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+          "kind": "Figure",
+          "n": 77,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 78. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+          "kind": "Figure",
+          "n": 78,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 79. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+          "kind": "Figure",
+          "n": 79,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 80. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+          "kind": "Figure",
+          "n": 80,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 81. Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 81,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 82. Professor Xingfang Li",
+          "kind": "Figure",
+          "n": 82,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 83. Professor Ying Mou",
+          "kind": "Figure",
+          "n": 83,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 84. JLU-SPH project presentation at the US-China iGEM Human Practices Summit",
+          "kind": "Figure",
+          "n": 84,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 85. CCiC",
+          "kind": "Figure",
+          "n": 85,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 86. CCiC",
+          "kind": "Figure",
+          "n": 86,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 87. CCiC",
+          "kind": "Figure",
+          "n": 87,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 88. CCiC",
+          "kind": "Figure",
+          "n": 88,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 89. APiC",
+          "kind": "Figure",
+          "n": 89,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 90. APiC",
+          "kind": "Figure",
+          "n": 90,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 91. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 91,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 92. BioAI Agent software demonstration during the inter-team online exchange",
+          "kind": "Figure",
+          "n": 92,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 6. Online course timetable for the Summer Dry Lab Camp",
+          "kind": "Table",
+          "n": 6,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 93. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 93,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 94. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 94,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 95. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 95,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 96. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 96,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 97. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 97,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 98. Introduction and gameplay instructions for the synthetic biology adaptation of Plants vs. Zombies",
+          "kind": "Figure",
+          "n": 98,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 99. Social Inclusion (Hike with Love · Embrace the Future)",
+          "kind": "Figure",
+          "n": 99,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 100. Social Inclusion (Hike with Love · Embrace the Future)",
+          "kind": "Figure",
+          "n": 100,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 101. From Feedback to Shared Impact",
+          "kind": "Figure",
+          "n": 101,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 102. Answering Our Opening Questions",
+          "kind": "Figure",
+          "n": 102,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        }
+      ],
+      "hints": 2,
+      "removedOverview": true,
+      "sources": [
+        {
+          "caption": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+          "src": "http://127.0.0.1:5222/assets/Crpi3vmP.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-45.png"
+        },
+        {
+          "caption": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+          "src": "http://127.0.0.1:5222/assets/BdO8xe95.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-46.png"
+        },
+        {
+          "caption": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+          "src": "http://127.0.0.1:5222/assets/DkIjVcWF.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-71.png"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 320,
+      "overflow": 0,
+      "quote": {
+        "box": {
+          "x": 42.390625,
+          "y": 1821.703125,
+          "width": 193.21875,
+          "height": 252.1875,
+          "top": 1821.703125,
+          "right": 235.609375,
+          "bottom": 2073.890625,
+          "left": 42.390625
+        },
+        "font": "21.3333px",
+        "lineBreaks": 1,
+        "align": "center",
+        "signature": "right",
+        "mascot": {
+          "x": 47.390625,
+          "y": 2028.78125,
+          "width": 32,
+          "height": 39.109375,
+          "top": 2028.78125,
+          "right": 79.390625,
+          "bottom": 2067.890625,
+          "left": 47.390625
+        }
+      },
+      "figureWidth": 130.40625,
+      "cards": [
+        {
+          "box": {
+            "x": 36,
+            "y": 2977.203125,
+            "width": 62.265625,
+            "height": 80.96875,
+            "top": 2977.203125,
+            "right": 98.265625,
+            "bottom": 3058.171875,
+            "left": 36
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 107.859375,
+            "y": 2977.203125,
+            "width": 62.265625,
+            "height": 80.96875,
+            "top": 2977.203125,
+            "right": 170.125,
+            "bottom": 3058.171875,
+            "left": 107.859375
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 179.71875,
+            "y": 2977.203125,
+            "width": 62.265625,
+            "height": 80.96875,
+            "top": 2977.203125,
+            "right": 241.984375,
+            "bottom": 3058.171875,
+            "left": 179.71875
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 36,
+            "y": 3067.765625,
+            "width": 62.265625,
+            "height": 80.96875,
+            "top": 3067.765625,
+            "right": 98.265625,
+            "bottom": 3148.734375,
+            "left": 36
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 107.859375,
+            "y": 3067.765625,
+            "width": 62.265625,
+            "height": 80.96875,
+            "top": 3067.765625,
+            "right": 170.125,
+            "bottom": 3148.734375,
+            "left": 107.859375
+          },
+          "viewbox": "0 0 183 238"
+        },
+        {
+          "box": {
+            "x": 179.71875,
+            "y": 3067.765625,
+            "width": 62.265625,
+            "height": 80.96875,
+            "top": 3067.765625,
+            "right": 241.984375,
+            "bottom": 3148.734375,
+            "left": 179.71875
+          },
+          "viewbox": "0 0 183 238"
+        }
+      ],
+      "story": {
+        "inside": true,
+        "height": 88,
+        "rowDirection": "row",
+        "mascotWidth": 64,
+        "font": "16px"
+      },
+      "summaryHeads": [
+        {
+          "text": "From Feedback to Shared Impact",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Three Interconnected Feedback Loop",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Cross-Team Collaboration",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Participation and Knowledge Sharing",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Answering Our Opening Questions",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        },
+        {
+          "text": "Reflection and Outlook",
+          "border": "0px",
+          "bg": "rgba(0, 0, 0, 0)",
+          "shadow": "none"
+        }
+      ],
+      "pathogens": [
+        {
+          "text": "respiratory syncytial virus",
+          "style": "italic"
+        },
+        {
+          "text": "human metapneumovirus subtype B",
+          "style": "italic"
+        },
+        {
+          "text": "Streptococcus pneumoniae",
+          "style": "italic"
+        },
+        {
+          "text": "Bordetella pertussis",
+          "style": "italic"
+        },
+        {
+          "text": "Haemophilus influenzae",
+          "style": "italic"
+        }
+      ],
+      "upright": true,
+      "captions": [
+        {
+          "text": "Figure 1. From people’s needs to a better ByeGerm: the Human Practices feedback loop",
+          "kind": "Figure",
+          "n": 1,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 2. Five questions that shaped the Human Practices journey",
+          "kind": "Figure",
+          "n": 2,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 1. Human Practices feedback and Dry Lab improvements",
+          "kind": "Table",
+          "n": 1,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 2. Human Practices feedback and Wet Lab improvements",
+          "kind": "Table",
+          "n": 2,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 3. Human Practices feedback and Software improvements",
+          "kind": "Table",
+          "n": 3,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 4. Human Practices feedback and Hardware improvements",
+          "kind": "Table",
+          "n": 4,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 3. Activity types used throughout the Human Practices journey",
+          "kind": "Figure",
+          "n": 3,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 4. Stakeholder relationships across three circles",
+          "kind": "Figure",
+          "n": 4,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 5. Power–interest matrix of the project stakeholders",
+          "kind": "Figure",
+          "n": 5,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 6. C.A.R.E.S. Ethical Evaluation Framework",
+          "kind": "Figure",
+          "n": 6,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 7. Listening to the Public",
+          "kind": "Figure",
+          "n": 7,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 8. Listening to the Public — questionnaire format",
+          "kind": "Figure",
+          "n": 8,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 9. Listening to the Public",
+          "kind": "Figure",
+          "n": 9,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 10. Listening to the Public — participant responses",
+          "kind": "Figure",
+          "n": 10,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 11. Public concern about respiratory infections across age groups",
+          "kind": "Figure",
+          "n": 11,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 12. Perceived vulnerability of different age groups to severe respiratory infections",
+          "kind": "Figure",
+          "n": 12,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 13. Perceived value of portable testing for young children and older family members",
+          "kind": "Figure",
+          "n": 13,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 14. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 14,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 15. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 15,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 16. Random Interviews at the Third Hospital of Harbin Medical University",
+          "kind": "Figure",
+          "n": 16,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 17. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 17,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 18. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 18,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 19. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 19,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 20. Dialogue with Nursing Home Care Workers and Residents",
+          "kind": "Figure",
+          "n": 20,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 21. Dialogue with Kindergarten Teachers and Children",
+          "kind": "Figure",
+          "n": 21,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 22. Dialogue with Kindergarten Teachers and Children",
+          "kind": "Figure",
+          "n": 22,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 23. From community voices to practical respiratory pathogen screening",
+          "kind": "Figure",
+          "n": 23,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 24. Dialogue with Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 24,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 25. Roundtable with Public Health and Disease Control Experts",
+          "kind": "Figure",
+          "n": 25,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 26. Roundtable with Public Health and Disease Control Experts",
+          "kind": "Figure",
+          "n": 26,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 27. Deputy Dean Changgui Kou of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 27,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 28. Respiratory Medicine: Dr. Junyao Li",
+          "kind": "Figure",
+          "n": 28,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 29. Laboratory Medicine: Dr. Huimin Li",
+          "kind": "Figure",
+          "n": 29,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 30. Infectious Diseases: Dr. Shangwei Ji",
+          "kind": "Figure",
+          "n": 30,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 31. Pediatrics: Dr. Xin Tian",
+          "kind": "Figure",
+          "n": 31,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 32. Geriatric Medicine: Dr. Lihong Huang",
+          "kind": "Figure",
+          "n": 32,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 33. Interview with Professor X. Chris Le of the University of Alberta",
+          "kind": "Figure",
+          "n": 33,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 34. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 34,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 35. Interview with Professor Tianyi Zhao of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 35,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 36. Discussion with Professor Xing-Fang Li at the conference",
+          "kind": "Figure",
+          "n": 36,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 37. Interview with Professor Xing-Fang Li",
+          "kind": "Figure",
+          "n": 37,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 38. Interview with Professor Tsan-Yuk Lam of the University of Hong Kong",
+          "kind": "Figure",
+          "n": 38,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 39. Dry-Lab Workflow for Target Optimization",
+          "kind": "Figure",
+          "n": 39,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 40. Interview with Professor Zheng Hu of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 40,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 41. Interview with Professor Yingtao Zhang of the Harbin Institute of Technology",
+          "kind": "Figure",
+          "n": 41,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 42. First-generation ByeGerm instrument: external dimensions and internal modules",
+          "kind": "Figure",
+          "n": 42,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 43. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 43,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 44. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 44,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 45,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+          "kind": "Figure",
+          "n": 46,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 47. Interview with Professor Ying Mou of Zhejiang University",
+          "kind": "Figure",
+          "n": 47,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 48. Second-generation ByeGerm instrument: external design and multichannel module architecture",
+          "kind": "Figure",
+          "n": 48,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 49. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 49,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 50. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 50,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 51. The “Auditory and Tactile” Blind-Testing Box for Older Adults",
+          "kind": "Figure",
+          "n": 51,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 52. The “Monster Capture” Sticker Wall for Children",
+          "kind": "Figure",
+          "n": 52,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 53. The “Monster Capture” Sticker Wall for Children",
+          "kind": "Figure",
+          "n": 53,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 54. Children’s feedback on the ByeGerm screening experience",
+          "kind": "Figure",
+          "n": 54,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 55. The Retrospective Empathy Survey for Patients",
+          "kind": "Figure",
+          "n": 55,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 56. Responsible adoption and Human Practices-driven entrepreneurial translation",
+          "kind": "Figure",
+          "n": 56,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 57. Interview with Department Head Xie Linshen",
+          "kind": "Figure",
+          "n": 57,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 58. Meeting with Zhang Jinming of Guangzhou Zhikang Medical",
+          "kind": "Figure",
+          "n": 58,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 59. Age-Adapted Education — dialogue with an older adult",
+          "kind": "Figure",
+          "n": 59,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 60. Children — reducing unfamiliarity and fear of the device",
+          "kind": "Figure",
+          "n": 60,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 61. Screening acceptance among older adults and children before and after education",
+          "kind": "Figure",
+          "n": 61,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 62. Respiratory Virus Testing Strategy Cards",
+          "kind": "Figure",
+          "n": 62,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 63. Device model and interactive experience",
+          "kind": "Figure",
+          "n": 63,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 64. Public health education in a county-level classroom",
+          "kind": "Figure",
+          "n": 64,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 65. ByeGerm framework for responsible translation",
+          "kind": "Figure",
+          "n": 65,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 66. Priority settings and criteria for responsible testing",
+          "kind": "Figure",
+          "n": 66,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 5. Stakeholder needs, feedback, and corresponding system responses",
+          "kind": "Table",
+          "n": 5,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 67. From assay validation to a minimum viable testing and service system",
+          "kind": "Figure",
+          "n": 67,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 68. Validation stages and evidence boundaries",
+          "kind": "Figure",
+          "n": 68,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 69. A Public Health Perspective — Vice President Ye Wei of Nanjing Second Hospital",
+          "kind": "Figure",
+          "n": 69,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 70. Evidence-gated translation roadmap with explicit rollback conditions",
+          "kind": "Figure",
+          "n": 70,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+          "kind": "Figure",
+          "n": 71,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 72. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 72,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 73. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 73,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 74. Beyond Mountains and Seas, Sowing Seeds of Hope: Building Scientific Dreams with Students in County-Level Communities",
+          "kind": "Figure",
+          "n": 74,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 75. Wisdom in Silver Years, Science in a New Light: Exploring the Mysteries of Life with Older Adults",
+          "kind": "Figure",
+          "n": 75,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 76. Sound as a Bridge：Listening to the Rhythm of Life: Opening the Door to Science for People with Visual Impairments",
+          "kind": "Figure",
+          "n": 76,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 77. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+          "kind": "Figure",
+          "n": 77,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 78. A Dialogue Across Continents: Envisioning the Future of Science with Young People Around the World",
+          "kind": "Figure",
+          "n": 78,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 79. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+          "kind": "Figure",
+          "n": 79,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 80. Lighting a Spark in the Community: Discussing the Scientific Frontier with Guardians of Public Health",
+          "kind": "Figure",
+          "n": 80,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 81. Professor Li Juan, Former Dean of the School of Public Health, Jilin University",
+          "kind": "Figure",
+          "n": 81,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 82. Professor Xingfang Li",
+          "kind": "Figure",
+          "n": 82,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 83. Professor Ying Mou",
+          "kind": "Figure",
+          "n": 83,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 84. JLU-SPH project presentation at the US-China iGEM Human Practices Summit",
+          "kind": "Figure",
+          "n": 84,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 85. CCiC",
+          "kind": "Figure",
+          "n": 85,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 86. CCiC",
+          "kind": "Figure",
+          "n": 86,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 87. CCiC",
+          "kind": "Figure",
+          "n": 87,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 88. CCiC",
+          "kind": "Figure",
+          "n": 88,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 89. APiC",
+          "kind": "Figure",
+          "n": 89,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 90. APiC",
+          "kind": "Figure",
+          "n": 90,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 91. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 91,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 92. BioAI Agent software demonstration during the inter-team online exchange",
+          "kind": "Figure",
+          "n": 92,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Table 6. Online course timetable for the Summer Dry Lab Camp",
+          "kind": "Table",
+          "n": 6,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 93. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 93,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 94. BioAI Agent Software Exchange & Summer Dry Lab Camp",
+          "kind": "Figure",
+          "n": 94,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 95. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 95,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 96. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 96,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 97. Dialogue with ZJUT-China at the Bio-manufacturing Expo",
+          "kind": "Figure",
+          "n": 97,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 98. Introduction and gameplay instructions for the synthetic biology adaptation of Plants vs. Zombies",
+          "kind": "Figure",
+          "n": 98,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 99. Social Inclusion (Hike with Love · Embrace the Future)",
+          "kind": "Figure",
+          "n": 99,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 100. Social Inclusion (Hike with Love · Embrace the Future)",
+          "kind": "Figure",
+          "n": 100,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 101. From Feedback to Shared Impact",
+          "kind": "Figure",
+          "n": 101,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        },
+        {
+          "text": "Figure 102. Answering Our Opening Questions",
+          "kind": "Figure",
+          "n": 102,
+          "font": "16px",
+          "align": "center",
+          "last": "center"
+        }
+      ],
+      "hints": 2,
+      "removedOverview": true,
+      "sources": [
+        {
+          "caption": "Figure 45. Collecting Feedback from Nursing Homes and Kindergartens",
+          "src": "http://127.0.0.1:5222/assets/Crpi3vmP.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-45.png"
+        },
+        {
+          "caption": "Figure 46. Collecting Feedback from Nursing Homes and Kindergartens",
+          "src": "http://127.0.0.1:5222/assets/BdO8xe95.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-46.png"
+        },
+        {
+          "caption": "Figure 71. Wonderful Building Blocks of Life: Exploring Synthetic Biology with Kindergarten Children",
+          "src": "http://127.0.0.1:5222/assets/DkIjVcWF.png",
+          "href": "http://127.0.0.1:5222/assets/human-practice/revision-1018-20261018/figure-71.png"
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "normalMotionInteractions": [
+    {
+      "width": 1440,
+      "positions": [
+        {
+          "progress": 0.001,
+          "x": 1335.7327880859375,
+          "textX": 1411.7327880859375,
+          "gap": 12,
+          "top": 854.546875
+        },
+        {
+          "progress": 0.501,
+          "x": 908.2327880859375,
+          "textX": 984.2327880859375,
+          "gap": 12,
+          "top": 629.546875
+        },
+        {
+          "progress": 1,
+          "x": 481.59375,
+          "textX": 557.59375,
+          "gap": 12,
+          "top": 404.546875
+        }
+      ],
+      "hint": {
+        "box": {
+          "x": 1026.65625,
+          "y": 500.109375,
+          "width": 26,
+          "height": 33.921875,
+          "top": 500.109375,
+          "right": 1052.65625,
+          "bottom": 534.03125,
+          "left": 1026.65625
+        },
+        "font": "8px",
+        "pointer": "none"
+      },
+      "activitySelection": true,
+      "keyboardFlip": true,
+      "backGap": 2,
+      "returnDifference": 0
+    },
+    {
+      "width": 390,
+      "positions": [
+        {
+          "progress": 0,
+          "x": 320,
+          "textX": 396,
+          "gap": 12,
+          "top": 855.046875
+        },
+        {
+          "progress": 0.5,
+          "x": 56.05500030517578,
+          "textX": 132.05499267578125,
+          "gap": 11.999992370605469,
+          "top": 630.046875
+        },
+        {
+          "progress": 1,
+          "x": -207.94500732421875,
+          "textX": -131.94500732421875,
+          "gap": 12,
+          "top": 405.046875
+        }
+      ],
+      "hint": {
+        "box": {
+          "x": 126,
+          "y": 501.875,
+          "width": 18,
+          "height": 26.25,
+          "top": 501.875,
+          "right": 144,
+          "bottom": 528.125,
+          "left": 126
+        },
+        "font": "8px",
+        "pointer": "none"
+      },
+      "activitySelection": true,
+      "keyboardFlip": true,
+      "backGap": 2,
+      "returnDifference": 0
+    }
+  ],
+  "siteChecks": [
+    {
+      "file": "browser-final.json",
+      "pages": 18,
+      "captions": 382,
+      "pageResults": [
+        {
+          "file": "Eagagement/education.html",
+          "captions": 27,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Eagagement/entrepreneurship.html",
+          "captions": 45,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "homepage/index.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Eagagement/iHP.html",
+          "captions": 108,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Instrument/hardware.html",
+          "captions": 28,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Instrument/model.html",
+          "captions": 32,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Instrument/software.html",
+          "captions": 5,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/contribution.html",
+          "captions": 8,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/description.html",
+          "captions": 9,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/design.html",
+          "captions": 2,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/engineering.html",
+          "captions": 7,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/safety.html",
+          "captions": 7,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Team/member.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/measurement.html",
+          "captions": 51,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/notebook.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/part.html",
+          "captions": 1,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/result.html",
+          "captions": 52,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/protocal.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "browser-mobile-final.json",
+      "pages": 18,
+      "captions": 382,
+      "pageResults": [
+        {
+          "file": "Eagagement/education.html",
+          "captions": 27,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Eagagement/entrepreneurship.html",
+          "captions": 45,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "homepage/index.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Eagagement/iHP.html",
+          "captions": 108,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Instrument/hardware.html",
+          "captions": 28,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Instrument/model.html",
+          "captions": 32,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Instrument/software.html",
+          "captions": 5,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/contribution.html",
+          "captions": 8,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/description.html",
+          "captions": 9,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/design.html",
+          "captions": 2,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/engineering.html",
+          "captions": 7,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Project/safety.html",
+          "captions": 7,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Team/member.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/measurement.html",
+          "captions": 51,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/notebook.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/part.html",
+          "captions": 1,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/result.html",
+          "captions": 52,
+          "overflow": 0,
+          "errors": []
+        },
+        {
+          "file": "Wet-lab/protocal.html",
+          "captions": 0,
+          "overflow": 0,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

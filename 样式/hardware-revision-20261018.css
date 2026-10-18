@@ -1,0 +1,34 @@
+/* The timeline SVG has no intrinsic width: give its fit-content link a width. */
+@layer wiki-format {
+  :root:root body.hardware-page .hw-development-timeline a,
+  :root:root body.hardware-page .hw-operation-workflow a { width: 100% !important; }
+  :root:root body.hardware-page .hw-development-timeline img,
+  :root:root body.hardware-page .hw-operation-workflow img { width: 100% !important; height: auto !important; max-width: 100% !important; max-height: none !important; }
+  :root:root body.hardware-page .hw-analysis-workflow a { width: min(100%,36rem) !important; }
+  :root:root body.hardware-page .hw-analysis-workflow img { width: 100% !important; height: auto !important; max-height: none !important; }
+
+  /* Table 2 is the requested exception to the single-line table-header rule. */
+  :root:root body.hardware-page #hw-requirements .hw-final-paper { container: hw-requirements / inline-size; }
+  :root:root body.hardware-page #hw-requirements .wiki-table-scroll { overflow-x: visible; }
+  :root:root body.hardware-page #hw-requirements-table { min-width: 0 !important; width: 100% !important; table-layout: fixed !important; }
+  :root:root body.hardware-page #hw-requirements-table :is(th,td) { padding: 8px 10px !important; }
+  :root:root body.hardware-page #hw-requirements-table thead .wiki-table-heading { white-space: normal !important; }
+  :root:root body.hardware-page #hw-requirements-table thead th:first-child { width: 25%; }
+  :root:root body.hardware-page #hw-requirements-table thead th:nth-child(2) { width: 34%; }
+  :root:root body.hardware-page #hw-requirements-table caption { margin-bottom: .8rem; }
+}
+
+@container hw-requirements (max-width: 620px) {
+  @layer wiki-format {
+    :root:root body.hardware-page #hw-requirements-table { display: block; border: 0; background: transparent; }
+    :root:root body.hardware-page #hw-requirements-table caption { display: block; }
+    :root:root body.hardware-page #hw-requirements-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    :root:root body.hardware-page #hw-requirements-table tbody { display: grid; gap: 1rem; }
+    :root:root body.hardware-page #hw-requirements-table tbody tr { display: grid; min-width: 0; border: 1px solid #d4bda5; border-radius: 10px; overflow: hidden; }
+    :root:root body.hardware-page #hw-requirements-table tbody :is(th,td) { display: block; width: auto !important; padding: 12px !important; border: 0; border-bottom: 1px solid #d4bda5; }
+    :root:root body.hardware-page #hw-requirements-table tbody th { color: #fffaf5 !important; background: #6a3f24 !important; text-align: center !important; font-weight: 700 !important; }
+    :root:root body.hardware-page #hw-requirements-table tbody th * { color: inherit !important; }
+    :root:root body.hardware-page #hw-requirements-table tbody td::before { content: attr(data-hw-label); display: block; margin-bottom: .4rem; font-weight: 700; }
+    :root:root body.hardware-page #hw-requirements-table tbody td:last-child { border-bottom: 0; }
+  }
+}

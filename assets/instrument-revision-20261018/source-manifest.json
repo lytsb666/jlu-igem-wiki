@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "file": "sources/Software修改1018最终版.docx",
+      "sha256": "cc789ff94c5ba06eb81727d691cc0f2c3ea310fe4c50f130e812e8e891be9890",
+      "bytes": 93158
+    },
+    {
+      "file": "sources/Hardware 修改1018.docx",
+      "sha256": "429c683dc6086180204eb36b3ae83e8ba080c6a191609dd398745f8510aba135",
+      "bytes": 4803857
+    }
+  ],
+  "replacementImage": {
+    "file": "hardware/image-analysis-workflow.jpeg",
+    "source": "Hardware 修改1018.docx",
+    "embeddedPart": "word/media/image6.jpeg",
+    "sha256": "58b655f559feefad4f81907e3f31591e882a4da6f68a9e0aa5eba49138f851b8",
+    "size": [
+      1014,
+      239
+    ]
+  },
+  "notes": [
+    "Other embedded images are location references; their full original bytes remain inside the archived DOCX files.",
+    "Development timeline uses the existing native SVG; its width is repaired without redrawing scientific content."
+  ]
+}

@@ -11,9 +11,41 @@ control.innerHTML = '<span aria-hidden="true">↶</span><span>Back</span>'
 if (document.body) document.body.append(control)
 else document.addEventListener('DOMContentLoaded', () => document.body.append(control), { once: true })
 
-let active = null, positionFrame = 0, returnFrame = 0, stopReturn = null, restoring = false
+let active = null, positionFrame = 0, returnFrame = 0, stopReturn = null, restoring = false, gutterFrame = 0
 const inputs = ['wheel', 'touchstart', 'pointerdown', 'keydown']
 const pagePath = path => path.replace(/(?:\/index)?\.html$/i, '').replace(/\/$/, '')
+const panelSelector = '.lab-section,.hw-section,.sw-section,.edu-section,.hp-content,.protocol-pathogen,.engineering-content,.team-section'
+const panels = new Set()
+const panelObserver = new ResizeObserver(() => scheduleGutters())
+
+function preparePanels() {
+  document.querySelectorAll(`main :is(${panelSelector})`).forEach(panel => {
+    if (panel.parentElement.closest(panelSelector) || panels.has(panel)) return
+    panels.add(panel)
+    panel.classList.add('wiki-return-panel')
+    panelObserver.observe(panel)
+  })
+  scheduleGutters()
+}
+
+function scheduleGutters() {
+  if (gutterFrame) return
+  gutterFrame = requestAnimationFrame(() => {
+    gutterFrame = 0
+    const viewport = document.documentElement.clientWidth
+    for (const panel of panels) {
+      if (!panel.isConnected) { panelObserver.unobserve(panel); panels.delete(panel); continue }
+      const box = panel.getBoundingClientRect()
+      if (!box.width) continue
+      const previous = parseFloat(panel.style.getPropertyValue('--wiki-return-reserve')) || 0
+      const reserve = Math.max(0, Math.ceil(50 - (viewport - box.right - previous)))
+      if (Math.abs(reserve - previous) > .5) panel.style.setProperty('--wiki-return-reserve', `${reserve}px`)
+    }
+    schedulePosition()
+  })
+}
+
+preparePanels()
 
 function readingSpot() {
   const article = document.querySelector('.ihp-content, .entre-content-flow, .article-flow, .edu-content, .sw-content, main')
@@ -30,7 +62,6 @@ function readingSpot() {
 }
 
 function dismiss() {
-  active?.slot?.remove()
   active = null
   control.hidden = true
 }
@@ -43,53 +74,25 @@ function destinationBlock(target) {
     || target.closest('p,li,figure') || target
 }
 
-function overlapsText(element, area) {
-  const range = document.createRange()
-  range.selectNodeContents(element)
-  return [...range.getClientRects()].some(r => r.width && r.height && r.left < area.right && r.right > area.left && r.top < area.bottom && r.bottom > area.top)
-}
-
 function position() {
   positionFrame = 0
   if (!active) return
   const block = destinationBlock(active.target)
   const box = block.getBoundingClientRect()
-  const visibleBox = active.slot?.getBoundingClientRect() || box
+  const visibleBox = box
   if (!box.width || block.closest('[hidden]')) { control.hidden = true; return }
   if (!active.ready || visibleBox.bottom < 76 || visibleBox.top > innerHeight) {
     control.hidden = true
     if (active.shown) dismiss()
     return
   }
-  let left, top
-  if (active.slot) {
-    const row = active.slot.getBoundingClientRect()
-    left = Math.min(innerWidth - 88, row.right - 82)
-    top = row.top + 2
-  } else {
-    const style = getComputedStyle(block)
-    left = box.right - (parseFloat(style.paddingRight) || 0) - 82
-    top = box.top + Math.max(0, Math.min(14, (box.height - 36) / 2))
-    const candidate = { left: left - 10, right: left + 82, top, bottom: top + 36 }
-    if (left < 8 || overlapsText(block, candidate)) {
-      // Prefer a true outside gutter; narrow pages get a reserved row so the
-      // control never obscures prose, figures, directory entries or buttons.
-      if (innerWidth - box.right >= 98) left = box.right + 8
-      else {
-        const row = document.createElement('div')
-        row.className = 'wiki-return-slot'
-        row.setAttribute('aria-hidden', 'true')
-        const host = block.parentElement?.tagName === 'HEADER' ? block.parentElement : block
-        if (host.tagName === 'LI') host.append(row)
-        else host.after(row)
-        active.slot = row
-        schedulePosition()
-        return
-      }
-    }
-  }
-  if (active.shown && (top + 36 < 76 || top > innerHeight)) { dismiss(); return }
-  control.style.left = `${Math.max(8, left)}px`
+  const panel = block.closest('.wiki-return-panel') || active.target.closest('.wiki-return-panel')
+  if (!panel) { control.hidden = true; return }
+  const left = panel.getBoundingClientRect().right + 2
+  const top = box.top + Math.max(0, Math.min(14, (box.height - 48) / 2))
+  if (left + 44 > document.documentElement.clientWidth - 2) { control.hidden = true; scheduleGutters(); return }
+  if (active.shown && (top + 48 < 76 || top > innerHeight)) { dismiss(); return }
+  control.style.left = `${left}px`
   control.style.top = `${top}px`
   control.hidden = Boolean(document.fullscreenElement || document.querySelector('dialog[open]'))
   active.shown = !control.hidden
@@ -110,7 +113,7 @@ document.addEventListener('click', event => {
   stopReturn?.()
   const previous = readingSpot()
   dismiss()
-  active = { target, previous, ready: false, shown: false, slot: null }
+  active = { target, previous, ready: false, shown: false }
   const jump = active
   // Shared navigation signals settlement; this also covers page-owned links.
   setTimeout(() => { if (active === jump) { active.ready = true; schedulePosition() } }, reduced.matches ? 80 : 1200)
@@ -149,10 +152,11 @@ control.addEventListener('click', event => {
   returnFrame = requestAnimationFrame(restore)
 })
 addEventListener('scroll', schedulePosition, { passive: true })
-addEventListener('resize', schedulePosition, { passive: true })
-document.addEventListener('toggle', schedulePosition, true)
+addEventListener('resize', scheduleGutters, { passive: true })
+document.addEventListener('toggle', () => { preparePanels(); schedulePosition() }, true)
 document.addEventListener('load', schedulePosition, true)
 document.addEventListener('close', schedulePosition, true)
 document.addEventListener('fullscreenchange', schedulePosition)
 if (document.body) new ResizeObserver(schedulePosition).observe(document.body)
+if (document.body) new MutationObserver(preparePanels).observe(document.body, { childList: true, subtree: true })
 addEventListener('pagehide', () => { stopReturn?.(); cancelAnimationFrame(positionFrame); dismiss() })

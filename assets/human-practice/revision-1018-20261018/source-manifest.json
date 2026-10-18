@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "file": "sources/ihp修改10.18docx.docx",
+      "bytes": 5244767,
+      "sha256": "ba2edbe08072c97ea43399d1a98c2df04494c2e8596157195cba207858cf19ff"
+    },
+    {
+      "file": "sources/10.18配图.pptx",
+      "bytes": 4544448,
+      "sha256": "b9ab31f24dfe655efa5281883f0494dfe0d0e23e8e6cda2cf0f93fdfcbd6c043"
+    }
+  ],
+  "media": [
+    {
+      "file": "click-baize.png",
+      "source": "sources/ihp修改10.18docx.docx / word/media/image13.png",
+      "sha256": "04ec1d1b0cc6a528754cf44759abad11ea82964a006bd9e142c0b653812ce6b2"
+    },
+    {
+      "file": "figure-45.png",
+      "source": "sources/ihp修改10.18docx.docx / word/media/image15.png",
+      "sha256": "4396ede2d4d14078f3cbfe6cf5209b0a508567f1b3e298617bf95724108dce30"
+    },
+    {
+      "file": "figure-46.png",
+      "source": "sources/ihp修改10.18docx.docx / word/media/image16.png",
+      "sha256": "8a93ee30cca09728b2aabc81d684e295a5fe60a679c74eb6fb30d8992ad92ff4"
+    },
+    {
+      "file": "figure-71.png",
+      "source": "sources/ihp修改10.18docx.docx / word/media/image17.png",
+      "sha256": "dacd1c7fd5a4ec9e2cc4c2629a006c99540c91583aa1432f43941fbe8a545ac1"
+    },
+    {
+      "file": "feedback-loops.png",
+      "source": "sources/10.18配图.pptx / slide 1 / native PowerPoint PNG export",
+      "size": [
+        3200,
+        2670
+      ],
+      "sha256": "176459ec1734e502e34d9c74be1cc0120f45119b55e450065315934c0d56adb0"
+    }
+  ],
+  "existingTransparentMascot": "a  图片/home-story/cover-zoom/cover-mascot.png"
+}

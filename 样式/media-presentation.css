@@ -1,0 +1,36 @@
+/* This layer is independent of text, captions and the outside Back control. */
+@layer wiki-format {
+  :root:root[data-wiki-media-presentation="20261018"] body main [data-wiki-media-host],
+  :root:root[data-wiki-media-presentation="20261018"] body main figure[data-wiki-media-figure] {
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+  :root:root[data-wiki-media-presentation="20261018"] body main img[data-wiki-media-paper][data-wiki-media-paper] {
+    filter: var(--wiki-media-paper-filter, url(#wiki-paper-alpha-20261018)) !important;
+  }
+  :root:root[data-wiki-media-presentation="20261018"] body main [data-wiki-media-window][data-wiki-media-window] {
+    display: block !important;
+    position: relative !important;
+    width: min(100%, var(--wiki-media-native-width), var(--wiki-media-max-width), calc(var(--wiki-media-max-height) * var(--wiki-media-ratio))) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: var(--wiki-media-ratio) !important;
+    overflow: hidden !important;
+    margin-inline: auto !important;
+  }
+  :root:root[data-wiki-media-presentation="20261018"] body main [data-wiki-media-window][data-wiki-media-window] > img[data-wiki-media-cropped][data-wiki-media-cropped] {
+    display: block !important;
+    position: absolute !important;
+    width: var(--wiki-media-image-width) !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    left: var(--wiki-media-left) !important;
+    top: var(--wiki-media-top) !important;
+    margin: 0 !important;
+    translate: none !important;
+    object-fit: contain !important;
+  }
+}

@@ -1,8 +1,8 @@
 /* The return control follows its destination in document space. */
 :root body .wiki-reading-return {
-  position: fixed; z-index: 850; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
-  box-sizing: border-box; width: 82px; height: 36px; margin: 0; padding: 6px 8px;
-  border: 1px solid #8e6040; border-radius: 9px; background: #6f4e37; color: #fffaf5;
+  position: fixed; z-index: 850; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  box-sizing: border-box; width: 44px; height: 48px; margin: 0; padding: 4px 2px;
+  border: 1px solid #8e6040; border-radius: 0 9px 9px 0; background: #6f4e37; color: #fffaf5;
   box-shadow: 0 3px 0 #cfb293; cursor: pointer; touch-action: manipulation;
   transition: background .18s ease, box-shadow .18s ease;
 }
@@ -10,11 +10,19 @@
 :root body .wiki-reading-return:hover { background: #8c6044; box-shadow: 0 4px 10px #54351d40; }
 :root body .wiki-reading-return:active { background: #54351d; box-shadow: none; }
 :root body .wiki-reading-return:focus-visible { outline: 3px solid #c5925b; outline-offset: 3px; }
-:root body .wiki-return-slot { height: 44px; min-width: 0; clear: both; }
 @layer wiki-typography {
   :root:root body .wiki-reading-return, :root:root body .wiki-reading-return span { font-size: 12pt !important; line-height: 1 !important; font-weight: 700 !important; }
 }
 @layer wiki-format {
   :root:root body .wiki-reading-return, :root:root body .wiki-reading-return span { color: #fffaf5 !important; }
+  :root:root body main .wiki-return-panel {
+    box-sizing: border-box !important;
+    width: calc(100% - var(--wiki-return-reserve, 0px)) !important;
+    max-width: calc(100% - var(--wiki-return-reserve, 0px)) !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  :root:root body main .team-section.wiki-return-panel { width: calc(var(--wiki-main-width) - var(--wiki-return-reserve, 0px)) !important; margin-inline: auto !important; }
+  :root:root body main .wiki-content-label { text-align: left !important; text-transform: none !important; letter-spacing: normal !important; }
 }
-@media print { :root body .wiki-reading-return, :root body .wiki-return-slot { display: none !important; } }
+@media print { :root body .wiki-reading-return { display: none !important; } }

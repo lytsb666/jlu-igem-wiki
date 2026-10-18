@@ -1,6 +1,7 @@
 import { createCarousel } from './carousel.js'
 import './ihp-revision-5.js'
 import './ihp-final-20261017.js'
+import './ihp-revision-1018.js'
 import stakeholderStrategy from '../assets/human-practice/revision-3-20261016/stakeholder-strategy.png'
 
 // Show only the four original cards and connecting arrows. Keep the source

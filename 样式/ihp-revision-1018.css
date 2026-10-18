@@ -1,0 +1,78 @@
+/* The 10.18 manuscript changes presentation, never the research evidence. */
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-overview-illustration {
+    width: max(120px, calc(min(100%, 42rem) - 2cm)) !important;
+    max-width: 100% !important;
+  }
+  :root:root body.ihp-manuscript-page [data-ihp-chapter="summary-reflection"] .ihp-heading-two {
+    margin: 1.8rem 0 1rem !important; padding: 0 !important;
+    border: 0 !important; border-radius: 0 !important;
+    background: transparent !important; box-shadow: none !important;
+  }
+  :root:root body.ihp-manuscript-page [data-ihp-chapter="summary-reflection"] .ihp-heading-two::before,
+  :root:root body.ihp-manuscript-page [data-ihp-chapter="summary-reflection"] .ihp-heading-two::after { content: none !important; }
+  :root:root body.ihp-manuscript-page .ihp-health-quote--1018 {
+    box-sizing: border-box; height: var(--ihp-quote-original-height) !important;
+    display: flex; flex-direction: column; justify-content: center; gap: 8px;
+    padding-block: 8px !important;
+  }
+  :root:root body.ihp-manuscript-page .ihp-health-quote--1018 p { flex: 0 0 auto; margin: 0 !important; }
+  :root:root body.ihp-manuscript-page .ihp-health-quote--1018 p:first-child { text-align: center !important; text-align-last: center !important; }
+  :root:root body.ihp-manuscript-page .ihp-health-quote--1018 p:last-of-type { text-align: right !important; text-align-last: right !important; }
+  :root:root body.ihp-manuscript-page .ihp-quote-mascot {
+    position: absolute; left: 12px; bottom: 7px;
+    width: 64px !important; height: auto !important;
+    overflow: hidden; pointer-events: none; animation: none !important;
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story {
+    height: auto !important; min-height: 0; margin: 1.5rem 0 .5rem;
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__stage {
+    display: block !important; position: relative !important; top: auto !important;
+    height: auto !important; min-height: 88px !important; padding: 0 !important;
+    border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important;
+    overflow-x: auto !important; overflow-y: hidden !important; scrollbar-width: none;
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__stage::-webkit-scrollbar { display: none; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__stage:focus-visible { outline: 2px dashed #8b603a; outline-offset: 3px; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__row {
+    display: flex; align-items: center; gap: 12px; width: max-content; min-height: 88px;
+    transform: translateX(var(--walk-offset, 0px));
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__stage:focus-within .ihp-walking-story__row { transform: none; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__traveller {
+    position: static !important; flex: 0 0 64px !important; width: 64px !important;
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__message { clip-path: none !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__message p {
+    margin: 0 !important; white-space: nowrap; line-height: 1.65;
+    text-align: center !important; text-align-last: center !important;
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story .ihp-walking-story__message p { font-size: 12pt !important; }
+  :root:root body.ihp-manuscript-page .ihp-click-hint {
+    position: absolute; right: -10px; bottom: -14px; z-index: 5;
+    display: flex; flex-direction: column; align-items: center; gap: 1px;
+    width: clamp(18px, 2vw, 26px); pointer-events: none;
+  }
+  :root:root body.ihp-manuscript-page .ihp-click-hint img {
+    width: 100% !important; height: auto !important; margin: 0 !important;
+    border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important;
+  }
+}
+@layer wiki-typography {
+  :root:root body.ihp-manuscript-page .ihp-walking-story .ihp-walking-story__message p { font-size: 12pt !important; }
+  :root:root body.ihp-manuscript-page .ihp-listen-intro,
+  :root:root body.ihp-manuscript-page .ihp-listen-intro * { font-style: normal !important; }
+  :root:root body.ihp-manuscript-page .ihp-click-hint span { font-size: 8px !important; line-height: 1; font-weight: 700; }
+}
+@media (max-width: 550px) {
+  @layer wiki-format {
+    :root:root body.ihp-manuscript-page .ihp-quote-mascot { left: 5px; bottom: 6px; width: 32px !important; }
+    :root:root body.ihp-manuscript-page .ihp-health-quote--1018 p:last-of-type { padding-left: 26px; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  @layer wiki-format {
+    :root:root body.ihp-manuscript-page .ihp-walking-story__row { transform: none; }
+  }
+}
