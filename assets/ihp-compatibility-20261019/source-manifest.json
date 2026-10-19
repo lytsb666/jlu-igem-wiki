@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-19",
+  "method": "Original SVG rendered by local Chromium with its original Calibri font at 3x resolution. No image generation, rewriting, resizing of diagram content, or changes to source media.",
+  "fontFile": "Windows Calibri (calibri.ttf)",
+  "fontSha256": "57e93ff143572bcc092c1f56202d43ddc07bb119aa104c6d7af163470fb551f6",
+  "sources": [
+    {
+      "source": "assets/human-practice/revision-5-20261017/questions-display.svg",
+      "sourceSha256": "475fa367d90fe865cedbb992f145df8196f70f3f7810d095d70e15b5c46fcd25",
+      "output": "assets/ihp-compatibility-20261019/five-questions.png",
+      "outputSha256": "5baf0bbe9540da74836657257bd972d3939c2542e2a2437de2f2658f88d1047f",
+      "width": 3480,
+      "height": 1971
+    },
+    {
+      "source": "assets/site-final-revision-20261017/ihp/opening-answers.svg",
+      "sourceSha256": "c6cb662b7b459af6afbaf4cff5948da5346820021e3f06f3c1ffb2b36d998cff",
+      "output": "assets/ihp-compatibility-20261019/opening-answers.png",
+      "outputSha256": "cafedaabd3ef9ec60ddceab7faab24473bd9e10609e8a1630333877bde5e4d31",
+      "width": 4626,
+      "height": 2808
+    }
+  ]
+}

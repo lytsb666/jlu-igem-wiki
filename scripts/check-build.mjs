@@ -22,7 +22,7 @@ for (const file of files) {
   if (/(?:^|\/)(?:\.[^/]+|node_modules|server|functions)(?:\/|$)|(?:^|\/)_worker\.js(?:\/|$)|\.(?:map|pem|key)$/.test(name)) report.unsafe.push(name)
   if (!name.endsWith('.html')) continue
   report.htmlPages++
-  for (const match of readFileSync(file, 'utf8').matchAll(/\s(?:href|src|poster|data-full-src)=["']([^"']+)["']/g)) {
+  for (const match of readFileSync(file, 'utf8').matchAll(/\s(?:href|src|poster|data-full-src|data-story-src|data-media-src)=["']([^"']+)["']/g)) {
     const reference = match[1].split(/[?#]/)[0]
     if (!reference || /^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(reference)) continue
     report.references++

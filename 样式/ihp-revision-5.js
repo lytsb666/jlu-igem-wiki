@@ -5,8 +5,7 @@ import './ihp-revision-10.css'
 import data from '../assets/human-practice/revision-7-20261017/explorer-data.json'
 import feedbackTables from '../assets/human-practice/revision-8-20261017/feedback-tables.json'
 import photoDimensions from '../assets/human-practice/revision-6-20261017/activity-photo-dimensions.json'
-import questionDisplay from '../assets/human-practice/revision-5-20261017/questions-display.svg'
-import questionOriginal from '../assets/human-practice/revision-5-20261017/questions-original.svg'
+import questionDisplay from '../assets/ihp-compatibility-20261019/five-questions.png'
 import activityMapDisplay from '../assets/human-practice/revision-7-20261017/activity-map-display.svg'
 import activityMapOriginal from '../assets/human-practice/revision-7-20261017/activity-map-original.svg'
 import activityTypesDisplay from '../assets/human-practice/revision-5-20261017/activity-types-display.svg'
@@ -24,7 +23,7 @@ const records = new Map(data.records.map(record => [record.number, record]))
 const hoverPointer = matchMedia('(hover: hover) and (pointer: fine)')
 
 for (const [selector, display, original] of [
-  ['.ihp-evolution-map', questionDisplay, questionOriginal],
+  ['.ihp-evolution-map', questionDisplay, questionDisplay],
   ['.ihp-activity-explorer', activityMapDisplay, activityMapOriginal],
   ['.ihp-activity-types', activityTypesDisplay, activityTypesOriginal],
 ]) {

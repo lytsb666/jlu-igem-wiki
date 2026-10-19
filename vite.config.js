@@ -10,6 +10,11 @@ import {
 import { dirname, isAbsolute, resolve, relative, sep } from 'node:path'
 
 const root = resolve(import.meta.dirname)
+const buildDirectory = resolve(root, process.env.WIKI_BUILD_DIR || 'dist')
+const buildRelative = relative(root, buildDirectory)
+if (!buildRelative || buildRelative === '..' || buildRelative.startsWith(`..${sep}`) || isAbsolute(buildRelative)) {
+  throw new Error('Build output must be a child directory of this workspace.')
+}
 const ignoredDirectories = new Set(['node_modules', 'dist', '.git', 'tmp'])
 
 function collectHtmlFiles(directory) {
@@ -45,7 +50,7 @@ function copyLinkedAssets(clientDirectory) {
   for (const sourcePage of Object.values(input)) {
     const builtPage = resolve(clientDirectory, relative(root, sourcePage))
     const html = readFileSync(builtPage, 'utf8')
-    for (const match of html.matchAll(/\s(?:href|src|poster|data-full-src)=["']([^"']+)["']/g)) {
+    for (const match of html.matchAll(/\s(?:href|src|poster|data-full-src|data-story-src|data-media-src)=["']([^"']+)["']/g)) {
       const reference = match[1].split(/[?#]/)[0]
       if (!reference || /^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(reference)) continue
       const path = decodeURIComponent(reference)
@@ -75,18 +80,22 @@ function removeGitMetadata(directory) {
 }
 
 function sitesOutput() {
+  let buildFailed = false
   return {
     name: 'sites-output',
     apply: 'build',
     buildStart() {
-      rmSync(resolve(root, 'dist'), { recursive: true, force: true })
+      buildFailed = false
+      rmSync(buildDirectory, { recursive: true, force: true })
     },
+    buildEnd(error) { buildFailed = Boolean(error) },
     closeBundle() {
-      const clientDirectory = resolve(root, 'dist', 'client')
+      if (buildFailed) return
+      const clientDirectory = resolve(buildDirectory, 'client')
       copyLinkedAssets(clientDirectory)
       removeGitMetadata(clientDirectory)
-      const serverDirectory = resolve(root, 'dist', 'server')
-      const metadataDirectory = resolve(root, 'dist', '.openai')
+      const serverDirectory = resolve(buildDirectory, 'server')
+      const metadataDirectory = resolve(buildDirectory, '.openai')
 
       mkdirSync(serverDirectory, { recursive: true })
       mkdirSync(metadataDirectory, { recursive: true })
@@ -105,7 +114,7 @@ function sitesOutput() {
 export default {
   plugins: [sitesOutput()],
   build: {
-    outDir: 'dist/client',
+    outDir: resolve(buildDirectory, 'client'),
     rollupOptions: {
       input,
       output: {

@@ -16,7 +16,7 @@ if (story) {
   const campfirePeopleSource = story.querySelector('.campfire-people-source')
   const instrumentScene = story.querySelector('.instrument-scene')
   const coverKeyframes = [...story.querySelectorAll('.cover-keyframe')]
-  const coverFrameReady = coverKeyframes.map(image => image.complete && image.naturalWidth > 0)
+  const coverFrameReady = coverKeyframes.map(image => !image.dataset.storySrc && image.complete && image.naturalWidth > 0)
   const chapters = [...story.querySelectorAll('[data-chapter]')]
   // Neighboring scenes meet at a shared tone, feathered over their own art.
   // Separate decoration avoids replacing scene-specific background layers.
@@ -330,7 +330,7 @@ if (story) {
   function prepareCampfirePeople() {
     if (!campfirePeople || !campfirePeopleSource) return
 
-    const render = () => {
+    const render = async () => {
       const width = campfirePeopleSource.naturalWidth
       const height = campfirePeopleSource.naturalHeight
       if (!width || !height) return
@@ -350,6 +350,8 @@ if (story) {
         const queue = new Int32Array(width * height)
         let head = 0
         let tail = 0
+        let sliceStarted = performance.now()
+        const yieldTask = () => new Promise(resolve => setTimeout(resolve, 0))
 
         const enqueue = (index) => {
           if (visited[index]) return
@@ -382,9 +384,17 @@ if (story) {
           if (x < width - 1) enqueue(index + 1)
           if (index >= width) enqueue(index - width)
           if (index < width * (height - 1)) enqueue(index + width)
+          if ((head & 16383) === 0 && performance.now() - sliceStarted > 8) {
+            await yieldTask()
+            sliceStarted = performance.now()
+          }
         }
 
         for (let index = 0; index < visited.length; index += 1) {
+          if ((index & 65535) === 0 && performance.now() - sliceStarted > 8) {
+            await yieldTask()
+            sliceStarted = performance.now()
+          }
           if (!visited[index]) continue
           const offset = index * 4
           const luminance = (data[offset] + data[offset + 1] + data[offset + 2]) / 3
@@ -481,7 +491,8 @@ if (story) {
       const translateY = (motion.target[1] - motion.focus[1]) * travel
       const currentIsReady = coverFrameReady[currentFrame] !== false
       const incomingIsReady = incomingFrame >= 0 && coverFrameReady[incomingFrame] !== false
-      const safeCurrentFrame = currentIsReady ? currentFrame : Math.max(0, currentFrame - 1)
+      let safeCurrentFrame = currentFrame
+      while (safeCurrentFrame > 0 && !coverFrameReady[safeCurrentFrame]) safeCurrentFrame -= 1
       const isCurrent = index === safeCurrentFrame
       const isIncoming = incomingIsReady && index === incomingFrame
       const isVisible = reduce ? index === 0 : isCurrent || isIncoming
@@ -524,6 +535,7 @@ if (story) {
     const distance = Math.max(1, story.offsetHeight - viewportHeight)
     const progress = clamp(-rect.top / distance)
     const units = progress * totalUnits
+    prepareForProgress(units)
     const coverProgress = clamp(units / coverUnits)
     const worldProgress = range(units, coverUnits, coverUnits + worldUnits)
     const maxPan = Math.max(0, worldHeight - viewportHeight)
@@ -578,10 +590,16 @@ if (story) {
   }
 
   function decodeImage(image) {
-    const loaded = image.complete ? Promise.resolve() : new Promise(resolve => {
+    const deferred = image.dataset.storySrc
+    const loaded = !deferred && image.complete ? Promise.resolve() : new Promise(resolve => {
       image.addEventListener('load', resolve, {once: true})
       image.addEventListener('error', resolve, {once: true})
     })
+    if (deferred) {
+      image.fetchPriority = 'auto'
+      image.src = deferred
+      delete image.dataset.storySrc
+    }
     return loaded.then(() => image.naturalWidth && image.decode ? image.decode().catch(() => undefined) : undefined)
   }
 
@@ -673,15 +691,26 @@ if (story) {
   })
 
   const cardsFront = new Image()
-  cardsFront.src = new URL('../a  图片/home-story/final-20261012/card-hospital.webp', import.meta.url).href
+  cardsFront.dataset.storySrc = new URL('../a  图片/home-story/final-20261012/card-hospital.webp', import.meta.url).href
   const cardsFrontOthers = [
-    new URL('../a  图片/home-story/final-20261012/card-care-home.webp', import.meta.url),
-    new URL('../a  图片/home-story/final-20261012/card-kindergarten.webp', import.meta.url),
-    new URL('../a  图片/home-story/final-20261012/card-home.webp', import.meta.url),
-  ].map(url => { const image = new Image(); image.src = url.href; return image })
+    new URL('../a  图片/home-story/final-20261012/card-care-home.webp', import.meta.url).href,
+    new URL('../a  图片/home-story/final-20261012/card-kindergarten.webp', import.meta.url).href,
+    new URL('../a  图片/home-story/final-20261012/card-home.webp', import.meta.url).href,
+  ].map(url => { const image = new Image(); image.dataset.storySrc = url; return image })
   const cardsBack = new Image()
-  cardsBack.src = new URL('../a  图片/home-story/cards/cards-back.jpg', import.meta.url).href
-  chapters.forEach(chapter => {
+  cardsBack.dataset.storySrc = new URL('../a  图片/home-story/cards/cards-back.jpg', import.meta.url).href
+  const coverLoads = new Set(), chapterLoads = new WeakSet()
+  let worldLoading = false
+  function prepareCover(index) {
+    const image = coverKeyframes[index]
+    if (!image || coverLoads.has(index)) return
+    coverLoads.add(index)
+    decodeImage(image).then(() => { coverFrameReady[index] = image.naturalWidth > 0; requestUpdate() })
+  }
+  function prepareChapter(index) {
+    const chapter = chapters[index]
+    if (!chapter || chapterLoads.has(chapter)) return
+    chapterLoads.add(chapter)
     const images = [...chapter.querySelectorAll('img')]
     if (chapter.classList.contains('home-chapter--cards')) images.push(cardsFront, ...cardsFrontOthers, cardsBack)
     Promise.all(images.map(decodeImage)).then(() => {
@@ -691,15 +720,35 @@ if (story) {
       chapterProgressCache.delete(chapter)
       requestUpdate()
     })
-  })
-  Promise.all([...worldScene.querySelectorAll('img')].map(decodeImage)).then(() => {
-    worldReady = world.naturalWidth > 0
-    refreshLayout()
-    requestUpdate()
-  })
-  coverKeyframes.forEach((image, index) => {
-    decodeImage(image).then(() => { coverFrameReady[index] = image.naturalWidth > 0; requestUpdate() })
-  })
+  }
+  function prepareWorld() {
+    if (worldLoading) return
+    worldLoading = true
+    const images = [...worldScene.querySelectorAll('img'), ...story.querySelectorAll('.world-frame-overlay img')].filter(image => !image.closest('[data-chapter]'))
+    Promise.all(images.map(decodeImage)).then(() => {
+      worldReady = world.naturalWidth > 0
+      refreshLayout()
+      prepareCampfirePeople()
+      requestUpdate()
+    })
+  }
+  function prepareForProgress(units) {
+    const coverProgress = clamp(units / coverUnits)
+    const motion = range(coverProgress, .02, .90)
+    let frame = 0
+    coverFrameBlends.forEach(([start], index) => { if (motion >= start) frame = index + 1 })
+    prepareCover(frame)
+    if (coverProgress > .03) prepareCover(frame + 1)
+    if (coverProgress > .25) prepareWorld()
+    if (units < coverUnits + worldUnits) {
+      if (range(units, coverUnits, coverUnits + worldUnits) > .55) prepareChapter(0)
+      return
+    }
+    const index = chapterRanges.findIndex(({end}) => units <= end)
+    const current = index < 0 ? chapters.length - 1 : index
+    prepareChapter(current)
+    prepareChapter(current + 1)
+  }
   window.addEventListener('scroll', requestUpdate, {passive: true})
   window.addEventListener('resize', () => {
     // Ignore a compact browser's address-bar-only resize to keep the timeline steady.
@@ -730,6 +779,5 @@ if (story) {
   })
   stage.addEventListener('load', requestUpdate, true)
   refreshLayout()
-  prepareCampfirePeople()
   update()
 }

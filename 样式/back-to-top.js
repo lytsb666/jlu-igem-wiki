@@ -42,7 +42,7 @@ const pageRoles = {
 }
 
 // Cloudflare Pages redirects .html pages to extensionless URLs.
-const pagePath = decodeURI(location.pathname).toLowerCase().replace(/\/+$/, '')
+const pagePath = decodeURI(location.pathname).toLowerCase().replace(/^\/jlu-sph(?=\/|$)/, '').replace(/\/+$/, '')
 const roleName = pageRoles[pagePath.endsWith('.html') ? pagePath : `${pagePath}.html`]
 if (roleName) {
   const createPair = () => {
@@ -73,12 +73,12 @@ function createBackToTop(name, towardBottom = false) {
 
   const [x, y, width, height] = role.crop
   const art = button.querySelector('.wiki-back-to-top__art')
-  art.style.backgroundImage = `url("${role.sheet}")`
   art.style.backgroundSize = `${1679 / width * 100}% ${937 / height * 100}%`
   art.style.backgroundPosition = `${x / (1679 - width) * 100}% ${y / (937 - height) * 100}%`
   document.body.append(button)
 
   let imageReady = false
+  let imageRequested = false
   let frame = 0
   let obstacles = []
   let obstaclesDirty = true
@@ -179,6 +179,10 @@ function createBackToTop(name, towardBottom = false) {
   }
 
   function checkCorner() {
+    if (!imageRequested && scrollY >= 120 && !document.body.classList.contains('loading-lock')) {
+      imageRequested = true
+      image.src = role.sheet
+    }
     frame = 0
     const atDestination = towardBottom
       ? scrollY + innerHeight >= document.documentElement.scrollHeight - 2
@@ -340,7 +344,6 @@ function createBackToTop(name, towardBottom = false) {
   })
 
   const image = new Image()
-  image.onload = () => { imageReady = true; scheduleCheck() }
-  image.src = role.sheet
+  image.onload = () => { imageReady = true; art.style.backgroundImage = `url("${role.sheet}")`; scheduleCheck() }
   scheduleCheck()
 }

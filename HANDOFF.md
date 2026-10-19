@@ -1,3 +1,9 @@
+**2026-10-19 当前完整版本发布授权**：用户明确要求上传 GitHub 和 iGEM 官网，并确认此前暂缓三页与上次官网发布后所有页面修改一并更新。18 个完整内容页、最新 PDF.js 及首访优化合并，保留连续截图修订。范围、媒体与实际发布结果见 [RELEASE_COMPLETE_REVIEW_20261019.md](docs/RELEASE_COMPLETE_REVIEW_20261019.md)；本条覆盖旧分阶段仅框架限制，实际上线以该追踪结果为准。
+
+**2026-10-19 iHP 追加本地修订**：继续在最新 worktree／`codex/screenshot-revisions-20261019` 上删除 Overview 底部走动白泽、固定动画区及两句文字；Figure 2／103 从原 SVG 导出高清固定排版显示版，修正字体差异造成的越框／重叠，五问题跳转与放大保留；仅删 Wet lab 下方小白泽／Click 提示，原反馈弹窗及 LISTEN 提示保留。Chrome／Edge 两种宽度、交互与构建检查通过，未上传或发布。详见 [IHP_COMPATIBILITY_REVIEW_20261019.md](docs/IHP_COMPATIBILITY_REVIEW_20261019.md)。
+
+**2026-10-19 八项截图本地修订**：以最新 `a69d7c8` 为基线，在 `D:/JLU-Wiki/.local/github-latest-20261019` 的 `codex/screenshot-revisions-20261019` 分支修改 Contribution 标题／开篇／动力学首句、删除指定整节及目录项，iHP 五卡去白角并居中，Hardware 改兼容性指向并删成本备注。正式构建、资源及桌面／手机检查通过。根工作区原源码成果保留，未提交／上传／发布；完整原文、范围与证据见 [SCREENSHOT_REVISIONS_REVIEW_20261019.md](docs/SCREENSHOT_REVISIONS_REVIEW_20261019.md)。
+
 **2026-10-18 iHP 10.18 修改完成／当前网站上传与发布授权**：按新 Word／四页 PPT 完成 Overview 同行白泽、等大统计框、WHO 换行／同尺寸／透明图标、Collective Growth 去 Overview、Summary 去二级标题框及 Figure 101–102／完整高清流程图，五病原体全称斜体、开篇提示和 LISTEN 点击贴纸、三张原照替换、Figure 1 缩小。210 旧锚点、9 表、PDF 及 Summary 六段保留；三宽度和正常交互、18 页双宽度 382 说明及构建通过。用户明确授权将当前完整网站上传仓库和公网，包含此前第 50–51 节成果；保留图片单独撤回开关，无关裁判评估不提交。最新规则见全局第 52–53 节、[iHP 实施](docs/IHP_REVISION_1018_REVIEW_20261018.md) 和 [本轮发布追踪](docs/RELEASE_IHP_1018_REVIEW_20261018.md)，实际 PR／Actions／公网验收以该追踪入口为准。
 
 **2026-10-18 湿实验 10.18／框外 Back／全站图表注／可独立撤回图片（本地完成）**：附件指定四页文字和 52 条 Results 图注完成；Back 紧贴正文框右侧外部，窄屏预留空间，返回原位置并随目标滚出而消失。全站 380 条说明检查，创业卡片取消 Table 标记、实际 38 表重排，iHP 网课课表改 Table 6、图注现为 1–100。图片独立显示层保留 141 份原件哈希，收紧空边／融合纸白，Model 四图白色标题保持；用户要求撤回时只关闭图片开关，不回滚正文、说明或 Back。18 页双宽度、34 组返回、12 组图片开关及 Model 跨模块检查通过；133 张表、旧锚点和媒体保留，构建／资源检查通过。见全局第 51 节、[本轮交接](docs/SITE_MEDIA_CAPTION_BACK_REVIEW_20261018.md) 和 [图片单独撤回](docs/MEDIA_PRESENTATION_ROLLBACK_20261018.md)。保留此前 Software／Hardware 1018 未提交成果；本轮未提交／上传／发布，无关裁判评估文件未动。

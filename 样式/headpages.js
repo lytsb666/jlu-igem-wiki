@@ -1,7 +1,7 @@
 import './headpages.css'
 
 // Shared Judging destinations keep their navigation context without duplicating pages.
-const path = location.pathname.toLowerCase().replace(/(?:\.html)?\/?$/, '')
+const path = location.pathname.toLowerCase().replace(/^\/jlu-sph(?=\/|$)/, '').replace(/(?:\.html)?\/?$/, '')
 const judgingPages = ['/eagagement/ihp', '/wet-lab/measurement', '/instrument/hardware']
 if (new URLSearchParams(location.search).get('nav') === 'judging' && judgingPages.includes(path)) {
   const kicker = document.querySelector('.wiki-headpage__kicker')

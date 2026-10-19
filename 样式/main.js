@@ -19,9 +19,10 @@ import './back-to-top.js'
 import './reading-return.js'
 import './scientific-typography.js'
 import './media-presentation.js'
+import './deferred-media.js'
 
 const MINIMUM_VISIBLE_TIME = 320
-const LOADING_VIDEO_URL = new URL('../b  视频/loading.mp4', import.meta.url).href
+const MAXIMUM_OPENING_WAIT = 5500
 const LOADING_POSTER_URL = new URL('../b  视频/loading-poster.webp', import.meta.url).href
 
 function createLoader() {
@@ -35,9 +36,7 @@ function createLoader() {
   loader.setAttribute('aria-live', 'polite')
   loader.setAttribute('aria-label', 'Loading page')
   loader.innerHTML = `
-    <video class="loading-video" autoplay muted loop playsinline preload="auto" poster="${LOADING_POSTER_URL}">
-      <source src="${LOADING_VIDEO_URL}" type="video/mp4">
-    </video>
+    <img class="loading-video" src="${LOADING_POSTER_URL}" alt="" aria-hidden="true">
     <div class="loading-overlay"></div>
     <div class="loading-content">
       <p class="loading-kicker">JLU-SPH - iGEM 2026</p>
@@ -60,13 +59,13 @@ function minimumVisibleTime() {
 }
 
 function pageOpeningIsReady() {
+  const openingFrame = document.querySelector('#home-story .cover-keyframe-0')
   const candidates = document.querySelectorAll([
-    '.instrument-scene img:first-child',
     'main img[fetchpriority="high"]',
     '.ihp-hero img',
     '.image-page-hero img',
   ].join(','))
-  const images = [...new Set(candidates)].slice(0, 3)
+  const images = openingFrame ? [openingFrame] : [...new Set(candidates)].slice(0, 3)
 
   return Promise.all(images.map((image) => {
     const loaded = image.complete
@@ -92,16 +91,8 @@ function dismissLoader(loader) {
 
 document.body.classList.add('loading-lock')
 const loader = createLoader()
-const loaderVideo = loader.querySelector('.loading-video')
-if (loaderVideo) {
-  loaderVideo.loop = true
-  loaderVideo.muted = true
-  loaderVideo.playsInline = true
-  loaderVideo.play().catch(() => undefined)
-}
-
 Promise.all([
   pageMarkupIsReady(),
   minimumVisibleTime(),
-  pageOpeningIsReady(),
+  Promise.race([pageOpeningIsReady(), new Promise(resolve => setTimeout(resolve, Math.max(0, MAXIMUM_OPENING_WAIT - performance.now())))]),
 ]).then(() => dismissLoader(loader))
