@@ -187,7 +187,8 @@ photoTriggers.forEach(trigger => {
       const figure = document.createElement('figure');
       const original = photo.querySelector('img');
       const image = original.cloneNode();
-      image.src = original.currentSrc || original.src;
+      image.src = original.dataset.mediaSrc || original.currentSrc || original.src;
+      delete image.dataset.mediaSrc;
       image.loading = 'eager';
       figure.append(image);
       track.append(figure);

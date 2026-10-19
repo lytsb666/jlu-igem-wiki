@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "baseline": "a69d7c839cb7d0bbc7e1e9176e1369ef912e71bd",
+  "branch": "codex/screenshot-revisions-20261019",
+  "node": "v24.19.0",
+  "build": {
+    "files": 1266,
+    "htmlPages": 23,
+    "references": 1799,
+    "missing": [],
+    "oversized": [],
+    "unsafe": []
+  },
+  "browser": [
+    {
+      "name": "contribution",
+      "width": 1440,
+      "toc": [
+        {
+          "text": "A transferable framework for model-guided primer鈥揷rRNA screening and ranking",
+          "target": "#contribution-section-2-1"
+        },
+        {
+          "text": "A kinetic modeling framework for reaction optimization",
+          "target": "#contribution-section-2-3"
+        }
+      ]
+    },
+    {
+      "name": "ihp",
+      "width": 1440,
+      "layout": {
+        "count": 5,
+        "centerDifference": 0,
+        "gridWidth": 846.8125,
+        "sectionWidth": 846.8125,
+        "cards": [
+          {
+            "alt": "770+ Participants",
+            "x": 0,
+            "y": 0,
+            "width": 162.953125,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "50+ Replicable Engagement Activities",
+            "x": 170.953125,
+            "y": 0,
+            "width": 162.96875,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "43 Professional contacts",
+            "x": 341.921875,
+            "y": 0,
+            "width": 162.953125,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "20 Fields",
+            "x": 512.875,
+            "y": 0,
+            "width": 162.96875,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "14 Published resources",
+            "x": 683.84375,
+            "y": 0,
+            "width": 162.953125,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "hardware",
+      "width": 1440,
+      "compatibility": "Compatibility results for the tested systems are provided in Functional Validation and Design Evaluation, and technical details are available on the Software page.",
+      "cost": "Subtotal of the list above"
+    },
+    {
+      "name": "contribution",
+      "width": 390,
+      "toc": [
+        {
+          "text": "A transferable framework for model-guided primer鈥揷rRNA screening and ranking",
+          "target": "#contribution-section-2-1"
+        },
+        {
+          "text": "A kinetic modeling framework for reaction optimization",
+          "target": "#contribution-section-2-3"
+        }
+      ]
+    },
+    {
+      "name": "ihp",
+      "width": 390,
+      "layout": {
+        "count": 5,
+        "centerDifference": 0,
+        "gridWidth": 276,
+        "sectionWidth": 276,
+        "cards": [
+          {
+            "alt": "770+ Participants",
+            "x": 0,
+            "y": 0,
+            "width": 134,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "50+ Replicable Engagement Activities",
+            "x": 142,
+            "y": 0,
+            "width": 134,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "43 Professional contacts",
+            "x": 0,
+            "y": 153.4375,
+            "width": 134,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "20 Fields",
+            "x": 142,
+            "y": 153.4375,
+            "width": 134,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          },
+          {
+            "alt": "14 Published resources",
+            "x": 71,
+            "y": 306.875,
+            "width": 134,
+            "clip": "inset(0.4% 1.2% 2.5% 0.4% round 7.5%)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "hardware",
+      "width": 390,
+      "compatibility": "Compatibility results for the tested systems are provided in Functional Validation and Design Evaluation, and technical details are available on the Software page.",
+      "cost": "Subtotal of the list above"
+    }
+  ],
+  "scope": "Local only; no commit, push or public deployment."
+}

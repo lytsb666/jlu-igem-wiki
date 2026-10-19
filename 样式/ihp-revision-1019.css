@@ -1,7 +1,8 @@
 /* Layout follows the supplied 10.18 (2) slides and the final statistics slide. */
+:root:root body.ihp-manuscript-page .ihp-final-numbers__grid { width: min(100%, 54rem); margin-inline: auto; grid-template-columns: repeat(5,minmax(0,1fr)); gap: .5rem; }
 @layer wiki-format {
-  :root:root body.ihp-manuscript-page .ihp-final-numbers__grid { grid-template-columns: repeat(5,minmax(0,1fr)); gap: .5rem; }
-  :root:root body.ihp-manuscript-page .ihp-number-card img { width: 100%; height: auto; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+  /* Clip only the slide's outer white canvas, following each original card outline. */
+  :root:root body.ihp-manuscript-page .ihp-number-card img { display: block; width: 100%; height: auto; border: 0; border-radius: 0; box-shadow: none; background: transparent; clip-path: inset(.4% 1.2% 2.5% .4% round 7.5%); }
   :root:root body.ihp-manuscript-page .ihp-quote-mascot { width: clamp(60px, 8vw, 96px) !important; bottom: 0 !important; left: 12px !important; }
   :root:root body.ihp-manuscript-page .ihp-walking-story { position: relative; height: calc(90svh + 180px) !important; margin: 2rem 0 0 !important; }
   :root:root body.ihp-manuscript-page .ihp-walking-story__stage {
@@ -26,8 +27,8 @@
   :root:root body.ihp-manuscript-page .ihp-click-hint-1019 span { font-size: 10px !important; font-weight: 700; line-height: 1.1; }
 }
 @media (max-width: 550px) {
+  :root:root body.ihp-manuscript-page .ihp-final-numbers__grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   @layer wiki-format {
-    :root:root body.ihp-manuscript-page .ihp-final-numbers__grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
     :root:root body.ihp-manuscript-page .ihp-number-card:last-child { grid-column: 1 / -1; width: calc(50% - .25rem); justify-self: center; }
     :root:root body.ihp-manuscript-page .ihp-quote-mascot { left: 4px !important; width: 52px !important; }
     :root:root body.ihp-manuscript-page .ihp-walking-story { height: calc(90svh + 220px) !important; }

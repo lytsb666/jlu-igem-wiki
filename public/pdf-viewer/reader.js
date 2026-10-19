@@ -21,8 +21,10 @@ try {
   const params = new URLSearchParams(location.search)
   const siteRoot = new URL('../', location.href)
   const file = new URL(params.get('file') || '', siteRoot)
-  // All site PDFs are supported; arbitrary hosts and non-PDF URLs are not.
-  if (file.origin !== location.origin || !file.pathname.startsWith(siteRoot.pathname) || !/\.pdf$/i.test(file.pathname) || file.search || file.hash) throw new Error('Invalid document address')
+  // The official wiki stores this team's documents on iGEM's media host.
+  const localDocument = file.origin === location.origin && file.pathname.startsWith(siteRoot.pathname)
+  const officialDocument = file.origin === 'https://static.igem.wiki' && file.pathname.startsWith('/teams/6074/wiki/')
+  if ((!localDocument && !officialDocument) || !/\.pdf$/i.test(file.pathname) || file.search || file.hash) throw new Error('Invalid document address')
   document.title = params.get('title') || 'Document reader'
   container.setAttribute('aria-label', document.title)
   document.querySelector('#original').href = file.href

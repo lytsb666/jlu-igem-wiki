@@ -32,6 +32,7 @@ if (footer) {
     seal.alt = 'Jilin University emblem'
     seal.width = 132
     seal.height = 132
+    seal.loading = 'lazy'
     brand.querySelector('.school-logo')?.replaceWith(seal)
     footer.parentElement.append(seal)
     brand.querySelectorAll('h3').forEach(heading => {
@@ -45,7 +46,7 @@ if (footer) {
   const mascot = document.createElement('div')
   mascot.className = 'footer-mascot'
   mascot.setAttribute('aria-hidden', 'true')
-  mascot.innerHTML = `<svg viewBox="640 328 600 732" width="120" height="146" focusable="false"><image href="${footerMascot}" width="1920" height="1088"/></svg>`
+  mascot.innerHTML = `<svg viewBox="640 328 600 732" width="120" height="146" focusable="false"><image data-footer-href="${footerMascot}" width="1920" height="1088"/></svg>`
   const scene = document.createElement('div')
   scene.className = 'footer-scene'
   footer.parentElement.before(scene)
@@ -65,7 +66,7 @@ if (footer) {
     const viewBox = `${x-(side-w)/2} ${y-(side-h)/2} ${side} ${side}`
     const shape = `<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`
     const clip = `<defs><clipPath id="footer-qr-window-${i+1}">${shape}</clipPath></defs>`
-    return `<figure class="qr-item"><a class="qr-original" href="${source(id)}" target="_blank" rel="noopener" aria-label="Open original ${label} QR code"><svg class="qr-code" viewBox="${viewBox}" width="144" height="144" role="img" aria-label="${label} QR code" preserveAspectRatio="xMidYMid meet"><rect x="${x-(side-w)/2}" y="${y-(side-h)/2}" width="${side}" height="${side}" fill="white"/>${clip}<image href="${source(id)}" width="${width}" height="${height}" clip-path="url(#footer-qr-window-${i+1})"/></svg></a></figure>`
+    return `<figure class="qr-item"><a class="qr-original" href="${source(id)}" target="_blank" rel="noopener" aria-label="Open original ${label} QR code"><svg class="qr-code" viewBox="${viewBox}" width="144" height="144" role="img" aria-label="${label} QR code" preserveAspectRatio="xMidYMid meet"><rect x="${x-(side-w)/2}" y="${y-(side-h)/2}" width="${side}" height="${side}" fill="white"/>${clip}<image data-footer-href="${source(id)}" width="${width}" height="${height}" clip-path="url(#footer-qr-window-${i+1})"/></svg></a></figure>`
   }).join('')
   // Match the sketch: brand above, contact in the left half, directory in the
   // right half, then the shared full-width sponsor strip and copyright.
@@ -94,7 +95,17 @@ if (footer) {
     sponsors.className = 'sponsor-marquee'
     sponsors.tabIndex = 0
     sponsors.setAttribute('aria-label', 'Sponsors and cooperators; focus or hover to pause')
-    const cards = sponsorItems.map(([id,label]) => `<div class="sponsor-card"><img src="${sponsorSource(typeof id === 'number' ? `image${id}` : id)}" alt="${label}" width="240" height="100" loading="eager"></div>`).join('')
+    const cards = sponsorItems.map(([id,label]) => `<div class="sponsor-card"><img src="${sponsorSource(typeof id === 'number' ? `image${id}` : id)}" alt="${label}" width="240" height="100" loading="lazy"></div>`).join('')
     sponsors.innerHTML = `<div class="sponsor-marquee-track"><div class="sponsor-marquee-group">${cards}</div><div class="sponsor-marquee-group" aria-hidden="true">${cards}</div></div>`
   }
+  const revealImages = () => scene.querySelectorAll('image[data-footer-href]').forEach(image => {
+    image.setAttribute('href', image.dataset.footerHref)
+    delete image.dataset.footerHref
+  })
+  if (typeof IntersectionObserver === 'function') {
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) { revealImages(); observer.disconnect() }
+    }, {rootMargin: '800px 0px'})
+    observer.observe(scene)
+  } else revealImages()
 }
