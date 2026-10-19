@@ -5,8 +5,9 @@
   for (const frame of document.querySelectorAll('iframe[data-wiki-article-video]')) {
     const embed = new URL(frame.dataset.igemEmbedSrc)
     if (embed.origin !== 'https://video.igem.org') continue
+    const hardware = Boolean(frame.closest('.hw-video'))
     const panel = document.createElement('div')
-    panel.style.cssText = `width:min(100%,380px);aspect-ratio:${frame.width}/${frame.height};max-height:38rem;margin:auto;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem;box-sizing:border-box;background:#fffaf5;border:1px solid #d9c4b4;border-radius:12px;text-align:center;color:#6f4e37`
+    panel.style.cssText = `width:${hardware ? '100%' : 'min(100%,380px)'};aspect-ratio:${frame.width}/${frame.height};max-height:${hardware ? '540px' : '38rem'};margin:auto;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem;box-sizing:border-box;background:#fffaf5;border:1px solid #d9c4b4;border-radius:12px;text-align:center;color:#6f4e37`
     const message = document.createElement('p')
     message.setAttribute('role', 'status')
     message.textContent = frame.hasAttribute('data-igem-review-pending')

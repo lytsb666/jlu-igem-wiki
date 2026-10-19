@@ -6,7 +6,7 @@ import { pathToFileURL, fileURLToPath } from 'node:url'
 import { build } from 'vite'
 
 const root = path.resolve(import.meta.dirname, '..')
-const official = path.resolve(root, process.argv[2] || '.local/igem-release-20261018/repository')
+const official = path.resolve(root, process.argv[2] || '.local/igem-release-20261019/repository')
 const target = path.resolve(root, process.argv[3] || '.local/igem-release-20261019/package')
 const rel = path.relative(root, target)
 if (!rel || rel.startsWith('..') || path.isAbsolute(rel)) throw Error('Release package must stay inside this workspace.')
@@ -14,7 +14,8 @@ if (fs.existsSync(target)) throw Error('Use a new package directory; existing pa
 fs.mkdirSync(target, {recursive: true})
 const old = JSON.parse(fs.readFileSync(path.join(official, 'media-manifest.json'), 'utf8')).assets
 const previous = new Map(old.filter(a => a.url).map(a => [a.sha256, a]))
-for (const saved of [path.join(root, 'docs/IGEM_OFFICIAL_MEDIA_UPLOAD_20261018.json'), path.join(official, 'release-media-manifest.json')]) {
+const savedUploads = fs.readdirSync(path.join(root, 'docs')).filter(file => /^IGEM_OFFICIAL_MEDIA_UPLOAD_\d{8}\.json$/.test(file)).sort().map(file => path.join(root, 'docs', file))
+for (const saved of [...savedUploads, path.join(official, 'release-media-manifest.json')]) {
   if (fs.existsSync(saved)) for (const asset of JSON.parse(fs.readFileSync(saved, 'utf8')).assets || []) if (asset.url) previous.set(asset.sha256, asset)
 }
 const shells = new Set()
@@ -69,7 +70,7 @@ function record(bytes, ext, original) {
     const previousAsset = previous.get(sha256)
     const kind = /\.(mp4|webm)$/i.test(ext) ? 'video' : /\.(pdf|docx|txt)$/i.test(ext) ? 'document' : 'image'
     const asset = {sha256, filename, bytes: bytes.length, kind, originals: [], url: previousAsset?.url || null, token: `__IGEM_MEDIA_${sha256}_${ext.slice(1)}__`}
-    for (const key of ['uploadVariant', 'officialUpload', 'publicationStatus', 'videoUpload', 'width', 'height']) if (previousAsset?.[key]) asset[key] = previousAsset[key]
+    for (const key of ['uploadVariant', 'officialUpload', 'publicationStatus', 'videoUpload', 'uploadBlock', 'width', 'height']) if (previousAsset?.[key]) asset[key] = previousAsset[key]
     if (kind === 'video' && original) {
       const sourceManifest = path.join(root, path.dirname(original), 'source-manifest.json')
       if (fs.existsSync(sourceManifest)) {
@@ -95,7 +96,7 @@ function record(bytes, ext, original) {
   return asset
 }
 const bundledMedia = new Map()
-for (const file of output) if (file.type === 'asset' && mediaExtension.test(file.fileName)) {
+for (const file of output) if (file.type === 'asset' && mediaExtension.test(file.fileName) && !file.fileName.startsWith('pdf-viewer/vendor/standard_fonts/')) {
   const bytes = Buffer.from(file.source)
   const asset = record(bytes, path.extname(file.fileName), (file.originalFileNames || []).join(', '))
   bundledMedia.set(file.fileName, asset)
@@ -137,12 +138,12 @@ for (const file of output) {
     return quote + rewrite(ref, file.fileName) + quote
   })
   const destination = path.join(templateDir, file.fileName)
-  fs.mkdirSync(path.dirname(destination), {recursive: true}); fs.writeFileSync(destination, text)
+  fs.mkdirSync(path.dirname(destination), {recursive: true}); fs.writeFileSync(destination, text.replace(/\r\n?/g, '\n'))
 }
 const manifest = {date: '2026-10-19', sourceCommit: execFileSync('git',['rev-parse','HEAD'],{cwd: root, encoding:'utf8'}).trim(),
   officialBase: execFileSync('git',['rev-parse','HEAD'],{cwd: official, encoding:'utf8'}).trim(),
   contentPages: pages.filter(file => !shells.has(file) && !file.startsWith('Judging/') && !['index.html','Team/attribution.html'].includes(file)),
-  shellPages: [...shells], assets: [...records.values()],
+  shellPages: [...shells], assets: [...records.values()], templateFiles: walk(templateDir).map(file=>path.relative(templateDir,file).replaceAll('\\','/')),
 }
 fs.writeFileSync(path.join(target, 'release-media-manifest.json'), JSON.stringify(manifest, null, 2)+'\n')
 fs.mkdirSync(path.join(target, 'tools'), {recursive: true})
