@@ -20,12 +20,17 @@ function update() {
     })
   }
   if (story && stage && row) {
+    if (reduced.matches) stage.style.removeProperty('top')
+    else stage.style.setProperty('top', `${Math.max(80, innerHeight - stage.offsetHeight - 30)}px`, 'important')
     const box = story.getBoundingClientRect()
-    const progress = reduced.matches ? 1 : clamp((innerHeight * .95 - box.top) / (innerHeight * .5))
+    const pinTop = parseFloat(getComputedStyle(stage).top) || 80
+    const travel = Math.max(1, story.offsetHeight - stage.offsetHeight)
+    const progress = reduced.matches ? 1 : clamp((pinTop - box.top) / travel)
     const start = stage.clientWidth + 8
-    const end = Math.min(0, stage.clientWidth - row.offsetWidth)
+    const end = 0
     story.style.setProperty('--walk-progress', progress)
     story.style.setProperty('--walk-offset', `${reduced.matches ? 0 : start + (end - start) * progress}px`)
+    story.style.setProperty('--text-reveal', `${(1 - progress) * 100}%`)
     story.dataset.walkProgress = progress.toFixed(3)
     story.classList.toggle('is-walking', !reduced.matches && progress > 0 && progress < 1)
     clearTimeout(walkingTimer)

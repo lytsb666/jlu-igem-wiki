@@ -1,0 +1,250 @@
+{
+  "baseline": "e35de4f7ab90b68e464684bdc1a807c0ce5e87ff",
+  "documents": {
+    "nativePDFEnabled": false,
+    "documents": [
+      {
+        "file": "/ihp-resources/revision-4-20261017/stakeholder-scoring-criteria.pdf",
+        "pages": 3,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/stakeholder-review-and-adaptation.pdf",
+        "pages": 30,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/nursing-home-informed-consent.pdf",
+        "pages": 7,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/kindergarten-informed-consent.pdf",
+        "pages": 6,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-6-20261017/community-collaborative-emergency-response-guide.pdf",
+        "pages": 14,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/byegerm-1-user-manual.pdf",
+        "pages": 4,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/retrospective-empathy-survey.pdf",
+        "pages": 2,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/byegerm-2-user-manual.pdf",
+        "pages": 5,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-6-20261017/card-game-instructions.pdf",
+        "pages": 8,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/kindergarten-material-safety.pdf",
+        "pages": 2,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/kindergarten-venue-personnel-safety.pdf",
+        "pages": 2,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/kindergarten-activity-safety.pdf",
+        "pages": 2,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/older-adult-education.pdf",
+        "pages": 4,
+        "firstAndLastRendered": true
+      },
+      {
+        "file": "/ihp-resources/revision-4-20261017/braille-learning-material.pdf",
+        "pages": 56,
+        "firstAndLastRendered": true
+      }
+    ],
+    "totalPages": 145,
+    "viewerDownloads": 0,
+    "errors": [],
+    "baseline": {
+      "nativeIframeShowsOpenPlaceholder": true,
+      "downloads": []
+    }
+  },
+  "sourceIntegrity": {
+    "Wet-lab/measurement.html": {
+      "tables": 14,
+      "tableChanges": [],
+      "legacyAnchorsPreserved": true
+    },
+    "Wet-lab/protocal.html": {
+      "tables": 28,
+      "tableChanges": [],
+      "legacyAnchorsPreserved": true
+    },
+    "Wet-lab/part.html": {
+      "tables": 6,
+      "tableChanges": [
+        [
+          1,
+          1,
+          "Synthetic Target",
+          "Synthetic Target Gene"
+        ]
+      ],
+      "legacyAnchorsPreserved": true
+    },
+    "Instrument/hardware.html": {
+      "tables": 6,
+      "tableChanges": [
+        [
+          0,
+          7,
+          "Fixed observation area; total tube capacity not specified in the source.",
+          "Fixed observation area."
+        ]
+      ],
+      "legacyAnchorsPreserved": true
+    },
+    "Instrument/model.html": {
+      "tables": 9,
+      "tableChanges": [],
+      "legacyAnchorsPreserved": true
+    },
+    "Eagagement/iHP.html": {
+      "tables": 9,
+      "tableChanges": [],
+      "legacyAnchorsPreserved": true
+    }
+  },
+  "layout": [
+    {
+      "width": 1440,
+      "stages": [
+        {
+          "progress": "0.000",
+          "stageTop": 720.265625,
+          "rowLeft": 1336.59375,
+          "stageLeft": 481.59375,
+          "font": "21.3333px"
+        },
+        {
+          "progress": "0.500",
+          "stageTop": 720,
+          "rowLeft": 909.3641357421875,
+          "stageLeft": 481.59375,
+          "font": "21.3333px"
+        },
+        {
+          "progress": "1.000",
+          "stageTop": 720,
+          "rowLeft": 481.8641052246094,
+          "stageLeft": 481.59375,
+          "font": "21.3333px"
+        }
+      ],
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "stages": [
+        {
+          "progress": "0.000",
+          "stageTop": 660,
+          "rowLeft": 319.85931396484375,
+          "stageLeft": 36,
+          "font": "21.3333px"
+        },
+        {
+          "progress": "0.500",
+          "stageTop": 660,
+          "rowLeft": 177.8592987060547,
+          "stageLeft": 36,
+          "font": "21.3333px"
+        },
+        {
+          "progress": "1.000",
+          "stageTop": 659.59375,
+          "rowLeft": 36,
+          "stageLeft": 36,
+          "font": "21.3333px"
+        }
+      ],
+      "overflow": 0
+    },
+    {
+      "width": 320,
+      "stages": [
+        {
+          "progress": "0.001",
+          "stageTop": 569,
+          "rowLeft": 249.8669891357422,
+          "stageLeft": 36,
+          "font": "21.3333px"
+        },
+        {
+          "progress": "0.500",
+          "stageTop": 569,
+          "rowLeft": 143.01376342773438,
+          "stageLeft": 36,
+          "font": "21.3333px"
+        },
+        {
+          "progress": "1.000",
+          "stageTop": 568.359375,
+          "rowLeft": 36,
+          "stageLeft": 36,
+          "font": "21.3333px"
+        }
+      ],
+      "overflow": 0
+    },
+    {
+      "page": "Wet-lab/measurement.html",
+      "overflow": 0
+    },
+    {
+      "page": "Wet-lab/protocal.html",
+      "overflow": 0
+    },
+    {
+      "page": "Wet-lab/part.html",
+      "overflow": 0
+    },
+    {
+      "page": "Instrument/model.html",
+      "overflow": 0
+    },
+    {
+      "page": "Instrument/software.html",
+      "overflow": 0
+    },
+    {
+      "page": "Project/contribution.html",
+      "overflow": 0
+    },
+    {
+      "assayDeepLinkSelected": "true"
+    }
+  ],
+  "build": {
+    "files": 1266,
+    "htmlPages": 23,
+    "references": 1803,
+    "missing": [],
+    "oversized": [],
+    "unsafe": []
+  },
+  "canceledMeasurementParagraphPresent": false
+}

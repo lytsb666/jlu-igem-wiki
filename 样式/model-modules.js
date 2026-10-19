@@ -1,7 +1,8 @@
 const tabs = [...document.querySelectorAll('.model-module-tab')]
 const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')))
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)')
-let current = panels[0]
+const defaultPanel = document.getElementById('model-for-hardware')
+let current = defaultPanel
 
 function selectPanel(panel, updateAddress = false) {
   if (!panels.includes(panel)) return
@@ -22,7 +23,7 @@ function selectPanel(panel, updateAddress = false) {
 }
 
 function followHash(scroll = false) {
-  if (!location.hash) { selectPanel(panels[0]); return }
+  if (!location.hash) { selectPanel(defaultPanel); return }
   let id
   try { id = decodeURIComponent(location.hash.slice(1)) } catch { return }
   const target = document.getElementById(id)

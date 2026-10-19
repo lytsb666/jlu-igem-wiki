@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; }
+body { margin: 0; color: #6f4e37; background: #e9e1d8; font: 16px 'Times New Roman', serif; }
+.toolbar { position: absolute; inset: 0 0 auto; z-index: 2; min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; flex-wrap: wrap; background: #fbf4eb; border-bottom: 1px solid #d5baa2; }
+button, input, a { font: inherit; color: inherit; }
+button, input { border: 1px solid #b58f71; border-radius: 5px; background: #fff; min-height: 32px; }
+button { cursor: pointer; padding: 3px 10px; }
+button:hover { background: #ead8c5; }
+button:disabled { opacity: .45; cursor: default; }
+input { width: 3.3em; padding: 3px; }
+a { margin-left: 6px; font-weight: bold; }
+:focus-visible { outline: 2px solid #6f4e37; outline-offset: 2px; }
+#container { position: absolute; inset: var(--toolbar-height, 60px) 0 0; overflow: auto; overscroll-behavior: contain; }
+#status { position: absolute; z-index: 3; top: var(--toolbar-height, 60px); left: 12px; right: 12px; padding: 12px; background: #fff9ef; border: 1px solid #b58f71; }
+#status[hidden] { display: none; }
+.pdfViewer .page { margin: 10px auto; }
+@media (max-width: 360px) { .toolbar { gap: 4px; } button { padding-inline: 8px; } #original { flex-basis: 100%; text-align: center; } }

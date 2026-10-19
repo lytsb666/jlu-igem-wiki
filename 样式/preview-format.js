@@ -110,7 +110,13 @@ function makePdfFold(href, title) {
   reader.className = 'wiki-pdf-reader'
   reader.title = `${summary.textContent} — PDF reader`
   body.append(reader); fold.append(summary,body)
-  fold.addEventListener('toggle',()=>{ if (fold.open && !reader.src) reader.src = href.split('#')[0]+'#toolbar=1&navpanes=0&view=FitH' })
+  fold.addEventListener('toggle',()=>{
+    if (!fold.open || reader.getAttribute('src')) return
+    // IHP must also work when native PDF previews are disabled or unavailable.
+    reader.src = document.body.classList.contains('ihp-manuscript-page')
+      ? `/pdf-viewer/index.htm?file=${encodeURIComponent(new URL(href).pathname)}&title=${encodeURIComponent(summary.textContent)}`
+      : href.split('#')[0]+'#toolbar=1&navpanes=0&view=FitH'
+  })
   return fold
 }
 

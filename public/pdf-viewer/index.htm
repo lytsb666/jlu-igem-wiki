@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document reader</title>
+  <link rel="stylesheet" href="/pdf-viewer/vendor/web/pdf_viewer.css">
+  <link rel="stylesheet" href="./reader.css">
+</head>
+<body>
+  <nav class="toolbar" aria-label="Document controls">
+    <button id="previous" type="button" aria-label="Previous page">‹</button>
+    <label>Page <input id="page" type="number" min="1" value="1" aria-label="Page number"></label>
+    <span id="total">/ —</span>
+    <button id="next" type="button" aria-label="Next page">›</button>
+    <button id="smaller" type="button" aria-label="Zoom out">−</button>
+    <button id="larger" type="button" aria-label="Zoom in">+</button>
+    <button id="fit" type="button">Fit width</button>
+    <a id="original" target="_blank" rel="noopener">Original PDF</a>
+  </nav>
+  <p id="status" role="status" aria-live="polite">Loading document…</p>
+  <div id="container" tabindex="0" role="region" aria-label="Document pages"><div id="viewer" class="pdfViewer"></div></div>
+  <script type="module" src="./reader.js"></script>
+</body>
+</html>
