@@ -102,9 +102,20 @@ function cropExisting(record, frame, entry) {
   // Existing viewport coordinates are intersected, never wrapped a second time.
   if (frame.matches('.hw-crop-window')) return false
   const old = oldViewport(frame, entry.size), crop = entry.window
-  const x = Math.max(old[0], crop[0]), y = Math.max(old[1], crop[1])
-  const width = Math.min(old[0] + old[2], crop[0] + crop[2]) - x
+  let x = Math.max(old[0], crop[0])
+  const y = Math.max(old[1], crop[1])
+  let width = Math.min(old[0] + old[2], crop[0] + crop[2]) - x
   const height = Math.min(old[1] + old[3], crop[1] + crop[3]) - y
+  // Scientific plot bounds are x0,y0,x1,y1. Axis labels make the source
+  // margins asymmetric; trim symmetrically around the plotted box so its
+  // centre stays aligned with the article, while keeping every label.
+  const bounds = frame.dataset.plotBounds?.split(',').map(Number)
+  if (frame.matches('.research-plot-frame') && bounds?.length === 4 && bounds.every(Number.isFinite)) {
+    const center = (bounds[0] + bounds[2]) / 2
+    const half = Math.max(center - x, x + width - center)
+    x = center - half
+    width = half * 2
+  }
   if (width <= 0 || height <= 0 || width * height > old[2] * old[3] * .985) return true
   const ratio = frame.matches('.research-plot-frame') ? '--plot-ratio' : '--figure-ratio'
   set(record, frame, ratio, `${width}/${height}`)
