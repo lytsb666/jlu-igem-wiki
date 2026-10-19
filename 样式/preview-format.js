@@ -1,5 +1,6 @@
 import { setDirectoryGroupOpen } from './site-format.js'
 import { activeDirectoryLink } from './directory-navigation.js'
+import { installPdfReaders } from './pdf-readers.js'
 
 // Apply shared presentation while preserving manuscript text, anchors and data.
 const isMeasurement = /\/wet-lab\/measurement(?:\.html)?\/?$/i.test(location.pathname)
@@ -110,13 +111,6 @@ function makePdfFold(href, title) {
   reader.className = 'wiki-pdf-reader'
   reader.title = `${summary.textContent} — PDF reader`
   body.append(reader); fold.append(summary,body)
-  fold.addEventListener('toggle',()=>{
-    if (!fold.open || reader.getAttribute('src')) return
-    // IHP must also work when native PDF previews are disabled or unavailable.
-    reader.src = document.body.classList.contains('ihp-manuscript-page')
-      ? `/pdf-viewer/index.htm?file=${encodeURIComponent(new URL(href).pathname)}&title=${encodeURIComponent(summary.textContent)}`
-      : href.split('#')[0]+'#toolbar=1&navpanes=0&view=FitH'
-  })
   return fold
 }
 
@@ -156,13 +150,14 @@ function enhancePdfs() {
       else link.replaceWith(fold)
     }
   }
-  // Image-based Hardware readers are superseded by the native PDF disclosures.
+  // Image-based Hardware readers are superseded by the PDF disclosures.
   document.querySelectorAll('.hw-pdf-reader').forEach(reader=>reader.remove())
   // Activity plans in Open resources start expanded; B14 prototype guides keep
   // their deliberate disclosure so the green prototype panel stays compact.
   document.querySelectorAll('#resources .wiki-pdf-fold').forEach(fold => {
     if (!fold.closest('.gene-wars-guides')) fold.open = true
   })
+  installPdfReaders()
 }
 
 function removeAuxiliaryDownloads() {
