@@ -1,0 +1,70 @@
+[
+  {
+    "file": "Project/contribution.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 0
+  },
+  {
+    "file": "Eagagement/iHP.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 0
+  },
+  {
+    "file": "Instrument/hardware.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 3
+  },
+  {
+    "file": "Wet-lab/measurement.html",
+    "width": 1440,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 0
+  },
+  {
+    "file": "Project/contribution.html",
+    "width": 390,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 0
+  },
+  {
+    "file": "Eagagement/iHP.html",
+    "width": 390,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 0
+  },
+  {
+    "file": "Instrument/hardware.html",
+    "width": 390,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 3
+  },
+  {
+    "file": "Wet-lab/measurement.html",
+    "width": 390,
+    "overflow": false,
+    "errors": [],
+    "failures": [],
+    "blockedVideos": 0
+  },
+  {
+    "officialPDF": true,
+    "canvases": 2
+  }
+]

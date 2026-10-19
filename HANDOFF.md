@@ -1,3 +1,5 @@
+**2026-10-20 当前完整站已同步 iGEM**：18 页及上次发布后的全部页面改动已上线，GitLab !2／6952e2a、流水线 774278 成功；24 项正式文件与生产包完全一致，官网 PDF.js 可用。710 项图片／文档地址核验通过。仅 Hardware 三段视频因当前账号上传配额为 0 尚未上传，原文件、封面及待补记录保留；默认配额不代表全部账号，也未查证与截止时间有关。详见 [本轮实际发布记录](docs/RELEASE_COMPLETE_REVIEW_20261019.md)。
+
 **2026-10-19 当前完整版本发布授权**：用户明确要求上传 GitHub 和 iGEM 官网，并确认此前暂缓三页与上次官网发布后所有页面修改一并更新。18 个完整内容页、最新 PDF.js 及首访优化合并，保留连续截图修订。范围、媒体与实际发布结果见 [RELEASE_COMPLETE_REVIEW_20261019.md](docs/RELEASE_COMPLETE_REVIEW_20261019.md)；本条覆盖旧分阶段仅框架限制，实际上线以该追踪结果为准。
 
 **2026-10-19 iHP 追加本地修订**：继续在最新 worktree／`codex/screenshot-revisions-20261019` 上删除 Overview 底部走动白泽、固定动画区及两句文字；Figure 2／103 从原 SVG 导出高清固定排版显示版，修正字体差异造成的越框／重叠，五问题跳转与放大保留；仅删 Wet lab 下方小白泽／Click 提示，原反馈弹窗及 LISTEN 提示保留。Chrome／Edge 两种宽度、交互与构建检查通过，未上传或发布。详见 [IHP_COMPATIBILITY_REVIEW_20261019.md](docs/IHP_COMPATIBILITY_REVIEW_20261019.md)。

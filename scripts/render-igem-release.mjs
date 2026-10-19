@@ -6,7 +6,10 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, 'release-media-manif
 const preview = process.env.IGEM_LOCAL_PREVIEW === '1'
 if (preview && process.env.CI) throw Error('Local media preview is forbidden in CI.')
 const missing = manifest.assets.filter(asset => !asset.url)
-if (!preview && missing.length) throw Error(`${missing.length} media files still need verified official upload URLs. Nothing was published.`)
+const uploadBlocked = asset => asset.kind === 'video' && asset.publicationStatus === 'upload-blocked-account' &&
+  asset.uploadBlock?.reason === 'account-upload-disabled' && Boolean(asset.uploadBlock?.checkedAt)
+const unresolved = missing.filter(asset => !uploadBlocked(asset))
+if (!preview && unresolved.length) throw Error(`${unresolved.length} media files still need verified official upload URLs. Nothing was published.`)
 for (const asset of manifest.assets.filter(a => a.url)) {
   const u = new URL(asset.url)
   if (u.protocol !== 'https:' || !['static.igem.wiki','video.igem.org','gitlab.igem.org'].includes(u.hostname) || /["'<>\s]/.test(asset.url)) throw Error(`Invalid official media URL: ${asset.filename}`)
@@ -16,12 +19,25 @@ for (const asset of manifest.assets.filter(a => a.url)) {
 const out = path.join(root, preview ? 'preview/jlu-sph' : 'compiled')
 const source = path.join(root, 'release-templates')
 const walk = (directory) => fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry => entry.isDirectory() ? walk(path.join(directory,entry.name)) : [path.join(directory,entry.name)])
-for (const file of walk(source)) {
+const templates = manifest.templateFiles ? manifest.templateFiles.map(file => path.resolve(source,file)) : walk(source)
+for (const file of templates) {
+  const relative=path.relative(source,file);if(relative==='..'||relative.startsWith('..'+path.sep)||path.isAbsolute(relative))throw Error('Invalid template path')
   if (!/\.(?:html?|css|m?js|json|txt|md)$/i.test(file)) {
     const destination=path.join(out,path.relative(source,file));fs.mkdirSync(path.dirname(destination),{recursive:true});fs.copyFileSync(file,destination);continue
   }
   let text = fs.readFileSync(file, 'utf8')
+  if (!preview && file.endsWith('.html')) {
+    text = text.replace(/<video\b([^>]*)>[\s\S]*?<source\b[^>]*src=["']([^"']+)["'][^>]*>[\s\S]*?<\/video>/g, (all, attrs, src) => {
+      const asset = missing.find(candidate => candidate.token === src && uploadBlocked(candidate))
+      if (!asset) return all
+      const label = /aria-label=(['"])(.*?)\1/.exec(attrs)?.[2] || 'JLU-SPH project video'
+      const poster = /poster=(['"])(.*?)\1/.exec(attrs)?.[2]
+      const still = poster ? `<img src="${poster}" alt="${label.replaceAll('"', '&quot;')}" style="display:block;width:100%;max-height:540px;object-fit:contain">` : ''
+      return `<div data-igem-video-upload-blocked="${asset.sha256}" style="width:100%;text-align:center">${still}<p role="status">This video is not yet available on iGEM Video Universe.</p></div>`
+    })
+  }
   for (const asset of manifest.assets) {
+    if (!preview && !asset.url) continue
     const url = preview ? `/jlu-sph/.media/${asset.filename}` : asset.url
     text = text.replaceAll(asset.token, url)
   }
@@ -38,7 +54,7 @@ for (const file of walk(source)) {
       const label = /aria-label=(['"])(.*?)\1/.exec(attrs)?.[2] || 'JLU-SPH project video'
       const preserved = [...attrs.matchAll(/\b(?:id|class)=(['"])(.*?)\1/g)].map(m => m[0]).join(' ')
       const review = asset.publicationStatus === 'awaiting-moderator-review' ? ' data-igem-review-pending' : ''
-      return `<iframe ${preserved} data-wiki-article-video${review} data-igem-video-id="${url.pathname.split('/').at(-1)}" data-igem-embed-src="${url.href.replaceAll('&', '&amp;')}" title="${label.replaceAll('"', '&quot;')}" width="${asset.width}" height="${asset.height}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="display:none;aspect-ratio:${asset.width}/${asset.height};border:0"></iframe>`
+      return `<iframe ${preserved} data-wiki-article-video${review} data-igem-video-id="${url.pathname.split('/').at(-1)}" data-igem-embed-src="${url.href.replaceAll('&', '&amp;')}" title="${label.replaceAll('"', '&quot;')}" width="${asset.width}" height="${asset.height}" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="display:none;width:100%;height:auto;aspect-ratio:${asset.width}/${asset.height};border:0"></iframe>`
     })
     // Keep the existing portrait-video dimensions and size limits on its official player.
     text = text.replaceAll('.contribution-video video', '.contribution-video :is(video,iframe)')
@@ -47,6 +63,7 @@ for (const file of walk(source)) {
       text = text.replace('</body>', `<script src="${script}" defer></script></body>`)
     }
   }
+  text = text.replaceAll('.hardware-page .hw-main video', '.hardware-page .hw-main :is(video,iframe[data-wiki-article-video])')
   if (/__IGEM_MEDIA_/.test(text)) throw Error(`Unresolved release token: ${file}`)
   const destination = path.join(out,path.relative(source,file)); fs.mkdirSync(path.dirname(destination),{recursive:true});fs.writeFileSync(destination,text)
 }
@@ -69,4 +86,4 @@ for (const shell of manifest.shellPages) {
   const html = fs.readFileSync(path.join(out,shell),'utf8')
   if (!html.includes('data-igem-content="deferred"') || /<table\b|wiki-pdf-reader|data-ihp-atlas|measurement-map|hw-section/.test(html)) throw Error(`Deferred page contains article content: ${shell}`)
 }
-console.log(JSON.stringify({preview,output:out,contentPages:manifest.contentPages.length,shellPages:manifest.shellPages.length,pendingUploads:missing.length,pendingVideoReviews:manifest.assets.filter(asset => asset.publicationStatus === 'awaiting-moderator-review').length}))
+console.log(JSON.stringify({preview,output:out,contentPages:manifest.contentPages.length,shellPages:manifest.shellPages.length,pendingUploads:missing.length,blockedVideoUploads:missing.filter(uploadBlocked).length,pendingVideoReviews:manifest.assets.filter(asset => asset.publicationStatus === 'awaiting-moderator-review').length}))
