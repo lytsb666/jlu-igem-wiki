@@ -1,0 +1,50 @@
+[
+  {
+    "file": "Instrument/hardware.html",
+    "width": 1440,
+    "initial": {
+      "deferred": 0,
+      "storyDeferred": 0,
+      "pdfActive": 0
+    },
+    "checks": [
+      {
+        "overflow": false,
+        "brokenImages": [],
+        "brokenAnchors": [],
+        "replacementCharacters": false,
+        "rawHotspotLabels": 0,
+        "plots": 0,
+        "unloadedPlots": 0,
+        "offCenter": [],
+        "pdfActive": 0
+      }
+    ],
+    "errors": [],
+    "failures": []
+  },
+  {
+    "file": "Instrument/hardware.html",
+    "width": 390,
+    "initial": {
+      "deferred": 0,
+      "storyDeferred": 0,
+      "pdfActive": 0
+    },
+    "checks": [
+      {
+        "overflow": false,
+        "brokenImages": [],
+        "brokenAnchors": [],
+        "replacementCharacters": false,
+        "rawHotspotLabels": 0,
+        "plots": 0,
+        "unloadedPlots": 0,
+        "offCenter": [],
+        "pdfActive": 0
+      }
+    ],
+    "errors": [],
+    "failures": []
+  }
+]

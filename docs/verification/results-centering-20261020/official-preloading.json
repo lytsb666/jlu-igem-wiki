@@ -1,0 +1,86 @@
+{
+  "homeInitial": {
+    "deferred": 39,
+    "ready": [
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 3
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 4
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 4
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 1
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 6
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 0
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 7
+      }
+    ]
+  },
+  "homeLater": {
+    "deferred": 23,
+    "ready": [
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 3
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 4
+      },
+      {
+        "chapter": "",
+        "ready": true,
+        "pending": 0
+      },
+      {
+        "chapter": "",
+        "ready": true,
+        "pending": 0
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 6
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 0
+      },
+      {
+        "chapter": "",
+        "ready": false,
+        "pending": 7
+      }
+    ]
+  },
+  "pdfInitial": 0,
+  "pdfNear": 2,
+  "footerDeferred": 5,
+  "footerRemaining": 0
+}

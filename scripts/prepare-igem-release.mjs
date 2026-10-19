@@ -16,7 +16,9 @@ const old = JSON.parse(fs.readFileSync(path.join(official, 'media-manifest.json'
 const previous = new Map(old.filter(a => a.url).map(a => [a.sha256, a]))
 const savedUploads = fs.readdirSync(path.join(root, 'docs')).filter(file => /^IGEM_OFFICIAL_MEDIA_UPLOAD_\d{8}\.json$/.test(file)).sort().map(file => path.join(root, 'docs', file))
 for (const saved of [...savedUploads, path.join(official, 'release-media-manifest.json')]) {
-  if (fs.existsSync(saved)) for (const asset of JSON.parse(fs.readFileSync(saved, 'utf8')).assets || []) if (asset.url) previous.set(asset.sha256, asset)
+  if (fs.existsSync(saved)) for (const asset of JSON.parse(fs.readFileSync(saved, 'utf8')).assets || []) {
+    if (asset.url || (asset.kind === 'video' && asset.publicationStatus === 'upload-blocked-account' && asset.uploadBlock?.reason === 'account-upload-disabled')) previous.set(asset.sha256, asset)
+  }
 }
 const shells = new Set()
 const folders = ['homepage', 'Project', 'Eagagement', 'Wet-lab', 'Instrument', 'Team', 'Judging']

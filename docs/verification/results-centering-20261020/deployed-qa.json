@@ -1,0 +1,240 @@
+{
+  "pipeline": {
+    "id": 774457,
+    "iid": 8,
+    "project_id": 5092,
+    "sha": "4af8322e260711df8fa3b70d48b8776dd0512b5c",
+    "ref": "main",
+    "status": "success",
+    "source": "push",
+    "created_at": "2026-10-19T18:30:26.261Z",
+    "updated_at": "2026-10-19T18:31:10.224Z",
+    "web_url": "https://gitlab.igem.org/2026/jlu-sph/-/pipelines/774457",
+    "before_sha": "6952e2a55ad9912a9938a31dc6426cb8c1d3e78c",
+    "tag": false,
+    "yaml_errors": null,
+    "user": {
+      "id": 25836,
+      "username": "jingyikang",
+      "public_email": null,
+      "name": "Jingyi Kang",
+      "state": "active",
+      "locked": false,
+      "avatar_url": "https://secure.gravatar.com/avatar/b48fb1fd8d0800546cc74355eba688929474fe6cdcc058cf1e28108082a7758e?s=80&d=identicon",
+      "web_url": "https://gitlab.igem.org/jingyikang"
+    },
+    "started_at": "2026-10-19T18:30:33.965Z",
+    "finished_at": "2026-10-19T18:31:10.212Z",
+    "committed_at": null,
+    "duration": 27,
+    "queued_duration": 7,
+    "coverage": null,
+    "detailed_status": {
+      "icon": "status_success",
+      "text": "Passed",
+      "label": "passed",
+      "group": "success",
+      "tooltip": "passed",
+      "has_details": true,
+      "details_path": "/2026/jlu-sph/-/pipelines/774457",
+      "illustration": null,
+      "favicon": "/assets/ci_favicons/favicon_status_success-8451333011eee8ce9f2ab25dc487fe24a8758c694827a582f17f42b0a90446a2.png"
+    },
+    "archived": false,
+    "name": null
+  },
+  "pagesAndLibraries": [
+    {
+      "path": "homepage/index.html",
+      "url": "https://2026.igem.wiki/jlu-sph/homepage/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "fa069b27e72685cbe0454baec1c0c8dfbf70d84282e51b6d69d50ac9645874b6",
+      "matchesBuild": true
+    },
+    {
+      "path": "Project/contribution.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Project/contribution.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "659af70462619d1cc5d0ed7f3ca3773170e2decadfa98ec3dc77b1337aa8780b",
+      "matchesBuild": true
+    },
+    {
+      "path": "Project/description.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Project/description.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "f71db7fcda2f1b38cb430f037f74b877d1054fe78918296dca44ce361b8e4d0b",
+      "matchesBuild": true
+    },
+    {
+      "path": "Project/design.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Project/design.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "8615febbd081f96d73497104ae6492d172407e7ae09c62fc5ab3cde98f61871f",
+      "matchesBuild": true
+    },
+    {
+      "path": "Project/engineering.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Project/engineering.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "fd2eb0467280b5a641c7d61a40d225bb48bfe4ccb35f2c5fab9435a4823617bc",
+      "matchesBuild": true
+    },
+    {
+      "path": "Project/safety.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Project/safety.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "90cead7382fd67063c3f79b859c959efbc420836563944b137bc3e963fb68616",
+      "matchesBuild": true
+    },
+    {
+      "path": "Eagagement/education.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Eagagement/education.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "f42f6efec80d31fc6274b79da77d427893603edf786df89ba49479f0b95885ff",
+      "matchesBuild": true
+    },
+    {
+      "path": "Eagagement/entrepreneurship.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Eagagement/entrepreneurship.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "96f45612483b9d018a8ae431b09f387f21ed2c41839eb6f64df82ca8f6ed140c",
+      "matchesBuild": true
+    },
+    {
+      "path": "Eagagement/iHP.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Eagagement/iHP.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "d2928b707a07b2465f9fe5e498a1244d3e16b8a7b53ded77fa7785d41da3b46b",
+      "matchesBuild": true
+    },
+    {
+      "path": "Wet-lab/measurement.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Wet-lab/measurement.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "5bdac6ecd5f0acd66fba28e71e234a15de6e7d77b75f6718fe5212dc3dc316a1",
+      "matchesBuild": true
+    },
+    {
+      "path": "Wet-lab/notebook.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Wet-lab/notebook.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "ba30f693a42b0ab0bd1f707b4dffbf440d6c244c38ad6e12199406d9099a6a9e",
+      "matchesBuild": true
+    },
+    {
+      "path": "Wet-lab/part.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Wet-lab/part.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "b2df485abe907f9d125be629f2ff1bfe4aff04fbfce78ae9d1099f6f4bce3cc5",
+      "matchesBuild": true
+    },
+    {
+      "path": "Wet-lab/protocal.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Wet-lab/protocal.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "fa498eb4ee1acdb659cc078e582d563b663e5a897baadab7ab4d8fabf7395e66",
+      "matchesBuild": true
+    },
+    {
+      "path": "Wet-lab/result.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Wet-lab/result.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "f2580ad6598b14d944ad0a9b95a58bf419b1bc9a43d4270f04e839f113862bec",
+      "matchesBuild": true
+    },
+    {
+      "path": "Instrument/hardware.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Instrument/hardware.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "0e2185ec77216cc6681b9b998521c2d97521e1d5d3c72dd3ff8c89c92cc0cd41",
+      "matchesBuild": true
+    },
+    {
+      "path": "Instrument/model.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Instrument/model.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "15c71567c6d38477971fc3eb3c9654e4109cab1a5dd966d3795c3d4c5fc04a47",
+      "matchesBuild": true
+    },
+    {
+      "path": "Instrument/software.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Instrument/software.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "34272372d23db39b618e527456dd4992a8c3356d2eba4656dbcebe0a8dc9c6cc",
+      "matchesBuild": true
+    },
+    {
+      "path": "Team/member.html",
+      "url": "https://2026.igem.wiki/jlu-sph/Team/member.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "8fe8adc7bfe7dad5ec87fa420faa69f439abc1ecaeb9e0eca41fd04e15102a7d",
+      "matchesBuild": true
+    },
+    {
+      "path": "index.html",
+      "url": "https://2026.igem.wiki/jlu-sph/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "2d0ce6d3ff33e311acf19cdfaddcee40481c9a9fb625aa17e33b101775dbe2ae",
+      "matchesBuild": true
+    },
+    {
+      "path": "pdf-viewer/vendor/build/pdf.min.mjs",
+      "url": "https://2026.igem.wiki/jlu-sph/pdf-viewer/vendor/build/pdf.min.mjs",
+      "status": 200,
+      "type": "application/javascript",
+      "sha256": "0d29c4871eff0b72f3896825f2673ddf7dfbccf815a7095a5d14f5aa68fab0e5",
+      "matchesBuild": true
+    },
+    {
+      "path": "pdf-viewer/vendor/build/pdf.worker.min.mjs",
+      "url": "https://2026.igem.wiki/jlu-sph/pdf-viewer/vendor/build/pdf.worker.min.mjs",
+      "status": 200,
+      "type": "application/javascript",
+      "sha256": "7fc442c268d107d656755252cf38c422a88e825b7f0caaac6a5f58364dff4179",
+      "matchesBuild": true
+    },
+    {
+      "path": "pdf-viewer/vendor/wasm/openjpeg.wasm",
+      "url": "https://2026.igem.wiki/jlu-sph/pdf-viewer/vendor/wasm/openjpeg.wasm",
+      "status": 200,
+      "type": "application/wasm",
+      "sha256": "67b8e2b162da472e98cb48d3d32e3e38fff481b9b32ff4818e78bb248af88ab2",
+      "matchesBuild": true
+    },
+    {
+      "path": "pdf-viewer/vendor/standard_fonts/LiberationSans-Regular.ttf",
+      "url": "https://2026.igem.wiki/jlu-sph/pdf-viewer/vendor/standard_fonts/LiberationSans-Regular.ttf",
+      "status": 200,
+      "type": "font/ttf",
+      "sha256": "f8ace1f892b2bd9dc1792ba7f097fa7588f84fed48321480e04de5390828221f",
+      "matchesBuild": true
+    },
+    {
+      "path": "pdf-viewer/vendor/cmaps/UniGB-UCS2-H.bcmap",
+      "url": "https://2026.igem.wiki/jlu-sph/pdf-viewer/vendor/cmaps/UniGB-UCS2-H.bcmap",
+      "status": 200,
+      "type": "application/octet-stream",
+      "sha256": "9201569b402e81ad8860650bd86350c4fa28e5dd5971f05fcacaf40f51de18ed",
+      "matchesBuild": true
+    }
+  ]
+}
