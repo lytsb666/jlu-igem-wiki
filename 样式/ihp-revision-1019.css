@@ -1,0 +1,45 @@
+/* Layout follows the supplied 10.18 (2) slides and the final statistics slide. */
+@layer wiki-format {
+  :root:root body.ihp-manuscript-page .ihp-final-numbers__grid { grid-template-columns: repeat(5,minmax(0,1fr)); gap: .5rem; }
+  :root:root body.ihp-manuscript-page .ihp-number-card img { width: 100%; height: auto; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+  :root:root body.ihp-manuscript-page .ihp-quote-mascot { width: clamp(60px, 8vw, 96px) !important; bottom: 0 !important; left: 12px !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story { position: relative; height: calc(90svh + 180px) !important; margin: 2rem 0 0 !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__stage {
+    position: sticky !important; top: max(80px, calc(100svh - 180px)) !important;
+    display: flex !important; align-items: center; justify-content: center;
+    height: auto !important; min-height: 150px !important; padding-block: 12px !important; overflow: hidden !important;
+  }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__row { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 120px; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__traveller { flex: 0 0 72px !important; width: 72px !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__message { min-width: 0; clip-path: inset(0 var(--text-reveal, 0%) 0 0) !important; }
+  :root:root body.ihp-manuscript-page .ihp-walking-story__message p { white-space: normal !important; line-height: 1.45; font-size: 16pt !important; }
+  :root:root body.ihp-manuscript-page .ihp-click-hint-1019 {
+    position: absolute; z-index: 6; width: clamp(22px, 2.8vw, 38px); display: flex; flex-direction: column; align-items: center;
+    pointer-events: none; line-height: 1;
+  }
+  :root:root body.ihp-manuscript-page .ihp-click-hint-1019 img { width: 100% !important; height: auto !important; border: 0 !important; margin: 0 !important; box-shadow: none !important; background: transparent !important; }
+  :root:root body.ihp-manuscript-page .ihp-hint-listen { left: -70%; bottom: -70%; }
+  :root:root body.ihp-manuscript-page .ihp-hint-wetlab { left: -35%; bottom: -40%; }
+}
+@layer wiki-typography {
+  :root:root body.ihp-manuscript-page .ihp-walking-story .ihp-walking-story__message p { font-size: 16pt !important; }
+  :root:root body.ihp-manuscript-page .ihp-click-hint-1019 span { font-size: 10px !important; font-weight: 700; line-height: 1.1; }
+}
+@media (max-width: 550px) {
+  @layer wiki-format {
+    :root:root body.ihp-manuscript-page .ihp-final-numbers__grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    :root:root body.ihp-manuscript-page .ihp-number-card:last-child { grid-column: 1 / -1; width: calc(50% - .25rem); justify-self: center; }
+    :root:root body.ihp-manuscript-page .ihp-quote-mascot { left: 4px !important; width: 52px !important; }
+    :root:root body.ihp-manuscript-page .ihp-walking-story { height: calc(90svh + 220px) !important; }
+    :root:root body.ihp-manuscript-page .ihp-walking-story__stage { height: auto !important; min-height: 210px !important; top: max(76px, calc(100svh - 230px)) !important; }
+    :root:root body.ihp-manuscript-page .ihp-walking-story__traveller { flex-basis: 46px !important; width: 46px !important; }
+    :root:root body.ihp-manuscript-page .ihp-walking-story__row { gap: 8px; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  @layer wiki-format {
+    :root:root body.ihp-manuscript-page .ihp-walking-story { height: auto !important; }
+    :root:root body.ihp-manuscript-page .ihp-walking-story__stage { position: relative !important; top: auto !important; }
+    :root:root body.ihp-manuscript-page .ihp-walking-story__message { clip-path: none !important; }
+  }
+}

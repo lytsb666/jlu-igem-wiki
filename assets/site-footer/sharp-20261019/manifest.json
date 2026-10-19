@@ -1,0 +1,51 @@
+[
+  {
+    "file": "health-inspection.svg",
+    "source": "assets/site-footer/restored-20261016/health-inspection.svg",
+    "sourceSha256": "bb06e9de74c0d7c4a7ceca29c8db8a62f8b1dc04fcf9a8ea240d288cd661b248",
+    "sha256": "4e7a5ee4f48927cf43d7179e50da8c6f66d77df263d52573d5b616a4dec2fb95",
+    "removedMorphology": 0
+  },
+  {
+    "file": "image10.svg",
+    "source": "assets/site-footer/restored-20261016/image10.svg",
+    "sourceSha256": "9635fc0913756a1be9eb6f70f2f14246f0a853d5e5ee824ae9d0ac21113ce67a",
+    "sha256": "be27bc4d84a8fd15fca86fdcf220e4bf9649078d5b49319ef0baf018ae5dc90e",
+    "removedMorphology": 4
+  },
+  {
+    "file": "image11.svg",
+    "source": "assets/site-footer/restored-20261016/image11.svg",
+    "sourceSha256": "ba5629632719470504c470e835fe29762feeb589422cfaf5a23dac0936223de5",
+    "sha256": "73b80d0f053b090b5d41a8bb29cb418a3b8c9727a4adf4e262d38bafd5a30db2",
+    "removedMorphology": 5
+  },
+  {
+    "file": "image12.svg",
+    "source": "assets/site-footer/restored-20261016/image12.svg",
+    "sourceSha256": "e6eb51f3c579f0f8a157b1c29bb79a0d624f5515e3f446ae1f2783780e795ae5",
+    "sha256": "a4fde457bc44a510b0a7bb4ec9a332f3bf38d27396ed00349b0ec55b6588928e",
+    "removedMorphology": 4
+  },
+  {
+    "file": "image6.svg",
+    "source": "assets/site-footer/restored-20261016/image6.svg",
+    "sourceSha256": "0c7f72be636245c15bcaddced36856a9ef61236c6faeb7acdb1a4999ad4b5617",
+    "sha256": "c996c756c88384d4171c37b079b6cba8133dced86f88387b0db528c94af62940",
+    "removedMorphology": 4
+  },
+  {
+    "file": "image7.svg",
+    "source": "assets/site-footer/restored-20261016/image7.svg",
+    "sourceSha256": "a0076cdc509ba25f61a60b464ad20895725514e1a65342e9bc9dd73d8509d038",
+    "sha256": "5e2c2f6f949f4f1642a118d2891128d64d2b9089762281e77871631442e79c99",
+    "removedMorphology": 4
+  },
+  {
+    "file": "image9.svg",
+    "source": "assets/site-footer/restored-20261016/image9.svg",
+    "sourceSha256": "e82b6b825f9ce00faa4ff89a1569245cd561788d59cce50b2606ed0f6501cbd3",
+    "sha256": "f298f69c00b8e967c548d6a82e6af1f0de5ce3b95f1323ba7839b67b09c60ed2",
+    "removedMorphology": 4
+  }
+]

@@ -8,10 +8,10 @@ const media = import.meta.glob('../assets/site-footer/revision-20261016/*.png', 
   eager: true, query: '?url', import: 'default',
 })
 const source = n => media[`../assets/site-footer/revision-20261016/image${n}.png`]
-const sponsorMedia = import.meta.glob('../assets/site-footer/restored-20261016/*.svg', {
+const sponsorMedia = import.meta.glob('../assets/site-footer/sharp-20261019/*.svg', {
   eager: true, query: '?url', import: 'default',
 })
-const sponsorSource = name => sponsorMedia[`../assets/site-footer/restored-20261016/${name}.svg`]
+const sponsorSource = name => sponsorMedia[`../assets/site-footer/sharp-20261019/${name}.svg`]
 if (footer) {
   const map = document.createElement('nav')
   map.className = 'footer-sitemap'
