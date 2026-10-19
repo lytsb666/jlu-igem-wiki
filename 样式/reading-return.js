@@ -38,7 +38,11 @@ function scheduleGutters() {
       const box = panel.getBoundingClientRect()
       if (!box.width) continue
       const previous = parseFloat(panel.style.getPropertyValue('--wiki-return-reserve')) || 0
-      const reserve = Math.max(0, Math.ceil(50 - (viewport - box.right - previous)))
+      // A resize can briefly expose the old desktop width. Reserve only the
+      // button's gutter, never propagate that transient overflow into content.
+      // Centered Team panels move their right edge by half the removed width.
+      const limit = panel.matches('.team-section') ? 100 : 50
+      const reserve = Math.max(0, Math.min(limit, Math.ceil(50 - (viewport - box.right - previous))))
       if (Math.abs(reserve - previous) > .5) panel.style.setProperty('--wiki-return-reserve', `${reserve}px`)
     }
     schedulePosition()
