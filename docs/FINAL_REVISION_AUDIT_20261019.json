@@ -246,5 +246,7 @@
     "oversized": [],
     "unsafe": []
   },
-  "canceledMeasurementParagraphPresent": false
+  "canceledMeasurementParagraphPresent": false,
+  "ihpSummaryExactRequestedSentencePresent": true,
+  "ihpSummaryOldSentencePresent": false
 }

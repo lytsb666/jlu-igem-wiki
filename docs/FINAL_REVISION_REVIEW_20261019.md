@@ -34,3 +34,7 @@
 公共责任人 00；构建和发布责任人 10。用户已明确授权上传仓库和更新公网，按 CONTRIBUTING 中所有者本人授权的既定规则，在检查通过后通过 PR／wiki-build／merge commit 验收，由既有 Actions 更新同一个 `jlu-igem-wiki-preview` Pages 项目。没有修改工作流、密钥或发布开关，不调用 iGEM 官网发布流程。
 
 公网固定地址：[jlu-igem-wiki-preview.pages.dev](https://jlu-igem-wiki-preview.pages.dev/)。本轮 PR、CI 和部署结果由对应 GitHub PR／Actions 留存；交付 Word 修改说明另附。
+
+## Summary 原句逐字核对
+
+公网验收补正 Summary 指定句：匹配原始 HTML 中的独立旧句，避免整段经实体解码后无法匹配源码。新句与本轮 Word 提供原文完全一致；保留该段的 585 份问卷统计、前文和 Moving forward 后文。构建产物和实际公网 DOM 均须包含完整新句，旧 three special judging requirements 句不得残留。
