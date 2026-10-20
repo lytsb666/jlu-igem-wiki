@@ -1,0 +1,51 @@
+{
+  "origin": "http://127.0.0.1:5244/",
+  "results": [
+    {
+      "width": 1440,
+      "pi": [
+        {
+          "name": "Bo Pang (庞博)",
+          "portrait": "Bo Pang portrait"
+        },
+        {
+          "name": "Xiuling Song (宋秀玲)",
+          "portrait": "Xiuling Song portrait"
+        },
+        {
+          "name": "Jinhua Li (李金华)",
+          "portrait": "Jinhua Li portrait"
+        }
+      ],
+      "secondary": [
+        "Juan Wang (王娟)",
+        "Guofan Su (苏国范)",
+        "Chao Zhao (赵超)"
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "pi": [
+        {
+          "name": "Bo Pang (庞博)",
+          "portrait": "Bo Pang portrait"
+        },
+        {
+          "name": "Xiuling Song (宋秀玲)",
+          "portrait": "Xiuling Song portrait"
+        },
+        {
+          "name": "Jinhua Li (李金华)",
+          "portrait": "Jinhua Li portrait"
+        }
+      ],
+      "secondary": [
+        "Juan Wang (王娟)",
+        "Guofan Su (苏国范)",
+        "Chao Zhao (赵超)"
+      ],
+      "errors": []
+    }
+  ]
+}
