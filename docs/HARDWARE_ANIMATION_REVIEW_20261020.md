@@ -28,4 +28,9 @@
 
 派生动画文件在 iGEM CDN 长期保存；仓库保存原始 MP4、每帧哈希、分段清单、真实地址和转换／核验脚本，浏览器直接从官方 CDN 分段加载。可再生成的本机编码缓存不重复提交到 Git。
 
-GitLab／GitHub 实际提交、流水线和官网验收完成后补记；本条检查完成不等同已上线。
+## 实际官方发布
+
+- [GitLab !4](https://gitlab.igem.org/2026/jlu-sph/-/merge_requests/4) 已合并，main 为 `04cd769a9512362327f970664256376b4db72ea2`。[流水线 777137](https://gitlab.igem.org/2026/jlu-sph/-/pipelines/777137) 成功；原 CI、依赖锁、Flask 发布与根 LICENSE 字节保持。
+- [官网 Hardware](https://2026.igem.wiki/jlu-sph/Instrument/hardware.html) 的三段动画已上线。89 个正式页面／脚本／样式文件与真实 CI 产物逐字节一致；CI 与 Windows 本地构建仅存在第三方文本换行符及 team／Team 别名路径大小写差异，归一化比较无内容差异。
+- 官网桌面／手机三段的进入视口播放、离开暂停、手动暂停保持、跨段定位、1280×720 画布与减少动态检查通过。实际确认第一段播放时，下方两段首段均已加载完成，而两段本身仍未播放；全屏内控件可见。证据在 `official-player/`、`official-preloading.json`、`official-fullscreen.json`、`official-deployed-files.json`。
+- GitHub 同步入口为 [PR #22](https://github.com/lytsb666/jlu-igem-wiki/pull/22)，保留 PR、wiki-build 和 merge commit 流程；该 PR 的实时状态与 main 生产 Actions 是仓库／固定预览站发布状态的最终依据。
