@@ -3,9 +3,14 @@
 // The homepage promotion retains its independent, click-to-play player.
 (() => {
   for (const frame of document.querySelectorAll('iframe[data-wiki-article-video]')) {
+    if (frame.dataset.wikiArticleVideoInitialized) continue
+    frame.dataset.wikiArticleVideoInitialized = 'true'
     const embed = new URL(frame.dataset.igemEmbedSrc)
     if (embed.origin !== 'https://video.igem.org') continue
     const hardware = Boolean(frame.closest('.hw-video'))
+    const fallback = frame.dataset.igemFallbackId ? document.getElementById(frame.dataset.igemFallbackId) : null
+    const reducedMotion = hardware && matchMedia('(prefers-reduced-motion: reduce)').matches
+    let requestedPlay = false
     const panel = document.createElement('div')
     panel.style.cssText = `width:${hardware ? '100%' : 'min(100%,380px)'};aspect-ratio:${frame.width}/${frame.height};max-height:${hardware ? '540px' : '38rem'};margin:auto;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem;box-sizing:border-box;background:#fffaf5;border:1px solid #d9c4b4;border-radius:12px;text-align:center;color:#6f4e37`
     const message = document.createElement('p')
@@ -18,7 +23,7 @@
     retry.textContent = 'Check video availability'
     retry.style.cssText = 'font:inherit;color:#fffaf5;background:#6f4e37;border:0;border-radius:8px;padding:10px 14px;cursor:pointer'
     panel.append(message, retry)
-    frame.before(panel)
+    if (!fallback) frame.before(panel)
     frame.style.display = 'none'
     const play = retry.cloneNode(true)
     play.textContent = 'Play with sound'
@@ -51,7 +56,7 @@
       try { await call('pause') } catch { /* Native controls remain available. */ }
     }
     async function start() {
-      if (!ready || !visible() || playing || starting || userPaused || blocked) return
+      if (!ready || !visible() || playing || starting || userPaused || blocked || (reducedMotion && !requestedPlay)) return
       starting = true
       try {
         await call('play')
@@ -132,6 +137,12 @@
         const info = await response.json()
         if (info.blacklisted || info.privacy?.id !== 1 || info.state?.id !== 1) return
         mounted = true
+        if (fallback) {
+          fallback.dataset.igemVideoApproved = 'true'
+          fallback.dispatchEvent(new CustomEvent('hardware-video-approved', {bubbles: true}))
+          fallback.hidden = true
+          fallback.style.display = 'none'
+        }
         panel.hidden = true
         panel.style.display = 'none'
         frame.style.display = 'block'
@@ -140,15 +151,15 @@
       finally { checking = false; retry.disabled = false }
     }
     function refresh() {
-      if (visible()) { play.hidden = !blocked; start() }
+      if (visible()) { play.hidden = !(blocked || (reducedMotion && !requestedPlay)); start() }
       else { play.hidden = true; pause() }
     }
     retry.addEventListener('click', availability)
-    play.addEventListener('click', () => { blocked = false; userPaused = false; start() })
+    play.addEventListener('click', () => { requestedPlay = true; blocked = false; userPaused = false; start() })
     const near = new IntersectionObserver(entries => {
       if (!checked && entries.some(entry => entry.isIntersecting)) availability()
     }, {rootMargin: '800px'})
-    near.observe(panel)
+    near.observe(fallback || panel)
     const observer = new IntersectionObserver(refresh, {threshold: [0, .15, .35, .5, 1]})
     observer.observe(frame)
     document.addEventListener('visibilitychange', refresh)

@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "mode": "pending",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "mode": "approved",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "mode": "reduced",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "mode": "pending",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "mode": "approved",
+    "passed": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "mode": "reduced",
+    "passed": true,
+    "errors": []
+  }
+]
