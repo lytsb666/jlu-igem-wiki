@@ -1,3 +1,5 @@
+**2026-10-20 Measurement 补文与三段原视频上传**：删除流程图下 Open 文字链接，并在 `This replaces…` 之前插入用户完整奖项段落；GitLab !7／`f7e85ec`、流水线 779366 成功，官网已核对。Video Universe 上传权限已恢复，三段原 MP4 及独立英文字幕均已上传并保存，当前仍待人工审核；保留现有高清动画，批准后由官方播放器接替。Hardware GitLab !8／`388dd80`、流水线 779468 成功，官网六个演示位置核对通过；GitHub 经 PR #25 同步。实际地址、哈希、播放验证与发布入口见 [本轮记录](docs/MEASUREMENT_VIDEO_FOLLOWUP_REVIEW_20261020.md)。
+
 **2026-10-20 Team PI 两位老师互换**：宋秀玲与李金华的完整人物卡互换，PI 当前顺序为庞博、宋秀玲、李金华。GitLab !6／`5bf7c72`、流水线 777440 成功，官网桌面／手机均核对姓名和照片通过；其他人员及原资料保持。GitHub 沿本轮 PI 修正 PR 同步，详见 [本轮记录](docs/TEAM_PI_ORDER_REVIEW_20261020.md)。
 
 **2026-10-20 Hardware 后续播放修正**：删除 Loading demonstration… 及其空白占位；播放中拖动进度条继续播放，手动暂停后定位仍暂停，连续拖动跳过过时渲染。GitLab !5／`205785b`、流水线 777299 成功，官网桌面／手机三段共六组检查通过。原媒体、清晰度、预加载及其他页面保持；GitHub 沿本轮修正 PR 同步，详见 [本轮记录](docs/HARDWARE_SEEK_REVIEW_20261020.md)。

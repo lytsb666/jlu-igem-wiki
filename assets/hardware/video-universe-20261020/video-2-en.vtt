@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:00.200 --> 00:00:03.000
+First Generation Operation
+
+2
+00:00:04.000 --> 00:00:07.000
+Collect the sample, add lysis buffer,
+
+3
+00:00:07.000 --> 00:00:13.000
+perform high-temperature lysis using an external water bath,
+
+4
+00:00:13.000 --> 00:00:17.000
+and transfer the extract to a reaction tube.
+
+5
+00:00:18.000 --> 00:00:23.000
+Add the sample and RPA reaction mixture
+to the bottom of the tube.
+
+6
+00:00:23.000 --> 00:00:29.000
+Place Cas12a, gRNA, and the fluorescent reporter
+in the tube cap.
+
+7
+00:00:30.000 --> 00:00:34.000
+Incubate the tube at 37°C for 20 minutes.
+
+8
+00:00:34.000 --> 00:00:38.000
+RPA amplification occurs at the bottom
+
+9
+00:00:38.000 --> 00:00:42.000
+while the components in the cap form a complex.
+
+10
+00:00:43.000 --> 00:00:46.000
+Centrifuge the tube to bring the liquid in the cap
+into the bottom of the tube.
+
+11
+00:00:53.000 --> 00:00:57.000
+Heat at 43°C and monitor the fluorescence signal in real time.
+
+12
+00:01:49.000 --> 00:01:51.000
+Capture an image, locate the reaction tube,
+
+13
+00:01:51.000 --> 00:01:57.000
+analyze its fluorescence, and display the result in the app.
+

@@ -196,7 +196,7 @@ class Demonstration {
 
 for (const figure of document.querySelectorAll('[data-hardware-animation]')) {
   const clip = clips.find(clip => String(clip.id) === figure.dataset.hardwareAnimation)
-  if (clip) new Demonstration(figure, clip)
+  if (clip && figure.dataset.igemVideoApproved !== 'true') new Demonstration(figure, clip)
 }
 const nearby = new IntersectionObserver(entries => {
   for (const entry of entries) {
@@ -220,4 +220,17 @@ document.addEventListener('visibilitychange', () => {
     if (document.hidden) player.pause()
     else if (!reducedMotion && player.visible && !player.manualPause && !player.finished) player.play()
   }
+})
+
+// Release the animation when its approved official video takes over.
+document.addEventListener('hardware-video-approved', event => {
+  const player = [...players].find(player => player.figure === event.target)
+  if (!player) return
+  player.pause()
+  players.delete(player)
+  nearby.unobserve(player.figure)
+  visible.unobserve(player.figure)
+  player.cache.clear()
+  player.decoder?.close()
+  URL.revokeObjectURL(player.objectURL)
 })

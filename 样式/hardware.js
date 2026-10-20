@@ -1,4 +1,5 @@
 import './hardware-animation.js'
+import '../scripts/igem-article-video.js'
 import { enhanceSectionNavigation } from './instrument-navigation.js'
 import { createCarousel } from './carousel.js'
 import cropWindows from '../assets/hardware/crop-windows-20261016.json'
