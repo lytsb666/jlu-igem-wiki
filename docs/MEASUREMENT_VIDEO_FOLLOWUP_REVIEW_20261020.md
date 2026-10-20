@@ -30,4 +30,6 @@
 
 平台尚未批准，当前无法实测公众原视频播放。桌面／手机的审核前保留动画、模拟批准后切换及播放器消息交互分别核查，模拟结果不记作实际审核通过。实际官网、GitLab Hardware 流水线和 GitHub PR／生产 Actions 作为最终发布依据。
 
-Hardware 接入的官方发布入口为 [GitLab !8](https://gitlab.igem.org/2026/jlu-sph/-/merge_requests/8)，合并提交 `388dd80`。六组本地状态／播放器交互核查通过；实际流水线与官网核查结果在完成发布后补记。
+Hardware 接入的官方发布入口为 [GitLab !8](https://gitlab.igem.org/2026/jlu-sph/-/merge_requests/8)，合并提交 `388dd80`。[流水线 779468](https://gitlab.igem.org/2026/jlu-sph/-/pipelines/779468) 成功。六组本地状态／播放器交互核查通过；真实官网桌面／手机共六个演示位置均保持可播放动画、完整控件及 1280×720 画布，没有横向溢出或 JavaScript 错误，也没有恢复 Loading 提示。三个官方视频地址已在实际官网源码核对。
+
+GitHub 同步入口为 [PR #25](https://github.com/lytsb666/jlu-igem-wiki/pull/25)，最终仓库状态及固定预览发布状态以该 PR 和 main 生产 Actions 为准；验证记录在 `docs/verification/measurement-video-followup-20261020/`。
