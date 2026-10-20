@@ -287,7 +287,8 @@ function renderPeople(list, id, advisors = false) {
   page.querySelector(id).replaceChildren(...list.map(person => staticPerson(person, advisors)))
 }
 const principalInvestigators = teamFaculty.filter(p => p.groups.includes('PI'))
-renderPeople([...principalInvestigators.slice(1), principalInvestigators[0]], '#pi-grid')
+// PI display order: Bo Pang, Xiuling Song, Jinhua Li.
+renderPeople([principalInvestigators[1], principalInvestigators[0], ...principalInvestigators.slice(2)], '#pi-grid')
 renderPeople(teamFaculty.filter(p => p.groups.includes('Secondary PI')), '#secondary-pi-grid')
 renderPeople(memberPresentation.advisors.map(id => teamMembers.find(p => p.id === id)), '#advisor-grid', true)
 
