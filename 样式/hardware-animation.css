@@ -9,5 +9,6 @@
 .hw-animation-controls button { cursor: pointer; border: 1px solid #ab7950; border-radius: 6px; padding: 6px 10px; background: #fff8ef; color: #6f4e37; font: inherit; }
 .hw-animation-controls input { min-width: 80px; flex: 1 1 120px; accent-color: #8d5930; }
 .hw-animation-controls output { white-space: nowrap; font-variant-numeric: tabular-nums; }
-.hardware-page .hw-animation-status { min-height: 1.25em; margin: 0; text-align: center; }
+.hardware-page .hw-animation-status { margin: 0; text-align: center; }
+.hardware-page .hw-animation-status[hidden] { display: none !important; }
 @media (max-width: 600px) { .hw-animation-controls input { order: 2; flex-basis: 100%; } }

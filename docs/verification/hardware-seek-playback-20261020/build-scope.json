@@ -1,0 +1,12 @@
+{
+  "files": 364,
+  "changedOutputs": [
+    "assets/hardware-9h1vtbfr.css",
+    "assets/hardware-bpzookak.css",
+    "assets/instrument/hardware-btmljblb.js",
+    "assets/instrument/hardware-yff9ifbl.js",
+    "instrument/hardware.html"
+  ],
+  "normalization": "line endings, inter-tag HTML whitespace and path casing",
+  "otherPagesAndAssetsUnchanged": true
+}
