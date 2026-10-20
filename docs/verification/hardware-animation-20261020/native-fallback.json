@@ -1,0 +1,10 @@
+{
+  "nativeAnimatedAVIF": true,
+  "segmentAdvanced": true,
+  "pausedFrameCanvas": {
+    "visible": true,
+    "width": 1280,
+    "height": 720
+  },
+  "errors": []
+}

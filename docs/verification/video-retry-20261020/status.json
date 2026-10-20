@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-19T18:59:57.059295+00:00",
+  "requirementsURL": "https://teams.igem.org/6074/deliverables/wiki/videos-and-audios",
+  "retriedFromOfficialUploadLink": true,
+  "publishURL": "https://video.igem.org/videos/publish",
+  "account": "jingyikang",
+  "visibleMessage": "对不起，你的账户的上传功能已被禁用。如果你想添加视频，管理员必须解锁你的权限。",
+  "fileSelectionAvailable": false,
+  "uploadedHardwareVideos": 0,
+  "remainingHardwareVideos": 3,
+  "accountQuotaUsedBytes": null,
+  "note": "Account values were not read. The public instance defaults are not the account remaining quota. No API upload, duplicate upload, account setting change, or website redeployment was attempted after the current explicit upload prohibition."
+}

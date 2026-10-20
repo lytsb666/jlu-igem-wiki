@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-20T04:28:36.904768+00:00",
+  "site": "https://2026.igem.wiki/jlu-sph/Instrument/hardware.html",
+  "gitlabMR": "https://gitlab.igem.org/2026/jlu-sph/-/merge_requests/4",
+  "gitlabCommit": "04cd769a9512362327f970664256376b4db72ea2",
+  "pipeline": 777137,
+  "pipelineStatus": "success",
+  "officialFilesMatchCI": 89,
+  "liveDesktopMobilePlayerChecks": "passed",
+  "livePreloading": "both later starts finished loading while later players remained paused",
+  "liveFullscreen": "passed; original 1280x720 canvas and visible controls",
+  "githubPR": "https://github.com/lytsb666/jlu-igem-wiki/pull/22",
+  "originalVideoUniverseAccountStatus": "upload-disabled; image animation publication does not change it"
+}

@@ -1,0 +1,136 @@
+{
+  "origin": "http://127.0.0.1:5244/",
+  "results": [
+    {
+      "width": 1440,
+      "initial": [
+        null,
+        null,
+        null
+      ],
+      "checks": [
+        {
+          "id": 1,
+          "start": 9,
+          "advanced": 24,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 240,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 2,
+          "start": 9,
+          "advanced": 27,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 1500,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 3,
+          "start": 9,
+          "advanced": 22,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 100,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-001-bb5b98778f18.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-002-0481adc717a3.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-001-508914819ee7.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-3-part-001-cf3fb6057935.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-003-ca12ddf03490.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-004-546cdd11a0a8.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-002-0aabb6368ec1.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-041-6aea96faff7b.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-042-6226bfb7f1ae.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-3-part-002-d475c57def7b.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-3-part-003-fe01a664fbf7.avif"
+      ],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "width": 390,
+      "initial": [
+        null,
+        null,
+        null
+      ],
+      "checks": [
+        {
+          "id": 1,
+          "start": 10,
+          "advanced": 27,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 240,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 2,
+          "start": 9,
+          "advanced": 26,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 1500,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 3,
+          "start": 9,
+          "advanced": 24,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 100,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        }
+      ],
+      "requests": [
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-001-bb5b98778f18.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-002-0481adc717a3.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-001-508914819ee7.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-3-part-001-cf3fb6057935.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-003-ca12ddf03490.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-1-part-004-546cdd11a0a8.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-002-0aabb6368ec1.webp",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-041-6aea96faff7b.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-2-part-042-6226bfb7f1ae.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-3-part-002-d475c57def7b.avif",
+        "http://127.0.0.1:5244/assets/hardware/animations-20261020/video-3-part-003-fe01a664fbf7.avif"
+      ],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "reducedMotionAutoplay": false
+    }
+  ]
+}

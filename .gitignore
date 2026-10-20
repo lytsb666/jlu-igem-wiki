@@ -43,3 +43,8 @@ test-results/
 playwright-report/
 __pycache__/
 *.pyc
+
+# Regenerable lossless animation encodings live on verified iGEM CDN URLs.
+# Keep original MP4s, manifests, frame hashes and conversion code in Git.
+/assets/hardware/animations-20261020/*.webp
+/assets/hardware/animations-20261020/*.avif
