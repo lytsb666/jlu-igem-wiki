@@ -1,0 +1,187 @@
+{
+  "origin": "http://127.0.0.1:5247/",
+  "results": [
+    {
+      "width": 1440,
+      "initial": [
+        null,
+        null,
+        null
+      ],
+      "checks": [
+        {
+          "id": 1,
+          "start": 9,
+          "advanced": 24,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 240,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 2,
+          "start": 9,
+          "advanced": 24,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 1500,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 3,
+          "start": 9,
+          "advanced": 21,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 100,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        }
+      ],
+      "requests": [
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/4d38383a84f61b37fc0d82495ec3ce183d30454b7334de63451cb6089b04ad7b.webp",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/37b3c9e52a4428f5b99b32fa40c0cc75745851146aa5242cd7aa5911679d29df.webp",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/c3f72e97d489d9006583a5059af01d6c52dad6ed4d495b4b9be15cb00d2b8fe2.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/9dadae0c5603bbe9559d73f49e93f808e1355fb289342585e3dbf2b5dcaa05f2.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/c8c4e87cd388fb7e7389d3b875eb587b49f110371d670f53dfc33aef48f12ce7.avif",
+        "https://static.igem.wiki/teams/6074/wiki/3a84277481fccf567223fd3da98741fa1be63012e8717c020a3dc47c6e13a754.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/9862e96814cfcc859fcfd8bed4a4490641f238ead37a22bc51b51954e8df7a30.avif",
+        "https://static.igem.wiki/teams/6074/wiki/b63f918dc0eb0661eb62042bfe63e9061caca35b050994f0f1a0ae57429d37d7.avif",
+        "https://static.igem.wiki/teams/6074/wiki/e70892f8a5f47a0685d7ff24e2950bb1652a8656847ea39dc9fb69dc3df291bd.avif",
+        "https://static.igem.wiki/teams/6074/wiki/ab58abe69e8ecbaba68d23e358fe73ccd52500c5802ebd1e6034b5fd7d33faeb.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/a5bf1de8fa426dff259dd84249e4198087ba7c5b86e5d2a28b85b67542813876.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/d2c15a2babea72fd026f87460081a59bdfbfdead4f928aeb25c877b3127cf15a.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/0e961b51733a095d31bbb61b2734628da6e475d5645979cd0cb7b17c8bdcb8ac.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/dade5cb65e38b475ac155fece5e77dcc6a44ba105339d75f3adcd361f395e166.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/efa99995ad9dbadef81a803b4d2e489d8b12dc53593d52b8ae5db5252a9972d5.avif",
+        "https://static.igem.wiki/teams/6074/wiki/bb5b98778f18633871d565f5a349f4e60f634247666410c9d239dbdfa6992c02.webp",
+        "https://static.igem.wiki/teams/6074/wiki/39856a4ce85b7a0a73966559b9ac0b65e5958cd98334f6acb4800c9d409830e1.avif",
+        "https://static.igem.wiki/teams/6074/wiki/f782ffa46fdfcf7916317a24398f155465ee270e1fbfb28570ef5dfbd01d9fd5.avif",
+        "https://static.igem.wiki/teams/6074/wiki/0481adc717a30fff8170f8a6c1c25252bd2814752a48a0922e69271ce34b5b7b.webp",
+        "https://static.igem.wiki/teams/6074/wiki/508914819ee71afba67b980d490eb13fea985778b539f271ab670f6f450ea20d.webp",
+        "https://static.igem.wiki/teams/6074/wiki/cf3fb6057935aaf3829680a4f080860726bd65bf11b08333df19fb149d0d73e7.avif",
+        "https://static.igem.wiki/teams/6074/wiki/ca12ddf03490102e3497d519260321fb768c8190e50d457d84042e8614eb3df4.webp",
+        "https://static.igem.wiki/teams/6074/wiki/546cdd11a0a8b52e8d52a3b291117aade52cf6b86d7f65fd79bf9a17ae2611cf.webp",
+        "https://static.igem.wiki/teams/6074/wiki/58b655f559feefad4f81907e3f31591e882a4da6f68a9e0aa5eba49138f851b8.avif",
+        "https://static.igem.wiki/teams/6074/wiki/2afa29bcd04854013e4dfe8dac55f37d0098eb2768b0122219e315d0b16bdc94.avif",
+        "https://static.igem.wiki/teams/6074/wiki/3c4ac8f2506b75ad64fa4a1b0643f5d45b12e04d98f3896ae9319d3e57fe403c.avif",
+        "https://static.igem.wiki/teams/6074/wiki/6c7abae524003f2a69e022f1b3683e94ee506210c41f364ffe5038c621582e75.avif",
+        "https://static.igem.wiki/teams/6074/wiki/0aabb6368ec19039ca2d46a01e3724a41b6f7a4625ec2bc22a9652bdf315a1e8.webp",
+        "https://static.igem.wiki/teams/6074/wiki/6aea96faff7b9fda48659fb73a51ba57619cc7dce8371947b643370125d6add1.avif",
+        "https://static.igem.wiki/teams/6074/wiki/6226bfb7f1ae985d4847b3b29563d7b4528d35a2f1caeebc1624e8b8cf860662.avif",
+        "https://static.igem.wiki/teams/6074/wiki/9a23da6b24baeb93554450713548f96d476fd019776390020a6a66920c02679e.avif",
+        "https://static.igem.wiki/teams/6074/wiki/5c5b84ff96e7e1f6759189ef5c138edb7fb9d94912f1108be4de9af1f62bbd99.avif",
+        "https://static.igem.wiki/teams/6074/wiki/7018312d3b5366c3f3df4f6b6584d68496348a888e452d420478f8a87f2cc624.avif",
+        "https://static.igem.wiki/teams/6074/wiki/f0eca63618bfbd1b66ea12285d26e3ff8a1e039df3a9e2f0d6808d91a998190b.avif",
+        "https://static.igem.wiki/teams/6074/wiki/0a4c00a9a5003c5eff136fc1e7feb476e9de47403378946275ef7981476af692.avif",
+        "https://static.igem.wiki/teams/6074/wiki/47dbc31e6aada42f50d5c26d3d1e6d2ebf9c1af6bae8a1430e8ba3d9f6f29675.avif",
+        "https://static.igem.wiki/teams/6074/wiki/d475c57def7bcb285ba16b53b6bdf7bee65201670f71db6d9f3425b278899617.avif",
+        "https://static.igem.wiki/teams/6074/wiki/fe01a664fbf700b86dd20638900cf8f3a59dd68eb9148a82827ebc4faa74a4db.avif"
+      ],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "width": 390,
+      "initial": [
+        null,
+        null,
+        null
+      ],
+      "checks": [
+        {
+          "id": 1,
+          "start": 9,
+          "advanced": 25,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 240,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 2,
+          "start": 9,
+          "advanced": 25,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 1500,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        },
+        {
+          "id": 3,
+          "start": 9,
+          "advanced": 19,
+          "offscreenPaused": true,
+          "manualPausePersists": true,
+          "seekFrame": 100,
+          "dimensions": {
+            "width": 1280,
+            "height": 720
+          },
+          "status": ""
+        }
+      ],
+      "requests": [
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/4d38383a84f61b37fc0d82495ec3ce183d30454b7334de63451cb6089b04ad7b.webp",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/37b3c9e52a4428f5b99b32fa40c0cc75745851146aa5242cd7aa5911679d29df.webp",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/c3f72e97d489d9006583a5059af01d6c52dad6ed4d495b4b9be15cb00d2b8fe2.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/9dadae0c5603bbe9559d73f49e93f808e1355fb289342585e3dbf2b5dcaa05f2.avif",
+        "https://static.igem.wiki/teams/6074/wiki/3a84277481fccf567223fd3da98741fa1be63012e8717c020a3dc47c6e13a754.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/9862e96814cfcc859fcfd8bed4a4490641f238ead37a22bc51b51954e8df7a30.avif",
+        "https://static.igem.wiki/teams/6074/wiki/b63f918dc0eb0661eb62042bfe63e9061caca35b050994f0f1a0ae57429d37d7.avif",
+        "https://static.igem.wiki/teams/6074/wiki/e70892f8a5f47a0685d7ff24e2950bb1652a8656847ea39dc9fb69dc3df291bd.avif",
+        "https://static.igem.wiki/teams/6074/wiki/ab58abe69e8ecbaba68d23e358fe73ccd52500c5802ebd1e6034b5fd7d33faeb.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/a5bf1de8fa426dff259dd84249e4198087ba7c5b86e5d2a28b85b67542813876.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/d2c15a2babea72fd026f87460081a59bdfbfdead4f928aeb25c877b3127cf15a.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/0e961b51733a095d31bbb61b2734628da6e475d5645979cd0cb7b17c8bdcb8ac.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/dade5cb65e38b475ac155fece5e77dcc6a44ba105339d75f3adcd361f395e166.avif",
+        "https://static.igem.wiki/teams/6074/wiki/wiki-2e32255/efa99995ad9dbadef81a803b4d2e489d8b12dc53593d52b8ae5db5252a9972d5.avif",
+        "https://static.igem.wiki/teams/6074/wiki/39856a4ce85b7a0a73966559b9ac0b65e5958cd98334f6acb4800c9d409830e1.avif",
+        "https://static.igem.wiki/teams/6074/wiki/f782ffa46fdfcf7916317a24398f155465ee270e1fbfb28570ef5dfbd01d9fd5.avif",
+        "https://static.igem.wiki/teams/6074/wiki/bb5b98778f18633871d565f5a349f4e60f634247666410c9d239dbdfa6992c02.webp",
+        "https://static.igem.wiki/teams/6074/wiki/0481adc717a30fff8170f8a6c1c25252bd2814752a48a0922e69271ce34b5b7b.webp",
+        "https://static.igem.wiki/teams/6074/wiki/508914819ee71afba67b980d490eb13fea985778b539f271ab670f6f450ea20d.webp",
+        "https://static.igem.wiki/teams/6074/wiki/cf3fb6057935aaf3829680a4f080860726bd65bf11b08333df19fb149d0d73e7.avif",
+        "https://static.igem.wiki/teams/6074/wiki/ca12ddf03490102e3497d519260321fb768c8190e50d457d84042e8614eb3df4.webp",
+        "https://static.igem.wiki/teams/6074/wiki/546cdd11a0a8b52e8d52a3b291117aade52cf6b86d7f65fd79bf9a17ae2611cf.webp",
+        "https://static.igem.wiki/teams/6074/wiki/58b655f559feefad4f81907e3f31591e882a4da6f68a9e0aa5eba49138f851b8.avif",
+        "https://static.igem.wiki/teams/6074/wiki/2afa29bcd04854013e4dfe8dac55f37d0098eb2768b0122219e315d0b16bdc94.avif",
+        "https://static.igem.wiki/teams/6074/wiki/3c4ac8f2506b75ad64fa4a1b0643f5d45b12e04d98f3896ae9319d3e57fe403c.avif",
+        "https://static.igem.wiki/teams/6074/wiki/6c7abae524003f2a69e022f1b3683e94ee506210c41f364ffe5038c621582e75.avif",
+        "https://static.igem.wiki/teams/6074/wiki/0aabb6368ec19039ca2d46a01e3724a41b6f7a4625ec2bc22a9652bdf315a1e8.webp",
+        "https://static.igem.wiki/teams/6074/wiki/6aea96faff7b9fda48659fb73a51ba57619cc7dce8371947b643370125d6add1.avif",
+        "https://static.igem.wiki/teams/6074/wiki/6226bfb7f1ae985d4847b3b29563d7b4528d35a2f1caeebc1624e8b8cf860662.avif",
+        "https://static.igem.wiki/teams/6074/wiki/7018312d3b5366c3f3df4f6b6584d68496348a888e452d420478f8a87f2cc624.avif",
+        "https://static.igem.wiki/teams/6074/wiki/f0eca63618bfbd1b66ea12285d26e3ff8a1e039df3a9e2f0d6808d91a998190b.avif",
+        "https://static.igem.wiki/teams/6074/wiki/0a4c00a9a5003c5eff136fc1e7feb476e9de47403378946275ef7981476af692.avif",
+        "https://static.igem.wiki/teams/6074/wiki/47dbc31e6aada42f50d5c26d3d1e6d2ebf9c1af6bae8a1430e8ba3d9f6f29675.avif",
+        "https://static.igem.wiki/teams/6074/wiki/d475c57def7bcb285ba16b53b6bdf7bee65201670f71db6d9f3425b278899617.avif",
+        "https://static.igem.wiki/teams/6074/wiki/fe01a664fbf700b86dd20638900cf8f3a59dd68eb9148a82827ebc4faa74a4db.avif"
+      ],
+      "errors": [],
+      "failures": []
+    },
+    {
+      "reducedMotionAutoplay": false
+    }
+  ]
+}

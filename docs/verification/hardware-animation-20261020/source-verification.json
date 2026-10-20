@@ -1,0 +1,40 @@
+{
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 30,
+  "videos": [
+    {
+      "video": 1,
+      "sourceSHA256": "d8b9f0ab6fa117a58378b2e40f982c6969e24d93335b5b4704812b23f7cd7d49",
+      "sourceBytes": 6779615,
+      "sourceFrames": 668,
+      "verifiedSourceFrames": 668,
+      "segments": 24,
+      "animationBytes": 129752476,
+      "pixelMismatchCount": 0
+    },
+    {
+      "video": 2,
+      "sourceSHA256": "3024ec8e70fb548d1e05750c2d254a1f0280b774429c6e6b121c1eccac6f4a36",
+      "sourceBytes": 22559008,
+      "sourceFrames": 3670,
+      "verifiedSourceFrames": 3670,
+      "segments": 79,
+      "animationBytes": 348943523,
+      "pixelMismatchCount": 0
+    },
+    {
+      "video": 3,
+      "sourceSHA256": "5c26f9daaa52528428eff8b87f9d32f79239bccfb69a981bd4cafa4a7efe62a3",
+      "sourceBytes": 22309952,
+      "sourceFrames": 2314,
+      "verifiedSourceFrames": 2314,
+      "segments": 37,
+      "animationBytes": 197470155,
+      "pixelMismatchCount": 0
+    }
+  ],
+  "allFramesVerified": true
+}

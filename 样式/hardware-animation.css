@@ -1,0 +1,13 @@
+.hardware-page .hw-animation { width: 100%; max-width: 960px; margin-inline: auto; }
+.hw-animation-stage { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #17120e; overflow: hidden; }
+.hw-animation-stage :is(img,canvas) { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; max-height: none; }
+.hw-animation-stage [hidden] { display: none !important; }
+.hw-animation:fullscreen { box-sizing: border-box; display: flex; flex-direction: column; width: 100%; max-width: none; height: 100%; margin: 0; padding: 12px; background: #17120e; color: #fff8ef; }
+.hw-animation:fullscreen .hw-animation-stage { flex: 1; min-height: 0; aspect-ratio: auto; }
+.hw-animation:fullscreen :is(output,.hw-animation-status) { color: #fff8ef; }
+.hw-animation-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 10px 0; }
+.hw-animation-controls button { cursor: pointer; border: 1px solid #ab7950; border-radius: 6px; padding: 6px 10px; background: #fff8ef; color: #6f4e37; font: inherit; }
+.hw-animation-controls input { min-width: 80px; flex: 1 1 120px; accent-color: #8d5930; }
+.hw-animation-controls output { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hardware-page .hw-animation-status { min-height: 1.25em; margin: 0; text-align: center; }
+@media (max-width: 600px) { .hw-animation-controls input { order: 2; flex-basis: 100%; } }

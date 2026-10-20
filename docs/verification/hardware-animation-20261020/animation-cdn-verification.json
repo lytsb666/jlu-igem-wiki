@@ -1,0 +1,1129 @@
+{
+  "teamID": 6074,
+  "files": [
+    {
+      "sha256": "0481adc717a30fff8170f8a6c1c25252bd2814752a48a0922e69271ce34b5b7b",
+      "url": "https://static.igem.wiki/teams/6074/wiki/0481adc717a30fff8170f8a6c1c25252bd2814752a48a0922e69271ce34b5b7b.webp",
+      "bytes": 5039986,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:00.159726+00:00"
+    },
+    {
+      "sha256": "14d2c65a20b3733a653277f119b18098ea4ef641922a2f8cce29c9afcfad694a",
+      "url": "https://static.igem.wiki/teams/6074/wiki/14d2c65a20b3733a653277f119b18098ea4ef641922a2f8cce29c9afcfad694a.webp",
+      "bytes": 5623798,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:05:59.985034+00:00"
+    },
+    {
+      "sha256": "322f8739052af5254089578cef0021a1eb53eb8ed8bb750f38afefad2e802a9c",
+      "url": "https://static.igem.wiki/teams/6074/wiki/322f8739052af5254089578cef0021a1eb53eb8ed8bb750f38afefad2e802a9c.webp",
+      "bytes": 7111086,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:05:59.942074+00:00"
+    },
+    {
+      "sha256": "434587b7eb8b9dbe97d7e513226971cc4cb90f17844349051abbfc788e8c5b3c",
+      "url": "https://static.igem.wiki/teams/6074/wiki/434587b7eb8b9dbe97d7e513226971cc4cb90f17844349051abbfc788e8c5b3c.webp",
+      "bytes": 6556744,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:05:59.860427+00:00"
+    },
+    {
+      "sha256": "4d4bd58a02dcd266aad82b2773a22be0c5b31b3a1d25d3de9f6806d9533f737e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4d4bd58a02dcd266aad82b2773a22be0c5b31b3a1d25d3de9f6806d9533f737e.webp",
+      "bytes": 5024390,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:01.052845+00:00"
+    },
+    {
+      "sha256": "546cdd11a0a8b52e8d52a3b291117aade52cf6b86d7f65fd79bf9a17ae2611cf",
+      "url": "https://static.igem.wiki/teams/6074/wiki/546cdd11a0a8b52e8d52a3b291117aade52cf6b86d7f65fd79bf9a17ae2611cf.webp",
+      "bytes": 3777032,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:00.735091+00:00"
+    },
+    {
+      "sha256": "5fae4ae70267cb1c64de9c8c7b05c3c5d168150471f4a23914db3a01fb9bdd7f",
+      "url": "https://static.igem.wiki/teams/6074/wiki/5fae4ae70267cb1c64de9c8c7b05c3c5d168150471f4a23914db3a01fb9bdd7f.webp",
+      "bytes": 3750910,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:01.097545+00:00"
+    },
+    {
+      "sha256": "718fe15a852299847f13df930ec465735e1e466eccb2c270adbe82792eb1c907",
+      "url": "https://static.igem.wiki/teams/6074/wiki/718fe15a852299847f13df930ec465735e1e466eccb2c270adbe82792eb1c907.webp",
+      "bytes": 4342778,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:01.331469+00:00"
+    },
+    {
+      "sha256": "7fcfd974ae346749a0f2b36fcaa2f0b26055abc7b4d0d87900bf062acacc3c4d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7fcfd974ae346749a0f2b36fcaa2f0b26055abc7b4d0d87900bf062acacc3c4d.webp",
+      "bytes": 5753114,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:01.682108+00:00"
+    },
+    {
+      "sha256": "88e37766a814d659c22e321b74a91633301559dbd265db1e45fa71ab3aa42e7c",
+      "url": "https://static.igem.wiki/teams/6074/wiki/88e37766a814d659c22e321b74a91633301559dbd265db1e45fa71ab3aa42e7c.webp",
+      "bytes": 6686946,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:02.069853+00:00"
+    },
+    {
+      "sha256": "8a1682b599b168910c50a440d71c7eb41b605a285da823afbc2ff3eed61c9cf1",
+      "url": "https://static.igem.wiki/teams/6074/wiki/8a1682b599b168910c50a440d71c7eb41b605a285da823afbc2ff3eed61c9cf1.webp",
+      "bytes": 4187418,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:02.034066+00:00"
+    },
+    {
+      "sha256": "9cd73c2562db292a11400acfda16a0721eb405c2e179b296a3637cc5ea3eff9d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/9cd73c2562db292a11400acfda16a0721eb405c2e179b296a3637cc5ea3eff9d.webp",
+      "bytes": 5043848,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:02.116728+00:00"
+    },
+    {
+      "sha256": "9e6c187167d02d427b67f431a241678bad038bc8ad8e428eefb76cd4a03698a2",
+      "url": "https://static.igem.wiki/teams/6074/wiki/9e6c187167d02d427b67f431a241678bad038bc8ad8e428eefb76cd4a03698a2.webp",
+      "bytes": 4981818,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:02.547696+00:00"
+    },
+    {
+      "sha256": "abadffdf65fbeae18533d782eab277b5fdaf1ee856c38f38db30c574207e49e5",
+      "url": "https://static.igem.wiki/teams/6074/wiki/abadffdf65fbeae18533d782eab277b5fdaf1ee856c38f38db30c574207e49e5.webp",
+      "bytes": 3887034,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:03.008279+00:00"
+    },
+    {
+      "sha256": "b194d2052a5711be81660f6f750dba7d16a589e1fdd152df4958aaff47db1c32",
+      "url": "https://static.igem.wiki/teams/6074/wiki/b194d2052a5711be81660f6f750dba7d16a589e1fdd152df4958aaff47db1c32.webp",
+      "bytes": 6537458,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:02.944438+00:00"
+    },
+    {
+      "sha256": "b900e1b91d6cb3e8acf6337688af9590d3722cab69b5fe918a4343b782a93333",
+      "url": "https://static.igem.wiki/teams/6074/wiki/b900e1b91d6cb3e8acf6337688af9590d3722cab69b5fe918a4343b782a93333.webp",
+      "bytes": 6701098,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:03.481401+00:00"
+    },
+    {
+      "sha256": "bb5b98778f18633871d565f5a349f4e60f634247666410c9d239dbdfa6992c02",
+      "url": "https://static.igem.wiki/teams/6074/wiki/bb5b98778f18633871d565f5a349f4e60f634247666410c9d239dbdfa6992c02.webp",
+      "bytes": 4149938,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:02.893987+00:00"
+    },
+    {
+      "sha256": "c32be551f730732de4a6d13cc7b8e071417869f84a5a1978fae4bdbfbfc46747",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c32be551f730732de4a6d13cc7b8e071417869f84a5a1978fae4bdbfbfc46747.webp",
+      "bytes": 4417570,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:03.786340+00:00"
+    },
+    {
+      "sha256": "c40665ca35454272b151afb889e1bff673201c3ec4b9f3bd87ba2b4dc3404860",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c40665ca35454272b151afb889e1bff673201c3ec4b9f3bd87ba2b4dc3404860.webp",
+      "bytes": 6504548,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:04.301451+00:00"
+    },
+    {
+      "sha256": "ca12ddf03490102e3497d519260321fb768c8190e50d457d84042e8614eb3df4",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ca12ddf03490102e3497d519260321fb768c8190e50d457d84042e8614eb3df4.webp",
+      "bytes": 7530596,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:04.440341+00:00"
+    },
+    {
+      "sha256": "d455e573a825df0270f509084a8f765d7c7c333faef4f202b88a21145be2f450",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d455e573a825df0270f509084a8f765d7c7c333faef4f202b88a21145be2f450.webp",
+      "bytes": 6132970,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:04.616143+00:00"
+    },
+    {
+      "sha256": "d77387ea92cd96bbbee23d5900dbd9cbcdfa197c1be4eb2fa3f528a87ab8a1bb",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d77387ea92cd96bbbee23d5900dbd9cbcdfa197c1be4eb2fa3f528a87ab8a1bb.webp",
+      "bytes": 4801366,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:04.683984+00:00"
+    },
+    {
+      "sha256": "f0275e85d8cde3ddcde7dcf215563733f1a8778f4c3986bb6314bf9b95429b92",
+      "url": "https://static.igem.wiki/teams/6074/wiki/f0275e85d8cde3ddcde7dcf215563733f1a8778f4c3986bb6314bf9b95429b92.webp",
+      "bytes": 5886962,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:05.194031+00:00"
+    },
+    {
+      "sha256": "f87bfa7dd379aefacf9c09db2696004f0be5de31d5b52f2bb403143a5ca17fc7",
+      "url": "https://static.igem.wiki/teams/6074/wiki/f87bfa7dd379aefacf9c09db2696004f0be5de31d5b52f2bb403143a5ca17fc7.webp",
+      "bytes": 5323068,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:05.534789+00:00"
+    },
+    {
+      "sha256": "508914819ee71afba67b980d490eb13fea985778b539f271ab670f6f450ea20d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/508914819ee71afba67b980d490eb13fea985778b539f271ab670f6f450ea20d.webp",
+      "bytes": 1022914,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:05.490076+00:00"
+    },
+    {
+      "sha256": "0aabb6368ec19039ca2d46a01e3724a41b6f7a4625ec2bc22a9652bdf315a1e8",
+      "url": "https://static.igem.wiki/teams/6074/wiki/0aabb6368ec19039ca2d46a01e3724a41b6f7a4625ec2bc22a9652bdf315a1e8.webp",
+      "bytes": 1956916,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:05.405213+00:00"
+    },
+    {
+      "sha256": "866bdb0df92c56b129745bfbea78e5edee1aead7268aa157ae4d00b4df21efd1",
+      "url": "https://static.igem.wiki/teams/6074/wiki/866bdb0df92c56b129745bfbea78e5edee1aead7268aa157ae4d00b4df21efd1.webp",
+      "bytes": 3527056,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:06.356213+00:00"
+    },
+    {
+      "sha256": "17734a4c75d3e8af9bfe99f18f92c69a6a602cfe89f7aebc8c51f8a59cbf6caf",
+      "url": "https://static.igem.wiki/teams/6074/wiki/17734a4c75d3e8af9bfe99f18f92c69a6a602cfe89f7aebc8c51f8a59cbf6caf.webp",
+      "bytes": 1783350,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:06.117308+00:00"
+    },
+    {
+      "sha256": "d293ca24b06669ea87013c3cf32a881e1aebed17f1cee9cd5216213f4f6ba75e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d293ca24b06669ea87013c3cf32a881e1aebed17f1cee9cd5216213f4f6ba75e.webp",
+      "bytes": 2387570,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:06.353492+00:00"
+    },
+    {
+      "sha256": "b0c968c229fc3d23b9c1d1657112bcb0c4500bf51f99a37f85d80cd8704a07f4",
+      "url": "https://static.igem.wiki/teams/6074/wiki/b0c968c229fc3d23b9c1d1657112bcb0c4500bf51f99a37f85d80cd8704a07f4.webp",
+      "bytes": 2949592,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:07.362866+00:00"
+    },
+    {
+      "sha256": "3c80e7113d206a4470d805d02792f1e99d72960a20ab9e3db20289d726dfb755",
+      "url": "https://static.igem.wiki/teams/6074/wiki/3c80e7113d206a4470d805d02792f1e99d72960a20ab9e3db20289d726dfb755.webp",
+      "bytes": 2787222,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:06.972264+00:00"
+    },
+    {
+      "sha256": "5e62463cfb57ae6e5ae4dde802a7804a1b3a7d4a3e8fddba22fd7d157e293f0b",
+      "url": "https://static.igem.wiki/teams/6074/wiki/5e62463cfb57ae6e5ae4dde802a7804a1b3a7d4a3e8fddba22fd7d157e293f0b.webp",
+      "bytes": 1071460,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:07.007363+00:00"
+    },
+    {
+      "sha256": "b11caf0613ff1e5d8b4f9bcf02035979ef1a771b931b1dd76c6e1d7e8ffdd7f6",
+      "url": "https://static.igem.wiki/teams/6074/wiki/b11caf0613ff1e5d8b4f9bcf02035979ef1a771b931b1dd76c6e1d7e8ffdd7f6.webp",
+      "bytes": 3500750,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:07.494850+00:00"
+    },
+    {
+      "sha256": "b550969f51b6598aaa3a7e989aaa5f56fdc6014c8258e92030e27a50e4c2e855",
+      "url": "https://static.igem.wiki/teams/6074/wiki/b550969f51b6598aaa3a7e989aaa5f56fdc6014c8258e92030e27a50e4c2e855.webp",
+      "bytes": 3870972,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:07.827617+00:00"
+    },
+    {
+      "sha256": "8fd70d2a6232e7ae8d4e87847d605574ee3f2a6eb7bfc0780be5824cee1d0e89",
+      "url": "https://static.igem.wiki/teams/6074/wiki/8fd70d2a6232e7ae8d4e87847d605574ee3f2a6eb7bfc0780be5824cee1d0e89.webp",
+      "bytes": 3255268,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:07.848952+00:00"
+    },
+    {
+      "sha256": "84ae49e33cec8e8d817d896f452b42ee47b25910def34599baf3d54a5fbcdd5e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/84ae49e33cec8e8d817d896f452b42ee47b25910def34599baf3d54a5fbcdd5e.webp",
+      "bytes": 2849540,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:08.225667+00:00"
+    },
+    {
+      "sha256": "eacdd2e7464dcf9fb378cd8127658ea511d0e735314e3fe2895c80cc3e22e40e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/eacdd2e7464dcf9fb378cd8127658ea511d0e735314e3fe2895c80cc3e22e40e.webp",
+      "bytes": 2389444,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:08.423094+00:00"
+    },
+    {
+      "sha256": "7abc04236d5f394f1c275a3e54ae26178f1f03650c8ea470d741f69ff9fbde17",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7abc04236d5f394f1c275a3e54ae26178f1f03650c8ea470d741f69ff9fbde17.webp",
+      "bytes": 1605344,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:08.540460+00:00"
+    },
+    {
+      "sha256": "9aea2a4bb97a970d95b5c4a16b3f5db118d3db032d8fb778bc09d92f7e7531e2",
+      "url": "https://static.igem.wiki/teams/6074/wiki/9aea2a4bb97a970d95b5c4a16b3f5db118d3db032d8fb778bc09d92f7e7531e2.webp",
+      "bytes": 776720,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:08.448107+00:00"
+    },
+    {
+      "sha256": "a9d21f4e4a6972cd28fd224c8b9a14aae8099d207ce2653b64acdd34b4788ffc",
+      "url": "https://static.igem.wiki/teams/6074/wiki/a9d21f4e4a6972cd28fd224c8b9a14aae8099d207ce2653b64acdd34b4788ffc.webp",
+      "bytes": 751260,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:08.912638+00:00"
+    },
+    {
+      "sha256": "40f498267b4036b08a998b5dae97b24d1c4cf21bc10b0e62dc7e05424ea1a266",
+      "url": "https://static.igem.wiki/teams/6074/wiki/40f498267b4036b08a998b5dae97b24d1c4cf21bc10b0e62dc7e05424ea1a266.webp",
+      "bytes": 3385096,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:09.570835+00:00"
+    },
+    {
+      "sha256": "dc85872ac9b6038f1c394bfccd5aa19fb5afdf6560ab34e7570774e52cffc9f6",
+      "url": "https://static.igem.wiki/teams/6074/wiki/dc85872ac9b6038f1c394bfccd5aa19fb5afdf6560ab34e7570774e52cffc9f6.webp",
+      "bytes": 3285716,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:09.179667+00:00"
+    },
+    {
+      "sha256": "78ca090cd1894861ffc899b669eaf41c74945a8c3573e8aafa934aab1ba6b13e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/78ca090cd1894861ffc899b669eaf41c74945a8c3573e8aafa934aab1ba6b13e.webp",
+      "bytes": 3114670,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:09.382134+00:00"
+    },
+    {
+      "sha256": "348c103cfa32f78d457634686b0db0223af8e143a5f453152058f712238cb233",
+      "url": "https://static.igem.wiki/teams/6074/wiki/348c103cfa32f78d457634686b0db0223af8e143a5f453152058f712238cb233.webp",
+      "bytes": 1417806,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:09.722631+00:00"
+    },
+    {
+      "sha256": "84fb593d7f61b2568ca0094cb79873b4b7d291a912bb0565ad536ac60095ada5",
+      "url": "https://static.igem.wiki/teams/6074/wiki/84fb593d7f61b2568ca0094cb79873b4b7d291a912bb0565ad536ac60095ada5.webp",
+      "bytes": 1080452,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:09.861326+00:00"
+    },
+    {
+      "sha256": "33239a88649aa2f471f0fe9cfc47d2484568f47c15b68eb604e487efb0c08be1",
+      "url": "https://static.igem.wiki/teams/6074/wiki/33239a88649aa2f471f0fe9cfc47d2484568f47c15b68eb604e487efb0c08be1.webp",
+      "bytes": 2787086,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:10.127656+00:00"
+    },
+    {
+      "sha256": "e77549911851db4e2ed84a9257dfcaaaad172c732ea8fa0a99267d975e97eb5d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/e77549911851db4e2ed84a9257dfcaaaad172c732ea8fa0a99267d975e97eb5d.webp",
+      "bytes": 1649838,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:10.208787+00:00"
+    },
+    {
+      "sha256": "f554ace585ba99fae4c027727871fada0896e9ef8cc917aff92dc9e607cc1947",
+      "url": "https://static.igem.wiki/teams/6074/wiki/f554ace585ba99fae4c027727871fada0896e9ef8cc917aff92dc9e607cc1947.webp",
+      "bytes": 1732986,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:10.643022+00:00"
+    },
+    {
+      "sha256": "f5238b5115bc499bde03f7e872f917ca3ffd34c3b0afa1773bd81e7c4f38abc7",
+      "url": "https://static.igem.wiki/teams/6074/wiki/f5238b5115bc499bde03f7e872f917ca3ffd34c3b0afa1773bd81e7c4f38abc7.webp",
+      "bytes": 3287462,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:10.665542+00:00"
+    },
+    {
+      "sha256": "1ee7a73961947853d979310dac3b39a7570e0a6ecf81377d97dc3f466644347d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/1ee7a73961947853d979310dac3b39a7570e0a6ecf81377d97dc3f466644347d.webp",
+      "bytes": 3418594,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:11.075377+00:00"
+    },
+    {
+      "sha256": "24ad0463f63ec24fb31885963c773c0d9dfb9210f336dbb460953748c66c3989",
+      "url": "https://static.igem.wiki/teams/6074/wiki/24ad0463f63ec24fb31885963c773c0d9dfb9210f336dbb460953748c66c3989.webp",
+      "bytes": 2365482,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:11.096608+00:00"
+    },
+    {
+      "sha256": "5e1589ef38e2349688484f49ff515a3a00934fa719ad4766920e731676111fa8",
+      "url": "https://static.igem.wiki/teams/6074/wiki/5e1589ef38e2349688484f49ff515a3a00934fa719ad4766920e731676111fa8.webp",
+      "bytes": 1474798,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:11.348334+00:00"
+    },
+    {
+      "sha256": "453ea9796b6f028d4f00df0051f2da5803ea3b0380d4dff46c3ef4ee20a82f9f",
+      "url": "https://static.igem.wiki/teams/6074/wiki/453ea9796b6f028d4f00df0051f2da5803ea3b0380d4dff46c3ef4ee20a82f9f.webp",
+      "bytes": 3001396,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:11.644516+00:00"
+    },
+    {
+      "sha256": "77865df8742c32082f81867bd3a1f9472d9cb9cb8b62adb0630a3f48308b8d5e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/77865df8742c32082f81867bd3a1f9472d9cb9cb8b62adb0630a3f48308b8d5e.webp",
+      "bytes": 1945268,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:11.829068+00:00"
+    },
+    {
+      "sha256": "be2ff69d70179f7b583a5a6a137769997e5be33cc8a78ebae90a628a787f8048",
+      "url": "https://static.igem.wiki/teams/6074/wiki/be2ff69d70179f7b583a5a6a137769997e5be33cc8a78ebae90a628a787f8048.webp",
+      "bytes": 2479456,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:11.992447+00:00"
+    },
+    {
+      "sha256": "0cf7410e3d0aa921bfa791e784be6563ab6a96c22403b47cdcac981ba897f3b5",
+      "url": "https://static.igem.wiki/teams/6074/wiki/0cf7410e3d0aa921bfa791e784be6563ab6a96c22403b47cdcac981ba897f3b5.webp",
+      "bytes": 2352668,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:12.901785+00:00"
+    },
+    {
+      "sha256": "6ddda51b828e64a4d7e35fbf73119d95a89d6da2c825490c76bb5052473893b9",
+      "url": "https://static.igem.wiki/teams/6074/wiki/6ddda51b828e64a4d7e35fbf73119d95a89d6da2c825490c76bb5052473893b9.webp",
+      "bytes": 7512722,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:13.882722+00:00"
+    },
+    {
+      "sha256": "27e04003dbb6d1853fc2377d1ed57705f1c76827f0a07256d40d2a50881369f1",
+      "url": "https://static.igem.wiki/teams/6074/wiki/27e04003dbb6d1853fc2377d1ed57705f1c76827f0a07256d40d2a50881369f1.webp",
+      "bytes": 3694060,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:12.649480+00:00"
+    },
+    {
+      "sha256": "a0936b1a373b422d8b056d3639b74cf459ee65a69a4f7e6a5e0e09b563473384",
+      "url": "https://static.igem.wiki/teams/6074/wiki/a0936b1a373b422d8b056d3639b74cf459ee65a69a4f7e6a5e0e09b563473384.webp",
+      "bytes": 4254364,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:12.655108+00:00"
+    },
+    {
+      "sha256": "ded27dad59d8ac8ca0ba793564445aedecb5dd77db795797c7f77f227f7bb194",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ded27dad59d8ac8ca0ba793564445aedecb5dd77db795797c7f77f227f7bb194.webp",
+      "bytes": 7491064,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:13.670393+00:00"
+    },
+    {
+      "sha256": "25088ebb99be6c7b850336885b4d3308c22de45c406357c6d00b87d613be0db7",
+      "url": "https://static.igem.wiki/teams/6074/wiki/25088ebb99be6c7b850336885b4d3308c22de45c406357c6d00b87d613be0db7.webp",
+      "bytes": 6742462,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:13.711958+00:00"
+    },
+    {
+      "sha256": "7cf83caee16bf55f5e5f547be01ccdafef767cf049a446aa343c86afe9407a56",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7cf83caee16bf55f5e5f547be01ccdafef767cf049a446aa343c86afe9407a56.webp",
+      "bytes": 6851154,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:14.204590+00:00"
+    },
+    {
+      "sha256": "dc8dddfe9b02a19b4596a589c392f7933cbca36d4ca3dbfa227a0e2128108d5d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/dc8dddfe9b02a19b4596a589c392f7933cbca36d4ca3dbfa227a0e2128108d5d.webp",
+      "bytes": 6959594,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:14.688984+00:00"
+    },
+    {
+      "sha256": "92e907f02d683c678c43d820de36ee7a3724c14a98d9c1b46697857ac7985dce",
+      "url": "https://static.igem.wiki/teams/6074/wiki/92e907f02d683c678c43d820de36ee7a3724c14a98d9c1b46697857ac7985dce.webp",
+      "bytes": 7046542,
+      "contentType": "image/webp",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:06:14.528413+00:00"
+    },
+    {
+      "sha256": "6aea96faff7b9fda48659fb73a51ba57619cc7dce8371947b643370125d6add1",
+      "url": "https://static.igem.wiki/teams/6074/wiki/6aea96faff7b9fda48659fb73a51ba57619cc7dce8371947b643370125d6add1.avif",
+      "bytes": 5949531,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:06.169072+00:00"
+    },
+    {
+      "sha256": "6226bfb7f1ae985d4847b3b29563d7b4528d35a2f1caeebc1624e8b8cf860662",
+      "url": "https://static.igem.wiki/teams/6074/wiki/6226bfb7f1ae985d4847b3b29563d7b4528d35a2f1caeebc1624e8b8cf860662.avif",
+      "bytes": 6379621,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:07.240115+00:00"
+    },
+    {
+      "sha256": "c1861e2e8d5189bc22fc5a4a91761365aa732b8fad996c94b2b5ce190401fe2f",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c1861e2e8d5189bc22fc5a4a91761365aa732b8fad996c94b2b5ce190401fe2f.avif",
+      "bytes": 6392879,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:06.646255+00:00"
+    },
+    {
+      "sha256": "c49ef64ff8d1647666283106e1155a30fa3921f2121f1e1efec9d955191bc583",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c49ef64ff8d1647666283106e1155a30fa3921f2121f1e1efec9d955191bc583.avif",
+      "bytes": 6669846,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:06.189540+00:00"
+    },
+    {
+      "sha256": "4de2b1ab20659d64c3440d45bca7121b6be10c56f868c233274daa951b251962",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4de2b1ab20659d64c3440d45bca7121b6be10c56f868c233274daa951b251962.avif",
+      "bytes": 4114094,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:07.205191+00:00"
+    },
+    {
+      "sha256": "701031a5eab94281d36acb94fa52f5d3fd00c840440b9997f2256cb4cdcd0f8f",
+      "url": "https://static.igem.wiki/teams/6074/wiki/701031a5eab94281d36acb94fa52f5d3fd00c840440b9997f2256cb4cdcd0f8f.avif",
+      "bytes": 7345353,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:07.281393+00:00"
+    },
+    {
+      "sha256": "98059c3b196e67e53e513b3a1b8c5ae114cbb1c288a727519a660c857fa52e67",
+      "url": "https://static.igem.wiki/teams/6074/wiki/98059c3b196e67e53e513b3a1b8c5ae114cbb1c288a727519a660c857fa52e67.avif",
+      "bytes": 5131278,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:07.840568+00:00"
+    },
+    {
+      "sha256": "51ca4f0bd067fc5c82214b9ea0a03442d35f9a48778fd1235c69024309233671",
+      "url": "https://static.igem.wiki/teams/6074/wiki/51ca4f0bd067fc5c82214b9ea0a03442d35f9a48778fd1235c69024309233671.avif",
+      "bytes": 5669884,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:08.416324+00:00"
+    },
+    {
+      "sha256": "e47b0ba48390b1f328d7638b6304a0285c1ad9679a6658301eeca1df7a6f34c0",
+      "url": "https://static.igem.wiki/teams/6074/wiki/e47b0ba48390b1f328d7638b6304a0285c1ad9679a6658301eeca1df7a6f34c0.avif",
+      "bytes": 6217772,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:08.776785+00:00"
+    },
+    {
+      "sha256": "5d7eb9103b92cb3634c681310fdef2c3a2c9f515c0edca1d3aa630f53e5561a5",
+      "url": "https://static.igem.wiki/teams/6074/wiki/5d7eb9103b92cb3634c681310fdef2c3a2c9f515c0edca1d3aa630f53e5561a5.avif",
+      "bytes": 5945571,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:08.328204+00:00"
+    },
+    {
+      "sha256": "df6b60fac6da66b1c9c74ecac5bf73f4e26b88219af1a70133fd018e78ec3635",
+      "url": "https://static.igem.wiki/teams/6074/wiki/df6b60fac6da66b1c9c74ecac5bf73f4e26b88219af1a70133fd018e78ec3635.avif",
+      "bytes": 6006044,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:09.038524+00:00"
+    },
+    {
+      "sha256": "3bde0ac7b189e0f97a9684f9ca454c2975ca82640addb8fd706420dcc820e002",
+      "url": "https://static.igem.wiki/teams/6074/wiki/3bde0ac7b189e0f97a9684f9ca454c2975ca82640addb8fd706420dcc820e002.avif",
+      "bytes": 6439159,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:09.518038+00:00"
+    },
+    {
+      "sha256": "f57455adb25c4ad172b8faa9255e36e9af42a16ff45a1c6eb0689a019a5df7b9",
+      "url": "https://static.igem.wiki/teams/6074/wiki/f57455adb25c4ad172b8faa9255e36e9af42a16ff45a1c6eb0689a019a5df7b9.avif",
+      "bytes": 5723057,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:09.382919+00:00"
+    },
+    {
+      "sha256": "a091ad155c5604f84df5e8e5737ab6d3f4111fb52c646bc8928fad4431c31b40",
+      "url": "https://static.igem.wiki/teams/6074/wiki/a091ad155c5604f84df5e8e5737ab6d3f4111fb52c646bc8928fad4431c31b40.avif",
+      "bytes": 4659589,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:09.939557+00:00"
+    },
+    {
+      "sha256": "7abd3be1895285ee1538fde9ef8f02c3f3a2af0772aa779a71875c8513c927b3",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7abd3be1895285ee1538fde9ef8f02c3f3a2af0772aa779a71875c8513c927b3.avif",
+      "bytes": 4468592,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:10.746381+00:00"
+    },
+    {
+      "sha256": "e7a1d0e8b84488a3dbf1cd738e336205fd37a3f31dac64a8098606df1f49fa01",
+      "url": "https://static.igem.wiki/teams/6074/wiki/e7a1d0e8b84488a3dbf1cd738e336205fd37a3f31dac64a8098606df1f49fa01.avif",
+      "bytes": 4785707,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:10.901317+00:00"
+    },
+    {
+      "sha256": "1bd39bb6269e0db3917a8068bc646f66d56f34e23db0d72806b8734b8a664b04",
+      "url": "https://static.igem.wiki/teams/6074/wiki/1bd39bb6269e0db3917a8068bc646f66d56f34e23db0d72806b8734b8a664b04.avif",
+      "bytes": 4881842,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:11.986853+00:00"
+    },
+    {
+      "sha256": "3778065c1328ab3ade0d10a97964f6f1154bef2abf53e634ed37d84df3f45602",
+      "url": "https://static.igem.wiki/teams/6074/wiki/3778065c1328ab3ade0d10a97964f6f1154bef2abf53e634ed37d84df3f45602.avif",
+      "bytes": 6395184,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:11.505693+00:00"
+    },
+    {
+      "sha256": "d9a66661cb1494aecfcf5fcd8f106154f2e8d9527dfdbf05acc7cb83f8bafa85",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d9a66661cb1494aecfcf5fcd8f106154f2e8d9527dfdbf05acc7cb83f8bafa85.avif",
+      "bytes": 5928418,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:11.860460+00:00"
+    },
+    {
+      "sha256": "8930ec24bbbc633b00d5ce60a4066a86ef05b05e0489a8f83473255f88e7fcf2",
+      "url": "https://static.igem.wiki/teams/6074/wiki/8930ec24bbbc633b00d5ce60a4066a86ef05b05e0489a8f83473255f88e7fcf2.avif",
+      "bytes": 5294027,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:12.257561+00:00"
+    },
+    {
+      "sha256": "4f9deb34690ec921df9a7a3e5a4042c4b36dd212ad5f392cdfe6ff1070d3c3a0",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4f9deb34690ec921df9a7a3e5a4042c4b36dd212ad5f392cdfe6ff1070d3c3a0.avif",
+      "bytes": 4636269,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:12.719602+00:00"
+    },
+    {
+      "sha256": "ddd3dc3b0ffe554d47a589f6761d8fa01d91d910292d71db1463264822e918b5",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ddd3dc3b0ffe554d47a589f6761d8fa01d91d910292d71db1463264822e918b5.avif",
+      "bytes": 4513252,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:14.092177+00:00"
+    },
+    {
+      "sha256": "0a8b131537bca626e1de13d93d8caaa884b74d6509a3f620d9951c71a6cae9ce",
+      "url": "https://static.igem.wiki/teams/6074/wiki/0a8b131537bca626e1de13d93d8caaa884b74d6509a3f620d9951c71a6cae9ce.avif",
+      "bytes": 4287512,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:13.056460+00:00"
+    },
+    {
+      "sha256": "4a11b977aeff4a00c1357e8dc6ddaf634f643ad18b882f58fb4ea55c850cfcfa",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4a11b977aeff4a00c1357e8dc6ddaf634f643ad18b882f58fb4ea55c850cfcfa.avif",
+      "bytes": 4359427,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:13.106949+00:00"
+    },
+    {
+      "sha256": "2edfc54ca1073d396ecb37d3b270b3ef2e2986b220902cd5e5f364c44f5ffb6d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/2edfc54ca1073d396ecb37d3b270b3ef2e2986b220902cd5e5f364c44f5ffb6d.avif",
+      "bytes": 7995916,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:13.979437+00:00"
+    },
+    {
+      "sha256": "25b7261f3d6e896b8299467720b5b6212fb35463660ceb57d39a08590952d553",
+      "url": "https://static.igem.wiki/teams/6074/wiki/25b7261f3d6e896b8299467720b5b6212fb35463660ceb57d39a08590952d553.avif",
+      "bytes": 7931295,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:13.902804+00:00"
+    },
+    {
+      "sha256": "811a892b1193e1500c0a46800601765dbf1d2beef16f9237d24aafb63153034d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/811a892b1193e1500c0a46800601765dbf1d2beef16f9237d24aafb63153034d.avif",
+      "bytes": 7991206,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:14.139912+00:00"
+    },
+    {
+      "sha256": "7e525220548b91a005b8586473a6fe7c6073026c46d5b54a4144a08f95ed4972",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7e525220548b91a005b8586473a6fe7c6073026c46d5b54a4144a08f95ed4972.avif",
+      "bytes": 3970249,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:14.612652+00:00"
+    },
+    {
+      "sha256": "d5c109692658a6a0cc94caad0491e8774a08ad819e791f6c32e82533b1c362e4",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d5c109692658a6a0cc94caad0491e8774a08ad819e791f6c32e82533b1c362e4.avif",
+      "bytes": 4242595,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:15.143730+00:00"
+    },
+    {
+      "sha256": "1477f7e0fbaa2bbc3c2fb897e216126f6990efb6b6a50fa21f71e9a7d5f0844d",
+      "url": "https://static.igem.wiki/teams/6074/wiki/1477f7e0fbaa2bbc3c2fb897e216126f6990efb6b6a50fa21f71e9a7d5f0844d.avif",
+      "bytes": 7946554,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:23.057816+00:00"
+    },
+    {
+      "sha256": "e61865ac232ddaaf395702be6d634aebeffb45cde44da8af30b426271374a3b9",
+      "url": "https://static.igem.wiki/teams/6074/wiki/e61865ac232ddaaf395702be6d634aebeffb45cde44da8af30b426271374a3b9.avif",
+      "bytes": 7861209,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:15.350863+00:00"
+    },
+    {
+      "sha256": "c4a5466635fa07c331afe60e1231202d3b3711cbe967a3aa48fb4a410dc1882b",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c4a5466635fa07c331afe60e1231202d3b3711cbe967a3aa48fb4a410dc1882b.avif",
+      "bytes": 4035264,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:16.010957+00:00"
+    },
+    {
+      "sha256": "d974d22244291fa27dd9d48aa5dd6ae8c86ab79c5255d3975c47f0e317187c73",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d974d22244291fa27dd9d48aa5dd6ae8c86ab79c5255d3975c47f0e317187c73.avif",
+      "bytes": 4522641,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:16.028789+00:00"
+    },
+    {
+      "sha256": "ffeaaf45366f99af58ea341acc68bbb9d90fce11275137a544465fca89449552",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ffeaaf45366f99af58ea341acc68bbb9d90fce11275137a544465fca89449552.avif",
+      "bytes": 7269325,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:16.344189+00:00"
+    },
+    {
+      "sha256": "7486b070d87efaac7c70443e1d0c942faf98e54491d35bb9f7eea18b75af881e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7486b070d87efaac7c70443e1d0c942faf98e54491d35bb9f7eea18b75af881e.avif",
+      "bytes": 7695594,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:18.465950+00:00"
+    },
+    {
+      "sha256": "f1f1ec312973ff6af554da2791f9449444dc2f3463cbd07294aca64e0ab71d34",
+      "url": "https://static.igem.wiki/teams/6074/wiki/f1f1ec312973ff6af554da2791f9449444dc2f3463cbd07294aca64e0ab71d34.avif",
+      "bytes": 4549753,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:16.883344+00:00"
+    },
+    {
+      "sha256": "d4c3aa8b0110f9b9642877925465012db18d7ab538af5fa9754d31fdf30597b7",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d4c3aa8b0110f9b9642877925465012db18d7ab538af5fa9754d31fdf30597b7.avif",
+      "bytes": 4102527,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:17.165764+00:00"
+    },
+    {
+      "sha256": "9cc63963eb682d0883ca0d221fe47b4ffce34e936dace72106ab12b376044390",
+      "url": "https://static.igem.wiki/teams/6074/wiki/9cc63963eb682d0883ca0d221fe47b4ffce34e936dace72106ab12b376044390.avif",
+      "bytes": 7683401,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:18.116547+00:00"
+    },
+    {
+      "sha256": "4b1d8d282706112b88e5e0a48d41296800ffd4b9bdf1e362e8617264eec8df30",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4b1d8d282706112b88e5e0a48d41296800ffd4b9bdf1e362e8617264eec8df30.avif",
+      "bytes": 3135972,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:18.092239+00:00"
+    },
+    {
+      "sha256": "cf3fb6057935aaf3829680a4f080860726bd65bf11b08333df19fb149d0d73e7",
+      "url": "https://static.igem.wiki/teams/6074/wiki/cf3fb6057935aaf3829680a4f080860726bd65bf11b08333df19fb149d0d73e7.avif",
+      "bytes": 7446477,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:11:20.194807+00:00"
+    },
+    {
+      "sha256": "d475c57def7bcb285ba16b53b6bdf7bee65201670f71db6d9f3425b278899617",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d475c57def7bcb285ba16b53b6bdf7bee65201670f71db6d9f3425b278899617.avif",
+      "bytes": 5164828,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:31.778463+00:00"
+    },
+    {
+      "sha256": "fe01a664fbf700b86dd20638900cf8f3a59dd68eb9148a82827ebc4faa74a4db",
+      "url": "https://static.igem.wiki/teams/6074/wiki/fe01a664fbf700b86dd20638900cf8f3a59dd68eb9148a82827ebc4faa74a4db.avif",
+      "bytes": 5688819,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:30.758374+00:00"
+    },
+    {
+      "sha256": "d63567fdc950881666264aa6a155ff341bc9860c8b4d089ff823c0a081673301",
+      "url": "https://static.igem.wiki/teams/6074/wiki/d63567fdc950881666264aa6a155ff341bc9860c8b4d089ff823c0a081673301.avif",
+      "bytes": 5046238,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:30.924624+00:00"
+    },
+    {
+      "sha256": "bc7ef92fdb54c62fd0da3eb8e0c197189db8084fa33811194bded665690e2b26",
+      "url": "https://static.igem.wiki/teams/6074/wiki/bc7ef92fdb54c62fd0da3eb8e0c197189db8084fa33811194bded665690e2b26.avif",
+      "bytes": 4538224,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:30.966434+00:00"
+    },
+    {
+      "sha256": "2fbbdddfbff841de9ff91b7ed96b3e3cc848e68a352e4b3595284e642ac4a733",
+      "url": "https://static.igem.wiki/teams/6074/wiki/2fbbdddfbff841de9ff91b7ed96b3e3cc848e68a352e4b3595284e642ac4a733.avif",
+      "bytes": 5210471,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:32.825120+00:00"
+    },
+    {
+      "sha256": "ea6f77f2c2e0baf70ed98396363d319b112120e139cce50f1bb9e38c075bf2b2",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ea6f77f2c2e0baf70ed98396363d319b112120e139cce50f1bb9e38c075bf2b2.avif",
+      "bytes": 4653167,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:32.680199+00:00"
+    },
+    {
+      "sha256": "cf31c056d9a7912809e5db5ce4cdb5240f24ca818a8462c8870a7d0ae0835fcb",
+      "url": "https://static.igem.wiki/teams/6074/wiki/cf31c056d9a7912809e5db5ce4cdb5240f24ca818a8462c8870a7d0ae0835fcb.avif",
+      "bytes": 5029791,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:33.620609+00:00"
+    },
+    {
+      "sha256": "ca3e81f3dd1f52962d126384f58e0226c6a3f22901fde8174f14386c9be86488",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ca3e81f3dd1f52962d126384f58e0226c6a3f22901fde8174f14386c9be86488.avif",
+      "bytes": 5070881,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:34.519547+00:00"
+    },
+    {
+      "sha256": "4d179036752084b0260aa86bb3c7506a2b13846ac4311cf299881924210eeb2c",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4d179036752084b0260aa86bb3c7506a2b13846ac4311cf299881924210eeb2c.avif",
+      "bytes": 4768060,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:34.823920+00:00"
+    },
+    {
+      "sha256": "3183c6c4bced842ed62424b8214c168dd1f16d381c2f07743606d6619f11c00b",
+      "url": "https://static.igem.wiki/teams/6074/wiki/3183c6c4bced842ed62424b8214c168dd1f16d381c2f07743606d6619f11c00b.avif",
+      "bytes": 4426630,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:34.393866+00:00"
+    },
+    {
+      "sha256": "ff4c736779f4f34315a7852bd9673c41750acfd70ae1b82aaa200f7eea6c3996",
+      "url": "https://static.igem.wiki/teams/6074/wiki/ff4c736779f4f34315a7852bd9673c41750acfd70ae1b82aaa200f7eea6c3996.avif",
+      "bytes": 6862468,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:36.606864+00:00"
+    },
+    {
+      "sha256": "cd5359f2b314e85e54e93a9816b4927c12943d113c93b8a8cac12ad101922e0f",
+      "url": "https://static.igem.wiki/teams/6074/wiki/cd5359f2b314e85e54e93a9816b4927c12943d113c93b8a8cac12ad101922e0f.avif",
+      "bytes": 7916785,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:36.732931+00:00"
+    },
+    {
+      "sha256": "a5102230b86ea1a301dc1658bb6bbf677a6e0497d26b6911248bb779c4d349b0",
+      "url": "https://static.igem.wiki/teams/6074/wiki/a5102230b86ea1a301dc1658bb6bbf677a6e0497d26b6911248bb779c4d349b0.avif",
+      "bytes": 4520871,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:37.284983+00:00"
+    },
+    {
+      "sha256": "4f43c790eb754e1ad8282601e2ee7c1142a29e15465af11085e64b61cdd7042c",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4f43c790eb754e1ad8282601e2ee7c1142a29e15465af11085e64b61cdd7042c.avif",
+      "bytes": 4212999,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:36.584088+00:00"
+    },
+    {
+      "sha256": "fb9e1fe3d65ad67823047c84e3971a7be2317c14adf510bc591c9c4dc6a9c6d2",
+      "url": "https://static.igem.wiki/teams/6074/wiki/fb9e1fe3d65ad67823047c84e3971a7be2317c14adf510bc591c9c4dc6a9c6d2.avif",
+      "bytes": 4452972,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:38.417681+00:00"
+    },
+    {
+      "sha256": "b86cb6e37f8e0bbc92d2cf21dbb6b6f71f8bdfc052241c26a657b93de5f81652",
+      "url": "https://static.igem.wiki/teams/6074/wiki/b86cb6e37f8e0bbc92d2cf21dbb6b6f71f8bdfc052241c26a657b93de5f81652.avif",
+      "bytes": 4823198,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:38.506514+00:00"
+    },
+    {
+      "sha256": "c58b2cfdde3048235592626e3a97441811efad80e1b0f0987b27098d421f4913",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c58b2cfdde3048235592626e3a97441811efad80e1b0f0987b27098d421f4913.avif",
+      "bytes": 4861145,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:38.612304+00:00"
+    },
+    {
+      "sha256": "3fc04a44093e93b62b791e586b162fda478fe87c3c47853b7abf767270837bb4",
+      "url": "https://static.igem.wiki/teams/6074/wiki/3fc04a44093e93b62b791e586b162fda478fe87c3c47853b7abf767270837bb4.avif",
+      "bytes": 4776819,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:39.214462+00:00"
+    },
+    {
+      "sha256": "536a1f2b03a6e227fcfab1417e2eabba86fc0ffd75ac75d50561d7ff28b107fd",
+      "url": "https://static.igem.wiki/teams/6074/wiki/536a1f2b03a6e227fcfab1417e2eabba86fc0ffd75ac75d50561d7ff28b107fd.avif",
+      "bytes": 4648049,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:40.087855+00:00"
+    },
+    {
+      "sha256": "9b559ac47b70c4e40f0f05242feeb3d6618fbf0f1a72abf7e8b19e02103a5714",
+      "url": "https://static.igem.wiki/teams/6074/wiki/9b559ac47b70c4e40f0f05242feeb3d6618fbf0f1a72abf7e8b19e02103a5714.avif",
+      "bytes": 4577509,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:40.583615+00:00"
+    },
+    {
+      "sha256": "93f7fc31cbd17d9e7d0c356ca61c5e668a02d6bb2e7ba0ea0572e0e3af7ea38c",
+      "url": "https://static.igem.wiki/teams/6074/wiki/93f7fc31cbd17d9e7d0c356ca61c5e668a02d6bb2e7ba0ea0572e0e3af7ea38c.avif",
+      "bytes": 4687102,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:40.456705+00:00"
+    },
+    {
+      "sha256": "5fbffc0231941106e16ae610b5f8db950013e995ddb36073d7eabd3814f60dcb",
+      "url": "https://static.igem.wiki/teams/6074/wiki/5fbffc0231941106e16ae610b5f8db950013e995ddb36073d7eabd3814f60dcb.avif",
+      "bytes": 4257948,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:40.838438+00:00"
+    },
+    {
+      "sha256": "7ad9af3773532663a9c7fcf510569bd16d285c309d2e50ee5962567f5a20d6da",
+      "url": "https://static.igem.wiki/teams/6074/wiki/7ad9af3773532663a9c7fcf510569bd16d285c309d2e50ee5962567f5a20d6da.avif",
+      "bytes": 4715189,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:41.560805+00:00"
+    },
+    {
+      "sha256": "68e675c1b6817466d67c0a5c9f27d4e5ac09e3370e9948e1284d4671bf82cdd7",
+      "url": "https://static.igem.wiki/teams/6074/wiki/68e675c1b6817466d67c0a5c9f27d4e5ac09e3370e9948e1284d4671bf82cdd7.avif",
+      "bytes": 4267674,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:41.813951+00:00"
+    },
+    {
+      "sha256": "6c39357f63ab47d63ba36027713bed4d35a346bc5f6fc0513914464eb56b7936",
+      "url": "https://static.igem.wiki/teams/6074/wiki/6c39357f63ab47d63ba36027713bed4d35a346bc5f6fc0513914464eb56b7936.avif",
+      "bytes": 7373078,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:43.153549+00:00"
+    },
+    {
+      "sha256": "1d548204ced3414a5fa78fdc0505fc71edd0bcc69398ae99f733c82603d2f1fb",
+      "url": "https://static.igem.wiki/teams/6074/wiki/1d548204ced3414a5fa78fdc0505fc71edd0bcc69398ae99f733c82603d2f1fb.avif",
+      "bytes": 7186493,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:43.837253+00:00"
+    },
+    {
+      "sha256": "e106a2b62930314861d61f1e439d001c77e77e85f2bc4375d477118252ddfb34",
+      "url": "https://static.igem.wiki/teams/6074/wiki/e106a2b62930314861d61f1e439d001c77e77e85f2bc4375d477118252ddfb34.avif",
+      "bytes": 6722601,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:43.529401+00:00"
+    },
+    {
+      "sha256": "5893090504a3b5697699021c1f1a81c8bf20bc552cd1e98c01bf13eb3932a338",
+      "url": "https://static.igem.wiki/teams/6074/wiki/5893090504a3b5697699021c1f1a81c8bf20bc552cd1e98c01bf13eb3932a338.avif",
+      "bytes": 7610253,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:43.847468+00:00"
+    },
+    {
+      "sha256": "4358aef3665a0532a4a6a6439c0901399bff440a062e68a3df54bd18c19daa15",
+      "url": "https://static.igem.wiki/teams/6074/wiki/4358aef3665a0532a4a6a6439c0901399bff440a062e68a3df54bd18c19daa15.avif",
+      "bytes": 7434024,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:45.318198+00:00"
+    },
+    {
+      "sha256": "c0b5a200e5698d67de0b4761bdc16da268db7c5270525774ab164bee7f2b91a6",
+      "url": "https://static.igem.wiki/teams/6074/wiki/c0b5a200e5698d67de0b4761bdc16da268db7c5270525774ab164bee7f2b91a6.avif",
+      "bytes": 7733649,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:45.903677+00:00"
+    },
+    {
+      "sha256": "596a66be04e537a4b1d1a409a16d6ea3dcbf6fccd1ac6bbfdb229fa7cb966a02",
+      "url": "https://static.igem.wiki/teams/6074/wiki/596a66be04e537a4b1d1a409a16d6ea3dcbf6fccd1ac6bbfdb229fa7cb966a02.avif",
+      "bytes": 1579910,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:45.149274+00:00"
+    },
+    {
+      "sha256": "02130825c365ef3228c46d4e2f6cf49957955b3707ee95492a4d3f4a53840195",
+      "url": "https://static.igem.wiki/teams/6074/wiki/02130825c365ef3228c46d4e2f6cf49957955b3707ee95492a4d3f4a53840195.avif",
+      "bytes": 6354883,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:45.832853+00:00"
+    },
+    {
+      "sha256": "159b64e72388bffcaa671c299ec4e1cfa5dfc71ae7e0f596fc8f20a1a9342eff",
+      "url": "https://static.igem.wiki/teams/6074/wiki/159b64e72388bffcaa671c299ec4e1cfa5dfc71ae7e0f596fc8f20a1a9342eff.avif",
+      "bytes": 6620563,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:47.320080+00:00"
+    },
+    {
+      "sha256": "8da52cf60f599c0b2e730bf7b2c25b69df5a8303540529a1bd773c0d4e06e8ff",
+      "url": "https://static.igem.wiki/teams/6074/wiki/8da52cf60f599c0b2e730bf7b2c25b69df5a8303540529a1bd773c0d4e06e8ff.avif",
+      "bytes": 3879467,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:47.249891+00:00"
+    },
+    {
+      "sha256": "48ac6e515b22726ae174c6106578b0254ce6957a88c0805fa54cd555a76483ae",
+      "url": "https://static.igem.wiki/teams/6074/wiki/48ac6e515b22726ae174c6106578b0254ce6957a88c0805fa54cd555a76483ae.avif",
+      "bytes": 4360126,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:47.383522+00:00"
+    },
+    {
+      "sha256": "cf49d5d6d41de891001ea65414f025c84e180431028363b4723ca7c88a81432e",
+      "url": "https://static.igem.wiki/teams/6074/wiki/cf49d5d6d41de891001ea65414f025c84e180431028363b4723ca7c88a81432e.avif",
+      "bytes": 3990794,
+      "contentType": "image/avif",
+      "accessControlAllowOrigin": "*",
+      "verifiedAt": "2026-10-20T04:18:47.646683+00:00"
+    }
+  ],
+  "expected": 140,
+  "verified": 140,
+  "verifiedBytes": 676166154,
+  "allFilesMatch": true
+}
