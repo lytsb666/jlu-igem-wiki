@@ -47,7 +47,7 @@ try {
       const dimensions=await figure.locator('canvas').evaluate(e=>({width:e.width,height:e.height}))
       assert(dimensions.width===1280&&dimensions.height===720,'Original frame geometry changed')
       await figure.screenshot({path:path.join(out,`player-${width}-${id}.png`)})
-      checks.push({id,start,advanced,offscreenPaused:true,manualPausePersists:true,seekFrame:target,dimensions,status:await figure.locator('[role=status]').innerText()})
+      checks.push({id,start,advanced,offscreenPaused:true,manualPausePersists:true,seekFrame:target,dimensions,status:await figure.locator('.hw-animation-status').innerText()})
     }
     assert(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),'Horizontal page overflow')
     assert(!errors.length&&!failures.length,'Browser or network error')

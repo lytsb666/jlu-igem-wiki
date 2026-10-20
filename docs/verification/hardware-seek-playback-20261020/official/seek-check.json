@@ -1,0 +1,83 @@
+{
+  "origin": "https://2026.igem.wiki/jlu-sph/",
+  "results": [
+    {
+      "width": 1440,
+      "checks": [
+        {
+          "id": 1,
+          "playingSeekContinued": true,
+          "rapidSeekContinued": true,
+          "pausedSeekStayedPaused": true,
+          "status": {
+            "hidden": true,
+            "height": 0,
+            "text": ""
+          }
+        },
+        {
+          "id": 2,
+          "playingSeekContinued": true,
+          "rapidSeekContinued": true,
+          "pausedSeekStayedPaused": true,
+          "status": {
+            "hidden": true,
+            "height": 0,
+            "text": ""
+          }
+        },
+        {
+          "id": 3,
+          "playingSeekContinued": true,
+          "rapidSeekContinued": true,
+          "pausedSeekStayedPaused": true,
+          "status": {
+            "hidden": true,
+            "height": 0,
+            "text": ""
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "checks": [
+        {
+          "id": 1,
+          "playingSeekContinued": true,
+          "rapidSeekContinued": true,
+          "pausedSeekStayedPaused": true,
+          "status": {
+            "hidden": true,
+            "height": 0,
+            "text": ""
+          }
+        },
+        {
+          "id": 2,
+          "playingSeekContinued": true,
+          "rapidSeekContinued": true,
+          "pausedSeekStayedPaused": true,
+          "status": {
+            "hidden": true,
+            "height": 0,
+            "text": ""
+          }
+        },
+        {
+          "id": 3,
+          "playingSeekContinued": true,
+          "rapidSeekContinued": true,
+          "pausedSeekStayedPaused": true,
+          "status": {
+            "hidden": true,
+            "height": 0,
+            "text": ""
+          }
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

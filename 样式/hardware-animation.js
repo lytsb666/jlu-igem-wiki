@@ -27,7 +27,7 @@ class Demonstration {
     this.cache = new Map()
     this.queue = Promise.resolve()
     const poster = figure.querySelector('img')
-    figure.innerHTML = `<div class="hw-animation-stage"><canvas width="1280" height="720" hidden aria-label="${clip.label}"></canvas><img class="hw-animation-native" width="1280" height="720" hidden alt="${clip.label}"></div><div class="hw-animation-controls"><button type="button" data-action="play">Play</button><button type="button" data-action="restart">Restart</button><input type="range" min="0" max="${clip.frames - 1}" value="0" step="1" aria-label="Position in ${clip.label}"><output>0:00 / ${time(clip.frames)}</output><button type="button" data-action="fullscreen" aria-label="View ${clip.label} in full screen">Full screen</button></div><p class="hw-animation-status" role="status"></p>`
+    figure.innerHTML = `<div class="hw-animation-stage"><canvas width="1280" height="720" hidden aria-label="${clip.label}"></canvas><img class="hw-animation-native" width="1280" height="720" hidden alt="${clip.label}"></div><div class="hw-animation-controls"><button type="button" data-action="play">Play</button><button type="button" data-action="restart">Restart</button><input type="range" min="0" max="${clip.frames - 1}" value="0" step="1" aria-label="Position in ${clip.label}"><output>0:00 / ${time(clip.frames)}</output><button type="button" data-action="fullscreen" aria-label="View ${clip.label} in full screen">Full screen</button></div><p class="hw-animation-status" role="alert" hidden></p>`
     this.stage = figure.querySelector('.hw-animation-stage')
     if (poster) { poster.className = 'hw-animation-poster'; this.stage.prepend(poster) }
     this.poster = poster
@@ -37,18 +37,25 @@ class Demonstration {
     this.slider = figure.querySelector('input')
     this.output = figure.querySelector('output')
     this.button = figure.querySelector('[data-action="play"]')
-    this.status = figure.querySelector('[role="status"]')
+    this.status = figure.querySelector('.hw-animation-status')
     figure.querySelector('[data-action="fullscreen"]').onclick = () => this.figure.requestFullscreen?.()
     this.button.onclick = () => this.playing ? this.pause(true) : this.play()
     figure.querySelector('[data-action="restart"]').onclick = () => { this.pause(false); this.position = 0; this.play() }
-    this.slider.oninput = () => {
-      const frame = Number(this.slider.value)
-      this.pause(true)
-      this.position = frame
-      this.enqueue(this.position, this.epoch).catch(error => this.fail(error))
-      this.sync()
-    }
+    this.slider.oninput = () => this.seek(Number(this.slider.value))
     players.add(this)
+    this.sync()
+  }
+  seek(frame) {
+    this.position = frame
+    this.finished = false
+    this.status.textContent = ''
+    this.status.hidden = true
+    this.nativePart = -1
+    const epoch = ++this.epoch
+    if (this.playing) this.run(epoch)
+    else this.enqueue(frame, epoch).then(() => {
+      if (epoch === this.epoch && this.fallback) this.pause()
+    }).catch(error => { if (epoch === this.epoch) this.fail(error) })
     this.sync()
   }
   sync() {
@@ -76,6 +83,7 @@ class Demonstration {
     return this.queue
   }
   async render(frame, epoch) {
+    if (epoch !== this.epoch) return
     const index = this.partAt(frame)
     if (index < 0) throw Error('The demonstration section is unavailable.')
     const part = this.clip.parts[index]
@@ -104,6 +112,7 @@ class Demonstration {
     this.native.hidden = true
     if (this.poster) this.poster.hidden = true
     this.status.textContent = ''
+    this.status.hidden = true
     this.bytes(index + 1)?.catch(() => {})
     preloadFollowing(this)
   }
@@ -123,12 +132,14 @@ class Demonstration {
     if (this.poster) this.poster.hidden = true
     this.position = part.start
     this.status.textContent = ''
+    this.status.hidden = true
     this.bytes(index + 1)?.catch(() => {})
     preloadFollowing(this)
   }
   pause(manual = false) {
     this.playing = false
     this.status.textContent = ''
+    this.status.hidden = true
     this.epoch++
     if (manual) this.manualPause = true
     if (this.fallback) {
@@ -151,10 +162,12 @@ class Demonstration {
     this.playing = true
     const epoch = ++this.epoch
     this.sync()
+    await this.run(epoch)
+  }
+  async run(epoch) {
     let deadline = performance.now()
     try {
       while (this.playing && epoch === this.epoch && this.position < this.clip.frames) {
-        this.status.textContent = 'Loading demonstration…'
         const before = performance.now()
         await this.enqueue(this.position, epoch)
         if (epoch !== this.epoch) break
@@ -177,6 +190,7 @@ class Demonstration {
   fail(error) {
     this.pause()
     this.status.textContent = error.message || 'Please try Play again.'
+    this.status.hidden = false
   }
 }
 
